@@ -1,0 +1,6 @@
+*
+!*/
+!.gitignore
+!google-stubs/**
+!pyproject.toml
+!README.md
