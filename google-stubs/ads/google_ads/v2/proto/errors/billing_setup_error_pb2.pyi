@@ -21,8 +21,8 @@ from typing_extensions import (
 
 class BillingSetupErrorEnum(google___protobuf___message___Message):
     class BillingSetupError(object):
-        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN'],typing_extensions___Literal['CANNOT_USE_EXISTING_AND_NEW_ACCOUNT'],typing_extensions___Literal['CANNOT_REMOVE_STARTED_BILLING_SETUP'],typing_extensions___Literal['CANNOT_CHANGE_BILLING_TO_SAME_PAYMENTS_ACCOUNT'],typing_extensions___Literal['BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_STATUS'],typing_extensions___Literal['INVALID_PAYMENTS_ACCOUNT'],typing_extensions___Literal['BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_CATEGORY'],typing_extensions___Literal['INVALID_START_TIME_TYPE'],typing_extensions___Literal['THIRD_PARTY_ALREADY_HAS_BILLING'],typing_extensions___Literal['BILLING_SETUP_IN_PROGRESS'],typing_extensions___Literal['NO_SIGNUP_PERMISSION'],typing_extensions___Literal['CHANGE_OF_BILL_TO_IN_PROGRESS'],typing_extensions___Literal['PAYMENTS_PROFILE_NOT_FOUND'],typing_extensions___Literal['PAYMENTS_ACCOUNT_NOT_FOUND'],typing_extensions___Literal['PAYMENTS_PROFILE_INELIGIBLE'],typing_extensions___Literal['PAYMENTS_ACCOUNT_INELIGIBLE']]
-        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1],typing_extensions___Literal[2],typing_extensions___Literal[3],typing_extensions___Literal[4],typing_extensions___Literal[5],typing_extensions___Literal[6],typing_extensions___Literal[7],typing_extensions___Literal[8],typing_extensions___Literal[9],typing_extensions___Literal[10],typing_extensions___Literal[11],typing_extensions___Literal[12],typing_extensions___Literal[13],typing_extensions___Literal[14],typing_extensions___Literal[15],typing_extensions___Literal[16]]
+        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN'],typing_extensions___Literal['CANNOT_USE_EXISTING_AND_NEW_ACCOUNT'],typing_extensions___Literal['CANNOT_REMOVE_STARTED_BILLING_SETUP'],typing_extensions___Literal['CANNOT_CHANGE_BILLING_TO_SAME_PAYMENTS_ACCOUNT'],typing_extensions___Literal['BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_STATUS'],typing_extensions___Literal['INVALID_PAYMENTS_ACCOUNT'],typing_extensions___Literal['BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_CATEGORY'],typing_extensions___Literal['INVALID_START_TIME_TYPE'],typing_extensions___Literal['THIRD_PARTY_ALREADY_HAS_BILLING'],typing_extensions___Literal['BILLING_SETUP_IN_PROGRESS'],typing_extensions___Literal['NO_SIGNUP_PERMISSION'],typing_extensions___Literal['CHANGE_OF_BILL_TO_IN_PROGRESS'],typing_extensions___Literal['PAYMENTS_PROFILE_NOT_FOUND'],typing_extensions___Literal['PAYMENTS_ACCOUNT_NOT_FOUND'],typing_extensions___Literal['PAYMENTS_PROFILE_INELIGIBLE'],typing_extensions___Literal['PAYMENTS_ACCOUNT_INELIGIBLE'],typing_extensions___Literal['CUSTOMER_NEEDS_INTERNAL_APPROVAL']]
+        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1],typing_extensions___Literal[2],typing_extensions___Literal[3],typing_extensions___Literal[4],typing_extensions___Literal[5],typing_extensions___Literal[6],typing_extensions___Literal[7],typing_extensions___Literal[8],typing_extensions___Literal[9],typing_extensions___Literal[10],typing_extensions___Literal[11],typing_extensions___Literal[12],typing_extensions___Literal[13],typing_extensions___Literal[14],typing_extensions___Literal[15],typing_extensions___Literal[16],typing_extensions___Literal[17]]
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
         def Name(cls, number: ClosedValueType) -> str: ...
@@ -51,6 +51,7 @@ class BillingSetupErrorEnum(google___protobuf___message___Message):
         PAYMENTS_ACCOUNT_NOT_FOUND: typing_extensions___Literal[14]
         PAYMENTS_PROFILE_INELIGIBLE: typing_extensions___Literal[15]
         PAYMENTS_ACCOUNT_INELIGIBLE: typing_extensions___Literal[16]
+        CUSTOMER_NEEDS_INTERNAL_APPROVAL: typing_extensions___Literal[17]
     UNSPECIFIED: typing_extensions___Literal[0]
     UNKNOWN: typing_extensions___Literal[1]
     CANNOT_USE_EXISTING_AND_NEW_ACCOUNT: typing_extensions___Literal[2]
@@ -68,6 +69,7 @@ class BillingSetupErrorEnum(google___protobuf___message___Message):
     PAYMENTS_ACCOUNT_NOT_FOUND: typing_extensions___Literal[14]
     PAYMENTS_PROFILE_INELIGIBLE: typing_extensions___Literal[15]
     PAYMENTS_ACCOUNT_INELIGIBLE: typing_extensions___Literal[16]
+    CUSTOMER_NEEDS_INTERNAL_APPROVAL: typing_extensions___Literal[17]
 
 
     def __init__(self,

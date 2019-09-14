@@ -19,10 +19,10 @@ from typing_extensions import (
 )
 
 
-class PolicyReviewStatusEnum(google___protobuf___message___Message):
-    class PolicyReviewStatus(object):
-        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN'],typing_extensions___Literal['REVIEW_IN_PROGRESS'],typing_extensions___Literal['REVIEWED'],typing_extensions___Literal['UNDER_APPEAL'],typing_extensions___Literal['ELIGIBLE_MAY_SERVE']]
-        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1],typing_extensions___Literal[2],typing_extensions___Literal[3],typing_extensions___Literal[4],typing_extensions___Literal[5]]
+class ReachPlanErrorEnum(google___protobuf___message___Message):
+    class ReachPlanError(object):
+        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN']]
+        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1]]
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
         def Name(cls, number: ClosedValueType) -> str: ...
@@ -36,21 +36,13 @@ class PolicyReviewStatusEnum(google___protobuf___message___Message):
         def items(cls) -> typing___List[typing___Tuple[ClosedKeyType, ClosedValueType]]: ...
         UNSPECIFIED: typing_extensions___Literal[0]
         UNKNOWN: typing_extensions___Literal[1]
-        REVIEW_IN_PROGRESS: typing_extensions___Literal[2]
-        REVIEWED: typing_extensions___Literal[3]
-        UNDER_APPEAL: typing_extensions___Literal[4]
-        ELIGIBLE_MAY_SERVE: typing_extensions___Literal[5]
     UNSPECIFIED: typing_extensions___Literal[0]
     UNKNOWN: typing_extensions___Literal[1]
-    REVIEW_IN_PROGRESS: typing_extensions___Literal[2]
-    REVIEWED: typing_extensions___Literal[3]
-    UNDER_APPEAL: typing_extensions___Literal[4]
-    ELIGIBLE_MAY_SERVE: typing_extensions___Literal[5]
 
 
     def __init__(self,
         ) -> None: ...
     @classmethod
-    def FromString(cls, s: bytes) -> PolicyReviewStatusEnum: ...
+    def FromString(cls, s: bytes) -> ReachPlanErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...

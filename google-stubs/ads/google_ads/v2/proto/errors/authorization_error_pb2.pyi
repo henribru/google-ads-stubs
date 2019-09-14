@@ -21,8 +21,8 @@ from typing_extensions import (
 
 class AuthorizationErrorEnum(google___protobuf___message___Message):
     class AuthorizationError(object):
-        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN'],typing_extensions___Literal['USER_PERMISSION_DENIED'],typing_extensions___Literal['DEVELOPER_TOKEN_NOT_WHITELISTED'],typing_extensions___Literal['DEVELOPER_TOKEN_PROHIBITED'],typing_extensions___Literal['PROJECT_DISABLED'],typing_extensions___Literal['AUTHORIZATION_ERROR'],typing_extensions___Literal['ACTION_NOT_PERMITTED'],typing_extensions___Literal['INCOMPLETE_SIGNUP'],typing_extensions___Literal['CUSTOMER_NOT_ENABLED'],typing_extensions___Literal['MISSING_TOS'],typing_extensions___Literal['DEVELOPER_TOKEN_NOT_APPROVED']]
-        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1],typing_extensions___Literal[2],typing_extensions___Literal[3],typing_extensions___Literal[4],typing_extensions___Literal[5],typing_extensions___Literal[6],typing_extensions___Literal[7],typing_extensions___Literal[8],typing_extensions___Literal[24],typing_extensions___Literal[9],typing_extensions___Literal[10]]
+        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN'],typing_extensions___Literal['USER_PERMISSION_DENIED'],typing_extensions___Literal['DEVELOPER_TOKEN_NOT_WHITELISTED'],typing_extensions___Literal['DEVELOPER_TOKEN_PROHIBITED'],typing_extensions___Literal['PROJECT_DISABLED'],typing_extensions___Literal['AUTHORIZATION_ERROR'],typing_extensions___Literal['ACTION_NOT_PERMITTED'],typing_extensions___Literal['INCOMPLETE_SIGNUP'],typing_extensions___Literal['CUSTOMER_NOT_ENABLED'],typing_extensions___Literal['MISSING_TOS'],typing_extensions___Literal['DEVELOPER_TOKEN_NOT_APPROVED'],typing_extensions___Literal['INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION']]
+        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1],typing_extensions___Literal[2],typing_extensions___Literal[3],typing_extensions___Literal[4],typing_extensions___Literal[5],typing_extensions___Literal[6],typing_extensions___Literal[7],typing_extensions___Literal[8],typing_extensions___Literal[24],typing_extensions___Literal[9],typing_extensions___Literal[10],typing_extensions___Literal[11]]
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
         def Name(cls, number: ClosedValueType) -> str: ...
@@ -46,6 +46,7 @@ class AuthorizationErrorEnum(google___protobuf___message___Message):
         CUSTOMER_NOT_ENABLED: typing_extensions___Literal[24]
         MISSING_TOS: typing_extensions___Literal[9]
         DEVELOPER_TOKEN_NOT_APPROVED: typing_extensions___Literal[10]
+        INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION: typing_extensions___Literal[11]
     UNSPECIFIED: typing_extensions___Literal[0]
     UNKNOWN: typing_extensions___Literal[1]
     USER_PERMISSION_DENIED: typing_extensions___Literal[2]
@@ -58,6 +59,7 @@ class AuthorizationErrorEnum(google___protobuf___message___Message):
     CUSTOMER_NOT_ENABLED: typing_extensions___Literal[24]
     MISSING_TOS: typing_extensions___Literal[9]
     DEVELOPER_TOKEN_NOT_APPROVED: typing_extensions___Literal[10]
+    INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION: typing_extensions___Literal[11]
 
 
     def __init__(self,

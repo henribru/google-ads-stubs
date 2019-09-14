@@ -19,10 +19,10 @@ from typing_extensions import (
 )
 
 
-class PolicyReviewStatusEnum(google___protobuf___message___Message):
-    class PolicyReviewStatus(object):
-        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN'],typing_extensions___Literal['REVIEW_IN_PROGRESS'],typing_extensions___Literal['REVIEWED'],typing_extensions___Literal['UNDER_APPEAL'],typing_extensions___Literal['ELIGIBLE_MAY_SERVE']]
-        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1],typing_extensions___Literal[2],typing_extensions___Literal[3],typing_extensions___Literal[4],typing_extensions___Literal[5]]
+class ReachPlanAdLengthEnum(google___protobuf___message___Message):
+    class ReachPlanAdLength(object):
+        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN'],typing_extensions___Literal['SIX_SECONDS'],typing_extensions___Literal['FIFTEEN_OR_TWENTY_SECONDS'],typing_extensions___Literal['TWENTY_SECONDS_OR_MORE']]
+        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1],typing_extensions___Literal[2],typing_extensions___Literal[3],typing_extensions___Literal[4]]
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
         def Name(cls, number: ClosedValueType) -> str: ...
@@ -36,21 +36,19 @@ class PolicyReviewStatusEnum(google___protobuf___message___Message):
         def items(cls) -> typing___List[typing___Tuple[ClosedKeyType, ClosedValueType]]: ...
         UNSPECIFIED: typing_extensions___Literal[0]
         UNKNOWN: typing_extensions___Literal[1]
-        REVIEW_IN_PROGRESS: typing_extensions___Literal[2]
-        REVIEWED: typing_extensions___Literal[3]
-        UNDER_APPEAL: typing_extensions___Literal[4]
-        ELIGIBLE_MAY_SERVE: typing_extensions___Literal[5]
+        SIX_SECONDS: typing_extensions___Literal[2]
+        FIFTEEN_OR_TWENTY_SECONDS: typing_extensions___Literal[3]
+        TWENTY_SECONDS_OR_MORE: typing_extensions___Literal[4]
     UNSPECIFIED: typing_extensions___Literal[0]
     UNKNOWN: typing_extensions___Literal[1]
-    REVIEW_IN_PROGRESS: typing_extensions___Literal[2]
-    REVIEWED: typing_extensions___Literal[3]
-    UNDER_APPEAL: typing_extensions___Literal[4]
-    ELIGIBLE_MAY_SERVE: typing_extensions___Literal[5]
+    SIX_SECONDS: typing_extensions___Literal[2]
+    FIFTEEN_OR_TWENTY_SECONDS: typing_extensions___Literal[3]
+    TWENTY_SECONDS_OR_MORE: typing_extensions___Literal[4]
 
 
     def __init__(self,
         ) -> None: ...
     @classmethod
-    def FromString(cls, s: bytes) -> PolicyReviewStatusEnum: ...
+    def FromString(cls, s: bytes) -> ReachPlanAdLengthEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
