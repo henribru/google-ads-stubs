@@ -1,15 +1,21 @@
 [tool.poetry]
 name = "google-ads-stubs"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+license = "Apache-2.0"
+description = "Type stubs for google-ads"
+authors = ["Henrik Bruåsdal <henrik.bruasdal@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/henribru/google-ads-stubs"
 packages = [
     { include = "google-stubs" },
 ]
 
 [tool.poetry.dependencies]
 python = "^2.7 || ^3.4"
+typing = "^3.7"
 typing-extensions = "^3.7"
+googleapis-common-protos-stubs = "^1.0"
+google-ads = "^3.3"
 
 [tool.poetry.dev-dependencies]
 
