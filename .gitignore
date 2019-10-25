@@ -1,7 +1,8 @@
 *
 !*/
 !/.gitignore
-!/google-stubs/**
+!/google-stubs/{__init__.pyi, py.typed}
+!/google-stubs/ads/**
 !/pyproject.toml
 !/poetry.lock
 !/README.md
