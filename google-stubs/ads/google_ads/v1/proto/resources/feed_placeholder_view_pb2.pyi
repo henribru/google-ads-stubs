@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.placeholder_type_pb2 import (
     PlaceholderTypeEnum as google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -19,13 +23,14 @@ from typing_extensions import (
 
 
 class FeedPlaceholderView(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    placeholder_type = ... # type: google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType
+    placeholder_type = ... # type: google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType
 
     def __init__(self,
         *,
         resource_name : typing___Optional[typing___Text] = None,
-        placeholder_type : typing___Optional[google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType] = None,
+        placeholder_type : typing___Optional[google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> FeedPlaceholderView: ...

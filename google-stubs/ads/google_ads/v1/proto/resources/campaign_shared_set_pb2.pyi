@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.campaign_shared_set_status_pb2 import 
     CampaignSharedSetStatusEnum as google___ads___googleads___v1___enums___campaign_shared_set_status_pb2___CampaignSharedSetStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -23,8 +27,9 @@ from typing_extensions import (
 
 
 class CampaignSharedSet(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___campaign_shared_set_status_pb2___CampaignSharedSetStatusEnum.CampaignSharedSetStatus.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___campaign_shared_set_status_pb2___CampaignSharedSetStatusEnum.CampaignSharedSetStatus
 
     @property
     def campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -37,7 +42,7 @@ class CampaignSharedSet(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         shared_set : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___campaign_shared_set_status_pb2___CampaignSharedSetStatusEnum.CampaignSharedSetStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___campaign_shared_set_status_pb2___CampaignSharedSetStatusEnum.CampaignSharedSetStatus] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CampaignSharedSet: ...

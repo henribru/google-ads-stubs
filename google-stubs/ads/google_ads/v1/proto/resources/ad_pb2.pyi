@@ -45,6 +45,10 @@ from google.ads.google_ads.v1.proto.enums.system_managed_entity_source_pb2 impor
     SystemManagedResourceSourceEnum as google___ads___googleads___v1___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -70,9 +74,10 @@ from typing_extensions import (
 
 
 class Ad(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v1___enums___ad_type_pb2___AdTypeEnum.AdType.ClosedValueType
-    device_preference = ... # type: google___ads___googleads___v1___enums___device_pb2___DeviceEnum.Device.ClosedValueType
-    system_managed_resource_source = ... # type: google___ads___googleads___v1___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum.SystemManagedResourceSource.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v1___enums___ad_type_pb2___AdTypeEnum.AdType
+    device_preference = ... # type: google___ads___googleads___v1___enums___device_pb2___DeviceEnum.Device
+    system_managed_resource_source = ... # type: google___ads___googleads___v1___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum.SystemManagedResourceSource
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -167,12 +172,12 @@ class Ad(google___protobuf___message___Message):
         tracking_url_template : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         url_custom_parameters : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter]] = None,
         display_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___ad_type_pb2___AdTypeEnum.AdType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___ad_type_pb2___AdTypeEnum.AdType] = None,
         added_by_google_ads : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        device_preference : typing___Optional[google___ads___googleads___v1___enums___device_pb2___DeviceEnum.Device.ClosedValueType] = None,
+        device_preference : typing___Optional[google___ads___googleads___v1___enums___device_pb2___DeviceEnum.Device] = None,
         url_collections : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___url_collection_pb2___UrlCollection]] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        system_managed_resource_source : typing___Optional[google___ads___googleads___v1___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum.SystemManagedResourceSource.ClosedValueType] = None,
+        system_managed_resource_source : typing___Optional[google___ads___googleads___v1___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum.SystemManagedResourceSource] = None,
         text_ad : typing___Optional[google___ads___googleads___v1___common___ad_type_infos_pb2___TextAdInfo] = None,
         expanded_text_ad : typing___Optional[google___ads___googleads___v1___common___ad_type_infos_pb2___ExpandedTextAdInfo] = None,
         call_only_ad : typing___Optional[google___ads___googleads___v1___common___ad_type_infos_pb2___CallOnlyAdInfo] = None,

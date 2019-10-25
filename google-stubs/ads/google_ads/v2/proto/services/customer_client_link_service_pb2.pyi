@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.resources.customer_client_link_pb2 import (
     CustomerClientLink as google___ads___googleads___v2___resources___customer_client_link_pb2___CustomerClientLink,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -23,6 +27,7 @@ from typing_extensions import (
 
 
 class GetCustomerClientLinkRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -39,6 +44,7 @@ class GetCustomerClientLinkRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateCustomerClientLinkRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
 
     @property
@@ -61,6 +67,7 @@ class MutateCustomerClientLinkRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operation",b"operation"]) -> None: ...
 
 class CustomerClientLinkOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
@@ -90,6 +97,7 @@ class CustomerClientLinkOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","update"]: ...
 
 class MutateCustomerClientLinkResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def result(self) -> MutateCustomerClientLinkResult: ...
@@ -110,6 +118,7 @@ class MutateCustomerClientLinkResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"result",b"result"]) -> None: ...
 
 class MutateCustomerClientLinkResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,

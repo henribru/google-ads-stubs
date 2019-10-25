@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.merchant_center_link_status_pb2 import
     MerchantCenterLinkStatusEnum as google___ads___googleads___v1___enums___merchant_center_link_status_pb2___MerchantCenterLinkStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -24,8 +28,9 @@ from typing_extensions import (
 
 
 class MerchantCenterLink(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___merchant_center_link_status_pb2___MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___merchant_center_link_status_pb2___MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -38,7 +43,7 @@ class MerchantCenterLink(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         merchant_center_account_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___merchant_center_link_status_pb2___MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___merchant_center_link_status_pb2___MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> MerchantCenterLink: ...

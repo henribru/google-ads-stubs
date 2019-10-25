@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.mobile_device_type_pb2 import (
     MobileDeviceTypeEnum as google___ads___googleads___v2___enums___mobile_device_type_pb2___MobileDeviceTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -24,8 +28,9 @@ from typing_extensions import (
 
 
 class MobileDeviceConstant(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v2___enums___mobile_device_type_pb2___MobileDeviceTypeEnum.MobileDeviceType.ClosedValueType
+    type = ... # type: google___ads___googleads___v2___enums___mobile_device_type_pb2___MobileDeviceTypeEnum.MobileDeviceType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -46,7 +51,7 @@ class MobileDeviceConstant(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         manufacturer_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         operating_system_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___mobile_device_type_pb2___MobileDeviceTypeEnum.MobileDeviceType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___mobile_device_type_pb2___MobileDeviceTypeEnum.MobileDeviceType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> MobileDeviceConstant: ...

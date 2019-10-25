@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.enums.mime_type_pb2 import (
     MimeTypeEnum as google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -29,9 +33,10 @@ from typing_extensions import (
 
 
 class MediaFile(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v2___enums___media_type_pb2___MediaTypeEnum.MediaType.ClosedValueType
-    mime_type = ... # type: google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum.MimeType.ClosedValueType
+    type = ... # type: google___ads___googleads___v2___enums___media_type_pb2___MediaTypeEnum.MediaType
+    mime_type = ... # type: google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum.MimeType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -61,8 +66,8 @@ class MediaFile(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___media_type_pb2___MediaTypeEnum.MediaType.ClosedValueType] = None,
-        mime_type : typing___Optional[google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum.MimeType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___media_type_pb2___MediaTypeEnum.MediaType] = None,
+        mime_type : typing___Optional[google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum.MimeType] = None,
         source_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         file_size : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
@@ -84,6 +89,7 @@ class MediaFile(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"mediatype",b"mediatype"]) -> typing_extensions___Literal["image","media_bundle","audio","video"]: ...
 
 class MediaImage(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def data(self) -> google___protobuf___wrappers_pb2___BytesValue: ...
@@ -104,6 +110,7 @@ class MediaImage(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"data",b"data"]) -> None: ...
 
 class MediaBundle(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def data(self) -> google___protobuf___wrappers_pb2___BytesValue: ...
@@ -124,6 +131,7 @@ class MediaBundle(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"data",b"data"]) -> None: ...
 
 class MediaAudio(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def ad_duration_millis(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -144,6 +152,7 @@ class MediaAudio(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"ad_duration_millis",b"ad_duration_millis"]) -> None: ...
 
 class MediaVideo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def ad_duration_millis(self) -> google___protobuf___wrappers_pb2___Int64Value: ...

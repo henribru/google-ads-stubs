@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.enums.label_status_pb2 import (
     LabelStatusEnum as google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -28,8 +32,9 @@ from typing_extensions import (
 
 
 class Label(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum.LabelStatus.ClosedValueType
+    status = ... # type: google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum.LabelStatus
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -45,7 +50,7 @@ class Label(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum.LabelStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum.LabelStatus] = None,
         text_label : typing___Optional[google___ads___googleads___v2___common___text_label_pb2___TextLabel] = None,
         ) -> None: ...
     @classmethod

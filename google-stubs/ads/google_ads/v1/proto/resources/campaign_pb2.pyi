@@ -91,6 +91,10 @@ from google.ads.google_ads.v1.proto.enums.vanity_pharma_text_pb2 import (
     VanityPharmaTextEnum as google___ads___googleads___v1___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -118,7 +122,9 @@ from typing_extensions import (
 
 
 class Campaign(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class NetworkSettings(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def target_google_search(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
@@ -151,6 +157,7 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"target_content_network",b"target_content_network",u"target_google_search",b"target_google_search",u"target_partner_search_network",b"target_partner_search_network",u"target_search_network",b"target_search_network"]) -> None: ...
 
     class HotelSettingInfo(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def hotel_center_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -171,13 +178,14 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"hotel_center_id",b"hotel_center_id"]) -> None: ...
 
     class VanityPharma(google___protobuf___message___Message):
-        vanity_pharma_display_url_mode = ... # type: google___ads___googleads___v1___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.ClosedValueType
-        vanity_pharma_text = ... # type: google___ads___googleads___v1___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaText.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        vanity_pharma_display_url_mode = ... # type: google___ads___googleads___v1___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode
+        vanity_pharma_text = ... # type: google___ads___googleads___v1___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaText
 
         def __init__(self,
             *,
-            vanity_pharma_display_url_mode : typing___Optional[google___ads___googleads___v1___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.ClosedValueType] = None,
-            vanity_pharma_text : typing___Optional[google___ads___googleads___v1___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaText.ClosedValueType] = None,
+            vanity_pharma_display_url_mode : typing___Optional[google___ads___googleads___v1___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode] = None,
+            vanity_pharma_text : typing___Optional[google___ads___googleads___v1___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaText] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> Campaign.VanityPharma: ...
@@ -189,6 +197,7 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"vanity_pharma_display_url_mode",b"vanity_pharma_display_url_mode",u"vanity_pharma_text",b"vanity_pharma_text"]) -> None: ...
 
     class DynamicSearchAdsSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def domain_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -221,6 +230,7 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"domain_name",b"domain_name",u"feeds",b"feeds",u"language_code",b"language_code",u"use_supplied_urls_only",b"use_supplied_urls_only"]) -> None: ...
 
     class ShoppingSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def merchant_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -253,6 +263,7 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"campaign_priority",b"campaign_priority",u"enable_local",b"enable_local",u"merchant_id",b"merchant_id",u"sales_country",b"sales_country"]) -> None: ...
 
     class TrackingSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def tracking_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -273,6 +284,7 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"tracking_url",b"tracking_url"]) -> None: ...
 
     class SelectiveOptimization(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def conversion_actions(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
@@ -291,17 +303,18 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"conversion_actions",b"conversion_actions"]) -> None: ...
 
     class AppCampaignSetting(google___protobuf___message___Message):
-        bidding_strategy_goal_type = ... # type: google___ads___googleads___v1___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.ClosedValueType
-        app_store = ... # type: google___ads___googleads___v1___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStore.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        bidding_strategy_goal_type = ... # type: google___ads___googleads___v1___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
+        app_store = ... # type: google___ads___googleads___v1___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStore
 
         @property
         def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
 
         def __init__(self,
             *,
-            bidding_strategy_goal_type : typing___Optional[google___ads___googleads___v1___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.ClosedValueType] = None,
+            bidding_strategy_goal_type : typing___Optional[google___ads___googleads___v1___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType] = None,
             app_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            app_store : typing___Optional[google___ads___googleads___v1___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStore.ClosedValueType] = None,
+            app_store : typing___Optional[google___ads___googleads___v1___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStore] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> Campaign.AppCampaignSetting: ...
@@ -315,13 +328,14 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"app_id",b"app_id",u"app_store",b"app_store",u"bidding_strategy_goal_type",b"bidding_strategy_goal_type"]) -> None: ...
 
     class GeoTargetTypeSetting(google___protobuf___message___Message):
-        positive_geo_target_type = ... # type: google___ads___googleads___v1___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetType.ClosedValueType
-        negative_geo_target_type = ... # type: google___ads___googleads___v1___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetType.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        positive_geo_target_type = ... # type: google___ads___googleads___v1___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetType
+        negative_geo_target_type = ... # type: google___ads___googleads___v1___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetType
 
         def __init__(self,
             *,
-            positive_geo_target_type : typing___Optional[google___ads___googleads___v1___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetType.ClosedValueType] = None,
-            negative_geo_target_type : typing___Optional[google___ads___googleads___v1___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetType.ClosedValueType] = None,
+            positive_geo_target_type : typing___Optional[google___ads___googleads___v1___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetType] = None,
+            negative_geo_target_type : typing___Optional[google___ads___googleads___v1___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetType] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> Campaign.GeoTargetTypeSetting: ...
@@ -333,15 +347,15 @@ class Campaign(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"negative_geo_target_type",b"negative_geo_target_type",u"positive_geo_target_type",b"positive_geo_target_type"]) -> None: ...
 
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___campaign_status_pb2___CampaignStatusEnum.CampaignStatus.ClosedValueType
-    serving_status = ... # type: google___ads___googleads___v1___enums___campaign_serving_status_pb2___CampaignServingStatusEnum.CampaignServingStatus.ClosedValueType
-    ad_serving_optimization_status = ... # type: google___ads___googleads___v1___enums___ad_serving_optimization_status_pb2___AdServingOptimizationStatusEnum.AdServingOptimizationStatus.ClosedValueType
-    advertising_channel_type = ... # type: google___ads___googleads___v1___enums___advertising_channel_type_pb2___AdvertisingChannelTypeEnum.AdvertisingChannelType.ClosedValueType
-    advertising_channel_sub_type = ... # type: google___ads___googleads___v1___enums___advertising_channel_sub_type_pb2___AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.ClosedValueType
-    experiment_type = ... # type: google___ads___googleads___v1___enums___campaign_experiment_type_pb2___CampaignExperimentTypeEnum.CampaignExperimentType.ClosedValueType
-    bidding_strategy_type = ... # type: google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum.BiddingStrategyType.ClosedValueType
-    video_brand_safety_suitability = ... # type: google___ads___googleads___v1___enums___brand_safety_suitability_pb2___BrandSafetySuitabilityEnum.BrandSafetySuitability.ClosedValueType
-    payment_mode = ... # type: google___ads___googleads___v1___enums___payment_mode_pb2___PaymentModeEnum.PaymentMode.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___campaign_status_pb2___CampaignStatusEnum.CampaignStatus
+    serving_status = ... # type: google___ads___googleads___v1___enums___campaign_serving_status_pb2___CampaignServingStatusEnum.CampaignServingStatus
+    ad_serving_optimization_status = ... # type: google___ads___googleads___v1___enums___ad_serving_optimization_status_pb2___AdServingOptimizationStatusEnum.AdServingOptimizationStatus
+    advertising_channel_type = ... # type: google___ads___googleads___v1___enums___advertising_channel_type_pb2___AdvertisingChannelTypeEnum.AdvertisingChannelType
+    advertising_channel_sub_type = ... # type: google___ads___googleads___v1___enums___advertising_channel_sub_type_pb2___AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
+    experiment_type = ... # type: google___ads___googleads___v1___enums___campaign_experiment_type_pb2___CampaignExperimentTypeEnum.CampaignExperimentType
+    bidding_strategy_type = ... # type: google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum.BiddingStrategyType
+    video_brand_safety_suitability = ... # type: google___ads___googleads___v1___enums___brand_safety_suitability_pb2___BrandSafetySuitabilityEnum.BrandSafetySuitability
+    payment_mode = ... # type: google___ads___googleads___v1___enums___payment_mode_pb2___PaymentModeEnum.PaymentMode
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -453,11 +467,11 @@ class Campaign(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___campaign_status_pb2___CampaignStatusEnum.CampaignStatus.ClosedValueType] = None,
-        serving_status : typing___Optional[google___ads___googleads___v1___enums___campaign_serving_status_pb2___CampaignServingStatusEnum.CampaignServingStatus.ClosedValueType] = None,
-        ad_serving_optimization_status : typing___Optional[google___ads___googleads___v1___enums___ad_serving_optimization_status_pb2___AdServingOptimizationStatusEnum.AdServingOptimizationStatus.ClosedValueType] = None,
-        advertising_channel_type : typing___Optional[google___ads___googleads___v1___enums___advertising_channel_type_pb2___AdvertisingChannelTypeEnum.AdvertisingChannelType.ClosedValueType] = None,
-        advertising_channel_sub_type : typing___Optional[google___ads___googleads___v1___enums___advertising_channel_sub_type_pb2___AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___campaign_status_pb2___CampaignStatusEnum.CampaignStatus] = None,
+        serving_status : typing___Optional[google___ads___googleads___v1___enums___campaign_serving_status_pb2___CampaignServingStatusEnum.CampaignServingStatus] = None,
+        ad_serving_optimization_status : typing___Optional[google___ads___googleads___v1___enums___ad_serving_optimization_status_pb2___AdServingOptimizationStatusEnum.AdServingOptimizationStatus] = None,
+        advertising_channel_type : typing___Optional[google___ads___googleads___v1___enums___advertising_channel_type_pb2___AdvertisingChannelTypeEnum.AdvertisingChannelType] = None,
+        advertising_channel_sub_type : typing___Optional[google___ads___googleads___v1___enums___advertising_channel_sub_type_pb2___AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType] = None,
         tracking_url_template : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         url_custom_parameters : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter]] = None,
         real_time_bidding_setting : typing___Optional[google___ads___googleads___v1___common___real_time_bidding_setting_pb2___RealTimeBiddingSetting] = None,
@@ -469,19 +483,19 @@ class Campaign(google___protobuf___message___Message):
         geo_target_type_setting : typing___Optional[Campaign.GeoTargetTypeSetting] = None,
         app_campaign_setting : typing___Optional[Campaign.AppCampaignSetting] = None,
         labels : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        experiment_type : typing___Optional[google___ads___googleads___v1___enums___campaign_experiment_type_pb2___CampaignExperimentTypeEnum.CampaignExperimentType.ClosedValueType] = None,
+        experiment_type : typing___Optional[google___ads___googleads___v1___enums___campaign_experiment_type_pb2___CampaignExperimentTypeEnum.CampaignExperimentType] = None,
         base_campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         campaign_budget : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        bidding_strategy_type : typing___Optional[google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum.BiddingStrategyType.ClosedValueType] = None,
+        bidding_strategy_type : typing___Optional[google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum.BiddingStrategyType] = None,
         start_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         end_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         final_url_suffix : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         frequency_caps : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___frequency_cap_pb2___FrequencyCapEntry]] = None,
-        video_brand_safety_suitability : typing___Optional[google___ads___googleads___v1___enums___brand_safety_suitability_pb2___BrandSafetySuitabilityEnum.BrandSafetySuitability.ClosedValueType] = None,
+        video_brand_safety_suitability : typing___Optional[google___ads___googleads___v1___enums___brand_safety_suitability_pb2___BrandSafetySuitabilityEnum.BrandSafetySuitability] = None,
         vanity_pharma : typing___Optional[Campaign.VanityPharma] = None,
         selective_optimization : typing___Optional[Campaign.SelectiveOptimization] = None,
         tracking_setting : typing___Optional[Campaign.TrackingSetting] = None,
-        payment_mode : typing___Optional[google___ads___googleads___v1___enums___payment_mode_pb2___PaymentModeEnum.PaymentMode.ClosedValueType] = None,
+        payment_mode : typing___Optional[google___ads___googleads___v1___enums___payment_mode_pb2___PaymentModeEnum.PaymentMode] = None,
         bidding_strategy : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         commission : typing___Optional[google___ads___googleads___v1___common___bidding_pb2___Commission] = None,
         manual_cpc : typing___Optional[google___ads___googleads___v1___common___bidding_pb2___ManualCpc] = None,

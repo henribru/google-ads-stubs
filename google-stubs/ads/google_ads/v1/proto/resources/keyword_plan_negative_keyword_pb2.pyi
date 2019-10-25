@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.keyword_match_type_pb2 import (
     KeywordMatchTypeEnum as google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -24,8 +28,9 @@ from typing_extensions import (
 
 
 class KeywordPlanNegativeKeyword(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    match_type = ... # type: google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType.ClosedValueType
+    match_type = ... # type: google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
 
     @property
     def keyword_plan_campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -42,7 +47,7 @@ class KeywordPlanNegativeKeyword(google___protobuf___message___Message):
         keyword_plan_campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        match_type : typing___Optional[google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType.ClosedValueType] = None,
+        match_type : typing___Optional[google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> KeywordPlanNegativeKeyword: ...

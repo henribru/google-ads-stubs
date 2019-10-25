@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.served_asset_field_type_pb2 import (
     ServedAssetFieldTypeEnum as google___ads___googleads___v1___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -22,7 +26,8 @@ from typing_extensions import (
 
 
 class AdTextAsset(google___protobuf___message___Message):
-    pinned_field = ... # type: google___ads___googleads___v1___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum.ServedAssetFieldType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    pinned_field = ... # type: google___ads___googleads___v1___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum.ServedAssetFieldType
 
     @property
     def text(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -30,7 +35,7 @@ class AdTextAsset(google___protobuf___message___Message):
     def __init__(self,
         *,
         text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        pinned_field : typing___Optional[google___ads___googleads___v1___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum.ServedAssetFieldType.ClosedValueType] = None,
+        pinned_field : typing___Optional[google___ads___googleads___v1___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum.ServedAssetFieldType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AdTextAsset: ...
@@ -44,6 +49,7 @@ class AdTextAsset(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"pinned_field",b"pinned_field",u"text",b"text"]) -> None: ...
 
 class AdImageAsset(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def asset(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -64,6 +70,7 @@ class AdImageAsset(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"asset",b"asset"]) -> None: ...
 
 class AdVideoAsset(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def asset(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -84,6 +91,7 @@ class AdVideoAsset(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"asset",b"asset"]) -> None: ...
 
 class AdMediaBundleAsset(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def asset(self) -> google___protobuf___wrappers_pb2___StringValue: ...

@@ -13,6 +13,10 @@ from google.ads.google_ads.v2.proto.enums.reach_plan_age_range_pb2 import (
     ReachPlanAgeRangeEnum as google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
     RepeatedScalarFieldContainer as google___protobuf___internal___containers___RepeatedScalarFieldContainer,
@@ -41,6 +45,7 @@ from typing_extensions import (
 
 
 class ListPlannableLocationsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -50,6 +55,7 @@ class ListPlannableLocationsRequest(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class ListPlannableLocationsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def plannable_locations(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[PlannableLocation]: ...
@@ -68,6 +74,7 @@ class ListPlannableLocationsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"plannable_locations",b"plannable_locations"]) -> None: ...
 
 class PlannableLocation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -96,6 +103,7 @@ class PlannableLocation(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"parent_country_id",b"parent_country_id"]) -> None: ...
 
 class ListPlannableProductsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def plannable_location_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -116,6 +124,7 @@ class ListPlannableProductsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"plannable_location_id",b"plannable_location_id"]) -> None: ...
 
 class ListPlannableProductsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def product_metadata(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[ProductMetadata]: ...
@@ -134,6 +143,7 @@ class ListPlannableProductsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"product_metadata",b"product_metadata"]) -> None: ...
 
 class ProductMetadata(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def plannable_product_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -158,7 +168,8 @@ class ProductMetadata(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"plannable_product_code",b"plannable_product_code",u"plannable_targeting",b"plannable_targeting"]) -> None: ...
 
 class PlannableTargeting(google___protobuf___message___Message):
-    age_ranges = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange.ClosedValueType]
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    age_ranges = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange]
 
     @property
     def genders(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v2___common___criteria_pb2___GenderInfo]: ...
@@ -168,7 +179,7 @@ class PlannableTargeting(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        age_ranges : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange.ClosedValueType]] = None,
+        age_ranges : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange]] = None,
         genders : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___criteria_pb2___GenderInfo]] = None,
         devices : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___criteria_pb2___DeviceInfo]] = None,
         ) -> None: ...
@@ -182,6 +193,7 @@ class PlannableTargeting(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"age_ranges",b"age_ranges",u"devices",b"devices",u"genders",b"genders"]) -> None: ...
 
 class GenerateProductMixIdeasRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
 
     @property
@@ -216,7 +228,8 @@ class GenerateProductMixIdeasRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"budget_micros",b"budget_micros",u"currency_code",b"currency_code",u"customer_id",b"customer_id",u"plannable_location_id",b"plannable_location_id",u"preferences",b"preferences"]) -> None: ...
 
 class Preferences(google___protobuf___message___Message):
-    ad_length = ... # type: google___ads___googleads___v2___enums___reach_plan_ad_length_pb2___ReachPlanAdLengthEnum.ReachPlanAdLength.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    ad_length = ... # type: google___ads___googleads___v2___enums___reach_plan_ad_length_pb2___ReachPlanAdLengthEnum.ReachPlanAdLength
 
     @property
     def is_skippable(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
@@ -234,7 +247,7 @@ class Preferences(google___protobuf___message___Message):
         *,
         is_skippable : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         starts_with_sound : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        ad_length : typing___Optional[google___ads___googleads___v2___enums___reach_plan_ad_length_pb2___ReachPlanAdLengthEnum.ReachPlanAdLength.ClosedValueType] = None,
+        ad_length : typing___Optional[google___ads___googleads___v2___enums___reach_plan_ad_length_pb2___ReachPlanAdLengthEnum.ReachPlanAdLength] = None,
         top_content_only : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         has_guaranteed_price : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
@@ -250,6 +263,7 @@ class Preferences(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"ad_length",b"ad_length",u"has_guaranteed_price",b"has_guaranteed_price",u"is_skippable",b"is_skippable",u"starts_with_sound",b"starts_with_sound",u"top_content_only",b"top_content_only"]) -> None: ...
 
 class GenerateProductMixIdeasResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def product_allocation(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[ProductAllocation]: ...
@@ -268,6 +282,7 @@ class GenerateProductMixIdeasResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"product_allocation",b"product_allocation"]) -> None: ...
 
 class ProductAllocation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def plannable_product_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -292,6 +307,7 @@ class ProductAllocation(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"budget_micros",b"budget_micros",u"plannable_product_code",b"plannable_product_code"]) -> None: ...
 
 class GenerateReachForecastRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
 
     @property
@@ -334,7 +350,8 @@ class GenerateReachForecastRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"campaign_duration",b"campaign_duration",u"cookie_frequency_cap",b"cookie_frequency_cap",u"currency_code",b"currency_code",u"customer_id",b"customer_id",u"min_effective_frequency",b"min_effective_frequency",u"planned_products",b"planned_products",u"targeting",b"targeting"]) -> None: ...
 
 class Targeting(google___protobuf___message___Message):
-    age_range = ... # type: google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    age_range = ... # type: google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange
 
     @property
     def plannable_location_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -348,7 +365,7 @@ class Targeting(google___protobuf___message___Message):
     def __init__(self,
         *,
         plannable_location_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        age_range : typing___Optional[google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange.ClosedValueType] = None,
+        age_range : typing___Optional[google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange] = None,
         genders : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___criteria_pb2___GenderInfo]] = None,
         devices : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___criteria_pb2___DeviceInfo]] = None,
         ) -> None: ...
@@ -364,6 +381,7 @@ class Targeting(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"age_range",b"age_range",u"devices",b"devices",u"genders",b"genders",u"plannable_location_id",b"plannable_location_id"]) -> None: ...
 
 class CampaignDuration(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def duration_in_days(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
@@ -384,6 +402,7 @@ class CampaignDuration(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"duration_in_days",b"duration_in_days"]) -> None: ...
 
 class PlannedProduct(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def plannable_product_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -408,6 +427,7 @@ class PlannedProduct(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"budget_micros",b"budget_micros",u"plannable_product_code",b"plannable_product_code"]) -> None: ...
 
 class GenerateReachForecastResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def on_target_audience_metrics(self) -> OnTargetAudienceMetrics: ...
@@ -432,6 +452,7 @@ class GenerateReachForecastResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"on_target_audience_metrics",b"on_target_audience_metrics",u"reach_curve",b"reach_curve"]) -> None: ...
 
 class ReachCurve(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def reach_forecasts(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[ReachForecast]: ...
@@ -450,6 +471,7 @@ class ReachCurve(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"reach_forecasts",b"reach_forecasts"]) -> None: ...
 
 class ReachForecast(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def cost_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -478,6 +500,7 @@ class ReachForecast(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"cost_micros",b"cost_micros",u"forecast",b"forecast",u"forecasted_product_allocations",b"forecasted_product_allocations"]) -> None: ...
 
 class Forecast(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def on_target_reach(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -510,6 +533,7 @@ class Forecast(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"on_target_impressions",b"on_target_impressions",u"on_target_reach",b"on_target_reach",u"total_impressions",b"total_impressions",u"total_reach",b"total_reach"]) -> None: ...
 
 class OnTargetAudienceMetrics(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def youtube_audience_size(self) -> google___protobuf___wrappers_pb2___Int64Value: ...

@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.app_url_operating_system_type_pb2 impo
     AppUrlOperatingSystemTypeEnum as google___ads___googleads___v2___enums___app_url_operating_system_type_pb2___AppUrlOperatingSystemTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -22,14 +26,15 @@ from typing_extensions import (
 
 
 class FinalAppUrl(google___protobuf___message___Message):
-    os_type = ... # type: google___ads___googleads___v2___enums___app_url_operating_system_type_pb2___AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    os_type = ... # type: google___ads___googleads___v2___enums___app_url_operating_system_type_pb2___AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType
 
     @property
     def url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
 
     def __init__(self,
         *,
-        os_type : typing___Optional[google___ads___googleads___v2___enums___app_url_operating_system_type_pb2___AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.ClosedValueType] = None,
+        os_type : typing___Optional[google___ads___googleads___v2___enums___app_url_operating_system_type_pb2___AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType] = None,
         url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
     @classmethod

@@ -28,6 +28,10 @@ from google.ads.google_ads.v1.proto.enums.data_driven_model_status_pb2 import (
     DataDrivenModelStatusEnum as google___ads___googleads___v1___enums___data_driven_model_status_pb2___DataDrivenModelStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -55,14 +59,16 @@ from typing_extensions import (
 
 
 class ConversionAction(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class AttributionModelSettings(google___protobuf___message___Message):
-        attribution_model = ... # type: google___ads___googleads___v1___enums___attribution_model_pb2___AttributionModelEnum.AttributionModel.ClosedValueType
-        data_driven_model_status = ... # type: google___ads___googleads___v1___enums___data_driven_model_status_pb2___DataDrivenModelStatusEnum.DataDrivenModelStatus.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        attribution_model = ... # type: google___ads___googleads___v1___enums___attribution_model_pb2___AttributionModelEnum.AttributionModel
+        data_driven_model_status = ... # type: google___ads___googleads___v1___enums___data_driven_model_status_pb2___DataDrivenModelStatusEnum.DataDrivenModelStatus
 
         def __init__(self,
             *,
-            attribution_model : typing___Optional[google___ads___googleads___v1___enums___attribution_model_pb2___AttributionModelEnum.AttributionModel.ClosedValueType] = None,
-            data_driven_model_status : typing___Optional[google___ads___googleads___v1___enums___data_driven_model_status_pb2___DataDrivenModelStatusEnum.DataDrivenModelStatus.ClosedValueType] = None,
+            attribution_model : typing___Optional[google___ads___googleads___v1___enums___attribution_model_pb2___AttributionModelEnum.AttributionModel] = None,
+            data_driven_model_status : typing___Optional[google___ads___googleads___v1___enums___data_driven_model_status_pb2___DataDrivenModelStatusEnum.DataDrivenModelStatus] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> ConversionAction.AttributionModelSettings: ...
@@ -74,6 +80,7 @@ class ConversionAction(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"attribution_model",b"attribution_model",u"data_driven_model_status",b"data_driven_model_status"]) -> None: ...
 
     class ValueSettings(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def default_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -102,10 +109,10 @@ class ConversionAction(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"always_use_default_value",b"always_use_default_value",u"default_currency_code",b"default_currency_code",u"default_value",b"default_value"]) -> None: ...
 
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___conversion_action_status_pb2___ConversionActionStatusEnum.ConversionActionStatus.ClosedValueType
-    type = ... # type: google___ads___googleads___v1___enums___conversion_action_type_pb2___ConversionActionTypeEnum.ConversionActionType.ClosedValueType
-    category = ... # type: google___ads___googleads___v1___enums___conversion_action_category_pb2___ConversionActionCategoryEnum.ConversionActionCategory.ClosedValueType
-    counting_type = ... # type: google___ads___googleads___v1___enums___conversion_action_counting_type_pb2___ConversionActionCountingTypeEnum.ConversionActionCountingType.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___conversion_action_status_pb2___ConversionActionStatusEnum.ConversionActionStatus
+    type = ... # type: google___ads___googleads___v1___enums___conversion_action_type_pb2___ConversionActionTypeEnum.ConversionActionType
+    category = ... # type: google___ads___googleads___v1___enums___conversion_action_category_pb2___ConversionActionCategoryEnum.ConversionActionCategory
+    counting_type = ... # type: google___ads___googleads___v1___enums___conversion_action_counting_type_pb2___ConversionActionCountingTypeEnum.ConversionActionCountingType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -145,15 +152,15 @@ class ConversionAction(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___conversion_action_status_pb2___ConversionActionStatusEnum.ConversionActionStatus.ClosedValueType] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___conversion_action_type_pb2___ConversionActionTypeEnum.ConversionActionType.ClosedValueType] = None,
-        category : typing___Optional[google___ads___googleads___v1___enums___conversion_action_category_pb2___ConversionActionCategoryEnum.ConversionActionCategory.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___conversion_action_status_pb2___ConversionActionStatusEnum.ConversionActionStatus] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___conversion_action_type_pb2___ConversionActionTypeEnum.ConversionActionType] = None,
+        category : typing___Optional[google___ads___googleads___v1___enums___conversion_action_category_pb2___ConversionActionCategoryEnum.ConversionActionCategory] = None,
         owner_customer : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         include_in_conversions_metric : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         click_through_lookback_window_days : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         view_through_lookback_window_days : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         value_settings : typing___Optional[ConversionAction.ValueSettings] = None,
-        counting_type : typing___Optional[google___ads___googleads___v1___enums___conversion_action_counting_type_pb2___ConversionActionCountingTypeEnum.ConversionActionCountingType.ClosedValueType] = None,
+        counting_type : typing___Optional[google___ads___googleads___v1___enums___conversion_action_counting_type_pb2___ConversionActionCountingTypeEnum.ConversionActionCountingType] = None,
         attribution_model_settings : typing___Optional[ConversionAction.AttributionModelSettings] = None,
         tag_snippets : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___tag_snippet_pb2___TagSnippet]] = None,
         phone_call_duration_seconds : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,

@@ -16,6 +16,10 @@ from google.ads.google_ads.v2.proto.enums.time_type_pb2 import (
     TimeTypeEnum as google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -37,10 +41,12 @@ from typing_extensions import (
 
 
 class AccountBudget(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class PendingAccountBudgetProposal(google___protobuf___message___Message):
-        proposal_type = ... # type: google___ads___googleads___v2___enums___account_budget_proposal_type_pb2___AccountBudgetProposalTypeEnum.AccountBudgetProposalType.ClosedValueType
-        end_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType
-        spending_limit_type = ... # type: google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        proposal_type = ... # type: google___ads___googleads___v2___enums___account_budget_proposal_type_pb2___AccountBudgetProposalTypeEnum.AccountBudgetProposalType
+        end_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType
+        spending_limit_type = ... # type: google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
 
         @property
         def account_budget_proposal(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -69,16 +75,16 @@ class AccountBudget(google___protobuf___message___Message):
         def __init__(self,
             *,
             account_budget_proposal : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            proposal_type : typing___Optional[google___ads___googleads___v2___enums___account_budget_proposal_type_pb2___AccountBudgetProposalTypeEnum.AccountBudgetProposalType.ClosedValueType] = None,
+            proposal_type : typing___Optional[google___ads___googleads___v2___enums___account_budget_proposal_type_pb2___AccountBudgetProposalTypeEnum.AccountBudgetProposalType] = None,
             name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
             start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
             purchase_order_number : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
             notes : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
             creation_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
             end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            end_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType] = None,
+            end_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType] = None,
             spending_limit_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            spending_limit_type : typing___Optional[google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType.ClosedValueType] = None,
+            spending_limit_type : typing___Optional[google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> AccountBudget.PendingAccountBudgetProposal: ...
@@ -96,12 +102,12 @@ class AccountBudget(google___protobuf___message___Message):
         def WhichOneof(self, oneof_group: typing_extensions___Literal[u"spending_limit",b"spending_limit"]) -> typing_extensions___Literal["spending_limit_micros","spending_limit_type"]: ...
 
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___account_budget_status_pb2___AccountBudgetStatusEnum.AccountBudgetStatus.ClosedValueType
-    proposed_end_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType
-    approved_end_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType
-    proposed_spending_limit_type = ... # type: google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType.ClosedValueType
-    approved_spending_limit_type = ... # type: google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType.ClosedValueType
-    adjusted_spending_limit_type = ... # type: google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType.ClosedValueType
+    status = ... # type: google___ads___googleads___v2___enums___account_budget_status_pb2___AccountBudgetStatusEnum.AccountBudgetStatus
+    proposed_end_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType
+    approved_end_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType
+    proposed_spending_limit_type = ... # type: google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
+    approved_spending_limit_type = ... # type: google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
+    adjusted_spending_limit_type = ... # type: google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -153,7 +159,7 @@ class AccountBudget(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         billing_setup : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___account_budget_status_pb2___AccountBudgetStatusEnum.AccountBudgetStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___account_budget_status_pb2___AccountBudgetStatusEnum.AccountBudgetStatus] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         proposed_start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         approved_start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
@@ -163,15 +169,15 @@ class AccountBudget(google___protobuf___message___Message):
         notes : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         pending_proposal : typing___Optional[AccountBudget.PendingAccountBudgetProposal] = None,
         proposed_end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        proposed_end_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType] = None,
+        proposed_end_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType] = None,
         approved_end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        approved_end_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType] = None,
+        approved_end_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType] = None,
         proposed_spending_limit_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        proposed_spending_limit_type : typing___Optional[google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType.ClosedValueType] = None,
+        proposed_spending_limit_type : typing___Optional[google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType] = None,
         approved_spending_limit_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        approved_spending_limit_type : typing___Optional[google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType.ClosedValueType] = None,
+        approved_spending_limit_type : typing___Optional[google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType] = None,
         adjusted_spending_limit_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        adjusted_spending_limit_type : typing___Optional[google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType.ClosedValueType] = None,
+        adjusted_spending_limit_type : typing___Optional[google___ads___googleads___v2___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AccountBudget: ...

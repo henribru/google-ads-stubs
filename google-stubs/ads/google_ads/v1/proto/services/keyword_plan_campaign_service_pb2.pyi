@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.resources.keyword_plan_campaign_pb2 import (
     KeywordPlanCampaign as google___ads___googleads___v1___resources___keyword_plan_campaign_pb2___KeywordPlanCampaign,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -32,6 +36,7 @@ from typing_extensions import (
 
 
 class GetKeywordPlanCampaignRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -48,6 +53,7 @@ class GetKeywordPlanCampaignRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateKeywordPlanCampaignsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     partial_failure = ... # type: bool
     validate_only = ... # type: bool
@@ -72,6 +78,7 @@ class MutateKeywordPlanCampaignsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operations",b"operations",u"partial_failure",b"partial_failure",u"validate_only",b"validate_only"]) -> None: ...
 
 class KeywordPlanCampaignOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     remove = ... # type: typing___Text
 
     @property
@@ -103,6 +110,7 @@ class KeywordPlanCampaignOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","update","remove"]: ...
 
 class MutateKeywordPlanCampaignsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
@@ -127,6 +135,7 @@ class MutateKeywordPlanCampaignsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"partial_failure_error",b"partial_failure_error",u"results",b"results"]) -> None: ...
 
 class MutateKeywordPlanCampaignResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,

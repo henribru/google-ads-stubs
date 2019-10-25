@@ -8,6 +8,10 @@ from google.ads.google_ads.v1.proto.enums.tracking_code_type_pb2 import (
     TrackingCodeTypeEnum as google___ads___googleads___v1___enums___tracking_code_type_pb2___TrackingCodeTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -26,8 +30,9 @@ from typing_extensions import (
 
 
 class TagSnippet(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v1___enums___tracking_code_type_pb2___TrackingCodeTypeEnum.TrackingCodeType.ClosedValueType
-    page_format = ... # type: google___ads___googleads___v1___enums___tracking_code_page_format_pb2___TrackingCodePageFormatEnum.TrackingCodePageFormat.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v1___enums___tracking_code_type_pb2___TrackingCodeTypeEnum.TrackingCodeType
+    page_format = ... # type: google___ads___googleads___v1___enums___tracking_code_page_format_pb2___TrackingCodePageFormatEnum.TrackingCodePageFormat
 
     @property
     def global_site_tag(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -37,8 +42,8 @@ class TagSnippet(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v1___enums___tracking_code_type_pb2___TrackingCodeTypeEnum.TrackingCodeType.ClosedValueType] = None,
-        page_format : typing___Optional[google___ads___googleads___v1___enums___tracking_code_page_format_pb2___TrackingCodePageFormatEnum.TrackingCodePageFormat.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___tracking_code_type_pb2___TrackingCodeTypeEnum.TrackingCodeType] = None,
+        page_format : typing___Optional[google___ads___googleads___v1___enums___tracking_code_page_format_pb2___TrackingCodePageFormatEnum.TrackingCodePageFormat] = None,
         global_site_tag : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         event_snippet : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...

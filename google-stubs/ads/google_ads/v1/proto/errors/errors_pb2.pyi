@@ -417,6 +417,10 @@ from google.ads.google_ads.v1.proto.errors.youtube_video_registration_error_pb2 
     YoutubeVideoRegistrationErrorEnum as google___ads___googleads___v1___errors___youtube_video_registration_error_pb2___YoutubeVideoRegistrationErrorEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -441,6 +445,7 @@ from typing_extensions import (
 
 
 class GoogleAdsFailure(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def errors(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[GoogleAdsError]: ...
@@ -459,6 +464,7 @@ class GoogleAdsFailure(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"errors",b"errors"]) -> None: ...
 
 class GoogleAdsError(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     message = ... # type: typing___Text
 
     @property
@@ -493,213 +499,214 @@ class GoogleAdsError(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"details",b"details",u"error_code",b"error_code",u"location",b"location",u"message",b"message",u"trigger",b"trigger"]) -> None: ...
 
 class ErrorCode(google___protobuf___message___Message):
-    request_error = ... # type: google___ads___googleads___v1___errors___request_error_pb2___RequestErrorEnum.RequestError.ClosedValueType
-    bidding_strategy_error = ... # type: google___ads___googleads___v1___errors___bidding_strategy_error_pb2___BiddingStrategyErrorEnum.BiddingStrategyError.ClosedValueType
-    url_field_error = ... # type: google___ads___googleads___v1___errors___url_field_error_pb2___UrlFieldErrorEnum.UrlFieldError.ClosedValueType
-    list_operation_error = ... # type: google___ads___googleads___v1___errors___list_operation_error_pb2___ListOperationErrorEnum.ListOperationError.ClosedValueType
-    query_error = ... # type: google___ads___googleads___v1___errors___query_error_pb2___QueryErrorEnum.QueryError.ClosedValueType
-    mutate_error = ... # type: google___ads___googleads___v1___errors___mutate_error_pb2___MutateErrorEnum.MutateError.ClosedValueType
-    field_mask_error = ... # type: google___ads___googleads___v1___errors___field_mask_error_pb2___FieldMaskErrorEnum.FieldMaskError.ClosedValueType
-    authorization_error = ... # type: google___ads___googleads___v1___errors___authorization_error_pb2___AuthorizationErrorEnum.AuthorizationError.ClosedValueType
-    internal_error = ... # type: google___ads___googleads___v1___errors___internal_error_pb2___InternalErrorEnum.InternalError.ClosedValueType
-    quota_error = ... # type: google___ads___googleads___v1___errors___quota_error_pb2___QuotaErrorEnum.QuotaError.ClosedValueType
-    ad_error = ... # type: google___ads___googleads___v1___errors___ad_error_pb2___AdErrorEnum.AdError.ClosedValueType
-    ad_group_error = ... # type: google___ads___googleads___v1___errors___ad_group_error_pb2___AdGroupErrorEnum.AdGroupError.ClosedValueType
-    campaign_budget_error = ... # type: google___ads___googleads___v1___errors___campaign_budget_error_pb2___CampaignBudgetErrorEnum.CampaignBudgetError.ClosedValueType
-    campaign_error = ... # type: google___ads___googleads___v1___errors___campaign_error_pb2___CampaignErrorEnum.CampaignError.ClosedValueType
-    authentication_error = ... # type: google___ads___googleads___v1___errors___authentication_error_pb2___AuthenticationErrorEnum.AuthenticationError.ClosedValueType
-    ad_group_criterion_error = ... # type: google___ads___googleads___v1___errors___ad_group_criterion_error_pb2___AdGroupCriterionErrorEnum.AdGroupCriterionError.ClosedValueType
-    ad_customizer_error = ... # type: google___ads___googleads___v1___errors___ad_customizer_error_pb2___AdCustomizerErrorEnum.AdCustomizerError.ClosedValueType
-    ad_group_ad_error = ... # type: google___ads___googleads___v1___errors___ad_group_ad_error_pb2___AdGroupAdErrorEnum.AdGroupAdError.ClosedValueType
-    ad_sharing_error = ... # type: google___ads___googleads___v1___errors___ad_sharing_error_pb2___AdSharingErrorEnum.AdSharingError.ClosedValueType
-    adx_error = ... # type: google___ads___googleads___v1___errors___adx_error_pb2___AdxErrorEnum.AdxError.ClosedValueType
-    asset_error = ... # type: google___ads___googleads___v1___errors___asset_error_pb2___AssetErrorEnum.AssetError.ClosedValueType
-    bidding_error = ... # type: google___ads___googleads___v1___errors___bidding_error_pb2___BiddingErrorEnum.BiddingError.ClosedValueType
-    campaign_criterion_error = ... # type: google___ads___googleads___v1___errors___campaign_criterion_error_pb2___CampaignCriterionErrorEnum.CampaignCriterionError.ClosedValueType
-    collection_size_error = ... # type: google___ads___googleads___v1___errors___collection_size_error_pb2___CollectionSizeErrorEnum.CollectionSizeError.ClosedValueType
-    country_code_error = ... # type: google___ads___googleads___v1___errors___country_code_error_pb2___CountryCodeErrorEnum.CountryCodeError.ClosedValueType
-    criterion_error = ... # type: google___ads___googleads___v1___errors___criterion_error_pb2___CriterionErrorEnum.CriterionError.ClosedValueType
-    customer_error = ... # type: google___ads___googleads___v1___errors___customer_error_pb2___CustomerErrorEnum.CustomerError.ClosedValueType
-    date_error = ... # type: google___ads___googleads___v1___errors___date_error_pb2___DateErrorEnum.DateError.ClosedValueType
-    date_range_error = ... # type: google___ads___googleads___v1___errors___date_range_error_pb2___DateRangeErrorEnum.DateRangeError.ClosedValueType
-    distinct_error = ... # type: google___ads___googleads___v1___errors___distinct_error_pb2___DistinctErrorEnum.DistinctError.ClosedValueType
-    feed_attribute_reference_error = ... # type: google___ads___googleads___v1___errors___feed_attribute_reference_error_pb2___FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError.ClosedValueType
-    function_error = ... # type: google___ads___googleads___v1___errors___function_error_pb2___FunctionErrorEnum.FunctionError.ClosedValueType
-    function_parsing_error = ... # type: google___ads___googleads___v1___errors___function_parsing_error_pb2___FunctionParsingErrorEnum.FunctionParsingError.ClosedValueType
-    id_error = ... # type: google___ads___googleads___v1___errors___id_error_pb2___IdErrorEnum.IdError.ClosedValueType
-    image_error = ... # type: google___ads___googleads___v1___errors___image_error_pb2___ImageErrorEnum.ImageError.ClosedValueType
-    language_code_error = ... # type: google___ads___googleads___v1___errors___language_code_error_pb2___LanguageCodeErrorEnum.LanguageCodeError.ClosedValueType
-    media_bundle_error = ... # type: google___ads___googleads___v1___errors___media_bundle_error_pb2___MediaBundleErrorEnum.MediaBundleError.ClosedValueType
-    media_upload_error = ... # type: google___ads___googleads___v1___errors___media_upload_error_pb2___MediaUploadErrorEnum.MediaUploadError.ClosedValueType
-    media_file_error = ... # type: google___ads___googleads___v1___errors___media_file_error_pb2___MediaFileErrorEnum.MediaFileError.ClosedValueType
-    multiplier_error = ... # type: google___ads___googleads___v1___errors___multiplier_error_pb2___MultiplierErrorEnum.MultiplierError.ClosedValueType
-    new_resource_creation_error = ... # type: google___ads___googleads___v1___errors___new_resource_creation_error_pb2___NewResourceCreationErrorEnum.NewResourceCreationError.ClosedValueType
-    not_empty_error = ... # type: google___ads___googleads___v1___errors___not_empty_error_pb2___NotEmptyErrorEnum.NotEmptyError.ClosedValueType
-    null_error = ... # type: google___ads___googleads___v1___errors___null_error_pb2___NullErrorEnum.NullError.ClosedValueType
-    operator_error = ... # type: google___ads___googleads___v1___errors___operator_error_pb2___OperatorErrorEnum.OperatorError.ClosedValueType
-    range_error = ... # type: google___ads___googleads___v1___errors___range_error_pb2___RangeErrorEnum.RangeError.ClosedValueType
-    recommendation_error = ... # type: google___ads___googleads___v1___errors___recommendation_error_pb2___RecommendationErrorEnum.RecommendationError.ClosedValueType
-    region_code_error = ... # type: google___ads___googleads___v1___errors___region_code_error_pb2___RegionCodeErrorEnum.RegionCodeError.ClosedValueType
-    setting_error = ... # type: google___ads___googleads___v1___errors___setting_error_pb2___SettingErrorEnum.SettingError.ClosedValueType
-    string_format_error = ... # type: google___ads___googleads___v1___errors___string_format_error_pb2___StringFormatErrorEnum.StringFormatError.ClosedValueType
-    string_length_error = ... # type: google___ads___googleads___v1___errors___string_length_error_pb2___StringLengthErrorEnum.StringLengthError.ClosedValueType
-    operation_access_denied_error = ... # type: google___ads___googleads___v1___errors___operation_access_denied_error_pb2___OperationAccessDeniedErrorEnum.OperationAccessDeniedError.ClosedValueType
-    resource_access_denied_error = ... # type: google___ads___googleads___v1___errors___resource_access_denied_error_pb2___ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError.ClosedValueType
-    resource_count_limit_exceeded_error = ... # type: google___ads___googleads___v1___errors___resource_count_limit_exceeded_error_pb2___ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.ClosedValueType
-    youtube_video_registration_error = ... # type: google___ads___googleads___v1___errors___youtube_video_registration_error_pb2___YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.ClosedValueType
-    ad_group_bid_modifier_error = ... # type: google___ads___googleads___v1___errors___ad_group_bid_modifier_error_pb2___AdGroupBidModifierErrorEnum.AdGroupBidModifierError.ClosedValueType
-    context_error = ... # type: google___ads___googleads___v1___errors___context_error_pb2___ContextErrorEnum.ContextError.ClosedValueType
-    field_error = ... # type: google___ads___googleads___v1___errors___field_error_pb2___FieldErrorEnum.FieldError.ClosedValueType
-    shared_set_error = ... # type: google___ads___googleads___v1___errors___shared_set_error_pb2___SharedSetErrorEnum.SharedSetError.ClosedValueType
-    shared_criterion_error = ... # type: google___ads___googleads___v1___errors___shared_criterion_error_pb2___SharedCriterionErrorEnum.SharedCriterionError.ClosedValueType
-    campaign_shared_set_error = ... # type: google___ads___googleads___v1___errors___campaign_shared_set_error_pb2___CampaignSharedSetErrorEnum.CampaignSharedSetError.ClosedValueType
-    conversion_action_error = ... # type: google___ads___googleads___v1___errors___conversion_action_error_pb2___ConversionActionErrorEnum.ConversionActionError.ClosedValueType
-    conversion_adjustment_upload_error = ... # type: google___ads___googleads___v1___errors___conversion_adjustment_upload_error_pb2___ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.ClosedValueType
-    conversion_upload_error = ... # type: google___ads___googleads___v1___errors___conversion_upload_error_pb2___ConversionUploadErrorEnum.ConversionUploadError.ClosedValueType
-    header_error = ... # type: google___ads___googleads___v1___errors___header_error_pb2___HeaderErrorEnum.HeaderError.ClosedValueType
-    database_error = ... # type: google___ads___googleads___v1___errors___database_error_pb2___DatabaseErrorEnum.DatabaseError.ClosedValueType
-    policy_finding_error = ... # type: google___ads___googleads___v1___errors___policy_finding_error_pb2___PolicyFindingErrorEnum.PolicyFindingError.ClosedValueType
-    enum_error = ... # type: google___ads___googleads___v1___errors___enum_error_pb2___EnumErrorEnum.EnumError.ClosedValueType
-    keyword_plan_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_error_pb2___KeywordPlanErrorEnum.KeywordPlanError.ClosedValueType
-    keyword_plan_campaign_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_campaign_error_pb2___KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.ClosedValueType
-    keyword_plan_negative_keyword_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_negative_keyword_error_pb2___KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError.ClosedValueType
-    keyword_plan_ad_group_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_ad_group_error_pb2___KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.ClosedValueType
-    keyword_plan_keyword_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_keyword_error_pb2___KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError.ClosedValueType
-    keyword_plan_idea_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_idea_error_pb2___KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.ClosedValueType
-    account_budget_proposal_error = ... # type: google___ads___googleads___v1___errors___account_budget_proposal_error_pb2___AccountBudgetProposalErrorEnum.AccountBudgetProposalError.ClosedValueType
-    user_list_error = ... # type: google___ads___googleads___v1___errors___user_list_error_pb2___UserListErrorEnum.UserListError.ClosedValueType
-    change_status_error = ... # type: google___ads___googleads___v1___errors___change_status_error_pb2___ChangeStatusErrorEnum.ChangeStatusError.ClosedValueType
-    feed_error = ... # type: google___ads___googleads___v1___errors___feed_error_pb2___FeedErrorEnum.FeedError.ClosedValueType
-    geo_target_constant_suggestion_error = ... # type: google___ads___googleads___v1___errors___geo_target_constant_suggestion_error_pb2___GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.ClosedValueType
-    campaign_draft_error = ... # type: google___ads___googleads___v1___errors___campaign_draft_error_pb2___CampaignDraftErrorEnum.CampaignDraftError.ClosedValueType
-    feed_item_error = ... # type: google___ads___googleads___v1___errors___feed_item_error_pb2___FeedItemErrorEnum.FeedItemError.ClosedValueType
-    label_error = ... # type: google___ads___googleads___v1___errors___label_error_pb2___LabelErrorEnum.LabelError.ClosedValueType
-    billing_setup_error = ... # type: google___ads___googleads___v1___errors___billing_setup_error_pb2___BillingSetupErrorEnum.BillingSetupError.ClosedValueType
-    customer_client_link_error = ... # type: google___ads___googleads___v1___errors___customer_client_link_error_pb2___CustomerClientLinkErrorEnum.CustomerClientLinkError.ClosedValueType
-    customer_manager_link_error = ... # type: google___ads___googleads___v1___errors___customer_manager_link_error_pb2___CustomerManagerLinkErrorEnum.CustomerManagerLinkError.ClosedValueType
-    feed_mapping_error = ... # type: google___ads___googleads___v1___errors___feed_mapping_error_pb2___FeedMappingErrorEnum.FeedMappingError.ClosedValueType
-    customer_feed_error = ... # type: google___ads___googleads___v1___errors___customer_feed_error_pb2___CustomerFeedErrorEnum.CustomerFeedError.ClosedValueType
-    ad_group_feed_error = ... # type: google___ads___googleads___v1___errors___ad_group_feed_error_pb2___AdGroupFeedErrorEnum.AdGroupFeedError.ClosedValueType
-    campaign_feed_error = ... # type: google___ads___googleads___v1___errors___campaign_feed_error_pb2___CampaignFeedErrorEnum.CampaignFeedError.ClosedValueType
-    custom_interest_error = ... # type: google___ads___googleads___v1___errors___custom_interest_error_pb2___CustomInterestErrorEnum.CustomInterestError.ClosedValueType
-    campaign_experiment_error = ... # type: google___ads___googleads___v1___errors___campaign_experiment_error_pb2___CampaignExperimentErrorEnum.CampaignExperimentError.ClosedValueType
-    extension_feed_item_error = ... # type: google___ads___googleads___v1___errors___extension_feed_item_error_pb2___ExtensionFeedItemErrorEnum.ExtensionFeedItemError.ClosedValueType
-    ad_parameter_error = ... # type: google___ads___googleads___v1___errors___ad_parameter_error_pb2___AdParameterErrorEnum.AdParameterError.ClosedValueType
-    feed_item_validation_error = ... # type: google___ads___googleads___v1___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum.FeedItemValidationError.ClosedValueType
-    extension_setting_error = ... # type: google___ads___googleads___v1___errors___extension_setting_error_pb2___ExtensionSettingErrorEnum.ExtensionSettingError.ClosedValueType
-    feed_item_target_error = ... # type: google___ads___googleads___v1___errors___feed_item_target_error_pb2___FeedItemTargetErrorEnum.FeedItemTargetError.ClosedValueType
-    policy_violation_error = ... # type: google___ads___googleads___v1___errors___policy_violation_error_pb2___PolicyViolationErrorEnum.PolicyViolationError.ClosedValueType
-    mutate_job_error = ... # type: google___ads___googleads___v1___errors___mutate_job_error_pb2___MutateJobErrorEnum.MutateJobError.ClosedValueType
-    partial_failure_error = ... # type: google___ads___googleads___v1___errors___partial_failure_error_pb2___PartialFailureErrorEnum.PartialFailureError.ClosedValueType
-    policy_validation_parameter_error = ... # type: google___ads___googleads___v1___errors___policy_validation_parameter_error_pb2___PolicyValidationParameterErrorEnum.PolicyValidationParameterError.ClosedValueType
-    size_limit_error = ... # type: google___ads___googleads___v1___errors___size_limit_error_pb2___SizeLimitErrorEnum.SizeLimitError.ClosedValueType
-    not_whitelisted_error = ... # type: google___ads___googleads___v1___errors___not_whitelisted_error_pb2___NotWhitelistedErrorEnum.NotWhitelistedError.ClosedValueType
-    manager_link_error = ... # type: google___ads___googleads___v1___errors___manager_link_error_pb2___ManagerLinkErrorEnum.ManagerLinkError.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    request_error = ... # type: google___ads___googleads___v1___errors___request_error_pb2___RequestErrorEnum.RequestError
+    bidding_strategy_error = ... # type: google___ads___googleads___v1___errors___bidding_strategy_error_pb2___BiddingStrategyErrorEnum.BiddingStrategyError
+    url_field_error = ... # type: google___ads___googleads___v1___errors___url_field_error_pb2___UrlFieldErrorEnum.UrlFieldError
+    list_operation_error = ... # type: google___ads___googleads___v1___errors___list_operation_error_pb2___ListOperationErrorEnum.ListOperationError
+    query_error = ... # type: google___ads___googleads___v1___errors___query_error_pb2___QueryErrorEnum.QueryError
+    mutate_error = ... # type: google___ads___googleads___v1___errors___mutate_error_pb2___MutateErrorEnum.MutateError
+    field_mask_error = ... # type: google___ads___googleads___v1___errors___field_mask_error_pb2___FieldMaskErrorEnum.FieldMaskError
+    authorization_error = ... # type: google___ads___googleads___v1___errors___authorization_error_pb2___AuthorizationErrorEnum.AuthorizationError
+    internal_error = ... # type: google___ads___googleads___v1___errors___internal_error_pb2___InternalErrorEnum.InternalError
+    quota_error = ... # type: google___ads___googleads___v1___errors___quota_error_pb2___QuotaErrorEnum.QuotaError
+    ad_error = ... # type: google___ads___googleads___v1___errors___ad_error_pb2___AdErrorEnum.AdError
+    ad_group_error = ... # type: google___ads___googleads___v1___errors___ad_group_error_pb2___AdGroupErrorEnum.AdGroupError
+    campaign_budget_error = ... # type: google___ads___googleads___v1___errors___campaign_budget_error_pb2___CampaignBudgetErrorEnum.CampaignBudgetError
+    campaign_error = ... # type: google___ads___googleads___v1___errors___campaign_error_pb2___CampaignErrorEnum.CampaignError
+    authentication_error = ... # type: google___ads___googleads___v1___errors___authentication_error_pb2___AuthenticationErrorEnum.AuthenticationError
+    ad_group_criterion_error = ... # type: google___ads___googleads___v1___errors___ad_group_criterion_error_pb2___AdGroupCriterionErrorEnum.AdGroupCriterionError
+    ad_customizer_error = ... # type: google___ads___googleads___v1___errors___ad_customizer_error_pb2___AdCustomizerErrorEnum.AdCustomizerError
+    ad_group_ad_error = ... # type: google___ads___googleads___v1___errors___ad_group_ad_error_pb2___AdGroupAdErrorEnum.AdGroupAdError
+    ad_sharing_error = ... # type: google___ads___googleads___v1___errors___ad_sharing_error_pb2___AdSharingErrorEnum.AdSharingError
+    adx_error = ... # type: google___ads___googleads___v1___errors___adx_error_pb2___AdxErrorEnum.AdxError
+    asset_error = ... # type: google___ads___googleads___v1___errors___asset_error_pb2___AssetErrorEnum.AssetError
+    bidding_error = ... # type: google___ads___googleads___v1___errors___bidding_error_pb2___BiddingErrorEnum.BiddingError
+    campaign_criterion_error = ... # type: google___ads___googleads___v1___errors___campaign_criterion_error_pb2___CampaignCriterionErrorEnum.CampaignCriterionError
+    collection_size_error = ... # type: google___ads___googleads___v1___errors___collection_size_error_pb2___CollectionSizeErrorEnum.CollectionSizeError
+    country_code_error = ... # type: google___ads___googleads___v1___errors___country_code_error_pb2___CountryCodeErrorEnum.CountryCodeError
+    criterion_error = ... # type: google___ads___googleads___v1___errors___criterion_error_pb2___CriterionErrorEnum.CriterionError
+    customer_error = ... # type: google___ads___googleads___v1___errors___customer_error_pb2___CustomerErrorEnum.CustomerError
+    date_error = ... # type: google___ads___googleads___v1___errors___date_error_pb2___DateErrorEnum.DateError
+    date_range_error = ... # type: google___ads___googleads___v1___errors___date_range_error_pb2___DateRangeErrorEnum.DateRangeError
+    distinct_error = ... # type: google___ads___googleads___v1___errors___distinct_error_pb2___DistinctErrorEnum.DistinctError
+    feed_attribute_reference_error = ... # type: google___ads___googleads___v1___errors___feed_attribute_reference_error_pb2___FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError
+    function_error = ... # type: google___ads___googleads___v1___errors___function_error_pb2___FunctionErrorEnum.FunctionError
+    function_parsing_error = ... # type: google___ads___googleads___v1___errors___function_parsing_error_pb2___FunctionParsingErrorEnum.FunctionParsingError
+    id_error = ... # type: google___ads___googleads___v1___errors___id_error_pb2___IdErrorEnum.IdError
+    image_error = ... # type: google___ads___googleads___v1___errors___image_error_pb2___ImageErrorEnum.ImageError
+    language_code_error = ... # type: google___ads___googleads___v1___errors___language_code_error_pb2___LanguageCodeErrorEnum.LanguageCodeError
+    media_bundle_error = ... # type: google___ads___googleads___v1___errors___media_bundle_error_pb2___MediaBundleErrorEnum.MediaBundleError
+    media_upload_error = ... # type: google___ads___googleads___v1___errors___media_upload_error_pb2___MediaUploadErrorEnum.MediaUploadError
+    media_file_error = ... # type: google___ads___googleads___v1___errors___media_file_error_pb2___MediaFileErrorEnum.MediaFileError
+    multiplier_error = ... # type: google___ads___googleads___v1___errors___multiplier_error_pb2___MultiplierErrorEnum.MultiplierError
+    new_resource_creation_error = ... # type: google___ads___googleads___v1___errors___new_resource_creation_error_pb2___NewResourceCreationErrorEnum.NewResourceCreationError
+    not_empty_error = ... # type: google___ads___googleads___v1___errors___not_empty_error_pb2___NotEmptyErrorEnum.NotEmptyError
+    null_error = ... # type: google___ads___googleads___v1___errors___null_error_pb2___NullErrorEnum.NullError
+    operator_error = ... # type: google___ads___googleads___v1___errors___operator_error_pb2___OperatorErrorEnum.OperatorError
+    range_error = ... # type: google___ads___googleads___v1___errors___range_error_pb2___RangeErrorEnum.RangeError
+    recommendation_error = ... # type: google___ads___googleads___v1___errors___recommendation_error_pb2___RecommendationErrorEnum.RecommendationError
+    region_code_error = ... # type: google___ads___googleads___v1___errors___region_code_error_pb2___RegionCodeErrorEnum.RegionCodeError
+    setting_error = ... # type: google___ads___googleads___v1___errors___setting_error_pb2___SettingErrorEnum.SettingError
+    string_format_error = ... # type: google___ads___googleads___v1___errors___string_format_error_pb2___StringFormatErrorEnum.StringFormatError
+    string_length_error = ... # type: google___ads___googleads___v1___errors___string_length_error_pb2___StringLengthErrorEnum.StringLengthError
+    operation_access_denied_error = ... # type: google___ads___googleads___v1___errors___operation_access_denied_error_pb2___OperationAccessDeniedErrorEnum.OperationAccessDeniedError
+    resource_access_denied_error = ... # type: google___ads___googleads___v1___errors___resource_access_denied_error_pb2___ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError
+    resource_count_limit_exceeded_error = ... # type: google___ads___googleads___v1___errors___resource_count_limit_exceeded_error_pb2___ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError
+    youtube_video_registration_error = ... # type: google___ads___googleads___v1___errors___youtube_video_registration_error_pb2___YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError
+    ad_group_bid_modifier_error = ... # type: google___ads___googleads___v1___errors___ad_group_bid_modifier_error_pb2___AdGroupBidModifierErrorEnum.AdGroupBidModifierError
+    context_error = ... # type: google___ads___googleads___v1___errors___context_error_pb2___ContextErrorEnum.ContextError
+    field_error = ... # type: google___ads___googleads___v1___errors___field_error_pb2___FieldErrorEnum.FieldError
+    shared_set_error = ... # type: google___ads___googleads___v1___errors___shared_set_error_pb2___SharedSetErrorEnum.SharedSetError
+    shared_criterion_error = ... # type: google___ads___googleads___v1___errors___shared_criterion_error_pb2___SharedCriterionErrorEnum.SharedCriterionError
+    campaign_shared_set_error = ... # type: google___ads___googleads___v1___errors___campaign_shared_set_error_pb2___CampaignSharedSetErrorEnum.CampaignSharedSetError
+    conversion_action_error = ... # type: google___ads___googleads___v1___errors___conversion_action_error_pb2___ConversionActionErrorEnum.ConversionActionError
+    conversion_adjustment_upload_error = ... # type: google___ads___googleads___v1___errors___conversion_adjustment_upload_error_pb2___ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError
+    conversion_upload_error = ... # type: google___ads___googleads___v1___errors___conversion_upload_error_pb2___ConversionUploadErrorEnum.ConversionUploadError
+    header_error = ... # type: google___ads___googleads___v1___errors___header_error_pb2___HeaderErrorEnum.HeaderError
+    database_error = ... # type: google___ads___googleads___v1___errors___database_error_pb2___DatabaseErrorEnum.DatabaseError
+    policy_finding_error = ... # type: google___ads___googleads___v1___errors___policy_finding_error_pb2___PolicyFindingErrorEnum.PolicyFindingError
+    enum_error = ... # type: google___ads___googleads___v1___errors___enum_error_pb2___EnumErrorEnum.EnumError
+    keyword_plan_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_error_pb2___KeywordPlanErrorEnum.KeywordPlanError
+    keyword_plan_campaign_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_campaign_error_pb2___KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError
+    keyword_plan_negative_keyword_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_negative_keyword_error_pb2___KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError
+    keyword_plan_ad_group_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_ad_group_error_pb2___KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError
+    keyword_plan_keyword_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_keyword_error_pb2___KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError
+    keyword_plan_idea_error = ... # type: google___ads___googleads___v1___errors___keyword_plan_idea_error_pb2___KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError
+    account_budget_proposal_error = ... # type: google___ads___googleads___v1___errors___account_budget_proposal_error_pb2___AccountBudgetProposalErrorEnum.AccountBudgetProposalError
+    user_list_error = ... # type: google___ads___googleads___v1___errors___user_list_error_pb2___UserListErrorEnum.UserListError
+    change_status_error = ... # type: google___ads___googleads___v1___errors___change_status_error_pb2___ChangeStatusErrorEnum.ChangeStatusError
+    feed_error = ... # type: google___ads___googleads___v1___errors___feed_error_pb2___FeedErrorEnum.FeedError
+    geo_target_constant_suggestion_error = ... # type: google___ads___googleads___v1___errors___geo_target_constant_suggestion_error_pb2___GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError
+    campaign_draft_error = ... # type: google___ads___googleads___v1___errors___campaign_draft_error_pb2___CampaignDraftErrorEnum.CampaignDraftError
+    feed_item_error = ... # type: google___ads___googleads___v1___errors___feed_item_error_pb2___FeedItemErrorEnum.FeedItemError
+    label_error = ... # type: google___ads___googleads___v1___errors___label_error_pb2___LabelErrorEnum.LabelError
+    billing_setup_error = ... # type: google___ads___googleads___v1___errors___billing_setup_error_pb2___BillingSetupErrorEnum.BillingSetupError
+    customer_client_link_error = ... # type: google___ads___googleads___v1___errors___customer_client_link_error_pb2___CustomerClientLinkErrorEnum.CustomerClientLinkError
+    customer_manager_link_error = ... # type: google___ads___googleads___v1___errors___customer_manager_link_error_pb2___CustomerManagerLinkErrorEnum.CustomerManagerLinkError
+    feed_mapping_error = ... # type: google___ads___googleads___v1___errors___feed_mapping_error_pb2___FeedMappingErrorEnum.FeedMappingError
+    customer_feed_error = ... # type: google___ads___googleads___v1___errors___customer_feed_error_pb2___CustomerFeedErrorEnum.CustomerFeedError
+    ad_group_feed_error = ... # type: google___ads___googleads___v1___errors___ad_group_feed_error_pb2___AdGroupFeedErrorEnum.AdGroupFeedError
+    campaign_feed_error = ... # type: google___ads___googleads___v1___errors___campaign_feed_error_pb2___CampaignFeedErrorEnum.CampaignFeedError
+    custom_interest_error = ... # type: google___ads___googleads___v1___errors___custom_interest_error_pb2___CustomInterestErrorEnum.CustomInterestError
+    campaign_experiment_error = ... # type: google___ads___googleads___v1___errors___campaign_experiment_error_pb2___CampaignExperimentErrorEnum.CampaignExperimentError
+    extension_feed_item_error = ... # type: google___ads___googleads___v1___errors___extension_feed_item_error_pb2___ExtensionFeedItemErrorEnum.ExtensionFeedItemError
+    ad_parameter_error = ... # type: google___ads___googleads___v1___errors___ad_parameter_error_pb2___AdParameterErrorEnum.AdParameterError
+    feed_item_validation_error = ... # type: google___ads___googleads___v1___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum.FeedItemValidationError
+    extension_setting_error = ... # type: google___ads___googleads___v1___errors___extension_setting_error_pb2___ExtensionSettingErrorEnum.ExtensionSettingError
+    feed_item_target_error = ... # type: google___ads___googleads___v1___errors___feed_item_target_error_pb2___FeedItemTargetErrorEnum.FeedItemTargetError
+    policy_violation_error = ... # type: google___ads___googleads___v1___errors___policy_violation_error_pb2___PolicyViolationErrorEnum.PolicyViolationError
+    mutate_job_error = ... # type: google___ads___googleads___v1___errors___mutate_job_error_pb2___MutateJobErrorEnum.MutateJobError
+    partial_failure_error = ... # type: google___ads___googleads___v1___errors___partial_failure_error_pb2___PartialFailureErrorEnum.PartialFailureError
+    policy_validation_parameter_error = ... # type: google___ads___googleads___v1___errors___policy_validation_parameter_error_pb2___PolicyValidationParameterErrorEnum.PolicyValidationParameterError
+    size_limit_error = ... # type: google___ads___googleads___v1___errors___size_limit_error_pb2___SizeLimitErrorEnum.SizeLimitError
+    not_whitelisted_error = ... # type: google___ads___googleads___v1___errors___not_whitelisted_error_pb2___NotWhitelistedErrorEnum.NotWhitelistedError
+    manager_link_error = ... # type: google___ads___googleads___v1___errors___manager_link_error_pb2___ManagerLinkErrorEnum.ManagerLinkError
 
     def __init__(self,
         *,
-        request_error : typing___Optional[google___ads___googleads___v1___errors___request_error_pb2___RequestErrorEnum.RequestError.ClosedValueType] = None,
-        bidding_strategy_error : typing___Optional[google___ads___googleads___v1___errors___bidding_strategy_error_pb2___BiddingStrategyErrorEnum.BiddingStrategyError.ClosedValueType] = None,
-        url_field_error : typing___Optional[google___ads___googleads___v1___errors___url_field_error_pb2___UrlFieldErrorEnum.UrlFieldError.ClosedValueType] = None,
-        list_operation_error : typing___Optional[google___ads___googleads___v1___errors___list_operation_error_pb2___ListOperationErrorEnum.ListOperationError.ClosedValueType] = None,
-        query_error : typing___Optional[google___ads___googleads___v1___errors___query_error_pb2___QueryErrorEnum.QueryError.ClosedValueType] = None,
-        mutate_error : typing___Optional[google___ads___googleads___v1___errors___mutate_error_pb2___MutateErrorEnum.MutateError.ClosedValueType] = None,
-        field_mask_error : typing___Optional[google___ads___googleads___v1___errors___field_mask_error_pb2___FieldMaskErrorEnum.FieldMaskError.ClosedValueType] = None,
-        authorization_error : typing___Optional[google___ads___googleads___v1___errors___authorization_error_pb2___AuthorizationErrorEnum.AuthorizationError.ClosedValueType] = None,
-        internal_error : typing___Optional[google___ads___googleads___v1___errors___internal_error_pb2___InternalErrorEnum.InternalError.ClosedValueType] = None,
-        quota_error : typing___Optional[google___ads___googleads___v1___errors___quota_error_pb2___QuotaErrorEnum.QuotaError.ClosedValueType] = None,
-        ad_error : typing___Optional[google___ads___googleads___v1___errors___ad_error_pb2___AdErrorEnum.AdError.ClosedValueType] = None,
-        ad_group_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_error_pb2___AdGroupErrorEnum.AdGroupError.ClosedValueType] = None,
-        campaign_budget_error : typing___Optional[google___ads___googleads___v1___errors___campaign_budget_error_pb2___CampaignBudgetErrorEnum.CampaignBudgetError.ClosedValueType] = None,
-        campaign_error : typing___Optional[google___ads___googleads___v1___errors___campaign_error_pb2___CampaignErrorEnum.CampaignError.ClosedValueType] = None,
-        authentication_error : typing___Optional[google___ads___googleads___v1___errors___authentication_error_pb2___AuthenticationErrorEnum.AuthenticationError.ClosedValueType] = None,
-        ad_group_criterion_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_criterion_error_pb2___AdGroupCriterionErrorEnum.AdGroupCriterionError.ClosedValueType] = None,
-        ad_customizer_error : typing___Optional[google___ads___googleads___v1___errors___ad_customizer_error_pb2___AdCustomizerErrorEnum.AdCustomizerError.ClosedValueType] = None,
-        ad_group_ad_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_ad_error_pb2___AdGroupAdErrorEnum.AdGroupAdError.ClosedValueType] = None,
-        ad_sharing_error : typing___Optional[google___ads___googleads___v1___errors___ad_sharing_error_pb2___AdSharingErrorEnum.AdSharingError.ClosedValueType] = None,
-        adx_error : typing___Optional[google___ads___googleads___v1___errors___adx_error_pb2___AdxErrorEnum.AdxError.ClosedValueType] = None,
-        asset_error : typing___Optional[google___ads___googleads___v1___errors___asset_error_pb2___AssetErrorEnum.AssetError.ClosedValueType] = None,
-        bidding_error : typing___Optional[google___ads___googleads___v1___errors___bidding_error_pb2___BiddingErrorEnum.BiddingError.ClosedValueType] = None,
-        campaign_criterion_error : typing___Optional[google___ads___googleads___v1___errors___campaign_criterion_error_pb2___CampaignCriterionErrorEnum.CampaignCriterionError.ClosedValueType] = None,
-        collection_size_error : typing___Optional[google___ads___googleads___v1___errors___collection_size_error_pb2___CollectionSizeErrorEnum.CollectionSizeError.ClosedValueType] = None,
-        country_code_error : typing___Optional[google___ads___googleads___v1___errors___country_code_error_pb2___CountryCodeErrorEnum.CountryCodeError.ClosedValueType] = None,
-        criterion_error : typing___Optional[google___ads___googleads___v1___errors___criterion_error_pb2___CriterionErrorEnum.CriterionError.ClosedValueType] = None,
-        customer_error : typing___Optional[google___ads___googleads___v1___errors___customer_error_pb2___CustomerErrorEnum.CustomerError.ClosedValueType] = None,
-        date_error : typing___Optional[google___ads___googleads___v1___errors___date_error_pb2___DateErrorEnum.DateError.ClosedValueType] = None,
-        date_range_error : typing___Optional[google___ads___googleads___v1___errors___date_range_error_pb2___DateRangeErrorEnum.DateRangeError.ClosedValueType] = None,
-        distinct_error : typing___Optional[google___ads___googleads___v1___errors___distinct_error_pb2___DistinctErrorEnum.DistinctError.ClosedValueType] = None,
-        feed_attribute_reference_error : typing___Optional[google___ads___googleads___v1___errors___feed_attribute_reference_error_pb2___FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError.ClosedValueType] = None,
-        function_error : typing___Optional[google___ads___googleads___v1___errors___function_error_pb2___FunctionErrorEnum.FunctionError.ClosedValueType] = None,
-        function_parsing_error : typing___Optional[google___ads___googleads___v1___errors___function_parsing_error_pb2___FunctionParsingErrorEnum.FunctionParsingError.ClosedValueType] = None,
-        id_error : typing___Optional[google___ads___googleads___v1___errors___id_error_pb2___IdErrorEnum.IdError.ClosedValueType] = None,
-        image_error : typing___Optional[google___ads___googleads___v1___errors___image_error_pb2___ImageErrorEnum.ImageError.ClosedValueType] = None,
-        language_code_error : typing___Optional[google___ads___googleads___v1___errors___language_code_error_pb2___LanguageCodeErrorEnum.LanguageCodeError.ClosedValueType] = None,
-        media_bundle_error : typing___Optional[google___ads___googleads___v1___errors___media_bundle_error_pb2___MediaBundleErrorEnum.MediaBundleError.ClosedValueType] = None,
-        media_upload_error : typing___Optional[google___ads___googleads___v1___errors___media_upload_error_pb2___MediaUploadErrorEnum.MediaUploadError.ClosedValueType] = None,
-        media_file_error : typing___Optional[google___ads___googleads___v1___errors___media_file_error_pb2___MediaFileErrorEnum.MediaFileError.ClosedValueType] = None,
-        multiplier_error : typing___Optional[google___ads___googleads___v1___errors___multiplier_error_pb2___MultiplierErrorEnum.MultiplierError.ClosedValueType] = None,
-        new_resource_creation_error : typing___Optional[google___ads___googleads___v1___errors___new_resource_creation_error_pb2___NewResourceCreationErrorEnum.NewResourceCreationError.ClosedValueType] = None,
-        not_empty_error : typing___Optional[google___ads___googleads___v1___errors___not_empty_error_pb2___NotEmptyErrorEnum.NotEmptyError.ClosedValueType] = None,
-        null_error : typing___Optional[google___ads___googleads___v1___errors___null_error_pb2___NullErrorEnum.NullError.ClosedValueType] = None,
-        operator_error : typing___Optional[google___ads___googleads___v1___errors___operator_error_pb2___OperatorErrorEnum.OperatorError.ClosedValueType] = None,
-        range_error : typing___Optional[google___ads___googleads___v1___errors___range_error_pb2___RangeErrorEnum.RangeError.ClosedValueType] = None,
-        recommendation_error : typing___Optional[google___ads___googleads___v1___errors___recommendation_error_pb2___RecommendationErrorEnum.RecommendationError.ClosedValueType] = None,
-        region_code_error : typing___Optional[google___ads___googleads___v1___errors___region_code_error_pb2___RegionCodeErrorEnum.RegionCodeError.ClosedValueType] = None,
-        setting_error : typing___Optional[google___ads___googleads___v1___errors___setting_error_pb2___SettingErrorEnum.SettingError.ClosedValueType] = None,
-        string_format_error : typing___Optional[google___ads___googleads___v1___errors___string_format_error_pb2___StringFormatErrorEnum.StringFormatError.ClosedValueType] = None,
-        string_length_error : typing___Optional[google___ads___googleads___v1___errors___string_length_error_pb2___StringLengthErrorEnum.StringLengthError.ClosedValueType] = None,
-        operation_access_denied_error : typing___Optional[google___ads___googleads___v1___errors___operation_access_denied_error_pb2___OperationAccessDeniedErrorEnum.OperationAccessDeniedError.ClosedValueType] = None,
-        resource_access_denied_error : typing___Optional[google___ads___googleads___v1___errors___resource_access_denied_error_pb2___ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError.ClosedValueType] = None,
-        resource_count_limit_exceeded_error : typing___Optional[google___ads___googleads___v1___errors___resource_count_limit_exceeded_error_pb2___ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.ClosedValueType] = None,
-        youtube_video_registration_error : typing___Optional[google___ads___googleads___v1___errors___youtube_video_registration_error_pb2___YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.ClosedValueType] = None,
-        ad_group_bid_modifier_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_bid_modifier_error_pb2___AdGroupBidModifierErrorEnum.AdGroupBidModifierError.ClosedValueType] = None,
-        context_error : typing___Optional[google___ads___googleads___v1___errors___context_error_pb2___ContextErrorEnum.ContextError.ClosedValueType] = None,
-        field_error : typing___Optional[google___ads___googleads___v1___errors___field_error_pb2___FieldErrorEnum.FieldError.ClosedValueType] = None,
-        shared_set_error : typing___Optional[google___ads___googleads___v1___errors___shared_set_error_pb2___SharedSetErrorEnum.SharedSetError.ClosedValueType] = None,
-        shared_criterion_error : typing___Optional[google___ads___googleads___v1___errors___shared_criterion_error_pb2___SharedCriterionErrorEnum.SharedCriterionError.ClosedValueType] = None,
-        campaign_shared_set_error : typing___Optional[google___ads___googleads___v1___errors___campaign_shared_set_error_pb2___CampaignSharedSetErrorEnum.CampaignSharedSetError.ClosedValueType] = None,
-        conversion_action_error : typing___Optional[google___ads___googleads___v1___errors___conversion_action_error_pb2___ConversionActionErrorEnum.ConversionActionError.ClosedValueType] = None,
-        conversion_adjustment_upload_error : typing___Optional[google___ads___googleads___v1___errors___conversion_adjustment_upload_error_pb2___ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.ClosedValueType] = None,
-        conversion_upload_error : typing___Optional[google___ads___googleads___v1___errors___conversion_upload_error_pb2___ConversionUploadErrorEnum.ConversionUploadError.ClosedValueType] = None,
-        header_error : typing___Optional[google___ads___googleads___v1___errors___header_error_pb2___HeaderErrorEnum.HeaderError.ClosedValueType] = None,
-        database_error : typing___Optional[google___ads___googleads___v1___errors___database_error_pb2___DatabaseErrorEnum.DatabaseError.ClosedValueType] = None,
-        policy_finding_error : typing___Optional[google___ads___googleads___v1___errors___policy_finding_error_pb2___PolicyFindingErrorEnum.PolicyFindingError.ClosedValueType] = None,
-        enum_error : typing___Optional[google___ads___googleads___v1___errors___enum_error_pb2___EnumErrorEnum.EnumError.ClosedValueType] = None,
-        keyword_plan_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_error_pb2___KeywordPlanErrorEnum.KeywordPlanError.ClosedValueType] = None,
-        keyword_plan_campaign_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_campaign_error_pb2___KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.ClosedValueType] = None,
-        keyword_plan_negative_keyword_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_negative_keyword_error_pb2___KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError.ClosedValueType] = None,
-        keyword_plan_ad_group_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_ad_group_error_pb2___KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.ClosedValueType] = None,
-        keyword_plan_keyword_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_keyword_error_pb2___KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError.ClosedValueType] = None,
-        keyword_plan_idea_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_idea_error_pb2___KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.ClosedValueType] = None,
-        account_budget_proposal_error : typing___Optional[google___ads___googleads___v1___errors___account_budget_proposal_error_pb2___AccountBudgetProposalErrorEnum.AccountBudgetProposalError.ClosedValueType] = None,
-        user_list_error : typing___Optional[google___ads___googleads___v1___errors___user_list_error_pb2___UserListErrorEnum.UserListError.ClosedValueType] = None,
-        change_status_error : typing___Optional[google___ads___googleads___v1___errors___change_status_error_pb2___ChangeStatusErrorEnum.ChangeStatusError.ClosedValueType] = None,
-        feed_error : typing___Optional[google___ads___googleads___v1___errors___feed_error_pb2___FeedErrorEnum.FeedError.ClosedValueType] = None,
-        geo_target_constant_suggestion_error : typing___Optional[google___ads___googleads___v1___errors___geo_target_constant_suggestion_error_pb2___GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.ClosedValueType] = None,
-        campaign_draft_error : typing___Optional[google___ads___googleads___v1___errors___campaign_draft_error_pb2___CampaignDraftErrorEnum.CampaignDraftError.ClosedValueType] = None,
-        feed_item_error : typing___Optional[google___ads___googleads___v1___errors___feed_item_error_pb2___FeedItemErrorEnum.FeedItemError.ClosedValueType] = None,
-        label_error : typing___Optional[google___ads___googleads___v1___errors___label_error_pb2___LabelErrorEnum.LabelError.ClosedValueType] = None,
-        billing_setup_error : typing___Optional[google___ads___googleads___v1___errors___billing_setup_error_pb2___BillingSetupErrorEnum.BillingSetupError.ClosedValueType] = None,
-        customer_client_link_error : typing___Optional[google___ads___googleads___v1___errors___customer_client_link_error_pb2___CustomerClientLinkErrorEnum.CustomerClientLinkError.ClosedValueType] = None,
-        customer_manager_link_error : typing___Optional[google___ads___googleads___v1___errors___customer_manager_link_error_pb2___CustomerManagerLinkErrorEnum.CustomerManagerLinkError.ClosedValueType] = None,
-        feed_mapping_error : typing___Optional[google___ads___googleads___v1___errors___feed_mapping_error_pb2___FeedMappingErrorEnum.FeedMappingError.ClosedValueType] = None,
-        customer_feed_error : typing___Optional[google___ads___googleads___v1___errors___customer_feed_error_pb2___CustomerFeedErrorEnum.CustomerFeedError.ClosedValueType] = None,
-        ad_group_feed_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_feed_error_pb2___AdGroupFeedErrorEnum.AdGroupFeedError.ClosedValueType] = None,
-        campaign_feed_error : typing___Optional[google___ads___googleads___v1___errors___campaign_feed_error_pb2___CampaignFeedErrorEnum.CampaignFeedError.ClosedValueType] = None,
-        custom_interest_error : typing___Optional[google___ads___googleads___v1___errors___custom_interest_error_pb2___CustomInterestErrorEnum.CustomInterestError.ClosedValueType] = None,
-        campaign_experiment_error : typing___Optional[google___ads___googleads___v1___errors___campaign_experiment_error_pb2___CampaignExperimentErrorEnum.CampaignExperimentError.ClosedValueType] = None,
-        extension_feed_item_error : typing___Optional[google___ads___googleads___v1___errors___extension_feed_item_error_pb2___ExtensionFeedItemErrorEnum.ExtensionFeedItemError.ClosedValueType] = None,
-        ad_parameter_error : typing___Optional[google___ads___googleads___v1___errors___ad_parameter_error_pb2___AdParameterErrorEnum.AdParameterError.ClosedValueType] = None,
-        feed_item_validation_error : typing___Optional[google___ads___googleads___v1___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum.FeedItemValidationError.ClosedValueType] = None,
-        extension_setting_error : typing___Optional[google___ads___googleads___v1___errors___extension_setting_error_pb2___ExtensionSettingErrorEnum.ExtensionSettingError.ClosedValueType] = None,
-        feed_item_target_error : typing___Optional[google___ads___googleads___v1___errors___feed_item_target_error_pb2___FeedItemTargetErrorEnum.FeedItemTargetError.ClosedValueType] = None,
-        policy_violation_error : typing___Optional[google___ads___googleads___v1___errors___policy_violation_error_pb2___PolicyViolationErrorEnum.PolicyViolationError.ClosedValueType] = None,
-        mutate_job_error : typing___Optional[google___ads___googleads___v1___errors___mutate_job_error_pb2___MutateJobErrorEnum.MutateJobError.ClosedValueType] = None,
-        partial_failure_error : typing___Optional[google___ads___googleads___v1___errors___partial_failure_error_pb2___PartialFailureErrorEnum.PartialFailureError.ClosedValueType] = None,
-        policy_validation_parameter_error : typing___Optional[google___ads___googleads___v1___errors___policy_validation_parameter_error_pb2___PolicyValidationParameterErrorEnum.PolicyValidationParameterError.ClosedValueType] = None,
-        size_limit_error : typing___Optional[google___ads___googleads___v1___errors___size_limit_error_pb2___SizeLimitErrorEnum.SizeLimitError.ClosedValueType] = None,
-        not_whitelisted_error : typing___Optional[google___ads___googleads___v1___errors___not_whitelisted_error_pb2___NotWhitelistedErrorEnum.NotWhitelistedError.ClosedValueType] = None,
-        manager_link_error : typing___Optional[google___ads___googleads___v1___errors___manager_link_error_pb2___ManagerLinkErrorEnum.ManagerLinkError.ClosedValueType] = None,
+        request_error : typing___Optional[google___ads___googleads___v1___errors___request_error_pb2___RequestErrorEnum.RequestError] = None,
+        bidding_strategy_error : typing___Optional[google___ads___googleads___v1___errors___bidding_strategy_error_pb2___BiddingStrategyErrorEnum.BiddingStrategyError] = None,
+        url_field_error : typing___Optional[google___ads___googleads___v1___errors___url_field_error_pb2___UrlFieldErrorEnum.UrlFieldError] = None,
+        list_operation_error : typing___Optional[google___ads___googleads___v1___errors___list_operation_error_pb2___ListOperationErrorEnum.ListOperationError] = None,
+        query_error : typing___Optional[google___ads___googleads___v1___errors___query_error_pb2___QueryErrorEnum.QueryError] = None,
+        mutate_error : typing___Optional[google___ads___googleads___v1___errors___mutate_error_pb2___MutateErrorEnum.MutateError] = None,
+        field_mask_error : typing___Optional[google___ads___googleads___v1___errors___field_mask_error_pb2___FieldMaskErrorEnum.FieldMaskError] = None,
+        authorization_error : typing___Optional[google___ads___googleads___v1___errors___authorization_error_pb2___AuthorizationErrorEnum.AuthorizationError] = None,
+        internal_error : typing___Optional[google___ads___googleads___v1___errors___internal_error_pb2___InternalErrorEnum.InternalError] = None,
+        quota_error : typing___Optional[google___ads___googleads___v1___errors___quota_error_pb2___QuotaErrorEnum.QuotaError] = None,
+        ad_error : typing___Optional[google___ads___googleads___v1___errors___ad_error_pb2___AdErrorEnum.AdError] = None,
+        ad_group_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_error_pb2___AdGroupErrorEnum.AdGroupError] = None,
+        campaign_budget_error : typing___Optional[google___ads___googleads___v1___errors___campaign_budget_error_pb2___CampaignBudgetErrorEnum.CampaignBudgetError] = None,
+        campaign_error : typing___Optional[google___ads___googleads___v1___errors___campaign_error_pb2___CampaignErrorEnum.CampaignError] = None,
+        authentication_error : typing___Optional[google___ads___googleads___v1___errors___authentication_error_pb2___AuthenticationErrorEnum.AuthenticationError] = None,
+        ad_group_criterion_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_criterion_error_pb2___AdGroupCriterionErrorEnum.AdGroupCriterionError] = None,
+        ad_customizer_error : typing___Optional[google___ads___googleads___v1___errors___ad_customizer_error_pb2___AdCustomizerErrorEnum.AdCustomizerError] = None,
+        ad_group_ad_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_ad_error_pb2___AdGroupAdErrorEnum.AdGroupAdError] = None,
+        ad_sharing_error : typing___Optional[google___ads___googleads___v1___errors___ad_sharing_error_pb2___AdSharingErrorEnum.AdSharingError] = None,
+        adx_error : typing___Optional[google___ads___googleads___v1___errors___adx_error_pb2___AdxErrorEnum.AdxError] = None,
+        asset_error : typing___Optional[google___ads___googleads___v1___errors___asset_error_pb2___AssetErrorEnum.AssetError] = None,
+        bidding_error : typing___Optional[google___ads___googleads___v1___errors___bidding_error_pb2___BiddingErrorEnum.BiddingError] = None,
+        campaign_criterion_error : typing___Optional[google___ads___googleads___v1___errors___campaign_criterion_error_pb2___CampaignCriterionErrorEnum.CampaignCriterionError] = None,
+        collection_size_error : typing___Optional[google___ads___googleads___v1___errors___collection_size_error_pb2___CollectionSizeErrorEnum.CollectionSizeError] = None,
+        country_code_error : typing___Optional[google___ads___googleads___v1___errors___country_code_error_pb2___CountryCodeErrorEnum.CountryCodeError] = None,
+        criterion_error : typing___Optional[google___ads___googleads___v1___errors___criterion_error_pb2___CriterionErrorEnum.CriterionError] = None,
+        customer_error : typing___Optional[google___ads___googleads___v1___errors___customer_error_pb2___CustomerErrorEnum.CustomerError] = None,
+        date_error : typing___Optional[google___ads___googleads___v1___errors___date_error_pb2___DateErrorEnum.DateError] = None,
+        date_range_error : typing___Optional[google___ads___googleads___v1___errors___date_range_error_pb2___DateRangeErrorEnum.DateRangeError] = None,
+        distinct_error : typing___Optional[google___ads___googleads___v1___errors___distinct_error_pb2___DistinctErrorEnum.DistinctError] = None,
+        feed_attribute_reference_error : typing___Optional[google___ads___googleads___v1___errors___feed_attribute_reference_error_pb2___FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError] = None,
+        function_error : typing___Optional[google___ads___googleads___v1___errors___function_error_pb2___FunctionErrorEnum.FunctionError] = None,
+        function_parsing_error : typing___Optional[google___ads___googleads___v1___errors___function_parsing_error_pb2___FunctionParsingErrorEnum.FunctionParsingError] = None,
+        id_error : typing___Optional[google___ads___googleads___v1___errors___id_error_pb2___IdErrorEnum.IdError] = None,
+        image_error : typing___Optional[google___ads___googleads___v1___errors___image_error_pb2___ImageErrorEnum.ImageError] = None,
+        language_code_error : typing___Optional[google___ads___googleads___v1___errors___language_code_error_pb2___LanguageCodeErrorEnum.LanguageCodeError] = None,
+        media_bundle_error : typing___Optional[google___ads___googleads___v1___errors___media_bundle_error_pb2___MediaBundleErrorEnum.MediaBundleError] = None,
+        media_upload_error : typing___Optional[google___ads___googleads___v1___errors___media_upload_error_pb2___MediaUploadErrorEnum.MediaUploadError] = None,
+        media_file_error : typing___Optional[google___ads___googleads___v1___errors___media_file_error_pb2___MediaFileErrorEnum.MediaFileError] = None,
+        multiplier_error : typing___Optional[google___ads___googleads___v1___errors___multiplier_error_pb2___MultiplierErrorEnum.MultiplierError] = None,
+        new_resource_creation_error : typing___Optional[google___ads___googleads___v1___errors___new_resource_creation_error_pb2___NewResourceCreationErrorEnum.NewResourceCreationError] = None,
+        not_empty_error : typing___Optional[google___ads___googleads___v1___errors___not_empty_error_pb2___NotEmptyErrorEnum.NotEmptyError] = None,
+        null_error : typing___Optional[google___ads___googleads___v1___errors___null_error_pb2___NullErrorEnum.NullError] = None,
+        operator_error : typing___Optional[google___ads___googleads___v1___errors___operator_error_pb2___OperatorErrorEnum.OperatorError] = None,
+        range_error : typing___Optional[google___ads___googleads___v1___errors___range_error_pb2___RangeErrorEnum.RangeError] = None,
+        recommendation_error : typing___Optional[google___ads___googleads___v1___errors___recommendation_error_pb2___RecommendationErrorEnum.RecommendationError] = None,
+        region_code_error : typing___Optional[google___ads___googleads___v1___errors___region_code_error_pb2___RegionCodeErrorEnum.RegionCodeError] = None,
+        setting_error : typing___Optional[google___ads___googleads___v1___errors___setting_error_pb2___SettingErrorEnum.SettingError] = None,
+        string_format_error : typing___Optional[google___ads___googleads___v1___errors___string_format_error_pb2___StringFormatErrorEnum.StringFormatError] = None,
+        string_length_error : typing___Optional[google___ads___googleads___v1___errors___string_length_error_pb2___StringLengthErrorEnum.StringLengthError] = None,
+        operation_access_denied_error : typing___Optional[google___ads___googleads___v1___errors___operation_access_denied_error_pb2___OperationAccessDeniedErrorEnum.OperationAccessDeniedError] = None,
+        resource_access_denied_error : typing___Optional[google___ads___googleads___v1___errors___resource_access_denied_error_pb2___ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError] = None,
+        resource_count_limit_exceeded_error : typing___Optional[google___ads___googleads___v1___errors___resource_count_limit_exceeded_error_pb2___ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError] = None,
+        youtube_video_registration_error : typing___Optional[google___ads___googleads___v1___errors___youtube_video_registration_error_pb2___YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError] = None,
+        ad_group_bid_modifier_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_bid_modifier_error_pb2___AdGroupBidModifierErrorEnum.AdGroupBidModifierError] = None,
+        context_error : typing___Optional[google___ads___googleads___v1___errors___context_error_pb2___ContextErrorEnum.ContextError] = None,
+        field_error : typing___Optional[google___ads___googleads___v1___errors___field_error_pb2___FieldErrorEnum.FieldError] = None,
+        shared_set_error : typing___Optional[google___ads___googleads___v1___errors___shared_set_error_pb2___SharedSetErrorEnum.SharedSetError] = None,
+        shared_criterion_error : typing___Optional[google___ads___googleads___v1___errors___shared_criterion_error_pb2___SharedCriterionErrorEnum.SharedCriterionError] = None,
+        campaign_shared_set_error : typing___Optional[google___ads___googleads___v1___errors___campaign_shared_set_error_pb2___CampaignSharedSetErrorEnum.CampaignSharedSetError] = None,
+        conversion_action_error : typing___Optional[google___ads___googleads___v1___errors___conversion_action_error_pb2___ConversionActionErrorEnum.ConversionActionError] = None,
+        conversion_adjustment_upload_error : typing___Optional[google___ads___googleads___v1___errors___conversion_adjustment_upload_error_pb2___ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError] = None,
+        conversion_upload_error : typing___Optional[google___ads___googleads___v1___errors___conversion_upload_error_pb2___ConversionUploadErrorEnum.ConversionUploadError] = None,
+        header_error : typing___Optional[google___ads___googleads___v1___errors___header_error_pb2___HeaderErrorEnum.HeaderError] = None,
+        database_error : typing___Optional[google___ads___googleads___v1___errors___database_error_pb2___DatabaseErrorEnum.DatabaseError] = None,
+        policy_finding_error : typing___Optional[google___ads___googleads___v1___errors___policy_finding_error_pb2___PolicyFindingErrorEnum.PolicyFindingError] = None,
+        enum_error : typing___Optional[google___ads___googleads___v1___errors___enum_error_pb2___EnumErrorEnum.EnumError] = None,
+        keyword_plan_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_error_pb2___KeywordPlanErrorEnum.KeywordPlanError] = None,
+        keyword_plan_campaign_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_campaign_error_pb2___KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError] = None,
+        keyword_plan_negative_keyword_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_negative_keyword_error_pb2___KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError] = None,
+        keyword_plan_ad_group_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_ad_group_error_pb2___KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError] = None,
+        keyword_plan_keyword_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_keyword_error_pb2___KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError] = None,
+        keyword_plan_idea_error : typing___Optional[google___ads___googleads___v1___errors___keyword_plan_idea_error_pb2___KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError] = None,
+        account_budget_proposal_error : typing___Optional[google___ads___googleads___v1___errors___account_budget_proposal_error_pb2___AccountBudgetProposalErrorEnum.AccountBudgetProposalError] = None,
+        user_list_error : typing___Optional[google___ads___googleads___v1___errors___user_list_error_pb2___UserListErrorEnum.UserListError] = None,
+        change_status_error : typing___Optional[google___ads___googleads___v1___errors___change_status_error_pb2___ChangeStatusErrorEnum.ChangeStatusError] = None,
+        feed_error : typing___Optional[google___ads___googleads___v1___errors___feed_error_pb2___FeedErrorEnum.FeedError] = None,
+        geo_target_constant_suggestion_error : typing___Optional[google___ads___googleads___v1___errors___geo_target_constant_suggestion_error_pb2___GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError] = None,
+        campaign_draft_error : typing___Optional[google___ads___googleads___v1___errors___campaign_draft_error_pb2___CampaignDraftErrorEnum.CampaignDraftError] = None,
+        feed_item_error : typing___Optional[google___ads___googleads___v1___errors___feed_item_error_pb2___FeedItemErrorEnum.FeedItemError] = None,
+        label_error : typing___Optional[google___ads___googleads___v1___errors___label_error_pb2___LabelErrorEnum.LabelError] = None,
+        billing_setup_error : typing___Optional[google___ads___googleads___v1___errors___billing_setup_error_pb2___BillingSetupErrorEnum.BillingSetupError] = None,
+        customer_client_link_error : typing___Optional[google___ads___googleads___v1___errors___customer_client_link_error_pb2___CustomerClientLinkErrorEnum.CustomerClientLinkError] = None,
+        customer_manager_link_error : typing___Optional[google___ads___googleads___v1___errors___customer_manager_link_error_pb2___CustomerManagerLinkErrorEnum.CustomerManagerLinkError] = None,
+        feed_mapping_error : typing___Optional[google___ads___googleads___v1___errors___feed_mapping_error_pb2___FeedMappingErrorEnum.FeedMappingError] = None,
+        customer_feed_error : typing___Optional[google___ads___googleads___v1___errors___customer_feed_error_pb2___CustomerFeedErrorEnum.CustomerFeedError] = None,
+        ad_group_feed_error : typing___Optional[google___ads___googleads___v1___errors___ad_group_feed_error_pb2___AdGroupFeedErrorEnum.AdGroupFeedError] = None,
+        campaign_feed_error : typing___Optional[google___ads___googleads___v1___errors___campaign_feed_error_pb2___CampaignFeedErrorEnum.CampaignFeedError] = None,
+        custom_interest_error : typing___Optional[google___ads___googleads___v1___errors___custom_interest_error_pb2___CustomInterestErrorEnum.CustomInterestError] = None,
+        campaign_experiment_error : typing___Optional[google___ads___googleads___v1___errors___campaign_experiment_error_pb2___CampaignExperimentErrorEnum.CampaignExperimentError] = None,
+        extension_feed_item_error : typing___Optional[google___ads___googleads___v1___errors___extension_feed_item_error_pb2___ExtensionFeedItemErrorEnum.ExtensionFeedItemError] = None,
+        ad_parameter_error : typing___Optional[google___ads___googleads___v1___errors___ad_parameter_error_pb2___AdParameterErrorEnum.AdParameterError] = None,
+        feed_item_validation_error : typing___Optional[google___ads___googleads___v1___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum.FeedItemValidationError] = None,
+        extension_setting_error : typing___Optional[google___ads___googleads___v1___errors___extension_setting_error_pb2___ExtensionSettingErrorEnum.ExtensionSettingError] = None,
+        feed_item_target_error : typing___Optional[google___ads___googleads___v1___errors___feed_item_target_error_pb2___FeedItemTargetErrorEnum.FeedItemTargetError] = None,
+        policy_violation_error : typing___Optional[google___ads___googleads___v1___errors___policy_violation_error_pb2___PolicyViolationErrorEnum.PolicyViolationError] = None,
+        mutate_job_error : typing___Optional[google___ads___googleads___v1___errors___mutate_job_error_pb2___MutateJobErrorEnum.MutateJobError] = None,
+        partial_failure_error : typing___Optional[google___ads___googleads___v1___errors___partial_failure_error_pb2___PartialFailureErrorEnum.PartialFailureError] = None,
+        policy_validation_parameter_error : typing___Optional[google___ads___googleads___v1___errors___policy_validation_parameter_error_pb2___PolicyValidationParameterErrorEnum.PolicyValidationParameterError] = None,
+        size_limit_error : typing___Optional[google___ads___googleads___v1___errors___size_limit_error_pb2___SizeLimitErrorEnum.SizeLimitError] = None,
+        not_whitelisted_error : typing___Optional[google___ads___googleads___v1___errors___not_whitelisted_error_pb2___NotWhitelistedErrorEnum.NotWhitelistedError] = None,
+        manager_link_error : typing___Optional[google___ads___googleads___v1___errors___manager_link_error_pb2___ManagerLinkErrorEnum.ManagerLinkError] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ErrorCode: ...
@@ -714,7 +721,9 @@ class ErrorCode(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"error_code",b"error_code"]) -> typing_extensions___Literal["request_error","bidding_strategy_error","url_field_error","list_operation_error","query_error","mutate_error","field_mask_error","authorization_error","internal_error","quota_error","ad_error","ad_group_error","campaign_budget_error","campaign_error","authentication_error","ad_group_criterion_error","ad_customizer_error","ad_group_ad_error","ad_sharing_error","adx_error","asset_error","bidding_error","campaign_criterion_error","collection_size_error","country_code_error","criterion_error","customer_error","date_error","date_range_error","distinct_error","feed_attribute_reference_error","function_error","function_parsing_error","id_error","image_error","language_code_error","media_bundle_error","media_upload_error","media_file_error","multiplier_error","new_resource_creation_error","not_empty_error","null_error","operator_error","range_error","recommendation_error","region_code_error","setting_error","string_format_error","string_length_error","operation_access_denied_error","resource_access_denied_error","resource_count_limit_exceeded_error","youtube_video_registration_error","ad_group_bid_modifier_error","context_error","field_error","shared_set_error","shared_criterion_error","campaign_shared_set_error","conversion_action_error","conversion_adjustment_upload_error","conversion_upload_error","header_error","database_error","policy_finding_error","enum_error","keyword_plan_error","keyword_plan_campaign_error","keyword_plan_negative_keyword_error","keyword_plan_ad_group_error","keyword_plan_keyword_error","keyword_plan_idea_error","account_budget_proposal_error","user_list_error","change_status_error","feed_error","geo_target_constant_suggestion_error","campaign_draft_error","feed_item_error","label_error","billing_setup_error","customer_client_link_error","customer_manager_link_error","feed_mapping_error","customer_feed_error","ad_group_feed_error","campaign_feed_error","custom_interest_error","campaign_experiment_error","extension_feed_item_error","ad_parameter_error","feed_item_validation_error","extension_setting_error","feed_item_target_error","policy_violation_error","mutate_job_error","partial_failure_error","policy_validation_parameter_error","size_limit_error","not_whitelisted_error","manager_link_error"]: ...
 
 class ErrorLocation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class FieldPathElement(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         field_name = ... # type: typing___Text
 
         @property
@@ -754,6 +763,7 @@ class ErrorLocation(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"field_path_elements",b"field_path_elements"]) -> None: ...
 
 class ErrorDetails(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     unpublished_error_code = ... # type: typing___Text
 
     @property
@@ -780,6 +790,7 @@ class ErrorDetails(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"policy_finding_details",b"policy_finding_details",u"policy_violation_details",b"policy_violation_details",u"unpublished_error_code",b"unpublished_error_code"]) -> None: ...
 
 class PolicyViolationDetails(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     external_policy_description = ... # type: typing___Text
     external_policy_name = ... # type: typing___Text
     is_exemptible = ... # type: bool
@@ -806,6 +817,7 @@ class PolicyViolationDetails(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"external_policy_description",b"external_policy_description",u"external_policy_name",b"external_policy_name",u"is_exemptible",b"is_exemptible",u"key",b"key"]) -> None: ...
 
 class PolicyFindingDetails(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def policy_topic_entries(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___common___policy_pb2___PolicyTopicEntry]: ...

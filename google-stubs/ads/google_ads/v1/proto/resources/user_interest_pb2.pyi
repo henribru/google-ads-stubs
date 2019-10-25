@@ -8,6 +8,10 @@ from google.ads.google_ads.v1.proto.enums.user_interest_taxonomy_type_pb2 import
     UserInterestTaxonomyTypeEnum as google___ads___googleads___v1___enums___user_interest_taxonomy_type_pb2___UserInterestTaxonomyTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -34,8 +38,9 @@ from typing_extensions import (
 
 
 class UserInterest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    taxonomy_type = ... # type: google___ads___googleads___v1___enums___user_interest_taxonomy_type_pb2___UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.ClosedValueType
+    taxonomy_type = ... # type: google___ads___googleads___v1___enums___user_interest_taxonomy_type_pb2___UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType
 
     @property
     def user_interest_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -55,7 +60,7 @@ class UserInterest(google___protobuf___message___Message):
     def __init__(self,
         *,
         resource_name : typing___Optional[typing___Text] = None,
-        taxonomy_type : typing___Optional[google___ads___googleads___v1___enums___user_interest_taxonomy_type_pb2___UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.ClosedValueType] = None,
+        taxonomy_type : typing___Optional[google___ads___googleads___v1___enums___user_interest_taxonomy_type_pb2___UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType] = None,
         user_interest_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         user_interest_parent : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,

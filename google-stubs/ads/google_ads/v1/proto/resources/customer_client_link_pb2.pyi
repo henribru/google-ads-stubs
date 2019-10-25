@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.manager_link_status_pb2 import (
     ManagerLinkStatusEnum as google___ads___googleads___v1___enums___manager_link_status_pb2___ManagerLinkStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -25,8 +29,9 @@ from typing_extensions import (
 
 
 class CustomerClientLink(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___manager_link_status_pb2___ManagerLinkStatusEnum.ManagerLinkStatus.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___manager_link_status_pb2___ManagerLinkStatusEnum.ManagerLinkStatus
 
     @property
     def client_customer(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -42,7 +47,7 @@ class CustomerClientLink(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         client_customer : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         manager_link_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___manager_link_status_pb2___ManagerLinkStatusEnum.ManagerLinkStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___manager_link_status_pb2___ManagerLinkStatusEnum.ManagerLinkStatus] = None,
         hidden : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
     @classmethod

@@ -8,6 +8,10 @@ from google.ads.google_ads.v1.proto.enums.keyword_plan_forecast_interval_pb2 imp
     KeywordPlanForecastIntervalEnum as google___ads___googleads___v1___enums___keyword_plan_forecast_interval_pb2___KeywordPlanForecastIntervalEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -28,6 +32,7 @@ from typing_extensions import (
 
 
 class KeywordPlan(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     @property
@@ -58,14 +63,15 @@ class KeywordPlan(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"forecast_period",b"forecast_period",u"id",b"id",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
 
 class KeywordPlanForecastPeriod(google___protobuf___message___Message):
-    date_interval = ... # type: google___ads___googleads___v1___enums___keyword_plan_forecast_interval_pb2___KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    date_interval = ... # type: google___ads___googleads___v1___enums___keyword_plan_forecast_interval_pb2___KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
 
     @property
     def date_range(self) -> google___ads___googleads___v1___common___dates_pb2___DateRange: ...
 
     def __init__(self,
         *,
-        date_interval : typing___Optional[google___ads___googleads___v1___enums___keyword_plan_forecast_interval_pb2___KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.ClosedValueType] = None,
+        date_interval : typing___Optional[google___ads___googleads___v1___enums___keyword_plan_forecast_interval_pb2___KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval] = None,
         date_range : typing___Optional[google___ads___googleads___v1___common___dates_pb2___DateRange] = None,
         ) -> None: ...
     @classmethod

@@ -13,6 +13,10 @@ from google.ads.google_ads.v1.proto.enums.criterion_type_pb2 import (
     CriterionTypeEnum as google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -33,8 +37,9 @@ from typing_extensions import (
 
 
 class SharedCriterion(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType.ClosedValueType
+    type = ... # type: google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType
 
     @property
     def shared_set(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -65,7 +70,7 @@ class SharedCriterion(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         shared_set : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         criterion_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType] = None,
         keyword : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___KeywordInfo] = None,
         youtube_video : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___YouTubeVideoInfo] = None,
         youtube_channel : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___YouTubeChannelInfo] = None,

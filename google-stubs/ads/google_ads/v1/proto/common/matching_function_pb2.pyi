@@ -8,6 +8,10 @@ from google.ads.google_ads.v1.proto.enums.matching_function_operator_pb2 import 
     MatchingFunctionOperatorEnum as google___ads___googleads___v1___enums___matching_function_operator_pb2___MatchingFunctionOperatorEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -34,7 +38,8 @@ from typing_extensions import (
 
 
 class MatchingFunction(google___protobuf___message___Message):
-    operator = ... # type: google___ads___googleads___v1___enums___matching_function_operator_pb2___MatchingFunctionOperatorEnum.MatchingFunctionOperator.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    operator = ... # type: google___ads___googleads___v1___enums___matching_function_operator_pb2___MatchingFunctionOperatorEnum.MatchingFunctionOperator
 
     @property
     def function_string(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -48,7 +53,7 @@ class MatchingFunction(google___protobuf___message___Message):
     def __init__(self,
         *,
         function_string : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        operator : typing___Optional[google___ads___googleads___v1___enums___matching_function_operator_pb2___MatchingFunctionOperatorEnum.MatchingFunctionOperator.ClosedValueType] = None,
+        operator : typing___Optional[google___ads___googleads___v1___enums___matching_function_operator_pb2___MatchingFunctionOperatorEnum.MatchingFunctionOperator] = None,
         left_operands : typing___Optional[typing___Iterable[Operand]] = None,
         right_operands : typing___Optional[typing___Iterable[Operand]] = None,
         ) -> None: ...
@@ -64,7 +69,9 @@ class MatchingFunction(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"function_string",b"function_string",u"left_operands",b"left_operands",u"operator",b"operator",u"right_operands",b"right_operands"]) -> None: ...
 
 class Operand(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class ConstantOperand(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def string_value(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -98,6 +105,7 @@ class Operand(google___protobuf___message___Message):
         def WhichOneof(self, oneof_group: typing_extensions___Literal[u"constant_operand_value",b"constant_operand_value"]) -> typing_extensions___Literal["string_value","long_value","boolean_value","double_value"]: ...
 
     class FeedAttributeOperand(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def feed_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -122,6 +130,7 @@ class Operand(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"feed_attribute_id",b"feed_attribute_id",u"feed_id",b"feed_id"]) -> None: ...
 
     class FunctionOperand(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def matching_function(self) -> MatchingFunction: ...
@@ -142,11 +151,12 @@ class Operand(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"matching_function",b"matching_function"]) -> None: ...
 
     class RequestContextOperand(google___protobuf___message___Message):
-        context_type = ... # type: google___ads___googleads___v1___enums___matching_function_context_type_pb2___MatchingFunctionContextTypeEnum.MatchingFunctionContextType.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        context_type = ... # type: google___ads___googleads___v1___enums___matching_function_context_type_pb2___MatchingFunctionContextTypeEnum.MatchingFunctionContextType
 
         def __init__(self,
             *,
-            context_type : typing___Optional[google___ads___googleads___v1___enums___matching_function_context_type_pb2___MatchingFunctionContextTypeEnum.MatchingFunctionContextType.ClosedValueType] = None,
+            context_type : typing___Optional[google___ads___googleads___v1___enums___matching_function_context_type_pb2___MatchingFunctionContextTypeEnum.MatchingFunctionContextType] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> Operand.RequestContextOperand: ...

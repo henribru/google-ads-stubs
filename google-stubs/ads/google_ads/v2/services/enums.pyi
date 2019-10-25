@@ -1924,6 +1924,7 @@ class ExtensionTypeEnum:
         STRUCTURED_SNIPPET: int = ...
         LOCATION: int = ...
         AFFILIATE_LOCATION: int = ...
+        HOTEL_CALLOUT: int = ...
 
 class ExternalConversionSourceEnum:
     class ExternalConversionSource(enum.IntEnum):
@@ -2455,6 +2456,13 @@ class HotelPlaceholderFieldEnum:
         IOS_APP_LINK: int = ...
         IOS_APP_STORE_ID: int = ...
 
+class HotelPriceBucketEnum:
+    class HotelPriceBucket(enum.IntEnum):
+        UNSPECIFIED: int
+        UNKNOWN: int
+        LOWEST_TIED: int
+        NOT_LOWEST: int
+
 class HotelRateTypeEnum:
     class HotelRateType(enum.IntEnum):
         UNSPECIFIED: int = ...
@@ -2546,6 +2554,20 @@ class InternalErrorEnum:
         INTERNAL_ERROR: int = ...
         ERROR_CODE_NOT_PUBLISHED: int = ...
         TRANSIENT_ERROR: int = ...
+
+class InvoiceErrorEnum:
+    class InvoiceError(enum.IntEnum):
+        UNSPECIFIED: int
+        UNKNOWN: int
+        YEAR_MONTH_TOO_OLD: int
+        NOT_INVOICED_CUSTOMER: int
+
+class InvoiceTypeEnum:
+    class InvoiceType(enum.IntEnum):
+        UNSPECIFIED: int
+        UNKNOWN: int
+        CREDIT_MEMO: int
+        INVOICE: int
 
 class JobPlaceholderFieldEnum:
     class JobPlaceholderField(enum.IntEnum):

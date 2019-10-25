@@ -14,6 +14,10 @@ from google.ads.google_ads.v1.proto.enums.simulation_type_pb2 import (
     SimulationTypeEnum as google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -34,9 +38,10 @@ from typing_extensions import (
 
 
 class AdGroupSimulation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum.SimulationType.ClosedValueType
-    modification_method = ... # type: google___ads___googleads___v1___enums___simulation_modification_method_pb2___SimulationModificationMethodEnum.SimulationModificationMethod.ClosedValueType
+    type = ... # type: google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum.SimulationType
+    modification_method = ... # type: google___ads___googleads___v1___enums___simulation_modification_method_pb2___SimulationModificationMethodEnum.SimulationModificationMethod
 
     @property
     def ad_group_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -60,8 +65,8 @@ class AdGroupSimulation(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         ad_group_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum.SimulationType.ClosedValueType] = None,
-        modification_method : typing___Optional[google___ads___googleads___v1___enums___simulation_modification_method_pb2___SimulationModificationMethodEnum.SimulationModificationMethod.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum.SimulationType] = None,
+        modification_method : typing___Optional[google___ads___googleads___v1___enums___simulation_modification_method_pb2___SimulationModificationMethodEnum.SimulationModificationMethod] = None,
         start_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         end_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         cpc_bid_point_list : typing___Optional[google___ads___googleads___v1___common___simulation_pb2___CpcBidSimulationPointList] = None,

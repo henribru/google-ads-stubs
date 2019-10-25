@@ -12,6 +12,10 @@ from google.ads.google_ads.v1.proto.enums.custom_interest_type_pb2 import (
     CustomInterestTypeEnum as google___ads___googleads___v1___enums___custom_interest_type_pb2___CustomInterestTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -37,9 +41,10 @@ from typing_extensions import (
 
 
 class CustomInterest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___custom_interest_status_pb2___CustomInterestStatusEnum.CustomInterestStatus.ClosedValueType
-    type = ... # type: google___ads___googleads___v1___enums___custom_interest_type_pb2___CustomInterestTypeEnum.CustomInterestType.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___custom_interest_status_pb2___CustomInterestStatusEnum.CustomInterestStatus
+    type = ... # type: google___ads___googleads___v1___enums___custom_interest_type_pb2___CustomInterestTypeEnum.CustomInterestType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -57,9 +62,9 @@ class CustomInterest(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___custom_interest_status_pb2___CustomInterestStatusEnum.CustomInterestStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___custom_interest_status_pb2___CustomInterestStatusEnum.CustomInterestStatus] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___custom_interest_type_pb2___CustomInterestTypeEnum.CustomInterestType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___custom_interest_type_pb2___CustomInterestTypeEnum.CustomInterestType] = None,
         description : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         members : typing___Optional[typing___Iterable[CustomInterestMember]] = None,
         ) -> None: ...
@@ -75,14 +80,15 @@ class CustomInterest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"description",b"description",u"id",b"id",u"members",b"members",u"name",b"name",u"resource_name",b"resource_name",u"status",b"status",u"type",b"type"]) -> None: ...
 
 class CustomInterestMember(google___protobuf___message___Message):
-    member_type = ... # type: google___ads___googleads___v1___enums___custom_interest_member_type_pb2___CustomInterestMemberTypeEnum.CustomInterestMemberType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    member_type = ... # type: google___ads___googleads___v1___enums___custom_interest_member_type_pb2___CustomInterestMemberTypeEnum.CustomInterestMemberType
 
     @property
     def parameter(self) -> google___protobuf___wrappers_pb2___StringValue: ...
 
     def __init__(self,
         *,
-        member_type : typing___Optional[google___ads___googleads___v1___enums___custom_interest_member_type_pb2___CustomInterestMemberTypeEnum.CustomInterestMemberType.ClosedValueType] = None,
+        member_type : typing___Optional[google___ads___googleads___v1___enums___custom_interest_member_type_pb2___CustomInterestMemberTypeEnum.CustomInterestMemberType] = None,
         parameter : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
     @classmethod

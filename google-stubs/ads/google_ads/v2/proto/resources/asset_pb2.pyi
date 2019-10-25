@@ -11,6 +11,10 @@ from google.ads.google_ads.v2.proto.enums.asset_type_pb2 import (
     AssetTypeEnum as google___ads___googleads___v2___enums___asset_type_pb2___AssetTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -31,8 +35,9 @@ from typing_extensions import (
 
 
 class Asset(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v2___enums___asset_type_pb2___AssetTypeEnum.AssetType.ClosedValueType
+    type = ... # type: google___ads___googleads___v2___enums___asset_type_pb2___AssetTypeEnum.AssetType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -57,7 +62,7 @@ class Asset(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___asset_type_pb2___AssetTypeEnum.AssetType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___asset_type_pb2___AssetTypeEnum.AssetType] = None,
         youtube_video_asset : typing___Optional[google___ads___googleads___v2___common___asset_types_pb2___YoutubeVideoAsset] = None,
         media_bundle_asset : typing___Optional[google___ads___googleads___v2___common___asset_types_pb2___MediaBundleAsset] = None,
         image_asset : typing___Optional[google___ads___googleads___v2___common___asset_types_pb2___ImageAsset] = None,

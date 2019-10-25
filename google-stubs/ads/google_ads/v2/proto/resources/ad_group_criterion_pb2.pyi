@@ -49,6 +49,10 @@ from google.ads.google_ads.v2.proto.enums.quality_score_bucket_pb2 import (
     QualityScoreBucketEnum as google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -77,10 +81,12 @@ from typing_extensions import (
 
 
 class AdGroupCriterion(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class QualityInfo(google___protobuf___message___Message):
-        creative_quality_score = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType
-        post_click_quality_score = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType
-        search_predicted_ctr = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        creative_quality_score = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+        post_click_quality_score = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+        search_predicted_ctr = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
 
         @property
         def quality_score(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
@@ -88,9 +94,9 @@ class AdGroupCriterion(google___protobuf___message___Message):
         def __init__(self,
             *,
             quality_score : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
-            creative_quality_score : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType] = None,
-            post_click_quality_score : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType] = None,
-            search_predicted_ctr : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType] = None,
+            creative_quality_score : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
+            post_click_quality_score : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
+            search_predicted_ctr : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> AdGroupCriterion.QualityInfo: ...
@@ -104,6 +110,7 @@ class AdGroupCriterion(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"creative_quality_score",b"creative_quality_score",u"post_click_quality_score",b"post_click_quality_score",u"quality_score",b"quality_score",u"search_predicted_ctr",b"search_predicted_ctr"]) -> None: ...
 
     class PositionEstimates(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def first_page_cpc_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -140,14 +147,14 @@ class AdGroupCriterion(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"estimated_add_clicks_at_first_position_cpc",b"estimated_add_clicks_at_first_position_cpc",u"estimated_add_cost_at_first_position_cpc",b"estimated_add_cost_at_first_position_cpc",u"first_page_cpc_micros",b"first_page_cpc_micros",u"first_position_cpc_micros",b"first_position_cpc_micros",u"top_of_page_cpc_micros",b"top_of_page_cpc_micros"]) -> None: ...
 
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___ad_group_criterion_status_pb2___AdGroupCriterionStatusEnum.AdGroupCriterionStatus.ClosedValueType
-    type = ... # type: google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType.ClosedValueType
-    system_serving_status = ... # type: google___ads___googleads___v2___enums___criterion_system_serving_status_pb2___CriterionSystemServingStatusEnum.CriterionSystemServingStatus.ClosedValueType
-    approval_status = ... # type: google___ads___googleads___v2___enums___ad_group_criterion_approval_status_pb2___AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.ClosedValueType
-    effective_cpc_bid_source = ... # type: google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType
-    effective_cpm_bid_source = ... # type: google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType
-    effective_cpv_bid_source = ... # type: google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType
-    effective_percent_cpc_bid_source = ... # type: google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType
+    status = ... # type: google___ads___googleads___v2___enums___ad_group_criterion_status_pb2___AdGroupCriterionStatusEnum.AdGroupCriterionStatus
+    type = ... # type: google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType
+    system_serving_status = ... # type: google___ads___googleads___v2___enums___criterion_system_serving_status_pb2___CriterionSystemServingStatusEnum.CriterionSystemServingStatus
+    approval_status = ... # type: google___ads___googleads___v2___enums___ad_group_criterion_approval_status_pb2___AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus
+    effective_cpc_bid_source = ... # type: google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource
+    effective_cpm_bid_source = ... # type: google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource
+    effective_cpv_bid_source = ... # type: google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource
+    effective_percent_cpc_bid_source = ... # type: google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource
 
     @property
     def criterion_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -264,13 +271,13 @@ class AdGroupCriterion(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         criterion_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___ad_group_criterion_status_pb2___AdGroupCriterionStatusEnum.AdGroupCriterionStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___ad_group_criterion_status_pb2___AdGroupCriterionStatusEnum.AdGroupCriterionStatus] = None,
         quality_info : typing___Optional[AdGroupCriterion.QualityInfo] = None,
         ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType] = None,
         negative : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        system_serving_status : typing___Optional[google___ads___googleads___v2___enums___criterion_system_serving_status_pb2___CriterionSystemServingStatusEnum.CriterionSystemServingStatus.ClosedValueType] = None,
-        approval_status : typing___Optional[google___ads___googleads___v2___enums___ad_group_criterion_approval_status_pb2___AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.ClosedValueType] = None,
+        system_serving_status : typing___Optional[google___ads___googleads___v2___enums___criterion_system_serving_status_pb2___CriterionSystemServingStatusEnum.CriterionSystemServingStatus] = None,
+        approval_status : typing___Optional[google___ads___googleads___v2___enums___ad_group_criterion_approval_status_pb2___AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus] = None,
         bid_modifier : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         cpc_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         cpm_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
@@ -280,10 +287,10 @@ class AdGroupCriterion(google___protobuf___message___Message):
         effective_cpm_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         effective_cpv_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         effective_percent_cpc_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        effective_cpc_bid_source : typing___Optional[google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType] = None,
-        effective_cpm_bid_source : typing___Optional[google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType] = None,
-        effective_cpv_bid_source : typing___Optional[google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType] = None,
-        effective_percent_cpc_bid_source : typing___Optional[google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType] = None,
+        effective_cpc_bid_source : typing___Optional[google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource] = None,
+        effective_cpm_bid_source : typing___Optional[google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource] = None,
+        effective_cpv_bid_source : typing___Optional[google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource] = None,
+        effective_percent_cpc_bid_source : typing___Optional[google___ads___googleads___v2___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource] = None,
         position_estimates : typing___Optional[AdGroupCriterion.PositionEstimates] = None,
         final_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         final_mobile_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,

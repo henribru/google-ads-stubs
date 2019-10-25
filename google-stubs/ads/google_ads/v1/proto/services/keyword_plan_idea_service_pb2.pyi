@@ -8,6 +8,10 @@ from google.ads.google_ads.v1.proto.enums.keyword_plan_network_pb2 import (
     KeywordPlanNetworkEnum as google___ads___googleads___v1___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -32,8 +36,9 @@ from typing_extensions import (
 
 
 class GenerateKeywordIdeasRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
-    keyword_plan_network = ... # type: google___ads___googleads___v1___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork.ClosedValueType
+    keyword_plan_network = ... # type: google___ads___googleads___v1___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork
 
     @property
     def language(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -55,7 +60,7 @@ class GenerateKeywordIdeasRequest(google___protobuf___message___Message):
         customer_id : typing___Optional[typing___Text] = None,
         language : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         geo_target_constants : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        keyword_plan_network : typing___Optional[google___ads___googleads___v1___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork.ClosedValueType] = None,
+        keyword_plan_network : typing___Optional[google___ads___googleads___v1___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork] = None,
         keyword_and_url_seed : typing___Optional[KeywordAndUrlSeed] = None,
         keyword_seed : typing___Optional[KeywordSeed] = None,
         url_seed : typing___Optional[UrlSeed] = None,
@@ -73,6 +78,7 @@ class GenerateKeywordIdeasRequest(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"seed",b"seed"]) -> typing_extensions___Literal["keyword_and_url_seed","keyword_seed","url_seed"]: ...
 
 class KeywordAndUrlSeed(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -97,6 +103,7 @@ class KeywordAndUrlSeed(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"keywords",b"keywords",u"url",b"url"]) -> None: ...
 
 class KeywordSeed(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def keywords(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
@@ -115,6 +122,7 @@ class KeywordSeed(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"keywords",b"keywords"]) -> None: ...
 
 class UrlSeed(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -135,6 +143,7 @@ class UrlSeed(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"url",b"url"]) -> None: ...
 
 class GenerateKeywordIdeaResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def results(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[GenerateKeywordIdeaResult]: ...
@@ -153,6 +162,7 @@ class GenerateKeywordIdeaResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"results",b"results"]) -> None: ...
 
 class GenerateKeywordIdeaResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def text(self) -> google___protobuf___wrappers_pb2___StringValue: ...

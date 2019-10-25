@@ -17,6 +17,7 @@ from google.ads.google_ads.v1.proto.enums.feed_status_pb2 import (
 )
 
 from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
@@ -40,7 +41,7 @@ from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
     Tuple as typing___Tuple,
-    Union as typing___Union,
+    cast as typing___cast,
 )
 
 from typing_extensions import (
@@ -49,8 +50,11 @@ from typing_extensions import (
 
 
 class Feed(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class PlacesLocationFeedData(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         class OAuthInfo(google___protobuf___message___Message):
+            DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
             @property
             def http_method(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -118,7 +122,8 @@ class Feed(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"business_account_id",b"business_account_id",u"business_name_filter",b"business_name_filter",u"category_filters",b"category_filters",u"email_address",b"email_address",u"label_filters",b"label_filters",u"oauth_info",b"oauth_info"]) -> None: ...
 
     class AffiliateLocationFeedData(google___protobuf___message___Message):
-        relationship_type = ... # type: google___ads___googleads___v1___enums___affiliate_location_feed_relationship_type_pb2___AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        relationship_type = ... # type: google___ads___googleads___v1___enums___affiliate_location_feed_relationship_type_pb2___AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
 
         @property
         def chain_ids(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___Int64Value]: ...
@@ -126,7 +131,7 @@ class Feed(google___protobuf___message___Message):
         def __init__(self,
             *,
             chain_ids : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___Int64Value]] = None,
-            relationship_type : typing___Optional[google___ads___googleads___v1___enums___affiliate_location_feed_relationship_type_pb2___AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType.ClosedValueType] = None,
+            relationship_type : typing___Optional[google___ads___googleads___v1___enums___affiliate_location_feed_relationship_type_pb2___AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> Feed.AffiliateLocationFeedData: ...
@@ -138,8 +143,8 @@ class Feed(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"chain_ids",b"chain_ids",u"relationship_type",b"relationship_type"]) -> None: ...
 
     resource_name = ... # type: typing___Text
-    origin = ... # type: google___ads___googleads___v1___enums___feed_origin_pb2___FeedOriginEnum.FeedOrigin.ClosedValueType
-    status = ... # type: google___ads___googleads___v1___enums___feed_status_pb2___FeedStatusEnum.FeedStatus.ClosedValueType
+    origin = ... # type: google___ads___googleads___v1___enums___feed_origin_pb2___FeedOriginEnum.FeedOrigin
+    status = ... # type: google___ads___googleads___v1___enums___feed_status_pb2___FeedStatusEnum.FeedStatus
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -166,8 +171,8 @@ class Feed(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         attributes : typing___Optional[typing___Iterable[FeedAttribute]] = None,
         attribute_operations : typing___Optional[typing___Iterable[FeedAttributeOperation]] = None,
-        origin : typing___Optional[google___ads___googleads___v1___enums___feed_origin_pb2___FeedOriginEnum.FeedOrigin.ClosedValueType] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___feed_status_pb2___FeedStatusEnum.FeedStatus.ClosedValueType] = None,
+        origin : typing___Optional[google___ads___googleads___v1___enums___feed_origin_pb2___FeedOriginEnum.FeedOrigin] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___feed_status_pb2___FeedStatusEnum.FeedStatus] = None,
         places_location_feed_data : typing___Optional[Feed.PlacesLocationFeedData] = None,
         affiliate_location_feed_data : typing___Optional[Feed.AffiliateLocationFeedData] = None,
         ) -> None: ...
@@ -184,7 +189,8 @@ class Feed(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"system_feed_generation_data",b"system_feed_generation_data"]) -> typing_extensions___Literal["places_location_feed_data","affiliate_location_feed_data"]: ...
 
 class FeedAttribute(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v1___enums___feed_attribute_type_pb2___FeedAttributeTypeEnum.FeedAttributeType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v1___enums___feed_attribute_type_pb2___FeedAttributeTypeEnum.FeedAttributeType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -199,7 +205,7 @@ class FeedAttribute(google___protobuf___message___Message):
         *,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___feed_attribute_type_pb2___FeedAttributeTypeEnum.FeedAttributeType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___feed_attribute_type_pb2___FeedAttributeTypeEnum.FeedAttributeType] = None,
         is_part_of_key : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
     @classmethod
@@ -214,35 +220,34 @@ class FeedAttribute(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"is_part_of_key",b"is_part_of_key",u"name",b"name",u"type",b"type"]) -> None: ...
 
 class FeedAttributeOperation(google___protobuf___message___Message):
-    class Operator(object):
-        ClosedKeyType = typing___Union[typing_extensions___Literal['UNSPECIFIED'],typing_extensions___Literal['UNKNOWN'],typing_extensions___Literal['ADD']]
-        ClosedValueType = typing___Union[typing_extensions___Literal[0],typing_extensions___Literal[1],typing_extensions___Literal[2]]
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    class Operator(int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: ClosedValueType) -> str: ...
+        def Name(cls, number: int) -> str: ...
         @classmethod
-        def Value(cls, name: ClosedKeyType) -> ClosedValueType: ...
+        def Value(cls, name: str) -> FeedAttributeOperation.Operator: ...
         @classmethod
-        def keys(cls) -> typing___List[ClosedKeyType]: ...
+        def keys(cls) -> typing___List[str]: ...
         @classmethod
-        def values(cls) -> typing___List[ClosedValueType]: ...
+        def values(cls) -> typing___List[FeedAttributeOperation.Operator]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[ClosedKeyType, ClosedValueType]]: ...
-        UNSPECIFIED: typing_extensions___Literal[0]
-        UNKNOWN: typing_extensions___Literal[1]
-        ADD: typing_extensions___Literal[2]
-    UNSPECIFIED: typing_extensions___Literal[0]
-    UNKNOWN: typing_extensions___Literal[1]
-    ADD: typing_extensions___Literal[2]
+        def items(cls) -> typing___List[typing___Tuple[str, FeedAttributeOperation.Operator]]: ...
+        UNSPECIFIED = typing___cast(FeedAttributeOperation.Operator, 0)
+        UNKNOWN = typing___cast(FeedAttributeOperation.Operator, 1)
+        ADD = typing___cast(FeedAttributeOperation.Operator, 2)
+    UNSPECIFIED = typing___cast(FeedAttributeOperation.Operator, 0)
+    UNKNOWN = typing___cast(FeedAttributeOperation.Operator, 1)
+    ADD = typing___cast(FeedAttributeOperation.Operator, 2)
 
-    operator = ... # type: FeedAttributeOperation.Operator.ClosedValueType
+    operator = ... # type: FeedAttributeOperation.Operator
 
     @property
     def value(self) -> FeedAttribute: ...
 
     def __init__(self,
         *,
-        operator : typing___Optional[FeedAttributeOperation.Operator.ClosedValueType] = None,
+        operator : typing___Optional[FeedAttributeOperation.Operator] = None,
         value : typing___Optional[FeedAttribute] = None,
         ) -> None: ...
     @classmethod

@@ -16,6 +16,10 @@ from google.ads.google_ads.v2.proto.enums.policy_topic_evidence_destination_not_
     PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum as google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_dns_error_type_pb2___PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
     RepeatedScalarFieldContainer as google___protobuf___internal___containers___RepeatedScalarFieldContainer,
@@ -42,6 +46,7 @@ from typing_extensions import (
 
 
 class PolicyViolationKey(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def policy_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -66,6 +71,7 @@ class PolicyViolationKey(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"policy_name",b"policy_name",u"violating_text",b"violating_text"]) -> None: ...
 
 class PolicyValidationParameter(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def ignorable_policy_topics(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
@@ -88,7 +94,8 @@ class PolicyValidationParameter(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"exempt_policy_violation_keys",b"exempt_policy_violation_keys",u"ignorable_policy_topics",b"ignorable_policy_topics"]) -> None: ...
 
 class PolicyTopicEntry(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___policy_topic_entry_type_pb2___PolicyTopicEntryTypeEnum.PolicyTopicEntryType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___policy_topic_entry_type_pb2___PolicyTopicEntryTypeEnum.PolicyTopicEntryType
 
     @property
     def topic(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -102,7 +109,7 @@ class PolicyTopicEntry(google___protobuf___message___Message):
     def __init__(self,
         *,
         topic : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___policy_topic_entry_type_pb2___PolicyTopicEntryTypeEnum.PolicyTopicEntryType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___policy_topic_entry_type_pb2___PolicyTopicEntryTypeEnum.PolicyTopicEntryType] = None,
         evidences : typing___Optional[typing___Iterable[PolicyTopicEvidence]] = None,
         constraints : typing___Optional[typing___Iterable[PolicyTopicConstraint]] = None,
         ) -> None: ...
@@ -118,7 +125,9 @@ class PolicyTopicEntry(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"constraints",b"constraints",u"evidences",b"evidences",u"topic",b"topic",u"type",b"type"]) -> None: ...
 
 class PolicyTopicEvidence(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class TextList(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def texts(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
@@ -137,6 +146,7 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"texts",b"texts"]) -> None: ...
 
     class WebsiteList(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def websites(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
@@ -155,6 +165,7 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"websites",b"websites"]) -> None: ...
 
     class DestinationTextList(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def destination_texts(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
@@ -173,11 +184,12 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"destination_texts",b"destination_texts"]) -> None: ...
 
     class DestinationMismatch(google___protobuf___message___Message):
-        url_types = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___policy_topic_evidence_destination_mismatch_url_type_pb2___PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType.ClosedValueType]
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        url_types = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___policy_topic_evidence_destination_mismatch_url_type_pb2___PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType]
 
         def __init__(self,
             *,
-            url_types : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___policy_topic_evidence_destination_mismatch_url_type_pb2___PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType.ClosedValueType]] = None,
+            url_types : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___policy_topic_evidence_destination_mismatch_url_type_pb2___PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType]] = None,
             ) -> None: ...
         @classmethod
         def FromString(cls, s: bytes) -> PolicyTopicEvidence.DestinationMismatch: ...
@@ -189,8 +201,9 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"url_types",b"url_types"]) -> None: ...
 
     class DestinationNotWorking(google___protobuf___message___Message):
-        device = ... # type: google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_device_pb2___PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.ClosedValueType
-        dns_error_type = ... # type: google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_dns_error_type_pb2___PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType.ClosedValueType
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        device = ... # type: google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_device_pb2___PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice
+        dns_error_type = ... # type: google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_dns_error_type_pb2___PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
 
         @property
         def expanded_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -204,9 +217,9 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
         def __init__(self,
             *,
             expanded_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            device : typing___Optional[google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_device_pb2___PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.ClosedValueType] = None,
+            device : typing___Optional[google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_device_pb2___PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice] = None,
             last_checked_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            dns_error_type : typing___Optional[google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_dns_error_type_pb2___PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType.ClosedValueType] = None,
+            dns_error_type : typing___Optional[google___ads___googleads___v2___enums___policy_topic_evidence_destination_not_working_dns_error_type_pb2___PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType] = None,
             http_error_code : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
             ) -> None: ...
         @classmethod
@@ -262,7 +275,9 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"value",b"value"]) -> typing_extensions___Literal["website_list","text_list","language_code","destination_text_list","destination_mismatch","destination_not_working"]: ...
 
 class PolicyTopicConstraint(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class CountryConstraintList(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def total_targeted_countries(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
@@ -287,6 +302,7 @@ class PolicyTopicConstraint(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"countries",b"countries",u"total_targeted_countries",b"total_targeted_countries"]) -> None: ...
 
     class ResellerConstraint(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         def __init__(self,
             ) -> None: ...
@@ -296,6 +312,7 @@ class PolicyTopicConstraint(google___protobuf___message___Message):
         def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
     class CountryConstraint(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def country_criterion(self) -> google___protobuf___wrappers_pb2___StringValue: ...

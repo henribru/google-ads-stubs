@@ -45,6 +45,10 @@ from google.ads.google_ads.v2.proto.enums.system_managed_entity_source_pb2 impor
     SystemManagedResourceSourceEnum as google___ads___googleads___v2___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -71,10 +75,11 @@ from typing_extensions import (
 
 
 class Ad(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v2___enums___ad_type_pb2___AdTypeEnum.AdType.ClosedValueType
-    device_preference = ... # type: google___ads___googleads___v2___enums___device_pb2___DeviceEnum.Device.ClosedValueType
-    system_managed_resource_source = ... # type: google___ads___googleads___v2___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum.SystemManagedResourceSource.ClosedValueType
+    type = ... # type: google___ads___googleads___v2___enums___ad_type_pb2___AdTypeEnum.AdType
+    device_preference = ... # type: google___ads___googleads___v2___enums___device_pb2___DeviceEnum.Device
+    system_managed_resource_source = ... # type: google___ads___googleads___v2___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum.SystemManagedResourceSource
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -90,6 +95,9 @@ class Ad(google___protobuf___message___Message):
 
     @property
     def tracking_url_template(self) -> google___protobuf___wrappers_pb2___StringValue: ...
+
+    @property
+    def final_url_suffix(self) -> google___protobuf___wrappers_pb2___StringValue: ...
 
     @property
     def url_custom_parameters(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v2___common___custom_parameter_pb2___CustomParameter]: ...
@@ -168,14 +176,15 @@ class Ad(google___protobuf___message___Message):
         final_app_urls : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___final_app_url_pb2___FinalAppUrl]] = None,
         final_mobile_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         tracking_url_template : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        final_url_suffix : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         url_custom_parameters : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___custom_parameter_pb2___CustomParameter]] = None,
         display_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___ad_type_pb2___AdTypeEnum.AdType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___ad_type_pb2___AdTypeEnum.AdType] = None,
         added_by_google_ads : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        device_preference : typing___Optional[google___ads___googleads___v2___enums___device_pb2___DeviceEnum.Device.ClosedValueType] = None,
+        device_preference : typing___Optional[google___ads___googleads___v2___enums___device_pb2___DeviceEnum.Device] = None,
         url_collections : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___url_collection_pb2___UrlCollection]] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        system_managed_resource_source : typing___Optional[google___ads___googleads___v2___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum.SystemManagedResourceSource.ClosedValueType] = None,
+        system_managed_resource_source : typing___Optional[google___ads___googleads___v2___enums___system_managed_entity_source_pb2___SystemManagedResourceSourceEnum.SystemManagedResourceSource] = None,
         text_ad : typing___Optional[google___ads___googleads___v2___common___ad_type_infos_pb2___TextAdInfo] = None,
         expanded_text_ad : typing___Optional[google___ads___googleads___v2___common___ad_type_infos_pb2___ExpandedTextAdInfo] = None,
         call_only_ad : typing___Optional[google___ads___googleads___v2___common___ad_type_infos_pb2___CallOnlyAdInfo] = None,
@@ -200,9 +209,9 @@ class Ad(google___protobuf___message___Message):
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_data",u"added_by_google_ads",u"app_ad",u"app_engagement_ad",u"call_only_ad",u"display_upload_ad",u"display_url",u"expanded_dynamic_search_ad",u"expanded_text_ad",u"gmail_ad",u"hotel_ad",u"id",u"image_ad",u"legacy_app_install_ad",u"legacy_responsive_display_ad",u"name",u"responsive_display_ad",u"responsive_search_ad",u"shopping_comparison_listing_ad",u"shopping_product_ad",u"shopping_smart_ad",u"text_ad",u"tracking_url_template",u"video_ad"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_data",u"added_by_google_ads",u"app_ad",u"app_engagement_ad",u"call_only_ad",u"device_preference",u"display_upload_ad",u"display_url",u"expanded_dynamic_search_ad",u"expanded_text_ad",u"final_app_urls",u"final_mobile_urls",u"final_urls",u"gmail_ad",u"hotel_ad",u"id",u"image_ad",u"legacy_app_install_ad",u"legacy_responsive_display_ad",u"name",u"resource_name",u"responsive_display_ad",u"responsive_search_ad",u"shopping_comparison_listing_ad",u"shopping_product_ad",u"shopping_smart_ad",u"system_managed_resource_source",u"text_ad",u"tracking_url_template",u"type",u"url_collections",u"url_custom_parameters",u"video_ad"]) -> None: ...
+        def HasField(self, field_name: typing_extensions___Literal[u"ad_data",u"added_by_google_ads",u"app_ad",u"app_engagement_ad",u"call_only_ad",u"display_upload_ad",u"display_url",u"expanded_dynamic_search_ad",u"expanded_text_ad",u"final_url_suffix",u"gmail_ad",u"hotel_ad",u"id",u"image_ad",u"legacy_app_install_ad",u"legacy_responsive_display_ad",u"name",u"responsive_display_ad",u"responsive_search_ad",u"shopping_comparison_listing_ad",u"shopping_product_ad",u"shopping_smart_ad",u"text_ad",u"tracking_url_template",u"video_ad"]) -> bool: ...
+        def ClearField(self, field_name: typing_extensions___Literal[u"ad_data",u"added_by_google_ads",u"app_ad",u"app_engagement_ad",u"call_only_ad",u"device_preference",u"display_upload_ad",u"display_url",u"expanded_dynamic_search_ad",u"expanded_text_ad",u"final_app_urls",u"final_mobile_urls",u"final_url_suffix",u"final_urls",u"gmail_ad",u"hotel_ad",u"id",u"image_ad",u"legacy_app_install_ad",u"legacy_responsive_display_ad",u"name",u"resource_name",u"responsive_display_ad",u"responsive_search_ad",u"shopping_comparison_listing_ad",u"shopping_product_ad",u"shopping_smart_ad",u"system_managed_resource_source",u"text_ad",u"tracking_url_template",u"type",u"url_collections",u"url_custom_parameters",u"video_ad"]) -> None: ...
     else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_data",b"ad_data",u"added_by_google_ads",b"added_by_google_ads",u"app_ad",b"app_ad",u"app_engagement_ad",b"app_engagement_ad",u"call_only_ad",b"call_only_ad",u"display_upload_ad",b"display_upload_ad",u"display_url",b"display_url",u"expanded_dynamic_search_ad",b"expanded_dynamic_search_ad",u"expanded_text_ad",b"expanded_text_ad",u"gmail_ad",b"gmail_ad",u"hotel_ad",b"hotel_ad",u"id",b"id",u"image_ad",b"image_ad",u"legacy_app_install_ad",b"legacy_app_install_ad",u"legacy_responsive_display_ad",b"legacy_responsive_display_ad",u"name",b"name",u"responsive_display_ad",b"responsive_display_ad",u"responsive_search_ad",b"responsive_search_ad",u"shopping_comparison_listing_ad",b"shopping_comparison_listing_ad",u"shopping_product_ad",b"shopping_product_ad",u"shopping_smart_ad",b"shopping_smart_ad",u"text_ad",b"text_ad",u"tracking_url_template",b"tracking_url_template",u"video_ad",b"video_ad"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_data",b"ad_data",u"added_by_google_ads",b"added_by_google_ads",u"app_ad",b"app_ad",u"app_engagement_ad",b"app_engagement_ad",u"call_only_ad",b"call_only_ad",u"device_preference",b"device_preference",u"display_upload_ad",b"display_upload_ad",u"display_url",b"display_url",u"expanded_dynamic_search_ad",b"expanded_dynamic_search_ad",u"expanded_text_ad",b"expanded_text_ad",u"final_app_urls",b"final_app_urls",u"final_mobile_urls",b"final_mobile_urls",u"final_urls",b"final_urls",u"gmail_ad",b"gmail_ad",u"hotel_ad",b"hotel_ad",u"id",b"id",u"image_ad",b"image_ad",u"legacy_app_install_ad",b"legacy_app_install_ad",u"legacy_responsive_display_ad",b"legacy_responsive_display_ad",u"name",b"name",u"resource_name",b"resource_name",u"responsive_display_ad",b"responsive_display_ad",u"responsive_search_ad",b"responsive_search_ad",u"shopping_comparison_listing_ad",b"shopping_comparison_listing_ad",u"shopping_product_ad",b"shopping_product_ad",u"shopping_smart_ad",b"shopping_smart_ad",u"system_managed_resource_source",b"system_managed_resource_source",u"text_ad",b"text_ad",u"tracking_url_template",b"tracking_url_template",u"type",b"type",u"url_collections",b"url_collections",u"url_custom_parameters",b"url_custom_parameters",u"video_ad",b"video_ad"]) -> None: ...
+        def HasField(self, field_name: typing_extensions___Literal[u"ad_data",b"ad_data",u"added_by_google_ads",b"added_by_google_ads",u"app_ad",b"app_ad",u"app_engagement_ad",b"app_engagement_ad",u"call_only_ad",b"call_only_ad",u"display_upload_ad",b"display_upload_ad",u"display_url",b"display_url",u"expanded_dynamic_search_ad",b"expanded_dynamic_search_ad",u"expanded_text_ad",b"expanded_text_ad",u"final_url_suffix",b"final_url_suffix",u"gmail_ad",b"gmail_ad",u"hotel_ad",b"hotel_ad",u"id",b"id",u"image_ad",b"image_ad",u"legacy_app_install_ad",b"legacy_app_install_ad",u"legacy_responsive_display_ad",b"legacy_responsive_display_ad",u"name",b"name",u"responsive_display_ad",b"responsive_display_ad",u"responsive_search_ad",b"responsive_search_ad",u"shopping_comparison_listing_ad",b"shopping_comparison_listing_ad",u"shopping_product_ad",b"shopping_product_ad",u"shopping_smart_ad",b"shopping_smart_ad",u"text_ad",b"text_ad",u"tracking_url_template",b"tracking_url_template",u"video_ad",b"video_ad"]) -> bool: ...
+        def ClearField(self, field_name: typing_extensions___Literal[u"ad_data",b"ad_data",u"added_by_google_ads",b"added_by_google_ads",u"app_ad",b"app_ad",u"app_engagement_ad",b"app_engagement_ad",u"call_only_ad",b"call_only_ad",u"device_preference",b"device_preference",u"display_upload_ad",b"display_upload_ad",u"display_url",b"display_url",u"expanded_dynamic_search_ad",b"expanded_dynamic_search_ad",u"expanded_text_ad",b"expanded_text_ad",u"final_app_urls",b"final_app_urls",u"final_mobile_urls",b"final_mobile_urls",u"final_url_suffix",b"final_url_suffix",u"final_urls",b"final_urls",u"gmail_ad",b"gmail_ad",u"hotel_ad",b"hotel_ad",u"id",b"id",u"image_ad",b"image_ad",u"legacy_app_install_ad",b"legacy_app_install_ad",u"legacy_responsive_display_ad",b"legacy_responsive_display_ad",u"name",b"name",u"resource_name",b"resource_name",u"responsive_display_ad",b"responsive_display_ad",u"responsive_search_ad",b"responsive_search_ad",u"shopping_comparison_listing_ad",b"shopping_comparison_listing_ad",u"shopping_product_ad",b"shopping_product_ad",u"shopping_smart_ad",b"shopping_smart_ad",u"system_managed_resource_source",b"system_managed_resource_source",u"text_ad",b"text_ad",u"tracking_url_template",b"tracking_url_template",u"type",b"type",u"url_collections",b"url_collections",u"url_custom_parameters",b"url_custom_parameters",u"video_ad",b"video_ad"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"ad_data",b"ad_data"]) -> typing_extensions___Literal["text_ad","expanded_text_ad","call_only_ad","expanded_dynamic_search_ad","hotel_ad","shopping_smart_ad","shopping_product_ad","gmail_ad","image_ad","video_ad","responsive_search_ad","legacy_responsive_display_ad","app_ad","legacy_app_install_ad","responsive_display_ad","display_upload_ad","app_engagement_ad","shopping_comparison_listing_ad"]: ...

@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.geo_target_constant_status_pb2 import 
     GeoTargetConstantStatusEnum as google___ads___googleads___v2___enums___geo_target_constant_status_pb2___GeoTargetConstantStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -24,8 +28,9 @@ from typing_extensions import (
 
 
 class GeoTargetConstant(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___geo_target_constant_status_pb2___GeoTargetConstantStatusEnum.GeoTargetConstantStatus.ClosedValueType
+    status = ... # type: google___ads___googleads___v2___enums___geo_target_constant_status_pb2___GeoTargetConstantStatusEnum.GeoTargetConstantStatus
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -49,7 +54,7 @@ class GeoTargetConstant(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         country_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         target_type : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___geo_target_constant_status_pb2___GeoTargetConstantStatusEnum.GeoTargetConstantStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___geo_target_constant_status_pb2___GeoTargetConstantStatusEnum.GeoTargetConstantStatus] = None,
         canonical_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
     @classmethod

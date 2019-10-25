@@ -13,6 +13,10 @@ from google.ads.google_ads.v2.proto.enums.feed_item_target_type_pb2 import (
     FeedItemTargetTypeEnum as google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -33,9 +37,10 @@ from typing_extensions import (
 
 
 class FeedItemTarget(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    feed_item_target_type = ... # type: google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum.FeedItemTargetType.ClosedValueType
-    device = ... # type: google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice.ClosedValueType
+    feed_item_target_type = ... # type: google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum.FeedItemTargetType
+    device = ... # type: google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice
 
     @property
     def feed_item(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -62,13 +67,13 @@ class FeedItemTarget(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         feed_item : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        feed_item_target_type : typing___Optional[google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum.FeedItemTargetType.ClosedValueType] = None,
+        feed_item_target_type : typing___Optional[google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum.FeedItemTargetType] = None,
         feed_item_target_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         keyword : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___KeywordInfo] = None,
         geo_target_constant : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        device : typing___Optional[google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice.ClosedValueType] = None,
+        device : typing___Optional[google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice] = None,
         ad_schedule : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo] = None,
         ) -> None: ...
     @classmethod

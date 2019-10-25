@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.enums.time_type_pb2 import (
     TimeTypeEnum as google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -29,7 +33,9 @@ from typing_extensions import (
 
 
 class BillingSetup(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class PaymentsAccountInfo(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def payments_account_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -66,9 +72,9 @@ class BillingSetup(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"payments_account_id",b"payments_account_id",u"payments_account_name",b"payments_account_name",u"payments_profile_id",b"payments_profile_id",u"payments_profile_name",b"payments_profile_name",u"secondary_payments_profile_id",b"secondary_payments_profile_id"]) -> None: ...
 
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___billing_setup_status_pb2___BillingSetupStatusEnum.BillingSetupStatus.ClosedValueType
-    start_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType
-    end_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType
+    status = ... # type: google___ads___googleads___v2___enums___billing_setup_status_pb2___BillingSetupStatusEnum.BillingSetupStatus
+    start_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType
+    end_time_type = ... # type: google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -89,13 +95,13 @@ class BillingSetup(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___billing_setup_status_pb2___BillingSetupStatusEnum.BillingSetupStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___billing_setup_status_pb2___BillingSetupStatusEnum.BillingSetupStatus] = None,
         payments_account : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         payments_account_info : typing___Optional[BillingSetup.PaymentsAccountInfo] = None,
         start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        start_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType] = None,
+        start_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType] = None,
         end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        end_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType.ClosedValueType] = None,
+        end_time_type : typing___Optional[google___ads___googleads___v2___enums___time_type_pb2___TimeTypeEnum.TimeType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> BillingSetup: ...

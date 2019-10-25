@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.operating_system_version_operator_type
     OperatingSystemVersionOperatorTypeEnum as google___ads___googleads___v2___enums___operating_system_version_operator_type_pb2___OperatingSystemVersionOperatorTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -25,8 +29,9 @@ from typing_extensions import (
 
 
 class OperatingSystemVersionConstant(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    operator_type = ... # type: google___ads___googleads___v2___enums___operating_system_version_operator_type_pb2___OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType.ClosedValueType
+    operator_type = ... # type: google___ads___googleads___v2___enums___operating_system_version_operator_type_pb2___OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -47,7 +52,7 @@ class OperatingSystemVersionConstant(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         os_major_version : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
         os_minor_version : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
-        operator_type : typing___Optional[google___ads___googleads___v2___enums___operating_system_version_operator_type_pb2___OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType.ClosedValueType] = None,
+        operator_type : typing___Optional[google___ads___googleads___v2___enums___operating_system_version_operator_type_pb2___OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> OperatingSystemVersionConstant: ...

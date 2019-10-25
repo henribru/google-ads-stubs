@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.resources.billing_setup_pb2 import (
     BillingSetup as google___ads___googleads___v2___resources___billing_setup_pb2___BillingSetup,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -19,6 +23,7 @@ from typing_extensions import (
 
 
 class GetBillingSetupRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -35,6 +40,7 @@ class GetBillingSetupRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateBillingSetupRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
 
     @property
@@ -57,6 +63,7 @@ class MutateBillingSetupRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operation",b"operation"]) -> None: ...
 
 class BillingSetupOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     remove = ... # type: typing___Text
 
     @property
@@ -80,6 +87,7 @@ class BillingSetupOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","remove"]: ...
 
 class MutateBillingSetupResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def result(self) -> MutateBillingSetupResult: ...
@@ -100,6 +108,7 @@ class MutateBillingSetupResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"result",b"result"]) -> None: ...
 
 class MutateBillingSetupResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,

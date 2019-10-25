@@ -8,6 +8,10 @@ from google.ads.google_ads.v1.proto.resources.ad_group_ad_pb2 import (
     AdGroupAd as google___ads___googleads___v1___resources___ad_group_ad_pb2___AdGroupAd,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -36,6 +40,7 @@ from typing_extensions import (
 
 
 class GetAdGroupAdRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -52,6 +57,7 @@ class GetAdGroupAdRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateAdGroupAdsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     partial_failure = ... # type: bool
     validate_only = ... # type: bool
@@ -76,6 +82,7 @@ class MutateAdGroupAdsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operations",b"operations",u"partial_failure",b"partial_failure",u"validate_only",b"validate_only"]) -> None: ...
 
 class AdGroupAdOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     remove = ... # type: typing___Text
 
     @property
@@ -111,6 +118,7 @@ class AdGroupAdOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","update","remove"]: ...
 
 class MutateAdGroupAdsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
@@ -135,6 +143,7 @@ class MutateAdGroupAdsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"partial_failure_error",b"partial_failure_error",u"results",b"results"]) -> None: ...
 
 class MutateAdGroupAdResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,

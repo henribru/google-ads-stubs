@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.resources.campaign_experiment_pb2 import (
     CampaignExperiment as google___ads___googleads___v1___resources___campaign_experiment_pb2___CampaignExperiment,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -32,6 +36,7 @@ from typing_extensions import (
 
 
 class GetCampaignExperimentRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -48,6 +53,7 @@ class GetCampaignExperimentRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateCampaignExperimentsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     partial_failure = ... # type: bool
     validate_only = ... # type: bool
@@ -72,6 +78,7 @@ class MutateCampaignExperimentsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operations",b"operations",u"partial_failure",b"partial_failure",u"validate_only",b"validate_only"]) -> None: ...
 
 class CampaignExperimentOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     remove = ... # type: typing___Text
 
     @property
@@ -99,6 +106,7 @@ class CampaignExperimentOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["update","remove"]: ...
 
 class MutateCampaignExperimentsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
@@ -123,6 +131,7 @@ class MutateCampaignExperimentsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"partial_failure_error",b"partial_failure_error",u"results",b"results"]) -> None: ...
 
 class MutateCampaignExperimentResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -139,6 +148,7 @@ class MutateCampaignExperimentResult(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class CreateCampaignExperimentRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     validate_only = ... # type: bool
 
@@ -163,6 +173,7 @@ class CreateCampaignExperimentRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"campaign_experiment",b"campaign_experiment",u"customer_id",b"customer_id",u"validate_only",b"validate_only"]) -> None: ...
 
 class CreateCampaignExperimentMetadata(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     campaign_experiment = ... # type: typing___Text
 
     def __init__(self,
@@ -179,6 +190,7 @@ class CreateCampaignExperimentMetadata(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"campaign_experiment",b"campaign_experiment"]) -> None: ...
 
 class GraduateCampaignExperimentRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     campaign_experiment = ... # type: typing___Text
     campaign_budget = ... # type: typing___Text
 
@@ -197,6 +209,7 @@ class GraduateCampaignExperimentRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"campaign_budget",b"campaign_budget",u"campaign_experiment",b"campaign_experiment"]) -> None: ...
 
 class GraduateCampaignExperimentResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     graduated_campaign = ... # type: typing___Text
 
     def __init__(self,
@@ -213,6 +226,7 @@ class GraduateCampaignExperimentResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"graduated_campaign",b"graduated_campaign"]) -> None: ...
 
 class PromoteCampaignExperimentRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     campaign_experiment = ... # type: typing___Text
 
     def __init__(self,
@@ -229,6 +243,7 @@ class PromoteCampaignExperimentRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"campaign_experiment",b"campaign_experiment"]) -> None: ...
 
 class EndCampaignExperimentRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     campaign_experiment = ... # type: typing___Text
 
     def __init__(self,
@@ -245,6 +260,7 @@ class EndCampaignExperimentRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"campaign_experiment",b"campaign_experiment"]) -> None: ...
 
 class ListCampaignExperimentAsyncErrorsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
     page_token = ... # type: typing___Text
     page_size = ... # type: int
@@ -265,6 +281,7 @@ class ListCampaignExperimentAsyncErrorsRequest(google___protobuf___message___Mes
         def ClearField(self, field_name: typing_extensions___Literal[u"page_size",b"page_size",u"page_token",b"page_token",u"resource_name",b"resource_name"]) -> None: ...
 
 class ListCampaignExperimentAsyncErrorsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     next_page_token = ... # type: typing___Text
 
     @property

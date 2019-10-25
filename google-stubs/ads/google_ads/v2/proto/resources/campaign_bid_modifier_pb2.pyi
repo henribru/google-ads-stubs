@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.common.criteria_pb2 import (
     InteractionTypeInfo as google___ads___googleads___v2___common___criteria_pb2___InteractionTypeInfo,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -25,6 +29,7 @@ from typing_extensions import (
 
 
 class CampaignBidModifier(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     @property

@@ -36,6 +36,10 @@ from google.ads.google_ads.v1.proto.enums.promotion_extension_occasion_pb2 impor
     PromotionExtensionOccasionEnum as google___ads___googleads___v1___enums___promotion_extension_occasion_pb2___PromotionExtensionOccasionEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -62,7 +66,8 @@ from typing_extensions import (
 
 
 class AppFeedItem(google___protobuf___message___Message):
-    app_store = ... # type: google___ads___googleads___v1___enums___app_store_pb2___AppStoreEnum.AppStore.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    app_store = ... # type: google___ads___googleads___v1___enums___app_store_pb2___AppStoreEnum.AppStore
 
     @property
     def link_text(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -89,7 +94,7 @@ class AppFeedItem(google___protobuf___message___Message):
         *,
         link_text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         app_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        app_store : typing___Optional[google___ads___googleads___v1___enums___app_store_pb2___AppStoreEnum.AppStore.ClosedValueType] = None,
+        app_store : typing___Optional[google___ads___googleads___v1___enums___app_store_pb2___AppStoreEnum.AppStore] = None,
         final_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         final_mobile_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         tracking_url_template : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
@@ -108,7 +113,8 @@ class AppFeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"app_id",b"app_id",u"app_store",b"app_store",u"final_mobile_urls",b"final_mobile_urls",u"final_url_suffix",b"final_url_suffix",u"final_urls",b"final_urls",u"link_text",b"link_text",u"tracking_url_template",b"tracking_url_template",u"url_custom_parameters",b"url_custom_parameters"]) -> None: ...
 
 class CallFeedItem(google___protobuf___message___Message):
-    call_conversion_reporting_state = ... # type: google___ads___googleads___v1___enums___call_conversion_reporting_state_pb2___CallConversionReportingStateEnum.CallConversionReportingState.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    call_conversion_reporting_state = ... # type: google___ads___googleads___v1___enums___call_conversion_reporting_state_pb2___CallConversionReportingStateEnum.CallConversionReportingState
 
     @property
     def phone_number(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -132,7 +138,7 @@ class CallFeedItem(google___protobuf___message___Message):
         call_tracking_enabled : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         call_conversion_action : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         call_conversion_tracking_disabled : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        call_conversion_reporting_state : typing___Optional[google___ads___googleads___v1___enums___call_conversion_reporting_state_pb2___CallConversionReportingStateEnum.CallConversionReportingState.ClosedValueType] = None,
+        call_conversion_reporting_state : typing___Optional[google___ads___googleads___v1___enums___call_conversion_reporting_state_pb2___CallConversionReportingStateEnum.CallConversionReportingState] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CallFeedItem: ...
@@ -146,6 +152,7 @@ class CallFeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"call_conversion_action",b"call_conversion_action",u"call_conversion_reporting_state",b"call_conversion_reporting_state",u"call_conversion_tracking_disabled",b"call_conversion_tracking_disabled",u"call_tracking_enabled",b"call_tracking_enabled",u"country_code",b"country_code",u"phone_number",b"phone_number"]) -> None: ...
 
 class CalloutFeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def callout_text(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -166,6 +173,7 @@ class CalloutFeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"callout_text",b"callout_text"]) -> None: ...
 
 class LocationFeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def business_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -214,6 +222,7 @@ class LocationFeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"address_line_1",b"address_line_1",u"address_line_2",b"address_line_2",u"business_name",b"business_name",u"city",b"city",u"country_code",b"country_code",u"phone_number",b"phone_number",u"postal_code",b"postal_code",u"province",b"province"]) -> None: ...
 
 class AffiliateLocationFeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def business_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -270,6 +279,7 @@ class AffiliateLocationFeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"address_line_1",b"address_line_1",u"address_line_2",b"address_line_2",u"business_name",b"business_name",u"chain_id",b"chain_id",u"chain_name",b"chain_name",u"city",b"city",u"country_code",b"country_code",u"phone_number",b"phone_number",u"postal_code",b"postal_code",u"province",b"province"]) -> None: ...
 
 class TextMessageFeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def business_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -306,8 +316,9 @@ class TextMessageFeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"business_name",b"business_name",u"country_code",b"country_code",u"extension_text",b"extension_text",u"phone_number",b"phone_number",u"text",b"text"]) -> None: ...
 
 class PriceFeedItem(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v1___enums___price_extension_type_pb2___PriceExtensionTypeEnum.PriceExtensionType.ClosedValueType
-    price_qualifier = ... # type: google___ads___googleads___v1___enums___price_extension_price_qualifier_pb2___PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v1___enums___price_extension_type_pb2___PriceExtensionTypeEnum.PriceExtensionType
+    price_qualifier = ... # type: google___ads___googleads___v1___enums___price_extension_price_qualifier_pb2___PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier
 
     @property
     def tracking_url_template(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -323,8 +334,8 @@ class PriceFeedItem(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v1___enums___price_extension_type_pb2___PriceExtensionTypeEnum.PriceExtensionType.ClosedValueType] = None,
-        price_qualifier : typing___Optional[google___ads___googleads___v1___enums___price_extension_price_qualifier_pb2___PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___price_extension_type_pb2___PriceExtensionTypeEnum.PriceExtensionType] = None,
+        price_qualifier : typing___Optional[google___ads___googleads___v1___enums___price_extension_price_qualifier_pb2___PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier] = None,
         tracking_url_template : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         language_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         price_offerings : typing___Optional[typing___Iterable[PriceOffer]] = None,
@@ -342,7 +353,8 @@ class PriceFeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"final_url_suffix",b"final_url_suffix",u"language_code",b"language_code",u"price_offerings",b"price_offerings",u"price_qualifier",b"price_qualifier",u"tracking_url_template",b"tracking_url_template",u"type",b"type"]) -> None: ...
 
 class PriceOffer(google___protobuf___message___Message):
-    unit = ... # type: google___ads___googleads___v1___enums___price_extension_price_unit_pb2___PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    unit = ... # type: google___ads___googleads___v1___enums___price_extension_price_unit_pb2___PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit
 
     @property
     def header(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -364,7 +376,7 @@ class PriceOffer(google___protobuf___message___Message):
         header : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         description : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         price : typing___Optional[google___ads___googleads___v1___common___feed_common_pb2___Money] = None,
-        unit : typing___Optional[google___ads___googleads___v1___enums___price_extension_price_unit_pb2___PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit.ClosedValueType] = None,
+        unit : typing___Optional[google___ads___googleads___v1___enums___price_extension_price_unit_pb2___PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit] = None,
         final_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         final_mobile_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         ) -> None: ...
@@ -380,8 +392,9 @@ class PriceOffer(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"description",b"description",u"final_mobile_urls",b"final_mobile_urls",u"final_urls",b"final_urls",u"header",b"header",u"price",b"price",u"unit",b"unit"]) -> None: ...
 
 class PromotionFeedItem(google___protobuf___message___Message):
-    discount_modifier = ... # type: google___ads___googleads___v1___enums___promotion_extension_discount_modifier_pb2___PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.ClosedValueType
-    occasion = ... # type: google___ads___googleads___v1___enums___promotion_extension_occasion_pb2___PromotionExtensionOccasionEnum.PromotionExtensionOccasion.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    discount_modifier = ... # type: google___ads___googleads___v1___enums___promotion_extension_discount_modifier_pb2___PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier
+    occasion = ... # type: google___ads___googleads___v1___enums___promotion_extension_occasion_pb2___PromotionExtensionOccasionEnum.PromotionExtensionOccasion
 
     @property
     def promotion_target(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -425,10 +438,10 @@ class PromotionFeedItem(google___protobuf___message___Message):
     def __init__(self,
         *,
         promotion_target : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        discount_modifier : typing___Optional[google___ads___googleads___v1___enums___promotion_extension_discount_modifier_pb2___PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.ClosedValueType] = None,
+        discount_modifier : typing___Optional[google___ads___googleads___v1___enums___promotion_extension_discount_modifier_pb2___PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier] = None,
         promotion_start_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         promotion_end_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        occasion : typing___Optional[google___ads___googleads___v1___enums___promotion_extension_occasion_pb2___PromotionExtensionOccasionEnum.PromotionExtensionOccasion.ClosedValueType] = None,
+        occasion : typing___Optional[google___ads___googleads___v1___enums___promotion_extension_occasion_pb2___PromotionExtensionOccasionEnum.PromotionExtensionOccasion] = None,
         final_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         final_mobile_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         tracking_url_template : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
@@ -456,6 +469,7 @@ class PromotionFeedItem(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"promotion_trigger",b"promotion_trigger"]) -> typing_extensions___Literal["promotion_code","orders_over_amount"]: ...
 
 class StructuredSnippetFeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def header(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -480,6 +494,7 @@ class StructuredSnippetFeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"header",b"header",u"values",b"values"]) -> None: ...
 
 class SitelinkFeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def link_text(self) -> google___protobuf___wrappers_pb2___StringValue: ...

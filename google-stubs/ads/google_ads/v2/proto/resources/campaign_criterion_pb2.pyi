@@ -38,6 +38,10 @@ from google.ads.google_ads.v2.proto.enums.criterion_type_pb2 import (
     CriterionTypeEnum as google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -60,9 +64,10 @@ from typing_extensions import (
 
 
 class CampaignCriterion(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType.ClosedValueType
-    status = ... # type: google___ads___googleads___v2___enums___campaign_criterion_status_pb2___CampaignCriterionStatusEnum.CampaignCriterionStatus.ClosedValueType
+    type = ... # type: google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType
+    status = ... # type: google___ads___googleads___v2___enums___campaign_criterion_status_pb2___CampaignCriterionStatusEnum.CampaignCriterionStatus
 
     @property
     def campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -164,8 +169,8 @@ class CampaignCriterion(google___protobuf___message___Message):
         criterion_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         bid_modifier : typing___Optional[google___protobuf___wrappers_pb2___FloatValue] = None,
         negative : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType.ClosedValueType] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___campaign_criterion_status_pb2___CampaignCriterionStatusEnum.CampaignCriterionStatus.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___campaign_criterion_status_pb2___CampaignCriterionStatusEnum.CampaignCriterionStatus] = None,
         keyword : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___KeywordInfo] = None,
         placement : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___PlacementInfo] = None,
         mobile_app_category : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___MobileAppCategoryInfo] = None,

@@ -18,6 +18,10 @@ from google.ads.google_ads.v1.proto.enums.bidding_strategy_type_pb2 import (
     BiddingStrategyTypeEnum as google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -38,9 +42,10 @@ from typing_extensions import (
 
 
 class BiddingStrategy(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___bidding_strategy_status_pb2___BiddingStrategyStatusEnum.BiddingStrategyStatus.ClosedValueType
-    type = ... # type: google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum.BiddingStrategyType.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___bidding_strategy_status_pb2___BiddingStrategyStatusEnum.BiddingStrategyStatus
+    type = ... # type: google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum.BiddingStrategyType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -80,8 +85,8 @@ class BiddingStrategy(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___bidding_strategy_status_pb2___BiddingStrategyStatusEnum.BiddingStrategyStatus.ClosedValueType] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum.BiddingStrategyType.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___bidding_strategy_status_pb2___BiddingStrategyStatusEnum.BiddingStrategyStatus] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___bidding_strategy_type_pb2___BiddingStrategyTypeEnum.BiddingStrategyType] = None,
         campaign_count : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         non_removed_campaign_count : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         enhanced_cpc : typing___Optional[google___ads___googleads___v1___common___bidding_pb2___EnhancedCpc] = None,

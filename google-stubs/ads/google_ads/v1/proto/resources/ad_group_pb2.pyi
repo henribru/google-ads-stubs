@@ -32,6 +32,10 @@ from google.ads.google_ads.v1.proto.enums.targeting_dimension_pb2 import (
     TargetingDimensionEnum as google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -58,13 +62,14 @@ from typing_extensions import (
 
 
 class AdGroup(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___ad_group_status_pb2___AdGroupStatusEnum.AdGroupStatus.ClosedValueType
-    type = ... # type: google___ads___googleads___v1___enums___ad_group_type_pb2___AdGroupTypeEnum.AdGroupType.ClosedValueType
-    ad_rotation_mode = ... # type: google___ads___googleads___v1___enums___ad_group_ad_rotation_mode_pb2___AdGroupAdRotationModeEnum.AdGroupAdRotationMode.ClosedValueType
-    display_custom_bid_dimension = ... # type: google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum.TargetingDimension.ClosedValueType
-    effective_target_cpa_source = ... # type: google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType
-    effective_target_roas_source = ... # type: google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___ad_group_status_pb2___AdGroupStatusEnum.AdGroupStatus
+    type = ... # type: google___ads___googleads___v1___enums___ad_group_type_pb2___AdGroupTypeEnum.AdGroupType
+    ad_rotation_mode = ... # type: google___ads___googleads___v1___enums___ad_group_ad_rotation_mode_pb2___AdGroupAdRotationModeEnum.AdGroupAdRotationMode
+    display_custom_bid_dimension = ... # type: google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum.TargetingDimension
+    effective_target_cpa_source = ... # type: google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource
+    effective_target_roas_source = ... # type: google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -125,9 +130,9 @@ class AdGroup(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___ad_group_status_pb2___AdGroupStatusEnum.AdGroupStatus.ClosedValueType] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___ad_group_type_pb2___AdGroupTypeEnum.AdGroupType.ClosedValueType] = None,
-        ad_rotation_mode : typing___Optional[google___ads___googleads___v1___enums___ad_group_ad_rotation_mode_pb2___AdGroupAdRotationModeEnum.AdGroupAdRotationMode.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___ad_group_status_pb2___AdGroupStatusEnum.AdGroupStatus] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___ad_group_type_pb2___AdGroupTypeEnum.AdGroupType] = None,
+        ad_rotation_mode : typing___Optional[google___ads___googleads___v1___enums___ad_group_ad_rotation_mode_pb2___AdGroupAdRotationModeEnum.AdGroupAdRotationMode] = None,
         base_ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         tracking_url_template : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         url_custom_parameters : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter]] = None,
@@ -140,13 +145,13 @@ class AdGroup(google___protobuf___message___Message):
         target_roas : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         percent_cpc_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         explorer_auto_optimizer_setting : typing___Optional[google___ads___googleads___v1___common___explorer_auto_optimizer_setting_pb2___ExplorerAutoOptimizerSetting] = None,
-        display_custom_bid_dimension : typing___Optional[google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum.TargetingDimension.ClosedValueType] = None,
+        display_custom_bid_dimension : typing___Optional[google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum.TargetingDimension] = None,
         final_url_suffix : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         targeting_setting : typing___Optional[google___ads___googleads___v1___common___targeting_setting_pb2___TargetingSetting] = None,
         effective_target_cpa_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        effective_target_cpa_source : typing___Optional[google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType] = None,
+        effective_target_cpa_source : typing___Optional[google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource] = None,
         effective_target_roas : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        effective_target_roas_source : typing___Optional[google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource.ClosedValueType] = None,
+        effective_target_roas_source : typing___Optional[google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AdGroup: ...

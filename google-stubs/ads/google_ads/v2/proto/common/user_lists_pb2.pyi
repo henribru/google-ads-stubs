@@ -36,6 +36,10 @@ from google.ads.google_ads.v2.proto.enums.user_list_string_rule_item_operator_pb
     UserListStringRuleItemOperatorEnum as google___ads___googleads___v2___enums___user_list_string_rule_item_operator_pb2___UserListStringRuleItemOperatorEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -61,6 +65,7 @@ from typing_extensions import (
 
 
 class SimilarUserListInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def seed_user_list(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -81,8 +86,9 @@ class SimilarUserListInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"seed_user_list",b"seed_user_list"]) -> None: ...
 
 class CrmBasedUserListInfo(google___protobuf___message___Message):
-    upload_key_type = ... # type: google___ads___googleads___v2___enums___customer_match_upload_key_type_pb2___CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.ClosedValueType
-    data_source_type = ... # type: google___ads___googleads___v2___enums___user_list_crm_data_source_type_pb2___UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    upload_key_type = ... # type: google___ads___googleads___v2___enums___customer_match_upload_key_type_pb2___CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType
+    data_source_type = ... # type: google___ads___googleads___v2___enums___user_list_crm_data_source_type_pb2___UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType
 
     @property
     def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -90,8 +96,8 @@ class CrmBasedUserListInfo(google___protobuf___message___Message):
     def __init__(self,
         *,
         app_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        upload_key_type : typing___Optional[google___ads___googleads___v2___enums___customer_match_upload_key_type_pb2___CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.ClosedValueType] = None,
-        data_source_type : typing___Optional[google___ads___googleads___v2___enums___user_list_crm_data_source_type_pb2___UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.ClosedValueType] = None,
+        upload_key_type : typing___Optional[google___ads___googleads___v2___enums___customer_match_upload_key_type_pb2___CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType] = None,
+        data_source_type : typing___Optional[google___ads___googleads___v2___enums___user_list_crm_data_source_type_pb2___UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CrmBasedUserListInfo: ...
@@ -105,14 +111,15 @@ class CrmBasedUserListInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"app_id",b"app_id",u"data_source_type",b"data_source_type",u"upload_key_type",b"upload_key_type"]) -> None: ...
 
 class UserListRuleInfo(google___protobuf___message___Message):
-    rule_type = ... # type: google___ads___googleads___v2___enums___user_list_rule_type_pb2___UserListRuleTypeEnum.UserListRuleType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    rule_type = ... # type: google___ads___googleads___v2___enums___user_list_rule_type_pb2___UserListRuleTypeEnum.UserListRuleType
 
     @property
     def rule_item_groups(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[UserListRuleItemGroupInfo]: ...
 
     def __init__(self,
         *,
-        rule_type : typing___Optional[google___ads___googleads___v2___enums___user_list_rule_type_pb2___UserListRuleTypeEnum.UserListRuleType.ClosedValueType] = None,
+        rule_type : typing___Optional[google___ads___googleads___v2___enums___user_list_rule_type_pb2___UserListRuleTypeEnum.UserListRuleType] = None,
         rule_item_groups : typing___Optional[typing___Iterable[UserListRuleItemGroupInfo]] = None,
         ) -> None: ...
     @classmethod
@@ -125,6 +132,7 @@ class UserListRuleInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"rule_item_groups",b"rule_item_groups",u"rule_type",b"rule_type"]) -> None: ...
 
 class UserListRuleItemGroupInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def rule_items(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[UserListRuleItemInfo]: ...
@@ -143,6 +151,7 @@ class UserListRuleItemGroupInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"rule_items",b"rule_items"]) -> None: ...
 
 class UserListRuleItemInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -176,7 +185,8 @@ class UserListRuleItemInfo(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"rule_item",b"rule_item"]) -> typing_extensions___Literal["number_rule_item","string_rule_item","date_rule_item"]: ...
 
 class UserListDateRuleItemInfo(google___protobuf___message___Message):
-    operator = ... # type: google___ads___googleads___v2___enums___user_list_date_rule_item_operator_pb2___UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    operator = ... # type: google___ads___googleads___v2___enums___user_list_date_rule_item_operator_pb2___UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -186,7 +196,7 @@ class UserListDateRuleItemInfo(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        operator : typing___Optional[google___ads___googleads___v2___enums___user_list_date_rule_item_operator_pb2___UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.ClosedValueType] = None,
+        operator : typing___Optional[google___ads___googleads___v2___enums___user_list_date_rule_item_operator_pb2___UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator] = None,
         value : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         offset_in_days : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         ) -> None: ...
@@ -202,14 +212,15 @@ class UserListDateRuleItemInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"offset_in_days",b"offset_in_days",u"operator",b"operator",u"value",b"value"]) -> None: ...
 
 class UserListNumberRuleItemInfo(google___protobuf___message___Message):
-    operator = ... # type: google___ads___googleads___v2___enums___user_list_number_rule_item_operator_pb2___UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    operator = ... # type: google___ads___googleads___v2___enums___user_list_number_rule_item_operator_pb2___UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
 
     def __init__(self,
         *,
-        operator : typing___Optional[google___ads___googleads___v2___enums___user_list_number_rule_item_operator_pb2___UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.ClosedValueType] = None,
+        operator : typing___Optional[google___ads___googleads___v2___enums___user_list_number_rule_item_operator_pb2___UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator] = None,
         value : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         ) -> None: ...
     @classmethod
@@ -224,14 +235,15 @@ class UserListNumberRuleItemInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"operator",b"operator",u"value",b"value"]) -> None: ...
 
 class UserListStringRuleItemInfo(google___protobuf___message___Message):
-    operator = ... # type: google___ads___googleads___v2___enums___user_list_string_rule_item_operator_pb2___UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    operator = ... # type: google___ads___googleads___v2___enums___user_list_string_rule_item_operator_pb2___UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___StringValue: ...
 
     def __init__(self,
         *,
-        operator : typing___Optional[google___ads___googleads___v2___enums___user_list_string_rule_item_operator_pb2___UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator.ClosedValueType] = None,
+        operator : typing___Optional[google___ads___googleads___v2___enums___user_list_string_rule_item_operator_pb2___UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator] = None,
         value : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
     @classmethod
@@ -246,7 +258,8 @@ class UserListStringRuleItemInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"operator",b"operator",u"value",b"value"]) -> None: ...
 
 class CombinedRuleUserListInfo(google___protobuf___message___Message):
-    rule_operator = ... # type: google___ads___googleads___v2___enums___user_list_combined_rule_operator_pb2___UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    rule_operator = ... # type: google___ads___googleads___v2___enums___user_list_combined_rule_operator_pb2___UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator
 
     @property
     def left_operand(self) -> UserListRuleInfo: ...
@@ -258,7 +271,7 @@ class CombinedRuleUserListInfo(google___protobuf___message___Message):
         *,
         left_operand : typing___Optional[UserListRuleInfo] = None,
         right_operand : typing___Optional[UserListRuleInfo] = None,
-        rule_operator : typing___Optional[google___ads___googleads___v2___enums___user_list_combined_rule_operator_pb2___UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator.ClosedValueType] = None,
+        rule_operator : typing___Optional[google___ads___googleads___v2___enums___user_list_combined_rule_operator_pb2___UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CombinedRuleUserListInfo: ...
@@ -272,6 +285,7 @@ class CombinedRuleUserListInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"left_operand",b"left_operand",u"right_operand",b"right_operand",u"rule_operator",b"rule_operator"]) -> None: ...
 
 class DateSpecificRuleUserListInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def rule(self) -> UserListRuleInfo: ...
@@ -300,6 +314,7 @@ class DateSpecificRuleUserListInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"end_date",b"end_date",u"rule",b"rule",u"start_date",b"start_date"]) -> None: ...
 
 class ExpressionRuleUserListInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def rule(self) -> UserListRuleInfo: ...
@@ -320,7 +335,8 @@ class ExpressionRuleUserListInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"rule",b"rule"]) -> None: ...
 
 class RuleBasedUserListInfo(google___protobuf___message___Message):
-    prepopulation_status = ... # type: google___ads___googleads___v2___enums___user_list_prepopulation_status_pb2___UserListPrepopulationStatusEnum.UserListPrepopulationStatus.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    prepopulation_status = ... # type: google___ads___googleads___v2___enums___user_list_prepopulation_status_pb2___UserListPrepopulationStatusEnum.UserListPrepopulationStatus
 
     @property
     def combined_rule_user_list(self) -> CombinedRuleUserListInfo: ...
@@ -333,7 +349,7 @@ class RuleBasedUserListInfo(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        prepopulation_status : typing___Optional[google___ads___googleads___v2___enums___user_list_prepopulation_status_pb2___UserListPrepopulationStatusEnum.UserListPrepopulationStatus.ClosedValueType] = None,
+        prepopulation_status : typing___Optional[google___ads___googleads___v2___enums___user_list_prepopulation_status_pb2___UserListPrepopulationStatusEnum.UserListPrepopulationStatus] = None,
         combined_rule_user_list : typing___Optional[CombinedRuleUserListInfo] = None,
         date_specific_rule_user_list : typing___Optional[DateSpecificRuleUserListInfo] = None,
         expression_rule_user_list : typing___Optional[ExpressionRuleUserListInfo] = None,
@@ -351,6 +367,7 @@ class RuleBasedUserListInfo(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"rule_based_user_list",b"rule_based_user_list"]) -> typing_extensions___Literal["combined_rule_user_list","date_specific_rule_user_list","expression_rule_user_list"]: ...
 
 class LogicalUserListInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def rules(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[UserListLogicalRuleInfo]: ...
@@ -369,14 +386,15 @@ class LogicalUserListInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"rules",b"rules"]) -> None: ...
 
 class UserListLogicalRuleInfo(google___protobuf___message___Message):
-    operator = ... # type: google___ads___googleads___v2___enums___user_list_logical_rule_operator_pb2___UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    operator = ... # type: google___ads___googleads___v2___enums___user_list_logical_rule_operator_pb2___UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator
 
     @property
     def rule_operands(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[LogicalUserListOperandInfo]: ...
 
     def __init__(self,
         *,
-        operator : typing___Optional[google___ads___googleads___v2___enums___user_list_logical_rule_operator_pb2___UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.ClosedValueType] = None,
+        operator : typing___Optional[google___ads___googleads___v2___enums___user_list_logical_rule_operator_pb2___UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator] = None,
         rule_operands : typing___Optional[typing___Iterable[LogicalUserListOperandInfo]] = None,
         ) -> None: ...
     @classmethod
@@ -389,6 +407,7 @@ class UserListLogicalRuleInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"operator",b"operator",u"rule_operands",b"rule_operands"]) -> None: ...
 
 class LogicalUserListOperandInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def user_list(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -409,6 +428,7 @@ class LogicalUserListOperandInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"user_list",b"user_list"]) -> None: ...
 
 class BasicUserListInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def actions(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[UserListActionInfo]: ...
@@ -427,6 +447,7 @@ class BasicUserListInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"actions",b"actions"]) -> None: ...
 
 class UserListActionInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...

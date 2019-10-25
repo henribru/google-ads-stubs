@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.customer_pay_per_conversion_eligibilit
     CustomerPayPerConversionEligibilityFailureReasonEnum as google___ads___googleads___v2___enums___customer_pay_per_conversion_eligibility_failure_reason_pb2___CustomerPayPerConversionEligibilityFailureReasonEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedScalarFieldContainer as google___protobuf___internal___containers___RepeatedScalarFieldContainer,
 )
@@ -30,8 +34,9 @@ from typing_extensions import (
 
 
 class Customer(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    pay_per_conversion_eligibility_failure_reasons = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___customer_pay_per_conversion_eligibility_failure_reason_pb2___CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.ClosedValueType]
+    pay_per_conversion_eligibility_failure_reasons = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___customer_pay_per_conversion_eligibility_failure_reason_pb2___CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason]
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -88,7 +93,7 @@ class Customer(google___protobuf___message___Message):
         call_reporting_setting : typing___Optional[CallReportingSetting] = None,
         conversion_tracking_setting : typing___Optional[ConversionTrackingSetting] = None,
         remarketing_setting : typing___Optional[RemarketingSetting] = None,
-        pay_per_conversion_eligibility_failure_reasons : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___customer_pay_per_conversion_eligibility_failure_reason_pb2___CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.ClosedValueType]] = None,
+        pay_per_conversion_eligibility_failure_reasons : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___customer_pay_per_conversion_eligibility_failure_reason_pb2___CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason]] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> Customer: ...
@@ -102,6 +107,7 @@ class Customer(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"auto_tagging_enabled",b"auto_tagging_enabled",u"call_reporting_setting",b"call_reporting_setting",u"conversion_tracking_setting",b"conversion_tracking_setting",u"currency_code",b"currency_code",u"descriptive_name",b"descriptive_name",u"final_url_suffix",b"final_url_suffix",u"has_partners_badge",b"has_partners_badge",u"id",b"id",u"manager",b"manager",u"pay_per_conversion_eligibility_failure_reasons",b"pay_per_conversion_eligibility_failure_reasons",u"remarketing_setting",b"remarketing_setting",u"resource_name",b"resource_name",u"test_account",b"test_account",u"time_zone",b"time_zone",u"tracking_url_template",b"tracking_url_template"]) -> None: ...
 
 class CallReportingSetting(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def call_reporting_enabled(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
@@ -130,6 +136,7 @@ class CallReportingSetting(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"call_conversion_action",b"call_conversion_action",u"call_conversion_reporting_enabled",b"call_conversion_reporting_enabled",u"call_reporting_enabled",b"call_reporting_enabled"]) -> None: ...
 
 class ConversionTrackingSetting(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def conversion_tracking_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -154,6 +161,7 @@ class ConversionTrackingSetting(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"conversion_tracking_id",b"conversion_tracking_id",u"cross_account_conversion_tracking_id",b"cross_account_conversion_tracking_id"]) -> None: ...
 
 class RemarketingSetting(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def google_global_site_tag(self) -> google___protobuf___wrappers_pb2___StringValue: ...

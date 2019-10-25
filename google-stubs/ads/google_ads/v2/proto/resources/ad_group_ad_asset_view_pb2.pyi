@@ -20,6 +20,10 @@ from google.ads.google_ads.v2.proto.enums.policy_review_status_pb2 import (
     PolicyReviewStatusEnum as google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -44,9 +48,10 @@ from typing_extensions import (
 
 
 class AdGroupAdAssetView(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    field_type = ... # type: google___ads___googleads___v2___enums___asset_field_type_pb2___AssetFieldTypeEnum.AssetFieldType.ClosedValueType
-    performance_label = ... # type: google___ads___googleads___v2___enums___asset_performance_label_pb2___AssetPerformanceLabelEnum.AssetPerformanceLabel.ClosedValueType
+    field_type = ... # type: google___ads___googleads___v2___enums___asset_field_type_pb2___AssetFieldTypeEnum.AssetFieldType
+    performance_label = ... # type: google___ads___googleads___v2___enums___asset_performance_label_pb2___AssetPerformanceLabelEnum.AssetPerformanceLabel
 
     @property
     def ad_group_ad(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -62,9 +67,9 @@ class AdGroupAdAssetView(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         ad_group_ad : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         asset : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        field_type : typing___Optional[google___ads___googleads___v2___enums___asset_field_type_pb2___AssetFieldTypeEnum.AssetFieldType.ClosedValueType] = None,
+        field_type : typing___Optional[google___ads___googleads___v2___enums___asset_field_type_pb2___AssetFieldTypeEnum.AssetFieldType] = None,
         policy_summary : typing___Optional[AdGroupAdAssetPolicySummary] = None,
-        performance_label : typing___Optional[google___ads___googleads___v2___enums___asset_performance_label_pb2___AssetPerformanceLabelEnum.AssetPerformanceLabel.ClosedValueType] = None,
+        performance_label : typing___Optional[google___ads___googleads___v2___enums___asset_performance_label_pb2___AssetPerformanceLabelEnum.AssetPerformanceLabel] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AdGroupAdAssetView: ...
@@ -78,8 +83,9 @@ class AdGroupAdAssetView(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_ad",b"ad_group_ad",u"asset",b"asset",u"field_type",b"field_type",u"performance_label",b"performance_label",u"policy_summary",b"policy_summary",u"resource_name",b"resource_name"]) -> None: ...
 
 class AdGroupAdAssetPolicySummary(google___protobuf___message___Message):
-    review_status = ... # type: google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus.ClosedValueType
-    approval_status = ... # type: google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    review_status = ... # type: google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status = ... # type: google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus
 
     @property
     def policy_topic_entries(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry]: ...
@@ -87,8 +93,8 @@ class AdGroupAdAssetPolicySummary(google___protobuf___message___Message):
     def __init__(self,
         *,
         policy_topic_entries : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry]] = None,
-        review_status : typing___Optional[google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus.ClosedValueType] = None,
-        approval_status : typing___Optional[google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus.ClosedValueType] = None,
+        review_status : typing___Optional[google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus] = None,
+        approval_status : typing___Optional[google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AdGroupAdAssetPolicySummary: ...

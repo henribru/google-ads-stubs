@@ -8,6 +8,10 @@ from google.ads.google_ads.v1.proto.enums.extension_type_pb2 import (
     ExtensionTypeEnum as google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -32,9 +36,10 @@ from typing_extensions import (
 
 
 class CampaignExtensionSetting(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    extension_type = ... # type: google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType.ClosedValueType
-    device = ... # type: google___ads___googleads___v1___enums___extension_setting_device_pb2___ExtensionSettingDeviceEnum.ExtensionSettingDevice.ClosedValueType
+    extension_type = ... # type: google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType
+    device = ... # type: google___ads___googleads___v1___enums___extension_setting_device_pb2___ExtensionSettingDeviceEnum.ExtensionSettingDevice
 
     @property
     def campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -45,10 +50,10 @@ class CampaignExtensionSetting(google___protobuf___message___Message):
     def __init__(self,
         *,
         resource_name : typing___Optional[typing___Text] = None,
-        extension_type : typing___Optional[google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType.ClosedValueType] = None,
+        extension_type : typing___Optional[google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType] = None,
         campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         extension_feed_items : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        device : typing___Optional[google___ads___googleads___v1___enums___extension_setting_device_pb2___ExtensionSettingDeviceEnum.ExtensionSettingDevice.ClosedValueType] = None,
+        device : typing___Optional[google___ads___googleads___v1___enums___extension_setting_device_pb2___ExtensionSettingDeviceEnum.ExtensionSettingDevice] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CampaignExtensionSetting: ...

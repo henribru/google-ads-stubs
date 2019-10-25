@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.enums.quality_score_bucket_pb2 import (
     QualityScoreBucketEnum as google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedScalarFieldContainer as google___protobuf___internal___containers___RepeatedScalarFieldContainer,
 )
@@ -33,10 +37,11 @@ from typing_extensions import (
 
 
 class Metrics(google___protobuf___message___Message):
-    historical_creative_quality_score = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType
-    historical_landing_page_quality_score = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType
-    historical_search_predicted_ctr = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType
-    interaction_event_types = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType.ClosedValueType]
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    historical_creative_quality_score = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+    historical_landing_page_quality_score = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+    historical_search_predicted_ctr = ... # type: google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+    interaction_event_types = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType]
 
     @property
     def absolute_top_impression_percentage(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -420,10 +425,10 @@ class Metrics(google___protobuf___message___Message):
         engagements : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         hotel_average_lead_value_micros : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         hotel_price_difference_percentage : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        historical_creative_quality_score : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType] = None,
-        historical_landing_page_quality_score : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType] = None,
+        historical_creative_quality_score : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
+        historical_landing_page_quality_score : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
         historical_quality_score : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        historical_search_predicted_ctr : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket.ClosedValueType] = None,
+        historical_search_predicted_ctr : typing___Optional[google___ads___googleads___v2___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
         gmail_forwards : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         gmail_saves : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         gmail_secondary_clicks : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
@@ -431,7 +436,7 @@ class Metrics(google___protobuf___message___Message):
         impressions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         interaction_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         interactions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        interaction_event_types : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType.ClosedValueType]] = None,
+        interaction_event_types : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType]] = None,
         invalid_click_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         invalid_clicks : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         message_chats : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,

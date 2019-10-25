@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.mime_type_pb2 import (
     MimeTypeEnum as google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -24,6 +28,7 @@ from typing_extensions import (
 
 
 class YoutubeVideoAsset(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def youtube_video_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -44,6 +49,7 @@ class YoutubeVideoAsset(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"youtube_video_id",b"youtube_video_id"]) -> None: ...
 
 class MediaBundleAsset(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def data(self) -> google___protobuf___wrappers_pb2___BytesValue: ...
@@ -64,7 +70,8 @@ class MediaBundleAsset(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"data",b"data"]) -> None: ...
 
 class ImageAsset(google___protobuf___message___Message):
-    mime_type = ... # type: google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum.MimeType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    mime_type = ... # type: google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum.MimeType
 
     @property
     def data(self) -> google___protobuf___wrappers_pb2___BytesValue: ...
@@ -79,7 +86,7 @@ class ImageAsset(google___protobuf___message___Message):
         *,
         data : typing___Optional[google___protobuf___wrappers_pb2___BytesValue] = None,
         file_size : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        mime_type : typing___Optional[google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum.MimeType.ClosedValueType] = None,
+        mime_type : typing___Optional[google___ads___googleads___v2___enums___mime_type_pb2___MimeTypeEnum.MimeType] = None,
         full_size : typing___Optional[ImageDimension] = None,
         ) -> None: ...
     @classmethod
@@ -94,6 +101,7 @@ class ImageAsset(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"data",b"data",u"file_size",b"file_size",u"full_size",b"full_size",u"mime_type",b"mime_type"]) -> None: ...
 
 class ImageDimension(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def height_pixels(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -122,6 +130,7 @@ class ImageDimension(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"height_pixels",b"height_pixels",u"url",b"url",u"width_pixels",b"width_pixels"]) -> None: ...
 
 class TextAsset(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def text(self) -> google___protobuf___wrappers_pb2___StringValue: ...

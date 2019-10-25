@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.resources.payments_account_pb2 import (
     PaymentsAccount as google___ads___googleads___v2___resources___payments_account_pb2___PaymentsAccount,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -24,6 +28,7 @@ from typing_extensions import (
 
 
 class ListPaymentsAccountsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
 
     def __init__(self,
@@ -40,6 +45,7 @@ class ListPaymentsAccountsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id"]) -> None: ...
 
 class ListPaymentsAccountsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def payments_accounts(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v2___resources___payments_account_pb2___PaymentsAccount]: ...

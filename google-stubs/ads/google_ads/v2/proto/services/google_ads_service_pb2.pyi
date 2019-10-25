@@ -587,6 +587,10 @@ from google.ads.google_ads.v2.proto.services.user_list_service_pb2 import (
     UserListOperation as google___ads___googleads___v2___services___user_list_service_pb2___UserListOperation,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -615,6 +619,7 @@ from typing_extensions import (
 
 
 class SearchGoogleAdsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     query = ... # type: typing___Text
     page_token = ... # type: typing___Text
@@ -641,6 +646,7 @@ class SearchGoogleAdsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"page_size",b"page_size",u"page_token",b"page_token",u"query",b"query",u"return_summary_row",b"return_summary_row",u"validate_only",b"validate_only"]) -> None: ...
 
 class SearchGoogleAdsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     next_page_token = ... # type: typing___Text
     total_results_count = ... # type: int
 
@@ -673,6 +679,7 @@ class SearchGoogleAdsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"field_mask",b"field_mask",u"next_page_token",b"next_page_token",u"results",b"results",u"summary_row",b"summary_row",u"total_results_count",b"total_results_count"]) -> None: ...
 
 class GoogleAdsRow(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def account_budget(self) -> google___ads___googleads___v2___resources___account_budget_pb2___AccountBudget: ...
@@ -1081,6 +1088,7 @@ class GoogleAdsRow(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"account_budget",b"account_budget",u"account_budget_proposal",b"account_budget_proposal",u"ad_group",b"ad_group",u"ad_group_ad",b"ad_group_ad",u"ad_group_ad_asset_view",b"ad_group_ad_asset_view",u"ad_group_ad_label",b"ad_group_ad_label",u"ad_group_audience_view",b"ad_group_audience_view",u"ad_group_bid_modifier",b"ad_group_bid_modifier",u"ad_group_criterion",b"ad_group_criterion",u"ad_group_criterion_label",b"ad_group_criterion_label",u"ad_group_criterion_simulation",b"ad_group_criterion_simulation",u"ad_group_extension_setting",b"ad_group_extension_setting",u"ad_group_feed",b"ad_group_feed",u"ad_group_label",b"ad_group_label",u"ad_group_simulation",b"ad_group_simulation",u"ad_parameter",b"ad_parameter",u"ad_schedule_view",b"ad_schedule_view",u"age_range_view",b"age_range_view",u"asset",b"asset",u"bidding_strategy",b"bidding_strategy",u"billing_setup",b"billing_setup",u"campaign",b"campaign",u"campaign_audience_view",b"campaign_audience_view",u"campaign_bid_modifier",b"campaign_bid_modifier",u"campaign_budget",b"campaign_budget",u"campaign_criterion",b"campaign_criterion",u"campaign_criterion_simulation",b"campaign_criterion_simulation",u"campaign_draft",b"campaign_draft",u"campaign_experiment",b"campaign_experiment",u"campaign_extension_setting",b"campaign_extension_setting",u"campaign_feed",b"campaign_feed",u"campaign_label",b"campaign_label",u"campaign_shared_set",b"campaign_shared_set",u"carrier_constant",b"carrier_constant",u"change_status",b"change_status",u"click_view",b"click_view",u"conversion_action",b"conversion_action",u"custom_interest",b"custom_interest",u"customer",b"customer",u"customer_client",b"customer_client",u"customer_client_link",b"customer_client_link",u"customer_extension_setting",b"customer_extension_setting",u"customer_feed",b"customer_feed",u"customer_label",b"customer_label",u"customer_manager_link",b"customer_manager_link",u"customer_negative_criterion",b"customer_negative_criterion",u"detail_placement_view",b"detail_placement_view",u"display_keyword_view",b"display_keyword_view",u"distance_view",b"distance_view",u"domain_category",b"domain_category",u"dynamic_search_ads_search_term_view",b"dynamic_search_ads_search_term_view",u"expanded_landing_page_view",b"expanded_landing_page_view",u"extension_feed_item",b"extension_feed_item",u"feed",b"feed",u"feed_item",b"feed_item",u"feed_item_target",b"feed_item_target",u"feed_mapping",b"feed_mapping",u"feed_placeholder_view",b"feed_placeholder_view",u"gender_view",b"gender_view",u"geo_target_constant",b"geo_target_constant",u"geographic_view",b"geographic_view",u"group_placement_view",b"group_placement_view",u"hotel_group_view",b"hotel_group_view",u"hotel_performance_view",b"hotel_performance_view",u"keyword_plan",b"keyword_plan",u"keyword_plan_ad_group",b"keyword_plan_ad_group",u"keyword_plan_campaign",b"keyword_plan_campaign",u"keyword_plan_keyword",b"keyword_plan_keyword",u"keyword_plan_negative_keyword",b"keyword_plan_negative_keyword",u"keyword_view",b"keyword_view",u"label",b"label",u"landing_page_view",b"landing_page_view",u"language_constant",b"language_constant",u"location_view",b"location_view",u"managed_placement_view",b"managed_placement_view",u"media_file",b"media_file",u"metrics",b"metrics",u"mobile_app_category_constant",b"mobile_app_category_constant",u"mobile_device_constant",b"mobile_device_constant",u"mutate_job",b"mutate_job",u"operating_system_version_constant",b"operating_system_version_constant",u"paid_organic_search_term_view",b"paid_organic_search_term_view",u"parental_status_view",b"parental_status_view",u"product_bidding_category_constant",b"product_bidding_category_constant",u"product_group_view",b"product_group_view",u"recommendation",b"recommendation",u"remarketing_action",b"remarketing_action",u"search_term_view",b"search_term_view",u"segments",b"segments",u"shared_criterion",b"shared_criterion",u"shared_set",b"shared_set",u"shopping_performance_view",b"shopping_performance_view",u"topic_constant",b"topic_constant",u"topic_view",b"topic_view",u"user_interest",b"user_interest",u"user_list",b"user_list",u"user_location_view",b"user_location_view",u"video",b"video"]) -> None: ...
 
 class MutateGoogleAdsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     partial_failure = ... # type: bool
     validate_only = ... # type: bool
@@ -1105,6 +1113,7 @@ class MutateGoogleAdsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"mutate_operations",b"mutate_operations",u"partial_failure",b"partial_failure",u"validate_only",b"validate_only"]) -> None: ...
 
 class MutateGoogleAdsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
@@ -1129,6 +1138,7 @@ class MutateGoogleAdsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"mutate_operation_responses",b"mutate_operation_responses",u"partial_failure_error",b"partial_failure_error"]) -> None: ...
 
 class MutateOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def ad_group_ad_label_operation(self) -> google___ads___googleads___v2___services___ad_group_ad_label_service_pb2___AdGroupAdLabelOperation: ...
@@ -1302,6 +1312,7 @@ class MutateOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["ad_group_ad_label_operation","ad_group_ad_operation","ad_group_bid_modifier_operation","ad_group_criterion_label_operation","ad_group_criterion_operation","ad_group_extension_setting_operation","ad_group_feed_operation","ad_group_label_operation","ad_group_operation","ad_parameter_operation","asset_operation","bidding_strategy_operation","campaign_bid_modifier_operation","campaign_budget_operation","campaign_criterion_operation","campaign_draft_operation","campaign_experiment_operation","campaign_extension_setting_operation","campaign_feed_operation","campaign_label_operation","campaign_operation","campaign_shared_set_operation","conversion_action_operation","customer_extension_setting_operation","customer_feed_operation","customer_label_operation","customer_negative_criterion_operation","customer_operation","extension_feed_item_operation","feed_item_operation","feed_item_target_operation","feed_mapping_operation","feed_operation","label_operation","media_file_operation","remarketing_action_operation","shared_criterion_operation","shared_set_operation","user_list_operation"]: ...
 
 class MutateOperationResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def ad_group_ad_label_result(self) -> google___ads___googleads___v2___services___ad_group_ad_label_service_pb2___MutateAdGroupAdLabelResult: ...

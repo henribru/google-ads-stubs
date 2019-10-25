@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.conversion_adjustment_type_pb2 import 
     ConversionAdjustmentTypeEnum as google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -33,6 +37,7 @@ from typing_extensions import (
 
 
 class UploadConversionAdjustmentsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     partial_failure = ... # type: bool
     validate_only = ... # type: bool
@@ -57,6 +62,7 @@ class UploadConversionAdjustmentsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"conversion_adjustments",b"conversion_adjustments",u"customer_id",b"customer_id",u"partial_failure",b"partial_failure",u"validate_only",b"validate_only"]) -> None: ...
 
 class UploadConversionAdjustmentsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
@@ -81,7 +87,8 @@ class UploadConversionAdjustmentsResponse(google___protobuf___message___Message)
         def ClearField(self, field_name: typing_extensions___Literal[u"partial_failure_error",b"partial_failure_error",u"results",b"results"]) -> None: ...
 
 class ConversionAdjustment(google___protobuf___message___Message):
-    adjustment_type = ... # type: google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum.ConversionAdjustmentType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    adjustment_type = ... # type: google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum.ConversionAdjustmentType
 
     @property
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -102,7 +109,7 @@ class ConversionAdjustment(google___protobuf___message___Message):
         *,
         conversion_action : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         adjustment_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        adjustment_type : typing___Optional[google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum.ConversionAdjustmentType.ClosedValueType] = None,
+        adjustment_type : typing___Optional[google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum.ConversionAdjustmentType] = None,
         restatement_value : typing___Optional[RestatementValue] = None,
         gclid_date_time_pair : typing___Optional[GclidDateTimePair] = None,
         order_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
@@ -120,6 +127,7 @@ class ConversionAdjustment(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"conversion_identifier",b"conversion_identifier"]) -> typing_extensions___Literal["gclid_date_time_pair","order_id"]: ...
 
 class RestatementValue(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def adjusted_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -144,6 +152,7 @@ class RestatementValue(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"adjusted_value",b"adjusted_value",u"currency_code",b"currency_code"]) -> None: ...
 
 class GclidDateTimePair(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def gclid(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -168,7 +177,8 @@ class GclidDateTimePair(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"conversion_date_time",b"conversion_date_time",u"gclid",b"gclid"]) -> None: ...
 
 class ConversionAdjustmentResult(google___protobuf___message___Message):
-    adjustment_type = ... # type: google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum.ConversionAdjustmentType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    adjustment_type = ... # type: google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum.ConversionAdjustmentType
 
     @property
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -186,7 +196,7 @@ class ConversionAdjustmentResult(google___protobuf___message___Message):
         *,
         conversion_action : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         adjustment_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        adjustment_type : typing___Optional[google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum.ConversionAdjustmentType.ClosedValueType] = None,
+        adjustment_type : typing___Optional[google___ads___googleads___v2___enums___conversion_adjustment_type_pb2___ConversionAdjustmentTypeEnum.ConversionAdjustmentType] = None,
         gclid_date_time_pair : typing___Optional[GclidDateTimePair] = None,
         order_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...

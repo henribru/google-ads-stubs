@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.enums.google_ads_field_data_type_pb2 import 
     GoogleAdsFieldDataTypeEnum as google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -33,9 +37,10 @@ from typing_extensions import (
 
 
 class GoogleAdsField(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    category = ... # type: google___ads___googleads___v2___enums___google_ads_field_category_pb2___GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.ClosedValueType
-    data_type = ... # type: google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.ClosedValueType
+    category = ... # type: google___ads___googleads___v2___enums___google_ads_field_category_pb2___GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory
+    data_type = ... # type: google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
 
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -74,7 +79,7 @@ class GoogleAdsField(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        category : typing___Optional[google___ads___googleads___v2___enums___google_ads_field_category_pb2___GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.ClosedValueType] = None,
+        category : typing___Optional[google___ads___googleads___v2___enums___google_ads_field_category_pb2___GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory] = None,
         selectable : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         filterable : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         sortable : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
@@ -83,7 +88,7 @@ class GoogleAdsField(google___protobuf___message___Message):
         metrics : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         segments : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         enum_values : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        data_type : typing___Optional[google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.ClosedValueType] = None,
+        data_type : typing___Optional[google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType] = None,
         type_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         is_repeated : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...

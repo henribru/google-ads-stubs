@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.resources.campaign_draft_pb2 import (
     CampaignDraft as google___ads___googleads___v1___resources___campaign_draft_pb2___CampaignDraft,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -32,6 +36,7 @@ from typing_extensions import (
 
 
 class GetCampaignDraftRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -48,6 +53,7 @@ class GetCampaignDraftRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateCampaignDraftsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     partial_failure = ... # type: bool
     validate_only = ... # type: bool
@@ -72,6 +78,7 @@ class MutateCampaignDraftsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operations",b"operations",u"partial_failure",b"partial_failure",u"validate_only",b"validate_only"]) -> None: ...
 
 class PromoteCampaignDraftRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     campaign_draft = ... # type: typing___Text
 
     def __init__(self,
@@ -88,6 +95,7 @@ class PromoteCampaignDraftRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"campaign_draft",b"campaign_draft"]) -> None: ...
 
 class CampaignDraftOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     remove = ... # type: typing___Text
 
     @property
@@ -119,6 +127,7 @@ class CampaignDraftOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","update","remove"]: ...
 
 class MutateCampaignDraftsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
@@ -143,6 +152,7 @@ class MutateCampaignDraftsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"partial_failure_error",b"partial_failure_error",u"results",b"results"]) -> None: ...
 
 class MutateCampaignDraftResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -159,6 +169,7 @@ class MutateCampaignDraftResult(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class ListCampaignDraftAsyncErrorsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
     page_token = ... # type: typing___Text
     page_size = ... # type: int
@@ -179,6 +190,7 @@ class ListCampaignDraftAsyncErrorsRequest(google___protobuf___message___Message)
         def ClearField(self, field_name: typing_extensions___Literal[u"page_size",b"page_size",u"page_token",b"page_token",u"resource_name",b"resource_name"]) -> None: ...
 
 class ListCampaignDraftAsyncErrorsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     next_page_token = ... # type: typing___Text
 
     @property

@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.common.tag_snippet_pb2 import (
     TagSnippet as google___ads___googleads___v1___common___tag_snippet_pb2___TagSnippet,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -29,6 +33,7 @@ from typing_extensions import (
 
 
 class RemarketingAction(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     @property

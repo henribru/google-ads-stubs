@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.resources.extension_feed_item_pb2 import (
     ExtensionFeedItem as google___ads___googleads___v1___resources___extension_feed_item_pb2___ExtensionFeedItem,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -28,6 +32,7 @@ from typing_extensions import (
 
 
 class GetExtensionFeedItemRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -44,6 +49,7 @@ class GetExtensionFeedItemRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateExtensionFeedItemsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     validate_only = ... # type: bool
 
@@ -66,6 +72,7 @@ class MutateExtensionFeedItemsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operations",b"operations",u"validate_only",b"validate_only"]) -> None: ...
 
 class ExtensionFeedItemOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     remove = ... # type: typing___Text
 
     @property
@@ -97,6 +104,7 @@ class ExtensionFeedItemOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","update","remove"]: ...
 
 class MutateExtensionFeedItemsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def results(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[MutateExtensionFeedItemResult]: ...
@@ -115,6 +123,7 @@ class MutateExtensionFeedItemsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"results",b"results"]) -> None: ...
 
 class MutateExtensionFeedItemResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,

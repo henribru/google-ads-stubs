@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.keyword_plan_competition_level_pb2 imp
     KeywordPlanCompetitionLevelEnum as google___ads___googleads___v1___enums___keyword_plan_competition_level_pb2___KeywordPlanCompetitionLevelEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -22,7 +26,8 @@ from typing_extensions import (
 
 
 class KeywordPlanHistoricalMetrics(google___protobuf___message___Message):
-    competition = ... # type: google___ads___googleads___v1___enums___keyword_plan_competition_level_pb2___KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    competition = ... # type: google___ads___googleads___v1___enums___keyword_plan_competition_level_pb2___KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel
 
     @property
     def avg_monthly_searches(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -30,7 +35,7 @@ class KeywordPlanHistoricalMetrics(google___protobuf___message___Message):
     def __init__(self,
         *,
         avg_monthly_searches : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        competition : typing___Optional[google___ads___googleads___v1___enums___keyword_plan_competition_level_pb2___KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.ClosedValueType] = None,
+        competition : typing___Optional[google___ads___googleads___v1___enums___keyword_plan_competition_level_pb2___KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> KeywordPlanHistoricalMetrics: ...

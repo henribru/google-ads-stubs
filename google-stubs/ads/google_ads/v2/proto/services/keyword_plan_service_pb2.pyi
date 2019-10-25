@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.resources.keyword_plan_pb2 import (
     KeywordPlan as google___ads___googleads___v2___resources___keyword_plan_pb2___KeywordPlan,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -42,6 +46,7 @@ from typing_extensions import (
 
 
 class GetKeywordPlanRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -58,6 +63,7 @@ class GetKeywordPlanRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateKeywordPlansRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     partial_failure = ... # type: bool
     validate_only = ... # type: bool
@@ -82,6 +88,7 @@ class MutateKeywordPlansRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operations",b"operations",u"partial_failure",b"partial_failure",u"validate_only",b"validate_only"]) -> None: ...
 
 class KeywordPlanOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     remove = ... # type: typing___Text
 
     @property
@@ -113,6 +120,7 @@ class KeywordPlanOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","update","remove"]: ...
 
 class MutateKeywordPlansResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
@@ -137,6 +145,7 @@ class MutateKeywordPlansResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"partial_failure_error",b"partial_failure_error",u"results",b"results"]) -> None: ...
 
 class MutateKeywordPlansResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -153,6 +162,7 @@ class MutateKeywordPlansResult(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class GenerateForecastMetricsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     keyword_plan = ... # type: typing___Text
 
     def __init__(self,
@@ -169,6 +179,7 @@ class GenerateForecastMetricsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"keyword_plan",b"keyword_plan"]) -> None: ...
 
 class GenerateForecastMetricsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def campaign_forecasts(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[KeywordPlanCampaignForecast]: ...
@@ -195,6 +206,7 @@ class GenerateForecastMetricsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_forecasts",b"ad_group_forecasts",u"campaign_forecasts",b"campaign_forecasts",u"keyword_forecasts",b"keyword_forecasts"]) -> None: ...
 
 class KeywordPlanCampaignForecast(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def keyword_plan_campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -219,6 +231,7 @@ class KeywordPlanCampaignForecast(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"campaign_forecast",b"campaign_forecast",u"keyword_plan_campaign",b"keyword_plan_campaign"]) -> None: ...
 
 class KeywordPlanAdGroupForecast(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def keyword_plan_ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -243,6 +256,7 @@ class KeywordPlanAdGroupForecast(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_forecast",b"ad_group_forecast",u"keyword_plan_ad_group",b"keyword_plan_ad_group"]) -> None: ...
 
 class KeywordPlanKeywordForecast(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def keyword_plan_ad_group_keyword(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -267,6 +281,7 @@ class KeywordPlanKeywordForecast(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"keyword_forecast",b"keyword_forecast",u"keyword_plan_ad_group_keyword",b"keyword_plan_ad_group_keyword"]) -> None: ...
 
 class ForecastMetrics(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def impressions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -303,6 +318,7 @@ class ForecastMetrics(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"average_cpc",b"average_cpc",u"clicks",b"clicks",u"cost_micros",b"cost_micros",u"ctr",b"ctr",u"impressions",b"impressions"]) -> None: ...
 
 class GenerateHistoricalMetricsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     keyword_plan = ... # type: typing___Text
 
     def __init__(self,
@@ -319,6 +335,7 @@ class GenerateHistoricalMetricsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"keyword_plan",b"keyword_plan"]) -> None: ...
 
 class GenerateHistoricalMetricsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def metrics(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[KeywordPlanKeywordHistoricalMetrics]: ...
@@ -337,6 +354,7 @@ class GenerateHistoricalMetricsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"metrics",b"metrics"]) -> None: ...
 
 class KeywordPlanKeywordHistoricalMetrics(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def search_query(self) -> google___protobuf___wrappers_pb2___StringValue: ...

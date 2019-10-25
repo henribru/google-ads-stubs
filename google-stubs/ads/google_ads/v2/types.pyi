@@ -113,6 +113,7 @@ from google.ads.google_ads.v2.proto.common.extensions_pb2 import AffiliateLocati
 from google.ads.google_ads.v2.proto.common.extensions_pb2 import AppFeedItem as AppFeedItem
 from google.ads.google_ads.v2.proto.common.extensions_pb2 import CallFeedItem as CallFeedItem
 from google.ads.google_ads.v2.proto.common.extensions_pb2 import CalloutFeedItem as CalloutFeedItem
+from google.ads.google_ads.v2.proto.common.extensions_pb2 import HotelCalloutFeedItem as HotelCalloutFeedItem
 from google.ads.google_ads.v2.proto.common.extensions_pb2 import LocationFeedItem as LocationFeedItem
 from google.ads.google_ads.v2.proto.common.extensions_pb2 import PriceFeedItem as PriceFeedItem
 from google.ads.google_ads.v2.proto.common.extensions_pb2 import PriceOffer as PriceOffer
@@ -276,10 +277,12 @@ from google.ads.google_ads.v2.proto.enums.google_ads_field_category_pb2 import G
 from google.ads.google_ads.v2.proto.enums.google_ads_field_data_type_pb2 import GoogleAdsFieldDataTypeEnum as GoogleAdsFieldDataTypeEnum
 from google.ads.google_ads.v2.proto.enums.hotel_date_selection_type_pb2 import HotelDateSelectionTypeEnum as HotelDateSelectionTypeEnum
 from google.ads.google_ads.v2.proto.enums.hotel_placeholder_field_pb2 import HotelPlaceholderFieldEnum as HotelPlaceholderFieldEnum
+from google.ads.google_ads.v2.proto.enums.hotel_price_bucket_pb2 import HotelPriceBucketEnum as HotelPriceBucketEnum
 from google.ads.google_ads.v2.proto.enums.hotel_rate_type_pb2 import HotelRateTypeEnum as HotelRateTypeEnum
 from google.ads.google_ads.v2.proto.enums.income_range_type_pb2 import IncomeRangeTypeEnum as IncomeRangeTypeEnum
 from google.ads.google_ads.v2.proto.enums.interaction_event_type_pb2 import InteractionEventTypeEnum as InteractionEventTypeEnum
 from google.ads.google_ads.v2.proto.enums.interaction_type_pb2 import InteractionTypeEnum as InteractionTypeEnum
+from google.ads.google_ads.v2.proto.enums.invoice_type_pb2 import InvoiceTypeEnum as InvoiceTypeEnum
 from google.ads.google_ads.v2.proto.enums.job_placeholder_field_pb2 import JobPlaceholderFieldEnum as JobPlaceholderFieldEnum
 from google.ads.google_ads.v2.proto.enums.keyword_match_type_pb2 import KeywordMatchTypeEnum as KeywordMatchTypeEnum
 from google.ads.google_ads.v2.proto.enums.keyword_plan_competition_level_pb2 import KeywordPlanCompetitionLevelEnum as KeywordPlanCompetitionLevelEnum
@@ -444,6 +447,7 @@ from google.ads.google_ads.v2.proto.errors.header_error_pb2 import HeaderErrorEn
 from google.ads.google_ads.v2.proto.errors.id_error_pb2 import IdErrorEnum as IdErrorEnum
 from google.ads.google_ads.v2.proto.errors.image_error_pb2 import ImageErrorEnum as ImageErrorEnum
 from google.ads.google_ads.v2.proto.errors.internal_error_pb2 import InternalErrorEnum as InternalErrorEnum
+from google.ads.google_ads.v2.proto.errors.invoice_error_pb2 import InvoiceErrorEnum as InvoiceErrorEnum
 from google.ads.google_ads.v2.proto.errors.keyword_plan_ad_group_error_pb2 import KeywordPlanAdGroupErrorEnum as KeywordPlanAdGroupErrorEnum
 from google.ads.google_ads.v2.proto.errors.keyword_plan_campaign_error_pb2 import KeywordPlanCampaignErrorEnum as KeywordPlanCampaignErrorEnum
 from google.ads.google_ads.v2.proto.errors.keyword_plan_error_pb2 import KeywordPlanErrorEnum as KeywordPlanErrorEnum
@@ -566,6 +570,7 @@ from google.ads.google_ads.v2.proto.resources.google_ads_field_pb2 import Google
 from google.ads.google_ads.v2.proto.resources.group_placement_view_pb2 import GroupPlacementView as GroupPlacementView
 from google.ads.google_ads.v2.proto.resources.hotel_group_view_pb2 import HotelGroupView as HotelGroupView
 from google.ads.google_ads.v2.proto.resources.hotel_performance_view_pb2 import HotelPerformanceView as HotelPerformanceView
+from google.ads.google_ads.v2.proto.resources.invoice_pb2 import Invoice as Invoice
 from google.ads.google_ads.v2.proto.resources.keyword_plan_ad_group_pb2 import KeywordPlanAdGroup as KeywordPlanAdGroup
 from google.ads.google_ads.v2.proto.resources.keyword_plan_campaign_pb2 import KeywordPlanCampaign as KeywordPlanCampaign
 from google.ads.google_ads.v2.proto.resources.keyword_plan_campaign_pb2 import KeywordPlanGeoTarget as KeywordPlanGeoTarget
@@ -890,6 +895,8 @@ from google.ads.google_ads.v2.proto.services.google_ads_service_pb2 import Searc
 from google.ads.google_ads.v2.proto.services.group_placement_view_service_pb2 import GetGroupPlacementViewRequest as GetGroupPlacementViewRequest
 from google.ads.google_ads.v2.proto.services.hotel_group_view_service_pb2 import GetHotelGroupViewRequest as GetHotelGroupViewRequest
 from google.ads.google_ads.v2.proto.services.hotel_performance_view_service_pb2 import GetHotelPerformanceViewRequest as GetHotelPerformanceViewRequest
+from google.ads.google_ads.v2.proto.services.invoice_service_pb2 import ListInvoicesRequest as ListInvoicesRequest
+from google.ads.google_ads.v2.proto.services.invoice_service_pb2 import ListInvoicesResponse as ListInvoicesResponse
 from google.ads.google_ads.v2.proto.services.keyword_plan_ad_group_service_pb2 import GetKeywordPlanAdGroupRequest as GetKeywordPlanAdGroupRequest
 from google.ads.google_ads.v2.proto.services.keyword_plan_ad_group_service_pb2 import KeywordPlanAdGroupOperation as KeywordPlanAdGroupOperation
 from google.ads.google_ads.v2.proto.services.keyword_plan_ad_group_service_pb2 import MutateKeywordPlanAdGroupResult as MutateKeywordPlanAdGroupResult

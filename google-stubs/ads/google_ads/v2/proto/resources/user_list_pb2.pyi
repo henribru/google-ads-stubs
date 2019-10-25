@@ -32,6 +32,10 @@ from google.ads.google_ads.v2.proto.enums.user_list_type_pb2 import (
     UserListTypeEnum as google___ads___googleads___v2___enums___user_list_type_pb2___UserListTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -53,14 +57,15 @@ from typing_extensions import (
 
 
 class UserList(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    membership_status = ... # type: google___ads___googleads___v2___enums___user_list_membership_status_pb2___UserListMembershipStatusEnum.UserListMembershipStatus.ClosedValueType
-    size_range_for_display = ... # type: google___ads___googleads___v2___enums___user_list_size_range_pb2___UserListSizeRangeEnum.UserListSizeRange.ClosedValueType
-    size_range_for_search = ... # type: google___ads___googleads___v2___enums___user_list_size_range_pb2___UserListSizeRangeEnum.UserListSizeRange.ClosedValueType
-    type = ... # type: google___ads___googleads___v2___enums___user_list_type_pb2___UserListTypeEnum.UserListType.ClosedValueType
-    closing_reason = ... # type: google___ads___googleads___v2___enums___user_list_closing_reason_pb2___UserListClosingReasonEnum.UserListClosingReason.ClosedValueType
-    access_reason = ... # type: google___ads___googleads___v2___enums___access_reason_pb2___AccessReasonEnum.AccessReason.ClosedValueType
-    account_user_list_status = ... # type: google___ads___googleads___v2___enums___user_list_access_status_pb2___UserListAccessStatusEnum.UserListAccessStatus.ClosedValueType
+    membership_status = ... # type: google___ads___googleads___v2___enums___user_list_membership_status_pb2___UserListMembershipStatusEnum.UserListMembershipStatus
+    size_range_for_display = ... # type: google___ads___googleads___v2___enums___user_list_size_range_pb2___UserListSizeRangeEnum.UserListSizeRange
+    size_range_for_search = ... # type: google___ads___googleads___v2___enums___user_list_size_range_pb2___UserListSizeRangeEnum.UserListSizeRange
+    type = ... # type: google___ads___googleads___v2___enums___user_list_type_pb2___UserListTypeEnum.UserListType
+    closing_reason = ... # type: google___ads___googleads___v2___enums___user_list_closing_reason_pb2___UserListClosingReasonEnum.UserListClosingReason
+    access_reason = ... # type: google___ads___googleads___v2___enums___access_reason_pb2___AccessReasonEnum.AccessReason
+    account_user_list_status = ... # type: google___ads___googleads___v2___enums___user_list_access_status_pb2___UserListAccessStatusEnum.UserListAccessStatus
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -114,17 +119,17 @@ class UserList(google___protobuf___message___Message):
         read_only : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         description : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        membership_status : typing___Optional[google___ads___googleads___v2___enums___user_list_membership_status_pb2___UserListMembershipStatusEnum.UserListMembershipStatus.ClosedValueType] = None,
+        membership_status : typing___Optional[google___ads___googleads___v2___enums___user_list_membership_status_pb2___UserListMembershipStatusEnum.UserListMembershipStatus] = None,
         integration_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         membership_life_span : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         size_for_display : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        size_range_for_display : typing___Optional[google___ads___googleads___v2___enums___user_list_size_range_pb2___UserListSizeRangeEnum.UserListSizeRange.ClosedValueType] = None,
+        size_range_for_display : typing___Optional[google___ads___googleads___v2___enums___user_list_size_range_pb2___UserListSizeRangeEnum.UserListSizeRange] = None,
         size_for_search : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        size_range_for_search : typing___Optional[google___ads___googleads___v2___enums___user_list_size_range_pb2___UserListSizeRangeEnum.UserListSizeRange.ClosedValueType] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___user_list_type_pb2___UserListTypeEnum.UserListType.ClosedValueType] = None,
-        closing_reason : typing___Optional[google___ads___googleads___v2___enums___user_list_closing_reason_pb2___UserListClosingReasonEnum.UserListClosingReason.ClosedValueType] = None,
-        access_reason : typing___Optional[google___ads___googleads___v2___enums___access_reason_pb2___AccessReasonEnum.AccessReason.ClosedValueType] = None,
-        account_user_list_status : typing___Optional[google___ads___googleads___v2___enums___user_list_access_status_pb2___UserListAccessStatusEnum.UserListAccessStatus.ClosedValueType] = None,
+        size_range_for_search : typing___Optional[google___ads___googleads___v2___enums___user_list_size_range_pb2___UserListSizeRangeEnum.UserListSizeRange] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___user_list_type_pb2___UserListTypeEnum.UserListType] = None,
+        closing_reason : typing___Optional[google___ads___googleads___v2___enums___user_list_closing_reason_pb2___UserListClosingReasonEnum.UserListClosingReason] = None,
+        access_reason : typing___Optional[google___ads___googleads___v2___enums___access_reason_pb2___AccessReasonEnum.AccessReason] = None,
+        account_user_list_status : typing___Optional[google___ads___googleads___v2___enums___user_list_access_status_pb2___UserListAccessStatusEnum.UserListAccessStatus] = None,
         eligible_for_search : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         eligible_for_display : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         crm_based_user_list : typing___Optional[google___ads___googleads___v2___common___user_lists_pb2___CrmBasedUserListInfo] = None,

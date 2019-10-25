@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.placement_type_pb2 import (
     PlacementTypeEnum as google___ads___googleads___v1___enums___placement_type_pb2___PlacementTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -23,8 +27,9 @@ from typing_extensions import (
 
 
 class GroupPlacementView(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    placement_type = ... # type: google___ads___googleads___v1___enums___placement_type_pb2___PlacementTypeEnum.PlacementType.ClosedValueType
+    placement_type = ... # type: google___ads___googleads___v1___enums___placement_type_pb2___PlacementTypeEnum.PlacementType
 
     @property
     def placement(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -41,7 +46,7 @@ class GroupPlacementView(google___protobuf___message___Message):
         placement : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         display_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         target_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        placement_type : typing___Optional[google___ads___googleads___v1___enums___placement_type_pb2___PlacementTypeEnum.PlacementType.ClosedValueType] = None,
+        placement_type : typing___Optional[google___ads___googleads___v1___enums___placement_type_pb2___PlacementTypeEnum.PlacementType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> GroupPlacementView: ...

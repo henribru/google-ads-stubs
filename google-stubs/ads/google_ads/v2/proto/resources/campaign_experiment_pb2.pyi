@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.enums.campaign_experiment_traffic_split_type
     CampaignExperimentTrafficSplitTypeEnum as google___ads___googleads___v2___enums___campaign_experiment_traffic_split_type_pb2___CampaignExperimentTrafficSplitTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -28,9 +32,10 @@ from typing_extensions import (
 
 
 class CampaignExperiment(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    traffic_split_type = ... # type: google___ads___googleads___v2___enums___campaign_experiment_traffic_split_type_pb2___CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType.ClosedValueType
-    status = ... # type: google___ads___googleads___v2___enums___campaign_experiment_status_pb2___CampaignExperimentStatusEnum.CampaignExperimentStatus.ClosedValueType
+    traffic_split_type = ... # type: google___ads___googleads___v2___enums___campaign_experiment_traffic_split_type_pb2___CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType
+    status = ... # type: google___ads___googleads___v2___enums___campaign_experiment_status_pb2___CampaignExperimentStatusEnum.CampaignExperimentStatus
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -67,9 +72,9 @@ class CampaignExperiment(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         description : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         traffic_split_percent : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        traffic_split_type : typing___Optional[google___ads___googleads___v2___enums___campaign_experiment_traffic_split_type_pb2___CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType.ClosedValueType] = None,
+        traffic_split_type : typing___Optional[google___ads___googleads___v2___enums___campaign_experiment_traffic_split_type_pb2___CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType] = None,
         experiment_campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___campaign_experiment_status_pb2___CampaignExperimentStatusEnum.CampaignExperimentStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___campaign_experiment_status_pb2___CampaignExperimentStatusEnum.CampaignExperimentStatus] = None,
         long_running_operation : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         start_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         end_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,

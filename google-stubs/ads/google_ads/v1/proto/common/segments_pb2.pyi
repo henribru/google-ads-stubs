@@ -80,6 +80,10 @@ from google.ads.google_ads.v1.proto.enums.slot_pb2 import (
     SlotEnum as google___ads___googleads___v1___enums___slot_pb2___SlotEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -102,26 +106,27 @@ from typing_extensions import (
 
 
 class Segments(google___protobuf___message___Message):
-    ad_network_type = ... # type: google___ads___googleads___v1___enums___ad_network_type_pb2___AdNetworkTypeEnum.AdNetworkType.ClosedValueType
-    click_type = ... # type: google___ads___googleads___v1___enums___click_type_pb2___ClickTypeEnum.ClickType.ClosedValueType
-    conversion_action_category = ... # type: google___ads___googleads___v1___enums___conversion_action_category_pb2___ConversionActionCategoryEnum.ConversionActionCategory.ClosedValueType
-    conversion_attribution_event_type = ... # type: google___ads___googleads___v1___enums___conversion_attribution_event_type_pb2___ConversionAttributionEventTypeEnum.ConversionAttributionEventType.ClosedValueType
-    conversion_lag_bucket = ... # type: google___ads___googleads___v1___enums___conversion_lag_bucket_pb2___ConversionLagBucketEnum.ConversionLagBucket.ClosedValueType
-    conversion_or_adjustment_lag_bucket = ... # type: google___ads___googleads___v1___enums___conversion_or_adjustment_lag_bucket_pb2___ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket.ClosedValueType
-    day_of_week = ... # type: google___ads___googleads___v1___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek.ClosedValueType
-    device = ... # type: google___ads___googleads___v1___enums___device_pb2___DeviceEnum.Device.ClosedValueType
-    external_conversion_source = ... # type: google___ads___googleads___v1___enums___external_conversion_source_pb2___ExternalConversionSourceEnum.ExternalConversionSource.ClosedValueType
-    hotel_check_in_day_of_week = ... # type: google___ads___googleads___v1___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek.ClosedValueType
-    hotel_date_selection_type = ... # type: google___ads___googleads___v1___enums___hotel_date_selection_type_pb2___HotelDateSelectionTypeEnum.HotelDateSelectionType.ClosedValueType
-    hotel_rate_type = ... # type: google___ads___googleads___v1___enums___hotel_rate_type_pb2___HotelRateTypeEnum.HotelRateType.ClosedValueType
-    month_of_year = ... # type: google___ads___googleads___v1___enums___month_of_year_pb2___MonthOfYearEnum.MonthOfYear.ClosedValueType
-    placeholder_type = ... # type: google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType
-    product_channel = ... # type: google___ads___googleads___v1___enums___product_channel_pb2___ProductChannelEnum.ProductChannel.ClosedValueType
-    product_channel_exclusivity = ... # type: google___ads___googleads___v1___enums___product_channel_exclusivity_pb2___ProductChannelExclusivityEnum.ProductChannelExclusivity.ClosedValueType
-    product_condition = ... # type: google___ads___googleads___v1___enums___product_condition_pb2___ProductConditionEnum.ProductCondition.ClosedValueType
-    search_engine_results_page_type = ... # type: google___ads___googleads___v1___enums___search_engine_results_page_type_pb2___SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.ClosedValueType
-    search_term_match_type = ... # type: google___ads___googleads___v1___enums___search_term_match_type_pb2___SearchTermMatchTypeEnum.SearchTermMatchType.ClosedValueType
-    slot = ... # type: google___ads___googleads___v1___enums___slot_pb2___SlotEnum.Slot.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    ad_network_type = ... # type: google___ads___googleads___v1___enums___ad_network_type_pb2___AdNetworkTypeEnum.AdNetworkType
+    click_type = ... # type: google___ads___googleads___v1___enums___click_type_pb2___ClickTypeEnum.ClickType
+    conversion_action_category = ... # type: google___ads___googleads___v1___enums___conversion_action_category_pb2___ConversionActionCategoryEnum.ConversionActionCategory
+    conversion_attribution_event_type = ... # type: google___ads___googleads___v1___enums___conversion_attribution_event_type_pb2___ConversionAttributionEventTypeEnum.ConversionAttributionEventType
+    conversion_lag_bucket = ... # type: google___ads___googleads___v1___enums___conversion_lag_bucket_pb2___ConversionLagBucketEnum.ConversionLagBucket
+    conversion_or_adjustment_lag_bucket = ... # type: google___ads___googleads___v1___enums___conversion_or_adjustment_lag_bucket_pb2___ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket
+    day_of_week = ... # type: google___ads___googleads___v1___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek
+    device = ... # type: google___ads___googleads___v1___enums___device_pb2___DeviceEnum.Device
+    external_conversion_source = ... # type: google___ads___googleads___v1___enums___external_conversion_source_pb2___ExternalConversionSourceEnum.ExternalConversionSource
+    hotel_check_in_day_of_week = ... # type: google___ads___googleads___v1___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek
+    hotel_date_selection_type = ... # type: google___ads___googleads___v1___enums___hotel_date_selection_type_pb2___HotelDateSelectionTypeEnum.HotelDateSelectionType
+    hotel_rate_type = ... # type: google___ads___googleads___v1___enums___hotel_rate_type_pb2___HotelRateTypeEnum.HotelRateType
+    month_of_year = ... # type: google___ads___googleads___v1___enums___month_of_year_pb2___MonthOfYearEnum.MonthOfYear
+    placeholder_type = ... # type: google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType
+    product_channel = ... # type: google___ads___googleads___v1___enums___product_channel_pb2___ProductChannelEnum.ProductChannel
+    product_channel_exclusivity = ... # type: google___ads___googleads___v1___enums___product_channel_exclusivity_pb2___ProductChannelExclusivityEnum.ProductChannelExclusivity
+    product_condition = ... # type: google___ads___googleads___v1___enums___product_condition_pb2___ProductConditionEnum.ProductCondition
+    search_engine_results_page_type = ... # type: google___ads___googleads___v1___enums___search_engine_results_page_type_pb2___SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType
+    search_term_match_type = ... # type: google___ads___googleads___v1___enums___search_term_match_type_pb2___SearchTermMatchTypeEnum.SearchTermMatchType
+    slot = ... # type: google___ads___googleads___v1___enums___slot_pb2___SlotEnum.Slot
 
     @property
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -290,19 +295,19 @@ class Segments(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        ad_network_type : typing___Optional[google___ads___googleads___v1___enums___ad_network_type_pb2___AdNetworkTypeEnum.AdNetworkType.ClosedValueType] = None,
-        click_type : typing___Optional[google___ads___googleads___v1___enums___click_type_pb2___ClickTypeEnum.ClickType.ClosedValueType] = None,
+        ad_network_type : typing___Optional[google___ads___googleads___v1___enums___ad_network_type_pb2___AdNetworkTypeEnum.AdNetworkType] = None,
+        click_type : typing___Optional[google___ads___googleads___v1___enums___click_type_pb2___ClickTypeEnum.ClickType] = None,
         conversion_action : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        conversion_action_category : typing___Optional[google___ads___googleads___v1___enums___conversion_action_category_pb2___ConversionActionCategoryEnum.ConversionActionCategory.ClosedValueType] = None,
+        conversion_action_category : typing___Optional[google___ads___googleads___v1___enums___conversion_action_category_pb2___ConversionActionCategoryEnum.ConversionActionCategory] = None,
         conversion_action_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         conversion_adjustment : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        conversion_attribution_event_type : typing___Optional[google___ads___googleads___v1___enums___conversion_attribution_event_type_pb2___ConversionAttributionEventTypeEnum.ConversionAttributionEventType.ClosedValueType] = None,
-        conversion_lag_bucket : typing___Optional[google___ads___googleads___v1___enums___conversion_lag_bucket_pb2___ConversionLagBucketEnum.ConversionLagBucket.ClosedValueType] = None,
-        conversion_or_adjustment_lag_bucket : typing___Optional[google___ads___googleads___v1___enums___conversion_or_adjustment_lag_bucket_pb2___ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket.ClosedValueType] = None,
+        conversion_attribution_event_type : typing___Optional[google___ads___googleads___v1___enums___conversion_attribution_event_type_pb2___ConversionAttributionEventTypeEnum.ConversionAttributionEventType] = None,
+        conversion_lag_bucket : typing___Optional[google___ads___googleads___v1___enums___conversion_lag_bucket_pb2___ConversionLagBucketEnum.ConversionLagBucket] = None,
+        conversion_or_adjustment_lag_bucket : typing___Optional[google___ads___googleads___v1___enums___conversion_or_adjustment_lag_bucket_pb2___ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket] = None,
         date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        day_of_week : typing___Optional[google___ads___googleads___v1___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek.ClosedValueType] = None,
-        device : typing___Optional[google___ads___googleads___v1___enums___device_pb2___DeviceEnum.Device.ClosedValueType] = None,
-        external_conversion_source : typing___Optional[google___ads___googleads___v1___enums___external_conversion_source_pb2___ExternalConversionSourceEnum.ExternalConversionSource.ClosedValueType] = None,
+        day_of_week : typing___Optional[google___ads___googleads___v1___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek] = None,
+        device : typing___Optional[google___ads___googleads___v1___enums___device_pb2___DeviceEnum.Device] = None,
+        external_conversion_source : typing___Optional[google___ads___googleads___v1___enums___external_conversion_source_pb2___ExternalConversionSourceEnum.ExternalConversionSource] = None,
         geo_target_airport : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         geo_target_city : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         geo_target_county : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
@@ -316,22 +321,22 @@ class Segments(google___protobuf___message___Message):
         hotel_booking_window_days : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         hotel_center_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         hotel_check_in_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        hotel_check_in_day_of_week : typing___Optional[google___ads___googleads___v1___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek.ClosedValueType] = None,
+        hotel_check_in_day_of_week : typing___Optional[google___ads___googleads___v1___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek] = None,
         hotel_city : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         hotel_class : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
         hotel_country : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        hotel_date_selection_type : typing___Optional[google___ads___googleads___v1___enums___hotel_date_selection_type_pb2___HotelDateSelectionTypeEnum.HotelDateSelectionType.ClosedValueType] = None,
+        hotel_date_selection_type : typing___Optional[google___ads___googleads___v1___enums___hotel_date_selection_type_pb2___HotelDateSelectionTypeEnum.HotelDateSelectionType] = None,
         hotel_length_of_stay : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
         hotel_rate_rule_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        hotel_rate_type : typing___Optional[google___ads___googleads___v1___enums___hotel_rate_type_pb2___HotelRateTypeEnum.HotelRateType.ClosedValueType] = None,
+        hotel_rate_type : typing___Optional[google___ads___googleads___v1___enums___hotel_rate_type_pb2___HotelRateTypeEnum.HotelRateType] = None,
         hotel_state : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         hour : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
         interaction_on_this_extension : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         keyword : typing___Optional[Keyword] = None,
         month : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        month_of_year : typing___Optional[google___ads___googleads___v1___enums___month_of_year_pb2___MonthOfYearEnum.MonthOfYear.ClosedValueType] = None,
+        month_of_year : typing___Optional[google___ads___googleads___v1___enums___month_of_year_pb2___MonthOfYearEnum.MonthOfYear] = None,
         partner_hotel_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        placeholder_type : typing___Optional[google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType] = None,
+        placeholder_type : typing___Optional[google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType] = None,
         product_aggregator_id : typing___Optional[google___protobuf___wrappers_pb2___UInt64Value] = None,
         product_bidding_category_level1 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         product_bidding_category_level2 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
@@ -339,9 +344,9 @@ class Segments(google___protobuf___message___Message):
         product_bidding_category_level4 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         product_bidding_category_level5 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         product_brand : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        product_channel : typing___Optional[google___ads___googleads___v1___enums___product_channel_pb2___ProductChannelEnum.ProductChannel.ClosedValueType] = None,
-        product_channel_exclusivity : typing___Optional[google___ads___googleads___v1___enums___product_channel_exclusivity_pb2___ProductChannelExclusivityEnum.ProductChannelExclusivity.ClosedValueType] = None,
-        product_condition : typing___Optional[google___ads___googleads___v1___enums___product_condition_pb2___ProductConditionEnum.ProductCondition.ClosedValueType] = None,
+        product_channel : typing___Optional[google___ads___googleads___v1___enums___product_channel_pb2___ProductChannelEnum.ProductChannel] = None,
+        product_channel_exclusivity : typing___Optional[google___ads___googleads___v1___enums___product_channel_exclusivity_pb2___ProductChannelExclusivityEnum.ProductChannelExclusivity] = None,
+        product_condition : typing___Optional[google___ads___googleads___v1___enums___product_condition_pb2___ProductConditionEnum.ProductCondition] = None,
         product_country : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         product_custom_attribute0 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         product_custom_attribute1 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
@@ -359,9 +364,9 @@ class Segments(google___protobuf___message___Message):
         product_type_l4 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         product_type_l5 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         quarter : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        search_engine_results_page_type : typing___Optional[google___ads___googleads___v1___enums___search_engine_results_page_type_pb2___SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.ClosedValueType] = None,
-        search_term_match_type : typing___Optional[google___ads___googleads___v1___enums___search_term_match_type_pb2___SearchTermMatchTypeEnum.SearchTermMatchType.ClosedValueType] = None,
-        slot : typing___Optional[google___ads___googleads___v1___enums___slot_pb2___SlotEnum.Slot.ClosedValueType] = None,
+        search_engine_results_page_type : typing___Optional[google___ads___googleads___v1___enums___search_engine_results_page_type_pb2___SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType] = None,
+        search_term_match_type : typing___Optional[google___ads___googleads___v1___enums___search_term_match_type_pb2___SearchTermMatchTypeEnum.SearchTermMatchType] = None,
+        slot : typing___Optional[google___ads___googleads___v1___enums___slot_pb2___SlotEnum.Slot] = None,
         webpage : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         week : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         year : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
@@ -378,6 +383,7 @@ class Segments(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"ad_network_type",b"ad_network_type",u"click_type",b"click_type",u"conversion_action",b"conversion_action",u"conversion_action_category",b"conversion_action_category",u"conversion_action_name",b"conversion_action_name",u"conversion_adjustment",b"conversion_adjustment",u"conversion_attribution_event_type",b"conversion_attribution_event_type",u"conversion_lag_bucket",b"conversion_lag_bucket",u"conversion_or_adjustment_lag_bucket",b"conversion_or_adjustment_lag_bucket",u"date",b"date",u"day_of_week",b"day_of_week",u"device",b"device",u"external_conversion_source",b"external_conversion_source",u"geo_target_airport",b"geo_target_airport",u"geo_target_city",b"geo_target_city",u"geo_target_county",b"geo_target_county",u"geo_target_district",b"geo_target_district",u"geo_target_metro",b"geo_target_metro",u"geo_target_most_specific_location",b"geo_target_most_specific_location",u"geo_target_postal_code",b"geo_target_postal_code",u"geo_target_province",b"geo_target_province",u"geo_target_region",b"geo_target_region",u"geo_target_state",b"geo_target_state",u"hotel_booking_window_days",b"hotel_booking_window_days",u"hotel_center_id",b"hotel_center_id",u"hotel_check_in_date",b"hotel_check_in_date",u"hotel_check_in_day_of_week",b"hotel_check_in_day_of_week",u"hotel_city",b"hotel_city",u"hotel_class",b"hotel_class",u"hotel_country",b"hotel_country",u"hotel_date_selection_type",b"hotel_date_selection_type",u"hotel_length_of_stay",b"hotel_length_of_stay",u"hotel_rate_rule_id",b"hotel_rate_rule_id",u"hotel_rate_type",b"hotel_rate_type",u"hotel_state",b"hotel_state",u"hour",b"hour",u"interaction_on_this_extension",b"interaction_on_this_extension",u"keyword",b"keyword",u"month",b"month",u"month_of_year",b"month_of_year",u"partner_hotel_id",b"partner_hotel_id",u"placeholder_type",b"placeholder_type",u"product_aggregator_id",b"product_aggregator_id",u"product_bidding_category_level1",b"product_bidding_category_level1",u"product_bidding_category_level2",b"product_bidding_category_level2",u"product_bidding_category_level3",b"product_bidding_category_level3",u"product_bidding_category_level4",b"product_bidding_category_level4",u"product_bidding_category_level5",b"product_bidding_category_level5",u"product_brand",b"product_brand",u"product_channel",b"product_channel",u"product_channel_exclusivity",b"product_channel_exclusivity",u"product_condition",b"product_condition",u"product_country",b"product_country",u"product_custom_attribute0",b"product_custom_attribute0",u"product_custom_attribute1",b"product_custom_attribute1",u"product_custom_attribute2",b"product_custom_attribute2",u"product_custom_attribute3",b"product_custom_attribute3",u"product_custom_attribute4",b"product_custom_attribute4",u"product_item_id",b"product_item_id",u"product_language",b"product_language",u"product_merchant_id",b"product_merchant_id",u"product_store_id",b"product_store_id",u"product_title",b"product_title",u"product_type_l1",b"product_type_l1",u"product_type_l2",b"product_type_l2",u"product_type_l3",b"product_type_l3",u"product_type_l4",b"product_type_l4",u"product_type_l5",b"product_type_l5",u"quarter",b"quarter",u"search_engine_results_page_type",b"search_engine_results_page_type",u"search_term_match_type",b"search_term_match_type",u"slot",b"slot",u"webpage",b"webpage",u"week",b"week",u"year",b"year"]) -> None: ...
 
 class Keyword(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def ad_group_criterion(self) -> google___protobuf___wrappers_pb2___StringValue: ...

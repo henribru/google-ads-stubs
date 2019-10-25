@@ -27,6 +27,10 @@ from google.ads.google_ads.v1.proto.enums.mime_type_pb2 import (
     MimeTypeEnum as google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -53,6 +57,7 @@ from typing_extensions import (
 
 
 class TextAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def headline(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -81,6 +86,7 @@ class TextAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"description1",b"description1",u"description2",b"description2",u"headline",b"headline"]) -> None: ...
 
 class ExpandedTextAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def headline_part1(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -125,7 +131,8 @@ class ExpandedTextAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"description",b"description",u"description2",b"description2",u"headline_part1",b"headline_part1",u"headline_part2",b"headline_part2",u"headline_part3",b"headline_part3",u"path1",b"path1",u"path2",b"path2"]) -> None: ...
 
 class CallOnlyAdInfo(google___protobuf___message___Message):
-    conversion_reporting_state = ... # type: google___ads___googleads___v1___enums___call_conversion_reporting_state_pb2___CallConversionReportingStateEnum.CallConversionReportingState.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    conversion_reporting_state = ... # type: google___ads___googleads___v1___enums___call_conversion_reporting_state_pb2___CallConversionReportingStateEnum.CallConversionReportingState
 
     @property
     def country_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -173,7 +180,7 @@ class CallOnlyAdInfo(google___protobuf___message___Message):
         disable_call_conversion : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         phone_number_verification_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         conversion_action : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        conversion_reporting_state : typing___Optional[google___ads___googleads___v1___enums___call_conversion_reporting_state_pb2___CallConversionReportingStateEnum.CallConversionReportingState.ClosedValueType] = None,
+        conversion_reporting_state : typing___Optional[google___ads___googleads___v1___enums___call_conversion_reporting_state_pb2___CallConversionReportingStateEnum.CallConversionReportingState] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CallOnlyAdInfo: ...
@@ -187,6 +194,7 @@ class CallOnlyAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"business_name",b"business_name",u"call_tracked",b"call_tracked",u"conversion_action",b"conversion_action",u"conversion_reporting_state",b"conversion_reporting_state",u"country_code",b"country_code",u"description1",b"description1",u"description2",b"description2",u"disable_call_conversion",b"disable_call_conversion",u"headline1",b"headline1",u"headline2",b"headline2",u"phone_number",b"phone_number",u"phone_number_verification_url",b"phone_number_verification_url"]) -> None: ...
 
 class ExpandedDynamicSearchAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def description(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -207,6 +215,7 @@ class ExpandedDynamicSearchAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"description",b"description"]) -> None: ...
 
 class HotelAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -216,6 +225,7 @@ class HotelAdInfo(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class ShoppingSmartAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -225,6 +235,7 @@ class ShoppingSmartAdInfo(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class ShoppingProductAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -234,6 +245,7 @@ class ShoppingProductAdInfo(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class ShoppingComparisonListingAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def headline(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -254,6 +266,7 @@ class ShoppingComparisonListingAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"headline",b"headline"]) -> None: ...
 
 class GmailAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def teaser(self) -> GmailTeaser: ...
@@ -302,6 +315,7 @@ class GmailAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"header_image",b"header_image",u"marketing_image",b"marketing_image",u"marketing_image_description",b"marketing_image_description",u"marketing_image_display_call_to_action",b"marketing_image_display_call_to_action",u"marketing_image_headline",b"marketing_image_headline",u"product_images",b"product_images",u"product_videos",b"product_videos",u"teaser",b"teaser"]) -> None: ...
 
 class GmailTeaser(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def headline(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -334,6 +348,7 @@ class GmailTeaser(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"business_name",b"business_name",u"description",b"description",u"headline",b"headline",u"logo_image",b"logo_image"]) -> None: ...
 
 class DisplayCallToAction(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def text(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -362,6 +377,7 @@ class DisplayCallToAction(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"text",b"text",u"text_color",b"text_color",u"url_collection_id",b"url_collection_id"]) -> None: ...
 
 class ProductImage(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def product_image(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -390,6 +406,7 @@ class ProductImage(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"description",b"description",u"display_call_to_action",b"display_call_to_action",u"product_image",b"product_image"]) -> None: ...
 
 class ProductVideo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def product_video(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -410,7 +427,8 @@ class ProductVideo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"product_video",b"product_video"]) -> None: ...
 
 class ImageAdInfo(google___protobuf___message___Message):
-    mime_type = ... # type: google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum.MimeType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    mime_type = ... # type: google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum.MimeType
 
     @property
     def pixel_width(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -450,7 +468,7 @@ class ImageAdInfo(google___protobuf___message___Message):
         preview_pixel_width : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         preview_pixel_height : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         preview_image_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        mime_type : typing___Optional[google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum.MimeType.ClosedValueType] = None,
+        mime_type : typing___Optional[google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum.MimeType] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         media_file : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         data : typing___Optional[google___protobuf___wrappers_pb2___BytesValue] = None,
@@ -469,6 +487,7 @@ class ImageAdInfo(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"image",b"image"]) -> typing_extensions___Literal["media_file","data","ad_id_to_copy_image_from"]: ...
 
 class VideoBumperInStreamAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -478,6 +497,7 @@ class VideoBumperInStreamAdInfo(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class VideoNonSkippableInStreamAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -487,6 +507,7 @@ class VideoNonSkippableInStreamAdInfo(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class VideoTrueViewInStreamAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def action_button_label(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -515,6 +536,7 @@ class VideoTrueViewInStreamAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"action_button_label",b"action_button_label",u"action_headline",b"action_headline",u"companion_banner",b"companion_banner"]) -> None: ...
 
 class VideoOutstreamAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def headline(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -539,6 +561,7 @@ class VideoOutstreamAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"description",b"description",u"headline",b"headline"]) -> None: ...
 
 class VideoAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def media_file(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -576,6 +599,7 @@ class VideoAdInfo(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"format",b"format"]) -> typing_extensions___Literal["in_stream","bumper","out_stream","non_skippable"]: ...
 
 class ResponsiveSearchAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def headlines(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset]: ...
@@ -608,7 +632,8 @@ class ResponsiveSearchAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"descriptions",b"descriptions",u"headlines",b"headlines",u"path1",b"path1",u"path2",b"path2"]) -> None: ...
 
 class LegacyResponsiveDisplayAdInfo(google___protobuf___message___Message):
-    format_setting = ... # type: google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    format_setting = ... # type: google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting
 
     @property
     def short_headline(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -666,7 +691,7 @@ class LegacyResponsiveDisplayAdInfo(google___protobuf___message___Message):
         square_logo_image : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         marketing_image : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         square_marketing_image : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        format_setting : typing___Optional[google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting.ClosedValueType] = None,
+        format_setting : typing___Optional[google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting] = None,
         price_prefix : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         promo_text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
@@ -682,6 +707,7 @@ class LegacyResponsiveDisplayAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"accent_color",b"accent_color",u"allow_flexible_color",b"allow_flexible_color",u"business_name",b"business_name",u"call_to_action_text",b"call_to_action_text",u"description",b"description",u"format_setting",b"format_setting",u"logo_image",b"logo_image",u"long_headline",b"long_headline",u"main_color",b"main_color",u"marketing_image",b"marketing_image",u"price_prefix",b"price_prefix",u"promo_text",b"promo_text",u"short_headline",b"short_headline",u"square_logo_image",b"square_logo_image",u"square_marketing_image",b"square_marketing_image"]) -> None: ...
 
 class AppAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def mandatory_ad_text(self) -> google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset: ...
@@ -722,6 +748,7 @@ class AppAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"descriptions",b"descriptions",u"headlines",b"headlines",u"html5_media_bundles",b"html5_media_bundles",u"images",b"images",u"mandatory_ad_text",b"mandatory_ad_text",u"youtube_videos",b"youtube_videos"]) -> None: ...
 
 class AppEngagementAdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def headlines(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset]: ...
@@ -752,7 +779,8 @@ class AppEngagementAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"descriptions",b"descriptions",u"headlines",b"headlines",u"images",b"images",u"videos",b"videos"]) -> None: ...
 
 class LegacyAppInstallAdInfo(google___protobuf___message___Message):
-    app_store = ... # type: google___ads___googleads___v1___enums___legacy_app_install_ad_app_store_pb2___LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    app_store = ... # type: google___ads___googleads___v1___enums___legacy_app_install_ad_app_store_pb2___LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore
 
     @property
     def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -769,7 +797,7 @@ class LegacyAppInstallAdInfo(google___protobuf___message___Message):
     def __init__(self,
         *,
         app_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        app_store : typing___Optional[google___ads___googleads___v1___enums___legacy_app_install_ad_app_store_pb2___LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore.ClosedValueType] = None,
+        app_store : typing___Optional[google___ads___googleads___v1___enums___legacy_app_install_ad_app_store_pb2___LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore] = None,
         headline : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         description1 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         description2 : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
@@ -786,7 +814,8 @@ class LegacyAppInstallAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"app_id",b"app_id",u"app_store",b"app_store",u"description1",b"description1",u"description2",b"description2",u"headline",b"headline"]) -> None: ...
 
 class ResponsiveDisplayAdInfo(google___protobuf___message___Message):
-    format_setting = ... # type: google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    format_setting = ... # type: google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting
 
     @property
     def marketing_images(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___common___ad_asset_pb2___AdImageAsset]: ...
@@ -850,7 +879,7 @@ class ResponsiveDisplayAdInfo(google___protobuf___message___Message):
         call_to_action_text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         price_prefix : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         promo_text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        format_setting : typing___Optional[google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting.ClosedValueType] = None,
+        format_setting : typing___Optional[google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ResponsiveDisplayAdInfo: ...
@@ -864,14 +893,15 @@ class ResponsiveDisplayAdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"accent_color",b"accent_color",u"allow_flexible_color",b"allow_flexible_color",u"business_name",b"business_name",u"call_to_action_text",b"call_to_action_text",u"descriptions",b"descriptions",u"format_setting",b"format_setting",u"headlines",b"headlines",u"logo_images",b"logo_images",u"long_headline",b"long_headline",u"main_color",b"main_color",u"marketing_images",b"marketing_images",u"price_prefix",b"price_prefix",u"promo_text",b"promo_text",u"square_logo_images",b"square_logo_images",u"square_marketing_images",b"square_marketing_images",u"youtube_videos",b"youtube_videos"]) -> None: ...
 
 class DisplayUploadAdInfo(google___protobuf___message___Message):
-    display_upload_product_type = ... # type: google___ads___googleads___v1___enums___display_upload_product_type_pb2___DisplayUploadProductTypeEnum.DisplayUploadProductType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    display_upload_product_type = ... # type: google___ads___googleads___v1___enums___display_upload_product_type_pb2___DisplayUploadProductTypeEnum.DisplayUploadProductType
 
     @property
     def media_bundle(self) -> google___ads___googleads___v1___common___ad_asset_pb2___AdMediaBundleAsset: ...
 
     def __init__(self,
         *,
-        display_upload_product_type : typing___Optional[google___ads___googleads___v1___enums___display_upload_product_type_pb2___DisplayUploadProductTypeEnum.DisplayUploadProductType.ClosedValueType] = None,
+        display_upload_product_type : typing___Optional[google___ads___googleads___v1___enums___display_upload_product_type_pb2___DisplayUploadProductTypeEnum.DisplayUploadProductType] = None,
         media_bundle : typing___Optional[google___ads___googleads___v1___common___ad_asset_pb2___AdMediaBundleAsset] = None,
         ) -> None: ...
     @classmethod

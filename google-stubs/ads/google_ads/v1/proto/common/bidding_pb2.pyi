@@ -8,6 +8,10 @@ from google.ads.google_ads.v1.proto.enums.target_impression_share_location_pb2 i
     TargetImpressionShareLocationEnum as google___ads___googleads___v1___enums___target_impression_share_location_pb2___TargetImpressionShareLocationEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -30,6 +34,7 @@ from typing_extensions import (
 
 
 class Commission(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def commission_rate_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -50,6 +55,7 @@ class Commission(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"commission_rate_micros",b"commission_rate_micros"]) -> None: ...
 
 class EnhancedCpc(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -59,6 +65,7 @@ class EnhancedCpc(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class ManualCpc(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def enhanced_cpc_enabled(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
@@ -79,6 +86,7 @@ class ManualCpc(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"enhanced_cpc_enabled",b"enhanced_cpc_enabled"]) -> None: ...
 
 class ManualCpm(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -88,6 +96,7 @@ class ManualCpm(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class ManualCpv(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -97,6 +106,7 @@ class ManualCpv(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class MaximizeConversions(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -106,6 +116,7 @@ class MaximizeConversions(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class MaximizeConversionValue(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def target_roas(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -126,7 +137,8 @@ class MaximizeConversionValue(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"target_roas",b"target_roas"]) -> None: ...
 
 class PageOnePromoted(google___protobuf___message___Message):
-    strategy_goal = ... # type: google___ads___googleads___v1___enums___page_one_promoted_strategy_goal_pb2___PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    strategy_goal = ... # type: google___ads___googleads___v1___enums___page_one_promoted_strategy_goal_pb2___PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal
 
     @property
     def cpc_bid_ceiling_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -145,7 +157,7 @@ class PageOnePromoted(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        strategy_goal : typing___Optional[google___ads___googleads___v1___enums___page_one_promoted_strategy_goal_pb2___PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal.ClosedValueType] = None,
+        strategy_goal : typing___Optional[google___ads___googleads___v1___enums___page_one_promoted_strategy_goal_pb2___PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal] = None,
         cpc_bid_ceiling_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         bid_modifier : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         only_raise_cpc_bids : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
@@ -164,6 +176,7 @@ class PageOnePromoted(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"bid_modifier",b"bid_modifier",u"cpc_bid_ceiling_micros",b"cpc_bid_ceiling_micros",u"only_raise_cpc_bids",b"only_raise_cpc_bids",u"raise_cpc_bid_when_budget_constrained",b"raise_cpc_bid_when_budget_constrained",u"raise_cpc_bid_when_quality_score_is_low",b"raise_cpc_bid_when_quality_score_is_low",u"strategy_goal",b"strategy_goal"]) -> None: ...
 
 class TargetCpa(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def target_cpa_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -192,6 +205,7 @@ class TargetCpa(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_ceiling_micros",b"cpc_bid_ceiling_micros",u"cpc_bid_floor_micros",b"cpc_bid_floor_micros",u"target_cpa_micros",b"target_cpa_micros"]) -> None: ...
 
 class TargetCpm(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -201,7 +215,8 @@ class TargetCpm(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class TargetImpressionShare(google___protobuf___message___Message):
-    location = ... # type: google___ads___googleads___v1___enums___target_impression_share_location_pb2___TargetImpressionShareLocationEnum.TargetImpressionShareLocation.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    location = ... # type: google___ads___googleads___v1___enums___target_impression_share_location_pb2___TargetImpressionShareLocationEnum.TargetImpressionShareLocation
 
     @property
     def location_fraction_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -211,7 +226,7 @@ class TargetImpressionShare(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        location : typing___Optional[google___ads___googleads___v1___enums___target_impression_share_location_pb2___TargetImpressionShareLocationEnum.TargetImpressionShareLocation.ClosedValueType] = None,
+        location : typing___Optional[google___ads___googleads___v1___enums___target_impression_share_location_pb2___TargetImpressionShareLocationEnum.TargetImpressionShareLocation] = None,
         location_fraction_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         cpc_bid_ceiling_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         ) -> None: ...
@@ -227,6 +242,7 @@ class TargetImpressionShare(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_ceiling_micros",b"cpc_bid_ceiling_micros",u"location",b"location",u"location_fraction_micros",b"location_fraction_micros"]) -> None: ...
 
 class TargetOutrankShare(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def target_outrank_share_micros(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
@@ -263,6 +279,7 @@ class TargetOutrankShare(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"competitor_domain",b"competitor_domain",u"cpc_bid_ceiling_micros",b"cpc_bid_ceiling_micros",u"only_raise_cpc_bids",b"only_raise_cpc_bids",u"raise_cpc_bid_when_quality_score_is_low",b"raise_cpc_bid_when_quality_score_is_low",u"target_outrank_share_micros",b"target_outrank_share_micros"]) -> None: ...
 
 class TargetRoas(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def target_roas(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -291,6 +308,7 @@ class TargetRoas(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_ceiling_micros",b"cpc_bid_ceiling_micros",u"cpc_bid_floor_micros",b"cpc_bid_floor_micros",u"target_roas",b"target_roas"]) -> None: ...
 
 class TargetSpend(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def target_spend_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -315,6 +333,7 @@ class TargetSpend(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_ceiling_micros",b"cpc_bid_ceiling_micros",u"target_spend_micros",b"target_spend_micros"]) -> None: ...
 
 class PercentCpc(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def cpc_bid_ceiling_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...

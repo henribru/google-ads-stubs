@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.enums.change_status_resource_type_pb2 import
     ChangeStatusResourceTypeEnum as google___ads___googleads___v2___enums___change_status_resource_type_pb2___ChangeStatusResourceTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -27,9 +31,10 @@ from typing_extensions import (
 
 
 class ChangeStatus(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    resource_type = ... # type: google___ads___googleads___v2___enums___change_status_resource_type_pb2___ChangeStatusResourceTypeEnum.ChangeStatusResourceType.ClosedValueType
-    resource_status = ... # type: google___ads___googleads___v2___enums___change_status_operation_pb2___ChangeStatusOperationEnum.ChangeStatusOperation.ClosedValueType
+    resource_type = ... # type: google___ads___googleads___v2___enums___change_status_resource_type_pb2___ChangeStatusResourceTypeEnum.ChangeStatusResourceType
+    resource_status = ... # type: google___ads___googleads___v2___enums___change_status_operation_pb2___ChangeStatusOperationEnum.ChangeStatusOperation
 
     @property
     def last_change_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -68,10 +73,10 @@ class ChangeStatus(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         last_change_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        resource_type : typing___Optional[google___ads___googleads___v2___enums___change_status_resource_type_pb2___ChangeStatusResourceTypeEnum.ChangeStatusResourceType.ClosedValueType] = None,
+        resource_type : typing___Optional[google___ads___googleads___v2___enums___change_status_resource_type_pb2___ChangeStatusResourceTypeEnum.ChangeStatusResourceType] = None,
         campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        resource_status : typing___Optional[google___ads___googleads___v2___enums___change_status_operation_pb2___ChangeStatusOperationEnum.ChangeStatusOperation.ClosedValueType] = None,
+        resource_status : typing___Optional[google___ads___googleads___v2___enums___change_status_operation_pb2___ChangeStatusOperationEnum.ChangeStatusOperation] = None,
         ad_group_ad : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ad_group_criterion : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         campaign_criterion : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,

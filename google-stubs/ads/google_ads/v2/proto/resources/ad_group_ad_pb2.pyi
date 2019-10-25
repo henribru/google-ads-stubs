@@ -24,6 +24,10 @@ from google.ads.google_ads.v2.proto.resources.ad_pb2 import (
     Ad as google___ads___googleads___v2___resources___ad_pb2___Ad,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -48,9 +52,10 @@ from typing_extensions import (
 
 
 class AdGroupAd(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___ad_group_ad_status_pb2___AdGroupAdStatusEnum.AdGroupAdStatus.ClosedValueType
-    ad_strength = ... # type: google___ads___googleads___v2___enums___ad_strength_pb2___AdStrengthEnum.AdStrength.ClosedValueType
+    status = ... # type: google___ads___googleads___v2___enums___ad_group_ad_status_pb2___AdGroupAdStatusEnum.AdGroupAdStatus
+    ad_strength = ... # type: google___ads___googleads___v2___enums___ad_strength_pb2___AdStrengthEnum.AdStrength
 
     @property
     def ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -64,11 +69,11 @@ class AdGroupAd(google___protobuf___message___Message):
     def __init__(self,
         *,
         resource_name : typing___Optional[typing___Text] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___ad_group_ad_status_pb2___AdGroupAdStatusEnum.AdGroupAdStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___ad_group_ad_status_pb2___AdGroupAdStatusEnum.AdGroupAdStatus] = None,
         ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ad : typing___Optional[google___ads___googleads___v2___resources___ad_pb2___Ad] = None,
         policy_summary : typing___Optional[AdGroupAdPolicySummary] = None,
-        ad_strength : typing___Optional[google___ads___googleads___v2___enums___ad_strength_pb2___AdStrengthEnum.AdStrength.ClosedValueType] = None,
+        ad_strength : typing___Optional[google___ads___googleads___v2___enums___ad_strength_pb2___AdStrengthEnum.AdStrength] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AdGroupAd: ...
@@ -82,8 +87,9 @@ class AdGroupAd(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"ad",b"ad",u"ad_group",b"ad_group",u"ad_strength",b"ad_strength",u"policy_summary",b"policy_summary",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
 
 class AdGroupAdPolicySummary(google___protobuf___message___Message):
-    review_status = ... # type: google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus.ClosedValueType
-    approval_status = ... # type: google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    review_status = ... # type: google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status = ... # type: google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus
 
     @property
     def policy_topic_entries(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry]: ...
@@ -91,8 +97,8 @@ class AdGroupAdPolicySummary(google___protobuf___message___Message):
     def __init__(self,
         *,
         policy_topic_entries : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry]] = None,
-        review_status : typing___Optional[google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus.ClosedValueType] = None,
-        approval_status : typing___Optional[google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus.ClosedValueType] = None,
+        review_status : typing___Optional[google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus] = None,
+        approval_status : typing___Optional[google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AdGroupAdPolicySummary: ...

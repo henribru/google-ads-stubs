@@ -96,6 +96,10 @@ from google.ads.google_ads.v1.proto.enums.travel_placeholder_field_pb2 import (
     TravelPlaceholderFieldEnum as google___ads___googleads___v1___enums___travel_placeholder_field_pb2___TravelPlaceholderFieldEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -121,10 +125,11 @@ from typing_extensions import (
 
 
 class FeedMapping(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___feed_mapping_status_pb2___FeedMappingStatusEnum.FeedMappingStatus.ClosedValueType
-    placeholder_type = ... # type: google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType
-    criterion_type = ... # type: google___ads___googleads___v1___enums___feed_mapping_criterion_type_pb2___FeedMappingCriterionTypeEnum.FeedMappingCriterionType.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___feed_mapping_status_pb2___FeedMappingStatusEnum.FeedMappingStatus
+    placeholder_type = ... # type: google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType
+    criterion_type = ... # type: google___ads___googleads___v1___enums___feed_mapping_criterion_type_pb2___FeedMappingCriterionTypeEnum.FeedMappingCriterionType
 
     @property
     def feed(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -137,9 +142,9 @@ class FeedMapping(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         feed : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         attribute_field_mappings : typing___Optional[typing___Iterable[AttributeFieldMapping]] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___feed_mapping_status_pb2___FeedMappingStatusEnum.FeedMappingStatus.ClosedValueType] = None,
-        placeholder_type : typing___Optional[google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType] = None,
-        criterion_type : typing___Optional[google___ads___googleads___v1___enums___feed_mapping_criterion_type_pb2___FeedMappingCriterionTypeEnum.FeedMappingCriterionType.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___feed_mapping_status_pb2___FeedMappingStatusEnum.FeedMappingStatus] = None,
+        placeholder_type : typing___Optional[google___ads___googleads___v1___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType] = None,
+        criterion_type : typing___Optional[google___ads___googleads___v1___enums___feed_mapping_criterion_type_pb2___FeedMappingCriterionTypeEnum.FeedMappingCriterionType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> FeedMapping: ...
@@ -154,27 +159,28 @@ class FeedMapping(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"target",b"target"]) -> typing_extensions___Literal["placeholder_type","criterion_type"]: ...
 
 class AttributeFieldMapping(google___protobuf___message___Message):
-    sitelink_field = ... # type: google___ads___googleads___v1___enums___sitelink_placeholder_field_pb2___SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField.ClosedValueType
-    call_field = ... # type: google___ads___googleads___v1___enums___call_placeholder_field_pb2___CallPlaceholderFieldEnum.CallPlaceholderField.ClosedValueType
-    app_field = ... # type: google___ads___googleads___v1___enums___app_placeholder_field_pb2___AppPlaceholderFieldEnum.AppPlaceholderField.ClosedValueType
-    location_field = ... # type: google___ads___googleads___v1___enums___location_placeholder_field_pb2___LocationPlaceholderFieldEnum.LocationPlaceholderField.ClosedValueType
-    affiliate_location_field = ... # type: google___ads___googleads___v1___enums___affiliate_location_placeholder_field_pb2___AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField.ClosedValueType
-    callout_field = ... # type: google___ads___googleads___v1___enums___callout_placeholder_field_pb2___CalloutPlaceholderFieldEnum.CalloutPlaceholderField.ClosedValueType
-    structured_snippet_field = ... # type: google___ads___googleads___v1___enums___structured_snippet_placeholder_field_pb2___StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField.ClosedValueType
-    message_field = ... # type: google___ads___googleads___v1___enums___message_placeholder_field_pb2___MessagePlaceholderFieldEnum.MessagePlaceholderField.ClosedValueType
-    price_field = ... # type: google___ads___googleads___v1___enums___price_placeholder_field_pb2___PricePlaceholderFieldEnum.PricePlaceholderField.ClosedValueType
-    promotion_field = ... # type: google___ads___googleads___v1___enums___promotion_placeholder_field_pb2___PromotionPlaceholderFieldEnum.PromotionPlaceholderField.ClosedValueType
-    ad_customizer_field = ... # type: google___ads___googleads___v1___enums___ad_customizer_placeholder_field_pb2___AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField.ClosedValueType
-    dsa_page_feed_field = ... # type: google___ads___googleads___v1___enums___dsa_page_feed_criterion_field_pb2___DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField.ClosedValueType
-    location_extension_targeting_field = ... # type: google___ads___googleads___v1___enums___location_extension_targeting_criterion_field_pb2___LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField.ClosedValueType
-    education_field = ... # type: google___ads___googleads___v1___enums___education_placeholder_field_pb2___EducationPlaceholderFieldEnum.EducationPlaceholderField.ClosedValueType
-    flight_field = ... # type: google___ads___googleads___v1___enums___flight_placeholder_field_pb2___FlightPlaceholderFieldEnum.FlightPlaceholderField.ClosedValueType
-    custom_field = ... # type: google___ads___googleads___v1___enums___custom_placeholder_field_pb2___CustomPlaceholderFieldEnum.CustomPlaceholderField.ClosedValueType
-    hotel_field = ... # type: google___ads___googleads___v1___enums___hotel_placeholder_field_pb2___HotelPlaceholderFieldEnum.HotelPlaceholderField.ClosedValueType
-    real_estate_field = ... # type: google___ads___googleads___v1___enums___real_estate_placeholder_field_pb2___RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField.ClosedValueType
-    travel_field = ... # type: google___ads___googleads___v1___enums___travel_placeholder_field_pb2___TravelPlaceholderFieldEnum.TravelPlaceholderField.ClosedValueType
-    local_field = ... # type: google___ads___googleads___v1___enums___local_placeholder_field_pb2___LocalPlaceholderFieldEnum.LocalPlaceholderField.ClosedValueType
-    job_field = ... # type: google___ads___googleads___v1___enums___job_placeholder_field_pb2___JobPlaceholderFieldEnum.JobPlaceholderField.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    sitelink_field = ... # type: google___ads___googleads___v1___enums___sitelink_placeholder_field_pb2___SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField
+    call_field = ... # type: google___ads___googleads___v1___enums___call_placeholder_field_pb2___CallPlaceholderFieldEnum.CallPlaceholderField
+    app_field = ... # type: google___ads___googleads___v1___enums___app_placeholder_field_pb2___AppPlaceholderFieldEnum.AppPlaceholderField
+    location_field = ... # type: google___ads___googleads___v1___enums___location_placeholder_field_pb2___LocationPlaceholderFieldEnum.LocationPlaceholderField
+    affiliate_location_field = ... # type: google___ads___googleads___v1___enums___affiliate_location_placeholder_field_pb2___AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField
+    callout_field = ... # type: google___ads___googleads___v1___enums___callout_placeholder_field_pb2___CalloutPlaceholderFieldEnum.CalloutPlaceholderField
+    structured_snippet_field = ... # type: google___ads___googleads___v1___enums___structured_snippet_placeholder_field_pb2___StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField
+    message_field = ... # type: google___ads___googleads___v1___enums___message_placeholder_field_pb2___MessagePlaceholderFieldEnum.MessagePlaceholderField
+    price_field = ... # type: google___ads___googleads___v1___enums___price_placeholder_field_pb2___PricePlaceholderFieldEnum.PricePlaceholderField
+    promotion_field = ... # type: google___ads___googleads___v1___enums___promotion_placeholder_field_pb2___PromotionPlaceholderFieldEnum.PromotionPlaceholderField
+    ad_customizer_field = ... # type: google___ads___googleads___v1___enums___ad_customizer_placeholder_field_pb2___AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
+    dsa_page_feed_field = ... # type: google___ads___googleads___v1___enums___dsa_page_feed_criterion_field_pb2___DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField
+    location_extension_targeting_field = ... # type: google___ads___googleads___v1___enums___location_extension_targeting_criterion_field_pb2___LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField
+    education_field = ... # type: google___ads___googleads___v1___enums___education_placeholder_field_pb2___EducationPlaceholderFieldEnum.EducationPlaceholderField
+    flight_field = ... # type: google___ads___googleads___v1___enums___flight_placeholder_field_pb2___FlightPlaceholderFieldEnum.FlightPlaceholderField
+    custom_field = ... # type: google___ads___googleads___v1___enums___custom_placeholder_field_pb2___CustomPlaceholderFieldEnum.CustomPlaceholderField
+    hotel_field = ... # type: google___ads___googleads___v1___enums___hotel_placeholder_field_pb2___HotelPlaceholderFieldEnum.HotelPlaceholderField
+    real_estate_field = ... # type: google___ads___googleads___v1___enums___real_estate_placeholder_field_pb2___RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
+    travel_field = ... # type: google___ads___googleads___v1___enums___travel_placeholder_field_pb2___TravelPlaceholderFieldEnum.TravelPlaceholderField
+    local_field = ... # type: google___ads___googleads___v1___enums___local_placeholder_field_pb2___LocalPlaceholderFieldEnum.LocalPlaceholderField
+    job_field = ... # type: google___ads___googleads___v1___enums___job_placeholder_field_pb2___JobPlaceholderFieldEnum.JobPlaceholderField
 
     @property
     def feed_attribute_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -186,27 +192,27 @@ class AttributeFieldMapping(google___protobuf___message___Message):
         *,
         feed_attribute_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         field_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        sitelink_field : typing___Optional[google___ads___googleads___v1___enums___sitelink_placeholder_field_pb2___SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField.ClosedValueType] = None,
-        call_field : typing___Optional[google___ads___googleads___v1___enums___call_placeholder_field_pb2___CallPlaceholderFieldEnum.CallPlaceholderField.ClosedValueType] = None,
-        app_field : typing___Optional[google___ads___googleads___v1___enums___app_placeholder_field_pb2___AppPlaceholderFieldEnum.AppPlaceholderField.ClosedValueType] = None,
-        location_field : typing___Optional[google___ads___googleads___v1___enums___location_placeholder_field_pb2___LocationPlaceholderFieldEnum.LocationPlaceholderField.ClosedValueType] = None,
-        affiliate_location_field : typing___Optional[google___ads___googleads___v1___enums___affiliate_location_placeholder_field_pb2___AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField.ClosedValueType] = None,
-        callout_field : typing___Optional[google___ads___googleads___v1___enums___callout_placeholder_field_pb2___CalloutPlaceholderFieldEnum.CalloutPlaceholderField.ClosedValueType] = None,
-        structured_snippet_field : typing___Optional[google___ads___googleads___v1___enums___structured_snippet_placeholder_field_pb2___StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField.ClosedValueType] = None,
-        message_field : typing___Optional[google___ads___googleads___v1___enums___message_placeholder_field_pb2___MessagePlaceholderFieldEnum.MessagePlaceholderField.ClosedValueType] = None,
-        price_field : typing___Optional[google___ads___googleads___v1___enums___price_placeholder_field_pb2___PricePlaceholderFieldEnum.PricePlaceholderField.ClosedValueType] = None,
-        promotion_field : typing___Optional[google___ads___googleads___v1___enums___promotion_placeholder_field_pb2___PromotionPlaceholderFieldEnum.PromotionPlaceholderField.ClosedValueType] = None,
-        ad_customizer_field : typing___Optional[google___ads___googleads___v1___enums___ad_customizer_placeholder_field_pb2___AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField.ClosedValueType] = None,
-        dsa_page_feed_field : typing___Optional[google___ads___googleads___v1___enums___dsa_page_feed_criterion_field_pb2___DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField.ClosedValueType] = None,
-        location_extension_targeting_field : typing___Optional[google___ads___googleads___v1___enums___location_extension_targeting_criterion_field_pb2___LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField.ClosedValueType] = None,
-        education_field : typing___Optional[google___ads___googleads___v1___enums___education_placeholder_field_pb2___EducationPlaceholderFieldEnum.EducationPlaceholderField.ClosedValueType] = None,
-        flight_field : typing___Optional[google___ads___googleads___v1___enums___flight_placeholder_field_pb2___FlightPlaceholderFieldEnum.FlightPlaceholderField.ClosedValueType] = None,
-        custom_field : typing___Optional[google___ads___googleads___v1___enums___custom_placeholder_field_pb2___CustomPlaceholderFieldEnum.CustomPlaceholderField.ClosedValueType] = None,
-        hotel_field : typing___Optional[google___ads___googleads___v1___enums___hotel_placeholder_field_pb2___HotelPlaceholderFieldEnum.HotelPlaceholderField.ClosedValueType] = None,
-        real_estate_field : typing___Optional[google___ads___googleads___v1___enums___real_estate_placeholder_field_pb2___RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField.ClosedValueType] = None,
-        travel_field : typing___Optional[google___ads___googleads___v1___enums___travel_placeholder_field_pb2___TravelPlaceholderFieldEnum.TravelPlaceholderField.ClosedValueType] = None,
-        local_field : typing___Optional[google___ads___googleads___v1___enums___local_placeholder_field_pb2___LocalPlaceholderFieldEnum.LocalPlaceholderField.ClosedValueType] = None,
-        job_field : typing___Optional[google___ads___googleads___v1___enums___job_placeholder_field_pb2___JobPlaceholderFieldEnum.JobPlaceholderField.ClosedValueType] = None,
+        sitelink_field : typing___Optional[google___ads___googleads___v1___enums___sitelink_placeholder_field_pb2___SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField] = None,
+        call_field : typing___Optional[google___ads___googleads___v1___enums___call_placeholder_field_pb2___CallPlaceholderFieldEnum.CallPlaceholderField] = None,
+        app_field : typing___Optional[google___ads___googleads___v1___enums___app_placeholder_field_pb2___AppPlaceholderFieldEnum.AppPlaceholderField] = None,
+        location_field : typing___Optional[google___ads___googleads___v1___enums___location_placeholder_field_pb2___LocationPlaceholderFieldEnum.LocationPlaceholderField] = None,
+        affiliate_location_field : typing___Optional[google___ads___googleads___v1___enums___affiliate_location_placeholder_field_pb2___AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField] = None,
+        callout_field : typing___Optional[google___ads___googleads___v1___enums___callout_placeholder_field_pb2___CalloutPlaceholderFieldEnum.CalloutPlaceholderField] = None,
+        structured_snippet_field : typing___Optional[google___ads___googleads___v1___enums___structured_snippet_placeholder_field_pb2___StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField] = None,
+        message_field : typing___Optional[google___ads___googleads___v1___enums___message_placeholder_field_pb2___MessagePlaceholderFieldEnum.MessagePlaceholderField] = None,
+        price_field : typing___Optional[google___ads___googleads___v1___enums___price_placeholder_field_pb2___PricePlaceholderFieldEnum.PricePlaceholderField] = None,
+        promotion_field : typing___Optional[google___ads___googleads___v1___enums___promotion_placeholder_field_pb2___PromotionPlaceholderFieldEnum.PromotionPlaceholderField] = None,
+        ad_customizer_field : typing___Optional[google___ads___googleads___v1___enums___ad_customizer_placeholder_field_pb2___AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField] = None,
+        dsa_page_feed_field : typing___Optional[google___ads___googleads___v1___enums___dsa_page_feed_criterion_field_pb2___DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField] = None,
+        location_extension_targeting_field : typing___Optional[google___ads___googleads___v1___enums___location_extension_targeting_criterion_field_pb2___LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField] = None,
+        education_field : typing___Optional[google___ads___googleads___v1___enums___education_placeholder_field_pb2___EducationPlaceholderFieldEnum.EducationPlaceholderField] = None,
+        flight_field : typing___Optional[google___ads___googleads___v1___enums___flight_placeholder_field_pb2___FlightPlaceholderFieldEnum.FlightPlaceholderField] = None,
+        custom_field : typing___Optional[google___ads___googleads___v1___enums___custom_placeholder_field_pb2___CustomPlaceholderFieldEnum.CustomPlaceholderField] = None,
+        hotel_field : typing___Optional[google___ads___googleads___v1___enums___hotel_placeholder_field_pb2___HotelPlaceholderFieldEnum.HotelPlaceholderField] = None,
+        real_estate_field : typing___Optional[google___ads___googleads___v1___enums___real_estate_placeholder_field_pb2___RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField] = None,
+        travel_field : typing___Optional[google___ads___googleads___v1___enums___travel_placeholder_field_pb2___TravelPlaceholderFieldEnum.TravelPlaceholderField] = None,
+        local_field : typing___Optional[google___ads___googleads___v1___enums___local_placeholder_field_pb2___LocalPlaceholderFieldEnum.LocalPlaceholderField] = None,
+        job_field : typing___Optional[google___ads___googleads___v1___enums___job_placeholder_field_pb2___JobPlaceholderFieldEnum.JobPlaceholderField] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AttributeFieldMapping: ...

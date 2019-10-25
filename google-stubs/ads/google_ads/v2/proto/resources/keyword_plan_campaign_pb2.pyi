@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.keyword_plan_network_pb2 import (
     KeywordPlanNetworkEnum as google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -29,8 +33,9 @@ from typing_extensions import (
 
 
 class KeywordPlanCampaign(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    keyword_plan_network = ... # type: google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork.ClosedValueType
+    keyword_plan_network = ... # type: google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork
 
     @property
     def keyword_plan(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -57,7 +62,7 @@ class KeywordPlanCampaign(google___protobuf___message___Message):
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         language_constants : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        keyword_plan_network : typing___Optional[google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork.ClosedValueType] = None,
+        keyword_plan_network : typing___Optional[google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork] = None,
         cpc_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         geo_targets : typing___Optional[typing___Iterable[KeywordPlanGeoTarget]] = None,
         ) -> None: ...
@@ -73,6 +78,7 @@ class KeywordPlanCampaign(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"geo_targets",b"geo_targets",u"id",b"id",u"keyword_plan",b"keyword_plan",u"keyword_plan_network",b"keyword_plan_network",u"language_constants",b"language_constants",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
 
 class KeywordPlanGeoTarget(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def geo_target_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...

@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.resources.google_ads_field_pb2 import (
     GoogleAdsField as google___ads___googleads___v2___resources___google_ads_field_pb2___GoogleAdsField,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -24,6 +28,7 @@ from typing_extensions import (
 
 
 class GetGoogleAdsFieldRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -40,6 +45,7 @@ class GetGoogleAdsFieldRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class SearchGoogleAdsFieldsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     query = ... # type: typing___Text
     page_token = ... # type: typing___Text
     page_size = ... # type: int
@@ -60,6 +66,7 @@ class SearchGoogleAdsFieldsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"page_size",b"page_size",u"page_token",b"page_token",u"query",b"query"]) -> None: ...
 
 class SearchGoogleAdsFieldsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     next_page_token = ... # type: typing___Text
     total_results_count = ... # type: int
 

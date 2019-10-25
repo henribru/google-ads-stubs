@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.resources.customer_pb2 import (
     Customer as google___ads___googleads___v2___resources___customer_pb2___Customer,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -36,6 +40,7 @@ from typing_extensions import (
 
 
 class GetCustomerRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -52,6 +57,7 @@ class GetCustomerRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateCustomerRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     validate_only = ... # type: bool
 
@@ -76,8 +82,9 @@ class MutateCustomerRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operation",b"operation",u"validate_only",b"validate_only"]) -> None: ...
 
 class CreateCustomerClientRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
-    access_role = ... # type: google___ads___googleads___v2___enums___access_role_pb2___AccessRoleEnum.AccessRole.ClosedValueType
+    access_role = ... # type: google___ads___googleads___v2___enums___access_role_pb2___AccessRoleEnum.AccessRole
 
     @property
     def customer_client(self) -> google___ads___googleads___v2___resources___customer_pb2___Customer: ...
@@ -90,7 +97,7 @@ class CreateCustomerClientRequest(google___protobuf___message___Message):
         customer_id : typing___Optional[typing___Text] = None,
         customer_client : typing___Optional[google___ads___googleads___v2___resources___customer_pb2___Customer] = None,
         email_address : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        access_role : typing___Optional[google___ads___googleads___v2___enums___access_role_pb2___AccessRoleEnum.AccessRole.ClosedValueType] = None,
+        access_role : typing___Optional[google___ads___googleads___v2___enums___access_role_pb2___AccessRoleEnum.AccessRole] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CreateCustomerClientRequest: ...
@@ -104,6 +111,7 @@ class CreateCustomerClientRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"access_role",b"access_role",u"customer_client",b"customer_client",u"customer_id",b"customer_id",u"email_address",b"email_address"]) -> None: ...
 
 class CustomerOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def update(self) -> google___ads___googleads___v2___resources___customer_pb2___Customer: ...
@@ -128,6 +136,7 @@ class CustomerOperation(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"update",b"update",u"update_mask",b"update_mask"]) -> None: ...
 
 class CreateCustomerClientResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -144,6 +153,7 @@ class CreateCustomerClientResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateCustomerResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def result(self) -> MutateCustomerResult: ...
@@ -164,6 +174,7 @@ class MutateCustomerResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"result",b"result"]) -> None: ...
 
 class MutateCustomerResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -180,6 +191,7 @@ class MutateCustomerResult(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class ListAccessibleCustomersRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -189,6 +201,7 @@ class ListAccessibleCustomersRequest(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class ListAccessibleCustomersResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_names = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[typing___Text]
 
     def __init__(self,

@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.mutate_job_status_pb2 import (
     MutateJobStatusEnum as google___ads___googleads___v2___enums___mutate_job_status_pb2___MutateJobStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -25,7 +29,9 @@ from typing_extensions import (
 
 
 class MutateJob(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class MutateJobMetadata(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def creation_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -62,7 +68,7 @@ class MutateJob(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"completion_date_time",b"completion_date_time",u"creation_date_time",b"creation_date_time",u"estimated_completion_ratio",b"estimated_completion_ratio",u"executed_operation_count",b"executed_operation_count",u"operation_count",b"operation_count"]) -> None: ...
 
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___mutate_job_status_pb2___MutateJobStatusEnum.MutateJobStatus.ClosedValueType
+    status = ... # type: google___ads___googleads___v2___enums___mutate_job_status_pb2___MutateJobStatusEnum.MutateJobStatus
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -82,7 +88,7 @@ class MutateJob(google___protobuf___message___Message):
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         next_add_sequence_token : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         metadata : typing___Optional[MutateJob.MutateJobMetadata] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___mutate_job_status_pb2___MutateJobStatusEnum.MutateJobStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___mutate_job_status_pb2___MutateJobStatusEnum.MutateJobStatus] = None,
         long_running_operation : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
     @classmethod

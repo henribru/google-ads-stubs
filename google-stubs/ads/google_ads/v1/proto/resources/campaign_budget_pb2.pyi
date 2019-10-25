@@ -16,6 +16,10 @@ from google.ads.google_ads.v1.proto.enums.budget_type_pb2 import (
     BudgetTypeEnum as google___ads___googleads___v1___enums___budget_type_pb2___BudgetTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -37,11 +41,12 @@ from typing_extensions import (
 
 
 class CampaignBudget(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___budget_status_pb2___BudgetStatusEnum.BudgetStatus.ClosedValueType
-    delivery_method = ... # type: google___ads___googleads___v1___enums___budget_delivery_method_pb2___BudgetDeliveryMethodEnum.BudgetDeliveryMethod.ClosedValueType
-    period = ... # type: google___ads___googleads___v1___enums___budget_period_pb2___BudgetPeriodEnum.BudgetPeriod.ClosedValueType
-    type = ... # type: google___ads___googleads___v1___enums___budget_type_pb2___BudgetTypeEnum.BudgetType.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___budget_status_pb2___BudgetStatusEnum.BudgetStatus
+    delivery_method = ... # type: google___ads___googleads___v1___enums___budget_delivery_method_pb2___BudgetDeliveryMethodEnum.BudgetDeliveryMethod
+    period = ... # type: google___ads___googleads___v1___enums___budget_period_pb2___BudgetPeriodEnum.BudgetPeriod
+    type = ... # type: google___ads___googleads___v1___enums___budget_type_pb2___BudgetTypeEnum.BudgetType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -86,18 +91,18 @@ class CampaignBudget(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         total_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___budget_status_pb2___BudgetStatusEnum.BudgetStatus.ClosedValueType] = None,
-        delivery_method : typing___Optional[google___ads___googleads___v1___enums___budget_delivery_method_pb2___BudgetDeliveryMethodEnum.BudgetDeliveryMethod.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___budget_status_pb2___BudgetStatusEnum.BudgetStatus] = None,
+        delivery_method : typing___Optional[google___ads___googleads___v1___enums___budget_delivery_method_pb2___BudgetDeliveryMethodEnum.BudgetDeliveryMethod] = None,
         explicitly_shared : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         reference_count : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         has_recommended_budget : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         recommended_budget_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        period : typing___Optional[google___ads___googleads___v1___enums___budget_period_pb2___BudgetPeriodEnum.BudgetPeriod.ClosedValueType] = None,
+        period : typing___Optional[google___ads___googleads___v1___enums___budget_period_pb2___BudgetPeriodEnum.BudgetPeriod] = None,
         recommended_budget_estimated_change_weekly_clicks : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         recommended_budget_estimated_change_weekly_cost_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         recommended_budget_estimated_change_weekly_interactions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         recommended_budget_estimated_change_weekly_views : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___budget_type_pb2___BudgetTypeEnum.BudgetType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___budget_type_pb2___BudgetTypeEnum.BudgetType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CampaignBudget: ...

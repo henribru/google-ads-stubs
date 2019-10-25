@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.campaign_draft_status_pb2 import (
     CampaignDraftStatusEnum as google___ads___googleads___v2___enums___campaign_draft_status_pb2___CampaignDraftStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -25,8 +29,9 @@ from typing_extensions import (
 
 
 class CampaignDraft(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___campaign_draft_status_pb2___CampaignDraftStatusEnum.CampaignDraftStatus.ClosedValueType
+    status = ... # type: google___ads___googleads___v2___enums___campaign_draft_status_pb2___CampaignDraftStatusEnum.CampaignDraftStatus
 
     @property
     def draft_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -53,7 +58,7 @@ class CampaignDraft(google___protobuf___message___Message):
         base_campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         draft_campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___campaign_draft_status_pb2___CampaignDraftStatusEnum.CampaignDraftStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___campaign_draft_status_pb2___CampaignDraftStatusEnum.CampaignDraftStatus] = None,
         has_experiment_running : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         long_running_operation : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...

@@ -12,6 +12,10 @@ from google.ads.google_ads.v2.proto.enums.placeholder_type_pb2 import (
     PlaceholderTypeEnum as google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedScalarFieldContainer as google___protobuf___internal___containers___RepeatedScalarFieldContainer,
 )
@@ -36,9 +40,10 @@ from typing_extensions import (
 
 
 class CampaignFeed(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    placeholder_types = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType]
-    status = ... # type: google___ads___googleads___v2___enums___feed_link_status_pb2___FeedLinkStatusEnum.FeedLinkStatus.ClosedValueType
+    placeholder_types = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType]
+    status = ... # type: google___ads___googleads___v2___enums___feed_link_status_pb2___FeedLinkStatusEnum.FeedLinkStatus
 
     @property
     def feed(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -54,9 +59,9 @@ class CampaignFeed(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         feed : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        placeholder_types : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType]] = None,
+        placeholder_types : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType]] = None,
         matching_function : typing___Optional[google___ads___googleads___v2___common___matching_function_pb2___MatchingFunction] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___feed_link_status_pb2___FeedLinkStatusEnum.FeedLinkStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___feed_link_status_pb2___FeedLinkStatusEnum.FeedLinkStatus] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> CampaignFeed: ...

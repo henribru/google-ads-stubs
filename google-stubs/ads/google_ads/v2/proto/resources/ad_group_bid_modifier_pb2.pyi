@@ -13,6 +13,10 @@ from google.ads.google_ads.v2.proto.enums.bid_modifier_source_pb2 import (
     BidModifierSourceEnum as google___ads___googleads___v2___enums___bid_modifier_source_pb2___BidModifierSourceEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -34,8 +38,9 @@ from typing_extensions import (
 
 
 class AdGroupBidModifier(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    bid_modifier_source = ... # type: google___ads___googleads___v2___enums___bid_modifier_source_pb2___BidModifierSourceEnum.BidModifierSource.ClosedValueType
+    bid_modifier_source = ... # type: google___ads___googleads___v2___enums___bid_modifier_source_pb2___BidModifierSourceEnum.BidModifierSource
 
     @property
     def ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -74,7 +79,7 @@ class AdGroupBidModifier(google___protobuf___message___Message):
         criterion_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         bid_modifier : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         base_ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        bid_modifier_source : typing___Optional[google___ads___googleads___v2___enums___bid_modifier_source_pb2___BidModifierSourceEnum.BidModifierSource.ClosedValueType] = None,
+        bid_modifier_source : typing___Optional[google___ads___googleads___v2___enums___bid_modifier_source_pb2___BidModifierSourceEnum.BidModifierSource] = None,
         hotel_date_selection_type : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___HotelDateSelectionTypeInfo] = None,
         hotel_advance_booking_window : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___HotelAdvanceBookingWindowInfo] = None,
         hotel_length_of_stay : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___HotelLengthOfStayInfo] = None,

@@ -5,6 +5,10 @@ from google.ads.google_ads.v2.proto.services.google_ads_service_pb2 import (
     MutateOperationResponse as google___ads___googleads___v2___services___google_ads_service_pb2___MutateOperationResponse,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -29,6 +33,7 @@ from typing_extensions import (
 
 
 class CreateMutateJobRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
 
     def __init__(self,
@@ -45,6 +50,7 @@ class CreateMutateJobRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id"]) -> None: ...
 
 class CreateMutateJobResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -61,6 +67,7 @@ class CreateMutateJobResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class GetMutateJobRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -77,6 +84,7 @@ class GetMutateJobRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class RunMutateJobRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -93,6 +101,7 @@ class RunMutateJobRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class AddMutateJobOperationsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
     sequence_token = ... # type: typing___Text
 
@@ -115,6 +124,7 @@ class AddMutateJobOperationsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"mutate_operations",b"mutate_operations",u"resource_name",b"resource_name",u"sequence_token",b"sequence_token"]) -> None: ...
 
 class AddMutateJobOperationsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     total_operations = ... # type: int
     next_sequence_token = ... # type: typing___Text
 
@@ -133,6 +143,7 @@ class AddMutateJobOperationsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"next_sequence_token",b"next_sequence_token",u"total_operations",b"total_operations"]) -> None: ...
 
 class ListMutateJobResultsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
     page_token = ... # type: typing___Text
     page_size = ... # type: int
@@ -153,6 +164,7 @@ class ListMutateJobResultsRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"page_size",b"page_size",u"page_token",b"page_token",u"resource_name",b"resource_name"]) -> None: ...
 
 class ListMutateJobResultsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     next_page_token = ... # type: typing___Text
 
     @property
@@ -173,6 +185,7 @@ class ListMutateJobResultsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"next_page_token",b"next_page_token",u"results",b"results"]) -> None: ...
 
 class MutateJobResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     operation_index = ... # type: int
 
     @property

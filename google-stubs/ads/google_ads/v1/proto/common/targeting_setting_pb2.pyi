@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.targeting_dimension_pb2 import (
     TargetingDimensionEnum as google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -27,6 +31,7 @@ from typing_extensions import (
 
 
 class TargetingSetting(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def target_restrictions(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[TargetRestriction]: ...
@@ -45,14 +50,15 @@ class TargetingSetting(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"target_restrictions",b"target_restrictions"]) -> None: ...
 
 class TargetRestriction(google___protobuf___message___Message):
-    targeting_dimension = ... # type: google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum.TargetingDimension.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    targeting_dimension = ... # type: google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum.TargetingDimension
 
     @property
     def bid_only(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
 
     def __init__(self,
         *,
-        targeting_dimension : typing___Optional[google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum.TargetingDimension.ClosedValueType] = None,
+        targeting_dimension : typing___Optional[google___ads___googleads___v1___enums___targeting_dimension_pb2___TargetingDimensionEnum.TargetingDimension] = None,
         bid_only : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
     @classmethod

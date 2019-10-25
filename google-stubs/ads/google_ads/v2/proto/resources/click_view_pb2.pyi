@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.common.click_location_pb2 import (
     ClickLocation as google___ads___googleads___v2___common___click_location_pb2___ClickLocation,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -24,6 +28,7 @@ from typing_extensions import (
 
 
 class ClickView(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     @property

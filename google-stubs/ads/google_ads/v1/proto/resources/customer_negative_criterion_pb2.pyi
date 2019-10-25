@@ -13,6 +13,10 @@ from google.ads.google_ads.v1.proto.enums.criterion_type_pb2 import (
     CriterionTypeEnum as google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -32,8 +36,9 @@ from typing_extensions import (
 
 
 class CustomerNegativeCriterion(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType.ClosedValueType
+    type = ... # type: google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -60,7 +65,7 @@ class CustomerNegativeCriterion(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType] = None,
         content_label : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___ContentLabelInfo] = None,
         mobile_application : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___MobileApplicationInfo] = None,
         mobile_app_category : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___MobileAppCategoryInfo] = None,

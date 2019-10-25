@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.resources.account_budget_proposal_pb2 import
     AccountBudgetProposal as google___ads___googleads___v1___resources___account_budget_proposal_pb2___AccountBudgetProposal,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.field_mask_pb2 import (
     FieldMask as google___protobuf___field_mask_pb2___FieldMask,
 )
@@ -23,6 +27,7 @@ from typing_extensions import (
 
 
 class GetAccountBudgetProposalRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -39,6 +44,7 @@ class GetAccountBudgetProposalRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class MutateAccountBudgetProposalRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     customer_id = ... # type: typing___Text
     validate_only = ... # type: bool
 
@@ -63,6 +69,7 @@ class MutateAccountBudgetProposalRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operation",b"operation",u"validate_only",b"validate_only"]) -> None: ...
 
 class AccountBudgetProposalOperation(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     remove = ... # type: typing___Text
 
     @property
@@ -90,6 +97,7 @@ class AccountBudgetProposalOperation(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","remove"]: ...
 
 class MutateAccountBudgetProposalResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def result(self) -> MutateAccountBudgetProposalResult: ...
@@ -110,6 +118,7 @@ class MutateAccountBudgetProposalResponse(google___protobuf___message___Message)
         def ClearField(self, field_name: typing_extensions___Literal[u"result",b"result"]) -> None: ...
 
 class MutateAccountBudgetProposalResult(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,

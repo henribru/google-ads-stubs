@@ -8,6 +8,10 @@ from google.ads.google_ads.v2.proto.enums.shared_set_type_pb2 import (
     SharedSetTypeEnum as google___ads___googleads___v2___enums___shared_set_type_pb2___SharedSetTypeEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -28,9 +32,10 @@ from typing_extensions import (
 
 
 class SharedSet(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v2___enums___shared_set_type_pb2___SharedSetTypeEnum.SharedSetType.ClosedValueType
-    status = ... # type: google___ads___googleads___v2___enums___shared_set_status_pb2___SharedSetStatusEnum.SharedSetStatus.ClosedValueType
+    type = ... # type: google___ads___googleads___v2___enums___shared_set_type_pb2___SharedSetTypeEnum.SharedSetType
+    status = ... # type: google___ads___googleads___v2___enums___shared_set_status_pb2___SharedSetStatusEnum.SharedSetStatus
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -48,9 +53,9 @@ class SharedSet(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___shared_set_type_pb2___SharedSetTypeEnum.SharedSetType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___shared_set_type_pb2___SharedSetTypeEnum.SharedSetType] = None,
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___shared_set_status_pb2___SharedSetStatusEnum.SharedSetStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___shared_set_status_pb2___SharedSetStatusEnum.SharedSetStatus] = None,
         member_count : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         reference_count : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         ) -> None: ...

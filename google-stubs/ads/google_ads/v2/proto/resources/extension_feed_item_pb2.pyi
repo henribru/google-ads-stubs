@@ -10,6 +10,7 @@ from google.ads.google_ads.v2.proto.common.extensions_pb2 import (
     AppFeedItem as google___ads___googleads___v2___common___extensions_pb2___AppFeedItem,
     CallFeedItem as google___ads___googleads___v2___common___extensions_pb2___CallFeedItem,
     CalloutFeedItem as google___ads___googleads___v2___common___extensions_pb2___CalloutFeedItem,
+    HotelCalloutFeedItem as google___ads___googleads___v2___common___extensions_pb2___HotelCalloutFeedItem,
     LocationFeedItem as google___ads___googleads___v2___common___extensions_pb2___LocationFeedItem,
     PriceFeedItem as google___ads___googleads___v2___common___extensions_pb2___PriceFeedItem,
     PromotionFeedItem as google___ads___googleads___v2___common___extensions_pb2___PromotionFeedItem,
@@ -30,6 +31,10 @@ from google.ads.google_ads.v2.proto.enums.feed_item_target_device_pb2 import (
     FeedItemTargetDeviceEnum as google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -39,6 +44,7 @@ from google.protobuf.message import (
 )
 
 from google.protobuf.wrappers_pb2 import (
+    Int64Value as google___protobuf___wrappers_pb2___Int64Value,
     StringValue as google___protobuf___wrappers_pb2___StringValue,
 )
 
@@ -55,10 +61,14 @@ from typing_extensions import (
 
 
 class ExtensionFeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    extension_type = ... # type: google___ads___googleads___v2___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType.ClosedValueType
-    device = ... # type: google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice.ClosedValueType
-    status = ... # type: google___ads___googleads___v2___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus.ClosedValueType
+    extension_type = ... # type: google___ads___googleads___v2___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType
+    device = ... # type: google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice
+    status = ... # type: google___ads___googleads___v2___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus
+
+    @property
+    def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
 
     @property
     def start_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -106,6 +116,9 @@ class ExtensionFeedItem(google___protobuf___message___Message):
     def affiliate_location_feed_item(self) -> google___ads___googleads___v2___common___extensions_pb2___AffiliateLocationFeedItem: ...
 
     @property
+    def hotel_callout_feed_item(self) -> google___ads___googleads___v2___common___extensions_pb2___HotelCalloutFeedItem: ...
+
+    @property
     def targeted_campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
 
     @property
@@ -114,14 +127,15 @@ class ExtensionFeedItem(google___protobuf___message___Message):
     def __init__(self,
         *,
         resource_name : typing___Optional[typing___Text] = None,
-        extension_type : typing___Optional[google___ads___googleads___v2___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType.ClosedValueType] = None,
+        id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
+        extension_type : typing___Optional[google___ads___googleads___v2___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType] = None,
         start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ad_schedules : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo]] = None,
-        device : typing___Optional[google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice.ClosedValueType] = None,
+        device : typing___Optional[google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice] = None,
         targeted_geo_target_constant : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         targeted_keyword : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___KeywordInfo] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus] = None,
         sitelink_feed_item : typing___Optional[google___ads___googleads___v2___common___extensions_pb2___SitelinkFeedItem] = None,
         structured_snippet_feed_item : typing___Optional[google___ads___googleads___v2___common___extensions_pb2___StructuredSnippetFeedItem] = None,
         app_feed_item : typing___Optional[google___ads___googleads___v2___common___extensions_pb2___AppFeedItem] = None,
@@ -132,6 +146,7 @@ class ExtensionFeedItem(google___protobuf___message___Message):
         promotion_feed_item : typing___Optional[google___ads___googleads___v2___common___extensions_pb2___PromotionFeedItem] = None,
         location_feed_item : typing___Optional[google___ads___googleads___v2___common___extensions_pb2___LocationFeedItem] = None,
         affiliate_location_feed_item : typing___Optional[google___ads___googleads___v2___common___extensions_pb2___AffiliateLocationFeedItem] = None,
+        hotel_callout_feed_item : typing___Optional[google___ads___googleads___v2___common___extensions_pb2___HotelCalloutFeedItem] = None,
         targeted_campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         targeted_ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
@@ -140,12 +155,12 @@ class ExtensionFeedItem(google___protobuf___message___Message):
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"affiliate_location_feed_item",u"app_feed_item",u"call_feed_item",u"callout_feed_item",u"end_date_time",u"extension",u"location_feed_item",u"price_feed_item",u"promotion_feed_item",u"serving_resource_targeting",u"sitelink_feed_item",u"start_date_time",u"structured_snippet_feed_item",u"targeted_ad_group",u"targeted_campaign",u"targeted_geo_target_constant",u"targeted_keyword",u"text_message_feed_item"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedules",u"affiliate_location_feed_item",u"app_feed_item",u"call_feed_item",u"callout_feed_item",u"device",u"end_date_time",u"extension",u"extension_type",u"location_feed_item",u"price_feed_item",u"promotion_feed_item",u"resource_name",u"serving_resource_targeting",u"sitelink_feed_item",u"start_date_time",u"status",u"structured_snippet_feed_item",u"targeted_ad_group",u"targeted_campaign",u"targeted_geo_target_constant",u"targeted_keyword",u"text_message_feed_item"]) -> None: ...
+        def HasField(self, field_name: typing_extensions___Literal[u"affiliate_location_feed_item",u"app_feed_item",u"call_feed_item",u"callout_feed_item",u"end_date_time",u"extension",u"hotel_callout_feed_item",u"id",u"location_feed_item",u"price_feed_item",u"promotion_feed_item",u"serving_resource_targeting",u"sitelink_feed_item",u"start_date_time",u"structured_snippet_feed_item",u"targeted_ad_group",u"targeted_campaign",u"targeted_geo_target_constant",u"targeted_keyword",u"text_message_feed_item"]) -> bool: ...
+        def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedules",u"affiliate_location_feed_item",u"app_feed_item",u"call_feed_item",u"callout_feed_item",u"device",u"end_date_time",u"extension",u"extension_type",u"hotel_callout_feed_item",u"id",u"location_feed_item",u"price_feed_item",u"promotion_feed_item",u"resource_name",u"serving_resource_targeting",u"sitelink_feed_item",u"start_date_time",u"status",u"structured_snippet_feed_item",u"targeted_ad_group",u"targeted_campaign",u"targeted_geo_target_constant",u"targeted_keyword",u"text_message_feed_item"]) -> None: ...
     else:
-        def HasField(self, field_name: typing_extensions___Literal[u"affiliate_location_feed_item",b"affiliate_location_feed_item",u"app_feed_item",b"app_feed_item",u"call_feed_item",b"call_feed_item",u"callout_feed_item",b"callout_feed_item",u"end_date_time",b"end_date_time",u"extension",b"extension",u"location_feed_item",b"location_feed_item",u"price_feed_item",b"price_feed_item",u"promotion_feed_item",b"promotion_feed_item",u"serving_resource_targeting",b"serving_resource_targeting",u"sitelink_feed_item",b"sitelink_feed_item",u"start_date_time",b"start_date_time",u"structured_snippet_feed_item",b"structured_snippet_feed_item",u"targeted_ad_group",b"targeted_ad_group",u"targeted_campaign",b"targeted_campaign",u"targeted_geo_target_constant",b"targeted_geo_target_constant",u"targeted_keyword",b"targeted_keyword",u"text_message_feed_item",b"text_message_feed_item"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedules",b"ad_schedules",u"affiliate_location_feed_item",b"affiliate_location_feed_item",u"app_feed_item",b"app_feed_item",u"call_feed_item",b"call_feed_item",u"callout_feed_item",b"callout_feed_item",u"device",b"device",u"end_date_time",b"end_date_time",u"extension",b"extension",u"extension_type",b"extension_type",u"location_feed_item",b"location_feed_item",u"price_feed_item",b"price_feed_item",u"promotion_feed_item",b"promotion_feed_item",u"resource_name",b"resource_name",u"serving_resource_targeting",b"serving_resource_targeting",u"sitelink_feed_item",b"sitelink_feed_item",u"start_date_time",b"start_date_time",u"status",b"status",u"structured_snippet_feed_item",b"structured_snippet_feed_item",u"targeted_ad_group",b"targeted_ad_group",u"targeted_campaign",b"targeted_campaign",u"targeted_geo_target_constant",b"targeted_geo_target_constant",u"targeted_keyword",b"targeted_keyword",u"text_message_feed_item",b"text_message_feed_item"]) -> None: ...
+        def HasField(self, field_name: typing_extensions___Literal[u"affiliate_location_feed_item",b"affiliate_location_feed_item",u"app_feed_item",b"app_feed_item",u"call_feed_item",b"call_feed_item",u"callout_feed_item",b"callout_feed_item",u"end_date_time",b"end_date_time",u"extension",b"extension",u"hotel_callout_feed_item",b"hotel_callout_feed_item",u"id",b"id",u"location_feed_item",b"location_feed_item",u"price_feed_item",b"price_feed_item",u"promotion_feed_item",b"promotion_feed_item",u"serving_resource_targeting",b"serving_resource_targeting",u"sitelink_feed_item",b"sitelink_feed_item",u"start_date_time",b"start_date_time",u"structured_snippet_feed_item",b"structured_snippet_feed_item",u"targeted_ad_group",b"targeted_ad_group",u"targeted_campaign",b"targeted_campaign",u"targeted_geo_target_constant",b"targeted_geo_target_constant",u"targeted_keyword",b"targeted_keyword",u"text_message_feed_item",b"text_message_feed_item"]) -> bool: ...
+        def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedules",b"ad_schedules",u"affiliate_location_feed_item",b"affiliate_location_feed_item",u"app_feed_item",b"app_feed_item",u"call_feed_item",b"call_feed_item",u"callout_feed_item",b"callout_feed_item",u"device",b"device",u"end_date_time",b"end_date_time",u"extension",b"extension",u"extension_type",b"extension_type",u"hotel_callout_feed_item",b"hotel_callout_feed_item",u"id",b"id",u"location_feed_item",b"location_feed_item",u"price_feed_item",b"price_feed_item",u"promotion_feed_item",b"promotion_feed_item",u"resource_name",b"resource_name",u"serving_resource_targeting",b"serving_resource_targeting",u"sitelink_feed_item",b"sitelink_feed_item",u"start_date_time",b"start_date_time",u"status",b"status",u"structured_snippet_feed_item",b"structured_snippet_feed_item",u"targeted_ad_group",b"targeted_ad_group",u"targeted_campaign",b"targeted_campaign",u"targeted_geo_target_constant",b"targeted_geo_target_constant",u"targeted_keyword",b"targeted_keyword",u"text_message_feed_item",b"text_message_feed_item"]) -> None: ...
     @typing___overload
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"extension",b"extension"]) -> typing_extensions___Literal["sitelink_feed_item","structured_snippet_feed_item","app_feed_item","call_feed_item","callout_feed_item","text_message_feed_item","price_feed_item","promotion_feed_item","location_feed_item","affiliate_location_feed_item"]: ...
+    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"extension",b"extension"]) -> typing_extensions___Literal["sitelink_feed_item","structured_snippet_feed_item","app_feed_item","call_feed_item","callout_feed_item","text_message_feed_item","price_feed_item","promotion_feed_item","location_feed_item","affiliate_location_feed_item","hotel_callout_feed_item"]: ...
     @typing___overload
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"serving_resource_targeting",b"serving_resource_targeting"]) -> typing_extensions___Literal["targeted_campaign","targeted_ad_group"]: ...

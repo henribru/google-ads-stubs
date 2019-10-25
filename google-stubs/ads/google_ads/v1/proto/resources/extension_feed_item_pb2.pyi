@@ -29,6 +29,10 @@ from google.ads.google_ads.v1.proto.enums.feed_item_target_device_pb2 import (
     FeedItemTargetDeviceEnum as google___ads___googleads___v1___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -54,10 +58,11 @@ from typing_extensions import (
 
 
 class ExtensionFeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    extension_type = ... # type: google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType.ClosedValueType
-    device = ... # type: google___ads___googleads___v1___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice.ClosedValueType
-    status = ... # type: google___ads___googleads___v1___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus.ClosedValueType
+    extension_type = ... # type: google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType
+    device = ... # type: google___ads___googleads___v1___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice
+    status = ... # type: google___ads___googleads___v1___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus
 
     @property
     def start_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -110,13 +115,13 @@ class ExtensionFeedItem(google___protobuf___message___Message):
     def __init__(self,
         *,
         resource_name : typing___Optional[typing___Text] = None,
-        extension_type : typing___Optional[google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType.ClosedValueType] = None,
+        extension_type : typing___Optional[google___ads___googleads___v1___enums___extension_type_pb2___ExtensionTypeEnum.ExtensionType] = None,
         start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ad_schedules : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___criteria_pb2___AdScheduleInfo]] = None,
-        device : typing___Optional[google___ads___googleads___v1___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice.ClosedValueType] = None,
+        device : typing___Optional[google___ads___googleads___v1___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice] = None,
         targeted_geo_target_constant : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus] = None,
         sitelink_feed_item : typing___Optional[google___ads___googleads___v1___common___extensions_pb2___SitelinkFeedItem] = None,
         structured_snippet_feed_item : typing___Optional[google___ads___googleads___v1___common___extensions_pb2___StructuredSnippetFeedItem] = None,
         app_feed_item : typing___Optional[google___ads___googleads___v1___common___extensions_pb2___AppFeedItem] = None,

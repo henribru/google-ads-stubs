@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.enums.distance_bucket_pb2 import (
     DistanceBucketEnum as google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -23,8 +27,9 @@ from typing_extensions import (
 
 
 class DistanceView(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    distance_bucket = ... # type: google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket.ClosedValueType
+    distance_bucket = ... # type: google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket
 
     @property
     def metric_system(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
@@ -32,7 +37,7 @@ class DistanceView(google___protobuf___message___Message):
     def __init__(self,
         *,
         resource_name : typing___Optional[typing___Text] = None,
-        distance_bucket : typing___Optional[google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket.ClosedValueType] = None,
+        distance_bucket : typing___Optional[google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket] = None,
         metric_system : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
     @classmethod

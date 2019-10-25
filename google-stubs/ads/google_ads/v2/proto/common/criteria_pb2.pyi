@@ -96,6 +96,10 @@ from google.ads.google_ads.v2.proto.enums.webpage_condition_operator_pb2 import 
     WebpageConditionOperatorEnum as google___ads___googleads___v2___enums___webpage_condition_operator_pb2___WebpageConditionOperatorEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -122,7 +126,8 @@ from typing_extensions import (
 
 
 class KeywordInfo(google___protobuf___message___Message):
-    match_type = ... # type: google___ads___googleads___v2___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    match_type = ... # type: google___ads___googleads___v2___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
 
     @property
     def text(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -130,7 +135,7 @@ class KeywordInfo(google___protobuf___message___Message):
     def __init__(self,
         *,
         text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        match_type : typing___Optional[google___ads___googleads___v2___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType.ClosedValueType] = None,
+        match_type : typing___Optional[google___ads___googleads___v2___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> KeywordInfo: ...
@@ -144,6 +149,7 @@ class KeywordInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"match_type",b"match_type",u"text",b"text"]) -> None: ...
 
 class PlacementInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -164,6 +170,7 @@ class PlacementInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"url",b"url"]) -> None: ...
 
 class MobileAppCategoryInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def mobile_app_category_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -184,6 +191,7 @@ class MobileAppCategoryInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"mobile_app_category_constant",b"mobile_app_category_constant"]) -> None: ...
 
 class MobileApplicationInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -208,6 +216,7 @@ class MobileApplicationInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"app_id",b"app_id",u"name",b"name"]) -> None: ...
 
 class LocationInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def geo_target_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -228,11 +237,12 @@ class LocationInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"geo_target_constant",b"geo_target_constant"]) -> None: ...
 
 class DeviceInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___device_pb2___DeviceEnum.Device.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___device_pb2___DeviceEnum.Device
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___device_pb2___DeviceEnum.Device.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___device_pb2___DeviceEnum.Device] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> DeviceInfo: ...
@@ -244,11 +254,12 @@ class DeviceInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class PreferredContentInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___preferred_content_type_pb2___PreferredContentTypeEnum.PreferredContentType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___preferred_content_type_pb2___PreferredContentTypeEnum.PreferredContentType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___preferred_content_type_pb2___PreferredContentTypeEnum.PreferredContentType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___preferred_content_type_pb2___PreferredContentTypeEnum.PreferredContentType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> PreferredContentInfo: ...
@@ -260,7 +271,8 @@ class PreferredContentInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class ListingGroupInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___listing_group_type_pb2___ListingGroupTypeEnum.ListingGroupType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___listing_group_type_pb2___ListingGroupTypeEnum.ListingGroupType
 
     @property
     def case_value(self) -> ListingDimensionInfo: ...
@@ -270,7 +282,7 @@ class ListingGroupInfo(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___listing_group_type_pb2___ListingGroupTypeEnum.ListingGroupType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___listing_group_type_pb2___ListingGroupTypeEnum.ListingGroupType] = None,
         case_value : typing___Optional[ListingDimensionInfo] = None,
         parent_ad_group_criterion : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
@@ -286,6 +298,7 @@ class ListingGroupInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"case_value",b"case_value",u"parent_ad_group_criterion",b"parent_ad_group_criterion",u"type",b"type"]) -> None: ...
 
 class ListingScopeInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def dimensions(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[ListingDimensionInfo]: ...
@@ -304,6 +317,7 @@ class ListingScopeInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"dimensions",b"dimensions"]) -> None: ...
 
 class ListingDimensionInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def listing_brand(self) -> ListingBrandInfo: ...
@@ -377,6 +391,7 @@ class ListingDimensionInfo(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"dimension",b"dimension"]) -> typing_extensions___Literal["listing_brand","hotel_id","hotel_class","hotel_country_region","hotel_state","hotel_city","listing_custom_attribute","product_bidding_category","product_channel","product_channel_exclusivity","product_condition","product_item_id","product_type","unknown_listing_dimension"]: ...
 
 class ListingBrandInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -397,6 +412,7 @@ class ListingBrandInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"value",b"value"]) -> None: ...
 
 class HotelIdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -417,6 +433,7 @@ class HotelIdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"value",b"value"]) -> None: ...
 
 class HotelClassInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -437,6 +454,7 @@ class HotelClassInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"value",b"value"]) -> None: ...
 
 class HotelCountryRegionInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def country_region_criterion(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -457,6 +475,7 @@ class HotelCountryRegionInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"country_region_criterion",b"country_region_criterion"]) -> None: ...
 
 class HotelStateInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def state_criterion(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -477,6 +496,7 @@ class HotelStateInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"state_criterion",b"state_criterion"]) -> None: ...
 
 class HotelCityInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def city_criterion(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -497,7 +517,8 @@ class HotelCityInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"city_criterion",b"city_criterion"]) -> None: ...
 
 class ListingCustomAttributeInfo(google___protobuf___message___Message):
-    index = ... # type: google___ads___googleads___v2___enums___listing_custom_attribute_index_pb2___ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    index = ... # type: google___ads___googleads___v2___enums___listing_custom_attribute_index_pb2___ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -505,7 +526,7 @@ class ListingCustomAttributeInfo(google___protobuf___message___Message):
     def __init__(self,
         *,
         value : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        index : typing___Optional[google___ads___googleads___v2___enums___listing_custom_attribute_index_pb2___ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex.ClosedValueType] = None,
+        index : typing___Optional[google___ads___googleads___v2___enums___listing_custom_attribute_index_pb2___ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ListingCustomAttributeInfo: ...
@@ -519,7 +540,8 @@ class ListingCustomAttributeInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"index",b"index",u"value",b"value"]) -> None: ...
 
 class ProductBiddingCategoryInfo(google___protobuf___message___Message):
-    level = ... # type: google___ads___googleads___v2___enums___product_bidding_category_level_pb2___ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    level = ... # type: google___ads___googleads___v2___enums___product_bidding_category_level_pb2___ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel
 
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -531,7 +553,7 @@ class ProductBiddingCategoryInfo(google___protobuf___message___Message):
         *,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         country_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        level : typing___Optional[google___ads___googleads___v2___enums___product_bidding_category_level_pb2___ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.ClosedValueType] = None,
+        level : typing___Optional[google___ads___googleads___v2___enums___product_bidding_category_level_pb2___ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ProductBiddingCategoryInfo: ...
@@ -545,11 +567,12 @@ class ProductBiddingCategoryInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"level",b"level"]) -> None: ...
 
 class ProductChannelInfo(google___protobuf___message___Message):
-    channel = ... # type: google___ads___googleads___v2___enums___product_channel_pb2___ProductChannelEnum.ProductChannel.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    channel = ... # type: google___ads___googleads___v2___enums___product_channel_pb2___ProductChannelEnum.ProductChannel
 
     def __init__(self,
         *,
-        channel : typing___Optional[google___ads___googleads___v2___enums___product_channel_pb2___ProductChannelEnum.ProductChannel.ClosedValueType] = None,
+        channel : typing___Optional[google___ads___googleads___v2___enums___product_channel_pb2___ProductChannelEnum.ProductChannel] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ProductChannelInfo: ...
@@ -561,11 +584,12 @@ class ProductChannelInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"channel",b"channel"]) -> None: ...
 
 class ProductChannelExclusivityInfo(google___protobuf___message___Message):
-    channel_exclusivity = ... # type: google___ads___googleads___v2___enums___product_channel_exclusivity_pb2___ProductChannelExclusivityEnum.ProductChannelExclusivity.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    channel_exclusivity = ... # type: google___ads___googleads___v2___enums___product_channel_exclusivity_pb2___ProductChannelExclusivityEnum.ProductChannelExclusivity
 
     def __init__(self,
         *,
-        channel_exclusivity : typing___Optional[google___ads___googleads___v2___enums___product_channel_exclusivity_pb2___ProductChannelExclusivityEnum.ProductChannelExclusivity.ClosedValueType] = None,
+        channel_exclusivity : typing___Optional[google___ads___googleads___v2___enums___product_channel_exclusivity_pb2___ProductChannelExclusivityEnum.ProductChannelExclusivity] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ProductChannelExclusivityInfo: ...
@@ -577,11 +601,12 @@ class ProductChannelExclusivityInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"channel_exclusivity",b"channel_exclusivity"]) -> None: ...
 
 class ProductConditionInfo(google___protobuf___message___Message):
-    condition = ... # type: google___ads___googleads___v2___enums___product_condition_pb2___ProductConditionEnum.ProductCondition.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    condition = ... # type: google___ads___googleads___v2___enums___product_condition_pb2___ProductConditionEnum.ProductCondition
 
     def __init__(self,
         *,
-        condition : typing___Optional[google___ads___googleads___v2___enums___product_condition_pb2___ProductConditionEnum.ProductCondition.ClosedValueType] = None,
+        condition : typing___Optional[google___ads___googleads___v2___enums___product_condition_pb2___ProductConditionEnum.ProductCondition] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ProductConditionInfo: ...
@@ -593,6 +618,7 @@ class ProductConditionInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"condition",b"condition"]) -> None: ...
 
 class ProductItemIdInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -613,7 +639,8 @@ class ProductItemIdInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"value",b"value"]) -> None: ...
 
 class ProductTypeInfo(google___protobuf___message___Message):
-    level = ... # type: google___ads___googleads___v2___enums___product_type_level_pb2___ProductTypeLevelEnum.ProductTypeLevel.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    level = ... # type: google___ads___googleads___v2___enums___product_type_level_pb2___ProductTypeLevelEnum.ProductTypeLevel
 
     @property
     def value(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -621,7 +648,7 @@ class ProductTypeInfo(google___protobuf___message___Message):
     def __init__(self,
         *,
         value : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        level : typing___Optional[google___ads___googleads___v2___enums___product_type_level_pb2___ProductTypeLevelEnum.ProductTypeLevel.ClosedValueType] = None,
+        level : typing___Optional[google___ads___googleads___v2___enums___product_type_level_pb2___ProductTypeLevelEnum.ProductTypeLevel] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ProductTypeInfo: ...
@@ -635,6 +662,7 @@ class ProductTypeInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"level",b"level",u"value",b"value"]) -> None: ...
 
 class UnknownListingDimensionInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     def __init__(self,
         ) -> None: ...
@@ -644,11 +672,12 @@ class UnknownListingDimensionInfo(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
 
 class HotelDateSelectionTypeInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___hotel_date_selection_type_pb2___HotelDateSelectionTypeEnum.HotelDateSelectionType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___hotel_date_selection_type_pb2___HotelDateSelectionTypeEnum.HotelDateSelectionType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___hotel_date_selection_type_pb2___HotelDateSelectionTypeEnum.HotelDateSelectionType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___hotel_date_selection_type_pb2___HotelDateSelectionTypeEnum.HotelDateSelectionType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> HotelDateSelectionTypeInfo: ...
@@ -660,6 +689,7 @@ class HotelDateSelectionTypeInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class HotelAdvanceBookingWindowInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def min_days(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -684,6 +714,7 @@ class HotelAdvanceBookingWindowInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"max_days",b"max_days",u"min_days",b"min_days"]) -> None: ...
 
 class HotelLengthOfStayInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def min_nights(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -708,11 +739,12 @@ class HotelLengthOfStayInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"max_nights",b"max_nights",u"min_nights",b"min_nights"]) -> None: ...
 
 class HotelCheckInDayInfo(google___protobuf___message___Message):
-    day_of_week = ... # type: google___ads___googleads___v2___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    day_of_week = ... # type: google___ads___googleads___v2___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek
 
     def __init__(self,
         *,
-        day_of_week : typing___Optional[google___ads___googleads___v2___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek.ClosedValueType] = None,
+        day_of_week : typing___Optional[google___ads___googleads___v2___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> HotelCheckInDayInfo: ...
@@ -724,11 +756,12 @@ class HotelCheckInDayInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"day_of_week",b"day_of_week"]) -> None: ...
 
 class InteractionTypeInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___interaction_type_pb2___InteractionTypeEnum.InteractionType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___interaction_type_pb2___InteractionTypeEnum.InteractionType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___interaction_type_pb2___InteractionTypeEnum.InteractionType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___interaction_type_pb2___InteractionTypeEnum.InteractionType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> InteractionTypeInfo: ...
@@ -740,9 +773,10 @@ class InteractionTypeInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class AdScheduleInfo(google___protobuf___message___Message):
-    start_minute = ... # type: google___ads___googleads___v2___enums___minute_of_hour_pb2___MinuteOfHourEnum.MinuteOfHour.ClosedValueType
-    end_minute = ... # type: google___ads___googleads___v2___enums___minute_of_hour_pb2___MinuteOfHourEnum.MinuteOfHour.ClosedValueType
-    day_of_week = ... # type: google___ads___googleads___v2___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    start_minute = ... # type: google___ads___googleads___v2___enums___minute_of_hour_pb2___MinuteOfHourEnum.MinuteOfHour
+    end_minute = ... # type: google___ads___googleads___v2___enums___minute_of_hour_pb2___MinuteOfHourEnum.MinuteOfHour
+    day_of_week = ... # type: google___ads___googleads___v2___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek
 
     @property
     def start_hour(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
@@ -752,11 +786,11 @@ class AdScheduleInfo(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        start_minute : typing___Optional[google___ads___googleads___v2___enums___minute_of_hour_pb2___MinuteOfHourEnum.MinuteOfHour.ClosedValueType] = None,
-        end_minute : typing___Optional[google___ads___googleads___v2___enums___minute_of_hour_pb2___MinuteOfHourEnum.MinuteOfHour.ClosedValueType] = None,
+        start_minute : typing___Optional[google___ads___googleads___v2___enums___minute_of_hour_pb2___MinuteOfHourEnum.MinuteOfHour] = None,
+        end_minute : typing___Optional[google___ads___googleads___v2___enums___minute_of_hour_pb2___MinuteOfHourEnum.MinuteOfHour] = None,
         start_hour : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
         end_hour : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
-        day_of_week : typing___Optional[google___ads___googleads___v2___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek.ClosedValueType] = None,
+        day_of_week : typing___Optional[google___ads___googleads___v2___enums___day_of_week_pb2___DayOfWeekEnum.DayOfWeek] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AdScheduleInfo: ...
@@ -770,11 +804,12 @@ class AdScheduleInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"day_of_week",b"day_of_week",u"end_hour",b"end_hour",u"end_minute",b"end_minute",u"start_hour",b"start_hour",u"start_minute",b"start_minute"]) -> None: ...
 
 class AgeRangeInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___age_range_type_pb2___AgeRangeTypeEnum.AgeRangeType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___age_range_type_pb2___AgeRangeTypeEnum.AgeRangeType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___age_range_type_pb2___AgeRangeTypeEnum.AgeRangeType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___age_range_type_pb2___AgeRangeTypeEnum.AgeRangeType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AgeRangeInfo: ...
@@ -786,11 +821,12 @@ class AgeRangeInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class GenderInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___gender_type_pb2___GenderTypeEnum.GenderType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___gender_type_pb2___GenderTypeEnum.GenderType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___gender_type_pb2___GenderTypeEnum.GenderType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___gender_type_pb2___GenderTypeEnum.GenderType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> GenderInfo: ...
@@ -802,11 +838,12 @@ class GenderInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class IncomeRangeInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___income_range_type_pb2___IncomeRangeTypeEnum.IncomeRangeType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___income_range_type_pb2___IncomeRangeTypeEnum.IncomeRangeType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___income_range_type_pb2___IncomeRangeTypeEnum.IncomeRangeType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___income_range_type_pb2___IncomeRangeTypeEnum.IncomeRangeType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> IncomeRangeInfo: ...
@@ -818,11 +855,12 @@ class IncomeRangeInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class ParentalStatusInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___parental_status_type_pb2___ParentalStatusTypeEnum.ParentalStatusType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___parental_status_type_pb2___ParentalStatusTypeEnum.ParentalStatusType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___parental_status_type_pb2___ParentalStatusTypeEnum.ParentalStatusType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___parental_status_type_pb2___ParentalStatusTypeEnum.ParentalStatusType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ParentalStatusInfo: ...
@@ -834,6 +872,7 @@ class ParentalStatusInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class YouTubeVideoInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def video_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -854,6 +893,7 @@ class YouTubeVideoInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"video_id",b"video_id"]) -> None: ...
 
 class YouTubeChannelInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def channel_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -874,6 +914,7 @@ class YouTubeChannelInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"channel_id",b"channel_id"]) -> None: ...
 
 class UserListInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def user_list(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -894,7 +935,8 @@ class UserListInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"user_list",b"user_list"]) -> None: ...
 
 class ProximityInfo(google___protobuf___message___Message):
-    radius_units = ... # type: google___ads___googleads___v2___enums___proximity_radius_units_pb2___ProximityRadiusUnitsEnum.ProximityRadiusUnits.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    radius_units = ... # type: google___ads___googleads___v2___enums___proximity_radius_units_pb2___ProximityRadiusUnitsEnum.ProximityRadiusUnits
 
     @property
     def geo_point(self) -> GeoPointInfo: ...
@@ -909,7 +951,7 @@ class ProximityInfo(google___protobuf___message___Message):
         *,
         geo_point : typing___Optional[GeoPointInfo] = None,
         radius : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        radius_units : typing___Optional[google___ads___googleads___v2___enums___proximity_radius_units_pb2___ProximityRadiusUnitsEnum.ProximityRadiusUnits.ClosedValueType] = None,
+        radius_units : typing___Optional[google___ads___googleads___v2___enums___proximity_radius_units_pb2___ProximityRadiusUnitsEnum.ProximityRadiusUnits] = None,
         address : typing___Optional[AddressInfo] = None,
         ) -> None: ...
     @classmethod
@@ -924,6 +966,7 @@ class ProximityInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"address",b"address",u"geo_point",b"geo_point",u"radius",b"radius",u"radius_units",b"radius_units"]) -> None: ...
 
 class GeoPointInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def longitude_in_micro_degrees(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
@@ -948,6 +991,7 @@ class GeoPointInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"latitude_in_micro_degrees",b"latitude_in_micro_degrees",u"longitude_in_micro_degrees",b"longitude_in_micro_degrees"]) -> None: ...
 
 class AddressInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def postal_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -992,6 +1036,7 @@ class AddressInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"city_name",b"city_name",u"country_code",b"country_code",u"postal_code",b"postal_code",u"province_code",b"province_code",u"province_name",b"province_name",u"street_address",b"street_address",u"street_address2",b"street_address2"]) -> None: ...
 
 class TopicInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def topic_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1016,6 +1061,7 @@ class TopicInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"path",b"path",u"topic_constant",b"topic_constant"]) -> None: ...
 
 class LanguageInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def language_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1036,6 +1082,7 @@ class LanguageInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"language_constant",b"language_constant"]) -> None: ...
 
 class IpBlockInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def ip_address(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1056,11 +1103,12 @@ class IpBlockInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"ip_address",b"ip_address"]) -> None: ...
 
 class ContentLabelInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___content_label_type_pb2___ContentLabelTypeEnum.ContentLabelType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___content_label_type_pb2___ContentLabelTypeEnum.ContentLabelType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___content_label_type_pb2___ContentLabelTypeEnum.ContentLabelType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___content_label_type_pb2___ContentLabelTypeEnum.ContentLabelType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> ContentLabelInfo: ...
@@ -1072,6 +1120,7 @@ class ContentLabelInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class CarrierInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def carrier_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1092,6 +1141,7 @@ class CarrierInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"carrier_constant",b"carrier_constant"]) -> None: ...
 
 class UserInterestInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def user_interest_category(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1112,6 +1162,7 @@ class UserInterestInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"user_interest_category",b"user_interest_category"]) -> None: ...
 
 class WebpageInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def criterion_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1136,16 +1187,17 @@ class WebpageInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"conditions",b"conditions",u"criterion_name",b"criterion_name"]) -> None: ...
 
 class WebpageConditionInfo(google___protobuf___message___Message):
-    operand = ... # type: google___ads___googleads___v2___enums___webpage_condition_operand_pb2___WebpageConditionOperandEnum.WebpageConditionOperand.ClosedValueType
-    operator = ... # type: google___ads___googleads___v2___enums___webpage_condition_operator_pb2___WebpageConditionOperatorEnum.WebpageConditionOperator.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    operand = ... # type: google___ads___googleads___v2___enums___webpage_condition_operand_pb2___WebpageConditionOperandEnum.WebpageConditionOperand
+    operator = ... # type: google___ads___googleads___v2___enums___webpage_condition_operator_pb2___WebpageConditionOperatorEnum.WebpageConditionOperator
 
     @property
     def argument(self) -> google___protobuf___wrappers_pb2___StringValue: ...
 
     def __init__(self,
         *,
-        operand : typing___Optional[google___ads___googleads___v2___enums___webpage_condition_operand_pb2___WebpageConditionOperandEnum.WebpageConditionOperand.ClosedValueType] = None,
-        operator : typing___Optional[google___ads___googleads___v2___enums___webpage_condition_operator_pb2___WebpageConditionOperatorEnum.WebpageConditionOperator.ClosedValueType] = None,
+        operand : typing___Optional[google___ads___googleads___v2___enums___webpage_condition_operand_pb2___WebpageConditionOperandEnum.WebpageConditionOperand] = None,
+        operator : typing___Optional[google___ads___googleads___v2___enums___webpage_condition_operator_pb2___WebpageConditionOperatorEnum.WebpageConditionOperator] = None,
         argument : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
     @classmethod
@@ -1160,6 +1212,7 @@ class WebpageConditionInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"argument",b"argument",u"operand",b"operand",u"operator",b"operator"]) -> None: ...
 
 class OperatingSystemVersionInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def operating_system_version_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1180,11 +1233,12 @@ class OperatingSystemVersionInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"operating_system_version_constant",b"operating_system_version_constant"]) -> None: ...
 
 class AppPaymentModelInfo(google___protobuf___message___Message):
-    type = ... # type: google___ads___googleads___v2___enums___app_payment_model_type_pb2___AppPaymentModelTypeEnum.AppPaymentModelType.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    type = ... # type: google___ads___googleads___v2___enums___app_payment_model_type_pb2___AppPaymentModelTypeEnum.AppPaymentModelType
 
     def __init__(self,
         *,
-        type : typing___Optional[google___ads___googleads___v2___enums___app_payment_model_type_pb2___AppPaymentModelTypeEnum.AppPaymentModelType.ClosedValueType] = None,
+        type : typing___Optional[google___ads___googleads___v2___enums___app_payment_model_type_pb2___AppPaymentModelTypeEnum.AppPaymentModelType] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> AppPaymentModelInfo: ...
@@ -1196,6 +1250,7 @@ class AppPaymentModelInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"type",b"type"]) -> None: ...
 
 class MobileDeviceInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def mobile_device_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1216,6 +1271,7 @@ class MobileDeviceInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"mobile_device_constant",b"mobile_device_constant"]) -> None: ...
 
 class CustomAffinityInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def custom_affinity(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1236,6 +1292,7 @@ class CustomAffinityInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"custom_affinity",b"custom_affinity"]) -> None: ...
 
 class CustomIntentInfo(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def custom_intent(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1256,7 +1313,8 @@ class CustomIntentInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"custom_intent",b"custom_intent"]) -> None: ...
 
 class LocationGroupInfo(google___protobuf___message___Message):
-    radius_units = ... # type: google___ads___googleads___v2___enums___location_group_radius_units_pb2___LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    radius_units = ... # type: google___ads___googleads___v2___enums___location_group_radius_units_pb2___LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits
 
     @property
     def feed(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1272,7 +1330,7 @@ class LocationGroupInfo(google___protobuf___message___Message):
         feed : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         geo_target_constants : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         radius : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        radius_units : typing___Optional[google___ads___googleads___v2___enums___location_group_radius_units_pb2___LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.ClosedValueType] = None,
+        radius_units : typing___Optional[google___ads___googleads___v2___enums___location_group_radius_units_pb2___LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> LocationGroupInfo: ...

@@ -48,6 +48,10 @@ from google.ads.google_ads.v2.proto.errors.feed_item_validation_error_pb2 import
     FeedItemValidationErrorEnum as google___ads___googleads___v2___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
     RepeatedScalarFieldContainer as google___protobuf___internal___containers___RepeatedScalarFieldContainer,
@@ -76,9 +80,10 @@ from typing_extensions import (
 
 
 class FeedItem(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    geo_targeting_restriction = ... # type: google___ads___googleads___v2___enums___geo_targeting_restriction_pb2___GeoTargetingRestrictionEnum.GeoTargetingRestriction.ClosedValueType
-    status = ... # type: google___ads___googleads___v2___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus.ClosedValueType
+    geo_targeting_restriction = ... # type: google___ads___googleads___v2___enums___geo_targeting_restriction_pb2___GeoTargetingRestrictionEnum.GeoTargetingRestriction
+    status = ... # type: google___ads___googleads___v2___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus
 
     @property
     def feed(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -109,9 +114,9 @@ class FeedItem(google___protobuf___message___Message):
         start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         attribute_values : typing___Optional[typing___Iterable[FeedItemAttributeValue]] = None,
-        geo_targeting_restriction : typing___Optional[google___ads___googleads___v2___enums___geo_targeting_restriction_pb2___GeoTargetingRestrictionEnum.GeoTargetingRestriction.ClosedValueType] = None,
+        geo_targeting_restriction : typing___Optional[google___ads___googleads___v2___enums___geo_targeting_restriction_pb2___GeoTargetingRestrictionEnum.GeoTargetingRestriction] = None,
         url_custom_parameters : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___custom_parameter_pb2___CustomParameter]] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v2___enums___feed_item_status_pb2___FeedItemStatusEnum.FeedItemStatus] = None,
         policy_infos : typing___Optional[typing___Iterable[FeedItemPlaceholderPolicyInfo]] = None,
         ) -> None: ...
     @classmethod
@@ -126,6 +131,7 @@ class FeedItem(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"attribute_values",b"attribute_values",u"end_date_time",b"end_date_time",u"feed",b"feed",u"geo_targeting_restriction",b"geo_targeting_restriction",u"id",b"id",u"policy_infos",b"policy_infos",u"resource_name",b"resource_name",u"start_date_time",b"start_date_time",u"status",b"status",u"url_custom_parameters",b"url_custom_parameters"]) -> None: ...
 
 class FeedItemAttributeValue(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def feed_attribute_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -182,12 +188,13 @@ class FeedItemAttributeValue(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"boolean_value",b"boolean_value",u"boolean_values",b"boolean_values",u"double_value",b"double_value",u"double_values",b"double_values",u"feed_attribute_id",b"feed_attribute_id",u"integer_value",b"integer_value",u"integer_values",b"integer_values",u"price_value",b"price_value",u"string_value",b"string_value",u"string_values",b"string_values"]) -> None: ...
 
 class FeedItemPlaceholderPolicyInfo(google___protobuf___message___Message):
-    placeholder_type_enum = ... # type: google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType
-    review_status = ... # type: google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus.ClosedValueType
-    approval_status = ... # type: google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus.ClosedValueType
-    validation_status = ... # type: google___ads___googleads___v2___enums___feed_item_validation_status_pb2___FeedItemValidationStatusEnum.FeedItemValidationStatus.ClosedValueType
-    quality_approval_status = ... # type: google___ads___googleads___v2___enums___feed_item_quality_approval_status_pb2___FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.ClosedValueType
-    quality_disapproval_reasons = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___feed_item_quality_disapproval_reason_pb2___FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason.ClosedValueType]
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    placeholder_type_enum = ... # type: google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType
+    review_status = ... # type: google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status = ... # type: google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus
+    validation_status = ... # type: google___ads___googleads___v2___enums___feed_item_validation_status_pb2___FeedItemValidationStatusEnum.FeedItemValidationStatus
+    quality_approval_status = ... # type: google___ads___googleads___v2___enums___feed_item_quality_approval_status_pb2___FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus
+    quality_disapproval_reasons = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___feed_item_quality_disapproval_reason_pb2___FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason]
 
     @property
     def feed_mapping_resource_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -200,15 +207,15 @@ class FeedItemPlaceholderPolicyInfo(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        placeholder_type_enum : typing___Optional[google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType.ClosedValueType] = None,
+        placeholder_type_enum : typing___Optional[google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType] = None,
         feed_mapping_resource_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        review_status : typing___Optional[google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus.ClosedValueType] = None,
-        approval_status : typing___Optional[google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus.ClosedValueType] = None,
+        review_status : typing___Optional[google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus] = None,
+        approval_status : typing___Optional[google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus] = None,
         policy_topic_entries : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry]] = None,
-        validation_status : typing___Optional[google___ads___googleads___v2___enums___feed_item_validation_status_pb2___FeedItemValidationStatusEnum.FeedItemValidationStatus.ClosedValueType] = None,
+        validation_status : typing___Optional[google___ads___googleads___v2___enums___feed_item_validation_status_pb2___FeedItemValidationStatusEnum.FeedItemValidationStatus] = None,
         validation_errors : typing___Optional[typing___Iterable[FeedItemValidationError]] = None,
-        quality_approval_status : typing___Optional[google___ads___googleads___v2___enums___feed_item_quality_approval_status_pb2___FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.ClosedValueType] = None,
-        quality_disapproval_reasons : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___feed_item_quality_disapproval_reason_pb2___FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason.ClosedValueType]] = None,
+        quality_approval_status : typing___Optional[google___ads___googleads___v2___enums___feed_item_quality_approval_status_pb2___FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus] = None,
+        quality_disapproval_reasons : typing___Optional[typing___Iterable[google___ads___googleads___v2___enums___feed_item_quality_disapproval_reason_pb2___FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason]] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> FeedItemPlaceholderPolicyInfo: ...
@@ -222,7 +229,8 @@ class FeedItemPlaceholderPolicyInfo(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"approval_status",b"approval_status",u"feed_mapping_resource_name",b"feed_mapping_resource_name",u"placeholder_type_enum",b"placeholder_type_enum",u"policy_topic_entries",b"policy_topic_entries",u"quality_approval_status",b"quality_approval_status",u"quality_disapproval_reasons",b"quality_disapproval_reasons",u"review_status",b"review_status",u"validation_errors",b"validation_errors",u"validation_status",b"validation_status"]) -> None: ...
 
 class FeedItemValidationError(google___protobuf___message___Message):
-    validation_error = ... # type: google___ads___googleads___v2___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum.FeedItemValidationError.ClosedValueType
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    validation_error = ... # type: google___ads___googleads___v2___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum.FeedItemValidationError
 
     @property
     def description(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -235,7 +243,7 @@ class FeedItemValidationError(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        validation_error : typing___Optional[google___ads___googleads___v2___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum.FeedItemValidationError.ClosedValueType] = None,
+        validation_error : typing___Optional[google___ads___googleads___v2___errors___feed_item_validation_error_pb2___FeedItemValidationErrorEnum.FeedItemValidationError] = None,
         description : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         feed_attribute_ids : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___Int64Value]] = None,
         extra_info : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,

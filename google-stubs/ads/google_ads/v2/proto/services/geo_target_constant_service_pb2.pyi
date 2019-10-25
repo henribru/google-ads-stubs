@@ -4,6 +4,10 @@ from google.ads.google_ads.v2.proto.resources.geo_target_constant_pb2 import (
     GeoTargetConstant as google___ads___googleads___v2___resources___geo_target_constant_pb2___GeoTargetConstant,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
@@ -29,6 +33,7 @@ from typing_extensions import (
 
 
 class GetGeoTargetConstantRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
 
     def __init__(self,
@@ -45,7 +50,9 @@ class GetGeoTargetConstantRequest(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
 
 class SuggestGeoTargetConstantsRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class LocationNames(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def names(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
@@ -64,6 +71,7 @@ class SuggestGeoTargetConstantsRequest(google___protobuf___message___Message):
             def ClearField(self, field_name: typing_extensions___Literal[u"names",b"names"]) -> None: ...
 
     class GeoTargets(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
         @property
         def geo_target_constants(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
@@ -114,6 +122,7 @@ class SuggestGeoTargetConstantsRequest(google___protobuf___message___Message):
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"query",b"query"]) -> typing_extensions___Literal["location_names","geo_targets"]: ...
 
 class SuggestGeoTargetConstantsResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def geo_target_constant_suggestions(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[GeoTargetConstantSuggestion]: ...
@@ -132,6 +141,7 @@ class SuggestGeoTargetConstantsResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"geo_target_constant_suggestions",b"geo_target_constant_suggestions"]) -> None: ...
 
 class GeoTargetConstantSuggestion(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
     def locale(self) -> google___protobuf___wrappers_pb2___StringValue: ...

@@ -4,6 +4,10 @@ from google.ads.google_ads.v1.proto.enums.search_term_targeting_status_pb2 impor
     SearchTermTargetingStatusEnum as google___ads___googleads___v1___enums___search_term_targeting_status_pb2___SearchTermTargetingStatusEnum,
 )
 
+from google.protobuf.descriptor import (
+    Descriptor as google___protobuf___descriptor___Descriptor,
+)
+
 from google.protobuf.message import (
     Message as google___protobuf___message___Message,
 )
@@ -23,8 +27,9 @@ from typing_extensions import (
 
 
 class SearchTermView(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___search_term_targeting_status_pb2___SearchTermTargetingStatusEnum.SearchTermTargetingStatus.ClosedValueType
+    status = ... # type: google___ads___googleads___v1___enums___search_term_targeting_status_pb2___SearchTermTargetingStatusEnum.SearchTermTargetingStatus
 
     @property
     def search_term(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -37,7 +42,7 @@ class SearchTermView(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         search_term : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___search_term_targeting_status_pb2___SearchTermTargetingStatusEnum.SearchTermTargetingStatus.ClosedValueType] = None,
+        status : typing___Optional[google___ads___googleads___v1___enums___search_term_targeting_status_pb2___SearchTermTargetingStatusEnum.SearchTermTargetingStatus] = None,
         ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> SearchTermView: ...
