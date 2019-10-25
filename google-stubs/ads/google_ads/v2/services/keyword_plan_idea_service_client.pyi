@@ -10,8 +10,10 @@ from google.protobuf.wrappers_pb2 import StringValue
 from google.ads.google_ads.v2.proto.services.keyword_plan_idea_service_pb2 import KeywordAndUrlSeed, KeywordSeed, \
     GenerateKeywordIdeaResponse
 
-from google.ads.google_ads.v2.services.enums import KeywordPlanNetworkEnum
 from typing_extensions import TypedDict
+
+from google.ads.google_ads.v2.proto.enums.keyword_plan_network_pb2 import KeywordPlanNetworkEnum
+
 
 class StringValueDict(TypedDict):
     value: Text

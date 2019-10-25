@@ -10,6 +10,9 @@ from google.ads.google_ads.v2.proto.services.customer_service_pb2 import Custome
 from google.protobuf.wrappers_pb2 import StringValue
 from typing_extensions import TypedDict
 
+from google.ads.google_ads.v2.proto.enums.access_role_pb2 import AccessRoleEnum
+
+
 class StringValueDict(TypedDict):
     value: Text
 
