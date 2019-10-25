@@ -1,5 +1,5 @@
 from typing import Union
-import grpc
+import grpc  # type: ignore
 from google.ads.google_ads.v1.proto.errors.errors_pb2 import GoogleAdsFailure as GoogleAdsFailureV1
 from google.ads.google_ads.v2.proto.errors.errors_pb2 import GoogleAdsFailure as GoogleAdsFailureV2
 

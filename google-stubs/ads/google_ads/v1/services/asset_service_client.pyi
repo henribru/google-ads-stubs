@@ -1,8 +1,8 @@
-import grpc
+import grpc  # type: ignore
 from google.ads.google_ads.v1.services.transports.asset_service_grpc_transport import AssetServiceGrpcTransport
-from google.auth.credentials import Credentials
-from google.api_core.gapic_v1.client_info import ClientInfo
-from google.api_core.retry import Retry
+from google.auth.credentials import Credentials  # type: ignore
+from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
+from google.api_core.retry import Retry  # type: ignore
 from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
 from google.ads.google_ads.v1.proto.resources.asset_pb2 import Asset
 from google.ads.google_ads.v1.proto.services.asset_service_pb2 import AssetOperation, MutateAssetsResponse

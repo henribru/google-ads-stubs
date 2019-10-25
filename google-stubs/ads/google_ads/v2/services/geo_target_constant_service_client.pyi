@@ -1,9 +1,9 @@
-import grpc
+import grpc  # type: ignore
 from google.ads.google_ads.v2.services.transports.geo_target_constant_service_grpc_transport import GeoTargetConstantServiceGrpcTransport
-from google.auth.credentials import Credentials
-from google.api_core.gapic_v1.client_info import ClientInfo
-from google.api_core.retry import Retry
-from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
+from google.auth.credentials import Credentials  # type: ignore
+from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
+from google.api_core.retry import Retry  # type: ignore
+from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar, Text
 from google.ads.google_ads.v2.proto.resources.geo_target_constant_pb2 import GeoTargetConstant
 
 from google.ads.google_ads.v2.proto.services.geo_target_constant_service_pb2 import SuggestGeoTargetConstantsResponse, \

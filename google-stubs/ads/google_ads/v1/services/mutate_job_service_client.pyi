@@ -1,9 +1,9 @@
-import grpc
+import grpc  # type: ignore
 from google.ads.google_ads.v1.services.transports.mutate_job_service_grpc_transport import MutateJobServiceGrpcTransport
-from google.api_core.operation import Operation
-from google.auth.credentials import Credentials
-from google.api_core.gapic_v1.client_info import ClientInfo
-from google.api_core.retry import Retry
+from google.api_core.operation import Operation  # type: ignore
+from google.auth.credentials import Credentials  # type: ignore
+from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
+from google.api_core.retry import Retry  # type: ignore
 from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar, Iterator
 from google.ads.google_ads.v1.proto.resources.mutate_job_pb2 import MutateJob
 

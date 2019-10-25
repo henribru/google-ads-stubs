@@ -1,8 +1,8 @@
-import grpc
+import grpc  # type: ignore
 from google.ads.google_ads.v1.services.transports.extension_feed_item_service_grpc_transport import ExtensionFeedItemServiceGrpcTransport
-from google.auth.credentials import Credentials
-from google.api_core.gapic_v1.client_info import ClientInfo
-from google.api_core.retry import Retry
+from google.auth.credentials import Credentials  # type: ignore
+from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
+from google.api_core.retry import Retry  # type: ignore
 from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
 from google.ads.google_ads.v1.proto.resources.extension_feed_item_pb2 import ExtensionFeedItem
 from google.ads.google_ads.v1.proto.services.extension_feed_item_service_pb2 import ExtensionFeedItemOperation, MutateExtensionFeedItemsResponse
