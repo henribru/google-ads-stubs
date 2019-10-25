@@ -9,9 +9,11 @@ from google.ads.google_ads.v2.proto.resources.geo_target_constant_pb2 import Geo
 from google.ads.google_ads.v2.proto.services.geo_target_constant_service_pb2 import SuggestGeoTargetConstantsResponse, \
     SuggestGeoTargetConstantsRequest
 from google.protobuf.wrappers_pb2 import StringValue
+from typing_extensions import TypedDict
+
 
 class StringValueDict(TypedDict):
-    value: bytes
+    value: Text
 
 
 class GeoTargetConstantServiceClient:

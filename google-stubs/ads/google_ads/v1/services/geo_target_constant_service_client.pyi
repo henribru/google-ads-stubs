@@ -9,6 +9,11 @@ from google.protobuf.wrappers_pb2 import StringValue
 
 from google.ads.google_ads.v1.proto.services.geo_target_constant_service_pb2 import SuggestGeoTargetConstantsResponse, \
     SuggestGeoTargetConstantsRequest
+from typing_extensions import TypedDict
+
+
+class StringValueDict(TypedDict):
+    value: Text
 
 
 class GeoTargetConstantServiceClient:
@@ -22,4 +27,4 @@ class GeoTargetConstantServiceClient:
     transport: Union[GeoTargetConstantServiceGrpcTransport, Callable[[Credentials, type], GeoTargetConstantServiceGrpcTransport]] = ...
     def __init__(self, transport: Optional[Union[GeoTargetConstantServiceGrpcTransport, Callable[[Credentials, type], GeoTargetConstantServiceGrpcTransport]]] = ..., channel: Optional[grpc.Channel] = ..., credentials: Optional[Credentials] = ..., client_config: Optional[Dict[Any, Any]] = ..., client_info: Optional[ClientInfo] = ...) -> None: ...
     def get_geo_target_constant(self, resource_name: str, retry: Optional[Retry] = ..., timeout: Optional[float] = ..., metadata: Optional[Sequence[Tuple[str, str]]] = ...) -> GeoTargetConstant: ...
-    def suggest_geo_target_constants(self, locale: Union[Dict[Any, Any], StringValue], country_code: Union[Dict[Any, Any], StringValue], location_names: Optional[Union[Dict[Any, Any], SuggestGeoTargetConstantsRequest.LocationNames]] = ..., geo_targets: Optional[Union[Dict[Any, Any], SuggestGeoTargetConstantsRequest.GeoTargets]] = ..., retry: Optional[Retry] = ..., timeout: Optional[float] = ..., metadata: Optional[Sequence[Tuple[str, str]]] = ...) -> SuggestGeoTargetConstantsResponse: ...
+    def suggest_geo_target_constants(self, locale: Union[StringValueDict, StringValue], country_code: Union[StringValueDict, StringValue], location_names: Optional[Union[Dict[Any, Any], SuggestGeoTargetConstantsRequest.LocationNames]] = ..., geo_targets: Optional[Union[Dict[Any, Any], SuggestGeoTargetConstantsRequest.GeoTargets]] = ..., retry: Optional[Retry] = ..., timeout: Optional[float] = ..., metadata: Optional[Sequence[Tuple[str, str]]] = ...) -> SuggestGeoTargetConstantsResponse: ...

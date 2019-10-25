@@ -6,10 +6,11 @@ from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar, Text
 from google.protobuf.wrappers_pb2 import StringValue, Int64Value, Int32Value
-from google.ads.google_ads.v2.services.enums import ReachPlanAdLengthEnum, ReachPlanAgeRangeEnum, GenderTypeEnum, DeviceEnum
+from typing_extensions import TypedDict
+
 
 class StringValueDict(TypedDict):
-    value: bytes
+    value: Text
 
 
 class Int64ValueDict(TypedDict):

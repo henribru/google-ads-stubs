@@ -11,9 +11,10 @@ from google.ads.google_ads.v2.proto.services.keyword_plan_idea_service_pb2 impor
     GenerateKeywordIdeaResponse
 
 from google.ads.google_ads.v2.services.enums import KeywordPlanNetworkEnum
+from typing_extensions import TypedDict
 
 class StringValueDict(TypedDict):
-    value: bytes
+    value: Text
 
 
 class KeywordPlanIdeaServiceClient:

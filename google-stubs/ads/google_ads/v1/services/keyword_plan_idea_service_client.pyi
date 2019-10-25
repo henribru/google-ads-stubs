@@ -11,6 +11,11 @@ from google.ads.google_ads.v1.services.enums import KeywordPlanNetworkEnum
 
 from google.ads.google_ads.v1.proto.services.keyword_plan_idea_service_pb2 import KeywordAndUrlSeed, KeywordSeed, \
     GenerateKeywordIdeaResponse
+from typing_extensions import TypedDict
+
+
+class StringValueDict(TypedDict):
+    value: Text
 
 
 class KeywordPlanIdeaServiceClient:
@@ -21,4 +26,4 @@ class KeywordPlanIdeaServiceClient:
     def from_service_account_json(cls, filename: str, *args: Any, **kwargs: Any) -> KeywordPlanIdeaServiceClient: ...
     transport: Union[KeywordPlanIdeaServiceGrpcTransport, Callable[[Credentials, type], KeywordPlanIdeaServiceGrpcTransport]] = ...
     def __init__(self, transport: Optional[Union[KeywordPlanIdeaServiceGrpcTransport, Callable[[Credentials, type], KeywordPlanIdeaServiceGrpcTransport]]] = ..., channel: Optional[grpc.Channel] = ..., credentials: Optional[Credentials] = ..., client_config: Optional[Dict[Any, Any]] = ..., client_info: Optional[ClientInfo] = ...) -> None: ...
-    def generate_keyword_ideas(self, customer_id: str, language: Union[Dict[Any, Any], StringValue], geo_target_constants: List[Union[Dict[Any, Any], StringValue]], keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork, keyword_and_url_seed: Optional[Union[Dict[Any, Any], KeywordAndUrlSeed]] = ..., keyword_seed: Optional[Any] = ..., url_seed: Optional[Union[Dict[Any, Any], KeywordSeed]] = ..., retry: Optional[Retry] = ..., timeout: Optional[float] = ..., metadata: Optional[Sequence[Tuple[str, str]]] = ...) -> GenerateKeywordIdeaResponse: ...
+    def generate_keyword_ideas(self, customer_id: str, language: Union[StringValueDict, StringValue], geo_target_constants: List[Union[StringValueDict, StringValue]], keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork, keyword_and_url_seed: Optional[Union[Dict[Any, Any], KeywordAndUrlSeed]] = ..., keyword_seed: Optional[Any] = ..., url_seed: Optional[Union[Dict[Any, Any], KeywordSeed]] = ..., retry: Optional[Retry] = ..., timeout: Optional[float] = ..., metadata: Optional[Sequence[Tuple[str, str]]] = ...) -> GenerateKeywordIdeaResponse: ...

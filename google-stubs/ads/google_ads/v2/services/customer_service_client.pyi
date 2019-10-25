@@ -8,11 +8,10 @@ from google.ads.google_ads.v2.proto.resources.customer_pb2 import Customer
 from google.ads.google_ads.v2.proto.services.customer_service_pb2 import CustomerOperation, MutateCustomerResponse, \
     ListAccessibleCustomersResponse, CreateCustomerClientResponse
 from google.protobuf.wrappers_pb2 import StringValue
-from google.ads.google_ads.v2.services.enums import AccessRoleEnum
 from typing_extensions import TypedDict
 
 class StringValueDict(TypedDict):
-    value: bytes
+    value: Text
 
 
 class CustomerServiceClient:
