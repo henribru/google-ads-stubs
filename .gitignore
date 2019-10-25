@@ -1,6 +1,7 @@
 *
 !*/
-!.gitignore
-!google-stubs/**
-!pyproject.toml
-!README.md
+!/.gitignore
+!/google-stubs/**
+!/pyproject.toml
+!/poetry.lock
+!/README.md
