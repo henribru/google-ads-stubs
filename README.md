@@ -1,7 +1,7 @@
 # Type stubs for the Google Ads API Client Library for Python
 [![PyPI version](https://badge.fury.io/py/google-ads-stubs.svg)](https://badge.fury.io/py/google-ads-stubs)
 
-This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). It's currently compatible with v.3.3.0 of this library. 
+This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). It's currently compatible with v.3.3.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
 
 **This is in no way affiliated with Google.**
 
@@ -40,7 +40,7 @@ google_ads_service: GoogleAdsServiceClient = client.get_service('GoogleAdsServic
 ```
 
 While it is technically possible to type these methods using a combination of overloading and literal types,
-this is not included in these stubs. The reason is that it requires about 10.000 overloads, which, while simple
+this is not included in these stubs. The reason is that it requires about 10,000 overloads, which, while simple
 to generate, slows type checking to a crawl.
 
 This package does not provide complete type annotations, although it should cover what's used by most developers. 
