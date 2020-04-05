@@ -1,3 +1,5 @@
+from typing import Any
+
 class ResourceName:
     @classmethod
     def format_composite(cls, *arg: str):
