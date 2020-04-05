@@ -32,11 +32,21 @@ from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CampaignFeed(google___protobuf___message___Message):
@@ -63,13 +73,14 @@ class CampaignFeed(google___protobuf___message___Message):
         matching_function : typing___Optional[google___ads___googleads___v2___common___matching_function_pb2___MatchingFunction] = None,
         status : typing___Optional[google___ads___googleads___v2___enums___feed_link_status_pb2___FeedLinkStatusEnum.FeedLinkStatus] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignFeed: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignFeed: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignFeed: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign",u"feed",u"matching_function"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign",u"feed",u"matching_function",u"placeholder_types",u"resource_name",u"status"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"feed",b"feed",u"matching_function",b"matching_function"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"feed",b"feed",u"matching_function",b"matching_function",u"placeholder_types",b"placeholder_types",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"feed",b"feed",u"matching_function",b"matching_function"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"feed",b"feed",u"matching_function",b"matching_function",u"placeholder_types",b"placeholder_types",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
+global___CampaignFeed = CampaignFeed

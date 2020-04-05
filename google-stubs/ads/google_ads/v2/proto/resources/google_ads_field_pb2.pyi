@@ -29,11 +29,21 @@ from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class GoogleAdsField(google___protobuf___message___Message):
@@ -92,13 +102,14 @@ class GoogleAdsField(google___protobuf___message___Message):
         type_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         is_repeated : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> GoogleAdsField: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> GoogleAdsField: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> GoogleAdsField: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"filterable",u"is_repeated",u"name",u"selectable",u"sortable",u"type_url"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"attribute_resources",u"category",u"data_type",u"enum_values",u"filterable",u"is_repeated",u"metrics",u"name",u"resource_name",u"segments",u"selectable",u"selectable_with",u"sortable",u"type_url"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"filterable",b"filterable",u"is_repeated",b"is_repeated",u"name",b"name",u"selectable",b"selectable",u"sortable",b"sortable",u"type_url",b"type_url"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"attribute_resources",b"attribute_resources",u"category",b"category",u"data_type",b"data_type",u"enum_values",b"enum_values",u"filterable",b"filterable",u"is_repeated",b"is_repeated",u"metrics",b"metrics",u"name",b"name",u"resource_name",b"resource_name",u"segments",b"segments",u"selectable",b"selectable",u"selectable_with",b"selectable_with",u"sortable",b"sortable",u"type_url",b"type_url"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"filterable",b"filterable",u"is_repeated",b"is_repeated",u"name",b"name",u"selectable",b"selectable",u"sortable",b"sortable",u"type_url",b"type_url"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"attribute_resources",b"attribute_resources",u"category",b"category",u"data_type",b"data_type",u"enum_values",b"enum_values",u"filterable",b"filterable",u"is_repeated",b"is_repeated",u"metrics",b"metrics",u"name",b"name",u"resource_name",b"resource_name",u"segments",b"segments",u"selectable",b"selectable",u"selectable_with",b"selectable_with",u"sortable",b"sortable",u"type_url",b"type_url"]) -> None: ...
+global___GoogleAdsField = GoogleAdsField

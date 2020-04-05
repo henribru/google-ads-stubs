@@ -12,41 +12,56 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class SharedSetErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class SharedSetError(int):
+    class SharedSetError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> SharedSetErrorEnum.SharedSetError: ...
+        def Value(cls, name: builtin___str) -> 'SharedSetErrorEnum.SharedSetError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[SharedSetErrorEnum.SharedSetError]: ...
+        def values(cls) -> typing___List['SharedSetErrorEnum.SharedSetError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, SharedSetErrorEnum.SharedSetError]]: ...
-        UNSPECIFIED = typing___cast(SharedSetErrorEnum.SharedSetError, 0)
-        UNKNOWN = typing___cast(SharedSetErrorEnum.SharedSetError, 1)
-        CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE = typing___cast(SharedSetErrorEnum.SharedSetError, 2)
-        DUPLICATE_NAME = typing___cast(SharedSetErrorEnum.SharedSetError, 3)
-        SHARED_SET_REMOVED = typing___cast(SharedSetErrorEnum.SharedSetError, 4)
-        SHARED_SET_IN_USE = typing___cast(SharedSetErrorEnum.SharedSetError, 5)
-    UNSPECIFIED = typing___cast(SharedSetErrorEnum.SharedSetError, 0)
-    UNKNOWN = typing___cast(SharedSetErrorEnum.SharedSetError, 1)
-    CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE = typing___cast(SharedSetErrorEnum.SharedSetError, 2)
-    DUPLICATE_NAME = typing___cast(SharedSetErrorEnum.SharedSetError, 3)
-    SHARED_SET_REMOVED = typing___cast(SharedSetErrorEnum.SharedSetError, 4)
-    SHARED_SET_IN_USE = typing___cast(SharedSetErrorEnum.SharedSetError, 5)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'SharedSetErrorEnum.SharedSetError']]: ...
+        UNSPECIFIED = typing___cast('SharedSetErrorEnum.SharedSetError', 0)
+        UNKNOWN = typing___cast('SharedSetErrorEnum.SharedSetError', 1)
+        CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE = typing___cast('SharedSetErrorEnum.SharedSetError', 2)
+        DUPLICATE_NAME = typing___cast('SharedSetErrorEnum.SharedSetError', 3)
+        SHARED_SET_REMOVED = typing___cast('SharedSetErrorEnum.SharedSetError', 4)
+        SHARED_SET_IN_USE = typing___cast('SharedSetErrorEnum.SharedSetError', 5)
+    UNSPECIFIED = typing___cast('SharedSetErrorEnum.SharedSetError', 0)
+    UNKNOWN = typing___cast('SharedSetErrorEnum.SharedSetError', 1)
+    CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE = typing___cast('SharedSetErrorEnum.SharedSetError', 2)
+    DUPLICATE_NAME = typing___cast('SharedSetErrorEnum.SharedSetError', 3)
+    SHARED_SET_REMOVED = typing___cast('SharedSetErrorEnum.SharedSetError', 4)
+    SHARED_SET_IN_USE = typing___cast('SharedSetErrorEnum.SharedSetError', 5)
+    global___SharedSetError = SharedSetError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> SharedSetErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SharedSetErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SharedSetErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___SharedSetErrorEnum = SharedSetErrorEnum

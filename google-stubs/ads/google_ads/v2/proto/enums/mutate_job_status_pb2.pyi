@@ -12,39 +12,54 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class MutateJobStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class MutateJobStatus(int):
+    class MutateJobStatus(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> MutateJobStatusEnum.MutateJobStatus: ...
+        def Value(cls, name: builtin___str) -> 'MutateJobStatusEnum.MutateJobStatus': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[MutateJobStatusEnum.MutateJobStatus]: ...
+        def values(cls) -> typing___List['MutateJobStatusEnum.MutateJobStatus']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, MutateJobStatusEnum.MutateJobStatus]]: ...
-        UNSPECIFIED = typing___cast(MutateJobStatusEnum.MutateJobStatus, 0)
-        UNKNOWN = typing___cast(MutateJobStatusEnum.MutateJobStatus, 1)
-        PENDING = typing___cast(MutateJobStatusEnum.MutateJobStatus, 2)
-        RUNNING = typing___cast(MutateJobStatusEnum.MutateJobStatus, 3)
-        DONE = typing___cast(MutateJobStatusEnum.MutateJobStatus, 4)
-    UNSPECIFIED = typing___cast(MutateJobStatusEnum.MutateJobStatus, 0)
-    UNKNOWN = typing___cast(MutateJobStatusEnum.MutateJobStatus, 1)
-    PENDING = typing___cast(MutateJobStatusEnum.MutateJobStatus, 2)
-    RUNNING = typing___cast(MutateJobStatusEnum.MutateJobStatus, 3)
-    DONE = typing___cast(MutateJobStatusEnum.MutateJobStatus, 4)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'MutateJobStatusEnum.MutateJobStatus']]: ...
+        UNSPECIFIED = typing___cast('MutateJobStatusEnum.MutateJobStatus', 0)
+        UNKNOWN = typing___cast('MutateJobStatusEnum.MutateJobStatus', 1)
+        PENDING = typing___cast('MutateJobStatusEnum.MutateJobStatus', 2)
+        RUNNING = typing___cast('MutateJobStatusEnum.MutateJobStatus', 3)
+        DONE = typing___cast('MutateJobStatusEnum.MutateJobStatus', 4)
+    UNSPECIFIED = typing___cast('MutateJobStatusEnum.MutateJobStatus', 0)
+    UNKNOWN = typing___cast('MutateJobStatusEnum.MutateJobStatus', 1)
+    PENDING = typing___cast('MutateJobStatusEnum.MutateJobStatus', 2)
+    RUNNING = typing___cast('MutateJobStatusEnum.MutateJobStatus', 3)
+    DONE = typing___cast('MutateJobStatusEnum.MutateJobStatus', 4)
+    global___MutateJobStatus = MutateJobStatus
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> MutateJobStatusEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> MutateJobStatusEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MutateJobStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___MutateJobStatusEnum = MutateJobStatusEnum

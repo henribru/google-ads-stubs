@@ -12,43 +12,58 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class AssetErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class AssetError(int):
+    class AssetError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> AssetErrorEnum.AssetError: ...
+        def Value(cls, name: builtin___str) -> 'AssetErrorEnum.AssetError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[AssetErrorEnum.AssetError]: ...
+        def values(cls) -> typing___List['AssetErrorEnum.AssetError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, AssetErrorEnum.AssetError]]: ...
-        UNSPECIFIED = typing___cast(AssetErrorEnum.AssetError, 0)
-        UNKNOWN = typing___cast(AssetErrorEnum.AssetError, 1)
-        CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE = typing___cast(AssetErrorEnum.AssetError, 2)
-        DUPLICATE_ASSET = typing___cast(AssetErrorEnum.AssetError, 3)
-        DUPLICATE_ASSET_NAME = typing___cast(AssetErrorEnum.AssetError, 4)
-        ASSET_DATA_IS_MISSING = typing___cast(AssetErrorEnum.AssetError, 5)
-        CANNOT_MODIFY_ASSET_NAME = typing___cast(AssetErrorEnum.AssetError, 6)
-    UNSPECIFIED = typing___cast(AssetErrorEnum.AssetError, 0)
-    UNKNOWN = typing___cast(AssetErrorEnum.AssetError, 1)
-    CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE = typing___cast(AssetErrorEnum.AssetError, 2)
-    DUPLICATE_ASSET = typing___cast(AssetErrorEnum.AssetError, 3)
-    DUPLICATE_ASSET_NAME = typing___cast(AssetErrorEnum.AssetError, 4)
-    ASSET_DATA_IS_MISSING = typing___cast(AssetErrorEnum.AssetError, 5)
-    CANNOT_MODIFY_ASSET_NAME = typing___cast(AssetErrorEnum.AssetError, 6)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AssetErrorEnum.AssetError']]: ...
+        UNSPECIFIED = typing___cast('AssetErrorEnum.AssetError', 0)
+        UNKNOWN = typing___cast('AssetErrorEnum.AssetError', 1)
+        CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE = typing___cast('AssetErrorEnum.AssetError', 2)
+        DUPLICATE_ASSET = typing___cast('AssetErrorEnum.AssetError', 3)
+        DUPLICATE_ASSET_NAME = typing___cast('AssetErrorEnum.AssetError', 4)
+        ASSET_DATA_IS_MISSING = typing___cast('AssetErrorEnum.AssetError', 5)
+        CANNOT_MODIFY_ASSET_NAME = typing___cast('AssetErrorEnum.AssetError', 6)
+    UNSPECIFIED = typing___cast('AssetErrorEnum.AssetError', 0)
+    UNKNOWN = typing___cast('AssetErrorEnum.AssetError', 1)
+    CUSTOMER_NOT_WHITELISTED_FOR_ASSET_TYPE = typing___cast('AssetErrorEnum.AssetError', 2)
+    DUPLICATE_ASSET = typing___cast('AssetErrorEnum.AssetError', 3)
+    DUPLICATE_ASSET_NAME = typing___cast('AssetErrorEnum.AssetError', 4)
+    ASSET_DATA_IS_MISSING = typing___cast('AssetErrorEnum.AssetError', 5)
+    CANNOT_MODIFY_ASSET_NAME = typing___cast('AssetErrorEnum.AssetError', 6)
+    global___AssetError = AssetError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AssetErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AssetErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AssetErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___AssetErrorEnum = AssetErrorEnum

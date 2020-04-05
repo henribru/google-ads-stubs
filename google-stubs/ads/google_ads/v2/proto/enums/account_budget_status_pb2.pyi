@@ -12,39 +12,54 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class AccountBudgetStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class AccountBudgetStatus(int):
+    class AccountBudgetStatus(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> AccountBudgetStatusEnum.AccountBudgetStatus: ...
+        def Value(cls, name: builtin___str) -> 'AccountBudgetStatusEnum.AccountBudgetStatus': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[AccountBudgetStatusEnum.AccountBudgetStatus]: ...
+        def values(cls) -> typing___List['AccountBudgetStatusEnum.AccountBudgetStatus']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, AccountBudgetStatusEnum.AccountBudgetStatus]]: ...
-        UNSPECIFIED = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 0)
-        UNKNOWN = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 1)
-        PENDING = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 2)
-        APPROVED = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 3)
-        CANCELLED = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 4)
-    UNSPECIFIED = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 0)
-    UNKNOWN = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 1)
-    PENDING = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 2)
-    APPROVED = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 3)
-    CANCELLED = typing___cast(AccountBudgetStatusEnum.AccountBudgetStatus, 4)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AccountBudgetStatusEnum.AccountBudgetStatus']]: ...
+        UNSPECIFIED = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 0)
+        UNKNOWN = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 1)
+        PENDING = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 2)
+        APPROVED = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 3)
+        CANCELLED = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 4)
+    UNSPECIFIED = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 0)
+    UNKNOWN = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 1)
+    PENDING = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 2)
+    APPROVED = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 3)
+    CANCELLED = typing___cast('AccountBudgetStatusEnum.AccountBudgetStatus', 4)
+    global___AccountBudgetStatus = AccountBudgetStatus
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AccountBudgetStatusEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AccountBudgetStatusEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AccountBudgetStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___AccountBudgetStatusEnum = AccountBudgetStatusEnum

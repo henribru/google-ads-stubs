@@ -21,11 +21,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class OperatingSystemVersionConstant(google___protobuf___message___Message):
@@ -54,13 +64,14 @@ class OperatingSystemVersionConstant(google___protobuf___message___Message):
         os_minor_version : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
         operator_type : typing___Optional[google___ads___googleads___v2___enums___operating_system_version_operator_type_pb2___OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> OperatingSystemVersionConstant: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> OperatingSystemVersionConstant: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> OperatingSystemVersionConstant: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"id",u"name",u"os_major_version",u"os_minor_version"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"id",u"name",u"operator_type",u"os_major_version",u"os_minor_version",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"os_major_version",b"os_major_version",u"os_minor_version",b"os_minor_version"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"operator_type",b"operator_type",u"os_major_version",b"os_major_version",u"os_minor_version",b"os_minor_version",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"os_major_version",b"os_major_version",u"os_minor_version",b"os_minor_version"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"operator_type",b"operator_type",u"os_major_version",b"os_major_version",u"os_minor_version",b"os_minor_version",u"resource_name",b"resource_name"]) -> None: ...
+global___OperatingSystemVersionConstant = OperatingSystemVersionConstant

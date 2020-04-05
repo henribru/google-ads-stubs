@@ -12,41 +12,56 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class TargetCpaOptInRecommendationGoalEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class TargetCpaOptInRecommendationGoal(int):
+    class TargetCpaOptInRecommendationGoal(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal: ...
+        def Value(cls, name: builtin___str) -> 'TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal]: ...
+        def values(cls) -> typing___List['TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal]]: ...
-        UNSPECIFIED = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 0)
-        UNKNOWN = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 1)
-        SAME_COST = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 2)
-        SAME_CONVERSIONS = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 3)
-        SAME_CPA = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 4)
-        CLOSEST_CPA = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 5)
-    UNSPECIFIED = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 0)
-    UNKNOWN = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 1)
-    SAME_COST = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 2)
-    SAME_CONVERSIONS = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 3)
-    SAME_CPA = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 4)
-    CLOSEST_CPA = typing___cast(TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal, 5)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal']]: ...
+        UNSPECIFIED = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 0)
+        UNKNOWN = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 1)
+        SAME_COST = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 2)
+        SAME_CONVERSIONS = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 3)
+        SAME_CPA = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 4)
+        CLOSEST_CPA = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 5)
+    UNSPECIFIED = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 0)
+    UNKNOWN = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 1)
+    SAME_COST = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 2)
+    SAME_CONVERSIONS = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 3)
+    SAME_CPA = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 4)
+    CLOSEST_CPA = typing___cast('TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal', 5)
+    global___TargetCpaOptInRecommendationGoal = TargetCpaOptInRecommendationGoal
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> TargetCpaOptInRecommendationGoalEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> TargetCpaOptInRecommendationGoalEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> TargetCpaOptInRecommendationGoalEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___TargetCpaOptInRecommendationGoalEnum = TargetCpaOptInRecommendationGoalEnum

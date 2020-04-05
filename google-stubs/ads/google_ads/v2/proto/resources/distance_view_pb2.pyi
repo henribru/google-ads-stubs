@@ -19,11 +19,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class DistanceView(google___protobuf___message___Message):
@@ -40,13 +50,14 @@ class DistanceView(google___protobuf___message___Message):
         distance_bucket : typing___Optional[google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket] = None,
         metric_system : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> DistanceView: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> DistanceView: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> DistanceView: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"metric_system"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"distance_bucket",u"metric_system",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"metric_system",b"metric_system"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"distance_bucket",b"distance_bucket",u"metric_system",b"metric_system",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"metric_system",b"metric_system"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"distance_bucket",b"distance_bucket",u"metric_system",b"metric_system",u"resource_name",b"resource_name"]) -> None: ...
+global___DistanceView = DistanceView

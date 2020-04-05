@@ -29,11 +29,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class FeedItemTarget(google___protobuf___message___Message):
@@ -76,14 +86,15 @@ class FeedItemTarget(google___protobuf___message___Message):
         device : typing___Optional[google___ads___googleads___v1___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice] = None,
         ad_schedule : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___AdScheduleInfo] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> FeedItemTarget: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> FeedItemTarget: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> FeedItemTarget: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group",u"ad_schedule",u"campaign",u"device",u"feed_item",u"feed_item_target_id",u"geo_target_constant",u"keyword",u"target"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",u"ad_schedule",u"campaign",u"device",u"feed_item",u"feed_item_target_id",u"feed_item_target_type",u"geo_target_constant",u"keyword",u"resource_name",u"target"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_schedule",b"ad_schedule",u"campaign",b"campaign",u"device",b"device",u"feed_item",b"feed_item",u"feed_item_target_id",b"feed_item_target_id",u"geo_target_constant",b"geo_target_constant",u"keyword",b"keyword",u"target",b"target"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_schedule",b"ad_schedule",u"campaign",b"campaign",u"device",b"device",u"feed_item",b"feed_item",u"feed_item_target_id",b"feed_item_target_id",u"feed_item_target_type",b"feed_item_target_type",u"geo_target_constant",b"geo_target_constant",u"keyword",b"keyword",u"resource_name",b"resource_name",u"target",b"target"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_schedule",b"ad_schedule",u"campaign",b"campaign",u"device",b"device",u"feed_item",b"feed_item",u"feed_item_target_id",b"feed_item_target_id",u"geo_target_constant",b"geo_target_constant",u"keyword",b"keyword",u"target",b"target"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_schedule",b"ad_schedule",u"campaign",b"campaign",u"device",b"device",u"feed_item",b"feed_item",u"feed_item_target_id",b"feed_item_target_id",u"feed_item_target_type",b"feed_item_target_type",u"geo_target_constant",b"geo_target_constant",u"keyword",b"keyword",u"resource_name",b"resource_name",u"target",b"target"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"target",b"target"]) -> typing_extensions___Literal["campaign","ad_group","keyword","geo_target_constant","device","ad_schedule"]: ...
+global___FeedItemTarget = FeedItemTarget

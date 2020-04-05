@@ -12,71 +12,86 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class PlaceholderTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class PlaceholderType(int):
+    class PlaceholderType(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> PlaceholderTypeEnum.PlaceholderType: ...
+        def Value(cls, name: builtin___str) -> 'PlaceholderTypeEnum.PlaceholderType': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[PlaceholderTypeEnum.PlaceholderType]: ...
+        def values(cls) -> typing___List['PlaceholderTypeEnum.PlaceholderType']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, PlaceholderTypeEnum.PlaceholderType]]: ...
-        UNSPECIFIED = typing___cast(PlaceholderTypeEnum.PlaceholderType, 0)
-        UNKNOWN = typing___cast(PlaceholderTypeEnum.PlaceholderType, 1)
-        SITELINK = typing___cast(PlaceholderTypeEnum.PlaceholderType, 2)
-        CALL = typing___cast(PlaceholderTypeEnum.PlaceholderType, 3)
-        APP = typing___cast(PlaceholderTypeEnum.PlaceholderType, 4)
-        LOCATION = typing___cast(PlaceholderTypeEnum.PlaceholderType, 5)
-        AFFILIATE_LOCATION = typing___cast(PlaceholderTypeEnum.PlaceholderType, 6)
-        CALLOUT = typing___cast(PlaceholderTypeEnum.PlaceholderType, 7)
-        STRUCTURED_SNIPPET = typing___cast(PlaceholderTypeEnum.PlaceholderType, 8)
-        MESSAGE = typing___cast(PlaceholderTypeEnum.PlaceholderType, 9)
-        PRICE = typing___cast(PlaceholderTypeEnum.PlaceholderType, 10)
-        PROMOTION = typing___cast(PlaceholderTypeEnum.PlaceholderType, 11)
-        AD_CUSTOMIZER = typing___cast(PlaceholderTypeEnum.PlaceholderType, 12)
-        DYNAMIC_EDUCATION = typing___cast(PlaceholderTypeEnum.PlaceholderType, 13)
-        DYNAMIC_FLIGHT = typing___cast(PlaceholderTypeEnum.PlaceholderType, 14)
-        DYNAMIC_CUSTOM = typing___cast(PlaceholderTypeEnum.PlaceholderType, 15)
-        DYNAMIC_HOTEL = typing___cast(PlaceholderTypeEnum.PlaceholderType, 16)
-        DYNAMIC_REAL_ESTATE = typing___cast(PlaceholderTypeEnum.PlaceholderType, 17)
-        DYNAMIC_TRAVEL = typing___cast(PlaceholderTypeEnum.PlaceholderType, 18)
-        DYNAMIC_LOCAL = typing___cast(PlaceholderTypeEnum.PlaceholderType, 19)
-        DYNAMIC_JOB = typing___cast(PlaceholderTypeEnum.PlaceholderType, 20)
-    UNSPECIFIED = typing___cast(PlaceholderTypeEnum.PlaceholderType, 0)
-    UNKNOWN = typing___cast(PlaceholderTypeEnum.PlaceholderType, 1)
-    SITELINK = typing___cast(PlaceholderTypeEnum.PlaceholderType, 2)
-    CALL = typing___cast(PlaceholderTypeEnum.PlaceholderType, 3)
-    APP = typing___cast(PlaceholderTypeEnum.PlaceholderType, 4)
-    LOCATION = typing___cast(PlaceholderTypeEnum.PlaceholderType, 5)
-    AFFILIATE_LOCATION = typing___cast(PlaceholderTypeEnum.PlaceholderType, 6)
-    CALLOUT = typing___cast(PlaceholderTypeEnum.PlaceholderType, 7)
-    STRUCTURED_SNIPPET = typing___cast(PlaceholderTypeEnum.PlaceholderType, 8)
-    MESSAGE = typing___cast(PlaceholderTypeEnum.PlaceholderType, 9)
-    PRICE = typing___cast(PlaceholderTypeEnum.PlaceholderType, 10)
-    PROMOTION = typing___cast(PlaceholderTypeEnum.PlaceholderType, 11)
-    AD_CUSTOMIZER = typing___cast(PlaceholderTypeEnum.PlaceholderType, 12)
-    DYNAMIC_EDUCATION = typing___cast(PlaceholderTypeEnum.PlaceholderType, 13)
-    DYNAMIC_FLIGHT = typing___cast(PlaceholderTypeEnum.PlaceholderType, 14)
-    DYNAMIC_CUSTOM = typing___cast(PlaceholderTypeEnum.PlaceholderType, 15)
-    DYNAMIC_HOTEL = typing___cast(PlaceholderTypeEnum.PlaceholderType, 16)
-    DYNAMIC_REAL_ESTATE = typing___cast(PlaceholderTypeEnum.PlaceholderType, 17)
-    DYNAMIC_TRAVEL = typing___cast(PlaceholderTypeEnum.PlaceholderType, 18)
-    DYNAMIC_LOCAL = typing___cast(PlaceholderTypeEnum.PlaceholderType, 19)
-    DYNAMIC_JOB = typing___cast(PlaceholderTypeEnum.PlaceholderType, 20)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'PlaceholderTypeEnum.PlaceholderType']]: ...
+        UNSPECIFIED = typing___cast('PlaceholderTypeEnum.PlaceholderType', 0)
+        UNKNOWN = typing___cast('PlaceholderTypeEnum.PlaceholderType', 1)
+        SITELINK = typing___cast('PlaceholderTypeEnum.PlaceholderType', 2)
+        CALL = typing___cast('PlaceholderTypeEnum.PlaceholderType', 3)
+        APP = typing___cast('PlaceholderTypeEnum.PlaceholderType', 4)
+        LOCATION = typing___cast('PlaceholderTypeEnum.PlaceholderType', 5)
+        AFFILIATE_LOCATION = typing___cast('PlaceholderTypeEnum.PlaceholderType', 6)
+        CALLOUT = typing___cast('PlaceholderTypeEnum.PlaceholderType', 7)
+        STRUCTURED_SNIPPET = typing___cast('PlaceholderTypeEnum.PlaceholderType', 8)
+        MESSAGE = typing___cast('PlaceholderTypeEnum.PlaceholderType', 9)
+        PRICE = typing___cast('PlaceholderTypeEnum.PlaceholderType', 10)
+        PROMOTION = typing___cast('PlaceholderTypeEnum.PlaceholderType', 11)
+        AD_CUSTOMIZER = typing___cast('PlaceholderTypeEnum.PlaceholderType', 12)
+        DYNAMIC_EDUCATION = typing___cast('PlaceholderTypeEnum.PlaceholderType', 13)
+        DYNAMIC_FLIGHT = typing___cast('PlaceholderTypeEnum.PlaceholderType', 14)
+        DYNAMIC_CUSTOM = typing___cast('PlaceholderTypeEnum.PlaceholderType', 15)
+        DYNAMIC_HOTEL = typing___cast('PlaceholderTypeEnum.PlaceholderType', 16)
+        DYNAMIC_REAL_ESTATE = typing___cast('PlaceholderTypeEnum.PlaceholderType', 17)
+        DYNAMIC_TRAVEL = typing___cast('PlaceholderTypeEnum.PlaceholderType', 18)
+        DYNAMIC_LOCAL = typing___cast('PlaceholderTypeEnum.PlaceholderType', 19)
+        DYNAMIC_JOB = typing___cast('PlaceholderTypeEnum.PlaceholderType', 20)
+    UNSPECIFIED = typing___cast('PlaceholderTypeEnum.PlaceholderType', 0)
+    UNKNOWN = typing___cast('PlaceholderTypeEnum.PlaceholderType', 1)
+    SITELINK = typing___cast('PlaceholderTypeEnum.PlaceholderType', 2)
+    CALL = typing___cast('PlaceholderTypeEnum.PlaceholderType', 3)
+    APP = typing___cast('PlaceholderTypeEnum.PlaceholderType', 4)
+    LOCATION = typing___cast('PlaceholderTypeEnum.PlaceholderType', 5)
+    AFFILIATE_LOCATION = typing___cast('PlaceholderTypeEnum.PlaceholderType', 6)
+    CALLOUT = typing___cast('PlaceholderTypeEnum.PlaceholderType', 7)
+    STRUCTURED_SNIPPET = typing___cast('PlaceholderTypeEnum.PlaceholderType', 8)
+    MESSAGE = typing___cast('PlaceholderTypeEnum.PlaceholderType', 9)
+    PRICE = typing___cast('PlaceholderTypeEnum.PlaceholderType', 10)
+    PROMOTION = typing___cast('PlaceholderTypeEnum.PlaceholderType', 11)
+    AD_CUSTOMIZER = typing___cast('PlaceholderTypeEnum.PlaceholderType', 12)
+    DYNAMIC_EDUCATION = typing___cast('PlaceholderTypeEnum.PlaceholderType', 13)
+    DYNAMIC_FLIGHT = typing___cast('PlaceholderTypeEnum.PlaceholderType', 14)
+    DYNAMIC_CUSTOM = typing___cast('PlaceholderTypeEnum.PlaceholderType', 15)
+    DYNAMIC_HOTEL = typing___cast('PlaceholderTypeEnum.PlaceholderType', 16)
+    DYNAMIC_REAL_ESTATE = typing___cast('PlaceholderTypeEnum.PlaceholderType', 17)
+    DYNAMIC_TRAVEL = typing___cast('PlaceholderTypeEnum.PlaceholderType', 18)
+    DYNAMIC_LOCAL = typing___cast('PlaceholderTypeEnum.PlaceholderType', 19)
+    DYNAMIC_JOB = typing___cast('PlaceholderTypeEnum.PlaceholderType', 20)
+    global___PlaceholderType = PlaceholderType
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> PlaceholderTypeEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> PlaceholderTypeEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> PlaceholderTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___PlaceholderTypeEnum = PlaceholderTypeEnum

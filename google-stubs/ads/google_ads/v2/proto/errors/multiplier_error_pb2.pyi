@@ -12,57 +12,72 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class MultiplierErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class MultiplierError(int):
+    class MultiplierError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> MultiplierErrorEnum.MultiplierError: ...
+        def Value(cls, name: builtin___str) -> 'MultiplierErrorEnum.MultiplierError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[MultiplierErrorEnum.MultiplierError]: ...
+        def values(cls) -> typing___List['MultiplierErrorEnum.MultiplierError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, MultiplierErrorEnum.MultiplierError]]: ...
-        UNSPECIFIED = typing___cast(MultiplierErrorEnum.MultiplierError, 0)
-        UNKNOWN = typing___cast(MultiplierErrorEnum.MultiplierError, 1)
-        MULTIPLIER_TOO_HIGH = typing___cast(MultiplierErrorEnum.MultiplierError, 2)
-        MULTIPLIER_TOO_LOW = typing___cast(MultiplierErrorEnum.MultiplierError, 3)
-        TOO_MANY_FRACTIONAL_DIGITS = typing___cast(MultiplierErrorEnum.MultiplierError, 4)
-        MULTIPLIER_NOT_ALLOWED_FOR_BIDDING_STRATEGY = typing___cast(MultiplierErrorEnum.MultiplierError, 5)
-        MULTIPLIER_NOT_ALLOWED_WHEN_BASE_BID_IS_MISSING = typing___cast(MultiplierErrorEnum.MultiplierError, 6)
-        NO_MULTIPLIER_SPECIFIED = typing___cast(MultiplierErrorEnum.MultiplierError, 7)
-        MULTIPLIER_CAUSES_BID_TO_EXCEED_DAILY_BUDGET = typing___cast(MultiplierErrorEnum.MultiplierError, 8)
-        MULTIPLIER_CAUSES_BID_TO_EXCEED_MONTHLY_BUDGET = typing___cast(MultiplierErrorEnum.MultiplierError, 9)
-        MULTIPLIER_CAUSES_BID_TO_EXCEED_CUSTOM_BUDGET = typing___cast(MultiplierErrorEnum.MultiplierError, 10)
-        MULTIPLIER_CAUSES_BID_TO_EXCEED_MAX_ALLOWED_BID = typing___cast(MultiplierErrorEnum.MultiplierError, 11)
-        BID_LESS_THAN_MIN_ALLOWED_BID_WITH_MULTIPLIER = typing___cast(MultiplierErrorEnum.MultiplierError, 12)
-        MULTIPLIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH = typing___cast(MultiplierErrorEnum.MultiplierError, 13)
-    UNSPECIFIED = typing___cast(MultiplierErrorEnum.MultiplierError, 0)
-    UNKNOWN = typing___cast(MultiplierErrorEnum.MultiplierError, 1)
-    MULTIPLIER_TOO_HIGH = typing___cast(MultiplierErrorEnum.MultiplierError, 2)
-    MULTIPLIER_TOO_LOW = typing___cast(MultiplierErrorEnum.MultiplierError, 3)
-    TOO_MANY_FRACTIONAL_DIGITS = typing___cast(MultiplierErrorEnum.MultiplierError, 4)
-    MULTIPLIER_NOT_ALLOWED_FOR_BIDDING_STRATEGY = typing___cast(MultiplierErrorEnum.MultiplierError, 5)
-    MULTIPLIER_NOT_ALLOWED_WHEN_BASE_BID_IS_MISSING = typing___cast(MultiplierErrorEnum.MultiplierError, 6)
-    NO_MULTIPLIER_SPECIFIED = typing___cast(MultiplierErrorEnum.MultiplierError, 7)
-    MULTIPLIER_CAUSES_BID_TO_EXCEED_DAILY_BUDGET = typing___cast(MultiplierErrorEnum.MultiplierError, 8)
-    MULTIPLIER_CAUSES_BID_TO_EXCEED_MONTHLY_BUDGET = typing___cast(MultiplierErrorEnum.MultiplierError, 9)
-    MULTIPLIER_CAUSES_BID_TO_EXCEED_CUSTOM_BUDGET = typing___cast(MultiplierErrorEnum.MultiplierError, 10)
-    MULTIPLIER_CAUSES_BID_TO_EXCEED_MAX_ALLOWED_BID = typing___cast(MultiplierErrorEnum.MultiplierError, 11)
-    BID_LESS_THAN_MIN_ALLOWED_BID_WITH_MULTIPLIER = typing___cast(MultiplierErrorEnum.MultiplierError, 12)
-    MULTIPLIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH = typing___cast(MultiplierErrorEnum.MultiplierError, 13)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'MultiplierErrorEnum.MultiplierError']]: ...
+        UNSPECIFIED = typing___cast('MultiplierErrorEnum.MultiplierError', 0)
+        UNKNOWN = typing___cast('MultiplierErrorEnum.MultiplierError', 1)
+        MULTIPLIER_TOO_HIGH = typing___cast('MultiplierErrorEnum.MultiplierError', 2)
+        MULTIPLIER_TOO_LOW = typing___cast('MultiplierErrorEnum.MultiplierError', 3)
+        TOO_MANY_FRACTIONAL_DIGITS = typing___cast('MultiplierErrorEnum.MultiplierError', 4)
+        MULTIPLIER_NOT_ALLOWED_FOR_BIDDING_STRATEGY = typing___cast('MultiplierErrorEnum.MultiplierError', 5)
+        MULTIPLIER_NOT_ALLOWED_WHEN_BASE_BID_IS_MISSING = typing___cast('MultiplierErrorEnum.MultiplierError', 6)
+        NO_MULTIPLIER_SPECIFIED = typing___cast('MultiplierErrorEnum.MultiplierError', 7)
+        MULTIPLIER_CAUSES_BID_TO_EXCEED_DAILY_BUDGET = typing___cast('MultiplierErrorEnum.MultiplierError', 8)
+        MULTIPLIER_CAUSES_BID_TO_EXCEED_MONTHLY_BUDGET = typing___cast('MultiplierErrorEnum.MultiplierError', 9)
+        MULTIPLIER_CAUSES_BID_TO_EXCEED_CUSTOM_BUDGET = typing___cast('MultiplierErrorEnum.MultiplierError', 10)
+        MULTIPLIER_CAUSES_BID_TO_EXCEED_MAX_ALLOWED_BID = typing___cast('MultiplierErrorEnum.MultiplierError', 11)
+        BID_LESS_THAN_MIN_ALLOWED_BID_WITH_MULTIPLIER = typing___cast('MultiplierErrorEnum.MultiplierError', 12)
+        MULTIPLIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH = typing___cast('MultiplierErrorEnum.MultiplierError', 13)
+    UNSPECIFIED = typing___cast('MultiplierErrorEnum.MultiplierError', 0)
+    UNKNOWN = typing___cast('MultiplierErrorEnum.MultiplierError', 1)
+    MULTIPLIER_TOO_HIGH = typing___cast('MultiplierErrorEnum.MultiplierError', 2)
+    MULTIPLIER_TOO_LOW = typing___cast('MultiplierErrorEnum.MultiplierError', 3)
+    TOO_MANY_FRACTIONAL_DIGITS = typing___cast('MultiplierErrorEnum.MultiplierError', 4)
+    MULTIPLIER_NOT_ALLOWED_FOR_BIDDING_STRATEGY = typing___cast('MultiplierErrorEnum.MultiplierError', 5)
+    MULTIPLIER_NOT_ALLOWED_WHEN_BASE_BID_IS_MISSING = typing___cast('MultiplierErrorEnum.MultiplierError', 6)
+    NO_MULTIPLIER_SPECIFIED = typing___cast('MultiplierErrorEnum.MultiplierError', 7)
+    MULTIPLIER_CAUSES_BID_TO_EXCEED_DAILY_BUDGET = typing___cast('MultiplierErrorEnum.MultiplierError', 8)
+    MULTIPLIER_CAUSES_BID_TO_EXCEED_MONTHLY_BUDGET = typing___cast('MultiplierErrorEnum.MultiplierError', 9)
+    MULTIPLIER_CAUSES_BID_TO_EXCEED_CUSTOM_BUDGET = typing___cast('MultiplierErrorEnum.MultiplierError', 10)
+    MULTIPLIER_CAUSES_BID_TO_EXCEED_MAX_ALLOWED_BID = typing___cast('MultiplierErrorEnum.MultiplierError', 11)
+    BID_LESS_THAN_MIN_ALLOWED_BID_WITH_MULTIPLIER = typing___cast('MultiplierErrorEnum.MultiplierError', 12)
+    MULTIPLIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH = typing___cast('MultiplierErrorEnum.MultiplierError', 13)
+    global___MultiplierError = MultiplierError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> MultiplierErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> MultiplierErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MultiplierErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___MultiplierErrorEnum = MultiplierErrorEnum

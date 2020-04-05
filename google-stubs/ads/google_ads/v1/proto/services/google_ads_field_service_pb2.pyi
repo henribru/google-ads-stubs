@@ -20,11 +20,21 @@ from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class GetGoogleAdsFieldRequest(google___protobuf___message___Message):
@@ -35,40 +45,44 @@ class GetGoogleAdsFieldRequest(google___protobuf___message___Message):
         *,
         resource_name : typing___Optional[typing___Text] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> GetGoogleAdsFieldRequest: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> GetGoogleAdsFieldRequest: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> GetGoogleAdsFieldRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def ClearField(self, field_name: typing_extensions___Literal[u"resource_name"]) -> None: ...
-    else:
-        def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
+global___GetGoogleAdsFieldRequest = GetGoogleAdsFieldRequest
 
 class SearchGoogleAdsFieldsRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     query = ... # type: typing___Text
     page_token = ... # type: typing___Text
-    page_size = ... # type: int
+    page_size = ... # type: builtin___int
 
     def __init__(self,
         *,
         query : typing___Optional[typing___Text] = None,
         page_token : typing___Optional[typing___Text] = None,
-        page_size : typing___Optional[int] = None,
+        page_size : typing___Optional[builtin___int] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> SearchGoogleAdsFieldsRequest: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SearchGoogleAdsFieldsRequest: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SearchGoogleAdsFieldsRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def ClearField(self, field_name: typing_extensions___Literal[u"page_size",u"page_token",u"query"]) -> None: ...
-    else:
-        def ClearField(self, field_name: typing_extensions___Literal[u"page_size",b"page_size",u"page_token",b"page_token",u"query",b"query"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"page_size",b"page_size",u"page_token",b"page_token",u"query",b"query"]) -> None: ...
+global___SearchGoogleAdsFieldsRequest = SearchGoogleAdsFieldsRequest
 
 class SearchGoogleAdsFieldsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     next_page_token = ... # type: typing___Text
-    total_results_count = ... # type: int
+    total_results_count = ... # type: builtin___int
 
     @property
     def results(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___resources___google_ads_field_pb2___GoogleAdsField]: ...
@@ -77,13 +91,15 @@ class SearchGoogleAdsFieldsResponse(google___protobuf___message___Message):
         *,
         results : typing___Optional[typing___Iterable[google___ads___googleads___v1___resources___google_ads_field_pb2___GoogleAdsField]] = None,
         next_page_token : typing___Optional[typing___Text] = None,
-        total_results_count : typing___Optional[int] = None,
+        total_results_count : typing___Optional[builtin___int] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> SearchGoogleAdsFieldsResponse: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SearchGoogleAdsFieldsResponse: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SearchGoogleAdsFieldsResponse: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def ClearField(self, field_name: typing_extensions___Literal[u"next_page_token",u"results",u"total_results_count"]) -> None: ...
-    else:
-        def ClearField(self, field_name: typing_extensions___Literal[u"next_page_token",b"next_page_token",u"results",b"results",u"total_results_count",b"total_results_count"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"next_page_token",b"next_page_token",u"results",b"results",u"total_results_count",b"total_results_count"]) -> None: ...
+global___SearchGoogleAdsFieldsResponse = SearchGoogleAdsFieldsResponse

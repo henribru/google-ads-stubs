@@ -12,37 +12,52 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class RangeErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class RangeError(int):
+    class RangeError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> RangeErrorEnum.RangeError: ...
+        def Value(cls, name: builtin___str) -> 'RangeErrorEnum.RangeError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[RangeErrorEnum.RangeError]: ...
+        def values(cls) -> typing___List['RangeErrorEnum.RangeError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, RangeErrorEnum.RangeError]]: ...
-        UNSPECIFIED = typing___cast(RangeErrorEnum.RangeError, 0)
-        UNKNOWN = typing___cast(RangeErrorEnum.RangeError, 1)
-        TOO_LOW = typing___cast(RangeErrorEnum.RangeError, 2)
-        TOO_HIGH = typing___cast(RangeErrorEnum.RangeError, 3)
-    UNSPECIFIED = typing___cast(RangeErrorEnum.RangeError, 0)
-    UNKNOWN = typing___cast(RangeErrorEnum.RangeError, 1)
-    TOO_LOW = typing___cast(RangeErrorEnum.RangeError, 2)
-    TOO_HIGH = typing___cast(RangeErrorEnum.RangeError, 3)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'RangeErrorEnum.RangeError']]: ...
+        UNSPECIFIED = typing___cast('RangeErrorEnum.RangeError', 0)
+        UNKNOWN = typing___cast('RangeErrorEnum.RangeError', 1)
+        TOO_LOW = typing___cast('RangeErrorEnum.RangeError', 2)
+        TOO_HIGH = typing___cast('RangeErrorEnum.RangeError', 3)
+    UNSPECIFIED = typing___cast('RangeErrorEnum.RangeError', 0)
+    UNKNOWN = typing___cast('RangeErrorEnum.RangeError', 1)
+    TOO_LOW = typing___cast('RangeErrorEnum.RangeError', 2)
+    TOO_HIGH = typing___cast('RangeErrorEnum.RangeError', 3)
+    global___RangeError = RangeError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> RangeErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> RangeErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> RangeErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___RangeErrorEnum = RangeErrorEnum

@@ -30,11 +30,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class AdGroupBidModifier(google___protobuf___message___Message):
@@ -87,14 +97,15 @@ class AdGroupBidModifier(google___protobuf___message___Message):
         device : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___DeviceInfo] = None,
         preferred_content : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___PreferredContentInfo] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AdGroupBidModifier: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AdGroupBidModifier: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroupBidModifier: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group",u"base_ad_group",u"bid_modifier",u"criterion",u"criterion_id",u"device",u"hotel_advance_booking_window",u"hotel_check_in_day",u"hotel_date_selection_type",u"hotel_length_of_stay",u"preferred_content"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",u"base_ad_group",u"bid_modifier",u"bid_modifier_source",u"criterion",u"criterion_id",u"device",u"hotel_advance_booking_window",u"hotel_check_in_day",u"hotel_date_selection_type",u"hotel_length_of_stay",u"preferred_content",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"base_ad_group",b"base_ad_group",u"bid_modifier",b"bid_modifier",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"hotel_advance_booking_window",b"hotel_advance_booking_window",u"hotel_check_in_day",b"hotel_check_in_day",u"hotel_date_selection_type",b"hotel_date_selection_type",u"hotel_length_of_stay",b"hotel_length_of_stay",u"preferred_content",b"preferred_content"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"base_ad_group",b"base_ad_group",u"bid_modifier",b"bid_modifier",u"bid_modifier_source",b"bid_modifier_source",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"hotel_advance_booking_window",b"hotel_advance_booking_window",u"hotel_check_in_day",b"hotel_check_in_day",u"hotel_date_selection_type",b"hotel_date_selection_type",u"hotel_length_of_stay",b"hotel_length_of_stay",u"preferred_content",b"preferred_content",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"base_ad_group",b"base_ad_group",u"bid_modifier",b"bid_modifier",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"hotel_advance_booking_window",b"hotel_advance_booking_window",u"hotel_check_in_day",b"hotel_check_in_day",u"hotel_date_selection_type",b"hotel_date_selection_type",u"hotel_length_of_stay",b"hotel_length_of_stay",u"preferred_content",b"preferred_content"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"base_ad_group",b"base_ad_group",u"bid_modifier",b"bid_modifier",u"bid_modifier_source",b"bid_modifier_source",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"hotel_advance_booking_window",b"hotel_advance_booking_window",u"hotel_check_in_day",b"hotel_check_in_day",u"hotel_date_selection_type",b"hotel_date_selection_type",u"hotel_length_of_stay",b"hotel_length_of_stay",u"preferred_content",b"preferred_content",u"resource_name",b"resource_name"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"criterion",b"criterion"]) -> typing_extensions___Literal["hotel_date_selection_type","hotel_advance_booking_window","hotel_length_of_stay","hotel_check_in_day","device","preferred_content"]: ...
+global___AdGroupBidModifier = AdGroupBidModifier

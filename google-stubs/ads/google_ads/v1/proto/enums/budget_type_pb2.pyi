@@ -12,39 +12,54 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class BudgetTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class BudgetType(int):
+    class BudgetType(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> BudgetTypeEnum.BudgetType: ...
+        def Value(cls, name: builtin___str) -> 'BudgetTypeEnum.BudgetType': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[BudgetTypeEnum.BudgetType]: ...
+        def values(cls) -> typing___List['BudgetTypeEnum.BudgetType']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, BudgetTypeEnum.BudgetType]]: ...
-        UNSPECIFIED = typing___cast(BudgetTypeEnum.BudgetType, 0)
-        UNKNOWN = typing___cast(BudgetTypeEnum.BudgetType, 1)
-        STANDARD = typing___cast(BudgetTypeEnum.BudgetType, 2)
-        HOTEL_ADS_COMMISSION = typing___cast(BudgetTypeEnum.BudgetType, 3)
-        FIXED_CPA = typing___cast(BudgetTypeEnum.BudgetType, 4)
-    UNSPECIFIED = typing___cast(BudgetTypeEnum.BudgetType, 0)
-    UNKNOWN = typing___cast(BudgetTypeEnum.BudgetType, 1)
-    STANDARD = typing___cast(BudgetTypeEnum.BudgetType, 2)
-    HOTEL_ADS_COMMISSION = typing___cast(BudgetTypeEnum.BudgetType, 3)
-    FIXED_CPA = typing___cast(BudgetTypeEnum.BudgetType, 4)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'BudgetTypeEnum.BudgetType']]: ...
+        UNSPECIFIED = typing___cast('BudgetTypeEnum.BudgetType', 0)
+        UNKNOWN = typing___cast('BudgetTypeEnum.BudgetType', 1)
+        STANDARD = typing___cast('BudgetTypeEnum.BudgetType', 2)
+        HOTEL_ADS_COMMISSION = typing___cast('BudgetTypeEnum.BudgetType', 3)
+        FIXED_CPA = typing___cast('BudgetTypeEnum.BudgetType', 4)
+    UNSPECIFIED = typing___cast('BudgetTypeEnum.BudgetType', 0)
+    UNKNOWN = typing___cast('BudgetTypeEnum.BudgetType', 1)
+    STANDARD = typing___cast('BudgetTypeEnum.BudgetType', 2)
+    HOTEL_ADS_COMMISSION = typing___cast('BudgetTypeEnum.BudgetType', 3)
+    FIXED_CPA = typing___cast('BudgetTypeEnum.BudgetType', 4)
+    global___BudgetType = BudgetType
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> BudgetTypeEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> BudgetTypeEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> BudgetTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___BudgetTypeEnum = BudgetTypeEnum

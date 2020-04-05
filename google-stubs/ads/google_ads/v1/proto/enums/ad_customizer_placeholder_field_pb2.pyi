@@ -12,41 +12,56 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class AdCustomizerPlaceholderFieldEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class AdCustomizerPlaceholderField(int):
+    class AdCustomizerPlaceholderField(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField: ...
+        def Value(cls, name: builtin___str) -> 'AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField]: ...
+        def values(cls) -> typing___List['AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField]]: ...
-        UNSPECIFIED = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 0)
-        UNKNOWN = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 1)
-        INTEGER = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 2)
-        PRICE = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 3)
-        DATE = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 4)
-        STRING = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 5)
-    UNSPECIFIED = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 0)
-    UNKNOWN = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 1)
-    INTEGER = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 2)
-    PRICE = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 3)
-    DATE = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 4)
-    STRING = typing___cast(AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField, 5)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField']]: ...
+        UNSPECIFIED = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 0)
+        UNKNOWN = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 1)
+        INTEGER = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 2)
+        PRICE = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 3)
+        DATE = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 4)
+        STRING = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 5)
+    UNSPECIFIED = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 0)
+    UNKNOWN = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 1)
+    INTEGER = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 2)
+    PRICE = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 3)
+    DATE = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 4)
+    STRING = typing___cast('AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField', 5)
+    global___AdCustomizerPlaceholderField = AdCustomizerPlaceholderField
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AdCustomizerPlaceholderFieldEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AdCustomizerPlaceholderFieldEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdCustomizerPlaceholderFieldEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___AdCustomizerPlaceholderFieldEnum = AdCustomizerPlaceholderFieldEnum

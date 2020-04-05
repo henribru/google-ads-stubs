@@ -15,11 +15,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class AdGroupCriterionLabel(google___protobuf___message___Message):
@@ -38,13 +48,14 @@ class AdGroupCriterionLabel(google___protobuf___message___Message):
         ad_group_criterion : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         label : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AdGroupCriterionLabel: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AdGroupCriterionLabel: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroupCriterionLabel: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",u"label"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",u"label",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",b"ad_group_criterion",u"label",b"label"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",b"ad_group_criterion",u"label",b"label",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",b"ad_group_criterion",u"label",b"label"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",b"ad_group_criterion",u"label",b"label",u"resource_name",b"resource_name"]) -> None: ...
+global___AdGroupCriterionLabel = AdGroupCriterionLabel

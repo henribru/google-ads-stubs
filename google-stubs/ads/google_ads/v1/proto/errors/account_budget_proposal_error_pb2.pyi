@@ -12,77 +12,92 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class AccountBudgetProposalErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class AccountBudgetProposalError(int):
+    class AccountBudgetProposalError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> AccountBudgetProposalErrorEnum.AccountBudgetProposalError: ...
+        def Value(cls, name: builtin___str) -> 'AccountBudgetProposalErrorEnum.AccountBudgetProposalError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[AccountBudgetProposalErrorEnum.AccountBudgetProposalError]: ...
+        def values(cls) -> typing___List['AccountBudgetProposalErrorEnum.AccountBudgetProposalError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, AccountBudgetProposalErrorEnum.AccountBudgetProposalError]]: ...
-        UNSPECIFIED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 0)
-        UNKNOWN = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 1)
-        FIELD_MASK_NOT_ALLOWED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 2)
-        IMMUTABLE_FIELD = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 3)
-        REQUIRED_FIELD_MISSING = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 4)
-        CANNOT_CANCEL_APPROVED_PROPOSAL = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 5)
-        CANNOT_REMOVE_UNAPPROVED_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 6)
-        CANNOT_REMOVE_RUNNING_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 7)
-        CANNOT_END_UNAPPROVED_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 8)
-        CANNOT_END_INACTIVE_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 9)
-        BUDGET_NAME_REQUIRED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 10)
-        CANNOT_UPDATE_OLD_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 11)
-        CANNOT_END_IN_PAST = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 12)
-        CANNOT_EXTEND_END_TIME = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 13)
-        PURCHASE_ORDER_NUMBER_REQUIRED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 14)
-        PENDING_UPDATE_PROPOSAL_EXISTS = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 15)
-        MULTIPLE_BUDGETS_NOT_ALLOWED_FOR_UNAPPROVED_BILLING_SETUP = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 16)
-        CANNOT_UPDATE_START_TIME_FOR_STARTED_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 17)
-        SPENDING_LIMIT_LOWER_THAN_ACCRUED_COST_NOT_ALLOWED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 18)
-        UPDATE_IS_NO_OP = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 19)
-        END_TIME_MUST_FOLLOW_START_TIME = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 20)
-        BUDGET_DATE_RANGE_INCOMPATIBLE_WITH_BILLING_SETUP = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 21)
-        NOT_AUTHORIZED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 22)
-        INVALID_BILLING_SETUP = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 23)
-    UNSPECIFIED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 0)
-    UNKNOWN = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 1)
-    FIELD_MASK_NOT_ALLOWED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 2)
-    IMMUTABLE_FIELD = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 3)
-    REQUIRED_FIELD_MISSING = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 4)
-    CANNOT_CANCEL_APPROVED_PROPOSAL = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 5)
-    CANNOT_REMOVE_UNAPPROVED_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 6)
-    CANNOT_REMOVE_RUNNING_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 7)
-    CANNOT_END_UNAPPROVED_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 8)
-    CANNOT_END_INACTIVE_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 9)
-    BUDGET_NAME_REQUIRED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 10)
-    CANNOT_UPDATE_OLD_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 11)
-    CANNOT_END_IN_PAST = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 12)
-    CANNOT_EXTEND_END_TIME = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 13)
-    PURCHASE_ORDER_NUMBER_REQUIRED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 14)
-    PENDING_UPDATE_PROPOSAL_EXISTS = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 15)
-    MULTIPLE_BUDGETS_NOT_ALLOWED_FOR_UNAPPROVED_BILLING_SETUP = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 16)
-    CANNOT_UPDATE_START_TIME_FOR_STARTED_BUDGET = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 17)
-    SPENDING_LIMIT_LOWER_THAN_ACCRUED_COST_NOT_ALLOWED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 18)
-    UPDATE_IS_NO_OP = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 19)
-    END_TIME_MUST_FOLLOW_START_TIME = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 20)
-    BUDGET_DATE_RANGE_INCOMPATIBLE_WITH_BILLING_SETUP = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 21)
-    NOT_AUTHORIZED = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 22)
-    INVALID_BILLING_SETUP = typing___cast(AccountBudgetProposalErrorEnum.AccountBudgetProposalError, 23)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AccountBudgetProposalErrorEnum.AccountBudgetProposalError']]: ...
+        UNSPECIFIED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 0)
+        UNKNOWN = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 1)
+        FIELD_MASK_NOT_ALLOWED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 2)
+        IMMUTABLE_FIELD = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 3)
+        REQUIRED_FIELD_MISSING = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 4)
+        CANNOT_CANCEL_APPROVED_PROPOSAL = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 5)
+        CANNOT_REMOVE_UNAPPROVED_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 6)
+        CANNOT_REMOVE_RUNNING_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 7)
+        CANNOT_END_UNAPPROVED_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 8)
+        CANNOT_END_INACTIVE_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 9)
+        BUDGET_NAME_REQUIRED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 10)
+        CANNOT_UPDATE_OLD_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 11)
+        CANNOT_END_IN_PAST = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 12)
+        CANNOT_EXTEND_END_TIME = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 13)
+        PURCHASE_ORDER_NUMBER_REQUIRED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 14)
+        PENDING_UPDATE_PROPOSAL_EXISTS = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 15)
+        MULTIPLE_BUDGETS_NOT_ALLOWED_FOR_UNAPPROVED_BILLING_SETUP = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 16)
+        CANNOT_UPDATE_START_TIME_FOR_STARTED_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 17)
+        SPENDING_LIMIT_LOWER_THAN_ACCRUED_COST_NOT_ALLOWED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 18)
+        UPDATE_IS_NO_OP = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 19)
+        END_TIME_MUST_FOLLOW_START_TIME = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 20)
+        BUDGET_DATE_RANGE_INCOMPATIBLE_WITH_BILLING_SETUP = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 21)
+        NOT_AUTHORIZED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 22)
+        INVALID_BILLING_SETUP = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 23)
+    UNSPECIFIED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 0)
+    UNKNOWN = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 1)
+    FIELD_MASK_NOT_ALLOWED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 2)
+    IMMUTABLE_FIELD = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 3)
+    REQUIRED_FIELD_MISSING = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 4)
+    CANNOT_CANCEL_APPROVED_PROPOSAL = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 5)
+    CANNOT_REMOVE_UNAPPROVED_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 6)
+    CANNOT_REMOVE_RUNNING_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 7)
+    CANNOT_END_UNAPPROVED_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 8)
+    CANNOT_END_INACTIVE_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 9)
+    BUDGET_NAME_REQUIRED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 10)
+    CANNOT_UPDATE_OLD_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 11)
+    CANNOT_END_IN_PAST = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 12)
+    CANNOT_EXTEND_END_TIME = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 13)
+    PURCHASE_ORDER_NUMBER_REQUIRED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 14)
+    PENDING_UPDATE_PROPOSAL_EXISTS = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 15)
+    MULTIPLE_BUDGETS_NOT_ALLOWED_FOR_UNAPPROVED_BILLING_SETUP = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 16)
+    CANNOT_UPDATE_START_TIME_FOR_STARTED_BUDGET = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 17)
+    SPENDING_LIMIT_LOWER_THAN_ACCRUED_COST_NOT_ALLOWED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 18)
+    UPDATE_IS_NO_OP = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 19)
+    END_TIME_MUST_FOLLOW_START_TIME = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 20)
+    BUDGET_DATE_RANGE_INCOMPATIBLE_WITH_BILLING_SETUP = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 21)
+    NOT_AUTHORIZED = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 22)
+    INVALID_BILLING_SETUP = typing___cast('AccountBudgetProposalErrorEnum.AccountBudgetProposalError', 23)
+    global___AccountBudgetProposalError = AccountBudgetProposalError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AccountBudgetProposalErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AccountBudgetProposalErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AccountBudgetProposalErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___AccountBudgetProposalErrorEnum = AccountBudgetProposalErrorEnum

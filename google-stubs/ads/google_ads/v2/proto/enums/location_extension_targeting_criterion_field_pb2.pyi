@@ -12,45 +12,60 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class LocationExtensionTargetingCriterionFieldEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class LocationExtensionTargetingCriterionField(int):
+    class LocationExtensionTargetingCriterionField(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField: ...
+        def Value(cls, name: builtin___str) -> 'LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField]: ...
+        def values(cls) -> typing___List['LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField]]: ...
-        UNSPECIFIED = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 0)
-        UNKNOWN = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 1)
-        ADDRESS_LINE_1 = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 2)
-        ADDRESS_LINE_2 = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 3)
-        CITY = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 4)
-        PROVINCE = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 5)
-        POSTAL_CODE = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 6)
-        COUNTRY_CODE = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 7)
-    UNSPECIFIED = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 0)
-    UNKNOWN = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 1)
-    ADDRESS_LINE_1 = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 2)
-    ADDRESS_LINE_2 = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 3)
-    CITY = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 4)
-    PROVINCE = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 5)
-    POSTAL_CODE = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 6)
-    COUNTRY_CODE = typing___cast(LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField, 7)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField']]: ...
+        UNSPECIFIED = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 0)
+        UNKNOWN = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 1)
+        ADDRESS_LINE_1 = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 2)
+        ADDRESS_LINE_2 = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 3)
+        CITY = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 4)
+        PROVINCE = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 5)
+        POSTAL_CODE = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 6)
+        COUNTRY_CODE = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 7)
+    UNSPECIFIED = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 0)
+    UNKNOWN = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 1)
+    ADDRESS_LINE_1 = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 2)
+    ADDRESS_LINE_2 = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 3)
+    CITY = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 4)
+    PROVINCE = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 5)
+    POSTAL_CODE = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 6)
+    COUNTRY_CODE = typing___cast('LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField', 7)
+    global___LocationExtensionTargetingCriterionField = LocationExtensionTargetingCriterionField
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> LocationExtensionTargetingCriterionFieldEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> LocationExtensionTargetingCriterionFieldEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> LocationExtensionTargetingCriterionFieldEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___LocationExtensionTargetingCriterionFieldEnum = LocationExtensionTargetingCriterionFieldEnum

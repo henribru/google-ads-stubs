@@ -12,43 +12,58 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class CallPlaceholderFieldEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class CallPlaceholderField(int):
+    class CallPlaceholderField(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> CallPlaceholderFieldEnum.CallPlaceholderField: ...
+        def Value(cls, name: builtin___str) -> 'CallPlaceholderFieldEnum.CallPlaceholderField': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[CallPlaceholderFieldEnum.CallPlaceholderField]: ...
+        def values(cls) -> typing___List['CallPlaceholderFieldEnum.CallPlaceholderField']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, CallPlaceholderFieldEnum.CallPlaceholderField]]: ...
-        UNSPECIFIED = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 0)
-        UNKNOWN = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 1)
-        PHONE_NUMBER = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 2)
-        COUNTRY_CODE = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 3)
-        TRACKED = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 4)
-        CONVERSION_TYPE_ID = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 5)
-        CONVERSION_REPORTING_STATE = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 6)
-    UNSPECIFIED = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 0)
-    UNKNOWN = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 1)
-    PHONE_NUMBER = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 2)
-    COUNTRY_CODE = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 3)
-    TRACKED = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 4)
-    CONVERSION_TYPE_ID = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 5)
-    CONVERSION_REPORTING_STATE = typing___cast(CallPlaceholderFieldEnum.CallPlaceholderField, 6)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'CallPlaceholderFieldEnum.CallPlaceholderField']]: ...
+        UNSPECIFIED = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 0)
+        UNKNOWN = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 1)
+        PHONE_NUMBER = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 2)
+        COUNTRY_CODE = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 3)
+        TRACKED = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 4)
+        CONVERSION_TYPE_ID = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 5)
+        CONVERSION_REPORTING_STATE = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 6)
+    UNSPECIFIED = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 0)
+    UNKNOWN = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 1)
+    PHONE_NUMBER = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 2)
+    COUNTRY_CODE = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 3)
+    TRACKED = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 4)
+    CONVERSION_TYPE_ID = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 5)
+    CONVERSION_REPORTING_STATE = typing___cast('CallPlaceholderFieldEnum.CallPlaceholderField', 6)
+    global___CallPlaceholderField = CallPlaceholderField
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CallPlaceholderFieldEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CallPlaceholderFieldEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CallPlaceholderFieldEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___CallPlaceholderFieldEnum = CallPlaceholderFieldEnum

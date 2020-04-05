@@ -12,51 +12,66 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class LabelErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class LabelError(int):
+    class LabelError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> LabelErrorEnum.LabelError: ...
+        def Value(cls, name: builtin___str) -> 'LabelErrorEnum.LabelError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[LabelErrorEnum.LabelError]: ...
+        def values(cls) -> typing___List['LabelErrorEnum.LabelError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, LabelErrorEnum.LabelError]]: ...
-        UNSPECIFIED = typing___cast(LabelErrorEnum.LabelError, 0)
-        UNKNOWN = typing___cast(LabelErrorEnum.LabelError, 1)
-        CANNOT_APPLY_INACTIVE_LABEL = typing___cast(LabelErrorEnum.LabelError, 2)
-        CANNOT_APPLY_LABEL_TO_DISABLED_AD_GROUP_CRITERION = typing___cast(LabelErrorEnum.LabelError, 3)
-        CANNOT_APPLY_LABEL_TO_NEGATIVE_AD_GROUP_CRITERION = typing___cast(LabelErrorEnum.LabelError, 4)
-        EXCEEDED_LABEL_LIMIT_PER_TYPE = typing___cast(LabelErrorEnum.LabelError, 5)
-        INVALID_RESOURCE_FOR_MANAGER_LABEL = typing___cast(LabelErrorEnum.LabelError, 6)
-        DUPLICATE_NAME = typing___cast(LabelErrorEnum.LabelError, 7)
-        INVALID_LABEL_NAME = typing___cast(LabelErrorEnum.LabelError, 8)
-        CANNOT_ATTACH_LABEL_TO_DRAFT = typing___cast(LabelErrorEnum.LabelError, 9)
-        CANNOT_ATTACH_NON_MANAGER_LABEL_TO_CUSTOMER = typing___cast(LabelErrorEnum.LabelError, 10)
-    UNSPECIFIED = typing___cast(LabelErrorEnum.LabelError, 0)
-    UNKNOWN = typing___cast(LabelErrorEnum.LabelError, 1)
-    CANNOT_APPLY_INACTIVE_LABEL = typing___cast(LabelErrorEnum.LabelError, 2)
-    CANNOT_APPLY_LABEL_TO_DISABLED_AD_GROUP_CRITERION = typing___cast(LabelErrorEnum.LabelError, 3)
-    CANNOT_APPLY_LABEL_TO_NEGATIVE_AD_GROUP_CRITERION = typing___cast(LabelErrorEnum.LabelError, 4)
-    EXCEEDED_LABEL_LIMIT_PER_TYPE = typing___cast(LabelErrorEnum.LabelError, 5)
-    INVALID_RESOURCE_FOR_MANAGER_LABEL = typing___cast(LabelErrorEnum.LabelError, 6)
-    DUPLICATE_NAME = typing___cast(LabelErrorEnum.LabelError, 7)
-    INVALID_LABEL_NAME = typing___cast(LabelErrorEnum.LabelError, 8)
-    CANNOT_ATTACH_LABEL_TO_DRAFT = typing___cast(LabelErrorEnum.LabelError, 9)
-    CANNOT_ATTACH_NON_MANAGER_LABEL_TO_CUSTOMER = typing___cast(LabelErrorEnum.LabelError, 10)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'LabelErrorEnum.LabelError']]: ...
+        UNSPECIFIED = typing___cast('LabelErrorEnum.LabelError', 0)
+        UNKNOWN = typing___cast('LabelErrorEnum.LabelError', 1)
+        CANNOT_APPLY_INACTIVE_LABEL = typing___cast('LabelErrorEnum.LabelError', 2)
+        CANNOT_APPLY_LABEL_TO_DISABLED_AD_GROUP_CRITERION = typing___cast('LabelErrorEnum.LabelError', 3)
+        CANNOT_APPLY_LABEL_TO_NEGATIVE_AD_GROUP_CRITERION = typing___cast('LabelErrorEnum.LabelError', 4)
+        EXCEEDED_LABEL_LIMIT_PER_TYPE = typing___cast('LabelErrorEnum.LabelError', 5)
+        INVALID_RESOURCE_FOR_MANAGER_LABEL = typing___cast('LabelErrorEnum.LabelError', 6)
+        DUPLICATE_NAME = typing___cast('LabelErrorEnum.LabelError', 7)
+        INVALID_LABEL_NAME = typing___cast('LabelErrorEnum.LabelError', 8)
+        CANNOT_ATTACH_LABEL_TO_DRAFT = typing___cast('LabelErrorEnum.LabelError', 9)
+        CANNOT_ATTACH_NON_MANAGER_LABEL_TO_CUSTOMER = typing___cast('LabelErrorEnum.LabelError', 10)
+    UNSPECIFIED = typing___cast('LabelErrorEnum.LabelError', 0)
+    UNKNOWN = typing___cast('LabelErrorEnum.LabelError', 1)
+    CANNOT_APPLY_INACTIVE_LABEL = typing___cast('LabelErrorEnum.LabelError', 2)
+    CANNOT_APPLY_LABEL_TO_DISABLED_AD_GROUP_CRITERION = typing___cast('LabelErrorEnum.LabelError', 3)
+    CANNOT_APPLY_LABEL_TO_NEGATIVE_AD_GROUP_CRITERION = typing___cast('LabelErrorEnum.LabelError', 4)
+    EXCEEDED_LABEL_LIMIT_PER_TYPE = typing___cast('LabelErrorEnum.LabelError', 5)
+    INVALID_RESOURCE_FOR_MANAGER_LABEL = typing___cast('LabelErrorEnum.LabelError', 6)
+    DUPLICATE_NAME = typing___cast('LabelErrorEnum.LabelError', 7)
+    INVALID_LABEL_NAME = typing___cast('LabelErrorEnum.LabelError', 8)
+    CANNOT_ATTACH_LABEL_TO_DRAFT = typing___cast('LabelErrorEnum.LabelError', 9)
+    CANNOT_ATTACH_NON_MANAGER_LABEL_TO_CUSTOMER = typing___cast('LabelErrorEnum.LabelError', 10)
+    global___LabelError = LabelError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> LabelErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> LabelErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> LabelErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___LabelErrorEnum = LabelErrorEnum

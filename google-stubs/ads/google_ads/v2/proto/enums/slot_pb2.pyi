@@ -12,47 +12,62 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class SlotEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class Slot(int):
+    class Slot(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> SlotEnum.Slot: ...
+        def Value(cls, name: builtin___str) -> 'SlotEnum.Slot': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[SlotEnum.Slot]: ...
+        def values(cls) -> typing___List['SlotEnum.Slot']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, SlotEnum.Slot]]: ...
-        UNSPECIFIED = typing___cast(SlotEnum.Slot, 0)
-        UNKNOWN = typing___cast(SlotEnum.Slot, 1)
-        SEARCH_SIDE = typing___cast(SlotEnum.Slot, 2)
-        SEARCH_TOP = typing___cast(SlotEnum.Slot, 3)
-        SEARCH_OTHER = typing___cast(SlotEnum.Slot, 4)
-        CONTENT = typing___cast(SlotEnum.Slot, 5)
-        SEARCH_PARTNER_TOP = typing___cast(SlotEnum.Slot, 6)
-        SEARCH_PARTNER_OTHER = typing___cast(SlotEnum.Slot, 7)
-        MIXED = typing___cast(SlotEnum.Slot, 8)
-    UNSPECIFIED = typing___cast(SlotEnum.Slot, 0)
-    UNKNOWN = typing___cast(SlotEnum.Slot, 1)
-    SEARCH_SIDE = typing___cast(SlotEnum.Slot, 2)
-    SEARCH_TOP = typing___cast(SlotEnum.Slot, 3)
-    SEARCH_OTHER = typing___cast(SlotEnum.Slot, 4)
-    CONTENT = typing___cast(SlotEnum.Slot, 5)
-    SEARCH_PARTNER_TOP = typing___cast(SlotEnum.Slot, 6)
-    SEARCH_PARTNER_OTHER = typing___cast(SlotEnum.Slot, 7)
-    MIXED = typing___cast(SlotEnum.Slot, 8)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'SlotEnum.Slot']]: ...
+        UNSPECIFIED = typing___cast('SlotEnum.Slot', 0)
+        UNKNOWN = typing___cast('SlotEnum.Slot', 1)
+        SEARCH_SIDE = typing___cast('SlotEnum.Slot', 2)
+        SEARCH_TOP = typing___cast('SlotEnum.Slot', 3)
+        SEARCH_OTHER = typing___cast('SlotEnum.Slot', 4)
+        CONTENT = typing___cast('SlotEnum.Slot', 5)
+        SEARCH_PARTNER_TOP = typing___cast('SlotEnum.Slot', 6)
+        SEARCH_PARTNER_OTHER = typing___cast('SlotEnum.Slot', 7)
+        MIXED = typing___cast('SlotEnum.Slot', 8)
+    UNSPECIFIED = typing___cast('SlotEnum.Slot', 0)
+    UNKNOWN = typing___cast('SlotEnum.Slot', 1)
+    SEARCH_SIDE = typing___cast('SlotEnum.Slot', 2)
+    SEARCH_TOP = typing___cast('SlotEnum.Slot', 3)
+    SEARCH_OTHER = typing___cast('SlotEnum.Slot', 4)
+    CONTENT = typing___cast('SlotEnum.Slot', 5)
+    SEARCH_PARTNER_TOP = typing___cast('SlotEnum.Slot', 6)
+    SEARCH_PARTNER_OTHER = typing___cast('SlotEnum.Slot', 7)
+    MIXED = typing___cast('SlotEnum.Slot', 8)
+    global___Slot = Slot
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> SlotEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SlotEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SlotEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___SlotEnum = SlotEnum

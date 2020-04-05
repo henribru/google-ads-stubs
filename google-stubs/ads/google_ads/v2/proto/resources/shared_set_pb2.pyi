@@ -24,11 +24,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class SharedSet(google___protobuf___message___Message):
@@ -59,13 +69,14 @@ class SharedSet(google___protobuf___message___Message):
         member_count : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         reference_count : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> SharedSet: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SharedSet: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SharedSet: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"id",u"member_count",u"name",u"reference_count"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"id",u"member_count",u"name",u"reference_count",u"resource_name",u"status",u"type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"member_count",b"member_count",u"name",b"name",u"reference_count",b"reference_count"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"member_count",b"member_count",u"name",b"name",u"reference_count",b"reference_count",u"resource_name",b"resource_name",u"status",b"status",u"type",b"type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"member_count",b"member_count",u"name",b"name",u"reference_count",b"reference_count"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"member_count",b"member_count",u"name",b"name",u"reference_count",b"reference_count",u"resource_name",b"resource_name",u"status",b"status",u"type",b"type"]) -> None: ...
+global___SharedSet = SharedSet

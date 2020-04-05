@@ -12,35 +12,50 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class SharedCriterionErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class SharedCriterionError(int):
+    class SharedCriterionError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> SharedCriterionErrorEnum.SharedCriterionError: ...
+        def Value(cls, name: builtin___str) -> 'SharedCriterionErrorEnum.SharedCriterionError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[SharedCriterionErrorEnum.SharedCriterionError]: ...
+        def values(cls) -> typing___List['SharedCriterionErrorEnum.SharedCriterionError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, SharedCriterionErrorEnum.SharedCriterionError]]: ...
-        UNSPECIFIED = typing___cast(SharedCriterionErrorEnum.SharedCriterionError, 0)
-        UNKNOWN = typing___cast(SharedCriterionErrorEnum.SharedCriterionError, 1)
-        CRITERION_TYPE_NOT_ALLOWED_FOR_SHARED_SET_TYPE = typing___cast(SharedCriterionErrorEnum.SharedCriterionError, 2)
-    UNSPECIFIED = typing___cast(SharedCriterionErrorEnum.SharedCriterionError, 0)
-    UNKNOWN = typing___cast(SharedCriterionErrorEnum.SharedCriterionError, 1)
-    CRITERION_TYPE_NOT_ALLOWED_FOR_SHARED_SET_TYPE = typing___cast(SharedCriterionErrorEnum.SharedCriterionError, 2)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'SharedCriterionErrorEnum.SharedCriterionError']]: ...
+        UNSPECIFIED = typing___cast('SharedCriterionErrorEnum.SharedCriterionError', 0)
+        UNKNOWN = typing___cast('SharedCriterionErrorEnum.SharedCriterionError', 1)
+        CRITERION_TYPE_NOT_ALLOWED_FOR_SHARED_SET_TYPE = typing___cast('SharedCriterionErrorEnum.SharedCriterionError', 2)
+    UNSPECIFIED = typing___cast('SharedCriterionErrorEnum.SharedCriterionError', 0)
+    UNKNOWN = typing___cast('SharedCriterionErrorEnum.SharedCriterionError', 1)
+    CRITERION_TYPE_NOT_ALLOWED_FOR_SHARED_SET_TYPE = typing___cast('SharedCriterionErrorEnum.SharedCriterionError', 2)
+    global___SharedCriterionError = SharedCriterionError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> SharedCriterionErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SharedCriterionErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SharedCriterionErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___SharedCriterionErrorEnum = SharedCriterionErrorEnum

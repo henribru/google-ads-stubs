@@ -30,11 +30,21 @@ from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class UserInterest(google___protobuf___message___Message):
@@ -67,13 +77,14 @@ class UserInterest(google___protobuf___message___Message):
         launched_to_all : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         availabilities : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___criterion_category_availability_pb2___CriterionCategoryAvailability]] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> UserInterest: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> UserInterest: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> UserInterest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"launched_to_all",u"name",u"user_interest_id",u"user_interest_parent"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"availabilities",u"launched_to_all",u"name",u"resource_name",u"taxonomy_type",u"user_interest_id",u"user_interest_parent"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"launched_to_all",b"launched_to_all",u"name",b"name",u"user_interest_id",b"user_interest_id",u"user_interest_parent",b"user_interest_parent"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"availabilities",b"availabilities",u"launched_to_all",b"launched_to_all",u"name",b"name",u"resource_name",b"resource_name",u"taxonomy_type",b"taxonomy_type",u"user_interest_id",b"user_interest_id",u"user_interest_parent",b"user_interest_parent"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"launched_to_all",b"launched_to_all",u"name",b"name",u"user_interest_id",b"user_interest_id",u"user_interest_parent",b"user_interest_parent"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"availabilities",b"availabilities",u"launched_to_all",b"launched_to_all",u"name",b"name",u"resource_name",b"resource_name",u"taxonomy_type",b"taxonomy_type",u"user_interest_id",b"user_interest_id",u"user_interest_parent",b"user_interest_parent"]) -> None: ...
+global___UserInterest = UserInterest

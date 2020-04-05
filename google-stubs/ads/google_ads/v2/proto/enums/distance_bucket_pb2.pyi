@@ -12,87 +12,102 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class DistanceBucketEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class DistanceBucket(int):
+    class DistanceBucket(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> DistanceBucketEnum.DistanceBucket: ...
+        def Value(cls, name: builtin___str) -> 'DistanceBucketEnum.DistanceBucket': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[DistanceBucketEnum.DistanceBucket]: ...
+        def values(cls) -> typing___List['DistanceBucketEnum.DistanceBucket']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, DistanceBucketEnum.DistanceBucket]]: ...
-        UNSPECIFIED = typing___cast(DistanceBucketEnum.DistanceBucket, 0)
-        UNKNOWN = typing___cast(DistanceBucketEnum.DistanceBucket, 1)
-        WITHIN_700M = typing___cast(DistanceBucketEnum.DistanceBucket, 2)
-        WITHIN_1KM = typing___cast(DistanceBucketEnum.DistanceBucket, 3)
-        WITHIN_5KM = typing___cast(DistanceBucketEnum.DistanceBucket, 4)
-        WITHIN_10KM = typing___cast(DistanceBucketEnum.DistanceBucket, 5)
-        WITHIN_15KM = typing___cast(DistanceBucketEnum.DistanceBucket, 6)
-        WITHIN_20KM = typing___cast(DistanceBucketEnum.DistanceBucket, 7)
-        WITHIN_25KM = typing___cast(DistanceBucketEnum.DistanceBucket, 8)
-        WITHIN_30KM = typing___cast(DistanceBucketEnum.DistanceBucket, 9)
-        WITHIN_35KM = typing___cast(DistanceBucketEnum.DistanceBucket, 10)
-        WITHIN_40KM = typing___cast(DistanceBucketEnum.DistanceBucket, 11)
-        WITHIN_45KM = typing___cast(DistanceBucketEnum.DistanceBucket, 12)
-        WITHIN_50KM = typing___cast(DistanceBucketEnum.DistanceBucket, 13)
-        WITHIN_55KM = typing___cast(DistanceBucketEnum.DistanceBucket, 14)
-        WITHIN_60KM = typing___cast(DistanceBucketEnum.DistanceBucket, 15)
-        WITHIN_65KM = typing___cast(DistanceBucketEnum.DistanceBucket, 16)
-        BEYOND_65KM = typing___cast(DistanceBucketEnum.DistanceBucket, 17)
-        WITHIN_0_7MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 18)
-        WITHIN_1MILE = typing___cast(DistanceBucketEnum.DistanceBucket, 19)
-        WITHIN_5MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 20)
-        WITHIN_10MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 21)
-        WITHIN_15MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 22)
-        WITHIN_20MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 23)
-        WITHIN_25MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 24)
-        WITHIN_30MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 25)
-        WITHIN_35MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 26)
-        WITHIN_40MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 27)
-        BEYOND_40MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 28)
-    UNSPECIFIED = typing___cast(DistanceBucketEnum.DistanceBucket, 0)
-    UNKNOWN = typing___cast(DistanceBucketEnum.DistanceBucket, 1)
-    WITHIN_700M = typing___cast(DistanceBucketEnum.DistanceBucket, 2)
-    WITHIN_1KM = typing___cast(DistanceBucketEnum.DistanceBucket, 3)
-    WITHIN_5KM = typing___cast(DistanceBucketEnum.DistanceBucket, 4)
-    WITHIN_10KM = typing___cast(DistanceBucketEnum.DistanceBucket, 5)
-    WITHIN_15KM = typing___cast(DistanceBucketEnum.DistanceBucket, 6)
-    WITHIN_20KM = typing___cast(DistanceBucketEnum.DistanceBucket, 7)
-    WITHIN_25KM = typing___cast(DistanceBucketEnum.DistanceBucket, 8)
-    WITHIN_30KM = typing___cast(DistanceBucketEnum.DistanceBucket, 9)
-    WITHIN_35KM = typing___cast(DistanceBucketEnum.DistanceBucket, 10)
-    WITHIN_40KM = typing___cast(DistanceBucketEnum.DistanceBucket, 11)
-    WITHIN_45KM = typing___cast(DistanceBucketEnum.DistanceBucket, 12)
-    WITHIN_50KM = typing___cast(DistanceBucketEnum.DistanceBucket, 13)
-    WITHIN_55KM = typing___cast(DistanceBucketEnum.DistanceBucket, 14)
-    WITHIN_60KM = typing___cast(DistanceBucketEnum.DistanceBucket, 15)
-    WITHIN_65KM = typing___cast(DistanceBucketEnum.DistanceBucket, 16)
-    BEYOND_65KM = typing___cast(DistanceBucketEnum.DistanceBucket, 17)
-    WITHIN_0_7MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 18)
-    WITHIN_1MILE = typing___cast(DistanceBucketEnum.DistanceBucket, 19)
-    WITHIN_5MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 20)
-    WITHIN_10MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 21)
-    WITHIN_15MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 22)
-    WITHIN_20MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 23)
-    WITHIN_25MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 24)
-    WITHIN_30MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 25)
-    WITHIN_35MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 26)
-    WITHIN_40MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 27)
-    BEYOND_40MILES = typing___cast(DistanceBucketEnum.DistanceBucket, 28)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'DistanceBucketEnum.DistanceBucket']]: ...
+        UNSPECIFIED = typing___cast('DistanceBucketEnum.DistanceBucket', 0)
+        UNKNOWN = typing___cast('DistanceBucketEnum.DistanceBucket', 1)
+        WITHIN_700M = typing___cast('DistanceBucketEnum.DistanceBucket', 2)
+        WITHIN_1KM = typing___cast('DistanceBucketEnum.DistanceBucket', 3)
+        WITHIN_5KM = typing___cast('DistanceBucketEnum.DistanceBucket', 4)
+        WITHIN_10KM = typing___cast('DistanceBucketEnum.DistanceBucket', 5)
+        WITHIN_15KM = typing___cast('DistanceBucketEnum.DistanceBucket', 6)
+        WITHIN_20KM = typing___cast('DistanceBucketEnum.DistanceBucket', 7)
+        WITHIN_25KM = typing___cast('DistanceBucketEnum.DistanceBucket', 8)
+        WITHIN_30KM = typing___cast('DistanceBucketEnum.DistanceBucket', 9)
+        WITHIN_35KM = typing___cast('DistanceBucketEnum.DistanceBucket', 10)
+        WITHIN_40KM = typing___cast('DistanceBucketEnum.DistanceBucket', 11)
+        WITHIN_45KM = typing___cast('DistanceBucketEnum.DistanceBucket', 12)
+        WITHIN_50KM = typing___cast('DistanceBucketEnum.DistanceBucket', 13)
+        WITHIN_55KM = typing___cast('DistanceBucketEnum.DistanceBucket', 14)
+        WITHIN_60KM = typing___cast('DistanceBucketEnum.DistanceBucket', 15)
+        WITHIN_65KM = typing___cast('DistanceBucketEnum.DistanceBucket', 16)
+        BEYOND_65KM = typing___cast('DistanceBucketEnum.DistanceBucket', 17)
+        WITHIN_0_7MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 18)
+        WITHIN_1MILE = typing___cast('DistanceBucketEnum.DistanceBucket', 19)
+        WITHIN_5MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 20)
+        WITHIN_10MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 21)
+        WITHIN_15MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 22)
+        WITHIN_20MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 23)
+        WITHIN_25MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 24)
+        WITHIN_30MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 25)
+        WITHIN_35MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 26)
+        WITHIN_40MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 27)
+        BEYOND_40MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 28)
+    UNSPECIFIED = typing___cast('DistanceBucketEnum.DistanceBucket', 0)
+    UNKNOWN = typing___cast('DistanceBucketEnum.DistanceBucket', 1)
+    WITHIN_700M = typing___cast('DistanceBucketEnum.DistanceBucket', 2)
+    WITHIN_1KM = typing___cast('DistanceBucketEnum.DistanceBucket', 3)
+    WITHIN_5KM = typing___cast('DistanceBucketEnum.DistanceBucket', 4)
+    WITHIN_10KM = typing___cast('DistanceBucketEnum.DistanceBucket', 5)
+    WITHIN_15KM = typing___cast('DistanceBucketEnum.DistanceBucket', 6)
+    WITHIN_20KM = typing___cast('DistanceBucketEnum.DistanceBucket', 7)
+    WITHIN_25KM = typing___cast('DistanceBucketEnum.DistanceBucket', 8)
+    WITHIN_30KM = typing___cast('DistanceBucketEnum.DistanceBucket', 9)
+    WITHIN_35KM = typing___cast('DistanceBucketEnum.DistanceBucket', 10)
+    WITHIN_40KM = typing___cast('DistanceBucketEnum.DistanceBucket', 11)
+    WITHIN_45KM = typing___cast('DistanceBucketEnum.DistanceBucket', 12)
+    WITHIN_50KM = typing___cast('DistanceBucketEnum.DistanceBucket', 13)
+    WITHIN_55KM = typing___cast('DistanceBucketEnum.DistanceBucket', 14)
+    WITHIN_60KM = typing___cast('DistanceBucketEnum.DistanceBucket', 15)
+    WITHIN_65KM = typing___cast('DistanceBucketEnum.DistanceBucket', 16)
+    BEYOND_65KM = typing___cast('DistanceBucketEnum.DistanceBucket', 17)
+    WITHIN_0_7MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 18)
+    WITHIN_1MILE = typing___cast('DistanceBucketEnum.DistanceBucket', 19)
+    WITHIN_5MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 20)
+    WITHIN_10MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 21)
+    WITHIN_15MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 22)
+    WITHIN_20MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 23)
+    WITHIN_25MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 24)
+    WITHIN_30MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 25)
+    WITHIN_35MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 26)
+    WITHIN_40MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 27)
+    BEYOND_40MILES = typing___cast('DistanceBucketEnum.DistanceBucket', 28)
+    global___DistanceBucket = DistanceBucket
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> DistanceBucketEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> DistanceBucketEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> DistanceBucketEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___DistanceBucketEnum = DistanceBucketEnum

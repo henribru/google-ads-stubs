@@ -20,11 +20,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class GeoTargetConstant(google___protobuf___message___Message):
@@ -57,13 +67,14 @@ class GeoTargetConstant(google___protobuf___message___Message):
         status : typing___Optional[google___ads___googleads___v1___enums___geo_target_constant_status_pb2___GeoTargetConstantStatusEnum.GeoTargetConstantStatus] = None,
         canonical_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> GeoTargetConstant: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> GeoTargetConstant: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> GeoTargetConstant: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"canonical_name",u"country_code",u"id",u"name",u"target_type"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"canonical_name",u"country_code",u"id",u"name",u"resource_name",u"status",u"target_type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"canonical_name",b"canonical_name",u"country_code",b"country_code",u"id",b"id",u"name",b"name",u"target_type",b"target_type"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"canonical_name",b"canonical_name",u"country_code",b"country_code",u"id",b"id",u"name",b"name",u"resource_name",b"resource_name",u"status",b"status",u"target_type",b"target_type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"canonical_name",b"canonical_name",u"country_code",b"country_code",u"id",b"id",u"name",b"name",u"target_type",b"target_type"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"canonical_name",b"canonical_name",u"country_code",b"country_code",u"id",b"id",u"name",b"name",u"resource_name",b"resource_name",u"status",b"status",u"target_type",b"target_type"]) -> None: ...
+global___GeoTargetConstant = GeoTargetConstant

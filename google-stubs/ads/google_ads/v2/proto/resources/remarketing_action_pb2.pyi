@@ -25,11 +25,21 @@ from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class RemarketingAction(google___protobuf___message___Message):
@@ -52,13 +62,14 @@ class RemarketingAction(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         tag_snippets : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___tag_snippet_pb2___TagSnippet]] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> RemarketingAction: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> RemarketingAction: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> RemarketingAction: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"id",u"name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"id",u"name",u"resource_name",u"tag_snippets"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"resource_name",b"resource_name",u"tag_snippets",b"tag_snippets"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"resource_name",b"resource_name",u"tag_snippets",b"tag_snippets"]) -> None: ...
+global___RemarketingAction = RemarketingAction

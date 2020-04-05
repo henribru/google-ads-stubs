@@ -18,11 +18,21 @@ from google.protobuf.wrappers_pb2 import (
 
 from typing import (
     Optional as typing___Optional,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class FinalAppUrl(google___protobuf___message___Message):
@@ -37,13 +47,14 @@ class FinalAppUrl(google___protobuf___message___Message):
         os_type : typing___Optional[google___ads___googleads___v2___enums___app_url_operating_system_type_pb2___AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType] = None,
         url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> FinalAppUrl: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> FinalAppUrl: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> FinalAppUrl: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"url"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"os_type",u"url"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"url",b"url"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"os_type",b"os_type",u"url",b"url"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"url",b"url"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"os_type",b"os_type",u"url",b"url"]) -> None: ...
+global___FinalAppUrl = FinalAppUrl

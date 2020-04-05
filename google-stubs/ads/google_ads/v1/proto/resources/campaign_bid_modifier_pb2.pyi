@@ -21,11 +21,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CampaignBidModifier(google___protobuf___message___Message):
@@ -52,14 +62,15 @@ class CampaignBidModifier(google___protobuf___message___Message):
         bid_modifier : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         interaction_type : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___InteractionTypeInfo] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignBidModifier: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignBidModifier: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignBidModifier: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"bid_modifier",u"campaign",u"criterion",u"criterion_id",u"interaction_type"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"bid_modifier",u"campaign",u"criterion",u"criterion_id",u"interaction_type",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"interaction_type",b"interaction_type"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"interaction_type",b"interaction_type",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"interaction_type",b"interaction_type"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"interaction_type",b"interaction_type",u"resource_name",b"resource_name"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"criterion",b"criterion"]) -> typing_extensions___Literal["interaction_type"]: ...
+global___CampaignBidModifier = CampaignBidModifier

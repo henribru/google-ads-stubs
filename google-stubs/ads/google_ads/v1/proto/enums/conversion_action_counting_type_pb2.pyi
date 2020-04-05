@@ -12,37 +12,52 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class ConversionActionCountingTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class ConversionActionCountingType(int):
+    class ConversionActionCountingType(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> ConversionActionCountingTypeEnum.ConversionActionCountingType: ...
+        def Value(cls, name: builtin___str) -> 'ConversionActionCountingTypeEnum.ConversionActionCountingType': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[ConversionActionCountingTypeEnum.ConversionActionCountingType]: ...
+        def values(cls) -> typing___List['ConversionActionCountingTypeEnum.ConversionActionCountingType']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, ConversionActionCountingTypeEnum.ConversionActionCountingType]]: ...
-        UNSPECIFIED = typing___cast(ConversionActionCountingTypeEnum.ConversionActionCountingType, 0)
-        UNKNOWN = typing___cast(ConversionActionCountingTypeEnum.ConversionActionCountingType, 1)
-        ONE_PER_CLICK = typing___cast(ConversionActionCountingTypeEnum.ConversionActionCountingType, 2)
-        MANY_PER_CLICK = typing___cast(ConversionActionCountingTypeEnum.ConversionActionCountingType, 3)
-    UNSPECIFIED = typing___cast(ConversionActionCountingTypeEnum.ConversionActionCountingType, 0)
-    UNKNOWN = typing___cast(ConversionActionCountingTypeEnum.ConversionActionCountingType, 1)
-    ONE_PER_CLICK = typing___cast(ConversionActionCountingTypeEnum.ConversionActionCountingType, 2)
-    MANY_PER_CLICK = typing___cast(ConversionActionCountingTypeEnum.ConversionActionCountingType, 3)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'ConversionActionCountingTypeEnum.ConversionActionCountingType']]: ...
+        UNSPECIFIED = typing___cast('ConversionActionCountingTypeEnum.ConversionActionCountingType', 0)
+        UNKNOWN = typing___cast('ConversionActionCountingTypeEnum.ConversionActionCountingType', 1)
+        ONE_PER_CLICK = typing___cast('ConversionActionCountingTypeEnum.ConversionActionCountingType', 2)
+        MANY_PER_CLICK = typing___cast('ConversionActionCountingTypeEnum.ConversionActionCountingType', 3)
+    UNSPECIFIED = typing___cast('ConversionActionCountingTypeEnum.ConversionActionCountingType', 0)
+    UNKNOWN = typing___cast('ConversionActionCountingTypeEnum.ConversionActionCountingType', 1)
+    ONE_PER_CLICK = typing___cast('ConversionActionCountingTypeEnum.ConversionActionCountingType', 2)
+    MANY_PER_CLICK = typing___cast('ConversionActionCountingTypeEnum.ConversionActionCountingType', 3)
+    global___ConversionActionCountingType = ConversionActionCountingType
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> ConversionActionCountingTypeEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> ConversionActionCountingTypeEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ConversionActionCountingTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___ConversionActionCountingTypeEnum = ConversionActionCountingTypeEnum

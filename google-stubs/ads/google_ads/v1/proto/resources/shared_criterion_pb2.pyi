@@ -29,11 +29,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class SharedCriterion(google___protobuf___message___Message):
@@ -78,14 +88,15 @@ class SharedCriterion(google___protobuf___message___Message):
         mobile_app_category : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___MobileAppCategoryInfo] = None,
         mobile_application : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___MobileApplicationInfo] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> SharedCriterion: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SharedCriterion: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SharedCriterion: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"criterion",u"criterion_id",u"keyword",u"mobile_app_category",u"mobile_application",u"placement",u"shared_set",u"youtube_channel",u"youtube_video"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"criterion",u"criterion_id",u"keyword",u"mobile_app_category",u"mobile_application",u"placement",u"resource_name",u"shared_set",u"type",u"youtube_channel",u"youtube_video"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"keyword",b"keyword",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"placement",b"placement",u"shared_set",b"shared_set",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"keyword",b"keyword",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"placement",b"placement",u"resource_name",b"resource_name",u"shared_set",b"shared_set",u"type",b"type",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"keyword",b"keyword",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"placement",b"placement",u"shared_set",b"shared_set",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"keyword",b"keyword",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"placement",b"placement",u"resource_name",b"resource_name",u"shared_set",b"shared_set",u"type",b"type",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"criterion",b"criterion"]) -> typing_extensions___Literal["keyword","youtube_video","youtube_channel","placement","mobile_app_category","mobile_application"]: ...
+global___SharedCriterion = SharedCriterion

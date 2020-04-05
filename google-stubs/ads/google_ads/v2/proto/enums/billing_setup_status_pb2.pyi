@@ -12,41 +12,56 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class BillingSetupStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class BillingSetupStatus(int):
+    class BillingSetupStatus(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> BillingSetupStatusEnum.BillingSetupStatus: ...
+        def Value(cls, name: builtin___str) -> 'BillingSetupStatusEnum.BillingSetupStatus': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[BillingSetupStatusEnum.BillingSetupStatus]: ...
+        def values(cls) -> typing___List['BillingSetupStatusEnum.BillingSetupStatus']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, BillingSetupStatusEnum.BillingSetupStatus]]: ...
-        UNSPECIFIED = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 0)
-        UNKNOWN = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 1)
-        PENDING = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 2)
-        APPROVED_HELD = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 3)
-        APPROVED = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 4)
-        CANCELLED = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 5)
-    UNSPECIFIED = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 0)
-    UNKNOWN = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 1)
-    PENDING = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 2)
-    APPROVED_HELD = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 3)
-    APPROVED = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 4)
-    CANCELLED = typing___cast(BillingSetupStatusEnum.BillingSetupStatus, 5)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'BillingSetupStatusEnum.BillingSetupStatus']]: ...
+        UNSPECIFIED = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 0)
+        UNKNOWN = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 1)
+        PENDING = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 2)
+        APPROVED_HELD = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 3)
+        APPROVED = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 4)
+        CANCELLED = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 5)
+    UNSPECIFIED = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 0)
+    UNKNOWN = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 1)
+    PENDING = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 2)
+    APPROVED_HELD = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 3)
+    APPROVED = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 4)
+    CANCELLED = typing___cast('BillingSetupStatusEnum.BillingSetupStatus', 5)
+    global___BillingSetupStatus = BillingSetupStatus
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> BillingSetupStatusEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> BillingSetupStatusEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> BillingSetupStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___BillingSetupStatusEnum = BillingSetupStatusEnum

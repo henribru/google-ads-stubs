@@ -12,37 +12,52 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class DatabaseErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class DatabaseError(int):
+    class DatabaseError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> DatabaseErrorEnum.DatabaseError: ...
+        def Value(cls, name: builtin___str) -> 'DatabaseErrorEnum.DatabaseError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[DatabaseErrorEnum.DatabaseError]: ...
+        def values(cls) -> typing___List['DatabaseErrorEnum.DatabaseError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, DatabaseErrorEnum.DatabaseError]]: ...
-        UNSPECIFIED = typing___cast(DatabaseErrorEnum.DatabaseError, 0)
-        UNKNOWN = typing___cast(DatabaseErrorEnum.DatabaseError, 1)
-        CONCURRENT_MODIFICATION = typing___cast(DatabaseErrorEnum.DatabaseError, 2)
-        DATA_CONSTRAINT_VIOLATION = typing___cast(DatabaseErrorEnum.DatabaseError, 3)
-    UNSPECIFIED = typing___cast(DatabaseErrorEnum.DatabaseError, 0)
-    UNKNOWN = typing___cast(DatabaseErrorEnum.DatabaseError, 1)
-    CONCURRENT_MODIFICATION = typing___cast(DatabaseErrorEnum.DatabaseError, 2)
-    DATA_CONSTRAINT_VIOLATION = typing___cast(DatabaseErrorEnum.DatabaseError, 3)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'DatabaseErrorEnum.DatabaseError']]: ...
+        UNSPECIFIED = typing___cast('DatabaseErrorEnum.DatabaseError', 0)
+        UNKNOWN = typing___cast('DatabaseErrorEnum.DatabaseError', 1)
+        CONCURRENT_MODIFICATION = typing___cast('DatabaseErrorEnum.DatabaseError', 2)
+        DATA_CONSTRAINT_VIOLATION = typing___cast('DatabaseErrorEnum.DatabaseError', 3)
+    UNSPECIFIED = typing___cast('DatabaseErrorEnum.DatabaseError', 0)
+    UNKNOWN = typing___cast('DatabaseErrorEnum.DatabaseError', 1)
+    CONCURRENT_MODIFICATION = typing___cast('DatabaseErrorEnum.DatabaseError', 2)
+    DATA_CONSTRAINT_VIOLATION = typing___cast('DatabaseErrorEnum.DatabaseError', 3)
+    global___DatabaseError = DatabaseError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> DatabaseErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> DatabaseErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> DatabaseErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___DatabaseErrorEnum = DatabaseErrorEnum

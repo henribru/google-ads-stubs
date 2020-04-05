@@ -14,11 +14,21 @@ from google.protobuf.wrappers_pb2 import (
 
 from typing import (
     Optional as typing___Optional,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class DateRange(google___protobuf___message___Message):
@@ -35,13 +45,14 @@ class DateRange(google___protobuf___message___Message):
         start_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         end_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> DateRange: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> DateRange: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> DateRange: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"end_date",u"start_date"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"end_date",u"start_date"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"end_date",b"end_date",u"start_date",b"start_date"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"end_date",b"end_date",u"start_date",b"start_date"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"end_date",b"end_date",u"start_date",b"start_date"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"end_date",b"end_date",u"start_date",b"start_date"]) -> None: ...
+global___DateRange = DateRange

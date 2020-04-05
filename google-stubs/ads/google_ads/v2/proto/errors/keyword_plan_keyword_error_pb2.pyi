@@ -12,45 +12,60 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class KeywordPlanKeywordErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class KeywordPlanKeywordError(int):
+    class KeywordPlanKeywordError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError: ...
+        def Value(cls, name: builtin___str) -> 'KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError]: ...
+        def values(cls) -> typing___List['KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError]]: ...
-        UNSPECIFIED = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 0)
-        UNKNOWN = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 1)
-        INVALID_KEYWORD_MATCH_TYPE = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 2)
-        DUPLICATE_KEYWORD = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 3)
-        KEYWORD_TEXT_TOO_LONG = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 4)
-        KEYWORD_HAS_INVALID_CHARS = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 5)
-        KEYWORD_HAS_TOO_MANY_WORDS = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 6)
-        INVALID_KEYWORD_TEXT = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 7)
-    UNSPECIFIED = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 0)
-    UNKNOWN = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 1)
-    INVALID_KEYWORD_MATCH_TYPE = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 2)
-    DUPLICATE_KEYWORD = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 3)
-    KEYWORD_TEXT_TOO_LONG = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 4)
-    KEYWORD_HAS_INVALID_CHARS = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 5)
-    KEYWORD_HAS_TOO_MANY_WORDS = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 6)
-    INVALID_KEYWORD_TEXT = typing___cast(KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError, 7)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError']]: ...
+        UNSPECIFIED = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 0)
+        UNKNOWN = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 1)
+        INVALID_KEYWORD_MATCH_TYPE = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 2)
+        DUPLICATE_KEYWORD = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 3)
+        KEYWORD_TEXT_TOO_LONG = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 4)
+        KEYWORD_HAS_INVALID_CHARS = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 5)
+        KEYWORD_HAS_TOO_MANY_WORDS = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 6)
+        INVALID_KEYWORD_TEXT = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 7)
+    UNSPECIFIED = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 0)
+    UNKNOWN = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 1)
+    INVALID_KEYWORD_MATCH_TYPE = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 2)
+    DUPLICATE_KEYWORD = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 3)
+    KEYWORD_TEXT_TOO_LONG = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 4)
+    KEYWORD_HAS_INVALID_CHARS = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 5)
+    KEYWORD_HAS_TOO_MANY_WORDS = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 6)
+    INVALID_KEYWORD_TEXT = typing___cast('KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError', 7)
+    global___KeywordPlanKeywordError = KeywordPlanKeywordError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> KeywordPlanKeywordErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> KeywordPlanKeywordErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> KeywordPlanKeywordErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___KeywordPlanKeywordErrorEnum = KeywordPlanKeywordErrorEnum

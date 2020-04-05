@@ -66,11 +66,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class Ad(google___protobuf___message___Message):
@@ -197,14 +207,15 @@ class Ad(google___protobuf___message___Message):
         app_engagement_ad : typing___Optional[google___ads___googleads___v1___common___ad_type_infos_pb2___AppEngagementAdInfo] = None,
         shopping_comparison_listing_ad : typing___Optional[google___ads___googleads___v1___common___ad_type_infos_pb2___ShoppingComparisonListingAdInfo] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> Ad: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> Ad: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Ad: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_data",u"added_by_google_ads",u"app_ad",u"app_engagement_ad",u"call_only_ad",u"display_upload_ad",u"display_url",u"expanded_dynamic_search_ad",u"expanded_text_ad",u"gmail_ad",u"hotel_ad",u"id",u"image_ad",u"legacy_app_install_ad",u"legacy_responsive_display_ad",u"name",u"responsive_display_ad",u"responsive_search_ad",u"shopping_comparison_listing_ad",u"shopping_product_ad",u"shopping_smart_ad",u"text_ad",u"tracking_url_template",u"video_ad"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_data",u"added_by_google_ads",u"app_ad",u"app_engagement_ad",u"call_only_ad",u"device_preference",u"display_upload_ad",u"display_url",u"expanded_dynamic_search_ad",u"expanded_text_ad",u"final_app_urls",u"final_mobile_urls",u"final_urls",u"gmail_ad",u"hotel_ad",u"id",u"image_ad",u"legacy_app_install_ad",u"legacy_responsive_display_ad",u"name",u"responsive_display_ad",u"responsive_search_ad",u"shopping_comparison_listing_ad",u"shopping_product_ad",u"shopping_smart_ad",u"system_managed_resource_source",u"text_ad",u"tracking_url_template",u"type",u"url_collections",u"url_custom_parameters",u"video_ad"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_data",b"ad_data",u"added_by_google_ads",b"added_by_google_ads",u"app_ad",b"app_ad",u"app_engagement_ad",b"app_engagement_ad",u"call_only_ad",b"call_only_ad",u"display_upload_ad",b"display_upload_ad",u"display_url",b"display_url",u"expanded_dynamic_search_ad",b"expanded_dynamic_search_ad",u"expanded_text_ad",b"expanded_text_ad",u"gmail_ad",b"gmail_ad",u"hotel_ad",b"hotel_ad",u"id",b"id",u"image_ad",b"image_ad",u"legacy_app_install_ad",b"legacy_app_install_ad",u"legacy_responsive_display_ad",b"legacy_responsive_display_ad",u"name",b"name",u"responsive_display_ad",b"responsive_display_ad",u"responsive_search_ad",b"responsive_search_ad",u"shopping_comparison_listing_ad",b"shopping_comparison_listing_ad",u"shopping_product_ad",b"shopping_product_ad",u"shopping_smart_ad",b"shopping_smart_ad",u"text_ad",b"text_ad",u"tracking_url_template",b"tracking_url_template",u"video_ad",b"video_ad"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_data",b"ad_data",u"added_by_google_ads",b"added_by_google_ads",u"app_ad",b"app_ad",u"app_engagement_ad",b"app_engagement_ad",u"call_only_ad",b"call_only_ad",u"device_preference",b"device_preference",u"display_upload_ad",b"display_upload_ad",u"display_url",b"display_url",u"expanded_dynamic_search_ad",b"expanded_dynamic_search_ad",u"expanded_text_ad",b"expanded_text_ad",u"final_app_urls",b"final_app_urls",u"final_mobile_urls",b"final_mobile_urls",u"final_urls",b"final_urls",u"gmail_ad",b"gmail_ad",u"hotel_ad",b"hotel_ad",u"id",b"id",u"image_ad",b"image_ad",u"legacy_app_install_ad",b"legacy_app_install_ad",u"legacy_responsive_display_ad",b"legacy_responsive_display_ad",u"name",b"name",u"responsive_display_ad",b"responsive_display_ad",u"responsive_search_ad",b"responsive_search_ad",u"shopping_comparison_listing_ad",b"shopping_comparison_listing_ad",u"shopping_product_ad",b"shopping_product_ad",u"shopping_smart_ad",b"shopping_smart_ad",u"system_managed_resource_source",b"system_managed_resource_source",u"text_ad",b"text_ad",u"tracking_url_template",b"tracking_url_template",u"type",b"type",u"url_collections",b"url_collections",u"url_custom_parameters",b"url_custom_parameters",u"video_ad",b"video_ad"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_data",b"ad_data",u"added_by_google_ads",b"added_by_google_ads",u"app_ad",b"app_ad",u"app_engagement_ad",b"app_engagement_ad",u"call_only_ad",b"call_only_ad",u"display_upload_ad",b"display_upload_ad",u"display_url",b"display_url",u"expanded_dynamic_search_ad",b"expanded_dynamic_search_ad",u"expanded_text_ad",b"expanded_text_ad",u"gmail_ad",b"gmail_ad",u"hotel_ad",b"hotel_ad",u"id",b"id",u"image_ad",b"image_ad",u"legacy_app_install_ad",b"legacy_app_install_ad",u"legacy_responsive_display_ad",b"legacy_responsive_display_ad",u"name",b"name",u"responsive_display_ad",b"responsive_display_ad",u"responsive_search_ad",b"responsive_search_ad",u"shopping_comparison_listing_ad",b"shopping_comparison_listing_ad",u"shopping_product_ad",b"shopping_product_ad",u"shopping_smart_ad",b"shopping_smart_ad",u"text_ad",b"text_ad",u"tracking_url_template",b"tracking_url_template",u"video_ad",b"video_ad"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_data",b"ad_data",u"added_by_google_ads",b"added_by_google_ads",u"app_ad",b"app_ad",u"app_engagement_ad",b"app_engagement_ad",u"call_only_ad",b"call_only_ad",u"device_preference",b"device_preference",u"display_upload_ad",b"display_upload_ad",u"display_url",b"display_url",u"expanded_dynamic_search_ad",b"expanded_dynamic_search_ad",u"expanded_text_ad",b"expanded_text_ad",u"final_app_urls",b"final_app_urls",u"final_mobile_urls",b"final_mobile_urls",u"final_urls",b"final_urls",u"gmail_ad",b"gmail_ad",u"hotel_ad",b"hotel_ad",u"id",b"id",u"image_ad",b"image_ad",u"legacy_app_install_ad",b"legacy_app_install_ad",u"legacy_responsive_display_ad",b"legacy_responsive_display_ad",u"name",b"name",u"responsive_display_ad",b"responsive_display_ad",u"responsive_search_ad",b"responsive_search_ad",u"shopping_comparison_listing_ad",b"shopping_comparison_listing_ad",u"shopping_product_ad",b"shopping_product_ad",u"shopping_smart_ad",b"shopping_smart_ad",u"system_managed_resource_source",b"system_managed_resource_source",u"text_ad",b"text_ad",u"tracking_url_template",b"tracking_url_template",u"type",b"type",u"url_collections",b"url_collections",u"url_custom_parameters",b"url_custom_parameters",u"video_ad",b"video_ad"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"ad_data",b"ad_data"]) -> typing_extensions___Literal["text_ad","expanded_text_ad","call_only_ad","expanded_dynamic_search_ad","hotel_ad","shopping_smart_ad","shopping_product_ad","gmail_ad","image_ad","video_ad","responsive_search_ad","legacy_responsive_display_ad","app_ad","legacy_app_install_ad","responsive_display_ad","display_upload_ad","app_engagement_ad","shopping_comparison_listing_ad"]: ...
+global___Ad = Ad

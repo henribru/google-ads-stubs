@@ -20,11 +20,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CustomerManagerLink(google___protobuf___message___Message):
@@ -45,13 +55,14 @@ class CustomerManagerLink(google___protobuf___message___Message):
         manager_link_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         status : typing___Optional[google___ads___googleads___v2___enums___manager_link_status_pb2___ManagerLinkStatusEnum.ManagerLinkStatus] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CustomerManagerLink: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CustomerManagerLink: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CustomerManagerLink: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"manager_customer",u"manager_link_id"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"manager_customer",u"manager_link_id",u"resource_name",u"status"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"manager_customer",b"manager_customer",u"manager_link_id",b"manager_link_id"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"manager_customer",b"manager_customer",u"manager_link_id",b"manager_link_id",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"manager_customer",b"manager_customer",u"manager_link_id",b"manager_link_id"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"manager_customer",b"manager_customer",u"manager_link_id",b"manager_link_id",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
+global___CustomerManagerLink = CustomerManagerLink

@@ -12,57 +12,72 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class VanityPharmaTextEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class VanityPharmaText(int):
+    class VanityPharmaText(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> VanityPharmaTextEnum.VanityPharmaText: ...
+        def Value(cls, name: builtin___str) -> 'VanityPharmaTextEnum.VanityPharmaText': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[VanityPharmaTextEnum.VanityPharmaText]: ...
+        def values(cls) -> typing___List['VanityPharmaTextEnum.VanityPharmaText']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, VanityPharmaTextEnum.VanityPharmaText]]: ...
-        UNSPECIFIED = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 0)
-        UNKNOWN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 1)
-        PRESCRIPTION_TREATMENT_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 2)
-        PRESCRIPTION_TREATMENT_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 3)
-        PRESCRIPTION_DEVICE_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 4)
-        PRESCRIPTION_DEVICE_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 5)
-        MEDICAL_DEVICE_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 6)
-        MEDICAL_DEVICE_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 7)
-        PREVENTATIVE_TREATMENT_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 8)
-        PREVENTATIVE_TREATMENT_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 9)
-        PRESCRIPTION_CONTRACEPTION_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 10)
-        PRESCRIPTION_CONTRACEPTION_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 11)
-        PRESCRIPTION_VACCINE_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 12)
-        PRESCRIPTION_VACCINE_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 13)
-    UNSPECIFIED = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 0)
-    UNKNOWN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 1)
-    PRESCRIPTION_TREATMENT_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 2)
-    PRESCRIPTION_TREATMENT_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 3)
-    PRESCRIPTION_DEVICE_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 4)
-    PRESCRIPTION_DEVICE_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 5)
-    MEDICAL_DEVICE_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 6)
-    MEDICAL_DEVICE_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 7)
-    PREVENTATIVE_TREATMENT_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 8)
-    PREVENTATIVE_TREATMENT_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 9)
-    PRESCRIPTION_CONTRACEPTION_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 10)
-    PRESCRIPTION_CONTRACEPTION_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 11)
-    PRESCRIPTION_VACCINE_WEBSITE_EN = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 12)
-    PRESCRIPTION_VACCINE_WEBSITE_ES = typing___cast(VanityPharmaTextEnum.VanityPharmaText, 13)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'VanityPharmaTextEnum.VanityPharmaText']]: ...
+        UNSPECIFIED = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 0)
+        UNKNOWN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 1)
+        PRESCRIPTION_TREATMENT_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 2)
+        PRESCRIPTION_TREATMENT_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 3)
+        PRESCRIPTION_DEVICE_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 4)
+        PRESCRIPTION_DEVICE_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 5)
+        MEDICAL_DEVICE_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 6)
+        MEDICAL_DEVICE_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 7)
+        PREVENTATIVE_TREATMENT_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 8)
+        PREVENTATIVE_TREATMENT_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 9)
+        PRESCRIPTION_CONTRACEPTION_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 10)
+        PRESCRIPTION_CONTRACEPTION_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 11)
+        PRESCRIPTION_VACCINE_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 12)
+        PRESCRIPTION_VACCINE_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 13)
+    UNSPECIFIED = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 0)
+    UNKNOWN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 1)
+    PRESCRIPTION_TREATMENT_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 2)
+    PRESCRIPTION_TREATMENT_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 3)
+    PRESCRIPTION_DEVICE_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 4)
+    PRESCRIPTION_DEVICE_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 5)
+    MEDICAL_DEVICE_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 6)
+    MEDICAL_DEVICE_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 7)
+    PREVENTATIVE_TREATMENT_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 8)
+    PREVENTATIVE_TREATMENT_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 9)
+    PRESCRIPTION_CONTRACEPTION_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 10)
+    PRESCRIPTION_CONTRACEPTION_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 11)
+    PRESCRIPTION_VACCINE_WEBSITE_EN = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 12)
+    PRESCRIPTION_VACCINE_WEBSITE_ES = typing___cast('VanityPharmaTextEnum.VanityPharmaText', 13)
+    global___VanityPharmaText = VanityPharmaText
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> VanityPharmaTextEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> VanityPharmaTextEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> VanityPharmaTextEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___VanityPharmaTextEnum = VanityPharmaTextEnum

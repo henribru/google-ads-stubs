@@ -12,45 +12,60 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class MediaTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class MediaType(int):
+    class MediaType(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> MediaTypeEnum.MediaType: ...
+        def Value(cls, name: builtin___str) -> 'MediaTypeEnum.MediaType': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[MediaTypeEnum.MediaType]: ...
+        def values(cls) -> typing___List['MediaTypeEnum.MediaType']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, MediaTypeEnum.MediaType]]: ...
-        UNSPECIFIED = typing___cast(MediaTypeEnum.MediaType, 0)
-        UNKNOWN = typing___cast(MediaTypeEnum.MediaType, 1)
-        IMAGE = typing___cast(MediaTypeEnum.MediaType, 2)
-        ICON = typing___cast(MediaTypeEnum.MediaType, 3)
-        MEDIA_BUNDLE = typing___cast(MediaTypeEnum.MediaType, 4)
-        AUDIO = typing___cast(MediaTypeEnum.MediaType, 5)
-        VIDEO = typing___cast(MediaTypeEnum.MediaType, 6)
-        DYNAMIC_IMAGE = typing___cast(MediaTypeEnum.MediaType, 7)
-    UNSPECIFIED = typing___cast(MediaTypeEnum.MediaType, 0)
-    UNKNOWN = typing___cast(MediaTypeEnum.MediaType, 1)
-    IMAGE = typing___cast(MediaTypeEnum.MediaType, 2)
-    ICON = typing___cast(MediaTypeEnum.MediaType, 3)
-    MEDIA_BUNDLE = typing___cast(MediaTypeEnum.MediaType, 4)
-    AUDIO = typing___cast(MediaTypeEnum.MediaType, 5)
-    VIDEO = typing___cast(MediaTypeEnum.MediaType, 6)
-    DYNAMIC_IMAGE = typing___cast(MediaTypeEnum.MediaType, 7)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'MediaTypeEnum.MediaType']]: ...
+        UNSPECIFIED = typing___cast('MediaTypeEnum.MediaType', 0)
+        UNKNOWN = typing___cast('MediaTypeEnum.MediaType', 1)
+        IMAGE = typing___cast('MediaTypeEnum.MediaType', 2)
+        ICON = typing___cast('MediaTypeEnum.MediaType', 3)
+        MEDIA_BUNDLE = typing___cast('MediaTypeEnum.MediaType', 4)
+        AUDIO = typing___cast('MediaTypeEnum.MediaType', 5)
+        VIDEO = typing___cast('MediaTypeEnum.MediaType', 6)
+        DYNAMIC_IMAGE = typing___cast('MediaTypeEnum.MediaType', 7)
+    UNSPECIFIED = typing___cast('MediaTypeEnum.MediaType', 0)
+    UNKNOWN = typing___cast('MediaTypeEnum.MediaType', 1)
+    IMAGE = typing___cast('MediaTypeEnum.MediaType', 2)
+    ICON = typing___cast('MediaTypeEnum.MediaType', 3)
+    MEDIA_BUNDLE = typing___cast('MediaTypeEnum.MediaType', 4)
+    AUDIO = typing___cast('MediaTypeEnum.MediaType', 5)
+    VIDEO = typing___cast('MediaTypeEnum.MediaType', 6)
+    DYNAMIC_IMAGE = typing___cast('MediaTypeEnum.MediaType', 7)
+    global___MediaType = MediaType
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> MediaTypeEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> MediaTypeEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MediaTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___MediaTypeEnum = MediaTypeEnum

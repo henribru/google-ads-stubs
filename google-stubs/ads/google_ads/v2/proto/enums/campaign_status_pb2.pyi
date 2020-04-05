@@ -12,39 +12,54 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class CampaignStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class CampaignStatus(int):
+    class CampaignStatus(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> CampaignStatusEnum.CampaignStatus: ...
+        def Value(cls, name: builtin___str) -> 'CampaignStatusEnum.CampaignStatus': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[CampaignStatusEnum.CampaignStatus]: ...
+        def values(cls) -> typing___List['CampaignStatusEnum.CampaignStatus']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, CampaignStatusEnum.CampaignStatus]]: ...
-        UNSPECIFIED = typing___cast(CampaignStatusEnum.CampaignStatus, 0)
-        UNKNOWN = typing___cast(CampaignStatusEnum.CampaignStatus, 1)
-        ENABLED = typing___cast(CampaignStatusEnum.CampaignStatus, 2)
-        PAUSED = typing___cast(CampaignStatusEnum.CampaignStatus, 3)
-        REMOVED = typing___cast(CampaignStatusEnum.CampaignStatus, 4)
-    UNSPECIFIED = typing___cast(CampaignStatusEnum.CampaignStatus, 0)
-    UNKNOWN = typing___cast(CampaignStatusEnum.CampaignStatus, 1)
-    ENABLED = typing___cast(CampaignStatusEnum.CampaignStatus, 2)
-    PAUSED = typing___cast(CampaignStatusEnum.CampaignStatus, 3)
-    REMOVED = typing___cast(CampaignStatusEnum.CampaignStatus, 4)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'CampaignStatusEnum.CampaignStatus']]: ...
+        UNSPECIFIED = typing___cast('CampaignStatusEnum.CampaignStatus', 0)
+        UNKNOWN = typing___cast('CampaignStatusEnum.CampaignStatus', 1)
+        ENABLED = typing___cast('CampaignStatusEnum.CampaignStatus', 2)
+        PAUSED = typing___cast('CampaignStatusEnum.CampaignStatus', 3)
+        REMOVED = typing___cast('CampaignStatusEnum.CampaignStatus', 4)
+    UNSPECIFIED = typing___cast('CampaignStatusEnum.CampaignStatus', 0)
+    UNKNOWN = typing___cast('CampaignStatusEnum.CampaignStatus', 1)
+    ENABLED = typing___cast('CampaignStatusEnum.CampaignStatus', 2)
+    PAUSED = typing___cast('CampaignStatusEnum.CampaignStatus', 3)
+    REMOVED = typing___cast('CampaignStatusEnum.CampaignStatus', 4)
+    global___CampaignStatus = CampaignStatus
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignStatusEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignStatusEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___CampaignStatusEnum = CampaignStatusEnum

@@ -23,11 +23,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class ChangeStatus(google___protobuf___message___Message):
@@ -86,13 +96,14 @@ class ChangeStatus(google___protobuf___message___Message):
         campaign_feed : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ad_group_bid_modifier : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> ChangeStatus: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> ChangeStatus: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ChangeStatus: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group",u"ad_group_ad",u"ad_group_bid_modifier",u"ad_group_criterion",u"ad_group_feed",u"campaign",u"campaign_criterion",u"campaign_feed",u"feed",u"feed_item",u"last_change_date_time"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",u"ad_group_ad",u"ad_group_bid_modifier",u"ad_group_criterion",u"ad_group_feed",u"campaign",u"campaign_criterion",u"campaign_feed",u"feed",u"feed_item",u"last_change_date_time",u"resource_name",u"resource_status",u"resource_type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_group_ad",b"ad_group_ad",u"ad_group_bid_modifier",b"ad_group_bid_modifier",u"ad_group_criterion",b"ad_group_criterion",u"ad_group_feed",b"ad_group_feed",u"campaign",b"campaign",u"campaign_criterion",b"campaign_criterion",u"campaign_feed",b"campaign_feed",u"feed",b"feed",u"feed_item",b"feed_item",u"last_change_date_time",b"last_change_date_time"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_group_ad",b"ad_group_ad",u"ad_group_bid_modifier",b"ad_group_bid_modifier",u"ad_group_criterion",b"ad_group_criterion",u"ad_group_feed",b"ad_group_feed",u"campaign",b"campaign",u"campaign_criterion",b"campaign_criterion",u"campaign_feed",b"campaign_feed",u"feed",b"feed",u"feed_item",b"feed_item",u"last_change_date_time",b"last_change_date_time",u"resource_name",b"resource_name",u"resource_status",b"resource_status",u"resource_type",b"resource_type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_group_ad",b"ad_group_ad",u"ad_group_bid_modifier",b"ad_group_bid_modifier",u"ad_group_criterion",b"ad_group_criterion",u"ad_group_feed",b"ad_group_feed",u"campaign",b"campaign",u"campaign_criterion",b"campaign_criterion",u"campaign_feed",b"campaign_feed",u"feed",b"feed",u"feed_item",b"feed_item",u"last_change_date_time",b"last_change_date_time"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_group_ad",b"ad_group_ad",u"ad_group_bid_modifier",b"ad_group_bid_modifier",u"ad_group_criterion",b"ad_group_criterion",u"ad_group_feed",b"ad_group_feed",u"campaign",b"campaign",u"campaign_criterion",b"campaign_criterion",u"campaign_feed",b"campaign_feed",u"feed",b"feed",u"feed_item",b"feed_item",u"last_change_date_time",b"last_change_date_time",u"resource_name",b"resource_name",u"resource_status",b"resource_status",u"resource_type",b"resource_type"]) -> None: ...
+global___ChangeStatus = ChangeStatus

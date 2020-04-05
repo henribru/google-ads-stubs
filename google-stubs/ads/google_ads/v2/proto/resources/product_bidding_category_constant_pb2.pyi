@@ -24,11 +24,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class ProductBiddingCategoryConstant(google___protobuf___message___Message):
@@ -63,13 +73,14 @@ class ProductBiddingCategoryConstant(google___protobuf___message___Message):
         language_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         localized_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> ProductBiddingCategoryConstant: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> ProductBiddingCategoryConstant: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ProductBiddingCategoryConstant: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"country_code",u"id",u"language_code",u"localized_name",u"product_bidding_category_constant_parent"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"country_code",u"id",u"language_code",u"level",u"localized_name",u"product_bidding_category_constant_parent",u"resource_name",u"status"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"language_code",b"language_code",u"localized_name",b"localized_name",u"product_bidding_category_constant_parent",b"product_bidding_category_constant_parent"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"language_code",b"language_code",u"level",b"level",u"localized_name",b"localized_name",u"product_bidding_category_constant_parent",b"product_bidding_category_constant_parent",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"language_code",b"language_code",u"localized_name",b"localized_name",u"product_bidding_category_constant_parent",b"product_bidding_category_constant_parent"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"language_code",b"language_code",u"level",b"level",u"localized_name",b"localized_name",u"product_bidding_category_constant_parent",b"product_bidding_category_constant_parent",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
+global___ProductBiddingCategoryConstant = ProductBiddingCategoryConstant

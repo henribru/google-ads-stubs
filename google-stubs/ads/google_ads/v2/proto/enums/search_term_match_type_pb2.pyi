@@ -12,43 +12,58 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class SearchTermMatchTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class SearchTermMatchType(int):
+    class SearchTermMatchType(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> SearchTermMatchTypeEnum.SearchTermMatchType: ...
+        def Value(cls, name: builtin___str) -> 'SearchTermMatchTypeEnum.SearchTermMatchType': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[SearchTermMatchTypeEnum.SearchTermMatchType]: ...
+        def values(cls) -> typing___List['SearchTermMatchTypeEnum.SearchTermMatchType']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, SearchTermMatchTypeEnum.SearchTermMatchType]]: ...
-        UNSPECIFIED = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 0)
-        UNKNOWN = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 1)
-        BROAD = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 2)
-        EXACT = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 3)
-        PHRASE = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 4)
-        NEAR_EXACT = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 5)
-        NEAR_PHRASE = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 6)
-    UNSPECIFIED = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 0)
-    UNKNOWN = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 1)
-    BROAD = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 2)
-    EXACT = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 3)
-    PHRASE = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 4)
-    NEAR_EXACT = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 5)
-    NEAR_PHRASE = typing___cast(SearchTermMatchTypeEnum.SearchTermMatchType, 6)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'SearchTermMatchTypeEnum.SearchTermMatchType']]: ...
+        UNSPECIFIED = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 0)
+        UNKNOWN = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 1)
+        BROAD = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 2)
+        EXACT = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 3)
+        PHRASE = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 4)
+        NEAR_EXACT = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 5)
+        NEAR_PHRASE = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 6)
+    UNSPECIFIED = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 0)
+    UNKNOWN = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 1)
+    BROAD = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 2)
+    EXACT = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 3)
+    PHRASE = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 4)
+    NEAR_EXACT = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 5)
+    NEAR_PHRASE = typing___cast('SearchTermMatchTypeEnum.SearchTermMatchType', 6)
+    global___SearchTermMatchType = SearchTermMatchType
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> SearchTermMatchTypeEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SearchTermMatchTypeEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SearchTermMatchTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___SearchTermMatchTypeEnum = SearchTermMatchTypeEnum

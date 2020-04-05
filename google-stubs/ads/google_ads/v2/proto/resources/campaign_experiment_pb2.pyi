@@ -24,11 +24,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CampaignExperiment(google___protobuf___message___Message):
@@ -79,13 +89,14 @@ class CampaignExperiment(google___protobuf___message___Message):
         start_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         end_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignExperiment: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignExperiment: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignExperiment: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign_draft",u"description",u"end_date",u"experiment_campaign",u"id",u"long_running_operation",u"name",u"start_date",u"traffic_split_percent"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign_draft",u"description",u"end_date",u"experiment_campaign",u"id",u"long_running_operation",u"name",u"resource_name",u"start_date",u"status",u"traffic_split_percent",u"traffic_split_type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign_draft",b"campaign_draft",u"description",b"description",u"end_date",b"end_date",u"experiment_campaign",b"experiment_campaign",u"id",b"id",u"long_running_operation",b"long_running_operation",u"name",b"name",u"start_date",b"start_date",u"traffic_split_percent",b"traffic_split_percent"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign_draft",b"campaign_draft",u"description",b"description",u"end_date",b"end_date",u"experiment_campaign",b"experiment_campaign",u"id",b"id",u"long_running_operation",b"long_running_operation",u"name",b"name",u"resource_name",b"resource_name",u"start_date",b"start_date",u"status",b"status",u"traffic_split_percent",b"traffic_split_percent",u"traffic_split_type",b"traffic_split_type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"campaign_draft",b"campaign_draft",u"description",b"description",u"end_date",b"end_date",u"experiment_campaign",b"experiment_campaign",u"id",b"id",u"long_running_operation",b"long_running_operation",u"name",b"name",u"start_date",b"start_date",u"traffic_split_percent",b"traffic_split_percent"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"campaign_draft",b"campaign_draft",u"description",b"description",u"end_date",b"end_date",u"experiment_campaign",b"experiment_campaign",u"id",b"id",u"long_running_operation",b"long_running_operation",u"name",b"name",u"resource_name",b"resource_name",u"start_date",b"start_date",u"status",b"status",u"traffic_split_percent",b"traffic_split_percent",u"traffic_split_type",b"traffic_split_type"]) -> None: ...
+global___CampaignExperiment = CampaignExperiment

@@ -28,11 +28,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CustomerNegativeCriterion(google___protobuf___message___Message):
@@ -73,14 +83,15 @@ class CustomerNegativeCriterion(google___protobuf___message___Message):
         youtube_video : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___YouTubeVideoInfo] = None,
         youtube_channel : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___YouTubeChannelInfo] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CustomerNegativeCriterion: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CustomerNegativeCriterion: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CustomerNegativeCriterion: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"content_label",u"criterion",u"id",u"mobile_app_category",u"mobile_application",u"placement",u"youtube_channel",u"youtube_video"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"content_label",u"criterion",u"id",u"mobile_app_category",u"mobile_application",u"placement",u"resource_name",u"type",u"youtube_channel",u"youtube_video"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"content_label",b"content_label",u"criterion",b"criterion",u"id",b"id",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"placement",b"placement",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"content_label",b"content_label",u"criterion",b"criterion",u"id",b"id",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"placement",b"placement",u"resource_name",b"resource_name",u"type",b"type",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"content_label",b"content_label",u"criterion",b"criterion",u"id",b"id",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"placement",b"placement",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"content_label",b"content_label",u"criterion",b"criterion",u"id",b"id",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"placement",b"placement",u"resource_name",b"resource_name",u"type",b"type",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"criterion",b"criterion"]) -> typing_extensions___Literal["content_label","mobile_application","mobile_app_category","placement","youtube_video","youtube_channel"]: ...
+global___CustomerNegativeCriterion = CustomerNegativeCriterion

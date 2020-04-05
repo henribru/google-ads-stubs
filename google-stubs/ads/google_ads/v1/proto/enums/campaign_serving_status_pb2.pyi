@@ -12,43 +12,58 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class CampaignServingStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class CampaignServingStatus(int):
+    class CampaignServingStatus(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> CampaignServingStatusEnum.CampaignServingStatus: ...
+        def Value(cls, name: builtin___str) -> 'CampaignServingStatusEnum.CampaignServingStatus': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[CampaignServingStatusEnum.CampaignServingStatus]: ...
+        def values(cls) -> typing___List['CampaignServingStatusEnum.CampaignServingStatus']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, CampaignServingStatusEnum.CampaignServingStatus]]: ...
-        UNSPECIFIED = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 0)
-        UNKNOWN = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 1)
-        SERVING = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 2)
-        NONE = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 3)
-        ENDED = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 4)
-        PENDING = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 5)
-        SUSPENDED = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 6)
-    UNSPECIFIED = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 0)
-    UNKNOWN = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 1)
-    SERVING = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 2)
-    NONE = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 3)
-    ENDED = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 4)
-    PENDING = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 5)
-    SUSPENDED = typing___cast(CampaignServingStatusEnum.CampaignServingStatus, 6)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'CampaignServingStatusEnum.CampaignServingStatus']]: ...
+        UNSPECIFIED = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 0)
+        UNKNOWN = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 1)
+        SERVING = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 2)
+        NONE = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 3)
+        ENDED = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 4)
+        PENDING = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 5)
+        SUSPENDED = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 6)
+    UNSPECIFIED = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 0)
+    UNKNOWN = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 1)
+    SERVING = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 2)
+    NONE = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 3)
+    ENDED = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 4)
+    PENDING = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 5)
+    SUSPENDED = typing___cast('CampaignServingStatusEnum.CampaignServingStatus', 6)
+    global___CampaignServingStatus = CampaignServingStatus
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignServingStatusEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignServingStatusEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignServingStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___CampaignServingStatusEnum = CampaignServingStatusEnum

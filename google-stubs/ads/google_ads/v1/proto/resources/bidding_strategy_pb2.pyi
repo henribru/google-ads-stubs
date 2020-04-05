@@ -34,11 +34,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class BiddingStrategy(google___protobuf___message___Message):
@@ -97,14 +107,15 @@ class BiddingStrategy(google___protobuf___message___Message):
         target_roas : typing___Optional[google___ads___googleads___v1___common___bidding_pb2___TargetRoas] = None,
         target_spend : typing___Optional[google___ads___googleads___v1___common___bidding_pb2___TargetSpend] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> BiddingStrategy: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> BiddingStrategy: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> BiddingStrategy: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign_count",u"enhanced_cpc",u"id",u"name",u"non_removed_campaign_count",u"page_one_promoted",u"scheme",u"target_cpa",u"target_impression_share",u"target_outrank_share",u"target_roas",u"target_spend"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign_count",u"enhanced_cpc",u"id",u"name",u"non_removed_campaign_count",u"page_one_promoted",u"resource_name",u"scheme",u"status",u"target_cpa",u"target_impression_share",u"target_outrank_share",u"target_roas",u"target_spend",u"type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign_count",b"campaign_count",u"enhanced_cpc",b"enhanced_cpc",u"id",b"id",u"name",b"name",u"non_removed_campaign_count",b"non_removed_campaign_count",u"page_one_promoted",b"page_one_promoted",u"scheme",b"scheme",u"target_cpa",b"target_cpa",u"target_impression_share",b"target_impression_share",u"target_outrank_share",b"target_outrank_share",u"target_roas",b"target_roas",u"target_spend",b"target_spend"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign_count",b"campaign_count",u"enhanced_cpc",b"enhanced_cpc",u"id",b"id",u"name",b"name",u"non_removed_campaign_count",b"non_removed_campaign_count",u"page_one_promoted",b"page_one_promoted",u"resource_name",b"resource_name",u"scheme",b"scheme",u"status",b"status",u"target_cpa",b"target_cpa",u"target_impression_share",b"target_impression_share",u"target_outrank_share",b"target_outrank_share",u"target_roas",b"target_roas",u"target_spend",b"target_spend",u"type",b"type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"campaign_count",b"campaign_count",u"enhanced_cpc",b"enhanced_cpc",u"id",b"id",u"name",b"name",u"non_removed_campaign_count",b"non_removed_campaign_count",u"page_one_promoted",b"page_one_promoted",u"scheme",b"scheme",u"target_cpa",b"target_cpa",u"target_impression_share",b"target_impression_share",u"target_outrank_share",b"target_outrank_share",u"target_roas",b"target_roas",u"target_spend",b"target_spend"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"campaign_count",b"campaign_count",u"enhanced_cpc",b"enhanced_cpc",u"id",b"id",u"name",b"name",u"non_removed_campaign_count",b"non_removed_campaign_count",u"page_one_promoted",b"page_one_promoted",u"resource_name",b"resource_name",u"scheme",b"scheme",u"status",b"status",u"target_cpa",b"target_cpa",u"target_impression_share",b"target_impression_share",u"target_outrank_share",b"target_outrank_share",u"target_roas",b"target_roas",u"target_spend",b"target_spend",u"type",b"type"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"scheme",b"scheme"]) -> typing_extensions___Literal["enhanced_cpc","page_one_promoted","target_cpa","target_impression_share","target_outrank_share","target_roas","target_spend"]: ...
+global___BiddingStrategy = BiddingStrategy

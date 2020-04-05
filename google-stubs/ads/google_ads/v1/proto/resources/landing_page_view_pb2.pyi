@@ -15,11 +15,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class LandingPageView(google___protobuf___message___Message):
@@ -34,13 +44,14 @@ class LandingPageView(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         unexpanded_final_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> LandingPageView: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> LandingPageView: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> LandingPageView: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"unexpanded_final_url"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",u"unexpanded_final_url"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"unexpanded_final_url",b"unexpanded_final_url"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name",u"unexpanded_final_url",b"unexpanded_final_url"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"unexpanded_final_url",b"unexpanded_final_url"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name",u"unexpanded_final_url",b"unexpanded_final_url"]) -> None: ...
+global___LandingPageView = LandingPageView

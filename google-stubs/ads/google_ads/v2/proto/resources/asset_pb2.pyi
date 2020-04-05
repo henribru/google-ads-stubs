@@ -27,11 +27,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class Asset(google___protobuf___message___Message):
@@ -68,14 +78,15 @@ class Asset(google___protobuf___message___Message):
         image_asset : typing___Optional[google___ads___googleads___v2___common___asset_types_pb2___ImageAsset] = None,
         text_asset : typing___Optional[google___ads___googleads___v2___common___asset_types_pb2___TextAsset] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> Asset: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> Asset: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Asset: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"asset_data",u"id",u"image_asset",u"media_bundle_asset",u"name",u"text_asset",u"youtube_video_asset"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"asset_data",u"id",u"image_asset",u"media_bundle_asset",u"name",u"resource_name",u"text_asset",u"type",u"youtube_video_asset"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"asset_data",b"asset_data",u"id",b"id",u"image_asset",b"image_asset",u"media_bundle_asset",b"media_bundle_asset",u"name",b"name",u"text_asset",b"text_asset",u"youtube_video_asset",b"youtube_video_asset"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"asset_data",b"asset_data",u"id",b"id",u"image_asset",b"image_asset",u"media_bundle_asset",b"media_bundle_asset",u"name",b"name",u"resource_name",b"resource_name",u"text_asset",b"text_asset",u"type",b"type",u"youtube_video_asset",b"youtube_video_asset"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"asset_data",b"asset_data",u"id",b"id",u"image_asset",b"image_asset",u"media_bundle_asset",b"media_bundle_asset",u"name",b"name",u"text_asset",b"text_asset",u"youtube_video_asset",b"youtube_video_asset"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"asset_data",b"asset_data",u"id",b"id",u"image_asset",b"image_asset",u"media_bundle_asset",b"media_bundle_asset",u"name",b"name",u"resource_name",b"resource_name",u"text_asset",b"text_asset",u"type",b"type",u"youtube_video_asset",b"youtube_video_asset"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"asset_data",b"asset_data"]) -> typing_extensions___Literal["youtube_video_asset","media_bundle_asset","image_asset","text_asset"]: ...
+global___Asset = Asset

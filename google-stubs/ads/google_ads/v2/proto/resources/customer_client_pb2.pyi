@@ -17,11 +17,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CustomerClient(google___protobuf___message___Message):
@@ -68,13 +78,14 @@ class CustomerClient(google___protobuf___message___Message):
         currency_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CustomerClient: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CustomerClient: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CustomerClient: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"client_customer",u"currency_code",u"descriptive_name",u"hidden",u"id",u"level",u"manager",u"test_account",u"time_zone"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"client_customer",u"currency_code",u"descriptive_name",u"hidden",u"id",u"level",u"manager",u"resource_name",u"test_account",u"time_zone"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"client_customer",b"client_customer",u"currency_code",b"currency_code",u"descriptive_name",b"descriptive_name",u"hidden",b"hidden",u"id",b"id",u"level",b"level",u"manager",b"manager",u"test_account",b"test_account",u"time_zone",b"time_zone"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"client_customer",b"client_customer",u"currency_code",b"currency_code",u"descriptive_name",b"descriptive_name",u"hidden",b"hidden",u"id",b"id",u"level",b"level",u"manager",b"manager",u"resource_name",b"resource_name",u"test_account",b"test_account",u"time_zone",b"time_zone"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"client_customer",b"client_customer",u"currency_code",b"currency_code",u"descriptive_name",b"descriptive_name",u"hidden",b"hidden",u"id",b"id",u"level",b"level",u"manager",b"manager",u"test_account",b"test_account",u"time_zone",b"time_zone"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"client_customer",b"client_customer",u"currency_code",b"currency_code",u"descriptive_name",b"descriptive_name",u"hidden",b"hidden",u"id",b"id",u"level",b"level",u"manager",b"manager",u"resource_name",b"resource_name",u"test_account",b"test_account",u"time_zone",b"time_zone"]) -> None: ...
+global___CustomerClient = CustomerClient

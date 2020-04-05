@@ -49,12 +49,22 @@ from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
     overload as typing___overload,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class ExtensionFeedItem(google___protobuf___message___Message):
@@ -135,17 +145,18 @@ class ExtensionFeedItem(google___protobuf___message___Message):
         targeted_campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         targeted_ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> ExtensionFeedItem: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> ExtensionFeedItem: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ExtensionFeedItem: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"affiliate_location_feed_item",u"app_feed_item",u"call_feed_item",u"callout_feed_item",u"end_date_time",u"extension",u"location_feed_item",u"price_feed_item",u"promotion_feed_item",u"serving_resource_targeting",u"sitelink_feed_item",u"start_date_time",u"structured_snippet_feed_item",u"targeted_ad_group",u"targeted_campaign",u"targeted_geo_target_constant",u"text_message_feed_item"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedules",u"affiliate_location_feed_item",u"app_feed_item",u"call_feed_item",u"callout_feed_item",u"device",u"end_date_time",u"extension",u"extension_type",u"location_feed_item",u"price_feed_item",u"promotion_feed_item",u"resource_name",u"serving_resource_targeting",u"sitelink_feed_item",u"start_date_time",u"status",u"structured_snippet_feed_item",u"targeted_ad_group",u"targeted_campaign",u"targeted_geo_target_constant",u"text_message_feed_item"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"affiliate_location_feed_item",b"affiliate_location_feed_item",u"app_feed_item",b"app_feed_item",u"call_feed_item",b"call_feed_item",u"callout_feed_item",b"callout_feed_item",u"end_date_time",b"end_date_time",u"extension",b"extension",u"location_feed_item",b"location_feed_item",u"price_feed_item",b"price_feed_item",u"promotion_feed_item",b"promotion_feed_item",u"serving_resource_targeting",b"serving_resource_targeting",u"sitelink_feed_item",b"sitelink_feed_item",u"start_date_time",b"start_date_time",u"structured_snippet_feed_item",b"structured_snippet_feed_item",u"targeted_ad_group",b"targeted_ad_group",u"targeted_campaign",b"targeted_campaign",u"targeted_geo_target_constant",b"targeted_geo_target_constant",u"text_message_feed_item",b"text_message_feed_item"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedules",b"ad_schedules",u"affiliate_location_feed_item",b"affiliate_location_feed_item",u"app_feed_item",b"app_feed_item",u"call_feed_item",b"call_feed_item",u"callout_feed_item",b"callout_feed_item",u"device",b"device",u"end_date_time",b"end_date_time",u"extension",b"extension",u"extension_type",b"extension_type",u"location_feed_item",b"location_feed_item",u"price_feed_item",b"price_feed_item",u"promotion_feed_item",b"promotion_feed_item",u"resource_name",b"resource_name",u"serving_resource_targeting",b"serving_resource_targeting",u"sitelink_feed_item",b"sitelink_feed_item",u"start_date_time",b"start_date_time",u"status",b"status",u"structured_snippet_feed_item",b"structured_snippet_feed_item",u"targeted_ad_group",b"targeted_ad_group",u"targeted_campaign",b"targeted_campaign",u"targeted_geo_target_constant",b"targeted_geo_target_constant",u"text_message_feed_item",b"text_message_feed_item"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"affiliate_location_feed_item",b"affiliate_location_feed_item",u"app_feed_item",b"app_feed_item",u"call_feed_item",b"call_feed_item",u"callout_feed_item",b"callout_feed_item",u"end_date_time",b"end_date_time",u"extension",b"extension",u"location_feed_item",b"location_feed_item",u"price_feed_item",b"price_feed_item",u"promotion_feed_item",b"promotion_feed_item",u"serving_resource_targeting",b"serving_resource_targeting",u"sitelink_feed_item",b"sitelink_feed_item",u"start_date_time",b"start_date_time",u"structured_snippet_feed_item",b"structured_snippet_feed_item",u"targeted_ad_group",b"targeted_ad_group",u"targeted_campaign",b"targeted_campaign",u"targeted_geo_target_constant",b"targeted_geo_target_constant",u"text_message_feed_item",b"text_message_feed_item"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedules",b"ad_schedules",u"affiliate_location_feed_item",b"affiliate_location_feed_item",u"app_feed_item",b"app_feed_item",u"call_feed_item",b"call_feed_item",u"callout_feed_item",b"callout_feed_item",u"device",b"device",u"end_date_time",b"end_date_time",u"extension",b"extension",u"extension_type",b"extension_type",u"location_feed_item",b"location_feed_item",u"price_feed_item",b"price_feed_item",u"promotion_feed_item",b"promotion_feed_item",u"resource_name",b"resource_name",u"serving_resource_targeting",b"serving_resource_targeting",u"sitelink_feed_item",b"sitelink_feed_item",u"start_date_time",b"start_date_time",u"status",b"status",u"structured_snippet_feed_item",b"structured_snippet_feed_item",u"targeted_ad_group",b"targeted_ad_group",u"targeted_campaign",b"targeted_campaign",u"targeted_geo_target_constant",b"targeted_geo_target_constant",u"text_message_feed_item",b"text_message_feed_item"]) -> None: ...
     @typing___overload
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"extension",b"extension"]) -> typing_extensions___Literal["sitelink_feed_item","structured_snippet_feed_item","app_feed_item","call_feed_item","callout_feed_item","text_message_feed_item","price_feed_item","promotion_feed_item","location_feed_item","affiliate_location_feed_item"]: ...
     @typing___overload
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"serving_resource_targeting",b"serving_resource_targeting"]) -> typing_extensions___Literal["targeted_campaign","targeted_ad_group"]: ...
+global___ExtensionFeedItem = ExtensionFeedItem

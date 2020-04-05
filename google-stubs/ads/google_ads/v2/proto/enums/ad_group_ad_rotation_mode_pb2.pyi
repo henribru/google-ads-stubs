@@ -12,37 +12,52 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class AdGroupAdRotationModeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class AdGroupAdRotationMode(int):
+    class AdGroupAdRotationMode(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> AdGroupAdRotationModeEnum.AdGroupAdRotationMode: ...
+        def Value(cls, name: builtin___str) -> 'AdGroupAdRotationModeEnum.AdGroupAdRotationMode': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[AdGroupAdRotationModeEnum.AdGroupAdRotationMode]: ...
+        def values(cls) -> typing___List['AdGroupAdRotationModeEnum.AdGroupAdRotationMode']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, AdGroupAdRotationModeEnum.AdGroupAdRotationMode]]: ...
-        UNSPECIFIED = typing___cast(AdGroupAdRotationModeEnum.AdGroupAdRotationMode, 0)
-        UNKNOWN = typing___cast(AdGroupAdRotationModeEnum.AdGroupAdRotationMode, 1)
-        OPTIMIZE = typing___cast(AdGroupAdRotationModeEnum.AdGroupAdRotationMode, 2)
-        ROTATE_FOREVER = typing___cast(AdGroupAdRotationModeEnum.AdGroupAdRotationMode, 3)
-    UNSPECIFIED = typing___cast(AdGroupAdRotationModeEnum.AdGroupAdRotationMode, 0)
-    UNKNOWN = typing___cast(AdGroupAdRotationModeEnum.AdGroupAdRotationMode, 1)
-    OPTIMIZE = typing___cast(AdGroupAdRotationModeEnum.AdGroupAdRotationMode, 2)
-    ROTATE_FOREVER = typing___cast(AdGroupAdRotationModeEnum.AdGroupAdRotationMode, 3)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AdGroupAdRotationModeEnum.AdGroupAdRotationMode']]: ...
+        UNSPECIFIED = typing___cast('AdGroupAdRotationModeEnum.AdGroupAdRotationMode', 0)
+        UNKNOWN = typing___cast('AdGroupAdRotationModeEnum.AdGroupAdRotationMode', 1)
+        OPTIMIZE = typing___cast('AdGroupAdRotationModeEnum.AdGroupAdRotationMode', 2)
+        ROTATE_FOREVER = typing___cast('AdGroupAdRotationModeEnum.AdGroupAdRotationMode', 3)
+    UNSPECIFIED = typing___cast('AdGroupAdRotationModeEnum.AdGroupAdRotationMode', 0)
+    UNKNOWN = typing___cast('AdGroupAdRotationModeEnum.AdGroupAdRotationMode', 1)
+    OPTIMIZE = typing___cast('AdGroupAdRotationModeEnum.AdGroupAdRotationMode', 2)
+    ROTATE_FOREVER = typing___cast('AdGroupAdRotationModeEnum.AdGroupAdRotationMode', 3)
+    global___AdGroupAdRotationMode = AdGroupAdRotationMode
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AdGroupAdRotationModeEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AdGroupAdRotationModeEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroupAdRotationModeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___AdGroupAdRotationModeEnum = AdGroupAdRotationModeEnum

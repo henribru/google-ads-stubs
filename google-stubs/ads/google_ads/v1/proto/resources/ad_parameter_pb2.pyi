@@ -16,11 +16,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class AdParameter(google___protobuf___message___Message):
@@ -43,13 +53,14 @@ class AdParameter(google___protobuf___message___Message):
         parameter_index : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         insertion_text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AdParameter: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AdParameter: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdParameter: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",u"insertion_text",u"parameter_index"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",u"insertion_text",u"parameter_index",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",b"ad_group_criterion",u"insertion_text",b"insertion_text",u"parameter_index",b"parameter_index"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",b"ad_group_criterion",u"insertion_text",b"insertion_text",u"parameter_index",b"parameter_index",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",b"ad_group_criterion",u"insertion_text",b"insertion_text",u"parameter_index",b"parameter_index"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_criterion",b"ad_group_criterion",u"insertion_text",b"insertion_text",u"parameter_index",b"parameter_index",u"resource_name",b"resource_name"]) -> None: ...
+global___AdParameter = AdParameter

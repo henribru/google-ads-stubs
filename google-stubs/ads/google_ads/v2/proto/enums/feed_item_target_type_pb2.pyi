@@ -12,39 +12,54 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class FeedItemTargetTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class FeedItemTargetType(int):
+    class FeedItemTargetType(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> FeedItemTargetTypeEnum.FeedItemTargetType: ...
+        def Value(cls, name: builtin___str) -> 'FeedItemTargetTypeEnum.FeedItemTargetType': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[FeedItemTargetTypeEnum.FeedItemTargetType]: ...
+        def values(cls) -> typing___List['FeedItemTargetTypeEnum.FeedItemTargetType']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, FeedItemTargetTypeEnum.FeedItemTargetType]]: ...
-        UNSPECIFIED = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 0)
-        UNKNOWN = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 1)
-        CAMPAIGN = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 2)
-        AD_GROUP = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 3)
-        CRITERION = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 4)
-    UNSPECIFIED = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 0)
-    UNKNOWN = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 1)
-    CAMPAIGN = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 2)
-    AD_GROUP = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 3)
-    CRITERION = typing___cast(FeedItemTargetTypeEnum.FeedItemTargetType, 4)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'FeedItemTargetTypeEnum.FeedItemTargetType']]: ...
+        UNSPECIFIED = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 0)
+        UNKNOWN = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 1)
+        CAMPAIGN = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 2)
+        AD_GROUP = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 3)
+        CRITERION = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 4)
+    UNSPECIFIED = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 0)
+    UNKNOWN = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 1)
+    CAMPAIGN = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 2)
+    AD_GROUP = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 3)
+    CRITERION = typing___cast('FeedItemTargetTypeEnum.FeedItemTargetType', 4)
+    global___FeedItemTargetType = FeedItemTargetType
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> FeedItemTargetTypeEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> FeedItemTargetTypeEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> FeedItemTargetTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___FeedItemTargetTypeEnum = FeedItemTargetTypeEnum

@@ -12,43 +12,58 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class ListingCustomAttributeIndexEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class ListingCustomAttributeIndex(int):
+    class ListingCustomAttributeIndex(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex: ...
+        def Value(cls, name: builtin___str) -> 'ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex]: ...
+        def values(cls) -> typing___List['ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex]]: ...
-        UNSPECIFIED = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 0)
-        UNKNOWN = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 1)
-        INDEX0 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 7)
-        INDEX1 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 8)
-        INDEX2 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 9)
-        INDEX3 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 10)
-        INDEX4 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 11)
-    UNSPECIFIED = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 0)
-    UNKNOWN = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 1)
-    INDEX0 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 7)
-    INDEX1 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 8)
-    INDEX2 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 9)
-    INDEX3 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 10)
-    INDEX4 = typing___cast(ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex, 11)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex']]: ...
+        UNSPECIFIED = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 0)
+        UNKNOWN = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 1)
+        INDEX0 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 7)
+        INDEX1 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 8)
+        INDEX2 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 9)
+        INDEX3 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 10)
+        INDEX4 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 11)
+    UNSPECIFIED = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 0)
+    UNKNOWN = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 1)
+    INDEX0 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 7)
+    INDEX1 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 8)
+    INDEX2 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 9)
+    INDEX3 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 10)
+    INDEX4 = typing___cast('ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex', 11)
+    global___ListingCustomAttributeIndex = ListingCustomAttributeIndex
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> ListingCustomAttributeIndexEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> ListingCustomAttributeIndexEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ListingCustomAttributeIndexEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___ListingCustomAttributeIndexEnum = ListingCustomAttributeIndexEnum

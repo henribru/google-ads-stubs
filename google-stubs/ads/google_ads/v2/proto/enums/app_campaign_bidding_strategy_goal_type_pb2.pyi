@@ -12,41 +12,56 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class AppCampaignBiddingStrategyGoalTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class AppCampaignBiddingStrategyGoalType(int):
+    class AppCampaignBiddingStrategyGoalType(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType: ...
+        def Value(cls, name: builtin___str) -> 'AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType]: ...
+        def values(cls) -> typing___List['AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType]]: ...
-        UNSPECIFIED = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 0)
-        UNKNOWN = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 1)
-        OPTIMIZE_INSTALLS_TARGET_INSTALL_COST = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 2)
-        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 3)
-        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 4)
-        OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 5)
-    UNSPECIFIED = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 0)
-    UNKNOWN = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 1)
-    OPTIMIZE_INSTALLS_TARGET_INSTALL_COST = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 2)
-    OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 3)
-    OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 4)
-    OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = typing___cast(AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType, 5)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType']]: ...
+        UNSPECIFIED = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 0)
+        UNKNOWN = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 1)
+        OPTIMIZE_INSTALLS_TARGET_INSTALL_COST = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 2)
+        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 3)
+        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 4)
+        OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 5)
+    UNSPECIFIED = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 0)
+    UNKNOWN = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 1)
+    OPTIMIZE_INSTALLS_TARGET_INSTALL_COST = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 2)
+    OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 3)
+    OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 4)
+    OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = typing___cast('AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType', 5)
+    global___AppCampaignBiddingStrategyGoalType = AppCampaignBiddingStrategyGoalType
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AppCampaignBiddingStrategyGoalTypeEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AppCampaignBiddingStrategyGoalTypeEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AppCampaignBiddingStrategyGoalTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___AppCampaignBiddingStrategyGoalTypeEnum = AppCampaignBiddingStrategyGoalTypeEnum

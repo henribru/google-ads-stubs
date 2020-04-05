@@ -12,39 +12,54 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class QuotaErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class QuotaError(int):
+    class QuotaError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> QuotaErrorEnum.QuotaError: ...
+        def Value(cls, name: builtin___str) -> 'QuotaErrorEnum.QuotaError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[QuotaErrorEnum.QuotaError]: ...
+        def values(cls) -> typing___List['QuotaErrorEnum.QuotaError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, QuotaErrorEnum.QuotaError]]: ...
-        UNSPECIFIED = typing___cast(QuotaErrorEnum.QuotaError, 0)
-        UNKNOWN = typing___cast(QuotaErrorEnum.QuotaError, 1)
-        RESOURCE_EXHAUSTED = typing___cast(QuotaErrorEnum.QuotaError, 2)
-        ACCESS_PROHIBITED = typing___cast(QuotaErrorEnum.QuotaError, 3)
-        RESOURCE_TEMPORARILY_EXHAUSTED = typing___cast(QuotaErrorEnum.QuotaError, 4)
-    UNSPECIFIED = typing___cast(QuotaErrorEnum.QuotaError, 0)
-    UNKNOWN = typing___cast(QuotaErrorEnum.QuotaError, 1)
-    RESOURCE_EXHAUSTED = typing___cast(QuotaErrorEnum.QuotaError, 2)
-    ACCESS_PROHIBITED = typing___cast(QuotaErrorEnum.QuotaError, 3)
-    RESOURCE_TEMPORARILY_EXHAUSTED = typing___cast(QuotaErrorEnum.QuotaError, 4)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'QuotaErrorEnum.QuotaError']]: ...
+        UNSPECIFIED = typing___cast('QuotaErrorEnum.QuotaError', 0)
+        UNKNOWN = typing___cast('QuotaErrorEnum.QuotaError', 1)
+        RESOURCE_EXHAUSTED = typing___cast('QuotaErrorEnum.QuotaError', 2)
+        ACCESS_PROHIBITED = typing___cast('QuotaErrorEnum.QuotaError', 3)
+        RESOURCE_TEMPORARILY_EXHAUSTED = typing___cast('QuotaErrorEnum.QuotaError', 4)
+    UNSPECIFIED = typing___cast('QuotaErrorEnum.QuotaError', 0)
+    UNKNOWN = typing___cast('QuotaErrorEnum.QuotaError', 1)
+    RESOURCE_EXHAUSTED = typing___cast('QuotaErrorEnum.QuotaError', 2)
+    ACCESS_PROHIBITED = typing___cast('QuotaErrorEnum.QuotaError', 3)
+    RESOURCE_TEMPORARILY_EXHAUSTED = typing___cast('QuotaErrorEnum.QuotaError', 4)
+    global___QuotaError = QuotaError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> QuotaErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> QuotaErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> QuotaErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___QuotaErrorEnum = QuotaErrorEnum

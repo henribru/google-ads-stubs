@@ -11,6 +11,7 @@ from google.protobuf.message import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
@@ -18,30 +19,40 @@ from typing_extensions import (
 )
 
 
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class Value(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    boolean_value = ... # type: bool
-    int64_value = ... # type: int
-    float_value = ... # type: float
-    double_value = ... # type: float
+    boolean_value = ... # type: builtin___bool
+    int64_value = ... # type: builtin___int
+    float_value = ... # type: builtin___float
+    double_value = ... # type: builtin___float
     string_value = ... # type: typing___Text
 
     def __init__(self,
         *,
-        boolean_value : typing___Optional[bool] = None,
-        int64_value : typing___Optional[int] = None,
-        float_value : typing___Optional[float] = None,
-        double_value : typing___Optional[float] = None,
+        boolean_value : typing___Optional[builtin___bool] = None,
+        int64_value : typing___Optional[builtin___int] = None,
+        float_value : typing___Optional[builtin___float] = None,
+        double_value : typing___Optional[builtin___float] = None,
         string_value : typing___Optional[typing___Text] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> Value: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> Value: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Value: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"boolean_value",u"double_value",u"float_value",u"int64_value",u"string_value",u"value"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"boolean_value",u"double_value",u"float_value",u"int64_value",u"string_value",u"value"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"boolean_value",b"boolean_value",u"double_value",b"double_value",u"float_value",b"float_value",u"int64_value",b"int64_value",u"string_value",b"string_value",u"value",b"value"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"boolean_value",b"boolean_value",u"double_value",b"double_value",u"float_value",b"float_value",u"int64_value",b"int64_value",u"string_value",b"string_value",u"value",b"value"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"boolean_value",b"boolean_value",u"double_value",b"double_value",u"float_value",b"float_value",u"int64_value",b"int64_value",u"string_value",b"string_value",u"value",b"value"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"boolean_value",b"boolean_value",u"double_value",b"double_value",u"float_value",b"float_value",u"int64_value",b"int64_value",u"string_value",b"string_value",u"value",b"value"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"value",b"value"]) -> typing_extensions___Literal["boolean_value","int64_value","float_value","double_value","string_value"]: ...
+global___Value = Value

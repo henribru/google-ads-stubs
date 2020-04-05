@@ -12,37 +12,52 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class WebpageConditionOperatorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class WebpageConditionOperator(int):
+    class WebpageConditionOperator(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> WebpageConditionOperatorEnum.WebpageConditionOperator: ...
+        def Value(cls, name: builtin___str) -> 'WebpageConditionOperatorEnum.WebpageConditionOperator': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[WebpageConditionOperatorEnum.WebpageConditionOperator]: ...
+        def values(cls) -> typing___List['WebpageConditionOperatorEnum.WebpageConditionOperator']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, WebpageConditionOperatorEnum.WebpageConditionOperator]]: ...
-        UNSPECIFIED = typing___cast(WebpageConditionOperatorEnum.WebpageConditionOperator, 0)
-        UNKNOWN = typing___cast(WebpageConditionOperatorEnum.WebpageConditionOperator, 1)
-        EQUALS = typing___cast(WebpageConditionOperatorEnum.WebpageConditionOperator, 2)
-        CONTAINS = typing___cast(WebpageConditionOperatorEnum.WebpageConditionOperator, 3)
-    UNSPECIFIED = typing___cast(WebpageConditionOperatorEnum.WebpageConditionOperator, 0)
-    UNKNOWN = typing___cast(WebpageConditionOperatorEnum.WebpageConditionOperator, 1)
-    EQUALS = typing___cast(WebpageConditionOperatorEnum.WebpageConditionOperator, 2)
-    CONTAINS = typing___cast(WebpageConditionOperatorEnum.WebpageConditionOperator, 3)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'WebpageConditionOperatorEnum.WebpageConditionOperator']]: ...
+        UNSPECIFIED = typing___cast('WebpageConditionOperatorEnum.WebpageConditionOperator', 0)
+        UNKNOWN = typing___cast('WebpageConditionOperatorEnum.WebpageConditionOperator', 1)
+        EQUALS = typing___cast('WebpageConditionOperatorEnum.WebpageConditionOperator', 2)
+        CONTAINS = typing___cast('WebpageConditionOperatorEnum.WebpageConditionOperator', 3)
+    UNSPECIFIED = typing___cast('WebpageConditionOperatorEnum.WebpageConditionOperator', 0)
+    UNKNOWN = typing___cast('WebpageConditionOperatorEnum.WebpageConditionOperator', 1)
+    EQUALS = typing___cast('WebpageConditionOperatorEnum.WebpageConditionOperator', 2)
+    CONTAINS = typing___cast('WebpageConditionOperatorEnum.WebpageConditionOperator', 3)
+    global___WebpageConditionOperator = WebpageConditionOperator
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> WebpageConditionOperatorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> WebpageConditionOperatorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> WebpageConditionOperatorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___WebpageConditionOperatorEnum = WebpageConditionOperatorEnum

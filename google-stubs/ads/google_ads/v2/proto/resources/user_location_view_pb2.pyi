@@ -16,11 +16,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class UserLocationView(google___protobuf___message___Message):
@@ -39,13 +49,14 @@ class UserLocationView(google___protobuf___message___Message):
         country_criterion_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         targeting_location : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> UserLocationView: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> UserLocationView: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> UserLocationView: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"country_criterion_id",u"targeting_location"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"country_criterion_id",u"resource_name",u"targeting_location"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"country_criterion_id",b"country_criterion_id",u"targeting_location",b"targeting_location"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"country_criterion_id",b"country_criterion_id",u"resource_name",b"resource_name",u"targeting_location",b"targeting_location"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"country_criterion_id",b"country_criterion_id",u"targeting_location",b"targeting_location"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"country_criterion_id",b"country_criterion_id",u"resource_name",b"resource_name",u"targeting_location",b"targeting_location"]) -> None: ...
+global___UserLocationView = UserLocationView

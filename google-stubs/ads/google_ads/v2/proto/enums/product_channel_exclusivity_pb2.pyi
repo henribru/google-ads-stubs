@@ -12,37 +12,52 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class ProductChannelExclusivityEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class ProductChannelExclusivity(int):
+    class ProductChannelExclusivity(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> ProductChannelExclusivityEnum.ProductChannelExclusivity: ...
+        def Value(cls, name: builtin___str) -> 'ProductChannelExclusivityEnum.ProductChannelExclusivity': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[ProductChannelExclusivityEnum.ProductChannelExclusivity]: ...
+        def values(cls) -> typing___List['ProductChannelExclusivityEnum.ProductChannelExclusivity']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, ProductChannelExclusivityEnum.ProductChannelExclusivity]]: ...
-        UNSPECIFIED = typing___cast(ProductChannelExclusivityEnum.ProductChannelExclusivity, 0)
-        UNKNOWN = typing___cast(ProductChannelExclusivityEnum.ProductChannelExclusivity, 1)
-        SINGLE_CHANNEL = typing___cast(ProductChannelExclusivityEnum.ProductChannelExclusivity, 2)
-        MULTI_CHANNEL = typing___cast(ProductChannelExclusivityEnum.ProductChannelExclusivity, 3)
-    UNSPECIFIED = typing___cast(ProductChannelExclusivityEnum.ProductChannelExclusivity, 0)
-    UNKNOWN = typing___cast(ProductChannelExclusivityEnum.ProductChannelExclusivity, 1)
-    SINGLE_CHANNEL = typing___cast(ProductChannelExclusivityEnum.ProductChannelExclusivity, 2)
-    MULTI_CHANNEL = typing___cast(ProductChannelExclusivityEnum.ProductChannelExclusivity, 3)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'ProductChannelExclusivityEnum.ProductChannelExclusivity']]: ...
+        UNSPECIFIED = typing___cast('ProductChannelExclusivityEnum.ProductChannelExclusivity', 0)
+        UNKNOWN = typing___cast('ProductChannelExclusivityEnum.ProductChannelExclusivity', 1)
+        SINGLE_CHANNEL = typing___cast('ProductChannelExclusivityEnum.ProductChannelExclusivity', 2)
+        MULTI_CHANNEL = typing___cast('ProductChannelExclusivityEnum.ProductChannelExclusivity', 3)
+    UNSPECIFIED = typing___cast('ProductChannelExclusivityEnum.ProductChannelExclusivity', 0)
+    UNKNOWN = typing___cast('ProductChannelExclusivityEnum.ProductChannelExclusivity', 1)
+    SINGLE_CHANNEL = typing___cast('ProductChannelExclusivityEnum.ProductChannelExclusivity', 2)
+    MULTI_CHANNEL = typing___cast('ProductChannelExclusivityEnum.ProductChannelExclusivity', 3)
+    global___ProductChannelExclusivity = ProductChannelExclusivity
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> ProductChannelExclusivityEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> ProductChannelExclusivityEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ProductChannelExclusivityEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___ProductChannelExclusivityEnum = ProductChannelExclusivityEnum

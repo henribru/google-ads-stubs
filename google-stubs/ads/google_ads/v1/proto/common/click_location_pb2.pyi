@@ -14,11 +14,21 @@ from google.protobuf.wrappers_pb2 import (
 
 from typing import (
     Optional as typing___Optional,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class ClickLocation(google___protobuf___message___Message):
@@ -47,13 +57,14 @@ class ClickLocation(google___protobuf___message___Message):
         most_specific : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         region : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> ClickLocation: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> ClickLocation: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ClickLocation: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"city",u"country",u"metro",u"most_specific",u"region"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"city",u"country",u"metro",u"most_specific",u"region"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"city",b"city",u"country",b"country",u"metro",b"metro",u"most_specific",b"most_specific",u"region",b"region"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"city",b"city",u"country",b"country",u"metro",b"metro",u"most_specific",b"most_specific",u"region",b"region"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"city",b"city",u"country",b"country",u"metro",b"metro",u"most_specific",b"most_specific",u"region",b"region"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"city",b"city",u"country",b"country",u"metro",b"metro",u"most_specific",b"most_specific",u"region",b"region"]) -> None: ...
+global___ClickLocation = ClickLocation

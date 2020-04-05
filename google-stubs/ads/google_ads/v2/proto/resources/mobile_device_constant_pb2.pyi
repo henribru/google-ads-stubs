@@ -20,11 +20,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class MobileDeviceConstant(google___protobuf___message___Message):
@@ -53,13 +63,14 @@ class MobileDeviceConstant(google___protobuf___message___Message):
         operating_system_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         type : typing___Optional[google___ads___googleads___v2___enums___mobile_device_type_pb2___MobileDeviceTypeEnum.MobileDeviceType] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> MobileDeviceConstant: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> MobileDeviceConstant: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MobileDeviceConstant: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"id",u"manufacturer_name",u"name",u"operating_system_name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"id",u"manufacturer_name",u"name",u"operating_system_name",u"resource_name",u"type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"manufacturer_name",b"manufacturer_name",u"name",b"name",u"operating_system_name",b"operating_system_name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"manufacturer_name",b"manufacturer_name",u"name",b"name",u"operating_system_name",b"operating_system_name",u"resource_name",b"resource_name",u"type",b"type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"manufacturer_name",b"manufacturer_name",u"name",b"name",u"operating_system_name",b"operating_system_name"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"manufacturer_name",b"manufacturer_name",u"name",b"name",u"operating_system_name",b"operating_system_name",u"resource_name",b"resource_name",u"type",b"type"]) -> None: ...
+global___MobileDeviceConstant = MobileDeviceConstant

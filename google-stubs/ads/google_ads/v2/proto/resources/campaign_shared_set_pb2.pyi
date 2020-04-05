@@ -19,11 +19,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CampaignSharedSet(google___protobuf___message___Message):
@@ -44,13 +54,14 @@ class CampaignSharedSet(google___protobuf___message___Message):
         shared_set : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         status : typing___Optional[google___ads___googleads___v2___enums___campaign_shared_set_status_pb2___CampaignSharedSetStatusEnum.CampaignSharedSetStatus] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignSharedSet: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignSharedSet: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignSharedSet: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign",u"shared_set"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign",u"resource_name",u"shared_set",u"status"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"shared_set",b"shared_set"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"resource_name",b"resource_name",u"shared_set",b"shared_set",u"status",b"status"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"shared_set",b"shared_set"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"resource_name",b"resource_name",u"shared_set",b"shared_set",u"status",b"status"]) -> None: ...
+global___CampaignSharedSet = CampaignSharedSet

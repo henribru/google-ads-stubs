@@ -16,11 +16,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class KeywordPlanAdGroup(google___protobuf___message___Message):
@@ -47,13 +57,14 @@ class KeywordPlanAdGroup(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         cpc_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> KeywordPlanAdGroup: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> KeywordPlanAdGroup: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> KeywordPlanAdGroup: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",u"id",u"keyword_plan_campaign",u"name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",u"id",u"keyword_plan_campaign",u"name",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"id",b"id",u"keyword_plan_campaign",b"keyword_plan_campaign",u"name",b"name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"id",b"id",u"keyword_plan_campaign",b"keyword_plan_campaign",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"id",b"id",u"keyword_plan_campaign",b"keyword_plan_campaign",u"name",b"name"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"id",b"id",u"keyword_plan_campaign",b"keyword_plan_campaign",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
+global___KeywordPlanAdGroup = KeywordPlanAdGroup

@@ -49,11 +49,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class UserList(google___protobuf___message___Message):
@@ -138,14 +148,15 @@ class UserList(google___protobuf___message___Message):
         logical_user_list : typing___Optional[google___ads___googleads___v1___common___user_lists_pb2___LogicalUserListInfo] = None,
         basic_user_list : typing___Optional[google___ads___googleads___v1___common___user_lists_pb2___BasicUserListInfo] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> UserList: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> UserList: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> UserList: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"basic_user_list",u"crm_based_user_list",u"description",u"eligible_for_display",u"eligible_for_search",u"id",u"integration_code",u"logical_user_list",u"membership_life_span",u"name",u"read_only",u"rule_based_user_list",u"similar_user_list",u"size_for_display",u"size_for_search",u"user_list"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"access_reason",u"account_user_list_status",u"basic_user_list",u"closing_reason",u"crm_based_user_list",u"description",u"eligible_for_display",u"eligible_for_search",u"id",u"integration_code",u"logical_user_list",u"membership_life_span",u"membership_status",u"name",u"read_only",u"resource_name",u"rule_based_user_list",u"similar_user_list",u"size_for_display",u"size_for_search",u"size_range_for_display",u"size_range_for_search",u"type",u"user_list"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"basic_user_list",b"basic_user_list",u"crm_based_user_list",b"crm_based_user_list",u"description",b"description",u"eligible_for_display",b"eligible_for_display",u"eligible_for_search",b"eligible_for_search",u"id",b"id",u"integration_code",b"integration_code",u"logical_user_list",b"logical_user_list",u"membership_life_span",b"membership_life_span",u"name",b"name",u"read_only",b"read_only",u"rule_based_user_list",b"rule_based_user_list",u"similar_user_list",b"similar_user_list",u"size_for_display",b"size_for_display",u"size_for_search",b"size_for_search",u"user_list",b"user_list"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"access_reason",b"access_reason",u"account_user_list_status",b"account_user_list_status",u"basic_user_list",b"basic_user_list",u"closing_reason",b"closing_reason",u"crm_based_user_list",b"crm_based_user_list",u"description",b"description",u"eligible_for_display",b"eligible_for_display",u"eligible_for_search",b"eligible_for_search",u"id",b"id",u"integration_code",b"integration_code",u"logical_user_list",b"logical_user_list",u"membership_life_span",b"membership_life_span",u"membership_status",b"membership_status",u"name",b"name",u"read_only",b"read_only",u"resource_name",b"resource_name",u"rule_based_user_list",b"rule_based_user_list",u"similar_user_list",b"similar_user_list",u"size_for_display",b"size_for_display",u"size_for_search",b"size_for_search",u"size_range_for_display",b"size_range_for_display",u"size_range_for_search",b"size_range_for_search",u"type",b"type",u"user_list",b"user_list"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"basic_user_list",b"basic_user_list",u"crm_based_user_list",b"crm_based_user_list",u"description",b"description",u"eligible_for_display",b"eligible_for_display",u"eligible_for_search",b"eligible_for_search",u"id",b"id",u"integration_code",b"integration_code",u"logical_user_list",b"logical_user_list",u"membership_life_span",b"membership_life_span",u"name",b"name",u"read_only",b"read_only",u"rule_based_user_list",b"rule_based_user_list",u"similar_user_list",b"similar_user_list",u"size_for_display",b"size_for_display",u"size_for_search",b"size_for_search",u"user_list",b"user_list"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"access_reason",b"access_reason",u"account_user_list_status",b"account_user_list_status",u"basic_user_list",b"basic_user_list",u"closing_reason",b"closing_reason",u"crm_based_user_list",b"crm_based_user_list",u"description",b"description",u"eligible_for_display",b"eligible_for_display",u"eligible_for_search",b"eligible_for_search",u"id",b"id",u"integration_code",b"integration_code",u"logical_user_list",b"logical_user_list",u"membership_life_span",b"membership_life_span",u"membership_status",b"membership_status",u"name",b"name",u"read_only",b"read_only",u"resource_name",b"resource_name",u"rule_based_user_list",b"rule_based_user_list",u"similar_user_list",b"similar_user_list",u"size_for_display",b"size_for_display",u"size_for_search",b"size_for_search",u"size_range_for_display",b"size_range_for_display",u"size_range_for_search",b"size_range_for_search",u"type",b"type",u"user_list",b"user_list"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"user_list",b"user_list"]) -> typing_extensions___Literal["crm_based_user_list","similar_user_list","rule_based_user_list","logical_user_list","basic_user_list"]: ...
+global___UserList = UserList

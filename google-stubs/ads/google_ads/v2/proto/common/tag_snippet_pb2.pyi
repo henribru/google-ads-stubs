@@ -22,11 +22,21 @@ from google.protobuf.wrappers_pb2 import (
 
 from typing import (
     Optional as typing___Optional,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class TagSnippet(google___protobuf___message___Message):
@@ -47,13 +57,14 @@ class TagSnippet(google___protobuf___message___Message):
         global_site_tag : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         event_snippet : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> TagSnippet: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> TagSnippet: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> TagSnippet: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"event_snippet",u"global_site_tag"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"event_snippet",u"global_site_tag",u"page_format",u"type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"event_snippet",b"event_snippet",u"global_site_tag",b"global_site_tag"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"event_snippet",b"event_snippet",u"global_site_tag",b"global_site_tag",u"page_format",b"page_format",u"type",b"type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"event_snippet",b"event_snippet",u"global_site_tag",b"global_site_tag"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"event_snippet",b"event_snippet",u"global_site_tag",b"global_site_tag",u"page_format",b"page_format",u"type",b"type"]) -> None: ...
+global___TagSnippet = TagSnippet

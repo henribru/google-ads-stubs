@@ -21,11 +21,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CampaignDraft(google___protobuf___message___Message):
@@ -62,13 +72,14 @@ class CampaignDraft(google___protobuf___message___Message):
         has_experiment_running : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         long_running_operation : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignDraft: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignDraft: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignDraft: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"base_campaign",u"draft_campaign",u"draft_id",u"has_experiment_running",u"long_running_operation",u"name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"base_campaign",u"draft_campaign",u"draft_id",u"has_experiment_running",u"long_running_operation",u"name",u"resource_name",u"status"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"base_campaign",b"base_campaign",u"draft_campaign",b"draft_campaign",u"draft_id",b"draft_id",u"has_experiment_running",b"has_experiment_running",u"long_running_operation",b"long_running_operation",u"name",b"name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"base_campaign",b"base_campaign",u"draft_campaign",b"draft_campaign",u"draft_id",b"draft_id",u"has_experiment_running",b"has_experiment_running",u"long_running_operation",b"long_running_operation",u"name",b"name",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"base_campaign",b"base_campaign",u"draft_campaign",b"draft_campaign",u"draft_id",b"draft_id",u"has_experiment_running",b"has_experiment_running",u"long_running_operation",b"long_running_operation",u"name",b"name"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"base_campaign",b"base_campaign",u"draft_campaign",b"draft_campaign",u"draft_id",b"draft_id",u"has_experiment_running",b"has_experiment_running",u"long_running_operation",b"long_running_operation",u"name",b"name",u"resource_name",b"resource_name",u"status",b"status"]) -> None: ...
+global___CampaignDraft = CampaignDraft

@@ -33,11 +33,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CampaignBudget(google___protobuf___message___Message):
@@ -104,13 +114,14 @@ class CampaignBudget(google___protobuf___message___Message):
         recommended_budget_estimated_change_weekly_views : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         type : typing___Optional[google___ads___googleads___v2___enums___budget_type_pb2___BudgetTypeEnum.BudgetType] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignBudget: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignBudget: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignBudget: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"amount_micros",u"explicitly_shared",u"has_recommended_budget",u"id",u"name",u"recommended_budget_amount_micros",u"recommended_budget_estimated_change_weekly_clicks",u"recommended_budget_estimated_change_weekly_cost_micros",u"recommended_budget_estimated_change_weekly_interactions",u"recommended_budget_estimated_change_weekly_views",u"reference_count",u"total_amount_micros"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"amount_micros",u"delivery_method",u"explicitly_shared",u"has_recommended_budget",u"id",u"name",u"period",u"recommended_budget_amount_micros",u"recommended_budget_estimated_change_weekly_clicks",u"recommended_budget_estimated_change_weekly_cost_micros",u"recommended_budget_estimated_change_weekly_interactions",u"recommended_budget_estimated_change_weekly_views",u"reference_count",u"resource_name",u"status",u"total_amount_micros",u"type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"amount_micros",b"amount_micros",u"explicitly_shared",b"explicitly_shared",u"has_recommended_budget",b"has_recommended_budget",u"id",b"id",u"name",b"name",u"recommended_budget_amount_micros",b"recommended_budget_amount_micros",u"recommended_budget_estimated_change_weekly_clicks",b"recommended_budget_estimated_change_weekly_clicks",u"recommended_budget_estimated_change_weekly_cost_micros",b"recommended_budget_estimated_change_weekly_cost_micros",u"recommended_budget_estimated_change_weekly_interactions",b"recommended_budget_estimated_change_weekly_interactions",u"recommended_budget_estimated_change_weekly_views",b"recommended_budget_estimated_change_weekly_views",u"reference_count",b"reference_count",u"total_amount_micros",b"total_amount_micros"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"amount_micros",b"amount_micros",u"delivery_method",b"delivery_method",u"explicitly_shared",b"explicitly_shared",u"has_recommended_budget",b"has_recommended_budget",u"id",b"id",u"name",b"name",u"period",b"period",u"recommended_budget_amount_micros",b"recommended_budget_amount_micros",u"recommended_budget_estimated_change_weekly_clicks",b"recommended_budget_estimated_change_weekly_clicks",u"recommended_budget_estimated_change_weekly_cost_micros",b"recommended_budget_estimated_change_weekly_cost_micros",u"recommended_budget_estimated_change_weekly_interactions",b"recommended_budget_estimated_change_weekly_interactions",u"recommended_budget_estimated_change_weekly_views",b"recommended_budget_estimated_change_weekly_views",u"reference_count",b"reference_count",u"resource_name",b"resource_name",u"status",b"status",u"total_amount_micros",b"total_amount_micros",u"type",b"type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"amount_micros",b"amount_micros",u"explicitly_shared",b"explicitly_shared",u"has_recommended_budget",b"has_recommended_budget",u"id",b"id",u"name",b"name",u"recommended_budget_amount_micros",b"recommended_budget_amount_micros",u"recommended_budget_estimated_change_weekly_clicks",b"recommended_budget_estimated_change_weekly_clicks",u"recommended_budget_estimated_change_weekly_cost_micros",b"recommended_budget_estimated_change_weekly_cost_micros",u"recommended_budget_estimated_change_weekly_interactions",b"recommended_budget_estimated_change_weekly_interactions",u"recommended_budget_estimated_change_weekly_views",b"recommended_budget_estimated_change_weekly_views",u"reference_count",b"reference_count",u"total_amount_micros",b"total_amount_micros"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"amount_micros",b"amount_micros",u"delivery_method",b"delivery_method",u"explicitly_shared",b"explicitly_shared",u"has_recommended_budget",b"has_recommended_budget",u"id",b"id",u"name",b"name",u"period",b"period",u"recommended_budget_amount_micros",b"recommended_budget_amount_micros",u"recommended_budget_estimated_change_weekly_clicks",b"recommended_budget_estimated_change_weekly_clicks",u"recommended_budget_estimated_change_weekly_cost_micros",b"recommended_budget_estimated_change_weekly_cost_micros",u"recommended_budget_estimated_change_weekly_interactions",b"recommended_budget_estimated_change_weekly_interactions",u"recommended_budget_estimated_change_weekly_views",b"recommended_budget_estimated_change_weekly_views",u"reference_count",b"reference_count",u"resource_name",b"resource_name",u"status",b"status",u"total_amount_micros",b"total_amount_micros",u"type",b"type"]) -> None: ...
+global___CampaignBudget = CampaignBudget

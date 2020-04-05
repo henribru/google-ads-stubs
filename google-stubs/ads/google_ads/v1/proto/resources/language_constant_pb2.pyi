@@ -17,11 +17,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class LanguageConstant(google___protobuf___message___Message):
@@ -48,13 +58,14 @@ class LanguageConstant(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         targetable : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> LanguageConstant: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> LanguageConstant: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> LanguageConstant: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"code",u"id",u"name",u"targetable"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"code",u"id",u"name",u"resource_name",u"targetable"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"code",b"code",u"id",b"id",u"name",b"name",u"targetable",b"targetable"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"code",b"code",u"id",b"id",u"name",b"name",u"resource_name",b"resource_name",u"targetable",b"targetable"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"code",b"code",u"id",b"id",u"name",b"name",u"targetable",b"targetable"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"code",b"code",u"id",b"id",u"name",b"name",u"resource_name",b"resource_name",u"targetable",b"targetable"]) -> None: ...
+global___LanguageConstant = LanguageConstant

@@ -30,11 +30,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class AdGroupSimulation(google___protobuf___message___Message):
@@ -73,14 +83,15 @@ class AdGroupSimulation(google___protobuf___message___Message):
         cpv_bid_point_list : typing___Optional[google___ads___googleads___v1___common___simulation_pb2___CpvBidSimulationPointList] = None,
         target_cpa_point_list : typing___Optional[google___ads___googleads___v1___common___simulation_pb2___TargetCpaSimulationPointList] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AdGroupSimulation: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AdGroupSimulation: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroupSimulation: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group_id",u"cpc_bid_point_list",u"cpv_bid_point_list",u"end_date",u"point_list",u"start_date",u"target_cpa_point_list"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_id",u"cpc_bid_point_list",u"cpv_bid_point_list",u"end_date",u"modification_method",u"point_list",u"resource_name",u"start_date",u"target_cpa_point_list",u"type"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group_id",b"ad_group_id",u"cpc_bid_point_list",b"cpc_bid_point_list",u"cpv_bid_point_list",b"cpv_bid_point_list",u"end_date",b"end_date",u"point_list",b"point_list",u"start_date",b"start_date",u"target_cpa_point_list",b"target_cpa_point_list"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_id",b"ad_group_id",u"cpc_bid_point_list",b"cpc_bid_point_list",u"cpv_bid_point_list",b"cpv_bid_point_list",u"end_date",b"end_date",u"modification_method",b"modification_method",u"point_list",b"point_list",u"resource_name",b"resource_name",u"start_date",b"start_date",u"target_cpa_point_list",b"target_cpa_point_list",u"type",b"type"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_group_id",b"ad_group_id",u"cpc_bid_point_list",b"cpc_bid_point_list",u"cpv_bid_point_list",b"cpv_bid_point_list",u"end_date",b"end_date",u"point_list",b"point_list",u"start_date",b"start_date",u"target_cpa_point_list",b"target_cpa_point_list"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_id",b"ad_group_id",u"cpc_bid_point_list",b"cpc_bid_point_list",u"cpv_bid_point_list",b"cpv_bid_point_list",u"end_date",b"end_date",u"modification_method",b"modification_method",u"point_list",b"point_list",u"resource_name",b"resource_name",u"start_date",b"start_date",u"target_cpa_point_list",b"target_cpa_point_list",u"type",b"type"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"point_list",b"point_list"]) -> typing_extensions___Literal["cpc_bid_point_list","cpv_bid_point_list","target_cpa_point_list"]: ...
+global___AdGroupSimulation = AdGroupSimulation

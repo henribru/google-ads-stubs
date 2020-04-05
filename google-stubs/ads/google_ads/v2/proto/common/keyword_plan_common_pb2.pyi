@@ -18,11 +18,21 @@ from google.protobuf.wrappers_pb2 import (
 
 from typing import (
     Optional as typing___Optional,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class KeywordPlanHistoricalMetrics(google___protobuf___message___Message):
@@ -37,13 +47,14 @@ class KeywordPlanHistoricalMetrics(google___protobuf___message___Message):
         avg_monthly_searches : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         competition : typing___Optional[google___ads___googleads___v2___enums___keyword_plan_competition_level_pb2___KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> KeywordPlanHistoricalMetrics: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> KeywordPlanHistoricalMetrics: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> KeywordPlanHistoricalMetrics: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"avg_monthly_searches"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"avg_monthly_searches",u"competition"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"avg_monthly_searches",b"avg_monthly_searches"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"avg_monthly_searches",b"avg_monthly_searches",u"competition",b"competition"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"avg_monthly_searches",b"avg_monthly_searches"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"avg_monthly_searches",b"avg_monthly_searches",u"competition",b"competition"]) -> None: ...
+global___KeywordPlanHistoricalMetrics = KeywordPlanHistoricalMetrics

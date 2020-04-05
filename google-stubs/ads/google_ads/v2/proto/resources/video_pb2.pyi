@@ -16,11 +16,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class Video(google___protobuf___message___Message):
@@ -47,13 +57,14 @@ class Video(google___protobuf___message___Message):
         duration_millis : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         title : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> Video: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> Video: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Video: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"channel_id",u"duration_millis",u"id",u"title"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"channel_id",u"duration_millis",u"id",u"resource_name",u"title"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"channel_id",b"channel_id",u"duration_millis",b"duration_millis",u"id",b"id",u"title",b"title"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"channel_id",b"channel_id",u"duration_millis",b"duration_millis",u"id",b"id",u"resource_name",b"resource_name",u"title",b"title"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"channel_id",b"channel_id",u"duration_millis",b"duration_millis",u"id",b"id",u"title",b"title"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"channel_id",b"channel_id",u"duration_millis",b"duration_millis",u"id",b"id",u"resource_name",b"resource_name",u"title",b"title"]) -> None: ...
+global___Video = Video

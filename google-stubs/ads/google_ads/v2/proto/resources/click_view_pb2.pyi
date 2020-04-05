@@ -20,11 +20,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class ClickView(google___protobuf___message___Message):
@@ -55,13 +65,14 @@ class ClickView(google___protobuf___message___Message):
         page_number : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         ad_group_ad : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> ClickView: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> ClickView: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ClickView: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group_ad",u"area_of_interest",u"gclid",u"location_of_presence",u"page_number"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_ad",u"area_of_interest",u"gclid",u"location_of_presence",u"page_number",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_group_ad",b"ad_group_ad",u"area_of_interest",b"area_of_interest",u"gclid",b"gclid",u"location_of_presence",b"location_of_presence",u"page_number",b"page_number"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_ad",b"ad_group_ad",u"area_of_interest",b"area_of_interest",u"gclid",b"gclid",u"location_of_presence",b"location_of_presence",u"page_number",b"page_number",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_group_ad",b"ad_group_ad",u"area_of_interest",b"area_of_interest",u"gclid",b"gclid",u"location_of_presence",b"location_of_presence",u"page_number",b"page_number"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_ad",b"ad_group_ad",u"area_of_interest",b"area_of_interest",u"gclid",b"gclid",u"location_of_presence",b"location_of_presence",u"page_number",b"page_number",u"resource_name",b"resource_name"]) -> None: ...
+global___ClickView = ClickView

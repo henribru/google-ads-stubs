@@ -12,39 +12,54 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class CampaignCriterionStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class CampaignCriterionStatus(int):
+    class CampaignCriterionStatus(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> CampaignCriterionStatusEnum.CampaignCriterionStatus: ...
+        def Value(cls, name: builtin___str) -> 'CampaignCriterionStatusEnum.CampaignCriterionStatus': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[CampaignCriterionStatusEnum.CampaignCriterionStatus]: ...
+        def values(cls) -> typing___List['CampaignCriterionStatusEnum.CampaignCriterionStatus']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, CampaignCriterionStatusEnum.CampaignCriterionStatus]]: ...
-        UNSPECIFIED = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 0)
-        UNKNOWN = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 1)
-        ENABLED = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 2)
-        PAUSED = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 3)
-        REMOVED = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 4)
-    UNSPECIFIED = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 0)
-    UNKNOWN = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 1)
-    ENABLED = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 2)
-    PAUSED = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 3)
-    REMOVED = typing___cast(CampaignCriterionStatusEnum.CampaignCriterionStatus, 4)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'CampaignCriterionStatusEnum.CampaignCriterionStatus']]: ...
+        UNSPECIFIED = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 0)
+        UNKNOWN = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 1)
+        ENABLED = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 2)
+        PAUSED = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 3)
+        REMOVED = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 4)
+    UNSPECIFIED = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 0)
+    UNKNOWN = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 1)
+    ENABLED = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 2)
+    PAUSED = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 3)
+    REMOVED = typing___cast('CampaignCriterionStatusEnum.CampaignCriterionStatus', 4)
+    global___CampaignCriterionStatus = CampaignCriterionStatus
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignCriterionStatusEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignCriterionStatusEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignCriterionStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___CampaignCriterionStatusEnum = CampaignCriterionStatusEnum

@@ -15,11 +15,21 @@ from google.protobuf.message import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class FeedPlaceholderView(google___protobuf___message___Message):
@@ -32,11 +42,13 @@ class FeedPlaceholderView(google___protobuf___message___Message):
         resource_name : typing___Optional[typing___Text] = None,
         placeholder_type : typing___Optional[google___ads___googleads___v2___enums___placeholder_type_pb2___PlaceholderTypeEnum.PlaceholderType] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> FeedPlaceholderView: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> FeedPlaceholderView: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> FeedPlaceholderView: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def ClearField(self, field_name: typing_extensions___Literal[u"placeholder_type",u"resource_name"]) -> None: ...
-    else:
-        def ClearField(self, field_name: typing_extensions___Literal[u"placeholder_type",b"placeholder_type",u"resource_name",b"resource_name"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"placeholder_type",b"placeholder_type",u"resource_name",b"resource_name"]) -> None: ...
+global___FeedPlaceholderView = FeedPlaceholderView

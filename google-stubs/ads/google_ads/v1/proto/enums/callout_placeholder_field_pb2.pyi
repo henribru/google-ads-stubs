@@ -12,35 +12,50 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class CalloutPlaceholderFieldEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class CalloutPlaceholderField(int):
+    class CalloutPlaceholderField(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> CalloutPlaceholderFieldEnum.CalloutPlaceholderField: ...
+        def Value(cls, name: builtin___str) -> 'CalloutPlaceholderFieldEnum.CalloutPlaceholderField': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[CalloutPlaceholderFieldEnum.CalloutPlaceholderField]: ...
+        def values(cls) -> typing___List['CalloutPlaceholderFieldEnum.CalloutPlaceholderField']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, CalloutPlaceholderFieldEnum.CalloutPlaceholderField]]: ...
-        UNSPECIFIED = typing___cast(CalloutPlaceholderFieldEnum.CalloutPlaceholderField, 0)
-        UNKNOWN = typing___cast(CalloutPlaceholderFieldEnum.CalloutPlaceholderField, 1)
-        CALLOUT_TEXT = typing___cast(CalloutPlaceholderFieldEnum.CalloutPlaceholderField, 2)
-    UNSPECIFIED = typing___cast(CalloutPlaceholderFieldEnum.CalloutPlaceholderField, 0)
-    UNKNOWN = typing___cast(CalloutPlaceholderFieldEnum.CalloutPlaceholderField, 1)
-    CALLOUT_TEXT = typing___cast(CalloutPlaceholderFieldEnum.CalloutPlaceholderField, 2)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'CalloutPlaceholderFieldEnum.CalloutPlaceholderField']]: ...
+        UNSPECIFIED = typing___cast('CalloutPlaceholderFieldEnum.CalloutPlaceholderField', 0)
+        UNKNOWN = typing___cast('CalloutPlaceholderFieldEnum.CalloutPlaceholderField', 1)
+        CALLOUT_TEXT = typing___cast('CalloutPlaceholderFieldEnum.CalloutPlaceholderField', 2)
+    UNSPECIFIED = typing___cast('CalloutPlaceholderFieldEnum.CalloutPlaceholderField', 0)
+    UNKNOWN = typing___cast('CalloutPlaceholderFieldEnum.CalloutPlaceholderField', 1)
+    CALLOUT_TEXT = typing___cast('CalloutPlaceholderFieldEnum.CalloutPlaceholderField', 2)
+    global___CalloutPlaceholderField = CalloutPlaceholderField
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CalloutPlaceholderFieldEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CalloutPlaceholderFieldEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CalloutPlaceholderFieldEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___CalloutPlaceholderFieldEnum = CalloutPlaceholderFieldEnum

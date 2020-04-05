@@ -12,37 +12,52 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class StringFormatErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class StringFormatError(int):
+    class StringFormatError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> StringFormatErrorEnum.StringFormatError: ...
+        def Value(cls, name: builtin___str) -> 'StringFormatErrorEnum.StringFormatError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[StringFormatErrorEnum.StringFormatError]: ...
+        def values(cls) -> typing___List['StringFormatErrorEnum.StringFormatError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, StringFormatErrorEnum.StringFormatError]]: ...
-        UNSPECIFIED = typing___cast(StringFormatErrorEnum.StringFormatError, 0)
-        UNKNOWN = typing___cast(StringFormatErrorEnum.StringFormatError, 1)
-        ILLEGAL_CHARS = typing___cast(StringFormatErrorEnum.StringFormatError, 2)
-        INVALID_FORMAT = typing___cast(StringFormatErrorEnum.StringFormatError, 3)
-    UNSPECIFIED = typing___cast(StringFormatErrorEnum.StringFormatError, 0)
-    UNKNOWN = typing___cast(StringFormatErrorEnum.StringFormatError, 1)
-    ILLEGAL_CHARS = typing___cast(StringFormatErrorEnum.StringFormatError, 2)
-    INVALID_FORMAT = typing___cast(StringFormatErrorEnum.StringFormatError, 3)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'StringFormatErrorEnum.StringFormatError']]: ...
+        UNSPECIFIED = typing___cast('StringFormatErrorEnum.StringFormatError', 0)
+        UNKNOWN = typing___cast('StringFormatErrorEnum.StringFormatError', 1)
+        ILLEGAL_CHARS = typing___cast('StringFormatErrorEnum.StringFormatError', 2)
+        INVALID_FORMAT = typing___cast('StringFormatErrorEnum.StringFormatError', 3)
+    UNSPECIFIED = typing___cast('StringFormatErrorEnum.StringFormatError', 0)
+    UNKNOWN = typing___cast('StringFormatErrorEnum.StringFormatError', 1)
+    ILLEGAL_CHARS = typing___cast('StringFormatErrorEnum.StringFormatError', 2)
+    INVALID_FORMAT = typing___cast('StringFormatErrorEnum.StringFormatError', 3)
+    global___StringFormatError = StringFormatError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> StringFormatErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> StringFormatErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> StringFormatErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___StringFormatErrorEnum = StringFormatErrorEnum

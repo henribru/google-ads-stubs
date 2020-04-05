@@ -54,11 +54,21 @@ from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class AdGroup(google___protobuf___message___Message):
@@ -153,13 +163,14 @@ class AdGroup(google___protobuf___message___Message):
         effective_target_roas : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
         effective_target_roas_source : typing___Optional[google___ads___googleads___v1___enums___bidding_source_pb2___BiddingSourceEnum.BiddingSource] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AdGroup: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AdGroup: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroup: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"base_ad_group",u"campaign",u"cpc_bid_micros",u"cpm_bid_micros",u"cpv_bid_micros",u"effective_target_cpa_micros",u"effective_target_roas",u"explorer_auto_optimizer_setting",u"final_url_suffix",u"id",u"name",u"percent_cpc_bid_micros",u"target_cpa_micros",u"target_cpm_micros",u"target_roas",u"targeting_setting",u"tracking_url_template"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_rotation_mode",u"base_ad_group",u"campaign",u"cpc_bid_micros",u"cpm_bid_micros",u"cpv_bid_micros",u"display_custom_bid_dimension",u"effective_target_cpa_micros",u"effective_target_cpa_source",u"effective_target_roas",u"effective_target_roas_source",u"explorer_auto_optimizer_setting",u"final_url_suffix",u"id",u"name",u"percent_cpc_bid_micros",u"resource_name",u"status",u"target_cpa_micros",u"target_cpm_micros",u"target_roas",u"targeting_setting",u"tracking_url_template",u"type",u"url_custom_parameters"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"base_ad_group",b"base_ad_group",u"campaign",b"campaign",u"cpc_bid_micros",b"cpc_bid_micros",u"cpm_bid_micros",b"cpm_bid_micros",u"cpv_bid_micros",b"cpv_bid_micros",u"effective_target_cpa_micros",b"effective_target_cpa_micros",u"effective_target_roas",b"effective_target_roas",u"explorer_auto_optimizer_setting",b"explorer_auto_optimizer_setting",u"final_url_suffix",b"final_url_suffix",u"id",b"id",u"name",b"name",u"percent_cpc_bid_micros",b"percent_cpc_bid_micros",u"target_cpa_micros",b"target_cpa_micros",u"target_cpm_micros",b"target_cpm_micros",u"target_roas",b"target_roas",u"targeting_setting",b"targeting_setting",u"tracking_url_template",b"tracking_url_template"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_rotation_mode",b"ad_rotation_mode",u"base_ad_group",b"base_ad_group",u"campaign",b"campaign",u"cpc_bid_micros",b"cpc_bid_micros",u"cpm_bid_micros",b"cpm_bid_micros",u"cpv_bid_micros",b"cpv_bid_micros",u"display_custom_bid_dimension",b"display_custom_bid_dimension",u"effective_target_cpa_micros",b"effective_target_cpa_micros",u"effective_target_cpa_source",b"effective_target_cpa_source",u"effective_target_roas",b"effective_target_roas",u"effective_target_roas_source",b"effective_target_roas_source",u"explorer_auto_optimizer_setting",b"explorer_auto_optimizer_setting",u"final_url_suffix",b"final_url_suffix",u"id",b"id",u"name",b"name",u"percent_cpc_bid_micros",b"percent_cpc_bid_micros",u"resource_name",b"resource_name",u"status",b"status",u"target_cpa_micros",b"target_cpa_micros",u"target_cpm_micros",b"target_cpm_micros",u"target_roas",b"target_roas",u"targeting_setting",b"targeting_setting",u"tracking_url_template",b"tracking_url_template",u"type",b"type",u"url_custom_parameters",b"url_custom_parameters"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"base_ad_group",b"base_ad_group",u"campaign",b"campaign",u"cpc_bid_micros",b"cpc_bid_micros",u"cpm_bid_micros",b"cpm_bid_micros",u"cpv_bid_micros",b"cpv_bid_micros",u"effective_target_cpa_micros",b"effective_target_cpa_micros",u"effective_target_roas",b"effective_target_roas",u"explorer_auto_optimizer_setting",b"explorer_auto_optimizer_setting",u"final_url_suffix",b"final_url_suffix",u"id",b"id",u"name",b"name",u"percent_cpc_bid_micros",b"percent_cpc_bid_micros",u"target_cpa_micros",b"target_cpa_micros",u"target_cpm_micros",b"target_cpm_micros",u"target_roas",b"target_roas",u"targeting_setting",b"targeting_setting",u"tracking_url_template",b"tracking_url_template"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_rotation_mode",b"ad_rotation_mode",u"base_ad_group",b"base_ad_group",u"campaign",b"campaign",u"cpc_bid_micros",b"cpc_bid_micros",u"cpm_bid_micros",b"cpm_bid_micros",u"cpv_bid_micros",b"cpv_bid_micros",u"display_custom_bid_dimension",b"display_custom_bid_dimension",u"effective_target_cpa_micros",b"effective_target_cpa_micros",u"effective_target_cpa_source",b"effective_target_cpa_source",u"effective_target_roas",b"effective_target_roas",u"effective_target_roas_source",b"effective_target_roas_source",u"explorer_auto_optimizer_setting",b"explorer_auto_optimizer_setting",u"final_url_suffix",b"final_url_suffix",u"id",b"id",u"name",b"name",u"percent_cpc_bid_micros",b"percent_cpc_bid_micros",u"resource_name",b"resource_name",u"status",b"status",u"target_cpa_micros",b"target_cpa_micros",u"target_cpm_micros",b"target_cpm_micros",u"target_roas",b"target_roas",u"targeting_setting",b"targeting_setting",u"tracking_url_template",b"tracking_url_template",u"type",b"type",u"url_custom_parameters",b"url_custom_parameters"]) -> None: ...
+global___AdGroup = AdGroup

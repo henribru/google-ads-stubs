@@ -12,41 +12,56 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class MinuteOfHourEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class MinuteOfHour(int):
+    class MinuteOfHour(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> MinuteOfHourEnum.MinuteOfHour: ...
+        def Value(cls, name: builtin___str) -> 'MinuteOfHourEnum.MinuteOfHour': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[MinuteOfHourEnum.MinuteOfHour]: ...
+        def values(cls) -> typing___List['MinuteOfHourEnum.MinuteOfHour']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, MinuteOfHourEnum.MinuteOfHour]]: ...
-        UNSPECIFIED = typing___cast(MinuteOfHourEnum.MinuteOfHour, 0)
-        UNKNOWN = typing___cast(MinuteOfHourEnum.MinuteOfHour, 1)
-        ZERO = typing___cast(MinuteOfHourEnum.MinuteOfHour, 2)
-        FIFTEEN = typing___cast(MinuteOfHourEnum.MinuteOfHour, 3)
-        THIRTY = typing___cast(MinuteOfHourEnum.MinuteOfHour, 4)
-        FORTY_FIVE = typing___cast(MinuteOfHourEnum.MinuteOfHour, 5)
-    UNSPECIFIED = typing___cast(MinuteOfHourEnum.MinuteOfHour, 0)
-    UNKNOWN = typing___cast(MinuteOfHourEnum.MinuteOfHour, 1)
-    ZERO = typing___cast(MinuteOfHourEnum.MinuteOfHour, 2)
-    FIFTEEN = typing___cast(MinuteOfHourEnum.MinuteOfHour, 3)
-    THIRTY = typing___cast(MinuteOfHourEnum.MinuteOfHour, 4)
-    FORTY_FIVE = typing___cast(MinuteOfHourEnum.MinuteOfHour, 5)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'MinuteOfHourEnum.MinuteOfHour']]: ...
+        UNSPECIFIED = typing___cast('MinuteOfHourEnum.MinuteOfHour', 0)
+        UNKNOWN = typing___cast('MinuteOfHourEnum.MinuteOfHour', 1)
+        ZERO = typing___cast('MinuteOfHourEnum.MinuteOfHour', 2)
+        FIFTEEN = typing___cast('MinuteOfHourEnum.MinuteOfHour', 3)
+        THIRTY = typing___cast('MinuteOfHourEnum.MinuteOfHour', 4)
+        FORTY_FIVE = typing___cast('MinuteOfHourEnum.MinuteOfHour', 5)
+    UNSPECIFIED = typing___cast('MinuteOfHourEnum.MinuteOfHour', 0)
+    UNKNOWN = typing___cast('MinuteOfHourEnum.MinuteOfHour', 1)
+    ZERO = typing___cast('MinuteOfHourEnum.MinuteOfHour', 2)
+    FIFTEEN = typing___cast('MinuteOfHourEnum.MinuteOfHour', 3)
+    THIRTY = typing___cast('MinuteOfHourEnum.MinuteOfHour', 4)
+    FORTY_FIVE = typing___cast('MinuteOfHourEnum.MinuteOfHour', 5)
+    global___MinuteOfHour = MinuteOfHour
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> MinuteOfHourEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> MinuteOfHourEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MinuteOfHourEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___MinuteOfHourEnum = MinuteOfHourEnum

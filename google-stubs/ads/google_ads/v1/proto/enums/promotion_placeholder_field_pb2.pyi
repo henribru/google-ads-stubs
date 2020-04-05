@@ -12,61 +12,76 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class PromotionPlaceholderFieldEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class PromotionPlaceholderField(int):
+    class PromotionPlaceholderField(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> PromotionPlaceholderFieldEnum.PromotionPlaceholderField: ...
+        def Value(cls, name: builtin___str) -> 'PromotionPlaceholderFieldEnum.PromotionPlaceholderField': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[PromotionPlaceholderFieldEnum.PromotionPlaceholderField]: ...
+        def values(cls) -> typing___List['PromotionPlaceholderFieldEnum.PromotionPlaceholderField']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, PromotionPlaceholderFieldEnum.PromotionPlaceholderField]]: ...
-        UNSPECIFIED = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 0)
-        UNKNOWN = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 1)
-        PROMOTION_TARGET = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 2)
-        DISCOUNT_MODIFIER = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 3)
-        PERCENT_OFF = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 4)
-        MONEY_AMOUNT_OFF = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 5)
-        PROMOTION_CODE = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 6)
-        ORDERS_OVER_AMOUNT = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 7)
-        PROMOTION_START = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 8)
-        PROMOTION_END = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 9)
-        OCCASION = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 10)
-        FINAL_URLS = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 11)
-        FINAL_MOBILE_URLS = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 12)
-        TRACKING_URL = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 13)
-        LANGUAGE = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 14)
-        FINAL_URL_SUFFIX = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 15)
-    UNSPECIFIED = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 0)
-    UNKNOWN = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 1)
-    PROMOTION_TARGET = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 2)
-    DISCOUNT_MODIFIER = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 3)
-    PERCENT_OFF = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 4)
-    MONEY_AMOUNT_OFF = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 5)
-    PROMOTION_CODE = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 6)
-    ORDERS_OVER_AMOUNT = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 7)
-    PROMOTION_START = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 8)
-    PROMOTION_END = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 9)
-    OCCASION = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 10)
-    FINAL_URLS = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 11)
-    FINAL_MOBILE_URLS = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 12)
-    TRACKING_URL = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 13)
-    LANGUAGE = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 14)
-    FINAL_URL_SUFFIX = typing___cast(PromotionPlaceholderFieldEnum.PromotionPlaceholderField, 15)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'PromotionPlaceholderFieldEnum.PromotionPlaceholderField']]: ...
+        UNSPECIFIED = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 0)
+        UNKNOWN = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 1)
+        PROMOTION_TARGET = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 2)
+        DISCOUNT_MODIFIER = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 3)
+        PERCENT_OFF = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 4)
+        MONEY_AMOUNT_OFF = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 5)
+        PROMOTION_CODE = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 6)
+        ORDERS_OVER_AMOUNT = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 7)
+        PROMOTION_START = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 8)
+        PROMOTION_END = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 9)
+        OCCASION = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 10)
+        FINAL_URLS = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 11)
+        FINAL_MOBILE_URLS = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 12)
+        TRACKING_URL = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 13)
+        LANGUAGE = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 14)
+        FINAL_URL_SUFFIX = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 15)
+    UNSPECIFIED = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 0)
+    UNKNOWN = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 1)
+    PROMOTION_TARGET = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 2)
+    DISCOUNT_MODIFIER = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 3)
+    PERCENT_OFF = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 4)
+    MONEY_AMOUNT_OFF = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 5)
+    PROMOTION_CODE = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 6)
+    ORDERS_OVER_AMOUNT = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 7)
+    PROMOTION_START = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 8)
+    PROMOTION_END = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 9)
+    OCCASION = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 10)
+    FINAL_URLS = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 11)
+    FINAL_MOBILE_URLS = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 12)
+    TRACKING_URL = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 13)
+    LANGUAGE = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 14)
+    FINAL_URL_SUFFIX = typing___cast('PromotionPlaceholderFieldEnum.PromotionPlaceholderField', 15)
+    global___PromotionPlaceholderField = PromotionPlaceholderField
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> PromotionPlaceholderFieldEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> PromotionPlaceholderFieldEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> PromotionPlaceholderFieldEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___PromotionPlaceholderFieldEnum = PromotionPlaceholderFieldEnum

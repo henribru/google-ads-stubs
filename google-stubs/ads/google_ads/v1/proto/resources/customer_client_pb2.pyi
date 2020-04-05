@@ -17,11 +17,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CustomerClient(google___protobuf___message___Message):
@@ -44,13 +54,14 @@ class CustomerClient(google___protobuf___message___Message):
         hidden : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
         level : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CustomerClient: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CustomerClient: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CustomerClient: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"client_customer",u"hidden",u"level"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"client_customer",u"hidden",u"level",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"client_customer",b"client_customer",u"hidden",b"hidden",u"level",b"level"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"client_customer",b"client_customer",u"hidden",b"hidden",u"level",b"level",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"client_customer",b"client_customer",u"hidden",b"hidden",u"level",b"level"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"client_customer",b"client_customer",u"hidden",b"hidden",u"level",b"level",u"resource_name",b"resource_name"]) -> None: ...
+global___CustomerClient = CustomerClient

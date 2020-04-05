@@ -16,11 +16,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CarrierConstant(google___protobuf___message___Message):
@@ -43,13 +53,14 @@ class CarrierConstant(google___protobuf___message___Message):
         name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         country_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CarrierConstant: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CarrierConstant: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CarrierConstant: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"country_code",u"id",u"name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"country_code",u"id",u"name",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"name",b"name"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"name",b"name"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"country_code",b"country_code",u"id",b"id",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
+global___CarrierConstant = CarrierConstant

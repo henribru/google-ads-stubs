@@ -12,41 +12,56 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class UserListDateRuleItemOperatorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class UserListDateRuleItemOperator(int):
+    class UserListDateRuleItemOperator(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator: ...
+        def Value(cls, name: builtin___str) -> 'UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator]: ...
+        def values(cls) -> typing___List['UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator]]: ...
-        UNSPECIFIED = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 0)
-        UNKNOWN = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 1)
-        EQUALS = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 2)
-        NOT_EQUALS = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 3)
-        BEFORE = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 4)
-        AFTER = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 5)
-    UNSPECIFIED = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 0)
-    UNKNOWN = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 1)
-    EQUALS = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 2)
-    NOT_EQUALS = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 3)
-    BEFORE = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 4)
-    AFTER = typing___cast(UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator, 5)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator']]: ...
+        UNSPECIFIED = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 0)
+        UNKNOWN = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 1)
+        EQUALS = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 2)
+        NOT_EQUALS = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 3)
+        BEFORE = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 4)
+        AFTER = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 5)
+    UNSPECIFIED = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 0)
+    UNKNOWN = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 1)
+    EQUALS = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 2)
+    NOT_EQUALS = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 3)
+    BEFORE = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 4)
+    AFTER = typing___cast('UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator', 5)
+    global___UserListDateRuleItemOperator = UserListDateRuleItemOperator
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> UserListDateRuleItemOperatorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> UserListDateRuleItemOperatorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> UserListDateRuleItemOperatorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___UserListDateRuleItemOperatorEnum = UserListDateRuleItemOperatorEnum

@@ -55,11 +55,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CampaignCriterion(google___protobuf___message___Message):
@@ -194,14 +204,15 @@ class CampaignCriterion(google___protobuf___message___Message):
         mobile_device : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___MobileDeviceInfo] = None,
         location_group : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___LocationGroupInfo] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignCriterion: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignCriterion: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignCriterion: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_schedule",u"age_range",u"bid_modifier",u"campaign",u"carrier",u"content_label",u"criterion",u"criterion_id",u"device",u"gender",u"income_range",u"ip_block",u"keyword",u"language",u"listing_scope",u"location",u"location_group",u"mobile_app_category",u"mobile_application",u"mobile_device",u"negative",u"operating_system_version",u"parental_status",u"placement",u"proximity",u"topic",u"user_interest",u"user_list",u"webpage",u"youtube_channel",u"youtube_video"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedule",u"age_range",u"bid_modifier",u"campaign",u"carrier",u"content_label",u"criterion",u"criterion_id",u"device",u"gender",u"income_range",u"ip_block",u"keyword",u"language",u"listing_scope",u"location",u"location_group",u"mobile_app_category",u"mobile_application",u"mobile_device",u"negative",u"operating_system_version",u"parental_status",u"placement",u"proximity",u"resource_name",u"status",u"topic",u"type",u"user_interest",u"user_list",u"webpage",u"youtube_channel",u"youtube_video"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"ad_schedule",b"ad_schedule",u"age_range",b"age_range",u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"carrier",b"carrier",u"content_label",b"content_label",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"gender",b"gender",u"income_range",b"income_range",u"ip_block",b"ip_block",u"keyword",b"keyword",u"language",b"language",u"listing_scope",b"listing_scope",u"location",b"location",u"location_group",b"location_group",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"mobile_device",b"mobile_device",u"negative",b"negative",u"operating_system_version",b"operating_system_version",u"parental_status",b"parental_status",u"placement",b"placement",u"proximity",b"proximity",u"topic",b"topic",u"user_interest",b"user_interest",u"user_list",b"user_list",u"webpage",b"webpage",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedule",b"ad_schedule",u"age_range",b"age_range",u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"carrier",b"carrier",u"content_label",b"content_label",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"gender",b"gender",u"income_range",b"income_range",u"ip_block",b"ip_block",u"keyword",b"keyword",u"language",b"language",u"listing_scope",b"listing_scope",u"location",b"location",u"location_group",b"location_group",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"mobile_device",b"mobile_device",u"negative",b"negative",u"operating_system_version",b"operating_system_version",u"parental_status",b"parental_status",u"placement",b"placement",u"proximity",b"proximity",u"resource_name",b"resource_name",u"status",b"status",u"topic",b"topic",u"type",b"type",u"user_interest",b"user_interest",u"user_list",b"user_list",u"webpage",b"webpage",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"ad_schedule",b"ad_schedule",u"age_range",b"age_range",u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"carrier",b"carrier",u"content_label",b"content_label",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"gender",b"gender",u"income_range",b"income_range",u"ip_block",b"ip_block",u"keyword",b"keyword",u"language",b"language",u"listing_scope",b"listing_scope",u"location",b"location",u"location_group",b"location_group",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"mobile_device",b"mobile_device",u"negative",b"negative",u"operating_system_version",b"operating_system_version",u"parental_status",b"parental_status",u"placement",b"placement",u"proximity",b"proximity",u"topic",b"topic",u"user_interest",b"user_interest",u"user_list",b"user_list",u"webpage",b"webpage",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedule",b"ad_schedule",u"age_range",b"age_range",u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"carrier",b"carrier",u"content_label",b"content_label",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"gender",b"gender",u"income_range",b"income_range",u"ip_block",b"ip_block",u"keyword",b"keyword",u"language",b"language",u"listing_scope",b"listing_scope",u"location",b"location",u"location_group",b"location_group",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"mobile_device",b"mobile_device",u"negative",b"negative",u"operating_system_version",b"operating_system_version",u"parental_status",b"parental_status",u"placement",b"placement",u"proximity",b"proximity",u"resource_name",b"resource_name",u"status",b"status",u"topic",b"topic",u"type",b"type",u"user_interest",b"user_interest",u"user_list",b"user_list",u"webpage",b"webpage",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> None: ...
     def WhichOneof(self, oneof_group: typing_extensions___Literal[u"criterion",b"criterion"]) -> typing_extensions___Literal["keyword","placement","mobile_app_category","mobile_application","location","device","ad_schedule","age_range","gender","income_range","parental_status","user_list","youtube_video","youtube_channel","proximity","topic","listing_scope","language","ip_block","content_label","carrier","user_interest","webpage","operating_system_version","mobile_device","location_group"]: ...
+global___CampaignCriterion = CampaignCriterion

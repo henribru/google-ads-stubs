@@ -12,43 +12,58 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class BiddingStrategyErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class BiddingStrategyError(int):
+    class BiddingStrategyError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> BiddingStrategyErrorEnum.BiddingStrategyError: ...
+        def Value(cls, name: builtin___str) -> 'BiddingStrategyErrorEnum.BiddingStrategyError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[BiddingStrategyErrorEnum.BiddingStrategyError]: ...
+        def values(cls) -> typing___List['BiddingStrategyErrorEnum.BiddingStrategyError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, BiddingStrategyErrorEnum.BiddingStrategyError]]: ...
-        UNSPECIFIED = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 0)
-        UNKNOWN = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 1)
-        DUPLICATE_NAME = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 2)
-        CANNOT_CHANGE_BIDDING_STRATEGY_TYPE = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 3)
-        CANNOT_REMOVE_ASSOCIATED_STRATEGY = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 4)
-        BIDDING_STRATEGY_NOT_SUPPORTED = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 5)
-        INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 6)
-    UNSPECIFIED = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 0)
-    UNKNOWN = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 1)
-    DUPLICATE_NAME = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 2)
-    CANNOT_CHANGE_BIDDING_STRATEGY_TYPE = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 3)
-    CANNOT_REMOVE_ASSOCIATED_STRATEGY = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 4)
-    BIDDING_STRATEGY_NOT_SUPPORTED = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 5)
-    INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE = typing___cast(BiddingStrategyErrorEnum.BiddingStrategyError, 6)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'BiddingStrategyErrorEnum.BiddingStrategyError']]: ...
+        UNSPECIFIED = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 0)
+        UNKNOWN = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 1)
+        DUPLICATE_NAME = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 2)
+        CANNOT_CHANGE_BIDDING_STRATEGY_TYPE = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 3)
+        CANNOT_REMOVE_ASSOCIATED_STRATEGY = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 4)
+        BIDDING_STRATEGY_NOT_SUPPORTED = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 5)
+        INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 6)
+    UNSPECIFIED = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 0)
+    UNKNOWN = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 1)
+    DUPLICATE_NAME = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 2)
+    CANNOT_CHANGE_BIDDING_STRATEGY_TYPE = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 3)
+    CANNOT_REMOVE_ASSOCIATED_STRATEGY = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 4)
+    BIDDING_STRATEGY_NOT_SUPPORTED = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 5)
+    INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE = typing___cast('BiddingStrategyErrorEnum.BiddingStrategyError', 6)
+    global___BiddingStrategyError = BiddingStrategyError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> BiddingStrategyErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> BiddingStrategyErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> BiddingStrategyErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___BiddingStrategyErrorEnum = BiddingStrategyErrorEnum

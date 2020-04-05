@@ -12,37 +12,52 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class DistinctErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class DistinctError(int):
+    class DistinctError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> DistinctErrorEnum.DistinctError: ...
+        def Value(cls, name: builtin___str) -> 'DistinctErrorEnum.DistinctError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[DistinctErrorEnum.DistinctError]: ...
+        def values(cls) -> typing___List['DistinctErrorEnum.DistinctError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, DistinctErrorEnum.DistinctError]]: ...
-        UNSPECIFIED = typing___cast(DistinctErrorEnum.DistinctError, 0)
-        UNKNOWN = typing___cast(DistinctErrorEnum.DistinctError, 1)
-        DUPLICATE_ELEMENT = typing___cast(DistinctErrorEnum.DistinctError, 2)
-        DUPLICATE_TYPE = typing___cast(DistinctErrorEnum.DistinctError, 3)
-    UNSPECIFIED = typing___cast(DistinctErrorEnum.DistinctError, 0)
-    UNKNOWN = typing___cast(DistinctErrorEnum.DistinctError, 1)
-    DUPLICATE_ELEMENT = typing___cast(DistinctErrorEnum.DistinctError, 2)
-    DUPLICATE_TYPE = typing___cast(DistinctErrorEnum.DistinctError, 3)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'DistinctErrorEnum.DistinctError']]: ...
+        UNSPECIFIED = typing___cast('DistinctErrorEnum.DistinctError', 0)
+        UNKNOWN = typing___cast('DistinctErrorEnum.DistinctError', 1)
+        DUPLICATE_ELEMENT = typing___cast('DistinctErrorEnum.DistinctError', 2)
+        DUPLICATE_TYPE = typing___cast('DistinctErrorEnum.DistinctError', 3)
+    UNSPECIFIED = typing___cast('DistinctErrorEnum.DistinctError', 0)
+    UNKNOWN = typing___cast('DistinctErrorEnum.DistinctError', 1)
+    DUPLICATE_ELEMENT = typing___cast('DistinctErrorEnum.DistinctError', 2)
+    DUPLICATE_TYPE = typing___cast('DistinctErrorEnum.DistinctError', 3)
+    global___DistinctError = DistinctError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> DistinctErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> DistinctErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> DistinctErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___DistinctErrorEnum = DistinctErrorEnum

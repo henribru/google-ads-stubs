@@ -15,11 +15,21 @@ from google.protobuf.wrappers_pb2 import (
 from typing import (
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class PaymentsAccount(google___protobuf___message___Message):
@@ -50,13 +60,14 @@ class PaymentsAccount(google___protobuf___message___Message):
         payments_profile_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         secondary_payments_profile_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> PaymentsAccount: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> PaymentsAccount: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> PaymentsAccount: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"currency_code",u"name",u"payments_account_id",u"payments_profile_id",u"secondary_payments_profile_id"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"currency_code",u"name",u"payments_account_id",u"payments_profile_id",u"resource_name",u"secondary_payments_profile_id"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"currency_code",b"currency_code",u"name",b"name",u"payments_account_id",b"payments_account_id",u"payments_profile_id",b"payments_profile_id",u"secondary_payments_profile_id",b"secondary_payments_profile_id"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"currency_code",b"currency_code",u"name",b"name",u"payments_account_id",b"payments_account_id",u"payments_profile_id",b"payments_profile_id",u"resource_name",b"resource_name",u"secondary_payments_profile_id",b"secondary_payments_profile_id"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"currency_code",b"currency_code",u"name",b"name",u"payments_account_id",b"payments_account_id",u"payments_profile_id",b"payments_profile_id",u"secondary_payments_profile_id",b"secondary_payments_profile_id"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"currency_code",b"currency_code",u"name",b"name",u"payments_account_id",b"payments_account_id",u"payments_profile_id",b"payments_profile_id",u"resource_name",b"resource_name",u"secondary_payments_profile_id",b"secondary_payments_profile_id"]) -> None: ...
+global___PaymentsAccount = PaymentsAccount

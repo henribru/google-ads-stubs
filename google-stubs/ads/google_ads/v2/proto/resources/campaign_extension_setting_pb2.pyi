@@ -28,11 +28,21 @@ from typing import (
     Iterable as typing___Iterable,
     Optional as typing___Optional,
     Text as typing___Text,
+    Union as typing___Union,
 )
 
 from typing_extensions import (
     Literal as typing_extensions___Literal,
 )
+
+
+builtin___bool = bool
+builtin___bytes = bytes
+builtin___float = float
+builtin___int = int
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
 
 
 class CampaignExtensionSetting(google___protobuf___message___Message):
@@ -55,13 +65,14 @@ class CampaignExtensionSetting(google___protobuf___message___Message):
         extension_feed_items : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
         device : typing___Optional[google___ads___googleads___v2___enums___extension_setting_device_pb2___ExtensionSettingDeviceEnum.ExtensionSettingDevice] = None,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> CampaignExtensionSetting: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> CampaignExtensionSetting: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignExtensionSetting: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    if sys.version_info >= (3,):
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign",u"device",u"extension_feed_items",u"extension_type",u"resource_name"]) -> None: ...
-    else:
-        def HasField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign"]) -> bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"device",b"device",u"extension_feed_items",b"extension_feed_items",u"extension_type",b"extension_type",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign"]) -> builtin___bool: ...
+    def ClearField(self, field_name: typing_extensions___Literal[u"campaign",b"campaign",u"device",b"device",u"extension_feed_items",b"extension_feed_items",u"extension_type",b"extension_type",u"resource_name",b"resource_name"]) -> None: ...
+global___CampaignExtensionSetting = CampaignExtensionSetting

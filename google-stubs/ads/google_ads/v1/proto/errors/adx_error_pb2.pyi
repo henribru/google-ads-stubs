@@ -12,35 +12,50 @@ from google.protobuf.message import (
 from typing import (
     List as typing___List,
     Tuple as typing___Tuple,
+    Union as typing___Union,
     cast as typing___cast,
 )
 
 
+builtin___bytes = bytes
+builtin___int = int
+builtin___str = str
+if sys.version_info < (3,):
+    builtin___buffer = buffer
+    builtin___unicode = unicode
+
+
 class AdxErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    class AdxError(int):
+    class AdxError(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
-        def Name(cls, number: int) -> str: ...
+        def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: str) -> AdxErrorEnum.AdxError: ...
+        def Value(cls, name: builtin___str) -> 'AdxErrorEnum.AdxError': ...
         @classmethod
-        def keys(cls) -> typing___List[str]: ...
+        def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List[AdxErrorEnum.AdxError]: ...
+        def values(cls) -> typing___List['AdxErrorEnum.AdxError']: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[str, AdxErrorEnum.AdxError]]: ...
-        UNSPECIFIED = typing___cast(AdxErrorEnum.AdxError, 0)
-        UNKNOWN = typing___cast(AdxErrorEnum.AdxError, 1)
-        UNSUPPORTED_FEATURE = typing___cast(AdxErrorEnum.AdxError, 2)
-    UNSPECIFIED = typing___cast(AdxErrorEnum.AdxError, 0)
-    UNKNOWN = typing___cast(AdxErrorEnum.AdxError, 1)
-    UNSUPPORTED_FEATURE = typing___cast(AdxErrorEnum.AdxError, 2)
+        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AdxErrorEnum.AdxError']]: ...
+        UNSPECIFIED = typing___cast('AdxErrorEnum.AdxError', 0)
+        UNKNOWN = typing___cast('AdxErrorEnum.AdxError', 1)
+        UNSUPPORTED_FEATURE = typing___cast('AdxErrorEnum.AdxError', 2)
+    UNSPECIFIED = typing___cast('AdxErrorEnum.AdxError', 0)
+    UNKNOWN = typing___cast('AdxErrorEnum.AdxError', 1)
+    UNSUPPORTED_FEATURE = typing___cast('AdxErrorEnum.AdxError', 2)
+    global___AdxError = AdxError
 
 
     def __init__(self,
         ) -> None: ...
-    @classmethod
-    def FromString(cls, s: bytes) -> AdxErrorEnum: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> AdxErrorEnum: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdxErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+global___AdxErrorEnum = AdxErrorEnum
