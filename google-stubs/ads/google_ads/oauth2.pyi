@@ -3,12 +3,12 @@ from google.ads.google_ads.config import (
     _InstalledAppConfigDataRequired,
     _ServiceAccountConfigDataRequired,
 )
-from google.oauth2.service_account import (
+from google.oauth2.service_account import (  # type: ignore
     Credentials as ServiceAccountCreds,
-)  # type: ignore
-from google.oauth2.credentials import (
+)
+from google.oauth2.credentials import (  # type: ignore
     Credentials as InstalledAppCredentials,
-)  # type: ignore
+)
 
 def get_installed_app_credentials(
     client_id: str, client_secret: str, refresh_token: str, token_uri: str = ...
