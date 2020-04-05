@@ -1,3 +1,3 @@
 from typing import Dict, Any
 
-config: Dict[Any, Any]
+config: Dict[str, Any]
