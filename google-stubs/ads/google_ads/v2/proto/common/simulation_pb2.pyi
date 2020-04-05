@@ -35,7 +35,7 @@ class BidModifierSimulationPointList(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def points(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___BidModifierSimulationPoint
     ]: ...
@@ -66,7 +66,7 @@ class CpcBidSimulationPointList(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def points(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CpcBidSimulationPoint
     ]: ...
@@ -97,7 +97,7 @@ class CpvBidSimulationPointList(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def points(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CpvBidSimulationPoint
     ]: ...
@@ -128,7 +128,7 @@ class TargetCpaSimulationPointList(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def points(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___TargetCpaSimulationPoint
     ]: ...
@@ -161,11 +161,11 @@ class BidModifierSimulationPoint(google___protobuf___message___Message):
     def bid_modifier(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def biddable_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def biddable_conversions_value(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -177,11 +177,11 @@ class BidModifierSimulationPoint(google___protobuf___message___Message):
     def top_slot_impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def parent_biddable_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def parent_biddable_conversions_value(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def parent_clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -191,11 +191,11 @@ class BidModifierSimulationPoint(google___protobuf___message___Message):
     def parent_impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def parent_top_slot_impressions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def parent_required_budget_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,
@@ -326,11 +326,11 @@ class CpcBidSimulationPoint(google___protobuf___message___Message):
     def cpc_bid_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def biddable_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def biddable_conversions_value(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -483,11 +483,11 @@ class TargetCpaSimulationPoint(google___protobuf___message___Message):
     def target_cpa_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def biddable_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def biddable_conversions_value(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...

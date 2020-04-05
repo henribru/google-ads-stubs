@@ -63,7 +63,7 @@ class MutateExtensionFeedItemsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ExtensionFeedItemOperation
     ]: ...
@@ -107,11 +107,11 @@ class ExtensionFeedItemOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___extension_feed_item_pb2___ExtensionFeedItem: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___extension_feed_item_pb2___ExtensionFeedItem: ...
     def __init__(
         self,
@@ -177,7 +177,7 @@ class MutateExtensionFeedItemsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateExtensionFeedItemResult
     ]: ...

@@ -35,7 +35,7 @@ class MediaTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["MediaTypeEnum.MediaType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "MediaTypeEnum.MediaType"]
         ]: ...

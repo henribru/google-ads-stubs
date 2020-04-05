@@ -35,7 +35,7 @@ class BudgetPeriodEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["BudgetPeriodEnum.BudgetPeriod"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "BudgetPeriodEnum.BudgetPeriod"]
         ]: ...

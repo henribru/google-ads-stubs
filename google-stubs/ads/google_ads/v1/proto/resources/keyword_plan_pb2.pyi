@@ -91,7 +91,7 @@ class KeywordPlanForecastPeriod(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___keyword_plan_forecast_interval_pb2___KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
     @property
     def date_range(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___dates_pb2___DateRange: ...
     def __init__(
         self,

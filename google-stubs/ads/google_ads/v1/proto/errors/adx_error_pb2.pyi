@@ -35,7 +35,7 @@ class AdxErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["AdxErrorEnum.AdxError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[typing___Tuple[builtin___str, "AdxErrorEnum.AdxError"]]: ...
         UNSPECIFIED = typing___cast("AdxErrorEnum.AdxError", 0)
         UNKNOWN = typing___cast("AdxErrorEnum.AdxError", 1)

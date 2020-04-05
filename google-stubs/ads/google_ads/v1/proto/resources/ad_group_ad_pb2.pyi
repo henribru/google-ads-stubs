@@ -134,7 +134,7 @@ class AdGroupAdPolicySummary(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus
     @property
     def policy_topic_entries(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___policy_pb2___PolicyTopicEntry
     ]: ...

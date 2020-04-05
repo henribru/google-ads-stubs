@@ -35,7 +35,7 @@ class InvoiceTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["InvoiceTypeEnum.InvoiceType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "InvoiceTypeEnum.InvoiceType"]
         ]: ...

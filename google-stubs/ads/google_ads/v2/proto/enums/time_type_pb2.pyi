@@ -35,7 +35,7 @@ class TimeTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["TimeTypeEnum.TimeType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[typing___Tuple[builtin___str, "TimeTypeEnum.TimeType"]]: ...
         UNSPECIFIED = typing___cast("TimeTypeEnum.TimeType", 0)
         UNKNOWN = typing___cast("TimeTypeEnum.TimeType", 1)

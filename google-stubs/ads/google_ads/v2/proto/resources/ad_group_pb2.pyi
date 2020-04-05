@@ -94,11 +94,11 @@ class AdGroup(google___protobuf___message___Message):
     def base_ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def url_custom_parameters(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___custom_parameter_pb2___CustomParameter
     ]: ...
@@ -118,29 +118,29 @@ class AdGroup(google___protobuf___message___Message):
     def target_roas(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def percent_cpc_bid_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def explorer_auto_optimizer_setting(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___explorer_auto_optimizer_setting_pb2___ExplorerAutoOptimizerSetting: ...
     @property
     def final_url_suffix(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def targeting_setting(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___targeting_setting_pb2___TargetingSetting: ...
     @property
     def effective_target_cpa_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def effective_target_roas(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def labels(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...

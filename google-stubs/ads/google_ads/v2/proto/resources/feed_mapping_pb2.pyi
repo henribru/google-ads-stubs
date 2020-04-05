@@ -144,7 +144,7 @@ class FeedMapping(google___protobuf___message___Message):
     def feed(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def attribute_field_mappings(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___AttributeFieldMapping
     ]: ...

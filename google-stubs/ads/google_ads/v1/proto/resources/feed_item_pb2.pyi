@@ -99,19 +99,19 @@ class FeedItem(google___protobuf___message___Message):
     def end_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def attribute_values(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___FeedItemAttributeValue
     ]: ...
     @property
     def url_custom_parameters(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter
     ]: ...
     @property
     def policy_infos(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___FeedItemPlaceholderPolicyInfo
     ]: ...
@@ -210,29 +210,29 @@ class FeedItemAttributeValue(google___protobuf___message___Message):
     def double_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def price_value(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___feed_common_pb2___Money: ...
     @property
     def integer_values(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___Int64Value
     ]: ...
     @property
     def boolean_values(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___BoolValue
     ]: ...
     @property
     def string_values(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def double_values(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___DoubleValue
     ]: ...
@@ -346,17 +346,17 @@ class FeedItemPlaceholderPolicyInfo(google___protobuf___message___Message):
     def placeholder_type(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
     @property
     def feed_mapping_resource_name(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def policy_topic_entries(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___policy_pb2___PolicyTopicEntry
     ]: ...
     @property
     def validation_errors(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___FeedItemValidationError
     ]: ...
@@ -449,7 +449,7 @@ class FeedItemValidationError(google___protobuf___message___Message):
     def description(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def feed_attribute_ids(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___Int64Value
     ]: ...

@@ -66,7 +66,7 @@ class MutateKeywordPlanAdGroupsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___KeywordPlanAdGroupOperation
     ]: ...
@@ -113,11 +113,11 @@ class KeywordPlanAdGroupOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___keyword_plan_ad_group_pb2___KeywordPlanAdGroup: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___keyword_plan_ad_group_pb2___KeywordPlanAdGroup: ...
     def __init__(
         self,
@@ -185,7 +185,7 @@ class MutateKeywordPlanAdGroupsResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateKeywordPlanAdGroupResult
     ]: ...

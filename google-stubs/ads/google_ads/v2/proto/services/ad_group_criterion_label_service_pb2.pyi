@@ -62,7 +62,7 @@ class MutateAdGroupCriterionLabelsRequest(google___protobuf___message___Message)
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___AdGroupCriterionLabelOperation
     ]: ...
@@ -109,7 +109,7 @@ class AdGroupCriterionLabelOperation(google___protobuf___message___Message):
     remove = ...  # type: typing___Text
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___ad_group_criterion_label_pb2___AdGroupCriterionLabel: ...
     def __init__(
         self,
@@ -153,7 +153,7 @@ class MutateAdGroupCriterionLabelsResponse(google___protobuf___message___Message
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateAdGroupCriterionLabelResult
     ]: ...

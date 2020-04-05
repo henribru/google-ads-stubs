@@ -18,9 +18,9 @@ def get_service_account_credentials(
 ) -> ServiceAccountCreds: ...
 @overload
 def get_credentials(
-    config_data: _InstalledAppConfigDataRequired
+    config_data: _InstalledAppConfigDataRequired,
 ) -> InstalledAppCredentials: ...
 @overload
 def get_credentials(
-    config_data: _ServiceAccountConfigDataRequired
+    config_data: _ServiceAccountConfigDataRequired,
 ) -> ServiceAccountCreds: ...

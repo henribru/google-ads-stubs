@@ -73,27 +73,27 @@ class CampaignBudget(google___protobuf___message___Message):
     def reference_count(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def has_recommended_budget(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def recommended_budget_amount_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def recommended_budget_estimated_change_weekly_clicks(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def recommended_budget_estimated_change_weekly_cost_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def recommended_budget_estimated_change_weekly_interactions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def recommended_budget_estimated_change_weekly_views(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,

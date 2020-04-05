@@ -68,7 +68,7 @@ class MutateKeywordPlanNegativeKeywordsRequest(google___protobuf___message___Mes
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___KeywordPlanNegativeKeywordOperation
     ]: ...
@@ -119,11 +119,11 @@ class KeywordPlanNegativeKeywordOperation(google___protobuf___message___Message)
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___keyword_plan_negative_keyword_pb2___KeywordPlanNegativeKeyword: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___keyword_plan_negative_keyword_pb2___KeywordPlanNegativeKeyword: ...
     def __init__(
         self,
@@ -193,7 +193,7 @@ class MutateKeywordPlanNegativeKeywordsResponse(google___protobuf___message___Me
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateKeywordPlanNegativeKeywordResult
     ]: ...

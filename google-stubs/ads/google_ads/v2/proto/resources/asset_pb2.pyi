@@ -50,19 +50,19 @@ class Asset(google___protobuf___message___Message):
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def youtube_video_asset(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___asset_types_pb2___YoutubeVideoAsset: ...
     @property
     def media_bundle_asset(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___asset_types_pb2___MediaBundleAsset: ...
     @property
     def image_asset(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___asset_types_pb2___ImageAsset: ...
     @property
     def text_asset(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___asset_types_pb2___TextAsset: ...
     def __init__(
         self,

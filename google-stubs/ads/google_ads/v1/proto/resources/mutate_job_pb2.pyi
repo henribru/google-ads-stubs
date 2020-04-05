@@ -38,21 +38,21 @@ class MutateJob(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def creation_date_time(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def completion_date_time(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def estimated_completion_ratio(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
         @property
         def operation_count(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def executed_operation_count(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -128,13 +128,13 @@ class MutateJob(google___protobuf___message___Message):
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def next_add_sequence_token(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def metadata(self) -> global___MutateJob.MutateJobMetadata: ...
     @property
     def long_running_operation(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,

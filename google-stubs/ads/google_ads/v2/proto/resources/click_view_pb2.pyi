@@ -38,11 +38,11 @@ class ClickView(google___protobuf___message___Message):
     def gclid(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def area_of_interest(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___click_location_pb2___ClickLocation: ...
     @property
     def location_of_presence(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___click_location_pb2___ClickLocation: ...
     @property
     def page_number(self) -> google___protobuf___wrappers_pb2___Int64Value: ...

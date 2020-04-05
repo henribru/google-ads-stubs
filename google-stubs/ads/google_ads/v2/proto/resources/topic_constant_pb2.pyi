@@ -39,11 +39,11 @@ class TopicConstant(google___protobuf___message___Message):
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def topic_constant_parent(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def path(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...

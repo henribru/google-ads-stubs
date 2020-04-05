@@ -658,7 +658,7 @@ class SearchGoogleAdsResponse(google___protobuf___message___Message):
     total_results_count = ...  # type: builtin___int
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___GoogleAdsRow
     ]: ...
@@ -707,381 +707,381 @@ class GoogleAdsRow(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def account_budget(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___account_budget_pb2___AccountBudget: ...
     @property
     def account_budget_proposal(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___account_budget_proposal_pb2___AccountBudgetProposal: ...
     @property
     def ad_group(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_pb2___AdGroup: ...
     @property
     def ad_group_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_ad_pb2___AdGroupAd: ...
     @property
     def ad_group_ad_label(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_ad_label_pb2___AdGroupAdLabel: ...
     @property
     def ad_group_audience_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_audience_view_pb2___AdGroupAudienceView: ...
     @property
     def ad_group_bid_modifier(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_bid_modifier_pb2___AdGroupBidModifier: ...
     @property
     def ad_group_criterion(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_criterion_pb2___AdGroupCriterion: ...
     @property
     def ad_group_criterion_label(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_criterion_label_pb2___AdGroupCriterionLabel: ...
     @property
     def ad_group_criterion_simulation(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_criterion_simulation_pb2___AdGroupCriterionSimulation: ...
     @property
     def ad_group_extension_setting(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_extension_setting_pb2___AdGroupExtensionSetting: ...
     @property
     def ad_group_feed(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_feed_pb2___AdGroupFeed: ...
     @property
     def ad_group_label(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_label_pb2___AdGroupLabel: ...
     @property
     def ad_group_simulation(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_simulation_pb2___AdGroupSimulation: ...
     @property
     def ad_parameter(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_parameter_pb2___AdParameter: ...
     @property
     def age_range_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___age_range_view_pb2___AgeRangeView: ...
     @property
     def ad_schedule_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_schedule_view_pb2___AdScheduleView: ...
     @property
     def domain_category(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___domain_category_pb2___DomainCategory: ...
     @property
     def asset(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___asset_pb2___Asset: ...
     @property
     def bidding_strategy(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___bidding_strategy_pb2___BiddingStrategy: ...
     @property
     def billing_setup(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup: ...
     @property
     def campaign_budget(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_budget_pb2___CampaignBudget: ...
     @property
     def campaign(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_pb2___Campaign: ...
     @property
     def campaign_audience_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_audience_view_pb2___CampaignAudienceView: ...
     @property
     def campaign_bid_modifier(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_bid_modifier_pb2___CampaignBidModifier: ...
     @property
     def campaign_criterion(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_criterion_pb2___CampaignCriterion: ...
     @property
     def campaign_criterion_simulation(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_criterion_simulation_pb2___CampaignCriterionSimulation: ...
     @property
     def campaign_draft(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_draft_pb2___CampaignDraft: ...
     @property
     def campaign_experiment(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_experiment_pb2___CampaignExperiment: ...
     @property
     def campaign_extension_setting(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_extension_setting_pb2___CampaignExtensionSetting: ...
     @property
     def campaign_feed(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_feed_pb2___CampaignFeed: ...
     @property
     def campaign_label(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_label_pb2___CampaignLabel: ...
     @property
     def campaign_shared_set(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_shared_set_pb2___CampaignSharedSet: ...
     @property
     def carrier_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___carrier_constant_pb2___CarrierConstant: ...
     @property
     def change_status(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___change_status_pb2___ChangeStatus: ...
     @property
     def conversion_action(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___conversion_action_pb2___ConversionAction: ...
     @property
     def click_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___click_view_pb2___ClickView: ...
     @property
     def custom_interest(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___custom_interest_pb2___CustomInterest: ...
     @property
     def customer(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_pb2___Customer: ...
     @property
     def customer_manager_link(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_manager_link_pb2___CustomerManagerLink: ...
     @property
     def customer_client_link(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_client_link_pb2___CustomerClientLink: ...
     @property
     def customer_client(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_client_pb2___CustomerClient: ...
     @property
     def customer_extension_setting(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_extension_setting_pb2___CustomerExtensionSetting: ...
     @property
     def customer_feed(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_feed_pb2___CustomerFeed: ...
     @property
     def customer_label(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_label_pb2___CustomerLabel: ...
     @property
     def customer_negative_criterion(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_negative_criterion_pb2___CustomerNegativeCriterion: ...
     @property
     def detail_placement_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___detail_placement_view_pb2___DetailPlacementView: ...
     @property
     def display_keyword_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___display_keyword_view_pb2___DisplayKeywordView: ...
     @property
     def dynamic_search_ads_search_term_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___dynamic_search_ads_search_term_view_pb2___DynamicSearchAdsSearchTermView: ...
     @property
     def expanded_landing_page_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___expanded_landing_page_view_pb2___ExpandedLandingPageView: ...
     @property
     def extension_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___extension_feed_item_pb2___ExtensionFeedItem: ...
     @property
     def feed(self) -> google___ads___googleads___v1___resources___feed_pb2___Feed: ...
     @property
     def feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___feed_item_pb2___FeedItem: ...
     @property
     def feed_item_target(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___feed_item_target_pb2___FeedItemTarget: ...
     @property
     def feed_mapping(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___feed_mapping_pb2___FeedMapping: ...
     @property
     def feed_placeholder_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___feed_placeholder_view_pb2___FeedPlaceholderView: ...
     @property
     def gender_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___gender_view_pb2___GenderView: ...
     @property
     def geo_target_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___geo_target_constant_pb2___GeoTargetConstant: ...
     @property
     def geographic_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___geographic_view_pb2___GeographicView: ...
     @property
     def group_placement_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___group_placement_view_pb2___GroupPlacementView: ...
     @property
     def hotel_group_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___hotel_group_view_pb2___HotelGroupView: ...
     @property
     def hotel_performance_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___hotel_performance_view_pb2___HotelPerformanceView: ...
     @property
     def keyword_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___keyword_view_pb2___KeywordView: ...
     @property
     def keyword_plan(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___keyword_plan_pb2___KeywordPlan: ...
     @property
     def keyword_plan_campaign(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___keyword_plan_campaign_pb2___KeywordPlanCampaign: ...
     @property
     def keyword_plan_negative_keyword(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___keyword_plan_negative_keyword_pb2___KeywordPlanNegativeKeyword: ...
     @property
     def keyword_plan_ad_group(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___keyword_plan_ad_group_pb2___KeywordPlanAdGroup: ...
     @property
     def keyword_plan_keyword(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___keyword_plan_keyword_pb2___KeywordPlanKeyword: ...
     @property
     def label(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___label_pb2___Label: ...
     @property
     def landing_page_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___landing_page_view_pb2___LandingPageView: ...
     @property
     def language_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___language_constant_pb2___LanguageConstant: ...
     @property
     def location_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___location_view_pb2___LocationView: ...
     @property
     def managed_placement_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___managed_placement_view_pb2___ManagedPlacementView: ...
     @property
     def media_file(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___media_file_pb2___MediaFile: ...
     @property
     def mobile_app_category_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___mobile_app_category_constant_pb2___MobileAppCategoryConstant: ...
     @property
     def mobile_device_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___mobile_device_constant_pb2___MobileDeviceConstant: ...
     @property
     def mutate_job(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___mutate_job_pb2___MutateJob: ...
     @property
     def operating_system_version_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___operating_system_version_constant_pb2___OperatingSystemVersionConstant: ...
     @property
     def paid_organic_search_term_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___paid_organic_search_term_view_pb2___PaidOrganicSearchTermView: ...
     @property
     def parental_status_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___parental_status_view_pb2___ParentalStatusView: ...
     @property
     def product_bidding_category_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___product_bidding_category_constant_pb2___ProductBiddingCategoryConstant: ...
     @property
     def product_group_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___product_group_view_pb2___ProductGroupView: ...
     @property
     def recommendation(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___recommendation_pb2___Recommendation: ...
     @property
     def search_term_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___search_term_view_pb2___SearchTermView: ...
     @property
     def shared_criterion(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___shared_criterion_pb2___SharedCriterion: ...
     @property
     def shared_set(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___shared_set_pb2___SharedSet: ...
     @property
     def shopping_performance_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___shopping_performance_view_pb2___ShoppingPerformanceView: ...
     @property
     def topic_view(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___topic_view_pb2___TopicView: ...
     @property
     def user_interest(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___user_interest_pb2___UserInterest: ...
     @property
     def user_list(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___user_list_pb2___UserList: ...
     @property
     def remarketing_action(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___remarketing_action_pb2___RemarketingAction: ...
     @property
     def topic_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___topic_constant_pb2___TopicConstant: ...
     @property
     def video(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___video_pb2___Video: ...
     @property
     def metrics(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___metrics_pb2___Metrics: ...
     @property
     def segments(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___segments_pb2___Segments: ...
     def __init__(
         self,
@@ -1782,7 +1782,7 @@ class MutateGoogleAdsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def mutate_operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateOperation
     ]: ...
@@ -1828,7 +1828,7 @@ class MutateGoogleAdsResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def mutate_operation_responses(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateOperationResponse
     ]: ...
@@ -1874,159 +1874,159 @@ class MutateOperation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def ad_group_ad_label_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___AdGroupAdLabelOperation: ...
     @property
     def ad_group_ad_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_ad_service_pb2___AdGroupAdOperation: ...
     @property
     def ad_group_bid_modifier_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___AdGroupBidModifierOperation: ...
     @property
     def ad_group_criterion_label_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___AdGroupCriterionLabelOperation: ...
     @property
     def ad_group_criterion_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_criterion_service_pb2___AdGroupCriterionOperation: ...
     @property
     def ad_group_extension_setting_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___AdGroupExtensionSettingOperation: ...
     @property
     def ad_group_feed_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_feed_service_pb2___AdGroupFeedOperation: ...
     @property
     def ad_group_label_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_label_service_pb2___AdGroupLabelOperation: ...
     @property
     def ad_group_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_service_pb2___AdGroupOperation: ...
     @property
     def ad_parameter_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_parameter_service_pb2___AdParameterOperation: ...
     @property
     def asset_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___asset_service_pb2___AssetOperation: ...
     @property
     def bidding_strategy_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___bidding_strategy_service_pb2___BiddingStrategyOperation: ...
     @property
     def campaign_bid_modifier_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___CampaignBidModifierOperation: ...
     @property
     def campaign_budget_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_budget_service_pb2___CampaignBudgetOperation: ...
     @property
     def campaign_criterion_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_criterion_service_pb2___CampaignCriterionOperation: ...
     @property
     def campaign_draft_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_draft_service_pb2___CampaignDraftOperation: ...
     @property
     def campaign_experiment_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_experiment_service_pb2___CampaignExperimentOperation: ...
     @property
     def campaign_extension_setting_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___CampaignExtensionSettingOperation: ...
     @property
     def campaign_feed_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_feed_service_pb2___CampaignFeedOperation: ...
     @property
     def campaign_label_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_label_service_pb2___CampaignLabelOperation: ...
     @property
     def campaign_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_service_pb2___CampaignOperation: ...
     @property
     def campaign_shared_set_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_shared_set_service_pb2___CampaignSharedSetOperation: ...
     @property
     def conversion_action_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___conversion_action_service_pb2___ConversionActionOperation: ...
     @property
     def customer_extension_setting_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_extension_setting_service_pb2___CustomerExtensionSettingOperation: ...
     @property
     def customer_feed_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_feed_service_pb2___CustomerFeedOperation: ...
     @property
     def customer_label_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_label_service_pb2___CustomerLabelOperation: ...
     @property
     def customer_negative_criterion_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___CustomerNegativeCriterionOperation: ...
     @property
     def customer_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_service_pb2___CustomerOperation: ...
     @property
     def extension_feed_item_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___extension_feed_item_service_pb2___ExtensionFeedItemOperation: ...
     @property
     def feed_item_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___feed_item_service_pb2___FeedItemOperation: ...
     @property
     def feed_item_target_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___feed_item_target_service_pb2___FeedItemTargetOperation: ...
     @property
     def feed_mapping_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___feed_mapping_service_pb2___FeedMappingOperation: ...
     @property
     def feed_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___feed_service_pb2___FeedOperation: ...
     @property
     def label_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___label_service_pb2___LabelOperation: ...
     @property
     def media_file_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___media_file_service_pb2___MediaFileOperation: ...
     @property
     def remarketing_action_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___remarketing_action_service_pb2___RemarketingActionOperation: ...
     @property
     def shared_criterion_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___shared_criterion_service_pb2___SharedCriterionOperation: ...
     @property
     def shared_set_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___shared_set_service_pb2___SharedSetOperation: ...
     @property
     def user_list_operation(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___user_list_service_pb2___UserListOperation: ...
     def __init__(
         self,
@@ -2379,159 +2379,159 @@ class MutateOperationResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def ad_group_ad_label_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___MutateAdGroupAdLabelResult: ...
     @property
     def ad_group_ad_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_ad_service_pb2___MutateAdGroupAdResult: ...
     @property
     def ad_group_bid_modifier_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___MutateAdGroupBidModifierResult: ...
     @property
     def ad_group_criterion_label_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___MutateAdGroupCriterionLabelResult: ...
     @property
     def ad_group_criterion_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_criterion_service_pb2___MutateAdGroupCriterionResult: ...
     @property
     def ad_group_extension_setting_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___MutateAdGroupExtensionSettingResult: ...
     @property
     def ad_group_feed_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_feed_service_pb2___MutateAdGroupFeedResult: ...
     @property
     def ad_group_label_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_label_service_pb2___MutateAdGroupLabelResult: ...
     @property
     def ad_group_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_group_service_pb2___MutateAdGroupResult: ...
     @property
     def ad_parameter_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___ad_parameter_service_pb2___MutateAdParameterResult: ...
     @property
     def asset_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___asset_service_pb2___MutateAssetResult: ...
     @property
     def bidding_strategy_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___bidding_strategy_service_pb2___MutateBiddingStrategyResult: ...
     @property
     def campaign_bid_modifier_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___MutateCampaignBidModifierResult: ...
     @property
     def campaign_budget_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_budget_service_pb2___MutateCampaignBudgetResult: ...
     @property
     def campaign_criterion_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_criterion_service_pb2___MutateCampaignCriterionResult: ...
     @property
     def campaign_draft_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_draft_service_pb2___MutateCampaignDraftResult: ...
     @property
     def campaign_experiment_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_experiment_service_pb2___MutateCampaignExperimentResult: ...
     @property
     def campaign_extension_setting_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___MutateCampaignExtensionSettingResult: ...
     @property
     def campaign_feed_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_feed_service_pb2___MutateCampaignFeedResult: ...
     @property
     def campaign_label_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_label_service_pb2___MutateCampaignLabelResult: ...
     @property
     def campaign_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_service_pb2___MutateCampaignResult: ...
     @property
     def campaign_shared_set_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___campaign_shared_set_service_pb2___MutateCampaignSharedSetResult: ...
     @property
     def conversion_action_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___conversion_action_service_pb2___MutateConversionActionResult: ...
     @property
     def customer_extension_setting_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_extension_setting_service_pb2___MutateCustomerExtensionSettingResult: ...
     @property
     def customer_feed_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_feed_service_pb2___MutateCustomerFeedResult: ...
     @property
     def customer_label_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_label_service_pb2___MutateCustomerLabelResult: ...
     @property
     def customer_negative_criterion_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___MutateCustomerNegativeCriteriaResult: ...
     @property
     def customer_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___customer_service_pb2___MutateCustomerResult: ...
     @property
     def extension_feed_item_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___extension_feed_item_service_pb2___MutateExtensionFeedItemResult: ...
     @property
     def feed_item_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___feed_item_service_pb2___MutateFeedItemResult: ...
     @property
     def feed_item_target_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___feed_item_target_service_pb2___MutateFeedItemTargetResult: ...
     @property
     def feed_mapping_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___feed_mapping_service_pb2___MutateFeedMappingResult: ...
     @property
     def feed_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___feed_service_pb2___MutateFeedResult: ...
     @property
     def label_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___label_service_pb2___MutateLabelResult: ...
     @property
     def media_file_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___media_file_service_pb2___MutateMediaFileResult: ...
     @property
     def remarketing_action_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___remarketing_action_service_pb2___MutateRemarketingActionResult: ...
     @property
     def shared_criterion_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___shared_criterion_service_pb2___MutateSharedCriterionResult: ...
     @property
     def shared_set_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___shared_set_service_pb2___MutateSharedSetResult: ...
     @property
     def user_list_result(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___user_list_service_pb2___MutateUserListResult: ...
     def __init__(
         self,

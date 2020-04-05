@@ -68,7 +68,7 @@ class ListPlannableLocationsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def plannable_locations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___PlannableLocation
     ]: ...
@@ -144,7 +144,7 @@ class ListPlannableProductsRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def plannable_location_id(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -182,7 +182,7 @@ class ListPlannableProductsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def product_metadata(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ProductMetadata
     ]: ...
@@ -216,7 +216,7 @@ class ProductMetadata(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def plannable_product_code(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def plannable_targeting(self) -> global___PlannableTargeting: ...
@@ -266,13 +266,13 @@ class PlannableTargeting(google___protobuf___message___Message):
     )  # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange]
     @property
     def genders(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___criteria_pb2___GenderInfo
     ]: ...
     @property
     def devices(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___criteria_pb2___DeviceInfo
     ]: ...
@@ -319,7 +319,7 @@ class GenerateProductMixIdeasRequest(google___protobuf___message___Message):
     customer_id = ...  # type: typing___Text
     @property
     def plannable_location_id(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def currency_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -460,7 +460,7 @@ class GenerateProductMixIdeasResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def product_allocation(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ProductAllocation
     ]: ...
@@ -494,7 +494,7 @@ class ProductAllocation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def plannable_product_code(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def budget_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -550,13 +550,13 @@ class GenerateReachForecastRequest(google___protobuf___message___Message):
     def cookie_frequency_cap(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
     @property
     def min_effective_frequency(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int32Value: ...
     @property
     def targeting(self) -> global___Targeting: ...
     @property
     def planned_products(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___PlannedProduct
     ]: ...
@@ -633,17 +633,17 @@ class Targeting(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v2___enums___reach_plan_age_range_pb2___ReachPlanAgeRangeEnum.ReachPlanAgeRange
     @property
     def plannable_location_id(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def genders(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___criteria_pb2___GenderInfo
     ]: ...
     @property
     def devices(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___criteria_pb2___DeviceInfo
     ]: ...
@@ -739,7 +739,7 @@ class PlannedProduct(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def plannable_product_code(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def budget_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -833,7 +833,7 @@ class ReachCurve(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def reach_forecasts(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ReachForecast
     ]: ...
@@ -869,7 +869,7 @@ class ReachForecast(google___protobuf___message___Message):
     def forecast(self) -> global___Forecast: ...
     @property
     def forecasted_product_allocations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ProductAllocation
     ]: ...
@@ -922,7 +922,7 @@ class Forecast(google___protobuf___message___Message):
     def total_reach(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def on_target_impressions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def total_impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -985,7 +985,7 @@ class OnTargetAudienceMetrics(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def youtube_audience_size(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def census_audience_size(self) -> google___protobuf___wrappers_pb2___Int64Value: ...

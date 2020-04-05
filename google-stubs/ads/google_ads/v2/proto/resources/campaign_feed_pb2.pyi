@@ -58,7 +58,7 @@ class CampaignFeed(google___protobuf___message___Message):
     def campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def matching_function(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___matching_function_pb2___MatchingFunction: ...
     def __init__(
         self,

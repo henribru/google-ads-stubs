@@ -227,11 +227,11 @@ class CallOnlyAdInfo(google___protobuf___message___Message):
     def call_tracked(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def disable_call_conversion(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def phone_number_verification_url(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -462,25 +462,25 @@ class GmailAdInfo(google___protobuf___message___Message):
     def marketing_image(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def marketing_image_headline(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def marketing_image_description(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def marketing_image_display_call_to_action(
-        self
+        self,
     ) -> global___DisplayCallToAction: ...
     @property
     def product_images(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ProductImage
     ]: ...
     @property
     def product_videos(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ProductVideo
     ]: ...
@@ -789,7 +789,7 @@ class ImageAdInfo(google___protobuf___message___Message):
     def data(self) -> google___protobuf___wrappers_pb2___BytesValue: ...
     @property
     def ad_id_to_copy_image_from(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,
@@ -1108,13 +1108,13 @@ class ResponsiveSearchAdInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def headlines(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset
     ]: ...
     @property
     def descriptions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset
     ]: ...
@@ -1197,7 +1197,7 @@ class LegacyResponsiveDisplayAdInfo(google___protobuf___message___Message):
     def marketing_image(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def square_marketing_image(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def price_prefix(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -1337,35 +1337,35 @@ class AppAdInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def mandatory_ad_text(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset: ...
     @property
     def headlines(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset
     ]: ...
     @property
     def descriptions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset
     ]: ...
     @property
     def images(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdImageAsset
     ]: ...
     @property
     def youtube_videos(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdVideoAsset
     ]: ...
     @property
     def html5_media_bundles(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdMediaBundleAsset
     ]: ...
@@ -1441,25 +1441,25 @@ class AppEngagementAdInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def headlines(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset
     ]: ...
     @property
     def descriptions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset
     ]: ...
     @property
     def images(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdImageAsset
     ]: ...
     @property
     def videos(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdVideoAsset
     ]: ...
@@ -1593,47 +1593,47 @@ class ResponsiveDisplayAdInfo(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___display_ad_format_setting_pb2___DisplayAdFormatSettingEnum.DisplayAdFormatSetting
     @property
     def marketing_images(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdImageAsset
     ]: ...
     @property
     def square_marketing_images(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdImageAsset
     ]: ...
     @property
     def logo_images(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdImageAsset
     ]: ...
     @property
     def square_logo_images(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdImageAsset
     ]: ...
     @property
     def headlines(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset
     ]: ...
     @property
     def long_headline(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset: ...
     @property
     def descriptions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdTextAsset
     ]: ...
     @property
     def youtube_videos(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___ad_asset_pb2___AdVideoAsset
     ]: ...
@@ -1795,7 +1795,7 @@ class DisplayUploadAdInfo(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___display_upload_product_type_pb2___DisplayUploadProductTypeEnum.DisplayUploadProductType
     @property
     def media_bundle(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_asset_pb2___AdMediaBundleAsset: ...
     def __init__(
         self,

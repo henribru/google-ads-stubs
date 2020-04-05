@@ -35,7 +35,7 @@ class AccessRoleEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["AccessRoleEnum.AccessRole"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "AccessRoleEnum.AccessRole"]
         ]: ...

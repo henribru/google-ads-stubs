@@ -58,7 +58,7 @@ class CampaignCriterionSimulation(google___protobuf___message___Message):
     def end_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def bid_modifier_point_list(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___simulation_pb2___BidModifierSimulationPointList: ...
     def __init__(
         self,

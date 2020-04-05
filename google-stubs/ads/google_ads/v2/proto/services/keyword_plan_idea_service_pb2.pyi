@@ -49,7 +49,7 @@ class GenerateKeywordIdeasRequest(google___protobuf___message___Message):
     def language(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def geo_target_constants(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -136,7 +136,7 @@ class KeywordAndUrlSeed(google___protobuf___message___Message):
     def url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def keywords(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -172,7 +172,7 @@ class KeywordSeed(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def keywords(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -231,7 +231,7 @@ class GenerateKeywordIdeaResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___GenerateKeywordIdeaResult
     ]: ...
@@ -264,7 +264,7 @@ class GenerateKeywordIdeaResult(google___protobuf___message___Message):
     def text(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def keyword_idea_metrics(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___keyword_plan_common_pb2___KeywordPlanHistoricalMetrics: ...
     def __init__(
         self,

@@ -39,7 +39,7 @@ class KeywordPlanNegativeKeyword(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
     @property
     def keyword_plan_campaign(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...

@@ -61,7 +61,7 @@ class CustomInterest(google___protobuf___message___Message):
     def description(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def members(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CustomInterestMember
     ]: ...

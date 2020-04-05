@@ -43,7 +43,7 @@ class CampaignBidModifier(google___protobuf___message___Message):
     def bid_modifier(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def interaction_type(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___InteractionTypeInfo: ...
     def __init__(
         self,

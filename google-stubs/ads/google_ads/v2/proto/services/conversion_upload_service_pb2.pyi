@@ -41,7 +41,7 @@ class UploadClickConversionsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def conversions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ClickConversion
     ]: ...
@@ -87,7 +87,7 @@ class UploadClickConversionsResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ClickConversionResult
     ]: ...
@@ -133,7 +133,7 @@ class UploadCallConversionsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def conversions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CallConversion
     ]: ...
@@ -179,7 +179,7 @@ class UploadCallConversionsResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CallConversionResult
     ]: ...
@@ -226,7 +226,7 @@ class ClickConversion(google___protobuf___message___Message):
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -316,13 +316,13 @@ class CallConversion(google___protobuf___message___Message):
     def caller_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def call_start_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -401,11 +401,11 @@ class ExternalAttributionData(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def external_attribution_credit(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def external_attribution_model(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -456,7 +456,7 @@ class ClickConversionResult(google___protobuf___message___Message):
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -510,13 +510,13 @@ class CallConversionResult(google___protobuf___message___Message):
     def caller_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def call_start_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,

@@ -50,13 +50,13 @@ class MatchingFunction(google___protobuf___message___Message):
     def function_string(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def left_operands(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___Operand
     ]: ...
     @property
     def right_operands(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___Operand
     ]: ...
@@ -190,7 +190,7 @@ class Operand(google___protobuf___message___Message):
         def feed_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def feed_attribute_id(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,

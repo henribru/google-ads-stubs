@@ -59,13 +59,13 @@ class FeedItemTarget(google___protobuf___message___Message):
     def ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def keyword(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___KeywordInfo: ...
     @property
     def geo_target_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def ad_schedule(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo: ...
     def __init__(
         self,

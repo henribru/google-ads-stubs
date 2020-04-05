@@ -131,19 +131,19 @@ class Campaign(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def target_google_search(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___BoolValue: ...
         @property
         def target_search_network(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___BoolValue: ...
         @property
         def target_content_network(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___BoolValue: ...
         @property
         def target_partner_search_network(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___BoolValue: ...
         def __init__(
             self,
@@ -293,11 +293,11 @@ class Campaign(google___protobuf___message___Message):
         def language_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def use_supplied_urls_only(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___BoolValue: ...
         @property
         def feeds(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
@@ -363,7 +363,7 @@ class Campaign(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def conversion_actions(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
@@ -406,7 +406,7 @@ class Campaign(google___protobuf___message___Message):
         def sales_country(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def campaign_priority(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int32Value: ...
         @property
         def enable_local(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
@@ -636,17 +636,17 @@ class Campaign(google___protobuf___message___Message):
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def url_custom_parameters(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___custom_parameter_pb2___CustomParameter
     ]: ...
     @property
     def real_time_bidding_setting(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___real_time_bidding_setting_pb2___RealTimeBiddingSetting: ...
     @property
     def network_settings(self) -> global___Campaign.NetworkSettings: ...
@@ -654,13 +654,13 @@ class Campaign(google___protobuf___message___Message):
     def hotel_setting(self) -> global___Campaign.HotelSettingInfo: ...
     @property
     def dynamic_search_ads_setting(
-        self
+        self,
     ) -> global___Campaign.DynamicSearchAdsSetting: ...
     @property
     def shopping_setting(self) -> global___Campaign.ShoppingSetting: ...
     @property
     def targeting_setting(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___targeting_setting_pb2___TargetingSetting: ...
     @property
     def geo_target_type_setting(self) -> global___Campaign.GeoTargetTypeSetting: ...
@@ -668,7 +668,7 @@ class Campaign(google___protobuf___message___Message):
     def app_campaign_setting(self) -> global___Campaign.AppCampaignSetting: ...
     @property
     def labels(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -684,7 +684,7 @@ class Campaign(google___protobuf___message___Message):
     def final_url_suffix(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def frequency_caps(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___frequency_cap_pb2___FrequencyCapEntry
     ]: ...
@@ -698,51 +698,51 @@ class Campaign(google___protobuf___message___Message):
     def bidding_strategy(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def commission(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___Commission: ...
     @property
     def manual_cpc(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___ManualCpc: ...
     @property
     def manual_cpm(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___ManualCpm: ...
     @property
     def manual_cpv(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___ManualCpv: ...
     @property
     def maximize_conversions(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___MaximizeConversions: ...
     @property
     def maximize_conversion_value(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___MaximizeConversionValue: ...
     @property
     def target_cpa(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___TargetCpa: ...
     @property
     def target_impression_share(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___TargetImpressionShare: ...
     @property
     def target_roas(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___TargetRoas: ...
     @property
     def target_spend(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___TargetSpend: ...
     @property
     def percent_cpc(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___PercentCpc: ...
     @property
     def target_cpm(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___bidding_pb2___TargetCpm: ...
     def __init__(
         self,

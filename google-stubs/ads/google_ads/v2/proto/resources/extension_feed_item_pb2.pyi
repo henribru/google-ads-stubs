@@ -84,61 +84,61 @@ class ExtensionFeedItem(google___protobuf___message___Message):
     def end_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def ad_schedules(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo
     ]: ...
     @property
     def targeted_geo_target_constant(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def targeted_keyword(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___KeywordInfo: ...
     @property
     def sitelink_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___SitelinkFeedItem: ...
     @property
     def structured_snippet_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___StructuredSnippetFeedItem: ...
     @property
     def app_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___AppFeedItem: ...
     @property
     def call_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___CallFeedItem: ...
     @property
     def callout_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___CalloutFeedItem: ...
     @property
     def text_message_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___TextMessageFeedItem: ...
     @property
     def price_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___PriceFeedItem: ...
     @property
     def promotion_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___PromotionFeedItem: ...
     @property
     def location_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___LocationFeedItem: ...
     @property
     def affiliate_location_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___AffiliateLocationFeedItem: ...
     @property
     def hotel_callout_feed_item(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___extensions_pb2___HotelCalloutFeedItem: ...
     @property
     def targeted_campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...

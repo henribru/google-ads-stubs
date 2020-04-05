@@ -58,7 +58,7 @@ class MutateFeedItemTargetsRequest(google___protobuf___message___Message):
     customer_id = ...  # type: typing___Text
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___FeedItemTargetOperation
     ]: ...
@@ -94,7 +94,7 @@ class FeedItemTargetOperation(google___protobuf___message___Message):
     remove = ...  # type: typing___Text
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___feed_item_target_pb2___FeedItemTarget: ...
     def __init__(
         self,
@@ -136,7 +136,7 @@ class MutateFeedItemTargetsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateFeedItemTargetResult
     ]: ...

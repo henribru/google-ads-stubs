@@ -47,7 +47,7 @@ class Label(google___protobuf___message___Message):
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def text_label(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___text_label_pb2___TextLabel: ...
     def __init__(
         self,

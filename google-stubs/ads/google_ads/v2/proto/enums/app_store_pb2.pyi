@@ -35,7 +35,7 @@ class AppStoreEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["AppStoreEnum.AppStore"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[typing___Tuple[builtin___str, "AppStoreEnum.AppStore"]]: ...
         UNSPECIFIED = typing___cast("AppStoreEnum.AppStore", 0)
         UNKNOWN = typing___cast("AppStoreEnum.AppStore", 1)

@@ -50,7 +50,7 @@ class CustomerExtensionSetting(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___extension_setting_device_pb2___ExtensionSettingDeviceEnum.ExtensionSettingDevice
     @property
     def extension_feed_items(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...

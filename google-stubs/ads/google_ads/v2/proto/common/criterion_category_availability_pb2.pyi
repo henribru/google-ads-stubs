@@ -54,7 +54,7 @@ class CriterionCategoryAvailability(google___protobuf___message___Message):
     def channel(self) -> global___CriterionCategoryChannelAvailability: ...
     @property
     def locale(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CriterionCategoryLocaleAvailability
     ]: ...
@@ -103,7 +103,7 @@ class CriterionCategoryChannelAvailability(google___protobuf___message___Message
     )  # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___advertising_channel_sub_type_pb2___AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType]
     @property
     def include_default_channel_sub_type(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     def __init__(
         self,

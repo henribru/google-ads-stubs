@@ -35,7 +35,7 @@ class SlotEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["SlotEnum.Slot"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[typing___Tuple[builtin___str, "SlotEnum.Slot"]]: ...
         UNSPECIFIED = typing___cast("SlotEnum.Slot", 0)
         UNKNOWN = typing___cast("SlotEnum.Slot", 1)

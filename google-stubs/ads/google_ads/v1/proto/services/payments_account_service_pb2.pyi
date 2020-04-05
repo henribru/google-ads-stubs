@@ -57,7 +57,7 @@ class ListPaymentsAccountsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def payments_accounts(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___resources___payments_account_pb2___PaymentsAccount
     ]: ...

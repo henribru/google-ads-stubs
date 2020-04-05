@@ -152,23 +152,23 @@ class AdGroupCriterion(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def first_page_cpc_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def first_position_cpc_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def top_of_page_cpc_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def estimated_add_clicks_at_first_position_cpc(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def estimated_add_cost_at_first_position_cpc(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -281,35 +281,35 @@ class AdGroupCriterion(google___protobuf___message___Message):
     def cpv_bid_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def percent_cpc_bid_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def effective_cpc_bid_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def effective_cpm_bid_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def effective_cpv_bid_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def effective_percent_cpc_bid_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def position_estimates(self) -> global___AdGroupCriterion.PositionEstimates: ...
     @property
     def final_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def final_mobile_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -317,85 +317,85 @@ class AdGroupCriterion(google___protobuf___message___Message):
     def final_url_suffix(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def url_custom_parameters(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter
     ]: ...
     @property
     def keyword(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
     @property
     def placement(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___PlacementInfo: ...
     @property
     def mobile_app_category(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___MobileAppCategoryInfo: ...
     @property
     def mobile_application(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___MobileApplicationInfo: ...
     @property
     def listing_group(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___ListingGroupInfo: ...
     @property
     def age_range(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___AgeRangeInfo: ...
     @property
     def gender(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___GenderInfo: ...
     @property
     def income_range(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___IncomeRangeInfo: ...
     @property
     def parental_status(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___ParentalStatusInfo: ...
     @property
     def user_list(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___UserListInfo: ...
     @property
     def youtube_video(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___YouTubeVideoInfo: ...
     @property
     def youtube_channel(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___YouTubeChannelInfo: ...
     @property
     def topic(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___TopicInfo: ...
     @property
     def user_interest(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___UserInterestInfo: ...
     @property
     def webpage(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___WebpageInfo: ...
     @property
     def app_payment_model(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___AppPaymentModelInfo: ...
     @property
     def custom_affinity(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___CustomAffinityInfo: ...
     @property
     def custom_intent(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___CustomIntentInfo: ...
     def __init__(
         self,

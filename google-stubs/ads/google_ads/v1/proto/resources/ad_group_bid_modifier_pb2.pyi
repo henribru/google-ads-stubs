@@ -57,27 +57,27 @@ class AdGroupBidModifier(google___protobuf___message___Message):
     def base_ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def hotel_date_selection_type(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___HotelDateSelectionTypeInfo: ...
     @property
     def hotel_advance_booking_window(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___HotelAdvanceBookingWindowInfo: ...
     @property
     def hotel_length_of_stay(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___HotelLengthOfStayInfo: ...
     @property
     def hotel_check_in_day(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___HotelCheckInDayInfo: ...
     @property
     def device(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___DeviceInfo: ...
     @property
     def preferred_content(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___PreferredContentInfo: ...
     def __init__(
         self,

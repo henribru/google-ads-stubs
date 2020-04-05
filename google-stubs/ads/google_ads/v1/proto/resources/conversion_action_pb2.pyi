@@ -115,11 +115,11 @@ class ConversionAction(google___protobuf___message___Message):
         def default_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
         @property
         def default_currency_code(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def always_use_default_value(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___BoolValue: ...
         def __init__(
             self,
@@ -196,31 +196,31 @@ class ConversionAction(google___protobuf___message___Message):
     def owner_customer(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def include_in_conversions_metric(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def click_through_lookback_window_days(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def view_through_lookback_window_days(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def value_settings(self) -> global___ConversionAction.ValueSettings: ...
     @property
     def attribution_model_settings(
-        self
+        self,
     ) -> global___ConversionAction.AttributionModelSettings: ...
     @property
     def tag_snippets(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___tag_snippet_pb2___TagSnippet
     ]: ...
     @property
     def phone_call_duration_seconds(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...

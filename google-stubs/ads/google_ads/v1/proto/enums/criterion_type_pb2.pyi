@@ -35,7 +35,7 @@ class CriterionTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["CriterionTypeEnum.CriterionType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "CriterionTypeEnum.CriterionType"]
         ]: ...

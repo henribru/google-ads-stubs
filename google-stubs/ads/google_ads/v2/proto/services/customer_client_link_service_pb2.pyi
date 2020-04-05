@@ -91,11 +91,11 @@ class CustomerClientLinkOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___customer_client_link_pb2___CustomerClientLink: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___customer_client_link_pb2___CustomerClientLink: ...
     def __init__(
         self,

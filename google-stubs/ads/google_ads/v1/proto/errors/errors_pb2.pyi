@@ -452,7 +452,7 @@ class GoogleAdsFailure(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def errors(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___GoogleAdsError
     ]: ...
@@ -1743,7 +1743,7 @@ class ErrorLocation(google___protobuf___message___Message):
     global___FieldPathElement = FieldPathElement
     @property
     def field_path_elements(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ErrorLocation.FieldPathElement
     ]: ...
@@ -1829,7 +1829,7 @@ class PolicyViolationDetails(google___protobuf___message___Message):
     is_exemptible = ...  # type: builtin___bool
     @property
     def key(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___policy_pb2___PolicyViolationKey: ...
     def __init__(
         self,
@@ -1874,7 +1874,7 @@ class PolicyFindingDetails(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def policy_topic_entries(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___policy_pb2___PolicyTopicEntry
     ]: ...

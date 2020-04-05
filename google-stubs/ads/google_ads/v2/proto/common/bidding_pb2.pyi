@@ -38,7 +38,7 @@ class Commission(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def commission_rate_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,
@@ -209,7 +209,7 @@ class PageOnePromoted(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v2___enums___page_one_promoted_strategy_goal_pb2___PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal
     @property
     def cpc_bid_ceiling_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def bid_modifier(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -217,11 +217,11 @@ class PageOnePromoted(google___protobuf___message___Message):
     def only_raise_cpc_bids(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def raise_cpc_bid_when_budget_constrained(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def raise_cpc_bid_when_quality_score_is_low(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     def __init__(
         self,
@@ -296,7 +296,7 @@ class TargetCpa(google___protobuf___message___Message):
     def target_cpa_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def cpc_bid_ceiling_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def cpc_bid_floor_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -371,11 +371,11 @@ class TargetImpressionShare(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v2___enums___target_impression_share_location_pb2___TargetImpressionShareLocationEnum.TargetImpressionShareLocation
     @property
     def location_fraction_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def cpc_bid_ceiling_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,
@@ -427,19 +427,19 @@ class TargetOutrankShare(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def target_outrank_share_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int32Value: ...
     @property
     def competitor_domain(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def cpc_bid_ceiling_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def only_raise_cpc_bids(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def raise_cpc_bid_when_quality_score_is_low(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     def __init__(
         self,
@@ -509,7 +509,7 @@ class TargetRoas(google___protobuf___message___Message):
     def target_roas(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def cpc_bid_ceiling_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def cpc_bid_floor_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -567,7 +567,7 @@ class TargetSpend(google___protobuf___message___Message):
     def target_spend_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def cpc_bid_ceiling_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,
@@ -614,7 +614,7 @@ class PercentCpc(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def cpc_bid_ceiling_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def enhanced_cpc_enabled(self) -> google___protobuf___wrappers_pb2___BoolValue: ...

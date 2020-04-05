@@ -35,13 +35,13 @@ class UserListCombinedRuleOperatorEnum(google___protobuf___message___Message):
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
         def values(
-            cls
+            cls,
         ) -> typing___List[
             "UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator"
         ]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[
                 builtin___str,

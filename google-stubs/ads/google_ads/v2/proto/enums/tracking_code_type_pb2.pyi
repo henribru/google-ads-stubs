@@ -37,7 +37,7 @@ class TrackingCodeTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["TrackingCodeTypeEnum.TrackingCodeType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "TrackingCodeTypeEnum.TrackingCodeType"]
         ]: ...

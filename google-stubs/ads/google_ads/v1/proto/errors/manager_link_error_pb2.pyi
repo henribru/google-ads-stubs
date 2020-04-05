@@ -37,7 +37,7 @@ class ManagerLinkErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["ManagerLinkErrorEnum.ManagerLinkError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "ManagerLinkErrorEnum.ManagerLinkError"]
         ]: ...

@@ -35,7 +35,7 @@ class DeviceEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["DeviceEnum.Device"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[typing___Tuple[builtin___str, "DeviceEnum.Device"]]: ...
         UNSPECIFIED = typing___cast("DeviceEnum.Device", 0)
         UNKNOWN = typing___cast("DeviceEnum.Device", 1)

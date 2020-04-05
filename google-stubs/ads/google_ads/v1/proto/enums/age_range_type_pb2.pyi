@@ -35,7 +35,7 @@ class AgeRangeTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["AgeRangeTypeEnum.AgeRangeType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "AgeRangeTypeEnum.AgeRangeType"]
         ]: ...

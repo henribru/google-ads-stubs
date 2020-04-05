@@ -89,13 +89,13 @@ class PolicyValidationParameter(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def ignorable_policy_topics(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def exempt_policy_violation_keys(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___PolicyViolationKey
     ]: ...
@@ -140,13 +140,13 @@ class PolicyTopicEntry(google___protobuf___message___Message):
     def topic(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def evidences(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___PolicyTopicEvidence
     ]: ...
     @property
     def constraints(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___PolicyTopicConstraint
     ]: ...
@@ -199,7 +199,7 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def texts(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
@@ -233,7 +233,7 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def websites(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
@@ -269,7 +269,7 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def destination_texts(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
@@ -348,7 +348,7 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
         def expanded_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def last_checked_date_time(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         def __init__(
             self,
@@ -411,15 +411,15 @@ class PolicyTopicEvidence(google___protobuf___message___Message):
     def language_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def destination_text_list(
-        self
+        self,
     ) -> global___PolicyTopicEvidence.DestinationTextList: ...
     @property
     def destination_mismatch(
-        self
+        self,
     ) -> global___PolicyTopicEvidence.DestinationMismatch: ...
     @property
     def destination_not_working(
-        self
+        self,
     ) -> global___PolicyTopicEvidence.DestinationNotWorking: ...
     def __init__(
         self,
@@ -516,11 +516,11 @@ class PolicyTopicConstraint(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def total_targeted_countries(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int32Value: ...
         @property
         def countries(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             global___PolicyTopicConstraint.CountryConstraint
         ]: ...
@@ -592,7 +592,7 @@ class PolicyTopicConstraint(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def country_criterion(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         def __init__(
             self,
@@ -633,19 +633,19 @@ class PolicyTopicConstraint(google___protobuf___message___Message):
     global___CountryConstraint = CountryConstraint
     @property
     def country_constraint_list(
-        self
+        self,
     ) -> global___PolicyTopicConstraint.CountryConstraintList: ...
     @property
     def reseller_constraint(
-        self
+        self,
     ) -> global___PolicyTopicConstraint.ResellerConstraint: ...
     @property
     def certificate_missing_in_country_list(
-        self
+        self,
     ) -> global___PolicyTopicConstraint.CountryConstraintList: ...
     @property
     def certificate_domain_mismatch_in_country_list(
-        self
+        self,
     ) -> global___PolicyTopicConstraint.CountryConstraintList: ...
     def __init__(
         self,

@@ -45,7 +45,7 @@ class UploadConversionAdjustmentsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def conversion_adjustments(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ConversionAdjustment
     ]: ...
@@ -93,7 +93,7 @@ class UploadConversionAdjustmentsResponse(google___protobuf___message___Message)
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ConversionAdjustmentResult
     ]: ...
@@ -143,7 +143,7 @@ class ConversionAdjustment(google___protobuf___message___Message):
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def adjustment_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def restatement_value(self) -> global___RestatementValue: ...
@@ -271,7 +271,7 @@ class GclidDateTimePair(google___protobuf___message___Message):
     def gclid(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -315,7 +315,7 @@ class ConversionAdjustmentResult(google___protobuf___message___Message):
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def adjustment_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def gclid_date_time_pair(self) -> global___GclidDateTimePair: ...

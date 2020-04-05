@@ -48,11 +48,11 @@ class CampaignDraft(google___protobuf___message___Message):
     def draft_campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def has_experiment_running(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def long_running_operation(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,

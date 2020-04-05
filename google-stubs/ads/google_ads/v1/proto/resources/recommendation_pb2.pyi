@@ -68,7 +68,7 @@ class Recommendation(google___protobuf___message___Message):
         def base_metrics(self) -> global___Recommendation.RecommendationMetrics: ...
         @property
         def potential_metrics(
-            self
+            self,
         ) -> global___Recommendation.RecommendationMetrics: ...
         def __init__(
             self,
@@ -201,7 +201,7 @@ class Recommendation(google___protobuf___message___Message):
             DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
             @property
             def budget_amount_micros(
-                self
+                self,
             ) -> google___protobuf___wrappers_pb2___Int64Value: ...
             @property
             def impact(self) -> global___Recommendation.RecommendationImpact: ...
@@ -249,15 +249,15 @@ class Recommendation(google___protobuf___message___Message):
         global___CampaignBudgetRecommendationOption = CampaignBudgetRecommendationOption
         @property
         def current_budget_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def recommended_budget_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def budget_options(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             global___Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption
         ]: ...
@@ -318,11 +318,11 @@ class Recommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def keyword(
-            self
+            self,
         ) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
         @property
         def recommended_cpc_bid_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -374,7 +374,7 @@ class Recommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def recommended_extensions(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___ads___googleads___v1___common___extensions_pb2___CallFeedItem
         ]: ...
@@ -481,11 +481,11 @@ class Recommendation(google___protobuf___message___Message):
             )  # type: google___ads___googleads___v1___enums___target_cpa_opt_in_recommendation_goal_pb2___TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
             @property
             def target_cpa_micros(
-                self
+                self,
             ) -> google___protobuf___wrappers_pb2___Int64Value: ...
             @property
             def required_campaign_budget_amount_micros(
-                self
+                self,
             ) -> google___protobuf___wrappers_pb2___Int64Value: ...
             @property
             def impact(self) -> global___Recommendation.RecommendationImpact: ...
@@ -551,13 +551,13 @@ class Recommendation(google___protobuf___message___Message):
         global___TargetCpaOptInRecommendationOption = TargetCpaOptInRecommendationOption
         @property
         def options(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             global___Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption
         ]: ...
         @property
         def recommended_target_cpa_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -608,7 +608,7 @@ class Recommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def recommended_budget_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -651,7 +651,7 @@ class Recommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def recommended_budget_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -696,11 +696,11 @@ class Recommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def excess_campaign_budget(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def budget_recommendation(
-            self
+            self,
         ) -> global___Recommendation.CampaignBudgetRecommendation: ...
         def __init__(
             self,
@@ -815,7 +815,7 @@ class Recommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def recommended_extensions(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___ads___googleads___v1___common___extensions_pb2___CalloutFeedItem
         ]: ...
@@ -859,7 +859,7 @@ class Recommendation(google___protobuf___message___Message):
         )  # type: google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
         @property
         def keyword(
-            self
+            self,
         ) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
         def __init__(
             self,
@@ -905,7 +905,7 @@ class Recommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def recommended_extensions(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___ads___googleads___v1___common___extensions_pb2___SitelinkFeedItem
         ]: ...
@@ -959,59 +959,59 @@ class Recommendation(google___protobuf___message___Message):
     def dismissed(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def campaign_budget_recommendation(
-        self
+        self,
     ) -> global___Recommendation.CampaignBudgetRecommendation: ...
     @property
     def keyword_recommendation(
-        self
+        self,
     ) -> global___Recommendation.KeywordRecommendation: ...
     @property
     def text_ad_recommendation(
-        self
+        self,
     ) -> global___Recommendation.TextAdRecommendation: ...
     @property
     def target_cpa_opt_in_recommendation(
-        self
+        self,
     ) -> global___Recommendation.TargetCpaOptInRecommendation: ...
     @property
     def maximize_conversions_opt_in_recommendation(
-        self
+        self,
     ) -> global___Recommendation.MaximizeConversionsOptInRecommendation: ...
     @property
     def enhanced_cpc_opt_in_recommendation(
-        self
+        self,
     ) -> global___Recommendation.EnhancedCpcOptInRecommendation: ...
     @property
     def search_partners_opt_in_recommendation(
-        self
+        self,
     ) -> global___Recommendation.SearchPartnersOptInRecommendation: ...
     @property
     def maximize_clicks_opt_in_recommendation(
-        self
+        self,
     ) -> global___Recommendation.MaximizeClicksOptInRecommendation: ...
     @property
     def optimize_ad_rotation_recommendation(
-        self
+        self,
     ) -> global___Recommendation.OptimizeAdRotationRecommendation: ...
     @property
     def callout_extension_recommendation(
-        self
+        self,
     ) -> global___Recommendation.CalloutExtensionRecommendation: ...
     @property
     def sitelink_extension_recommendation(
-        self
+        self,
     ) -> global___Recommendation.SitelinkExtensionRecommendation: ...
     @property
     def call_extension_recommendation(
-        self
+        self,
     ) -> global___Recommendation.CallExtensionRecommendation: ...
     @property
     def keyword_match_type_recommendation(
-        self
+        self,
     ) -> global___Recommendation.KeywordMatchTypeRecommendation: ...
     @property
     def move_unused_budget_recommendation(
-        self
+        self,
     ) -> global___Recommendation.MoveUnusedBudgetRecommendation: ...
     def __init__(
         self,

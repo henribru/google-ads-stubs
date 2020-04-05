@@ -64,11 +64,11 @@ class Feed(google___protobuf___message___Message):
             def http_method(self) -> google___protobuf___wrappers_pb2___StringValue: ...
             @property
             def http_request_url(
-                self
+                self,
             ) -> google___protobuf___wrappers_pb2___StringValue: ...
             @property
             def http_authorization_header(
-                self
+                self,
             ) -> google___protobuf___wrappers_pb2___StringValue: ...
             def __init__(
                 self,
@@ -131,21 +131,21 @@ class Feed(google___protobuf___message___Message):
         def email_address(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def business_account_id(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def business_name_filter(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def category_filters(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
         @property
         def label_filters(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
@@ -224,7 +224,7 @@ class Feed(google___protobuf___message___Message):
         )  # type: google___ads___googleads___v1___enums___affiliate_location_feed_relationship_type_pb2___AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
         @property
         def chain_ids(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___Int64Value
         ]: ...
@@ -276,13 +276,13 @@ class Feed(google___protobuf___message___Message):
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def attributes(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___FeedAttribute
     ]: ...
     @property
     def attribute_operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___FeedAttributeOperation
     ]: ...
@@ -290,7 +290,7 @@ class Feed(google___protobuf___message___Message):
     def places_location_feed_data(self) -> global___Feed.PlacesLocationFeedData: ...
     @property
     def affiliate_location_feed_data(
-        self
+        self,
     ) -> global___Feed.AffiliateLocationFeedData: ...
     def __init__(
         self,
@@ -445,7 +445,7 @@ class FeedAttributeOperation(google___protobuf___message___Message):
         def values(cls) -> typing___List["FeedAttributeOperation.Operator"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "FeedAttributeOperation.Operator"]
         ]: ...

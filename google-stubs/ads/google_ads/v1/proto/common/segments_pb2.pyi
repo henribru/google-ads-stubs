@@ -170,7 +170,7 @@ class Segments(google___protobuf___message___Message):
     def conversion_action(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_action_name(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_adjustment(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
@@ -188,11 +188,11 @@ class Segments(google___protobuf___message___Message):
     def geo_target_metro(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def geo_target_most_specific_location(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def geo_target_postal_code(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def geo_target_province(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -202,7 +202,7 @@ class Segments(google___protobuf___message___Message):
     def geo_target_state(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def hotel_booking_window_days(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def hotel_center_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -224,7 +224,7 @@ class Segments(google___protobuf___message___Message):
     def hour(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
     @property
     def interaction_on_this_extension(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def keyword(self) -> global___Keyword: ...
@@ -234,27 +234,27 @@ class Segments(google___protobuf___message___Message):
     def partner_hotel_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_aggregator_id(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___UInt64Value: ...
     @property
     def product_bidding_category_level1(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_bidding_category_level2(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_bidding_category_level3(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_bidding_category_level4(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_bidding_category_level5(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_brand(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -262,23 +262,23 @@ class Segments(google___protobuf___message___Message):
     def product_country(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_custom_attribute0(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_custom_attribute1(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_custom_attribute2(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_custom_attribute3(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_custom_attribute4(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def product_item_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -814,7 +814,7 @@ class Keyword(google___protobuf___message___Message):
     def ad_group_criterion(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def info(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
     def __init__(
         self,

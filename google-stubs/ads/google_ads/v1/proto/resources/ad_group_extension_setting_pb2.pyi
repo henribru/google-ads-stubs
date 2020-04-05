@@ -52,7 +52,7 @@ class AdGroupExtensionSetting(google___protobuf___message___Message):
     def ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def extension_feed_items(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...

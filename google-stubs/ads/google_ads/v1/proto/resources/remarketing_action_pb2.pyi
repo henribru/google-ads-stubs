@@ -45,7 +45,7 @@ class RemarketingAction(google___protobuf___message___Message):
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def tag_snippets(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___tag_snippet_pb2___TagSnippet
     ]: ...

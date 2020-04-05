@@ -31,7 +31,7 @@ class LandingPageView(google___protobuf___message___Message):
     resource_name = ...  # type: typing___Text
     @property
     def unexpanded_final_url(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,

@@ -35,7 +35,7 @@ class AdSharingErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["AdSharingErrorEnum.AdSharingError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "AdSharingErrorEnum.AdSharingError"]
         ]: ...

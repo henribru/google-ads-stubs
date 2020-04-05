@@ -128,7 +128,7 @@ class AddMutateJobOperationsRequest(google___protobuf___message___Message):
     sequence_token = ...  # type: typing___Text
     @property
     def mutate_operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___services___google_ads_service_pb2___MutateOperation
     ]: ...
@@ -240,7 +240,7 @@ class ListMutateJobResultsResponse(google___protobuf___message___Message):
     next_page_token = ...  # type: typing___Text
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateJobResult
     ]: ...
@@ -274,7 +274,7 @@ class MutateJobResult(google___protobuf___message___Message):
     operation_index = ...  # type: builtin___int
     @property
     def mutate_operation_response(
-        self
+        self,
     ) -> google___ads___googleads___v1___services___google_ads_service_pb2___MutateOperationResponse: ...
     @property
     def status(self) -> google___rpc___status_pb2___Status: ...

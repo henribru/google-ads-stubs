@@ -113,7 +113,7 @@ class CreateCustomerClientRequest(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v2___enums___access_role_pb2___AccessRoleEnum.AccessRole
     @property
     def customer_client(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___customer_pb2___Customer: ...
     @property
     def email_address(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -167,7 +167,7 @@ class CustomerOperation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___customer_pb2___Customer: ...
     @property
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...

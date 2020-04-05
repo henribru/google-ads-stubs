@@ -35,7 +35,7 @@ class MimeTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["MimeTypeEnum.MimeType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[typing___Tuple[builtin___str, "MimeTypeEnum.MimeType"]]: ...
         UNSPECIFIED = typing___cast("MimeTypeEnum.MimeType", 0)
         UNKNOWN = typing___cast("MimeTypeEnum.MimeType", 1)

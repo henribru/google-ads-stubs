@@ -41,7 +41,7 @@ class MerchantCenterLink(google___protobuf___message___Message):
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def merchant_center_account_name(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,

@@ -38,7 +38,7 @@ class GeographicView(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___geo_targeting_type_pb2___GeoTargetingTypeEnum.GeoTargetingType
     @property
     def country_geo_target_constant(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,

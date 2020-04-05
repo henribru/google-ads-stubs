@@ -59,7 +59,7 @@ class AccountBudget(google___protobuf___message___Message):
         )  # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
         @property
         def account_budget_proposal(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -67,19 +67,19 @@ class AccountBudget(google___protobuf___message___Message):
         def start_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def purchase_order_number(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def notes(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def creation_date_time(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def end_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def spending_limit_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -237,47 +237,47 @@ class AccountBudget(google___protobuf___message___Message):
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def proposed_start_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def approved_start_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def total_adjustments_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def amount_served_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def purchase_order_number(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def notes(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def pending_proposal(
-        self
+        self,
     ) -> global___AccountBudget.PendingAccountBudgetProposal: ...
     @property
     def proposed_end_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def approved_end_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def proposed_spending_limit_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def approved_spending_limit_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def adjusted_spending_limit_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,

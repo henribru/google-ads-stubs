@@ -102,7 +102,7 @@ class CreateCustomerClientRequest(google___protobuf___message___Message):
     customer_id = ...  # type: typing___Text
     @property
     def customer_client(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_pb2___Customer: ...
     def __init__(
         self,
@@ -139,7 +139,7 @@ class CustomerOperation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___customer_pb2___Customer: ...
     @property
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...

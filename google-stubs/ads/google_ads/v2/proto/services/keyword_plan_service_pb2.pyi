@@ -76,7 +76,7 @@ class MutateKeywordPlansRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___KeywordPlanOperation
     ]: ...
@@ -123,11 +123,11 @@ class KeywordPlanOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___keyword_plan_pb2___KeywordPlan: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___keyword_plan_pb2___KeywordPlan: ...
     def __init__(
         self,
@@ -195,7 +195,7 @@ class MutateKeywordPlansResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateKeywordPlansResult
     ]: ...
@@ -282,19 +282,19 @@ class GenerateForecastMetricsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def campaign_forecasts(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___KeywordPlanCampaignForecast
     ]: ...
     @property
     def ad_group_forecasts(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___KeywordPlanAdGroupForecast
     ]: ...
     @property
     def keyword_forecasts(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___KeywordPlanKeywordForecast
     ]: ...
@@ -339,7 +339,7 @@ class KeywordPlanCampaignForecast(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def keyword_plan_campaign(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def campaign_forecast(self) -> global___ForecastMetrics: ...
@@ -386,7 +386,7 @@ class KeywordPlanAdGroupForecast(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def keyword_plan_ad_group(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def ad_group_forecast(self) -> global___ForecastMetrics: ...
@@ -433,7 +433,7 @@ class KeywordPlanKeywordForecast(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def keyword_plan_ad_group_keyword(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def keyword_forecast(self) -> global___ForecastMetrics: ...
@@ -574,7 +574,7 @@ class GenerateHistoricalMetricsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def metrics(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___KeywordPlanKeywordHistoricalMetrics
     ]: ...
@@ -609,7 +609,7 @@ class KeywordPlanKeywordHistoricalMetrics(google___protobuf___message___Message)
     def search_query(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def keyword_metrics(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___keyword_plan_common_pb2___KeywordPlanHistoricalMetrics: ...
     def __init__(
         self,

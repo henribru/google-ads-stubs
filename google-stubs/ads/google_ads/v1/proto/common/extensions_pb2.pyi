@@ -80,23 +80,23 @@ class AppFeedItem(google___protobuf___message___Message):
     def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def final_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def final_mobile_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def url_custom_parameters(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter
     ]: ...
@@ -192,11 +192,11 @@ class CallFeedItem(google___protobuf___message___Message):
     def call_tracking_enabled(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def call_conversion_action(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def call_conversion_tracking_disabled(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     def __init__(
         self,
@@ -593,13 +593,13 @@ class PriceFeedItem(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___price_extension_price_qualifier_pb2___PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def language_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def price_offerings(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___PriceOffer
     ]: ...
@@ -679,17 +679,17 @@ class PriceOffer(google___protobuf___message___Message):
     def description(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def price(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___feed_common_pb2___Money: ...
     @property
     def final_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def final_mobile_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -763,29 +763,29 @@ class PromotionFeedItem(google___protobuf___message___Message):
     def promotion_target(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def promotion_start_date(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def promotion_end_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def final_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def final_mobile_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def url_custom_parameters(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter
     ]: ...
@@ -797,13 +797,13 @@ class PromotionFeedItem(google___protobuf___message___Message):
     def percent_off(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def money_amount_off(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___feed_common_pb2___Money: ...
     @property
     def promotion_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def orders_over_amount(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___feed_common_pb2___Money: ...
     def __init__(
         self,
@@ -955,7 +955,7 @@ class StructuredSnippetFeedItem(google___protobuf___message___Message):
     def header(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def values(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -1001,23 +1001,23 @@ class SitelinkFeedItem(google___protobuf___message___Message):
     def line2(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def final_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def final_mobile_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def url_custom_parameters(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter
     ]: ...

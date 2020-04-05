@@ -157,7 +157,7 @@ class UserListRuleInfo(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v2___enums___user_list_rule_type_pb2___UserListRuleTypeEnum.UserListRuleType
     @property
     def rule_item_groups(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___UserListRuleItemGroupInfo
     ]: ...
@@ -194,7 +194,7 @@ class UserListRuleItemGroupInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def rule_items(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___UserListRuleItemInfo
     ]: ...
@@ -611,7 +611,7 @@ class LogicalUserListInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def rules(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___UserListLogicalRuleInfo
     ]: ...
@@ -645,7 +645,7 @@ class UserListLogicalRuleInfo(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v2___enums___user_list_logical_rule_operator_pb2___UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator
     @property
     def rule_operands(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___LogicalUserListOperandInfo
     ]: ...
@@ -712,7 +712,7 @@ class BasicUserListInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def actions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___UserListActionInfo
     ]: ...

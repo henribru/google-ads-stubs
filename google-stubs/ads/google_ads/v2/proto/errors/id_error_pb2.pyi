@@ -35,7 +35,7 @@ class IdErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["IdErrorEnum.IdError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[typing___Tuple[builtin___str, "IdErrorEnum.IdError"]]: ...
         UNSPECIFIED = typing___cast("IdErrorEnum.IdError", 0)
         UNKNOWN = typing___cast("IdErrorEnum.IdError", 1)

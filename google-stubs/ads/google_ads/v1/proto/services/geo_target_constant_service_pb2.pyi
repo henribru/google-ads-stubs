@@ -64,7 +64,7 @@ class SuggestGeoTargetConstantsRequest(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def names(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
@@ -100,7 +100,7 @@ class SuggestGeoTargetConstantsRequest(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def geo_target_constants(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___protobuf___wrappers_pb2___StringValue
         ]: ...
@@ -141,7 +141,7 @@ class SuggestGeoTargetConstantsRequest(google___protobuf___message___Message):
     def country_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def location_names(
-        self
+        self,
     ) -> global___SuggestGeoTargetConstantsRequest.LocationNames: ...
     @property
     def geo_targets(self) -> global___SuggestGeoTargetConstantsRequest.GeoTargets: ...
@@ -211,7 +211,7 @@ class SuggestGeoTargetConstantsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def geo_target_constant_suggestions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___GeoTargetConstantSuggestion
     ]: ...
@@ -253,11 +253,11 @@ class GeoTargetConstantSuggestion(google___protobuf___message___Message):
     def search_term(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def geo_target_constant(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___geo_target_constant_pb2___GeoTargetConstant: ...
     @property
     def geo_target_constant_parents(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___resources___geo_target_constant_pb2___GeoTargetConstant
     ]: ...

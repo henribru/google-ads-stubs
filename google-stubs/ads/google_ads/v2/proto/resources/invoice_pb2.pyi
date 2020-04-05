@@ -48,33 +48,33 @@ class Invoice(google___protobuf___message___Message):
         def customer(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def customer_descriptive_name(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def account_budget(self) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def account_budget_name(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def purchase_order_number(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def subtotal_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def tax_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def total_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def billable_activity_date_range(
-            self
+            self,
         ) -> google___ads___googleads___v2___common___dates_pb2___DateRange: ...
         def __init__(
             self,
@@ -188,17 +188,17 @@ class Invoice(google___protobuf___message___Message):
     def due_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def service_date_range(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___dates_pb2___DateRange: ...
     @property
     def currency_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def invoice_level_adjustments_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def subtotal_amount_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def tax_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -208,7 +208,7 @@ class Invoice(google___protobuf___message___Message):
     def corrected_invoice(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def replaced_invoices(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -216,7 +216,7 @@ class Invoice(google___protobuf___message___Message):
     def pdf_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def account_budget_summaries(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___Invoice.AccountBudgetSummary
     ]: ...

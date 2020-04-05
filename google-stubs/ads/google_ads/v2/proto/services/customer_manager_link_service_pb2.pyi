@@ -62,7 +62,7 @@ class MutateCustomerManagerLinkRequest(google___protobuf___message___Message):
     customer_id = ...  # type: typing___Text
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CustomerManagerLinkOperation
     ]: ...
@@ -99,7 +99,7 @@ class CustomerManagerLinkOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___customer_manager_link_pb2___CustomerManagerLink: ...
     def __init__(
         self,
@@ -153,7 +153,7 @@ class MutateCustomerManagerLinkResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateCustomerManagerLinkResult
     ]: ...

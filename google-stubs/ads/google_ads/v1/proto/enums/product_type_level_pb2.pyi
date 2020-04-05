@@ -37,7 +37,7 @@ class ProductTypeLevelEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["ProductTypeLevelEnum.ProductTypeLevel"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "ProductTypeLevelEnum.ProductTypeLevel"]
         ]: ...

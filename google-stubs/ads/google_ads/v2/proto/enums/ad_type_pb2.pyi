@@ -35,7 +35,7 @@ class AdTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["AdTypeEnum.AdType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[typing___Tuple[builtin___str, "AdTypeEnum.AdType"]]: ...
         UNSPECIFIED = typing___cast("AdTypeEnum.AdType", 0)
         UNKNOWN = typing___cast("AdTypeEnum.AdType", 1)

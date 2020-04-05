@@ -106,23 +106,23 @@ class UserList(google___protobuf___message___Message):
     def eligible_for_display(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def crm_based_user_list(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___user_lists_pb2___CrmBasedUserListInfo: ...
     @property
     def similar_user_list(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___user_lists_pb2___SimilarUserListInfo: ...
     @property
     def rule_based_user_list(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___user_lists_pb2___RuleBasedUserListInfo: ...
     @property
     def logical_user_list(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___user_lists_pb2___LogicalUserListInfo: ...
     @property
     def basic_user_list(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___user_lists_pb2___BasicUserListInfo: ...
     def __init__(
         self,

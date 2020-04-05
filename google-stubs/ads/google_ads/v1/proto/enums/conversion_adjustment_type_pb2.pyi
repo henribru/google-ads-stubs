@@ -35,11 +35,11 @@ class ConversionAdjustmentTypeEnum(google___protobuf___message___Message):
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
         def values(
-            cls
+            cls,
         ) -> typing___List["ConversionAdjustmentTypeEnum.ConversionAdjustmentType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[
                 builtin___str, "ConversionAdjustmentTypeEnum.ConversionAdjustmentType"

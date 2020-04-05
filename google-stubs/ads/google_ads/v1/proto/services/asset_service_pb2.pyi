@@ -58,7 +58,7 @@ class MutateAssetsRequest(google___protobuf___message___Message):
     customer_id = ...  # type: typing___Text
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___AssetOperation
     ]: ...
@@ -93,7 +93,7 @@ class AssetOperation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___asset_pb2___Asset: ...
     def __init__(
         self,
@@ -134,7 +134,7 @@ class MutateAssetsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateAssetResult
     ]: ...

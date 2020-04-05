@@ -35,7 +35,7 @@ class FeedOriginEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["FeedOriginEnum.FeedOrigin"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "FeedOriginEnum.FeedOrigin"]
         ]: ...

@@ -38,7 +38,7 @@ class TargetingSetting(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def target_restrictions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___TargetRestriction
     ]: ...

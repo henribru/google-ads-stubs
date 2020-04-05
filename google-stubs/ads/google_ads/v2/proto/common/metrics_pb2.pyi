@@ -56,7 +56,7 @@ class Metrics(google___protobuf___message___Message):
     )  # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v2___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType]
     @property
     def absolute_top_impression_percentage(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def active_view_cpm(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -64,69 +64,69 @@ class Metrics(google___protobuf___message___Message):
     def active_view_ctr(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def active_view_impressions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def active_view_measurability(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def active_view_measurable_cost_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def active_view_measurable_impressions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def active_view_viewability(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_interactions_rate(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_value(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_value_per_cost(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_click_to_call(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_directions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_interactions_value_per_interaction(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_menu(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_order(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_other_engagement(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_store_visit(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions_from_store_website(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def average_cost(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -142,11 +142,11 @@ class Metrics(google___protobuf___message___Message):
     def average_page_views(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def average_time_on_site(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def benchmark_average_max_cpc(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def benchmark_ctr(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -158,43 +158,43 @@ class Metrics(google___protobuf___message___Message):
     def combined_clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def combined_clicks_per_query(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def combined_queries(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def content_budget_lost_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def content_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def conversion_last_received_request_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conversion_last_conversion_date(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def content_rank_lost_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def conversions_from_interactions_rate(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def conversions_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def conversions_value_per_cost(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def conversions_from_interactions_value_per_interaction(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -202,39 +202,39 @@ class Metrics(google___protobuf___message___Message):
     def cost_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def cost_per_all_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def cost_per_conversion(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def cost_per_current_model_attributed_conversion(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def cross_device_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def ctr(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def current_model_attributed_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def current_model_attributed_conversions_from_interactions_rate(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def current_model_attributed_conversions_from_interactions_value_per_interaction(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def current_model_attributed_conversions_value(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def current_model_attributed_conversions_value_per_cost(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def engagement_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -242,15 +242,15 @@ class Metrics(google___protobuf___message___Message):
     def engagements(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def hotel_average_lead_value_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def hotel_price_difference_percentage(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def historical_quality_score(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def gmail_forwards(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -258,11 +258,11 @@ class Metrics(google___protobuf___message___Message):
     def gmail_saves(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def gmail_secondary_clicks(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def impressions_from_store_reach(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -282,25 +282,25 @@ class Metrics(google___protobuf___message___Message):
     def message_chat_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def mobile_friendly_clicks_percentage(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def organic_clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def organic_clicks_per_query(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def organic_impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def organic_impressions_per_query(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def organic_queries(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def percent_new_visitors(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def phone_calls(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
@@ -312,83 +312,83 @@ class Metrics(google___protobuf___message___Message):
     def relative_ctr(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_absolute_top_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_budget_lost_absolute_top_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_budget_lost_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_budget_lost_top_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_click_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_exact_match_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_rank_lost_absolute_top_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_rank_lost_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_rank_lost_top_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_top_impression_share(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def speed_score(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def top_impression_percentage(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def valid_accelerated_mobile_pages_clicks_percentage(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def value_per_all_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def value_per_conversion(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def value_per_current_model_attributed_conversion(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def video_quartile_100_rate(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def video_quartile_25_rate(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def video_quartile_50_rate(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def video_quartile_75_rate(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def video_view_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
@@ -396,7 +396,7 @@ class Metrics(google___protobuf___message___Message):
     def video_views(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def view_through_conversions(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,

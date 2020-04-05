@@ -35,7 +35,7 @@ class UrlFieldErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["UrlFieldErrorEnum.UrlFieldError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "UrlFieldErrorEnum.UrlFieldError"]
         ]: ...

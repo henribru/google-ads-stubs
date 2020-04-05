@@ -32,7 +32,7 @@ class KeywordPlanAdGroup(google___protobuf___message___Message):
     resource_name = ...  # type: typing___Text
     @property
     def keyword_plan_campaign(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...

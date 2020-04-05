@@ -42,23 +42,23 @@ class BillingSetup(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def payments_account_id(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def payments_account_name(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def payments_profile_id(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def payments_profile_name(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def secondary_payments_profile_id(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___StringValue: ...
         def __init__(
             self,

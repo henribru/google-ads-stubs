@@ -62,35 +62,35 @@ class BiddingStrategy(google___protobuf___message___Message):
     def campaign_count(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def non_removed_campaign_count(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def enhanced_cpc(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___bidding_pb2___EnhancedCpc: ...
     @property
     def page_one_promoted(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___bidding_pb2___PageOnePromoted: ...
     @property
     def target_cpa(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___bidding_pb2___TargetCpa: ...
     @property
     def target_impression_share(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___bidding_pb2___TargetImpressionShare: ...
     @property
     def target_outrank_share(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___bidding_pb2___TargetOutrankShare: ...
     @property
     def target_roas(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___bidding_pb2___TargetRoas: ...
     @property
     def target_spend(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___bidding_pb2___TargetSpend: ...
     def __init__(
         self,

@@ -35,7 +35,7 @@ class ReachPlanErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["ReachPlanErrorEnum.ReachPlanError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "ReachPlanErrorEnum.ReachPlanError"]
         ]: ...

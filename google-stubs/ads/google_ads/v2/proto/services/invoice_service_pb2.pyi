@@ -83,7 +83,7 @@ class ListInvoicesResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def invoices(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___resources___invoice_pb2___Invoice
     ]: ...

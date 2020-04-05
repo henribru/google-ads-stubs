@@ -66,7 +66,7 @@ class MutateCampaignExperimentsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CampaignExperimentOperation
     ]: ...
@@ -113,7 +113,7 @@ class CampaignExperimentOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___campaign_experiment_pb2___CampaignExperiment: ...
     def __init__(
         self,
@@ -174,7 +174,7 @@ class MutateCampaignExperimentsResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateCampaignExperimentResult
     ]: ...
@@ -243,7 +243,7 @@ class CreateCampaignExperimentRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def campaign_experiment(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___campaign_experiment_pb2___CampaignExperiment: ...
     def __init__(
         self,
@@ -465,7 +465,7 @@ class ListCampaignExperimentAsyncErrorsResponse(google___protobuf___message___Me
     next_page_token = ...  # type: typing___Text
     @property
     def errors(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___rpc___status_pb2___Status
     ]: ...

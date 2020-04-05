@@ -45,7 +45,7 @@ class ChangeStatus(google___protobuf___message___Message):
     )  # type: google___ads___googleads___v1___enums___change_status_operation_pb2___ChangeStatusOperationEnum.ChangeStatusOperation
     @property
     def last_change_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -67,7 +67,7 @@ class ChangeStatus(google___protobuf___message___Message):
     def campaign_feed(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def ad_group_bid_modifier(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,

@@ -70,7 +70,7 @@ class MutateAdGroupCriteriaRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___AdGroupCriterionOperation
     ]: ...
@@ -117,17 +117,17 @@ class AdGroupCriterionOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def exempt_policy_violation_keys(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___common___policy_pb2___PolicyViolationKey
     ]: ...
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___ad_group_criterion_pb2___AdGroupCriterion: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___ad_group_criterion_pb2___AdGroupCriterion: ...
     def __init__(
         self,
@@ -202,7 +202,7 @@ class MutateAdGroupCriteriaResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateAdGroupCriterionResult
     ]: ...

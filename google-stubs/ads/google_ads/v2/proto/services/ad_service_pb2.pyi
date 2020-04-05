@@ -62,7 +62,7 @@ class MutateAdsRequest(google___protobuf___message___Message):
     customer_id = ...  # type: typing___Text
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___AdOperation
     ]: ...
@@ -149,7 +149,7 @@ class MutateAdsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateAdResult
     ]: ...

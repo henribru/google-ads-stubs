@@ -78,11 +78,11 @@ class AccountBudgetProposal(google___protobuf___message___Message):
     def proposed_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def approved_start_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def proposed_purchase_order_number(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def proposed_notes(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -92,23 +92,23 @@ class AccountBudgetProposal(google___protobuf___message___Message):
     def approval_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def proposed_start_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def proposed_end_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def approved_end_date_time(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def proposed_spending_limit_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def approved_spending_limit_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,

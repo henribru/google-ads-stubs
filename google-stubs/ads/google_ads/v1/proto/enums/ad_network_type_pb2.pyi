@@ -35,7 +35,7 @@ class AdNetworkTypeEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["AdNetworkTypeEnum.AdNetworkType"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "AdNetworkTypeEnum.AdNetworkType"]
         ]: ...

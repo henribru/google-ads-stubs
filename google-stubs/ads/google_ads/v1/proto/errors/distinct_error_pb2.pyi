@@ -35,7 +35,7 @@ class DistinctErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["DistinctErrorEnum.DistinctError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "DistinctErrorEnum.DistinctError"]
         ]: ...

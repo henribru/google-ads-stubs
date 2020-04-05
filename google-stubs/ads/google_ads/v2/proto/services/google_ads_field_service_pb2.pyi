@@ -90,7 +90,7 @@ class SearchGoogleAdsFieldsResponse(google___protobuf___message___Message):
     total_results_count = ...  # type: builtin___int
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v2___resources___google_ads_field_pb2___GoogleAdsField
     ]: ...

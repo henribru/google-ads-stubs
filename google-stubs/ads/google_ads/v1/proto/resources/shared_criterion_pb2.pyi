@@ -52,27 +52,27 @@ class SharedCriterion(google___protobuf___message___Message):
     def criterion_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def keyword(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
     @property
     def youtube_video(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___YouTubeVideoInfo: ...
     @property
     def youtube_channel(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___YouTubeChannelInfo: ...
     @property
     def placement(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___PlacementInfo: ...
     @property
     def mobile_app_category(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___MobileAppCategoryInfo: ...
     @property
     def mobile_application(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___criteria_pb2___MobileApplicationInfo: ...
     def __init__(
         self,

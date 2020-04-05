@@ -50,7 +50,7 @@ class KeywordPlanCampaign(google___protobuf___message___Message):
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def language_constants(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -58,7 +58,7 @@ class KeywordPlanCampaign(google___protobuf___message___Message):
     def cpc_bid_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def geo_targets(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___KeywordPlanGeoTarget
     ]: ...

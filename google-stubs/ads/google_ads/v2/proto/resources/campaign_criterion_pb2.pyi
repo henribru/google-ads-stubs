@@ -86,111 +86,111 @@ class CampaignCriterion(google___protobuf___message___Message):
     def negative(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def keyword(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___KeywordInfo: ...
     @property
     def placement(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___PlacementInfo: ...
     @property
     def mobile_app_category(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___MobileAppCategoryInfo: ...
     @property
     def mobile_application(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___MobileApplicationInfo: ...
     @property
     def location(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___LocationInfo: ...
     @property
     def device(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___DeviceInfo: ...
     @property
     def ad_schedule(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo: ...
     @property
     def age_range(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___AgeRangeInfo: ...
     @property
     def gender(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___GenderInfo: ...
     @property
     def income_range(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___IncomeRangeInfo: ...
     @property
     def parental_status(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___ParentalStatusInfo: ...
     @property
     def user_list(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___UserListInfo: ...
     @property
     def youtube_video(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___YouTubeVideoInfo: ...
     @property
     def youtube_channel(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___YouTubeChannelInfo: ...
     @property
     def proximity(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___ProximityInfo: ...
     @property
     def topic(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___TopicInfo: ...
     @property
     def listing_scope(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___ListingScopeInfo: ...
     @property
     def language(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___LanguageInfo: ...
     @property
     def ip_block(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___IpBlockInfo: ...
     @property
     def content_label(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___ContentLabelInfo: ...
     @property
     def carrier(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___CarrierInfo: ...
     @property
     def user_interest(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___UserInterestInfo: ...
     @property
     def webpage(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___WebpageInfo: ...
     @property
     def operating_system_version(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___OperatingSystemVersionInfo: ...
     @property
     def mobile_device(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___MobileDeviceInfo: ...
     @property
     def location_group(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___LocationGroupInfo: ...
     @property
     def custom_affinity(
-        self
+        self,
     ) -> google___ads___googleads___v2___common___criteria_pb2___CustomAffinityInfo: ...
     def __init__(
         self,

@@ -92,29 +92,29 @@ class Ad(google___protobuf___message___Message):
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def final_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def final_app_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___final_app_url_pb2___FinalAppUrl
     ]: ...
     @property
     def final_mobile_urls(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def url_custom_parameters(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___custom_parameter_pb2___CustomParameter
     ]: ...
@@ -124,7 +124,7 @@ class Ad(google___protobuf___message___Message):
     def added_by_google_ads(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def url_collections(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___common___url_collection_pb2___UrlCollection
     ]: ...
@@ -132,75 +132,75 @@ class Ad(google___protobuf___message___Message):
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def text_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___TextAdInfo: ...
     @property
     def expanded_text_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___ExpandedTextAdInfo: ...
     @property
     def call_only_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___CallOnlyAdInfo: ...
     @property
     def expanded_dynamic_search_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___ExpandedDynamicSearchAdInfo: ...
     @property
     def hotel_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___HotelAdInfo: ...
     @property
     def shopping_smart_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___ShoppingSmartAdInfo: ...
     @property
     def shopping_product_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___ShoppingProductAdInfo: ...
     @property
     def gmail_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___GmailAdInfo: ...
     @property
     def image_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___ImageAdInfo: ...
     @property
     def video_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___VideoAdInfo: ...
     @property
     def responsive_search_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___ResponsiveSearchAdInfo: ...
     @property
     def legacy_responsive_display_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___LegacyResponsiveDisplayAdInfo: ...
     @property
     def app_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___AppAdInfo: ...
     @property
     def legacy_app_install_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___LegacyAppInstallAdInfo: ...
     @property
     def responsive_display_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___ResponsiveDisplayAdInfo: ...
     @property
     def display_upload_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___DisplayUploadAdInfo: ...
     @property
     def app_engagement_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___AppEngagementAdInfo: ...
     @property
     def shopping_comparison_listing_ad(
-        self
+        self,
     ) -> google___ads___googleads___v1___common___ad_type_infos_pb2___ShoppingComparisonListingAdInfo: ...
     def __init__(
         self,

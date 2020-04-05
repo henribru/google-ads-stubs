@@ -61,7 +61,7 @@ class ListMerchantCenterLinksResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def merchant_center_links(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___ads___googleads___v1___resources___merchant_center_link_pb2___MerchantCenterLink
     ]: ...
@@ -155,7 +155,7 @@ class MerchantCenterLinkOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def update(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___merchant_center_link_pb2___MerchantCenterLink: ...
     def __init__(
         self,

@@ -62,7 +62,7 @@ class MutateAdGroupLabelsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___AdGroupLabelOperation
     ]: ...
@@ -107,7 +107,7 @@ class AdGroupLabelOperation(google___protobuf___message___Message):
     remove = ...  # type: typing___Text
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___ad_group_label_pb2___AdGroupLabel: ...
     def __init__(
         self,
@@ -151,7 +151,7 @@ class MutateAdGroupLabelsResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateAdGroupLabelResult
     ]: ...

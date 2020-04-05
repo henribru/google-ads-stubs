@@ -53,7 +53,7 @@ class Customer(google___protobuf___message___Message):
     def time_zone(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def tracking_url_template(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def final_url_suffix(self) -> google___protobuf___wrappers_pb2___StringValue: ...
@@ -195,15 +195,15 @@ class CallReportingSetting(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def call_reporting_enabled(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def call_conversion_reporting_enabled(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def call_conversion_action(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -257,11 +257,11 @@ class ConversionTrackingSetting(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def conversion_tracking_id(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def cross_account_conversion_tracking_id(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,
@@ -308,7 +308,7 @@ class RemarketingSetting(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def google_global_site_tag(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,

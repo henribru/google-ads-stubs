@@ -35,7 +35,7 @@ class NullErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["NullErrorEnum.NullError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "NullErrorEnum.NullError"]
         ]: ...

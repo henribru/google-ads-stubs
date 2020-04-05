@@ -37,7 +37,7 @@ class CampaignFeedErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["CampaignFeedErrorEnum.CampaignFeedError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "CampaignFeedErrorEnum.CampaignFeedError"]
         ]: ...

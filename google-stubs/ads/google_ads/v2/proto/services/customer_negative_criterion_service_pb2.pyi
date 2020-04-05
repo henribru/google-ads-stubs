@@ -64,7 +64,7 @@ class MutateCustomerNegativeCriteriaRequest(google___protobuf___message___Messag
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CustomerNegativeCriterionOperation
     ]: ...
@@ -111,7 +111,7 @@ class CustomerNegativeCriterionOperation(google___protobuf___message___Message):
     remove = ...  # type: typing___Text
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v2___resources___customer_negative_criterion_pb2___CustomerNegativeCriterion: ...
     def __init__(
         self,
@@ -157,7 +157,7 @@ class MutateCustomerNegativeCriteriaResponse(google___protobuf___message___Messa
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateCustomerNegativeCriteriaResult
     ]: ...

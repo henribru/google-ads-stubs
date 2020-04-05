@@ -48,7 +48,7 @@ class DomainCategory(google___protobuf___message___Message):
     def has_children(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
     @property
     def recommended_cpc_bid_micros(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     def __init__(
         self,

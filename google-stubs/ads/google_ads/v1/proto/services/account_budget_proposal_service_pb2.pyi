@@ -101,7 +101,7 @@ class AccountBudgetProposalOperation(google___protobuf___message___Message):
     def update_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___account_budget_proposal_pb2___AccountBudgetProposal: ...
     def __init__(
         self,

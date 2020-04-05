@@ -35,13 +35,13 @@ class DsaPageFeedCriterionFieldEnum(google___protobuf___message___Message):
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
         def values(
-            cls
+            cls,
         ) -> typing___List[
             "DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField"
         ]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[
                 builtin___str, "DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField"

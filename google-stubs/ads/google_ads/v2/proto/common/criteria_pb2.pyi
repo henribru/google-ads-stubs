@@ -198,7 +198,7 @@ class MobileAppCategoryInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def mobile_app_category_constant(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -368,7 +368,7 @@ class ListingGroupInfo(google___protobuf___message___Message):
     def case_value(self) -> global___ListingDimensionInfo: ...
     @property
     def parent_ad_group_criterion(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -418,7 +418,7 @@ class ListingScopeInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def dimensions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ListingDimensionInfo
     ]: ...
@@ -690,7 +690,7 @@ class HotelCountryRegionInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def country_region_criterion(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -1529,11 +1529,11 @@ class GeoPointInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def longitude_in_micro_degrees(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int32Value: ...
     @property
     def latitude_in_micro_degrees(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___Int32Value: ...
     def __init__(
         self,
@@ -1674,7 +1674,7 @@ class TopicInfo(google___protobuf___message___Message):
     def topic_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def path(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...
@@ -1845,7 +1845,7 @@ class UserInterestInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def user_interest_category(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -1885,7 +1885,7 @@ class WebpageInfo(google___protobuf___message___Message):
     def criterion_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def conditions(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___WebpageConditionInfo
     ]: ...
@@ -1971,7 +1971,7 @@ class OperatingSystemVersionInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def operating_system_version_constant(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -2037,7 +2037,7 @@ class MobileDeviceInfo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def mobile_device_constant(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
@@ -2142,7 +2142,7 @@ class LocationGroupInfo(google___protobuf___message___Message):
     def feed(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def geo_target_constants(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         google___protobuf___wrappers_pb2___StringValue
     ]: ...

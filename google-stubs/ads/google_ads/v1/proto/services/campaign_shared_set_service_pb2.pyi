@@ -62,7 +62,7 @@ class MutateCampaignSharedSetsRequest(google___protobuf___message___Message):
     validate_only = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___CampaignSharedSetOperation
     ]: ...
@@ -107,7 +107,7 @@ class CampaignSharedSetOperation(google___protobuf___message___Message):
     remove = ...  # type: typing___Text
     @property
     def create(
-        self
+        self,
     ) -> google___ads___googleads___v1___resources___campaign_shared_set_pb2___CampaignSharedSet: ...
     def __init__(
         self,
@@ -151,7 +151,7 @@ class MutateCampaignSharedSetsResponse(google___protobuf___message___Message):
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___MutateCampaignSharedSetResult
     ]: ...

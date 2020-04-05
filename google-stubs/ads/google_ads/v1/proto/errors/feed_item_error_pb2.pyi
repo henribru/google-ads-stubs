@@ -35,7 +35,7 @@ class FeedItemErrorEnum(google___protobuf___message___Message):
         def values(cls) -> typing___List["FeedItemErrorEnum.FeedItemError"]: ...
         @classmethod
         def items(
-            cls
+            cls,
         ) -> typing___List[
             typing___Tuple[builtin___str, "FeedItemErrorEnum.FeedItemError"]
         ]: ...

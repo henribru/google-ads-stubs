@@ -76,7 +76,7 @@ class ApplyRecommendationRequest(google___protobuf___message___Message):
     partial_failure = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ApplyRecommendationOperation
     ]: ...
@@ -119,7 +119,7 @@ class ApplyRecommendationOperation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def new_budget_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -254,11 +254,11 @@ class ApplyRecommendationOperation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def target_cpa_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
         def new_campaign_budget_amount_micros(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -310,7 +310,7 @@ class ApplyRecommendationOperation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def callout_extensions(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___ads___googleads___v2___common___extensions_pb2___CalloutFeedItem
         ]: ...
@@ -351,7 +351,7 @@ class ApplyRecommendationOperation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def call_extensions(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___ads___googleads___v2___common___extensions_pb2___CallFeedItem
         ]: ...
@@ -392,7 +392,7 @@ class ApplyRecommendationOperation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def sitelink_extensions(
-            self
+            self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
             google___ads___googleads___v2___common___extensions_pb2___SitelinkFeedItem
         ]: ...
@@ -433,7 +433,7 @@ class ApplyRecommendationOperation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def budget_micros_to_move(
-            self
+            self,
         ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         def __init__(
             self,
@@ -476,7 +476,7 @@ class ApplyRecommendationOperation(google___protobuf___message___Message):
     resource_name = ...  # type: typing___Text
     @property
     def campaign_budget(
-        self
+        self,
     ) -> global___ApplyRecommendationOperation.CampaignBudgetParameters: ...
     @property
     def text_ad(self) -> global___ApplyRecommendationOperation.TextAdParameters: ...
@@ -484,23 +484,23 @@ class ApplyRecommendationOperation(google___protobuf___message___Message):
     def keyword(self) -> global___ApplyRecommendationOperation.KeywordParameters: ...
     @property
     def target_cpa_opt_in(
-        self
+        self,
     ) -> global___ApplyRecommendationOperation.TargetCpaOptInParameters: ...
     @property
     def callout_extension(
-        self
+        self,
     ) -> global___ApplyRecommendationOperation.CalloutExtensionParameters: ...
     @property
     def call_extension(
-        self
+        self,
     ) -> global___ApplyRecommendationOperation.CallExtensionParameters: ...
     @property
     def sitelink_extension(
-        self
+        self,
     ) -> global___ApplyRecommendationOperation.SitelinkExtensionParameters: ...
     @property
     def move_unused_budget(
-        self
+        self,
     ) -> global___ApplyRecommendationOperation.MoveUnusedBudgetParameters: ...
     def __init__(
         self,
@@ -611,7 +611,7 @@ class ApplyRecommendationResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___ApplyRecommendationResult
     ]: ...
@@ -709,7 +709,7 @@ class DismissRecommendationRequest(google___protobuf___message___Message):
     partial_failure = ...  # type: builtin___bool
     @property
     def operations(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___DismissRecommendationRequest.DismissRecommendationOperation
     ]: ...
@@ -780,7 +780,7 @@ class DismissRecommendationResponse(google___protobuf___message___Message):
     global___DismissRecommendationResult = DismissRecommendationResult
     @property
     def results(
-        self
+        self,
     ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
         global___DismissRecommendationResponse.DismissRecommendationResult
     ]: ...

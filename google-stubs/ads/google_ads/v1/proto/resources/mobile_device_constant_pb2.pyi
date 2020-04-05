@@ -45,7 +45,7 @@ class MobileDeviceConstant(google___protobuf___message___Message):
     def manufacturer_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def operating_system_name(
-        self
+        self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
