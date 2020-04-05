@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class WebpageConditionOperandEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,38 +28,66 @@ class WebpageConditionOperandEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'WebpageConditionOperandEnum.WebpageConditionOperand': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "WebpageConditionOperandEnum.WebpageConditionOperand": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['WebpageConditionOperandEnum.WebpageConditionOperand']: ...
+        def values(
+            cls
+        ) -> typing___List["WebpageConditionOperandEnum.WebpageConditionOperand"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'WebpageConditionOperandEnum.WebpageConditionOperand']]: ...
-        UNSPECIFIED = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 0)
-        UNKNOWN = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 1)
-        URL = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 2)
-        CATEGORY = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 3)
-        PAGE_TITLE = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 4)
-        PAGE_CONTENT = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 5)
-        CUSTOM_LABEL = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 6)
-    UNSPECIFIED = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 0)
-    UNKNOWN = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 1)
-    URL = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 2)
-    CATEGORY = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 3)
-    PAGE_TITLE = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 4)
-    PAGE_CONTENT = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 5)
-    CUSTOM_LABEL = typing___cast('WebpageConditionOperandEnum.WebpageConditionOperand', 6)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str, "WebpageConditionOperandEnum.WebpageConditionOperand"
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "WebpageConditionOperandEnum.WebpageConditionOperand", 0
+        )
+        UNKNOWN = typing___cast(
+            "WebpageConditionOperandEnum.WebpageConditionOperand", 1
+        )
+        URL = typing___cast("WebpageConditionOperandEnum.WebpageConditionOperand", 2)
+        CATEGORY = typing___cast(
+            "WebpageConditionOperandEnum.WebpageConditionOperand", 3
+        )
+        PAGE_TITLE = typing___cast(
+            "WebpageConditionOperandEnum.WebpageConditionOperand", 4
+        )
+        PAGE_CONTENT = typing___cast(
+            "WebpageConditionOperandEnum.WebpageConditionOperand", 5
+        )
+        CUSTOM_LABEL = typing___cast(
+            "WebpageConditionOperandEnum.WebpageConditionOperand", 6
+        )
+    UNSPECIFIED = typing___cast(
+        "WebpageConditionOperandEnum.WebpageConditionOperand", 0
+    )
+    UNKNOWN = typing___cast("WebpageConditionOperandEnum.WebpageConditionOperand", 1)
+    URL = typing___cast("WebpageConditionOperandEnum.WebpageConditionOperand", 2)
+    CATEGORY = typing___cast("WebpageConditionOperandEnum.WebpageConditionOperand", 3)
+    PAGE_TITLE = typing___cast("WebpageConditionOperandEnum.WebpageConditionOperand", 4)
+    PAGE_CONTENT = typing___cast(
+        "WebpageConditionOperandEnum.WebpageConditionOperand", 5
+    )
+    CUSTOM_LABEL = typing___cast(
+        "WebpageConditionOperandEnum.WebpageConditionOperand", 6
+    )
     global___WebpageConditionOperand = WebpageConditionOperand
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> WebpageConditionOperandEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> WebpageConditionOperandEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> WebpageConditionOperandEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___WebpageConditionOperandEnum = WebpageConditionOperandEnum

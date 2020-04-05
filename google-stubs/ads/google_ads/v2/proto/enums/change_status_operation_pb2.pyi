@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class ChangeStatusOperationEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,34 +28,46 @@ class ChangeStatusOperationEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'ChangeStatusOperationEnum.ChangeStatusOperation': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "ChangeStatusOperationEnum.ChangeStatusOperation": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['ChangeStatusOperationEnum.ChangeStatusOperation']: ...
+        def values(
+            cls
+        ) -> typing___List["ChangeStatusOperationEnum.ChangeStatusOperation"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'ChangeStatusOperationEnum.ChangeStatusOperation']]: ...
-        UNSPECIFIED = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 0)
-        UNKNOWN = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 1)
-        ADDED = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 2)
-        CHANGED = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 3)
-        REMOVED = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 4)
-    UNSPECIFIED = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 0)
-    UNKNOWN = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 1)
-    ADDED = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 2)
-    CHANGED = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 3)
-    REMOVED = typing___cast('ChangeStatusOperationEnum.ChangeStatusOperation', 4)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str, "ChangeStatusOperationEnum.ChangeStatusOperation"
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "ChangeStatusOperationEnum.ChangeStatusOperation", 0
+        )
+        UNKNOWN = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 1)
+        ADDED = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 2)
+        CHANGED = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 3)
+        REMOVED = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 4)
+    UNSPECIFIED = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 0)
+    UNKNOWN = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 1)
+    ADDED = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 2)
+    CHANGED = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 3)
+    REMOVED = typing___cast("ChangeStatusOperationEnum.ChangeStatusOperation", 4)
     global___ChangeStatusOperation = ChangeStatusOperation
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> ChangeStatusOperationEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ChangeStatusOperationEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> ChangeStatusOperationEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___ChangeStatusOperationEnum = ChangeStatusOperationEnum

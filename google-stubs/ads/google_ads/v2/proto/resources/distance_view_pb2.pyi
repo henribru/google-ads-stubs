@@ -8,9 +8,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     BoolValue as google___protobuf___wrappers_pb2___BoolValue,
@@ -22,10 +20,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -35,29 +30,48 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class DistanceView(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    distance_bucket = ... # type: google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket
-
+    resource_name = ...  # type: typing___Text
+    distance_bucket = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket
     @property
     def metric_system(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        distance_bucket : typing___Optional[google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket] = None,
-        metric_system : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        distance_bucket: typing___Optional[
+            google___ads___googleads___v2___enums___distance_bucket_pb2___DistanceBucketEnum.DistanceBucket
+        ] = None,
+        metric_system: typing___Optional[
+            google___protobuf___wrappers_pb2___BoolValue
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> DistanceView: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> DistanceView: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> DistanceView: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"metric_system",b"metric_system"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"distance_bucket",b"distance_bucket",u"metric_system",b"metric_system",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["metric_system", b"metric_system"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "distance_bucket",
+            b"distance_bucket",
+            "metric_system",
+            b"metric_system",
+            "resource_name",
+            b"resource_name",
+        ],
+    ) -> None: ...
+
 global___DistanceView = DistanceView

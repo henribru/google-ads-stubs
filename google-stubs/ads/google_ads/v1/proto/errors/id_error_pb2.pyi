@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class IdErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,30 +28,32 @@ class IdErrorEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'IdErrorEnum.IdError': ...
+        def Value(cls, name: builtin___str) -> "IdErrorEnum.IdError": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['IdErrorEnum.IdError']: ...
+        def values(cls) -> typing___List["IdErrorEnum.IdError"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'IdErrorEnum.IdError']]: ...
-        UNSPECIFIED = typing___cast('IdErrorEnum.IdError', 0)
-        UNKNOWN = typing___cast('IdErrorEnum.IdError', 1)
-        NOT_FOUND = typing___cast('IdErrorEnum.IdError', 2)
-    UNSPECIFIED = typing___cast('IdErrorEnum.IdError', 0)
-    UNKNOWN = typing___cast('IdErrorEnum.IdError', 1)
-    NOT_FOUND = typing___cast('IdErrorEnum.IdError', 2)
+        def items(
+            cls
+        ) -> typing___List[typing___Tuple[builtin___str, "IdErrorEnum.IdError"]]: ...
+        UNSPECIFIED = typing___cast("IdErrorEnum.IdError", 0)
+        UNKNOWN = typing___cast("IdErrorEnum.IdError", 1)
+        NOT_FOUND = typing___cast("IdErrorEnum.IdError", 2)
+    UNSPECIFIED = typing___cast("IdErrorEnum.IdError", 0)
+    UNKNOWN = typing___cast("IdErrorEnum.IdError", 1)
+    NOT_FOUND = typing___cast("IdErrorEnum.IdError", 2)
     global___IdError = IdError
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> IdErrorEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> IdErrorEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> IdErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___IdErrorEnum = IdErrorEnum

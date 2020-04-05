@@ -12,9 +12,7 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     Iterable as typing___Iterable,
@@ -23,10 +21,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -36,43 +31,60 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class ListPaymentsAccountsRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    customer_id = ... # type: typing___Text
-
-    def __init__(self,
-        *,
-        customer_id : typing___Optional[typing___Text] = None,
-        ) -> None: ...
+    customer_id = ...  # type: typing___Text
+    def __init__(
+        self, *, customer_id: typing___Optional[typing___Text] = None
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> ListPaymentsAccountsRequest: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ListPaymentsAccountsRequest: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> ListPaymentsAccountsRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id"]) -> None: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["customer_id", b"customer_id"]
+    ) -> None: ...
+
 global___ListPaymentsAccountsRequest = ListPaymentsAccountsRequest
 
 class ListPaymentsAccountsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
-    def payments_accounts(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___resources___payments_account_pb2___PaymentsAccount]: ...
-
-    def __init__(self,
+    def payments_accounts(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___ads___googleads___v1___resources___payments_account_pb2___PaymentsAccount
+    ]: ...
+    def __init__(
+        self,
         *,
-        payments_accounts : typing___Optional[typing___Iterable[google___ads___googleads___v1___resources___payments_account_pb2___PaymentsAccount]] = None,
-        ) -> None: ...
+        payments_accounts: typing___Optional[
+            typing___Iterable[
+                google___ads___googleads___v1___resources___payments_account_pb2___PaymentsAccount
+            ]
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> ListPaymentsAccountsResponse: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ListPaymentsAccountsResponse: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> ListPaymentsAccountsResponse: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"payments_accounts",b"payments_accounts"]) -> None: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "payments_accounts", b"payments_accounts"
+        ],
+    ) -> None: ...
+
 global___ListPaymentsAccountsResponse = ListPaymentsAccountsResponse

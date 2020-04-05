@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class PriceExtensionPriceUnitEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,40 +28,68 @@ class PriceExtensionPriceUnitEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit']: ...
+        def values(
+            cls
+        ) -> typing___List["PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit']]: ...
-        UNSPECIFIED = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 0)
-        UNKNOWN = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 1)
-        PER_HOUR = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 2)
-        PER_DAY = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 3)
-        PER_WEEK = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 4)
-        PER_MONTH = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 5)
-        PER_YEAR = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 6)
-        PER_NIGHT = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 7)
-    UNSPECIFIED = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 0)
-    UNKNOWN = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 1)
-    PER_HOUR = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 2)
-    PER_DAY = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 3)
-    PER_WEEK = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 4)
-    PER_MONTH = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 5)
-    PER_YEAR = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 6)
-    PER_NIGHT = typing___cast('PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit', 7)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str, "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit"
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 0
+        )
+        UNKNOWN = typing___cast(
+            "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 1
+        )
+        PER_HOUR = typing___cast(
+            "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 2
+        )
+        PER_DAY = typing___cast(
+            "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 3
+        )
+        PER_WEEK = typing___cast(
+            "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 4
+        )
+        PER_MONTH = typing___cast(
+            "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 5
+        )
+        PER_YEAR = typing___cast(
+            "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 6
+        )
+        PER_NIGHT = typing___cast(
+            "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 7
+        )
+    UNSPECIFIED = typing___cast(
+        "PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 0
+    )
+    UNKNOWN = typing___cast("PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 1)
+    PER_HOUR = typing___cast("PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 2)
+    PER_DAY = typing___cast("PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 3)
+    PER_WEEK = typing___cast("PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 4)
+    PER_MONTH = typing___cast("PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 5)
+    PER_YEAR = typing___cast("PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 6)
+    PER_NIGHT = typing___cast("PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit", 7)
     global___PriceExtensionPriceUnit = PriceExtensionPriceUnit
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> PriceExtensionPriceUnitEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> PriceExtensionPriceUnitEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> PriceExtensionPriceUnitEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___PriceExtensionPriceUnitEnum = PriceExtensionPriceUnitEnum

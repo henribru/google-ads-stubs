@@ -34,9 +34,7 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     BoolValue as google___protobuf___wrappers_pb2___BoolValue,
@@ -52,10 +50,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -65,538 +60,1144 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class Recommendation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class RecommendationImpact(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
         def base_metrics(self) -> global___Recommendation.RecommendationMetrics: ...
-
         @property
-        def potential_metrics(self) -> global___Recommendation.RecommendationMetrics: ...
-
-        def __init__(self,
+        def potential_metrics(
+            self
+        ) -> global___Recommendation.RecommendationMetrics: ...
+        def __init__(
+            self,
             *,
-            base_metrics : typing___Optional[global___Recommendation.RecommendationMetrics] = None,
-            potential_metrics : typing___Optional[global___Recommendation.RecommendationMetrics] = None,
-            ) -> None: ...
+            base_metrics: typing___Optional[
+                global___Recommendation.RecommendationMetrics
+            ] = None,
+            potential_metrics: typing___Optional[
+                global___Recommendation.RecommendationMetrics
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.RecommendationImpact: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.RecommendationImpact: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.RecommendationImpact: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"base_metrics",b"base_metrics",u"potential_metrics",b"potential_metrics"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"base_metrics",b"base_metrics",u"potential_metrics",b"potential_metrics"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.RecommendationImpact: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "base_metrics",
+                b"base_metrics",
+                "potential_metrics",
+                b"potential_metrics",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "base_metrics",
+                b"base_metrics",
+                "potential_metrics",
+                b"potential_metrics",
+            ],
+        ) -> None: ...
     global___RecommendationImpact = RecommendationImpact
-
     class RecommendationMetrics(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
         def impressions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
         @property
         def clicks(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
         @property
         def cost_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
         @property
         def conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
         @property
         def video_views(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
-        def __init__(self,
+        def __init__(
+            self,
             *,
-            impressions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-            clicks : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-            cost_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            conversions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-            video_views : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-            ) -> None: ...
+            impressions: typing___Optional[
+                google___protobuf___wrappers_pb2___DoubleValue
+            ] = None,
+            clicks: typing___Optional[
+                google___protobuf___wrappers_pb2___DoubleValue
+            ] = None,
+            cost_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+            conversions: typing___Optional[
+                google___protobuf___wrappers_pb2___DoubleValue
+            ] = None,
+            video_views: typing___Optional[
+                google___protobuf___wrappers_pb2___DoubleValue
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.RecommendationMetrics: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.RecommendationMetrics: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.RecommendationMetrics: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"clicks",b"clicks",u"conversions",b"conversions",u"cost_micros",b"cost_micros",u"impressions",b"impressions",u"video_views",b"video_views"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"clicks",b"clicks",u"conversions",b"conversions",u"cost_micros",b"cost_micros",u"impressions",b"impressions",u"video_views",b"video_views"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.RecommendationMetrics: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "clicks",
+                b"clicks",
+                "conversions",
+                b"conversions",
+                "cost_micros",
+                b"cost_micros",
+                "impressions",
+                b"impressions",
+                "video_views",
+                b"video_views",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "clicks",
+                b"clicks",
+                "conversions",
+                b"conversions",
+                "cost_micros",
+                b"cost_micros",
+                "impressions",
+                b"impressions",
+                "video_views",
+                b"video_views",
+            ],
+        ) -> None: ...
     global___RecommendationMetrics = RecommendationMetrics
-
     class CampaignBudgetRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         class CampaignBudgetRecommendationOption(google___protobuf___message___Message):
             DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
             @property
-            def budget_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+            def budget_amount_micros(
+                self
+            ) -> google___protobuf___wrappers_pb2___Int64Value: ...
             @property
             def impact(self) -> global___Recommendation.RecommendationImpact: ...
-
-            def __init__(self,
+            def __init__(
+                self,
                 *,
-                budget_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-                impact : typing___Optional[global___Recommendation.RecommendationImpact] = None,
-                ) -> None: ...
+                budget_amount_micros: typing___Optional[
+                    google___protobuf___wrappers_pb2___Int64Value
+                ] = None,
+                impact: typing___Optional[
+                    global___Recommendation.RecommendationImpact
+                ] = None,
+            ) -> None: ...
             if sys.version_info >= (3,):
                 @classmethod
-                def FromString(cls, s: builtin___bytes) -> Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption: ...
+                def FromString(
+                    cls, s: builtin___bytes
+                ) -> Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption: ...
             else:
                 @classmethod
-                def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption: ...
-            def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-            def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-            def HasField(self, field_name: typing_extensions___Literal[u"budget_amount_micros",b"budget_amount_micros",u"impact",b"impact"]) -> builtin___bool: ...
-            def ClearField(self, field_name: typing_extensions___Literal[u"budget_amount_micros",b"budget_amount_micros",u"impact",b"impact"]) -> None: ...
-        global___CampaignBudgetRecommendationOption = CampaignBudgetRecommendationOption
-
-
-        @property
-        def current_budget_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-        @property
-        def recommended_budget_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-        @property
-        def budget_options(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[global___Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption]: ...
-
-        def __init__(self,
-            *,
-            current_budget_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            recommended_budget_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            budget_options : typing___Optional[typing___Iterable[global___Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption]] = None,
+                def FromString(
+                    cls,
+                    s: typing___Union[
+                        builtin___bytes, builtin___buffer, builtin___unicode
+                    ],
+                ) -> Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption: ...
+            def MergeFrom(
+                self, other_msg: google___protobuf___message___Message
             ) -> None: ...
+            def CopyFrom(
+                self, other_msg: google___protobuf___message___Message
+            ) -> None: ...
+            def HasField(
+                self,
+                field_name: typing_extensions___Literal[
+                    "budget_amount_micros", b"budget_amount_micros", "impact", b"impact"
+                ],
+            ) -> builtin___bool: ...
+            def ClearField(
+                self,
+                field_name: typing_extensions___Literal[
+                    "budget_amount_micros", b"budget_amount_micros", "impact", b"impact"
+                ],
+            ) -> None: ...
+        global___CampaignBudgetRecommendationOption = CampaignBudgetRecommendationOption
+        @property
+        def current_budget_amount_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        @property
+        def recommended_budget_amount_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        @property
+        def budget_options(
+            self
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            global___Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption
+        ]: ...
+        def __init__(
+            self,
+            *,
+            current_budget_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+            recommended_budget_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+            budget_options: typing___Optional[
+                typing___Iterable[
+                    global___Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption
+                ]
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.CampaignBudgetRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.CampaignBudgetRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.CampaignBudgetRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"current_budget_amount_micros",b"current_budget_amount_micros",u"recommended_budget_amount_micros",b"recommended_budget_amount_micros"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"budget_options",b"budget_options",u"current_budget_amount_micros",b"current_budget_amount_micros",u"recommended_budget_amount_micros",b"recommended_budget_amount_micros"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.CampaignBudgetRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "current_budget_amount_micros",
+                b"current_budget_amount_micros",
+                "recommended_budget_amount_micros",
+                b"recommended_budget_amount_micros",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "budget_options",
+                b"budget_options",
+                "current_budget_amount_micros",
+                b"current_budget_amount_micros",
+                "recommended_budget_amount_micros",
+                b"recommended_budget_amount_micros",
+            ],
+        ) -> None: ...
     global___CampaignBudgetRecommendation = CampaignBudgetRecommendation
-
     class KeywordRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
-        def keyword(self) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
-
+        def keyword(
+            self
+        ) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
         @property
-        def recommended_cpc_bid_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-        def __init__(self,
+        def recommended_cpc_bid_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        def __init__(
+            self,
             *,
-            keyword : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___KeywordInfo] = None,
-            recommended_cpc_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            ) -> None: ...
+            keyword: typing___Optional[
+                google___ads___googleads___v1___common___criteria_pb2___KeywordInfo
+            ] = None,
+            recommended_cpc_bid_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.KeywordRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.KeywordRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.KeywordRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"keyword",b"keyword",u"recommended_cpc_bid_micros",b"recommended_cpc_bid_micros"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"keyword",b"keyword",u"recommended_cpc_bid_micros",b"recommended_cpc_bid_micros"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.KeywordRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "keyword",
+                b"keyword",
+                "recommended_cpc_bid_micros",
+                b"recommended_cpc_bid_micros",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "keyword",
+                b"keyword",
+                "recommended_cpc_bid_micros",
+                b"recommended_cpc_bid_micros",
+            ],
+        ) -> None: ...
     global___KeywordRecommendation = KeywordRecommendation
-
     class CallExtensionRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
-        def recommended_extensions(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___common___extensions_pb2___CallFeedItem]: ...
-
-        def __init__(self,
+        def recommended_extensions(
+            self
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___ads___googleads___v1___common___extensions_pb2___CallFeedItem
+        ]: ...
+        def __init__(
+            self,
             *,
-            recommended_extensions : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___extensions_pb2___CallFeedItem]] = None,
-            ) -> None: ...
+            recommended_extensions: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v1___common___extensions_pb2___CallFeedItem
+                ]
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.CallExtensionRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.CallExtensionRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.CallExtensionRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"recommended_extensions",b"recommended_extensions"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.CallExtensionRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_extensions", b"recommended_extensions"
+            ],
+        ) -> None: ...
     global___CallExtensionRecommendation = CallExtensionRecommendation
-
     class TextAdRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
         def ad(self) -> google___ads___googleads___v1___resources___ad_pb2___Ad: ...
-
         @property
         def creation_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
         @property
         def auto_apply_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-        def __init__(self,
+        def __init__(
+            self,
             *,
-            ad : typing___Optional[google___ads___googleads___v1___resources___ad_pb2___Ad] = None,
-            creation_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            auto_apply_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            ) -> None: ...
+            ad: typing___Optional[
+                google___ads___googleads___v1___resources___ad_pb2___Ad
+            ] = None,
+            creation_date: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            auto_apply_date: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.TextAdRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.TextAdRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.TextAdRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"ad",b"ad",u"auto_apply_date",b"auto_apply_date",u"creation_date",b"creation_date"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"ad",b"ad",u"auto_apply_date",b"auto_apply_date",u"creation_date",b"creation_date"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.TextAdRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "ad",
+                b"ad",
+                "auto_apply_date",
+                b"auto_apply_date",
+                "creation_date",
+                b"creation_date",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "ad",
+                b"ad",
+                "auto_apply_date",
+                b"auto_apply_date",
+                "creation_date",
+                b"creation_date",
+            ],
+        ) -> None: ...
     global___TextAdRecommendation = TextAdRecommendation
-
     class TargetCpaOptInRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         class TargetCpaOptInRecommendationOption(google___protobuf___message___Message):
             DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-            goal = ... # type: google___ads___googleads___v1___enums___target_cpa_opt_in_recommendation_goal_pb2___TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
-
+            goal = (
+                ...
+            )  # type: google___ads___googleads___v1___enums___target_cpa_opt_in_recommendation_goal_pb2___TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
             @property
-            def target_cpa_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+            def target_cpa_micros(
+                self
+            ) -> google___protobuf___wrappers_pb2___Int64Value: ...
             @property
-            def required_campaign_budget_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+            def required_campaign_budget_amount_micros(
+                self
+            ) -> google___protobuf___wrappers_pb2___Int64Value: ...
             @property
             def impact(self) -> global___Recommendation.RecommendationImpact: ...
-
-            def __init__(self,
+            def __init__(
+                self,
                 *,
-                goal : typing___Optional[google___ads___googleads___v1___enums___target_cpa_opt_in_recommendation_goal_pb2___TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal] = None,
-                target_cpa_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-                required_campaign_budget_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-                impact : typing___Optional[global___Recommendation.RecommendationImpact] = None,
-                ) -> None: ...
+                goal: typing___Optional[
+                    google___ads___googleads___v1___enums___target_cpa_opt_in_recommendation_goal_pb2___TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
+                ] = None,
+                target_cpa_micros: typing___Optional[
+                    google___protobuf___wrappers_pb2___Int64Value
+                ] = None,
+                required_campaign_budget_amount_micros: typing___Optional[
+                    google___protobuf___wrappers_pb2___Int64Value
+                ] = None,
+                impact: typing___Optional[
+                    global___Recommendation.RecommendationImpact
+                ] = None,
+            ) -> None: ...
             if sys.version_info >= (3,):
                 @classmethod
-                def FromString(cls, s: builtin___bytes) -> Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption: ...
+                def FromString(
+                    cls, s: builtin___bytes
+                ) -> Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption: ...
             else:
                 @classmethod
-                def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption: ...
-            def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-            def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-            def HasField(self, field_name: typing_extensions___Literal[u"impact",b"impact",u"required_campaign_budget_amount_micros",b"required_campaign_budget_amount_micros",u"target_cpa_micros",b"target_cpa_micros"]) -> builtin___bool: ...
-            def ClearField(self, field_name: typing_extensions___Literal[u"goal",b"goal",u"impact",b"impact",u"required_campaign_budget_amount_micros",b"required_campaign_budget_amount_micros",u"target_cpa_micros",b"target_cpa_micros"]) -> None: ...
-        global___TargetCpaOptInRecommendationOption = TargetCpaOptInRecommendationOption
-
-
-        @property
-        def options(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[global___Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption]: ...
-
-        @property
-        def recommended_target_cpa_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-        def __init__(self,
-            *,
-            options : typing___Optional[typing___Iterable[global___Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption]] = None,
-            recommended_target_cpa_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
+                def FromString(
+                    cls,
+                    s: typing___Union[
+                        builtin___bytes, builtin___buffer, builtin___unicode
+                    ],
+                ) -> Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption: ...
+            def MergeFrom(
+                self, other_msg: google___protobuf___message___Message
             ) -> None: ...
+            def CopyFrom(
+                self, other_msg: google___protobuf___message___Message
+            ) -> None: ...
+            def HasField(
+                self,
+                field_name: typing_extensions___Literal[
+                    "impact",
+                    b"impact",
+                    "required_campaign_budget_amount_micros",
+                    b"required_campaign_budget_amount_micros",
+                    "target_cpa_micros",
+                    b"target_cpa_micros",
+                ],
+            ) -> builtin___bool: ...
+            def ClearField(
+                self,
+                field_name: typing_extensions___Literal[
+                    "goal",
+                    b"goal",
+                    "impact",
+                    b"impact",
+                    "required_campaign_budget_amount_micros",
+                    b"required_campaign_budget_amount_micros",
+                    "target_cpa_micros",
+                    b"target_cpa_micros",
+                ],
+            ) -> None: ...
+        global___TargetCpaOptInRecommendationOption = TargetCpaOptInRecommendationOption
+        @property
+        def options(
+            self
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            global___Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption
+        ]: ...
+        @property
+        def recommended_target_cpa_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        def __init__(
+            self,
+            *,
+            options: typing___Optional[
+                typing___Iterable[
+                    global___Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption
+                ]
+            ] = None,
+            recommended_target_cpa_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.TargetCpaOptInRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.TargetCpaOptInRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.TargetCpaOptInRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"recommended_target_cpa_micros",b"recommended_target_cpa_micros"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"options",b"options",u"recommended_target_cpa_micros",b"recommended_target_cpa_micros"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.TargetCpaOptInRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_target_cpa_micros", b"recommended_target_cpa_micros"
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "options",
+                b"options",
+                "recommended_target_cpa_micros",
+                b"recommended_target_cpa_micros",
+            ],
+        ) -> None: ...
     global___TargetCpaOptInRecommendation = TargetCpaOptInRecommendation
-
     class MaximizeClicksOptInRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
-        def recommended_budget_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-        def __init__(self,
+        def recommended_budget_amount_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        def __init__(
+            self,
             *,
-            recommended_budget_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            ) -> None: ...
+            recommended_budget_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.MaximizeClicksOptInRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.MaximizeClicksOptInRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.MaximizeClicksOptInRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"recommended_budget_amount_micros",b"recommended_budget_amount_micros"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"recommended_budget_amount_micros",b"recommended_budget_amount_micros"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.MaximizeClicksOptInRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> None: ...
     global___MaximizeClicksOptInRecommendation = MaximizeClicksOptInRecommendation
-
     class MaximizeConversionsOptInRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
-        def recommended_budget_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-        def __init__(self,
+        def recommended_budget_amount_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        def __init__(
+            self,
             *,
-            recommended_budget_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            ) -> None: ...
+            recommended_budget_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.MaximizeConversionsOptInRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.MaximizeConversionsOptInRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.MaximizeConversionsOptInRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"recommended_budget_amount_micros",b"recommended_budget_amount_micros"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"recommended_budget_amount_micros",b"recommended_budget_amount_micros"]) -> None: ...
-    global___MaximizeConversionsOptInRecommendation = MaximizeConversionsOptInRecommendation
-
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.MaximizeConversionsOptInRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> None: ...
+    global___MaximizeConversionsOptInRecommendation = (
+        MaximizeConversionsOptInRecommendation
+    )
     class MoveUnusedBudgetRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
-        def excess_campaign_budget(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+        def excess_campaign_budget(
+            self
+        ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
-        def budget_recommendation(self) -> global___Recommendation.CampaignBudgetRecommendation: ...
-
-        def __init__(self,
+        def budget_recommendation(
+            self
+        ) -> global___Recommendation.CampaignBudgetRecommendation: ...
+        def __init__(
+            self,
             *,
-            excess_campaign_budget : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            budget_recommendation : typing___Optional[global___Recommendation.CampaignBudgetRecommendation] = None,
-            ) -> None: ...
+            excess_campaign_budget: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            budget_recommendation: typing___Optional[
+                global___Recommendation.CampaignBudgetRecommendation
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.MoveUnusedBudgetRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.MoveUnusedBudgetRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.MoveUnusedBudgetRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"budget_recommendation",b"budget_recommendation",u"excess_campaign_budget",b"excess_campaign_budget"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"budget_recommendation",b"budget_recommendation",u"excess_campaign_budget",b"excess_campaign_budget"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.MoveUnusedBudgetRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "budget_recommendation",
+                b"budget_recommendation",
+                "excess_campaign_budget",
+                b"excess_campaign_budget",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "budget_recommendation",
+                b"budget_recommendation",
+                "excess_campaign_budget",
+                b"excess_campaign_budget",
+            ],
+        ) -> None: ...
     global___MoveUnusedBudgetRecommendation = MoveUnusedBudgetRecommendation
-
     class EnhancedCpcOptInRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
-        def __init__(self,
-            ) -> None: ...
+        def __init__(self,) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.EnhancedCpcOptInRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.EnhancedCpcOptInRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.EnhancedCpcOptInRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.EnhancedCpcOptInRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
     global___EnhancedCpcOptInRecommendation = EnhancedCpcOptInRecommendation
-
     class SearchPartnersOptInRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
-        def __init__(self,
-            ) -> None: ...
+        def __init__(self,) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.SearchPartnersOptInRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.SearchPartnersOptInRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.SearchPartnersOptInRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.SearchPartnersOptInRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
     global___SearchPartnersOptInRecommendation = SearchPartnersOptInRecommendation
-
     class OptimizeAdRotationRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
-        def __init__(self,
-            ) -> None: ...
+        def __init__(self,) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.OptimizeAdRotationRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.OptimizeAdRotationRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.OptimizeAdRotationRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.OptimizeAdRotationRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
     global___OptimizeAdRotationRecommendation = OptimizeAdRotationRecommendation
-
     class CalloutExtensionRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
-        def recommended_extensions(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___common___extensions_pb2___CalloutFeedItem]: ...
-
-        def __init__(self,
+        def recommended_extensions(
+            self
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___ads___googleads___v1___common___extensions_pb2___CalloutFeedItem
+        ]: ...
+        def __init__(
+            self,
             *,
-            recommended_extensions : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___extensions_pb2___CalloutFeedItem]] = None,
-            ) -> None: ...
+            recommended_extensions: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v1___common___extensions_pb2___CalloutFeedItem
+                ]
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.CalloutExtensionRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.CalloutExtensionRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.CalloutExtensionRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"recommended_extensions",b"recommended_extensions"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.CalloutExtensionRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_extensions", b"recommended_extensions"
+            ],
+        ) -> None: ...
     global___CalloutExtensionRecommendation = CalloutExtensionRecommendation
-
     class KeywordMatchTypeRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        recommended_match_type = ... # type: google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
-
+        recommended_match_type = (
+            ...
+        )  # type: google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
         @property
-        def keyword(self) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
-
-        def __init__(self,
+        def keyword(
+            self
+        ) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
+        def __init__(
+            self,
             *,
-            keyword : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___KeywordInfo] = None,
-            recommended_match_type : typing___Optional[google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType] = None,
-            ) -> None: ...
+            keyword: typing___Optional[
+                google___ads___googleads___v1___common___criteria_pb2___KeywordInfo
+            ] = None,
+            recommended_match_type: typing___Optional[
+                google___ads___googleads___v1___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.KeywordMatchTypeRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.KeywordMatchTypeRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.KeywordMatchTypeRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"keyword",b"keyword"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"keyword",b"keyword",u"recommended_match_type",b"recommended_match_type"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.KeywordMatchTypeRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self, field_name: typing_extensions___Literal["keyword", b"keyword"]
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "keyword",
+                b"keyword",
+                "recommended_match_type",
+                b"recommended_match_type",
+            ],
+        ) -> None: ...
     global___KeywordMatchTypeRecommendation = KeywordMatchTypeRecommendation
-
     class SitelinkExtensionRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
-        def recommended_extensions(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v1___common___extensions_pb2___SitelinkFeedItem]: ...
-
-        def __init__(self,
+        def recommended_extensions(
+            self
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___ads___googleads___v1___common___extensions_pb2___SitelinkFeedItem
+        ]: ...
+        def __init__(
+            self,
             *,
-            recommended_extensions : typing___Optional[typing___Iterable[google___ads___googleads___v1___common___extensions_pb2___SitelinkFeedItem]] = None,
-            ) -> None: ...
+            recommended_extensions: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v1___common___extensions_pb2___SitelinkFeedItem
+                ]
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Recommendation.SitelinkExtensionRecommendation: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.SitelinkExtensionRecommendation: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation.SitelinkExtensionRecommendation: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"recommended_extensions",b"recommended_extensions"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.SitelinkExtensionRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_extensions", b"recommended_extensions"
+            ],
+        ) -> None: ...
     global___SitelinkExtensionRecommendation = SitelinkExtensionRecommendation
 
-    resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v1___enums___recommendation_type_pb2___RecommendationTypeEnum.RecommendationType
-
+    resource_name = ...  # type: typing___Text
+    type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___recommendation_type_pb2___RecommendationTypeEnum.RecommendationType
     @property
     def impact(self) -> global___Recommendation.RecommendationImpact: ...
-
     @property
     def campaign_budget(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def dismissed(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
-
     @property
-    def campaign_budget_recommendation(self) -> global___Recommendation.CampaignBudgetRecommendation: ...
-
+    def campaign_budget_recommendation(
+        self
+    ) -> global___Recommendation.CampaignBudgetRecommendation: ...
     @property
-    def keyword_recommendation(self) -> global___Recommendation.KeywordRecommendation: ...
-
+    def keyword_recommendation(
+        self
+    ) -> global___Recommendation.KeywordRecommendation: ...
     @property
-    def text_ad_recommendation(self) -> global___Recommendation.TextAdRecommendation: ...
-
+    def text_ad_recommendation(
+        self
+    ) -> global___Recommendation.TextAdRecommendation: ...
     @property
-    def target_cpa_opt_in_recommendation(self) -> global___Recommendation.TargetCpaOptInRecommendation: ...
-
+    def target_cpa_opt_in_recommendation(
+        self
+    ) -> global___Recommendation.TargetCpaOptInRecommendation: ...
     @property
-    def maximize_conversions_opt_in_recommendation(self) -> global___Recommendation.MaximizeConversionsOptInRecommendation: ...
-
+    def maximize_conversions_opt_in_recommendation(
+        self
+    ) -> global___Recommendation.MaximizeConversionsOptInRecommendation: ...
     @property
-    def enhanced_cpc_opt_in_recommendation(self) -> global___Recommendation.EnhancedCpcOptInRecommendation: ...
-
+    def enhanced_cpc_opt_in_recommendation(
+        self
+    ) -> global___Recommendation.EnhancedCpcOptInRecommendation: ...
     @property
-    def search_partners_opt_in_recommendation(self) -> global___Recommendation.SearchPartnersOptInRecommendation: ...
-
+    def search_partners_opt_in_recommendation(
+        self
+    ) -> global___Recommendation.SearchPartnersOptInRecommendation: ...
     @property
-    def maximize_clicks_opt_in_recommendation(self) -> global___Recommendation.MaximizeClicksOptInRecommendation: ...
-
+    def maximize_clicks_opt_in_recommendation(
+        self
+    ) -> global___Recommendation.MaximizeClicksOptInRecommendation: ...
     @property
-    def optimize_ad_rotation_recommendation(self) -> global___Recommendation.OptimizeAdRotationRecommendation: ...
-
+    def optimize_ad_rotation_recommendation(
+        self
+    ) -> global___Recommendation.OptimizeAdRotationRecommendation: ...
     @property
-    def callout_extension_recommendation(self) -> global___Recommendation.CalloutExtensionRecommendation: ...
-
+    def callout_extension_recommendation(
+        self
+    ) -> global___Recommendation.CalloutExtensionRecommendation: ...
     @property
-    def sitelink_extension_recommendation(self) -> global___Recommendation.SitelinkExtensionRecommendation: ...
-
+    def sitelink_extension_recommendation(
+        self
+    ) -> global___Recommendation.SitelinkExtensionRecommendation: ...
     @property
-    def call_extension_recommendation(self) -> global___Recommendation.CallExtensionRecommendation: ...
-
+    def call_extension_recommendation(
+        self
+    ) -> global___Recommendation.CallExtensionRecommendation: ...
     @property
-    def keyword_match_type_recommendation(self) -> global___Recommendation.KeywordMatchTypeRecommendation: ...
-
+    def keyword_match_type_recommendation(
+        self
+    ) -> global___Recommendation.KeywordMatchTypeRecommendation: ...
     @property
-    def move_unused_budget_recommendation(self) -> global___Recommendation.MoveUnusedBudgetRecommendation: ...
-
-    def __init__(self,
+    def move_unused_budget_recommendation(
+        self
+    ) -> global___Recommendation.MoveUnusedBudgetRecommendation: ...
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___recommendation_type_pb2___RecommendationTypeEnum.RecommendationType] = None,
-        impact : typing___Optional[global___Recommendation.RecommendationImpact] = None,
-        campaign_budget : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        dismissed : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        campaign_budget_recommendation : typing___Optional[global___Recommendation.CampaignBudgetRecommendation] = None,
-        keyword_recommendation : typing___Optional[global___Recommendation.KeywordRecommendation] = None,
-        text_ad_recommendation : typing___Optional[global___Recommendation.TextAdRecommendation] = None,
-        target_cpa_opt_in_recommendation : typing___Optional[global___Recommendation.TargetCpaOptInRecommendation] = None,
-        maximize_conversions_opt_in_recommendation : typing___Optional[global___Recommendation.MaximizeConversionsOptInRecommendation] = None,
-        enhanced_cpc_opt_in_recommendation : typing___Optional[global___Recommendation.EnhancedCpcOptInRecommendation] = None,
-        search_partners_opt_in_recommendation : typing___Optional[global___Recommendation.SearchPartnersOptInRecommendation] = None,
-        maximize_clicks_opt_in_recommendation : typing___Optional[global___Recommendation.MaximizeClicksOptInRecommendation] = None,
-        optimize_ad_rotation_recommendation : typing___Optional[global___Recommendation.OptimizeAdRotationRecommendation] = None,
-        callout_extension_recommendation : typing___Optional[global___Recommendation.CalloutExtensionRecommendation] = None,
-        sitelink_extension_recommendation : typing___Optional[global___Recommendation.SitelinkExtensionRecommendation] = None,
-        call_extension_recommendation : typing___Optional[global___Recommendation.CallExtensionRecommendation] = None,
-        keyword_match_type_recommendation : typing___Optional[global___Recommendation.KeywordMatchTypeRecommendation] = None,
-        move_unused_budget_recommendation : typing___Optional[global___Recommendation.MoveUnusedBudgetRecommendation] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        type: typing___Optional[
+            google___ads___googleads___v1___enums___recommendation_type_pb2___RecommendationTypeEnum.RecommendationType
+        ] = None,
+        impact: typing___Optional[global___Recommendation.RecommendationImpact] = None,
+        campaign_budget: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        campaign: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        ad_group: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        dismissed: typing___Optional[
+            google___protobuf___wrappers_pb2___BoolValue
+        ] = None,
+        campaign_budget_recommendation: typing___Optional[
+            global___Recommendation.CampaignBudgetRecommendation
+        ] = None,
+        keyword_recommendation: typing___Optional[
+            global___Recommendation.KeywordRecommendation
+        ] = None,
+        text_ad_recommendation: typing___Optional[
+            global___Recommendation.TextAdRecommendation
+        ] = None,
+        target_cpa_opt_in_recommendation: typing___Optional[
+            global___Recommendation.TargetCpaOptInRecommendation
+        ] = None,
+        maximize_conversions_opt_in_recommendation: typing___Optional[
+            global___Recommendation.MaximizeConversionsOptInRecommendation
+        ] = None,
+        enhanced_cpc_opt_in_recommendation: typing___Optional[
+            global___Recommendation.EnhancedCpcOptInRecommendation
+        ] = None,
+        search_partners_opt_in_recommendation: typing___Optional[
+            global___Recommendation.SearchPartnersOptInRecommendation
+        ] = None,
+        maximize_clicks_opt_in_recommendation: typing___Optional[
+            global___Recommendation.MaximizeClicksOptInRecommendation
+        ] = None,
+        optimize_ad_rotation_recommendation: typing___Optional[
+            global___Recommendation.OptimizeAdRotationRecommendation
+        ] = None,
+        callout_extension_recommendation: typing___Optional[
+            global___Recommendation.CalloutExtensionRecommendation
+        ] = None,
+        sitelink_extension_recommendation: typing___Optional[
+            global___Recommendation.SitelinkExtensionRecommendation
+        ] = None,
+        call_extension_recommendation: typing___Optional[
+            global___Recommendation.CallExtensionRecommendation
+        ] = None,
+        keyword_match_type_recommendation: typing___Optional[
+            global___Recommendation.KeywordMatchTypeRecommendation
+        ] = None,
+        move_unused_budget_recommendation: typing___Optional[
+            global___Recommendation.MoveUnusedBudgetRecommendation
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> Recommendation: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Recommendation: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> Recommendation: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"call_extension_recommendation",b"call_extension_recommendation",u"callout_extension_recommendation",b"callout_extension_recommendation",u"campaign",b"campaign",u"campaign_budget",b"campaign_budget",u"campaign_budget_recommendation",b"campaign_budget_recommendation",u"dismissed",b"dismissed",u"enhanced_cpc_opt_in_recommendation",b"enhanced_cpc_opt_in_recommendation",u"impact",b"impact",u"keyword_match_type_recommendation",b"keyword_match_type_recommendation",u"keyword_recommendation",b"keyword_recommendation",u"maximize_clicks_opt_in_recommendation",b"maximize_clicks_opt_in_recommendation",u"maximize_conversions_opt_in_recommendation",b"maximize_conversions_opt_in_recommendation",u"move_unused_budget_recommendation",b"move_unused_budget_recommendation",u"optimize_ad_rotation_recommendation",b"optimize_ad_rotation_recommendation",u"recommendation",b"recommendation",u"search_partners_opt_in_recommendation",b"search_partners_opt_in_recommendation",u"sitelink_extension_recommendation",b"sitelink_extension_recommendation",u"target_cpa_opt_in_recommendation",b"target_cpa_opt_in_recommendation",u"text_ad_recommendation",b"text_ad_recommendation"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"call_extension_recommendation",b"call_extension_recommendation",u"callout_extension_recommendation",b"callout_extension_recommendation",u"campaign",b"campaign",u"campaign_budget",b"campaign_budget",u"campaign_budget_recommendation",b"campaign_budget_recommendation",u"dismissed",b"dismissed",u"enhanced_cpc_opt_in_recommendation",b"enhanced_cpc_opt_in_recommendation",u"impact",b"impact",u"keyword_match_type_recommendation",b"keyword_match_type_recommendation",u"keyword_recommendation",b"keyword_recommendation",u"maximize_clicks_opt_in_recommendation",b"maximize_clicks_opt_in_recommendation",u"maximize_conversions_opt_in_recommendation",b"maximize_conversions_opt_in_recommendation",u"move_unused_budget_recommendation",b"move_unused_budget_recommendation",u"optimize_ad_rotation_recommendation",b"optimize_ad_rotation_recommendation",u"recommendation",b"recommendation",u"resource_name",b"resource_name",u"search_partners_opt_in_recommendation",b"search_partners_opt_in_recommendation",u"sitelink_extension_recommendation",b"sitelink_extension_recommendation",u"target_cpa_opt_in_recommendation",b"target_cpa_opt_in_recommendation",u"text_ad_recommendation",b"text_ad_recommendation",u"type",b"type"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"recommendation",b"recommendation"]) -> typing_extensions___Literal["campaign_budget_recommendation","keyword_recommendation","text_ad_recommendation","target_cpa_opt_in_recommendation","maximize_conversions_opt_in_recommendation","enhanced_cpc_opt_in_recommendation","search_partners_opt_in_recommendation","maximize_clicks_opt_in_recommendation","optimize_ad_rotation_recommendation","callout_extension_recommendation","sitelink_extension_recommendation","call_extension_recommendation","keyword_match_type_recommendation","move_unused_budget_recommendation"]: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group",
+            b"ad_group",
+            "call_extension_recommendation",
+            b"call_extension_recommendation",
+            "callout_extension_recommendation",
+            b"callout_extension_recommendation",
+            "campaign",
+            b"campaign",
+            "campaign_budget",
+            b"campaign_budget",
+            "campaign_budget_recommendation",
+            b"campaign_budget_recommendation",
+            "dismissed",
+            b"dismissed",
+            "enhanced_cpc_opt_in_recommendation",
+            b"enhanced_cpc_opt_in_recommendation",
+            "impact",
+            b"impact",
+            "keyword_match_type_recommendation",
+            b"keyword_match_type_recommendation",
+            "keyword_recommendation",
+            b"keyword_recommendation",
+            "maximize_clicks_opt_in_recommendation",
+            b"maximize_clicks_opt_in_recommendation",
+            "maximize_conversions_opt_in_recommendation",
+            b"maximize_conversions_opt_in_recommendation",
+            "move_unused_budget_recommendation",
+            b"move_unused_budget_recommendation",
+            "optimize_ad_rotation_recommendation",
+            b"optimize_ad_rotation_recommendation",
+            "recommendation",
+            b"recommendation",
+            "search_partners_opt_in_recommendation",
+            b"search_partners_opt_in_recommendation",
+            "sitelink_extension_recommendation",
+            b"sitelink_extension_recommendation",
+            "target_cpa_opt_in_recommendation",
+            b"target_cpa_opt_in_recommendation",
+            "text_ad_recommendation",
+            b"text_ad_recommendation",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group",
+            b"ad_group",
+            "call_extension_recommendation",
+            b"call_extension_recommendation",
+            "callout_extension_recommendation",
+            b"callout_extension_recommendation",
+            "campaign",
+            b"campaign",
+            "campaign_budget",
+            b"campaign_budget",
+            "campaign_budget_recommendation",
+            b"campaign_budget_recommendation",
+            "dismissed",
+            b"dismissed",
+            "enhanced_cpc_opt_in_recommendation",
+            b"enhanced_cpc_opt_in_recommendation",
+            "impact",
+            b"impact",
+            "keyword_match_type_recommendation",
+            b"keyword_match_type_recommendation",
+            "keyword_recommendation",
+            b"keyword_recommendation",
+            "maximize_clicks_opt_in_recommendation",
+            b"maximize_clicks_opt_in_recommendation",
+            "maximize_conversions_opt_in_recommendation",
+            b"maximize_conversions_opt_in_recommendation",
+            "move_unused_budget_recommendation",
+            b"move_unused_budget_recommendation",
+            "optimize_ad_rotation_recommendation",
+            b"optimize_ad_rotation_recommendation",
+            "recommendation",
+            b"recommendation",
+            "resource_name",
+            b"resource_name",
+            "search_partners_opt_in_recommendation",
+            b"search_partners_opt_in_recommendation",
+            "sitelink_extension_recommendation",
+            b"sitelink_extension_recommendation",
+            "target_cpa_opt_in_recommendation",
+            b"target_cpa_opt_in_recommendation",
+            "text_ad_recommendation",
+            b"text_ad_recommendation",
+            "type",
+            b"type",
+        ],
+    ) -> None: ...
+    def WhichOneof(
+        self,
+        oneof_group: typing_extensions___Literal["recommendation", b"recommendation"],
+    ) -> typing_extensions___Literal[
+        "campaign_budget_recommendation",
+        "keyword_recommendation",
+        "text_ad_recommendation",
+        "target_cpa_opt_in_recommendation",
+        "maximize_conversions_opt_in_recommendation",
+        "enhanced_cpc_opt_in_recommendation",
+        "search_partners_opt_in_recommendation",
+        "maximize_clicks_opt_in_recommendation",
+        "optimize_ad_rotation_recommendation",
+        "callout_extension_recommendation",
+        "sitelink_extension_recommendation",
+        "call_extension_recommendation",
+        "keyword_match_type_recommendation",
+        "move_unused_budget_recommendation",
+    ]: ...
+
 global___Recommendation = Recommendation

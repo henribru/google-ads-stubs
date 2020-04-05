@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class ReachPlanErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,28 +28,32 @@ class ReachPlanErrorEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'ReachPlanErrorEnum.ReachPlanError': ...
+        def Value(cls, name: builtin___str) -> "ReachPlanErrorEnum.ReachPlanError": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['ReachPlanErrorEnum.ReachPlanError']: ...
+        def values(cls) -> typing___List["ReachPlanErrorEnum.ReachPlanError"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'ReachPlanErrorEnum.ReachPlanError']]: ...
-        UNSPECIFIED = typing___cast('ReachPlanErrorEnum.ReachPlanError', 0)
-        UNKNOWN = typing___cast('ReachPlanErrorEnum.ReachPlanError', 1)
-    UNSPECIFIED = typing___cast('ReachPlanErrorEnum.ReachPlanError', 0)
-    UNKNOWN = typing___cast('ReachPlanErrorEnum.ReachPlanError', 1)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[builtin___str, "ReachPlanErrorEnum.ReachPlanError"]
+        ]: ...
+        UNSPECIFIED = typing___cast("ReachPlanErrorEnum.ReachPlanError", 0)
+        UNKNOWN = typing___cast("ReachPlanErrorEnum.ReachPlanError", 1)
+    UNSPECIFIED = typing___cast("ReachPlanErrorEnum.ReachPlanError", 0)
+    UNKNOWN = typing___cast("ReachPlanErrorEnum.ReachPlanError", 1)
     global___ReachPlanError = ReachPlanError
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> ReachPlanErrorEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ReachPlanErrorEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> ReachPlanErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___ReachPlanErrorEnum = ReachPlanErrorEnum

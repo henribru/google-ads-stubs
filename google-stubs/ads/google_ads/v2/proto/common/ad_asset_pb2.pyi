@@ -8,23 +8,15 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     StringValue as google___protobuf___wrappers_pb2___StringValue,
 )
 
-from typing import (
-    Optional as typing___Optional,
-    Union as typing___Union,
-)
+from typing import Optional as typing___Optional, Union as typing___Union
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -34,93 +26,123 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class AdTextAsset(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    pinned_field = ... # type: google___ads___googleads___v2___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum.ServedAssetFieldType
-
+    pinned_field = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum.ServedAssetFieldType
     @property
     def text(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        text : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        pinned_field : typing___Optional[google___ads___googleads___v2___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum.ServedAssetFieldType] = None,
-        ) -> None: ...
+        text: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        pinned_field: typing___Optional[
+            google___ads___googleads___v2___enums___served_asset_field_type_pb2___ServedAssetFieldTypeEnum.ServedAssetFieldType
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AdTextAsset: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdTextAsset: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdTextAsset: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"text",b"text"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"pinned_field",b"pinned_field",u"text",b"text"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["text", b"text"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "pinned_field", b"pinned_field", "text", b"text"
+        ],
+    ) -> None: ...
+
 global___AdTextAsset = AdTextAsset
 
 class AdImageAsset(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def asset(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        asset : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ) -> None: ...
+        asset: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AdImageAsset: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdImageAsset: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdImageAsset: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"asset",b"asset"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"asset",b"asset"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["asset", b"asset"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["asset", b"asset"]
+    ) -> None: ...
+
 global___AdImageAsset = AdImageAsset
 
 class AdVideoAsset(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def asset(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        asset : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ) -> None: ...
+        asset: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AdVideoAsset: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdVideoAsset: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdVideoAsset: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"asset",b"asset"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"asset",b"asset"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["asset", b"asset"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["asset", b"asset"]
+    ) -> None: ...
+
 global___AdVideoAsset = AdVideoAsset
 
 class AdMediaBundleAsset(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def asset(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        asset : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ) -> None: ...
+        asset: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AdMediaBundleAsset: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdMediaBundleAsset: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdMediaBundleAsset: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"asset",b"asset"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"asset",b"asset"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["asset", b"asset"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["asset", b"asset"]
+    ) -> None: ...
+
 global___AdMediaBundleAsset = AdMediaBundleAsset

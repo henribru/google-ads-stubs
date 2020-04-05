@@ -8,9 +8,7 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     StringValue as google___protobuf___wrappers_pb2___StringValue,
@@ -22,10 +20,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -35,37 +30,73 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class UrlCollection(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def url_collection_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def final_urls(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def final_urls(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
-    def final_mobile_urls(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def final_mobile_urls(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
-    def tracking_url_template(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-    def __init__(self,
+    def tracking_url_template(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
+    def __init__(
+        self,
         *,
-        url_collection_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        final_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        final_mobile_urls : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        tracking_url_template : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ) -> None: ...
+        url_collection_id: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        final_urls: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        final_mobile_urls: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        tracking_url_template: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> UrlCollection: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> UrlCollection: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> UrlCollection: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"tracking_url_template",b"tracking_url_template",u"url_collection_id",b"url_collection_id"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"final_mobile_urls",b"final_mobile_urls",u"final_urls",b"final_urls",u"tracking_url_template",b"tracking_url_template",u"url_collection_id",b"url_collection_id"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "tracking_url_template",
+            b"tracking_url_template",
+            "url_collection_id",
+            b"url_collection_id",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "final_mobile_urls",
+            b"final_mobile_urls",
+            "final_urls",
+            b"final_urls",
+            "tracking_url_template",
+            b"tracking_url_template",
+            "url_collection_id",
+            b"url_collection_id",
+        ],
+    ) -> None: ...
+
 global___UrlCollection = UrlCollection

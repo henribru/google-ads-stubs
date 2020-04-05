@@ -587,13 +587,9 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
-from google.rpc.status_pb2 import (
-    Status as google___rpc___status_pb2___Status,
-)
+from google.rpc.status_pb2 import Status as google___rpc___status_pb2___Status
 
 from typing import (
     Iterable as typing___Iterable,
@@ -602,10 +598,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -615,861 +608,2274 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class SearchGoogleAdsRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    customer_id = ... # type: typing___Text
-    query = ... # type: typing___Text
-    page_token = ... # type: typing___Text
-    page_size = ... # type: builtin___int
-    validate_only = ... # type: builtin___bool
-
-    def __init__(self,
+    customer_id = ...  # type: typing___Text
+    query = ...  # type: typing___Text
+    page_token = ...  # type: typing___Text
+    page_size = ...  # type: builtin___int
+    validate_only = ...  # type: builtin___bool
+    def __init__(
+        self,
         *,
-        customer_id : typing___Optional[typing___Text] = None,
-        query : typing___Optional[typing___Text] = None,
-        page_token : typing___Optional[typing___Text] = None,
-        page_size : typing___Optional[builtin___int] = None,
-        validate_only : typing___Optional[builtin___bool] = None,
-        ) -> None: ...
+        customer_id: typing___Optional[typing___Text] = None,
+        query: typing___Optional[typing___Text] = None,
+        page_token: typing___Optional[typing___Text] = None,
+        page_size: typing___Optional[builtin___int] = None,
+        validate_only: typing___Optional[builtin___bool] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> SearchGoogleAdsRequest: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SearchGoogleAdsRequest: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> SearchGoogleAdsRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"page_size",b"page_size",u"page_token",b"page_token",u"query",b"query",u"validate_only",b"validate_only"]) -> None: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "customer_id",
+            b"customer_id",
+            "page_size",
+            b"page_size",
+            "page_token",
+            b"page_token",
+            "query",
+            b"query",
+            "validate_only",
+            b"validate_only",
+        ],
+    ) -> None: ...
+
 global___SearchGoogleAdsRequest = SearchGoogleAdsRequest
 
 class SearchGoogleAdsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    next_page_token = ... # type: typing___Text
-    total_results_count = ... # type: builtin___int
-
+    next_page_token = ...  # type: typing___Text
+    total_results_count = ...  # type: builtin___int
     @property
-    def results(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[global___GoogleAdsRow]: ...
-
+    def results(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        global___GoogleAdsRow
+    ]: ...
     @property
     def field_mask(self) -> google___protobuf___field_mask_pb2___FieldMask: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        results : typing___Optional[typing___Iterable[global___GoogleAdsRow]] = None,
-        next_page_token : typing___Optional[typing___Text] = None,
-        total_results_count : typing___Optional[builtin___int] = None,
-        field_mask : typing___Optional[google___protobuf___field_mask_pb2___FieldMask] = None,
-        ) -> None: ...
+        results: typing___Optional[typing___Iterable[global___GoogleAdsRow]] = None,
+        next_page_token: typing___Optional[typing___Text] = None,
+        total_results_count: typing___Optional[builtin___int] = None,
+        field_mask: typing___Optional[
+            google___protobuf___field_mask_pb2___FieldMask
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> SearchGoogleAdsResponse: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SearchGoogleAdsResponse: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> SearchGoogleAdsResponse: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"field_mask",b"field_mask"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"field_mask",b"field_mask",u"next_page_token",b"next_page_token",u"results",b"results",u"total_results_count",b"total_results_count"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["field_mask", b"field_mask"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "field_mask",
+            b"field_mask",
+            "next_page_token",
+            b"next_page_token",
+            "results",
+            b"results",
+            "total_results_count",
+            b"total_results_count",
+        ],
+    ) -> None: ...
+
 global___SearchGoogleAdsResponse = SearchGoogleAdsResponse
 
 class GoogleAdsRow(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
-    def account_budget(self) -> google___ads___googleads___v1___resources___account_budget_pb2___AccountBudget: ...
-
+    def account_budget(
+        self
+    ) -> google___ads___googleads___v1___resources___account_budget_pb2___AccountBudget: ...
     @property
-    def account_budget_proposal(self) -> google___ads___googleads___v1___resources___account_budget_proposal_pb2___AccountBudgetProposal: ...
-
+    def account_budget_proposal(
+        self
+    ) -> google___ads___googleads___v1___resources___account_budget_proposal_pb2___AccountBudgetProposal: ...
     @property
-    def ad_group(self) -> google___ads___googleads___v1___resources___ad_group_pb2___AdGroup: ...
-
+    def ad_group(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_pb2___AdGroup: ...
     @property
-    def ad_group_ad(self) -> google___ads___googleads___v1___resources___ad_group_ad_pb2___AdGroupAd: ...
-
+    def ad_group_ad(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_ad_pb2___AdGroupAd: ...
     @property
-    def ad_group_ad_label(self) -> google___ads___googleads___v1___resources___ad_group_ad_label_pb2___AdGroupAdLabel: ...
-
+    def ad_group_ad_label(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_ad_label_pb2___AdGroupAdLabel: ...
     @property
-    def ad_group_audience_view(self) -> google___ads___googleads___v1___resources___ad_group_audience_view_pb2___AdGroupAudienceView: ...
-
+    def ad_group_audience_view(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_audience_view_pb2___AdGroupAudienceView: ...
     @property
-    def ad_group_bid_modifier(self) -> google___ads___googleads___v1___resources___ad_group_bid_modifier_pb2___AdGroupBidModifier: ...
-
+    def ad_group_bid_modifier(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_bid_modifier_pb2___AdGroupBidModifier: ...
     @property
-    def ad_group_criterion(self) -> google___ads___googleads___v1___resources___ad_group_criterion_pb2___AdGroupCriterion: ...
-
+    def ad_group_criterion(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_criterion_pb2___AdGroupCriterion: ...
     @property
-    def ad_group_criterion_label(self) -> google___ads___googleads___v1___resources___ad_group_criterion_label_pb2___AdGroupCriterionLabel: ...
-
+    def ad_group_criterion_label(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_criterion_label_pb2___AdGroupCriterionLabel: ...
     @property
-    def ad_group_criterion_simulation(self) -> google___ads___googleads___v1___resources___ad_group_criterion_simulation_pb2___AdGroupCriterionSimulation: ...
-
+    def ad_group_criterion_simulation(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_criterion_simulation_pb2___AdGroupCriterionSimulation: ...
     @property
-    def ad_group_extension_setting(self) -> google___ads___googleads___v1___resources___ad_group_extension_setting_pb2___AdGroupExtensionSetting: ...
-
+    def ad_group_extension_setting(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_extension_setting_pb2___AdGroupExtensionSetting: ...
     @property
-    def ad_group_feed(self) -> google___ads___googleads___v1___resources___ad_group_feed_pb2___AdGroupFeed: ...
-
+    def ad_group_feed(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_feed_pb2___AdGroupFeed: ...
     @property
-    def ad_group_label(self) -> google___ads___googleads___v1___resources___ad_group_label_pb2___AdGroupLabel: ...
-
+    def ad_group_label(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_label_pb2___AdGroupLabel: ...
     @property
-    def ad_group_simulation(self) -> google___ads___googleads___v1___resources___ad_group_simulation_pb2___AdGroupSimulation: ...
-
+    def ad_group_simulation(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_group_simulation_pb2___AdGroupSimulation: ...
     @property
-    def ad_parameter(self) -> google___ads___googleads___v1___resources___ad_parameter_pb2___AdParameter: ...
-
+    def ad_parameter(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_parameter_pb2___AdParameter: ...
     @property
-    def age_range_view(self) -> google___ads___googleads___v1___resources___age_range_view_pb2___AgeRangeView: ...
-
+    def age_range_view(
+        self
+    ) -> google___ads___googleads___v1___resources___age_range_view_pb2___AgeRangeView: ...
     @property
-    def ad_schedule_view(self) -> google___ads___googleads___v1___resources___ad_schedule_view_pb2___AdScheduleView: ...
-
+    def ad_schedule_view(
+        self
+    ) -> google___ads___googleads___v1___resources___ad_schedule_view_pb2___AdScheduleView: ...
     @property
-    def domain_category(self) -> google___ads___googleads___v1___resources___domain_category_pb2___DomainCategory: ...
-
+    def domain_category(
+        self
+    ) -> google___ads___googleads___v1___resources___domain_category_pb2___DomainCategory: ...
     @property
-    def asset(self) -> google___ads___googleads___v1___resources___asset_pb2___Asset: ...
-
+    def asset(
+        self
+    ) -> google___ads___googleads___v1___resources___asset_pb2___Asset: ...
     @property
-    def bidding_strategy(self) -> google___ads___googleads___v1___resources___bidding_strategy_pb2___BiddingStrategy: ...
-
+    def bidding_strategy(
+        self
+    ) -> google___ads___googleads___v1___resources___bidding_strategy_pb2___BiddingStrategy: ...
     @property
-    def billing_setup(self) -> google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup: ...
-
+    def billing_setup(
+        self
+    ) -> google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup: ...
     @property
-    def campaign_budget(self) -> google___ads___googleads___v1___resources___campaign_budget_pb2___CampaignBudget: ...
-
+    def campaign_budget(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_budget_pb2___CampaignBudget: ...
     @property
-    def campaign(self) -> google___ads___googleads___v1___resources___campaign_pb2___Campaign: ...
-
+    def campaign(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_pb2___Campaign: ...
     @property
-    def campaign_audience_view(self) -> google___ads___googleads___v1___resources___campaign_audience_view_pb2___CampaignAudienceView: ...
-
+    def campaign_audience_view(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_audience_view_pb2___CampaignAudienceView: ...
     @property
-    def campaign_bid_modifier(self) -> google___ads___googleads___v1___resources___campaign_bid_modifier_pb2___CampaignBidModifier: ...
-
+    def campaign_bid_modifier(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_bid_modifier_pb2___CampaignBidModifier: ...
     @property
-    def campaign_criterion(self) -> google___ads___googleads___v1___resources___campaign_criterion_pb2___CampaignCriterion: ...
-
+    def campaign_criterion(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_criterion_pb2___CampaignCriterion: ...
     @property
-    def campaign_criterion_simulation(self) -> google___ads___googleads___v1___resources___campaign_criterion_simulation_pb2___CampaignCriterionSimulation: ...
-
+    def campaign_criterion_simulation(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_criterion_simulation_pb2___CampaignCriterionSimulation: ...
     @property
-    def campaign_draft(self) -> google___ads___googleads___v1___resources___campaign_draft_pb2___CampaignDraft: ...
-
+    def campaign_draft(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_draft_pb2___CampaignDraft: ...
     @property
-    def campaign_experiment(self) -> google___ads___googleads___v1___resources___campaign_experiment_pb2___CampaignExperiment: ...
-
+    def campaign_experiment(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_experiment_pb2___CampaignExperiment: ...
     @property
-    def campaign_extension_setting(self) -> google___ads___googleads___v1___resources___campaign_extension_setting_pb2___CampaignExtensionSetting: ...
-
+    def campaign_extension_setting(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_extension_setting_pb2___CampaignExtensionSetting: ...
     @property
-    def campaign_feed(self) -> google___ads___googleads___v1___resources___campaign_feed_pb2___CampaignFeed: ...
-
+    def campaign_feed(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_feed_pb2___CampaignFeed: ...
     @property
-    def campaign_label(self) -> google___ads___googleads___v1___resources___campaign_label_pb2___CampaignLabel: ...
-
+    def campaign_label(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_label_pb2___CampaignLabel: ...
     @property
-    def campaign_shared_set(self) -> google___ads___googleads___v1___resources___campaign_shared_set_pb2___CampaignSharedSet: ...
-
+    def campaign_shared_set(
+        self
+    ) -> google___ads___googleads___v1___resources___campaign_shared_set_pb2___CampaignSharedSet: ...
     @property
-    def carrier_constant(self) -> google___ads___googleads___v1___resources___carrier_constant_pb2___CarrierConstant: ...
-
+    def carrier_constant(
+        self
+    ) -> google___ads___googleads___v1___resources___carrier_constant_pb2___CarrierConstant: ...
     @property
-    def change_status(self) -> google___ads___googleads___v1___resources___change_status_pb2___ChangeStatus: ...
-
+    def change_status(
+        self
+    ) -> google___ads___googleads___v1___resources___change_status_pb2___ChangeStatus: ...
     @property
-    def conversion_action(self) -> google___ads___googleads___v1___resources___conversion_action_pb2___ConversionAction: ...
-
+    def conversion_action(
+        self
+    ) -> google___ads___googleads___v1___resources___conversion_action_pb2___ConversionAction: ...
     @property
-    def click_view(self) -> google___ads___googleads___v1___resources___click_view_pb2___ClickView: ...
-
+    def click_view(
+        self
+    ) -> google___ads___googleads___v1___resources___click_view_pb2___ClickView: ...
     @property
-    def custom_interest(self) -> google___ads___googleads___v1___resources___custom_interest_pb2___CustomInterest: ...
-
+    def custom_interest(
+        self
+    ) -> google___ads___googleads___v1___resources___custom_interest_pb2___CustomInterest: ...
     @property
-    def customer(self) -> google___ads___googleads___v1___resources___customer_pb2___Customer: ...
-
+    def customer(
+        self
+    ) -> google___ads___googleads___v1___resources___customer_pb2___Customer: ...
     @property
-    def customer_manager_link(self) -> google___ads___googleads___v1___resources___customer_manager_link_pb2___CustomerManagerLink: ...
-
+    def customer_manager_link(
+        self
+    ) -> google___ads___googleads___v1___resources___customer_manager_link_pb2___CustomerManagerLink: ...
     @property
-    def customer_client_link(self) -> google___ads___googleads___v1___resources___customer_client_link_pb2___CustomerClientLink: ...
-
+    def customer_client_link(
+        self
+    ) -> google___ads___googleads___v1___resources___customer_client_link_pb2___CustomerClientLink: ...
     @property
-    def customer_client(self) -> google___ads___googleads___v1___resources___customer_client_pb2___CustomerClient: ...
-
+    def customer_client(
+        self
+    ) -> google___ads___googleads___v1___resources___customer_client_pb2___CustomerClient: ...
     @property
-    def customer_extension_setting(self) -> google___ads___googleads___v1___resources___customer_extension_setting_pb2___CustomerExtensionSetting: ...
-
+    def customer_extension_setting(
+        self
+    ) -> google___ads___googleads___v1___resources___customer_extension_setting_pb2___CustomerExtensionSetting: ...
     @property
-    def customer_feed(self) -> google___ads___googleads___v1___resources___customer_feed_pb2___CustomerFeed: ...
-
+    def customer_feed(
+        self
+    ) -> google___ads___googleads___v1___resources___customer_feed_pb2___CustomerFeed: ...
     @property
-    def customer_label(self) -> google___ads___googleads___v1___resources___customer_label_pb2___CustomerLabel: ...
-
+    def customer_label(
+        self
+    ) -> google___ads___googleads___v1___resources___customer_label_pb2___CustomerLabel: ...
     @property
-    def customer_negative_criterion(self) -> google___ads___googleads___v1___resources___customer_negative_criterion_pb2___CustomerNegativeCriterion: ...
-
+    def customer_negative_criterion(
+        self
+    ) -> google___ads___googleads___v1___resources___customer_negative_criterion_pb2___CustomerNegativeCriterion: ...
     @property
-    def detail_placement_view(self) -> google___ads___googleads___v1___resources___detail_placement_view_pb2___DetailPlacementView: ...
-
+    def detail_placement_view(
+        self
+    ) -> google___ads___googleads___v1___resources___detail_placement_view_pb2___DetailPlacementView: ...
     @property
-    def display_keyword_view(self) -> google___ads___googleads___v1___resources___display_keyword_view_pb2___DisplayKeywordView: ...
-
+    def display_keyword_view(
+        self
+    ) -> google___ads___googleads___v1___resources___display_keyword_view_pb2___DisplayKeywordView: ...
     @property
-    def dynamic_search_ads_search_term_view(self) -> google___ads___googleads___v1___resources___dynamic_search_ads_search_term_view_pb2___DynamicSearchAdsSearchTermView: ...
-
+    def dynamic_search_ads_search_term_view(
+        self
+    ) -> google___ads___googleads___v1___resources___dynamic_search_ads_search_term_view_pb2___DynamicSearchAdsSearchTermView: ...
     @property
-    def expanded_landing_page_view(self) -> google___ads___googleads___v1___resources___expanded_landing_page_view_pb2___ExpandedLandingPageView: ...
-
+    def expanded_landing_page_view(
+        self
+    ) -> google___ads___googleads___v1___resources___expanded_landing_page_view_pb2___ExpandedLandingPageView: ...
     @property
-    def extension_feed_item(self) -> google___ads___googleads___v1___resources___extension_feed_item_pb2___ExtensionFeedItem: ...
-
+    def extension_feed_item(
+        self
+    ) -> google___ads___googleads___v1___resources___extension_feed_item_pb2___ExtensionFeedItem: ...
     @property
     def feed(self) -> google___ads___googleads___v1___resources___feed_pb2___Feed: ...
-
     @property
-    def feed_item(self) -> google___ads___googleads___v1___resources___feed_item_pb2___FeedItem: ...
-
+    def feed_item(
+        self
+    ) -> google___ads___googleads___v1___resources___feed_item_pb2___FeedItem: ...
     @property
-    def feed_item_target(self) -> google___ads___googleads___v1___resources___feed_item_target_pb2___FeedItemTarget: ...
-
+    def feed_item_target(
+        self
+    ) -> google___ads___googleads___v1___resources___feed_item_target_pb2___FeedItemTarget: ...
     @property
-    def feed_mapping(self) -> google___ads___googleads___v1___resources___feed_mapping_pb2___FeedMapping: ...
-
+    def feed_mapping(
+        self
+    ) -> google___ads___googleads___v1___resources___feed_mapping_pb2___FeedMapping: ...
     @property
-    def feed_placeholder_view(self) -> google___ads___googleads___v1___resources___feed_placeholder_view_pb2___FeedPlaceholderView: ...
-
+    def feed_placeholder_view(
+        self
+    ) -> google___ads___googleads___v1___resources___feed_placeholder_view_pb2___FeedPlaceholderView: ...
     @property
-    def gender_view(self) -> google___ads___googleads___v1___resources___gender_view_pb2___GenderView: ...
-
+    def gender_view(
+        self
+    ) -> google___ads___googleads___v1___resources___gender_view_pb2___GenderView: ...
     @property
-    def geo_target_constant(self) -> google___ads___googleads___v1___resources___geo_target_constant_pb2___GeoTargetConstant: ...
-
+    def geo_target_constant(
+        self
+    ) -> google___ads___googleads___v1___resources___geo_target_constant_pb2___GeoTargetConstant: ...
     @property
-    def geographic_view(self) -> google___ads___googleads___v1___resources___geographic_view_pb2___GeographicView: ...
-
+    def geographic_view(
+        self
+    ) -> google___ads___googleads___v1___resources___geographic_view_pb2___GeographicView: ...
     @property
-    def group_placement_view(self) -> google___ads___googleads___v1___resources___group_placement_view_pb2___GroupPlacementView: ...
-
+    def group_placement_view(
+        self
+    ) -> google___ads___googleads___v1___resources___group_placement_view_pb2___GroupPlacementView: ...
     @property
-    def hotel_group_view(self) -> google___ads___googleads___v1___resources___hotel_group_view_pb2___HotelGroupView: ...
-
+    def hotel_group_view(
+        self
+    ) -> google___ads___googleads___v1___resources___hotel_group_view_pb2___HotelGroupView: ...
     @property
-    def hotel_performance_view(self) -> google___ads___googleads___v1___resources___hotel_performance_view_pb2___HotelPerformanceView: ...
-
+    def hotel_performance_view(
+        self
+    ) -> google___ads___googleads___v1___resources___hotel_performance_view_pb2___HotelPerformanceView: ...
     @property
-    def keyword_view(self) -> google___ads___googleads___v1___resources___keyword_view_pb2___KeywordView: ...
-
+    def keyword_view(
+        self
+    ) -> google___ads___googleads___v1___resources___keyword_view_pb2___KeywordView: ...
     @property
-    def keyword_plan(self) -> google___ads___googleads___v1___resources___keyword_plan_pb2___KeywordPlan: ...
-
+    def keyword_plan(
+        self
+    ) -> google___ads___googleads___v1___resources___keyword_plan_pb2___KeywordPlan: ...
     @property
-    def keyword_plan_campaign(self) -> google___ads___googleads___v1___resources___keyword_plan_campaign_pb2___KeywordPlanCampaign: ...
-
+    def keyword_plan_campaign(
+        self
+    ) -> google___ads___googleads___v1___resources___keyword_plan_campaign_pb2___KeywordPlanCampaign: ...
     @property
-    def keyword_plan_negative_keyword(self) -> google___ads___googleads___v1___resources___keyword_plan_negative_keyword_pb2___KeywordPlanNegativeKeyword: ...
-
+    def keyword_plan_negative_keyword(
+        self
+    ) -> google___ads___googleads___v1___resources___keyword_plan_negative_keyword_pb2___KeywordPlanNegativeKeyword: ...
     @property
-    def keyword_plan_ad_group(self) -> google___ads___googleads___v1___resources___keyword_plan_ad_group_pb2___KeywordPlanAdGroup: ...
-
+    def keyword_plan_ad_group(
+        self
+    ) -> google___ads___googleads___v1___resources___keyword_plan_ad_group_pb2___KeywordPlanAdGroup: ...
     @property
-    def keyword_plan_keyword(self) -> google___ads___googleads___v1___resources___keyword_plan_keyword_pb2___KeywordPlanKeyword: ...
-
+    def keyword_plan_keyword(
+        self
+    ) -> google___ads___googleads___v1___resources___keyword_plan_keyword_pb2___KeywordPlanKeyword: ...
     @property
-    def label(self) -> google___ads___googleads___v1___resources___label_pb2___Label: ...
-
+    def label(
+        self
+    ) -> google___ads___googleads___v1___resources___label_pb2___Label: ...
     @property
-    def landing_page_view(self) -> google___ads___googleads___v1___resources___landing_page_view_pb2___LandingPageView: ...
-
+    def landing_page_view(
+        self
+    ) -> google___ads___googleads___v1___resources___landing_page_view_pb2___LandingPageView: ...
     @property
-    def language_constant(self) -> google___ads___googleads___v1___resources___language_constant_pb2___LanguageConstant: ...
-
+    def language_constant(
+        self
+    ) -> google___ads___googleads___v1___resources___language_constant_pb2___LanguageConstant: ...
     @property
-    def location_view(self) -> google___ads___googleads___v1___resources___location_view_pb2___LocationView: ...
-
+    def location_view(
+        self
+    ) -> google___ads___googleads___v1___resources___location_view_pb2___LocationView: ...
     @property
-    def managed_placement_view(self) -> google___ads___googleads___v1___resources___managed_placement_view_pb2___ManagedPlacementView: ...
-
+    def managed_placement_view(
+        self
+    ) -> google___ads___googleads___v1___resources___managed_placement_view_pb2___ManagedPlacementView: ...
     @property
-    def media_file(self) -> google___ads___googleads___v1___resources___media_file_pb2___MediaFile: ...
-
+    def media_file(
+        self
+    ) -> google___ads___googleads___v1___resources___media_file_pb2___MediaFile: ...
     @property
-    def mobile_app_category_constant(self) -> google___ads___googleads___v1___resources___mobile_app_category_constant_pb2___MobileAppCategoryConstant: ...
-
+    def mobile_app_category_constant(
+        self
+    ) -> google___ads___googleads___v1___resources___mobile_app_category_constant_pb2___MobileAppCategoryConstant: ...
     @property
-    def mobile_device_constant(self) -> google___ads___googleads___v1___resources___mobile_device_constant_pb2___MobileDeviceConstant: ...
-
+    def mobile_device_constant(
+        self
+    ) -> google___ads___googleads___v1___resources___mobile_device_constant_pb2___MobileDeviceConstant: ...
     @property
-    def mutate_job(self) -> google___ads___googleads___v1___resources___mutate_job_pb2___MutateJob: ...
-
+    def mutate_job(
+        self
+    ) -> google___ads___googleads___v1___resources___mutate_job_pb2___MutateJob: ...
     @property
-    def operating_system_version_constant(self) -> google___ads___googleads___v1___resources___operating_system_version_constant_pb2___OperatingSystemVersionConstant: ...
-
+    def operating_system_version_constant(
+        self
+    ) -> google___ads___googleads___v1___resources___operating_system_version_constant_pb2___OperatingSystemVersionConstant: ...
     @property
-    def paid_organic_search_term_view(self) -> google___ads___googleads___v1___resources___paid_organic_search_term_view_pb2___PaidOrganicSearchTermView: ...
-
+    def paid_organic_search_term_view(
+        self
+    ) -> google___ads___googleads___v1___resources___paid_organic_search_term_view_pb2___PaidOrganicSearchTermView: ...
     @property
-    def parental_status_view(self) -> google___ads___googleads___v1___resources___parental_status_view_pb2___ParentalStatusView: ...
-
+    def parental_status_view(
+        self
+    ) -> google___ads___googleads___v1___resources___parental_status_view_pb2___ParentalStatusView: ...
     @property
-    def product_bidding_category_constant(self) -> google___ads___googleads___v1___resources___product_bidding_category_constant_pb2___ProductBiddingCategoryConstant: ...
-
+    def product_bidding_category_constant(
+        self
+    ) -> google___ads___googleads___v1___resources___product_bidding_category_constant_pb2___ProductBiddingCategoryConstant: ...
     @property
-    def product_group_view(self) -> google___ads___googleads___v1___resources___product_group_view_pb2___ProductGroupView: ...
-
+    def product_group_view(
+        self
+    ) -> google___ads___googleads___v1___resources___product_group_view_pb2___ProductGroupView: ...
     @property
-    def recommendation(self) -> google___ads___googleads___v1___resources___recommendation_pb2___Recommendation: ...
-
+    def recommendation(
+        self
+    ) -> google___ads___googleads___v1___resources___recommendation_pb2___Recommendation: ...
     @property
-    def search_term_view(self) -> google___ads___googleads___v1___resources___search_term_view_pb2___SearchTermView: ...
-
+    def search_term_view(
+        self
+    ) -> google___ads___googleads___v1___resources___search_term_view_pb2___SearchTermView: ...
     @property
-    def shared_criterion(self) -> google___ads___googleads___v1___resources___shared_criterion_pb2___SharedCriterion: ...
-
+    def shared_criterion(
+        self
+    ) -> google___ads___googleads___v1___resources___shared_criterion_pb2___SharedCriterion: ...
     @property
-    def shared_set(self) -> google___ads___googleads___v1___resources___shared_set_pb2___SharedSet: ...
-
+    def shared_set(
+        self
+    ) -> google___ads___googleads___v1___resources___shared_set_pb2___SharedSet: ...
     @property
-    def shopping_performance_view(self) -> google___ads___googleads___v1___resources___shopping_performance_view_pb2___ShoppingPerformanceView: ...
-
+    def shopping_performance_view(
+        self
+    ) -> google___ads___googleads___v1___resources___shopping_performance_view_pb2___ShoppingPerformanceView: ...
     @property
-    def topic_view(self) -> google___ads___googleads___v1___resources___topic_view_pb2___TopicView: ...
-
+    def topic_view(
+        self
+    ) -> google___ads___googleads___v1___resources___topic_view_pb2___TopicView: ...
     @property
-    def user_interest(self) -> google___ads___googleads___v1___resources___user_interest_pb2___UserInterest: ...
-
+    def user_interest(
+        self
+    ) -> google___ads___googleads___v1___resources___user_interest_pb2___UserInterest: ...
     @property
-    def user_list(self) -> google___ads___googleads___v1___resources___user_list_pb2___UserList: ...
-
+    def user_list(
+        self
+    ) -> google___ads___googleads___v1___resources___user_list_pb2___UserList: ...
     @property
-    def remarketing_action(self) -> google___ads___googleads___v1___resources___remarketing_action_pb2___RemarketingAction: ...
-
+    def remarketing_action(
+        self
+    ) -> google___ads___googleads___v1___resources___remarketing_action_pb2___RemarketingAction: ...
     @property
-    def topic_constant(self) -> google___ads___googleads___v1___resources___topic_constant_pb2___TopicConstant: ...
-
+    def topic_constant(
+        self
+    ) -> google___ads___googleads___v1___resources___topic_constant_pb2___TopicConstant: ...
     @property
-    def video(self) -> google___ads___googleads___v1___resources___video_pb2___Video: ...
-
+    def video(
+        self
+    ) -> google___ads___googleads___v1___resources___video_pb2___Video: ...
     @property
-    def metrics(self) -> google___ads___googleads___v1___common___metrics_pb2___Metrics: ...
-
+    def metrics(
+        self
+    ) -> google___ads___googleads___v1___common___metrics_pb2___Metrics: ...
     @property
-    def segments(self) -> google___ads___googleads___v1___common___segments_pb2___Segments: ...
-
-    def __init__(self,
+    def segments(
+        self
+    ) -> google___ads___googleads___v1___common___segments_pb2___Segments: ...
+    def __init__(
+        self,
         *,
-        account_budget : typing___Optional[google___ads___googleads___v1___resources___account_budget_pb2___AccountBudget] = None,
-        account_budget_proposal : typing___Optional[google___ads___googleads___v1___resources___account_budget_proposal_pb2___AccountBudgetProposal] = None,
-        ad_group : typing___Optional[google___ads___googleads___v1___resources___ad_group_pb2___AdGroup] = None,
-        ad_group_ad : typing___Optional[google___ads___googleads___v1___resources___ad_group_ad_pb2___AdGroupAd] = None,
-        ad_group_ad_label : typing___Optional[google___ads___googleads___v1___resources___ad_group_ad_label_pb2___AdGroupAdLabel] = None,
-        ad_group_audience_view : typing___Optional[google___ads___googleads___v1___resources___ad_group_audience_view_pb2___AdGroupAudienceView] = None,
-        ad_group_bid_modifier : typing___Optional[google___ads___googleads___v1___resources___ad_group_bid_modifier_pb2___AdGroupBidModifier] = None,
-        ad_group_criterion : typing___Optional[google___ads___googleads___v1___resources___ad_group_criterion_pb2___AdGroupCriterion] = None,
-        ad_group_criterion_label : typing___Optional[google___ads___googleads___v1___resources___ad_group_criterion_label_pb2___AdGroupCriterionLabel] = None,
-        ad_group_criterion_simulation : typing___Optional[google___ads___googleads___v1___resources___ad_group_criterion_simulation_pb2___AdGroupCriterionSimulation] = None,
-        ad_group_extension_setting : typing___Optional[google___ads___googleads___v1___resources___ad_group_extension_setting_pb2___AdGroupExtensionSetting] = None,
-        ad_group_feed : typing___Optional[google___ads___googleads___v1___resources___ad_group_feed_pb2___AdGroupFeed] = None,
-        ad_group_label : typing___Optional[google___ads___googleads___v1___resources___ad_group_label_pb2___AdGroupLabel] = None,
-        ad_group_simulation : typing___Optional[google___ads___googleads___v1___resources___ad_group_simulation_pb2___AdGroupSimulation] = None,
-        ad_parameter : typing___Optional[google___ads___googleads___v1___resources___ad_parameter_pb2___AdParameter] = None,
-        age_range_view : typing___Optional[google___ads___googleads___v1___resources___age_range_view_pb2___AgeRangeView] = None,
-        ad_schedule_view : typing___Optional[google___ads___googleads___v1___resources___ad_schedule_view_pb2___AdScheduleView] = None,
-        domain_category : typing___Optional[google___ads___googleads___v1___resources___domain_category_pb2___DomainCategory] = None,
-        asset : typing___Optional[google___ads___googleads___v1___resources___asset_pb2___Asset] = None,
-        bidding_strategy : typing___Optional[google___ads___googleads___v1___resources___bidding_strategy_pb2___BiddingStrategy] = None,
-        billing_setup : typing___Optional[google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup] = None,
-        campaign_budget : typing___Optional[google___ads___googleads___v1___resources___campaign_budget_pb2___CampaignBudget] = None,
-        campaign : typing___Optional[google___ads___googleads___v1___resources___campaign_pb2___Campaign] = None,
-        campaign_audience_view : typing___Optional[google___ads___googleads___v1___resources___campaign_audience_view_pb2___CampaignAudienceView] = None,
-        campaign_bid_modifier : typing___Optional[google___ads___googleads___v1___resources___campaign_bid_modifier_pb2___CampaignBidModifier] = None,
-        campaign_criterion : typing___Optional[google___ads___googleads___v1___resources___campaign_criterion_pb2___CampaignCriterion] = None,
-        campaign_criterion_simulation : typing___Optional[google___ads___googleads___v1___resources___campaign_criterion_simulation_pb2___CampaignCriterionSimulation] = None,
-        campaign_draft : typing___Optional[google___ads___googleads___v1___resources___campaign_draft_pb2___CampaignDraft] = None,
-        campaign_experiment : typing___Optional[google___ads___googleads___v1___resources___campaign_experiment_pb2___CampaignExperiment] = None,
-        campaign_extension_setting : typing___Optional[google___ads___googleads___v1___resources___campaign_extension_setting_pb2___CampaignExtensionSetting] = None,
-        campaign_feed : typing___Optional[google___ads___googleads___v1___resources___campaign_feed_pb2___CampaignFeed] = None,
-        campaign_label : typing___Optional[google___ads___googleads___v1___resources___campaign_label_pb2___CampaignLabel] = None,
-        campaign_shared_set : typing___Optional[google___ads___googleads___v1___resources___campaign_shared_set_pb2___CampaignSharedSet] = None,
-        carrier_constant : typing___Optional[google___ads___googleads___v1___resources___carrier_constant_pb2___CarrierConstant] = None,
-        change_status : typing___Optional[google___ads___googleads___v1___resources___change_status_pb2___ChangeStatus] = None,
-        conversion_action : typing___Optional[google___ads___googleads___v1___resources___conversion_action_pb2___ConversionAction] = None,
-        click_view : typing___Optional[google___ads___googleads___v1___resources___click_view_pb2___ClickView] = None,
-        custom_interest : typing___Optional[google___ads___googleads___v1___resources___custom_interest_pb2___CustomInterest] = None,
-        customer : typing___Optional[google___ads___googleads___v1___resources___customer_pb2___Customer] = None,
-        customer_manager_link : typing___Optional[google___ads___googleads___v1___resources___customer_manager_link_pb2___CustomerManagerLink] = None,
-        customer_client_link : typing___Optional[google___ads___googleads___v1___resources___customer_client_link_pb2___CustomerClientLink] = None,
-        customer_client : typing___Optional[google___ads___googleads___v1___resources___customer_client_pb2___CustomerClient] = None,
-        customer_extension_setting : typing___Optional[google___ads___googleads___v1___resources___customer_extension_setting_pb2___CustomerExtensionSetting] = None,
-        customer_feed : typing___Optional[google___ads___googleads___v1___resources___customer_feed_pb2___CustomerFeed] = None,
-        customer_label : typing___Optional[google___ads___googleads___v1___resources___customer_label_pb2___CustomerLabel] = None,
-        customer_negative_criterion : typing___Optional[google___ads___googleads___v1___resources___customer_negative_criterion_pb2___CustomerNegativeCriterion] = None,
-        detail_placement_view : typing___Optional[google___ads___googleads___v1___resources___detail_placement_view_pb2___DetailPlacementView] = None,
-        display_keyword_view : typing___Optional[google___ads___googleads___v1___resources___display_keyword_view_pb2___DisplayKeywordView] = None,
-        dynamic_search_ads_search_term_view : typing___Optional[google___ads___googleads___v1___resources___dynamic_search_ads_search_term_view_pb2___DynamicSearchAdsSearchTermView] = None,
-        expanded_landing_page_view : typing___Optional[google___ads___googleads___v1___resources___expanded_landing_page_view_pb2___ExpandedLandingPageView] = None,
-        extension_feed_item : typing___Optional[google___ads___googleads___v1___resources___extension_feed_item_pb2___ExtensionFeedItem] = None,
-        feed : typing___Optional[google___ads___googleads___v1___resources___feed_pb2___Feed] = None,
-        feed_item : typing___Optional[google___ads___googleads___v1___resources___feed_item_pb2___FeedItem] = None,
-        feed_item_target : typing___Optional[google___ads___googleads___v1___resources___feed_item_target_pb2___FeedItemTarget] = None,
-        feed_mapping : typing___Optional[google___ads___googleads___v1___resources___feed_mapping_pb2___FeedMapping] = None,
-        feed_placeholder_view : typing___Optional[google___ads___googleads___v1___resources___feed_placeholder_view_pb2___FeedPlaceholderView] = None,
-        gender_view : typing___Optional[google___ads___googleads___v1___resources___gender_view_pb2___GenderView] = None,
-        geo_target_constant : typing___Optional[google___ads___googleads___v1___resources___geo_target_constant_pb2___GeoTargetConstant] = None,
-        geographic_view : typing___Optional[google___ads___googleads___v1___resources___geographic_view_pb2___GeographicView] = None,
-        group_placement_view : typing___Optional[google___ads___googleads___v1___resources___group_placement_view_pb2___GroupPlacementView] = None,
-        hotel_group_view : typing___Optional[google___ads___googleads___v1___resources___hotel_group_view_pb2___HotelGroupView] = None,
-        hotel_performance_view : typing___Optional[google___ads___googleads___v1___resources___hotel_performance_view_pb2___HotelPerformanceView] = None,
-        keyword_view : typing___Optional[google___ads___googleads___v1___resources___keyword_view_pb2___KeywordView] = None,
-        keyword_plan : typing___Optional[google___ads___googleads___v1___resources___keyword_plan_pb2___KeywordPlan] = None,
-        keyword_plan_campaign : typing___Optional[google___ads___googleads___v1___resources___keyword_plan_campaign_pb2___KeywordPlanCampaign] = None,
-        keyword_plan_negative_keyword : typing___Optional[google___ads___googleads___v1___resources___keyword_plan_negative_keyword_pb2___KeywordPlanNegativeKeyword] = None,
-        keyword_plan_ad_group : typing___Optional[google___ads___googleads___v1___resources___keyword_plan_ad_group_pb2___KeywordPlanAdGroup] = None,
-        keyword_plan_keyword : typing___Optional[google___ads___googleads___v1___resources___keyword_plan_keyword_pb2___KeywordPlanKeyword] = None,
-        label : typing___Optional[google___ads___googleads___v1___resources___label_pb2___Label] = None,
-        landing_page_view : typing___Optional[google___ads___googleads___v1___resources___landing_page_view_pb2___LandingPageView] = None,
-        language_constant : typing___Optional[google___ads___googleads___v1___resources___language_constant_pb2___LanguageConstant] = None,
-        location_view : typing___Optional[google___ads___googleads___v1___resources___location_view_pb2___LocationView] = None,
-        managed_placement_view : typing___Optional[google___ads___googleads___v1___resources___managed_placement_view_pb2___ManagedPlacementView] = None,
-        media_file : typing___Optional[google___ads___googleads___v1___resources___media_file_pb2___MediaFile] = None,
-        mobile_app_category_constant : typing___Optional[google___ads___googleads___v1___resources___mobile_app_category_constant_pb2___MobileAppCategoryConstant] = None,
-        mobile_device_constant : typing___Optional[google___ads___googleads___v1___resources___mobile_device_constant_pb2___MobileDeviceConstant] = None,
-        mutate_job : typing___Optional[google___ads___googleads___v1___resources___mutate_job_pb2___MutateJob] = None,
-        operating_system_version_constant : typing___Optional[google___ads___googleads___v1___resources___operating_system_version_constant_pb2___OperatingSystemVersionConstant] = None,
-        paid_organic_search_term_view : typing___Optional[google___ads___googleads___v1___resources___paid_organic_search_term_view_pb2___PaidOrganicSearchTermView] = None,
-        parental_status_view : typing___Optional[google___ads___googleads___v1___resources___parental_status_view_pb2___ParentalStatusView] = None,
-        product_bidding_category_constant : typing___Optional[google___ads___googleads___v1___resources___product_bidding_category_constant_pb2___ProductBiddingCategoryConstant] = None,
-        product_group_view : typing___Optional[google___ads___googleads___v1___resources___product_group_view_pb2___ProductGroupView] = None,
-        recommendation : typing___Optional[google___ads___googleads___v1___resources___recommendation_pb2___Recommendation] = None,
-        search_term_view : typing___Optional[google___ads___googleads___v1___resources___search_term_view_pb2___SearchTermView] = None,
-        shared_criterion : typing___Optional[google___ads___googleads___v1___resources___shared_criterion_pb2___SharedCriterion] = None,
-        shared_set : typing___Optional[google___ads___googleads___v1___resources___shared_set_pb2___SharedSet] = None,
-        shopping_performance_view : typing___Optional[google___ads___googleads___v1___resources___shopping_performance_view_pb2___ShoppingPerformanceView] = None,
-        topic_view : typing___Optional[google___ads___googleads___v1___resources___topic_view_pb2___TopicView] = None,
-        user_interest : typing___Optional[google___ads___googleads___v1___resources___user_interest_pb2___UserInterest] = None,
-        user_list : typing___Optional[google___ads___googleads___v1___resources___user_list_pb2___UserList] = None,
-        remarketing_action : typing___Optional[google___ads___googleads___v1___resources___remarketing_action_pb2___RemarketingAction] = None,
-        topic_constant : typing___Optional[google___ads___googleads___v1___resources___topic_constant_pb2___TopicConstant] = None,
-        video : typing___Optional[google___ads___googleads___v1___resources___video_pb2___Video] = None,
-        metrics : typing___Optional[google___ads___googleads___v1___common___metrics_pb2___Metrics] = None,
-        segments : typing___Optional[google___ads___googleads___v1___common___segments_pb2___Segments] = None,
-        ) -> None: ...
+        account_budget: typing___Optional[
+            google___ads___googleads___v1___resources___account_budget_pb2___AccountBudget
+        ] = None,
+        account_budget_proposal: typing___Optional[
+            google___ads___googleads___v1___resources___account_budget_proposal_pb2___AccountBudgetProposal
+        ] = None,
+        ad_group: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_pb2___AdGroup
+        ] = None,
+        ad_group_ad: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_ad_pb2___AdGroupAd
+        ] = None,
+        ad_group_ad_label: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_ad_label_pb2___AdGroupAdLabel
+        ] = None,
+        ad_group_audience_view: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_audience_view_pb2___AdGroupAudienceView
+        ] = None,
+        ad_group_bid_modifier: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_bid_modifier_pb2___AdGroupBidModifier
+        ] = None,
+        ad_group_criterion: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_criterion_pb2___AdGroupCriterion
+        ] = None,
+        ad_group_criterion_label: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_criterion_label_pb2___AdGroupCriterionLabel
+        ] = None,
+        ad_group_criterion_simulation: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_criterion_simulation_pb2___AdGroupCriterionSimulation
+        ] = None,
+        ad_group_extension_setting: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_extension_setting_pb2___AdGroupExtensionSetting
+        ] = None,
+        ad_group_feed: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_feed_pb2___AdGroupFeed
+        ] = None,
+        ad_group_label: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_label_pb2___AdGroupLabel
+        ] = None,
+        ad_group_simulation: typing___Optional[
+            google___ads___googleads___v1___resources___ad_group_simulation_pb2___AdGroupSimulation
+        ] = None,
+        ad_parameter: typing___Optional[
+            google___ads___googleads___v1___resources___ad_parameter_pb2___AdParameter
+        ] = None,
+        age_range_view: typing___Optional[
+            google___ads___googleads___v1___resources___age_range_view_pb2___AgeRangeView
+        ] = None,
+        ad_schedule_view: typing___Optional[
+            google___ads___googleads___v1___resources___ad_schedule_view_pb2___AdScheduleView
+        ] = None,
+        domain_category: typing___Optional[
+            google___ads___googleads___v1___resources___domain_category_pb2___DomainCategory
+        ] = None,
+        asset: typing___Optional[
+            google___ads___googleads___v1___resources___asset_pb2___Asset
+        ] = None,
+        bidding_strategy: typing___Optional[
+            google___ads___googleads___v1___resources___bidding_strategy_pb2___BiddingStrategy
+        ] = None,
+        billing_setup: typing___Optional[
+            google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup
+        ] = None,
+        campaign_budget: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_budget_pb2___CampaignBudget
+        ] = None,
+        campaign: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_pb2___Campaign
+        ] = None,
+        campaign_audience_view: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_audience_view_pb2___CampaignAudienceView
+        ] = None,
+        campaign_bid_modifier: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_bid_modifier_pb2___CampaignBidModifier
+        ] = None,
+        campaign_criterion: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_criterion_pb2___CampaignCriterion
+        ] = None,
+        campaign_criterion_simulation: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_criterion_simulation_pb2___CampaignCriterionSimulation
+        ] = None,
+        campaign_draft: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_draft_pb2___CampaignDraft
+        ] = None,
+        campaign_experiment: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_experiment_pb2___CampaignExperiment
+        ] = None,
+        campaign_extension_setting: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_extension_setting_pb2___CampaignExtensionSetting
+        ] = None,
+        campaign_feed: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_feed_pb2___CampaignFeed
+        ] = None,
+        campaign_label: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_label_pb2___CampaignLabel
+        ] = None,
+        campaign_shared_set: typing___Optional[
+            google___ads___googleads___v1___resources___campaign_shared_set_pb2___CampaignSharedSet
+        ] = None,
+        carrier_constant: typing___Optional[
+            google___ads___googleads___v1___resources___carrier_constant_pb2___CarrierConstant
+        ] = None,
+        change_status: typing___Optional[
+            google___ads___googleads___v1___resources___change_status_pb2___ChangeStatus
+        ] = None,
+        conversion_action: typing___Optional[
+            google___ads___googleads___v1___resources___conversion_action_pb2___ConversionAction
+        ] = None,
+        click_view: typing___Optional[
+            google___ads___googleads___v1___resources___click_view_pb2___ClickView
+        ] = None,
+        custom_interest: typing___Optional[
+            google___ads___googleads___v1___resources___custom_interest_pb2___CustomInterest
+        ] = None,
+        customer: typing___Optional[
+            google___ads___googleads___v1___resources___customer_pb2___Customer
+        ] = None,
+        customer_manager_link: typing___Optional[
+            google___ads___googleads___v1___resources___customer_manager_link_pb2___CustomerManagerLink
+        ] = None,
+        customer_client_link: typing___Optional[
+            google___ads___googleads___v1___resources___customer_client_link_pb2___CustomerClientLink
+        ] = None,
+        customer_client: typing___Optional[
+            google___ads___googleads___v1___resources___customer_client_pb2___CustomerClient
+        ] = None,
+        customer_extension_setting: typing___Optional[
+            google___ads___googleads___v1___resources___customer_extension_setting_pb2___CustomerExtensionSetting
+        ] = None,
+        customer_feed: typing___Optional[
+            google___ads___googleads___v1___resources___customer_feed_pb2___CustomerFeed
+        ] = None,
+        customer_label: typing___Optional[
+            google___ads___googleads___v1___resources___customer_label_pb2___CustomerLabel
+        ] = None,
+        customer_negative_criterion: typing___Optional[
+            google___ads___googleads___v1___resources___customer_negative_criterion_pb2___CustomerNegativeCriterion
+        ] = None,
+        detail_placement_view: typing___Optional[
+            google___ads___googleads___v1___resources___detail_placement_view_pb2___DetailPlacementView
+        ] = None,
+        display_keyword_view: typing___Optional[
+            google___ads___googleads___v1___resources___display_keyword_view_pb2___DisplayKeywordView
+        ] = None,
+        dynamic_search_ads_search_term_view: typing___Optional[
+            google___ads___googleads___v1___resources___dynamic_search_ads_search_term_view_pb2___DynamicSearchAdsSearchTermView
+        ] = None,
+        expanded_landing_page_view: typing___Optional[
+            google___ads___googleads___v1___resources___expanded_landing_page_view_pb2___ExpandedLandingPageView
+        ] = None,
+        extension_feed_item: typing___Optional[
+            google___ads___googleads___v1___resources___extension_feed_item_pb2___ExtensionFeedItem
+        ] = None,
+        feed: typing___Optional[
+            google___ads___googleads___v1___resources___feed_pb2___Feed
+        ] = None,
+        feed_item: typing___Optional[
+            google___ads___googleads___v1___resources___feed_item_pb2___FeedItem
+        ] = None,
+        feed_item_target: typing___Optional[
+            google___ads___googleads___v1___resources___feed_item_target_pb2___FeedItemTarget
+        ] = None,
+        feed_mapping: typing___Optional[
+            google___ads___googleads___v1___resources___feed_mapping_pb2___FeedMapping
+        ] = None,
+        feed_placeholder_view: typing___Optional[
+            google___ads___googleads___v1___resources___feed_placeholder_view_pb2___FeedPlaceholderView
+        ] = None,
+        gender_view: typing___Optional[
+            google___ads___googleads___v1___resources___gender_view_pb2___GenderView
+        ] = None,
+        geo_target_constant: typing___Optional[
+            google___ads___googleads___v1___resources___geo_target_constant_pb2___GeoTargetConstant
+        ] = None,
+        geographic_view: typing___Optional[
+            google___ads___googleads___v1___resources___geographic_view_pb2___GeographicView
+        ] = None,
+        group_placement_view: typing___Optional[
+            google___ads___googleads___v1___resources___group_placement_view_pb2___GroupPlacementView
+        ] = None,
+        hotel_group_view: typing___Optional[
+            google___ads___googleads___v1___resources___hotel_group_view_pb2___HotelGroupView
+        ] = None,
+        hotel_performance_view: typing___Optional[
+            google___ads___googleads___v1___resources___hotel_performance_view_pb2___HotelPerformanceView
+        ] = None,
+        keyword_view: typing___Optional[
+            google___ads___googleads___v1___resources___keyword_view_pb2___KeywordView
+        ] = None,
+        keyword_plan: typing___Optional[
+            google___ads___googleads___v1___resources___keyword_plan_pb2___KeywordPlan
+        ] = None,
+        keyword_plan_campaign: typing___Optional[
+            google___ads___googleads___v1___resources___keyword_plan_campaign_pb2___KeywordPlanCampaign
+        ] = None,
+        keyword_plan_negative_keyword: typing___Optional[
+            google___ads___googleads___v1___resources___keyword_plan_negative_keyword_pb2___KeywordPlanNegativeKeyword
+        ] = None,
+        keyword_plan_ad_group: typing___Optional[
+            google___ads___googleads___v1___resources___keyword_plan_ad_group_pb2___KeywordPlanAdGroup
+        ] = None,
+        keyword_plan_keyword: typing___Optional[
+            google___ads___googleads___v1___resources___keyword_plan_keyword_pb2___KeywordPlanKeyword
+        ] = None,
+        label: typing___Optional[
+            google___ads___googleads___v1___resources___label_pb2___Label
+        ] = None,
+        landing_page_view: typing___Optional[
+            google___ads___googleads___v1___resources___landing_page_view_pb2___LandingPageView
+        ] = None,
+        language_constant: typing___Optional[
+            google___ads___googleads___v1___resources___language_constant_pb2___LanguageConstant
+        ] = None,
+        location_view: typing___Optional[
+            google___ads___googleads___v1___resources___location_view_pb2___LocationView
+        ] = None,
+        managed_placement_view: typing___Optional[
+            google___ads___googleads___v1___resources___managed_placement_view_pb2___ManagedPlacementView
+        ] = None,
+        media_file: typing___Optional[
+            google___ads___googleads___v1___resources___media_file_pb2___MediaFile
+        ] = None,
+        mobile_app_category_constant: typing___Optional[
+            google___ads___googleads___v1___resources___mobile_app_category_constant_pb2___MobileAppCategoryConstant
+        ] = None,
+        mobile_device_constant: typing___Optional[
+            google___ads___googleads___v1___resources___mobile_device_constant_pb2___MobileDeviceConstant
+        ] = None,
+        mutate_job: typing___Optional[
+            google___ads___googleads___v1___resources___mutate_job_pb2___MutateJob
+        ] = None,
+        operating_system_version_constant: typing___Optional[
+            google___ads___googleads___v1___resources___operating_system_version_constant_pb2___OperatingSystemVersionConstant
+        ] = None,
+        paid_organic_search_term_view: typing___Optional[
+            google___ads___googleads___v1___resources___paid_organic_search_term_view_pb2___PaidOrganicSearchTermView
+        ] = None,
+        parental_status_view: typing___Optional[
+            google___ads___googleads___v1___resources___parental_status_view_pb2___ParentalStatusView
+        ] = None,
+        product_bidding_category_constant: typing___Optional[
+            google___ads___googleads___v1___resources___product_bidding_category_constant_pb2___ProductBiddingCategoryConstant
+        ] = None,
+        product_group_view: typing___Optional[
+            google___ads___googleads___v1___resources___product_group_view_pb2___ProductGroupView
+        ] = None,
+        recommendation: typing___Optional[
+            google___ads___googleads___v1___resources___recommendation_pb2___Recommendation
+        ] = None,
+        search_term_view: typing___Optional[
+            google___ads___googleads___v1___resources___search_term_view_pb2___SearchTermView
+        ] = None,
+        shared_criterion: typing___Optional[
+            google___ads___googleads___v1___resources___shared_criterion_pb2___SharedCriterion
+        ] = None,
+        shared_set: typing___Optional[
+            google___ads___googleads___v1___resources___shared_set_pb2___SharedSet
+        ] = None,
+        shopping_performance_view: typing___Optional[
+            google___ads___googleads___v1___resources___shopping_performance_view_pb2___ShoppingPerformanceView
+        ] = None,
+        topic_view: typing___Optional[
+            google___ads___googleads___v1___resources___topic_view_pb2___TopicView
+        ] = None,
+        user_interest: typing___Optional[
+            google___ads___googleads___v1___resources___user_interest_pb2___UserInterest
+        ] = None,
+        user_list: typing___Optional[
+            google___ads___googleads___v1___resources___user_list_pb2___UserList
+        ] = None,
+        remarketing_action: typing___Optional[
+            google___ads___googleads___v1___resources___remarketing_action_pb2___RemarketingAction
+        ] = None,
+        topic_constant: typing___Optional[
+            google___ads___googleads___v1___resources___topic_constant_pb2___TopicConstant
+        ] = None,
+        video: typing___Optional[
+            google___ads___googleads___v1___resources___video_pb2___Video
+        ] = None,
+        metrics: typing___Optional[
+            google___ads___googleads___v1___common___metrics_pb2___Metrics
+        ] = None,
+        segments: typing___Optional[
+            google___ads___googleads___v1___common___segments_pb2___Segments
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> GoogleAdsRow: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> GoogleAdsRow: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> GoogleAdsRow: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"account_budget",b"account_budget",u"account_budget_proposal",b"account_budget_proposal",u"ad_group",b"ad_group",u"ad_group_ad",b"ad_group_ad",u"ad_group_ad_label",b"ad_group_ad_label",u"ad_group_audience_view",b"ad_group_audience_view",u"ad_group_bid_modifier",b"ad_group_bid_modifier",u"ad_group_criterion",b"ad_group_criterion",u"ad_group_criterion_label",b"ad_group_criterion_label",u"ad_group_criterion_simulation",b"ad_group_criterion_simulation",u"ad_group_extension_setting",b"ad_group_extension_setting",u"ad_group_feed",b"ad_group_feed",u"ad_group_label",b"ad_group_label",u"ad_group_simulation",b"ad_group_simulation",u"ad_parameter",b"ad_parameter",u"ad_schedule_view",b"ad_schedule_view",u"age_range_view",b"age_range_view",u"asset",b"asset",u"bidding_strategy",b"bidding_strategy",u"billing_setup",b"billing_setup",u"campaign",b"campaign",u"campaign_audience_view",b"campaign_audience_view",u"campaign_bid_modifier",b"campaign_bid_modifier",u"campaign_budget",b"campaign_budget",u"campaign_criterion",b"campaign_criterion",u"campaign_criterion_simulation",b"campaign_criterion_simulation",u"campaign_draft",b"campaign_draft",u"campaign_experiment",b"campaign_experiment",u"campaign_extension_setting",b"campaign_extension_setting",u"campaign_feed",b"campaign_feed",u"campaign_label",b"campaign_label",u"campaign_shared_set",b"campaign_shared_set",u"carrier_constant",b"carrier_constant",u"change_status",b"change_status",u"click_view",b"click_view",u"conversion_action",b"conversion_action",u"custom_interest",b"custom_interest",u"customer",b"customer",u"customer_client",b"customer_client",u"customer_client_link",b"customer_client_link",u"customer_extension_setting",b"customer_extension_setting",u"customer_feed",b"customer_feed",u"customer_label",b"customer_label",u"customer_manager_link",b"customer_manager_link",u"customer_negative_criterion",b"customer_negative_criterion",u"detail_placement_view",b"detail_placement_view",u"display_keyword_view",b"display_keyword_view",u"domain_category",b"domain_category",u"dynamic_search_ads_search_term_view",b"dynamic_search_ads_search_term_view",u"expanded_landing_page_view",b"expanded_landing_page_view",u"extension_feed_item",b"extension_feed_item",u"feed",b"feed",u"feed_item",b"feed_item",u"feed_item_target",b"feed_item_target",u"feed_mapping",b"feed_mapping",u"feed_placeholder_view",b"feed_placeholder_view",u"gender_view",b"gender_view",u"geo_target_constant",b"geo_target_constant",u"geographic_view",b"geographic_view",u"group_placement_view",b"group_placement_view",u"hotel_group_view",b"hotel_group_view",u"hotel_performance_view",b"hotel_performance_view",u"keyword_plan",b"keyword_plan",u"keyword_plan_ad_group",b"keyword_plan_ad_group",u"keyword_plan_campaign",b"keyword_plan_campaign",u"keyword_plan_keyword",b"keyword_plan_keyword",u"keyword_plan_negative_keyword",b"keyword_plan_negative_keyword",u"keyword_view",b"keyword_view",u"label",b"label",u"landing_page_view",b"landing_page_view",u"language_constant",b"language_constant",u"location_view",b"location_view",u"managed_placement_view",b"managed_placement_view",u"media_file",b"media_file",u"metrics",b"metrics",u"mobile_app_category_constant",b"mobile_app_category_constant",u"mobile_device_constant",b"mobile_device_constant",u"mutate_job",b"mutate_job",u"operating_system_version_constant",b"operating_system_version_constant",u"paid_organic_search_term_view",b"paid_organic_search_term_view",u"parental_status_view",b"parental_status_view",u"product_bidding_category_constant",b"product_bidding_category_constant",u"product_group_view",b"product_group_view",u"recommendation",b"recommendation",u"remarketing_action",b"remarketing_action",u"search_term_view",b"search_term_view",u"segments",b"segments",u"shared_criterion",b"shared_criterion",u"shared_set",b"shared_set",u"shopping_performance_view",b"shopping_performance_view",u"topic_constant",b"topic_constant",u"topic_view",b"topic_view",u"user_interest",b"user_interest",u"user_list",b"user_list",u"video",b"video"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"account_budget",b"account_budget",u"account_budget_proposal",b"account_budget_proposal",u"ad_group",b"ad_group",u"ad_group_ad",b"ad_group_ad",u"ad_group_ad_label",b"ad_group_ad_label",u"ad_group_audience_view",b"ad_group_audience_view",u"ad_group_bid_modifier",b"ad_group_bid_modifier",u"ad_group_criterion",b"ad_group_criterion",u"ad_group_criterion_label",b"ad_group_criterion_label",u"ad_group_criterion_simulation",b"ad_group_criterion_simulation",u"ad_group_extension_setting",b"ad_group_extension_setting",u"ad_group_feed",b"ad_group_feed",u"ad_group_label",b"ad_group_label",u"ad_group_simulation",b"ad_group_simulation",u"ad_parameter",b"ad_parameter",u"ad_schedule_view",b"ad_schedule_view",u"age_range_view",b"age_range_view",u"asset",b"asset",u"bidding_strategy",b"bidding_strategy",u"billing_setup",b"billing_setup",u"campaign",b"campaign",u"campaign_audience_view",b"campaign_audience_view",u"campaign_bid_modifier",b"campaign_bid_modifier",u"campaign_budget",b"campaign_budget",u"campaign_criterion",b"campaign_criterion",u"campaign_criterion_simulation",b"campaign_criterion_simulation",u"campaign_draft",b"campaign_draft",u"campaign_experiment",b"campaign_experiment",u"campaign_extension_setting",b"campaign_extension_setting",u"campaign_feed",b"campaign_feed",u"campaign_label",b"campaign_label",u"campaign_shared_set",b"campaign_shared_set",u"carrier_constant",b"carrier_constant",u"change_status",b"change_status",u"click_view",b"click_view",u"conversion_action",b"conversion_action",u"custom_interest",b"custom_interest",u"customer",b"customer",u"customer_client",b"customer_client",u"customer_client_link",b"customer_client_link",u"customer_extension_setting",b"customer_extension_setting",u"customer_feed",b"customer_feed",u"customer_label",b"customer_label",u"customer_manager_link",b"customer_manager_link",u"customer_negative_criterion",b"customer_negative_criterion",u"detail_placement_view",b"detail_placement_view",u"display_keyword_view",b"display_keyword_view",u"domain_category",b"domain_category",u"dynamic_search_ads_search_term_view",b"dynamic_search_ads_search_term_view",u"expanded_landing_page_view",b"expanded_landing_page_view",u"extension_feed_item",b"extension_feed_item",u"feed",b"feed",u"feed_item",b"feed_item",u"feed_item_target",b"feed_item_target",u"feed_mapping",b"feed_mapping",u"feed_placeholder_view",b"feed_placeholder_view",u"gender_view",b"gender_view",u"geo_target_constant",b"geo_target_constant",u"geographic_view",b"geographic_view",u"group_placement_view",b"group_placement_view",u"hotel_group_view",b"hotel_group_view",u"hotel_performance_view",b"hotel_performance_view",u"keyword_plan",b"keyword_plan",u"keyword_plan_ad_group",b"keyword_plan_ad_group",u"keyword_plan_campaign",b"keyword_plan_campaign",u"keyword_plan_keyword",b"keyword_plan_keyword",u"keyword_plan_negative_keyword",b"keyword_plan_negative_keyword",u"keyword_view",b"keyword_view",u"label",b"label",u"landing_page_view",b"landing_page_view",u"language_constant",b"language_constant",u"location_view",b"location_view",u"managed_placement_view",b"managed_placement_view",u"media_file",b"media_file",u"metrics",b"metrics",u"mobile_app_category_constant",b"mobile_app_category_constant",u"mobile_device_constant",b"mobile_device_constant",u"mutate_job",b"mutate_job",u"operating_system_version_constant",b"operating_system_version_constant",u"paid_organic_search_term_view",b"paid_organic_search_term_view",u"parental_status_view",b"parental_status_view",u"product_bidding_category_constant",b"product_bidding_category_constant",u"product_group_view",b"product_group_view",u"recommendation",b"recommendation",u"remarketing_action",b"remarketing_action",u"search_term_view",b"search_term_view",u"segments",b"segments",u"shared_criterion",b"shared_criterion",u"shared_set",b"shared_set",u"shopping_performance_view",b"shopping_performance_view",u"topic_constant",b"topic_constant",u"topic_view",b"topic_view",u"user_interest",b"user_interest",u"user_list",b"user_list",u"video",b"video"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "account_budget",
+            b"account_budget",
+            "account_budget_proposal",
+            b"account_budget_proposal",
+            "ad_group",
+            b"ad_group",
+            "ad_group_ad",
+            b"ad_group_ad",
+            "ad_group_ad_label",
+            b"ad_group_ad_label",
+            "ad_group_audience_view",
+            b"ad_group_audience_view",
+            "ad_group_bid_modifier",
+            b"ad_group_bid_modifier",
+            "ad_group_criterion",
+            b"ad_group_criterion",
+            "ad_group_criterion_label",
+            b"ad_group_criterion_label",
+            "ad_group_criterion_simulation",
+            b"ad_group_criterion_simulation",
+            "ad_group_extension_setting",
+            b"ad_group_extension_setting",
+            "ad_group_feed",
+            b"ad_group_feed",
+            "ad_group_label",
+            b"ad_group_label",
+            "ad_group_simulation",
+            b"ad_group_simulation",
+            "ad_parameter",
+            b"ad_parameter",
+            "ad_schedule_view",
+            b"ad_schedule_view",
+            "age_range_view",
+            b"age_range_view",
+            "asset",
+            b"asset",
+            "bidding_strategy",
+            b"bidding_strategy",
+            "billing_setup",
+            b"billing_setup",
+            "campaign",
+            b"campaign",
+            "campaign_audience_view",
+            b"campaign_audience_view",
+            "campaign_bid_modifier",
+            b"campaign_bid_modifier",
+            "campaign_budget",
+            b"campaign_budget",
+            "campaign_criterion",
+            b"campaign_criterion",
+            "campaign_criterion_simulation",
+            b"campaign_criterion_simulation",
+            "campaign_draft",
+            b"campaign_draft",
+            "campaign_experiment",
+            b"campaign_experiment",
+            "campaign_extension_setting",
+            b"campaign_extension_setting",
+            "campaign_feed",
+            b"campaign_feed",
+            "campaign_label",
+            b"campaign_label",
+            "campaign_shared_set",
+            b"campaign_shared_set",
+            "carrier_constant",
+            b"carrier_constant",
+            "change_status",
+            b"change_status",
+            "click_view",
+            b"click_view",
+            "conversion_action",
+            b"conversion_action",
+            "custom_interest",
+            b"custom_interest",
+            "customer",
+            b"customer",
+            "customer_client",
+            b"customer_client",
+            "customer_client_link",
+            b"customer_client_link",
+            "customer_extension_setting",
+            b"customer_extension_setting",
+            "customer_feed",
+            b"customer_feed",
+            "customer_label",
+            b"customer_label",
+            "customer_manager_link",
+            b"customer_manager_link",
+            "customer_negative_criterion",
+            b"customer_negative_criterion",
+            "detail_placement_view",
+            b"detail_placement_view",
+            "display_keyword_view",
+            b"display_keyword_view",
+            "domain_category",
+            b"domain_category",
+            "dynamic_search_ads_search_term_view",
+            b"dynamic_search_ads_search_term_view",
+            "expanded_landing_page_view",
+            b"expanded_landing_page_view",
+            "extension_feed_item",
+            b"extension_feed_item",
+            "feed",
+            b"feed",
+            "feed_item",
+            b"feed_item",
+            "feed_item_target",
+            b"feed_item_target",
+            "feed_mapping",
+            b"feed_mapping",
+            "feed_placeholder_view",
+            b"feed_placeholder_view",
+            "gender_view",
+            b"gender_view",
+            "geo_target_constant",
+            b"geo_target_constant",
+            "geographic_view",
+            b"geographic_view",
+            "group_placement_view",
+            b"group_placement_view",
+            "hotel_group_view",
+            b"hotel_group_view",
+            "hotel_performance_view",
+            b"hotel_performance_view",
+            "keyword_plan",
+            b"keyword_plan",
+            "keyword_plan_ad_group",
+            b"keyword_plan_ad_group",
+            "keyword_plan_campaign",
+            b"keyword_plan_campaign",
+            "keyword_plan_keyword",
+            b"keyword_plan_keyword",
+            "keyword_plan_negative_keyword",
+            b"keyword_plan_negative_keyword",
+            "keyword_view",
+            b"keyword_view",
+            "label",
+            b"label",
+            "landing_page_view",
+            b"landing_page_view",
+            "language_constant",
+            b"language_constant",
+            "location_view",
+            b"location_view",
+            "managed_placement_view",
+            b"managed_placement_view",
+            "media_file",
+            b"media_file",
+            "metrics",
+            b"metrics",
+            "mobile_app_category_constant",
+            b"mobile_app_category_constant",
+            "mobile_device_constant",
+            b"mobile_device_constant",
+            "mutate_job",
+            b"mutate_job",
+            "operating_system_version_constant",
+            b"operating_system_version_constant",
+            "paid_organic_search_term_view",
+            b"paid_organic_search_term_view",
+            "parental_status_view",
+            b"parental_status_view",
+            "product_bidding_category_constant",
+            b"product_bidding_category_constant",
+            "product_group_view",
+            b"product_group_view",
+            "recommendation",
+            b"recommendation",
+            "remarketing_action",
+            b"remarketing_action",
+            "search_term_view",
+            b"search_term_view",
+            "segments",
+            b"segments",
+            "shared_criterion",
+            b"shared_criterion",
+            "shared_set",
+            b"shared_set",
+            "shopping_performance_view",
+            b"shopping_performance_view",
+            "topic_constant",
+            b"topic_constant",
+            "topic_view",
+            b"topic_view",
+            "user_interest",
+            b"user_interest",
+            "user_list",
+            b"user_list",
+            "video",
+            b"video",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "account_budget",
+            b"account_budget",
+            "account_budget_proposal",
+            b"account_budget_proposal",
+            "ad_group",
+            b"ad_group",
+            "ad_group_ad",
+            b"ad_group_ad",
+            "ad_group_ad_label",
+            b"ad_group_ad_label",
+            "ad_group_audience_view",
+            b"ad_group_audience_view",
+            "ad_group_bid_modifier",
+            b"ad_group_bid_modifier",
+            "ad_group_criterion",
+            b"ad_group_criterion",
+            "ad_group_criterion_label",
+            b"ad_group_criterion_label",
+            "ad_group_criterion_simulation",
+            b"ad_group_criterion_simulation",
+            "ad_group_extension_setting",
+            b"ad_group_extension_setting",
+            "ad_group_feed",
+            b"ad_group_feed",
+            "ad_group_label",
+            b"ad_group_label",
+            "ad_group_simulation",
+            b"ad_group_simulation",
+            "ad_parameter",
+            b"ad_parameter",
+            "ad_schedule_view",
+            b"ad_schedule_view",
+            "age_range_view",
+            b"age_range_view",
+            "asset",
+            b"asset",
+            "bidding_strategy",
+            b"bidding_strategy",
+            "billing_setup",
+            b"billing_setup",
+            "campaign",
+            b"campaign",
+            "campaign_audience_view",
+            b"campaign_audience_view",
+            "campaign_bid_modifier",
+            b"campaign_bid_modifier",
+            "campaign_budget",
+            b"campaign_budget",
+            "campaign_criterion",
+            b"campaign_criterion",
+            "campaign_criterion_simulation",
+            b"campaign_criterion_simulation",
+            "campaign_draft",
+            b"campaign_draft",
+            "campaign_experiment",
+            b"campaign_experiment",
+            "campaign_extension_setting",
+            b"campaign_extension_setting",
+            "campaign_feed",
+            b"campaign_feed",
+            "campaign_label",
+            b"campaign_label",
+            "campaign_shared_set",
+            b"campaign_shared_set",
+            "carrier_constant",
+            b"carrier_constant",
+            "change_status",
+            b"change_status",
+            "click_view",
+            b"click_view",
+            "conversion_action",
+            b"conversion_action",
+            "custom_interest",
+            b"custom_interest",
+            "customer",
+            b"customer",
+            "customer_client",
+            b"customer_client",
+            "customer_client_link",
+            b"customer_client_link",
+            "customer_extension_setting",
+            b"customer_extension_setting",
+            "customer_feed",
+            b"customer_feed",
+            "customer_label",
+            b"customer_label",
+            "customer_manager_link",
+            b"customer_manager_link",
+            "customer_negative_criterion",
+            b"customer_negative_criterion",
+            "detail_placement_view",
+            b"detail_placement_view",
+            "display_keyword_view",
+            b"display_keyword_view",
+            "domain_category",
+            b"domain_category",
+            "dynamic_search_ads_search_term_view",
+            b"dynamic_search_ads_search_term_view",
+            "expanded_landing_page_view",
+            b"expanded_landing_page_view",
+            "extension_feed_item",
+            b"extension_feed_item",
+            "feed",
+            b"feed",
+            "feed_item",
+            b"feed_item",
+            "feed_item_target",
+            b"feed_item_target",
+            "feed_mapping",
+            b"feed_mapping",
+            "feed_placeholder_view",
+            b"feed_placeholder_view",
+            "gender_view",
+            b"gender_view",
+            "geo_target_constant",
+            b"geo_target_constant",
+            "geographic_view",
+            b"geographic_view",
+            "group_placement_view",
+            b"group_placement_view",
+            "hotel_group_view",
+            b"hotel_group_view",
+            "hotel_performance_view",
+            b"hotel_performance_view",
+            "keyword_plan",
+            b"keyword_plan",
+            "keyword_plan_ad_group",
+            b"keyword_plan_ad_group",
+            "keyword_plan_campaign",
+            b"keyword_plan_campaign",
+            "keyword_plan_keyword",
+            b"keyword_plan_keyword",
+            "keyword_plan_negative_keyword",
+            b"keyword_plan_negative_keyword",
+            "keyword_view",
+            b"keyword_view",
+            "label",
+            b"label",
+            "landing_page_view",
+            b"landing_page_view",
+            "language_constant",
+            b"language_constant",
+            "location_view",
+            b"location_view",
+            "managed_placement_view",
+            b"managed_placement_view",
+            "media_file",
+            b"media_file",
+            "metrics",
+            b"metrics",
+            "mobile_app_category_constant",
+            b"mobile_app_category_constant",
+            "mobile_device_constant",
+            b"mobile_device_constant",
+            "mutate_job",
+            b"mutate_job",
+            "operating_system_version_constant",
+            b"operating_system_version_constant",
+            "paid_organic_search_term_view",
+            b"paid_organic_search_term_view",
+            "parental_status_view",
+            b"parental_status_view",
+            "product_bidding_category_constant",
+            b"product_bidding_category_constant",
+            "product_group_view",
+            b"product_group_view",
+            "recommendation",
+            b"recommendation",
+            "remarketing_action",
+            b"remarketing_action",
+            "search_term_view",
+            b"search_term_view",
+            "segments",
+            b"segments",
+            "shared_criterion",
+            b"shared_criterion",
+            "shared_set",
+            b"shared_set",
+            "shopping_performance_view",
+            b"shopping_performance_view",
+            "topic_constant",
+            b"topic_constant",
+            "topic_view",
+            b"topic_view",
+            "user_interest",
+            b"user_interest",
+            "user_list",
+            b"user_list",
+            "video",
+            b"video",
+        ],
+    ) -> None: ...
+
 global___GoogleAdsRow = GoogleAdsRow
 
 class MutateGoogleAdsRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    customer_id = ... # type: typing___Text
-    partial_failure = ... # type: builtin___bool
-    validate_only = ... # type: builtin___bool
-
+    customer_id = ...  # type: typing___Text
+    partial_failure = ...  # type: builtin___bool
+    validate_only = ...  # type: builtin___bool
     @property
-    def mutate_operations(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[global___MutateOperation]: ...
-
-    def __init__(self,
+    def mutate_operations(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        global___MutateOperation
+    ]: ...
+    def __init__(
+        self,
         *,
-        customer_id : typing___Optional[typing___Text] = None,
-        mutate_operations : typing___Optional[typing___Iterable[global___MutateOperation]] = None,
-        partial_failure : typing___Optional[builtin___bool] = None,
-        validate_only : typing___Optional[builtin___bool] = None,
-        ) -> None: ...
+        customer_id: typing___Optional[typing___Text] = None,
+        mutate_operations: typing___Optional[
+            typing___Iterable[global___MutateOperation]
+        ] = None,
+        partial_failure: typing___Optional[builtin___bool] = None,
+        validate_only: typing___Optional[builtin___bool] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MutateGoogleAdsRequest: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MutateGoogleAdsRequest: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MutateGoogleAdsRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"mutate_operations",b"mutate_operations",u"partial_failure",b"partial_failure",u"validate_only",b"validate_only"]) -> None: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "customer_id",
+            b"customer_id",
+            "mutate_operations",
+            b"mutate_operations",
+            "partial_failure",
+            b"partial_failure",
+            "validate_only",
+            b"validate_only",
+        ],
+    ) -> None: ...
+
 global___MutateGoogleAdsRequest = MutateGoogleAdsRequest
 
 class MutateGoogleAdsResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def partial_failure_error(self) -> google___rpc___status_pb2___Status: ...
-
     @property
-    def mutate_operation_responses(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[global___MutateOperationResponse]: ...
-
-    def __init__(self,
+    def mutate_operation_responses(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        global___MutateOperationResponse
+    ]: ...
+    def __init__(
+        self,
         *,
-        partial_failure_error : typing___Optional[google___rpc___status_pb2___Status] = None,
-        mutate_operation_responses : typing___Optional[typing___Iterable[global___MutateOperationResponse]] = None,
-        ) -> None: ...
+        partial_failure_error: typing___Optional[
+            google___rpc___status_pb2___Status
+        ] = None,
+        mutate_operation_responses: typing___Optional[
+            typing___Iterable[global___MutateOperationResponse]
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MutateGoogleAdsResponse: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MutateGoogleAdsResponse: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MutateGoogleAdsResponse: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"partial_failure_error",b"partial_failure_error"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"mutate_operation_responses",b"mutate_operation_responses",u"partial_failure_error",b"partial_failure_error"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "partial_failure_error", b"partial_failure_error"
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "mutate_operation_responses",
+            b"mutate_operation_responses",
+            "partial_failure_error",
+            b"partial_failure_error",
+        ],
+    ) -> None: ...
+
 global___MutateGoogleAdsResponse = MutateGoogleAdsResponse
 
 class MutateOperation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
-    def ad_group_ad_label_operation(self) -> google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___AdGroupAdLabelOperation: ...
-
+    def ad_group_ad_label_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___AdGroupAdLabelOperation: ...
     @property
-    def ad_group_ad_operation(self) -> google___ads___googleads___v1___services___ad_group_ad_service_pb2___AdGroupAdOperation: ...
-
+    def ad_group_ad_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_ad_service_pb2___AdGroupAdOperation: ...
     @property
-    def ad_group_bid_modifier_operation(self) -> google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___AdGroupBidModifierOperation: ...
-
+    def ad_group_bid_modifier_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___AdGroupBidModifierOperation: ...
     @property
-    def ad_group_criterion_label_operation(self) -> google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___AdGroupCriterionLabelOperation: ...
-
+    def ad_group_criterion_label_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___AdGroupCriterionLabelOperation: ...
     @property
-    def ad_group_criterion_operation(self) -> google___ads___googleads___v1___services___ad_group_criterion_service_pb2___AdGroupCriterionOperation: ...
-
+    def ad_group_criterion_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_criterion_service_pb2___AdGroupCriterionOperation: ...
     @property
-    def ad_group_extension_setting_operation(self) -> google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___AdGroupExtensionSettingOperation: ...
-
+    def ad_group_extension_setting_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___AdGroupExtensionSettingOperation: ...
     @property
-    def ad_group_feed_operation(self) -> google___ads___googleads___v1___services___ad_group_feed_service_pb2___AdGroupFeedOperation: ...
-
+    def ad_group_feed_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_feed_service_pb2___AdGroupFeedOperation: ...
     @property
-    def ad_group_label_operation(self) -> google___ads___googleads___v1___services___ad_group_label_service_pb2___AdGroupLabelOperation: ...
-
+    def ad_group_label_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_label_service_pb2___AdGroupLabelOperation: ...
     @property
-    def ad_group_operation(self) -> google___ads___googleads___v1___services___ad_group_service_pb2___AdGroupOperation: ...
-
+    def ad_group_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_service_pb2___AdGroupOperation: ...
     @property
-    def ad_parameter_operation(self) -> google___ads___googleads___v1___services___ad_parameter_service_pb2___AdParameterOperation: ...
-
+    def ad_parameter_operation(
+        self
+    ) -> google___ads___googleads___v1___services___ad_parameter_service_pb2___AdParameterOperation: ...
     @property
-    def asset_operation(self) -> google___ads___googleads___v1___services___asset_service_pb2___AssetOperation: ...
-
+    def asset_operation(
+        self
+    ) -> google___ads___googleads___v1___services___asset_service_pb2___AssetOperation: ...
     @property
-    def bidding_strategy_operation(self) -> google___ads___googleads___v1___services___bidding_strategy_service_pb2___BiddingStrategyOperation: ...
-
+    def bidding_strategy_operation(
+        self
+    ) -> google___ads___googleads___v1___services___bidding_strategy_service_pb2___BiddingStrategyOperation: ...
     @property
-    def campaign_bid_modifier_operation(self) -> google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___CampaignBidModifierOperation: ...
-
+    def campaign_bid_modifier_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___CampaignBidModifierOperation: ...
     @property
-    def campaign_budget_operation(self) -> google___ads___googleads___v1___services___campaign_budget_service_pb2___CampaignBudgetOperation: ...
-
+    def campaign_budget_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_budget_service_pb2___CampaignBudgetOperation: ...
     @property
-    def campaign_criterion_operation(self) -> google___ads___googleads___v1___services___campaign_criterion_service_pb2___CampaignCriterionOperation: ...
-
+    def campaign_criterion_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_criterion_service_pb2___CampaignCriterionOperation: ...
     @property
-    def campaign_draft_operation(self) -> google___ads___googleads___v1___services___campaign_draft_service_pb2___CampaignDraftOperation: ...
-
+    def campaign_draft_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_draft_service_pb2___CampaignDraftOperation: ...
     @property
-    def campaign_experiment_operation(self) -> google___ads___googleads___v1___services___campaign_experiment_service_pb2___CampaignExperimentOperation: ...
-
+    def campaign_experiment_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_experiment_service_pb2___CampaignExperimentOperation: ...
     @property
-    def campaign_extension_setting_operation(self) -> google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___CampaignExtensionSettingOperation: ...
-
+    def campaign_extension_setting_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___CampaignExtensionSettingOperation: ...
     @property
-    def campaign_feed_operation(self) -> google___ads___googleads___v1___services___campaign_feed_service_pb2___CampaignFeedOperation: ...
-
+    def campaign_feed_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_feed_service_pb2___CampaignFeedOperation: ...
     @property
-    def campaign_label_operation(self) -> google___ads___googleads___v1___services___campaign_label_service_pb2___CampaignLabelOperation: ...
-
+    def campaign_label_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_label_service_pb2___CampaignLabelOperation: ...
     @property
-    def campaign_operation(self) -> google___ads___googleads___v1___services___campaign_service_pb2___CampaignOperation: ...
-
+    def campaign_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_service_pb2___CampaignOperation: ...
     @property
-    def campaign_shared_set_operation(self) -> google___ads___googleads___v1___services___campaign_shared_set_service_pb2___CampaignSharedSetOperation: ...
-
+    def campaign_shared_set_operation(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_shared_set_service_pb2___CampaignSharedSetOperation: ...
     @property
-    def conversion_action_operation(self) -> google___ads___googleads___v1___services___conversion_action_service_pb2___ConversionActionOperation: ...
-
+    def conversion_action_operation(
+        self
+    ) -> google___ads___googleads___v1___services___conversion_action_service_pb2___ConversionActionOperation: ...
     @property
-    def customer_extension_setting_operation(self) -> google___ads___googleads___v1___services___customer_extension_setting_service_pb2___CustomerExtensionSettingOperation: ...
-
+    def customer_extension_setting_operation(
+        self
+    ) -> google___ads___googleads___v1___services___customer_extension_setting_service_pb2___CustomerExtensionSettingOperation: ...
     @property
-    def customer_feed_operation(self) -> google___ads___googleads___v1___services___customer_feed_service_pb2___CustomerFeedOperation: ...
-
+    def customer_feed_operation(
+        self
+    ) -> google___ads___googleads___v1___services___customer_feed_service_pb2___CustomerFeedOperation: ...
     @property
-    def customer_label_operation(self) -> google___ads___googleads___v1___services___customer_label_service_pb2___CustomerLabelOperation: ...
-
+    def customer_label_operation(
+        self
+    ) -> google___ads___googleads___v1___services___customer_label_service_pb2___CustomerLabelOperation: ...
     @property
-    def customer_negative_criterion_operation(self) -> google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___CustomerNegativeCriterionOperation: ...
-
+    def customer_negative_criterion_operation(
+        self
+    ) -> google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___CustomerNegativeCriterionOperation: ...
     @property
-    def customer_operation(self) -> google___ads___googleads___v1___services___customer_service_pb2___CustomerOperation: ...
-
+    def customer_operation(
+        self
+    ) -> google___ads___googleads___v1___services___customer_service_pb2___CustomerOperation: ...
     @property
-    def extension_feed_item_operation(self) -> google___ads___googleads___v1___services___extension_feed_item_service_pb2___ExtensionFeedItemOperation: ...
-
+    def extension_feed_item_operation(
+        self
+    ) -> google___ads___googleads___v1___services___extension_feed_item_service_pb2___ExtensionFeedItemOperation: ...
     @property
-    def feed_item_operation(self) -> google___ads___googleads___v1___services___feed_item_service_pb2___FeedItemOperation: ...
-
+    def feed_item_operation(
+        self
+    ) -> google___ads___googleads___v1___services___feed_item_service_pb2___FeedItemOperation: ...
     @property
-    def feed_item_target_operation(self) -> google___ads___googleads___v1___services___feed_item_target_service_pb2___FeedItemTargetOperation: ...
-
+    def feed_item_target_operation(
+        self
+    ) -> google___ads___googleads___v1___services___feed_item_target_service_pb2___FeedItemTargetOperation: ...
     @property
-    def feed_mapping_operation(self) -> google___ads___googleads___v1___services___feed_mapping_service_pb2___FeedMappingOperation: ...
-
+    def feed_mapping_operation(
+        self
+    ) -> google___ads___googleads___v1___services___feed_mapping_service_pb2___FeedMappingOperation: ...
     @property
-    def feed_operation(self) -> google___ads___googleads___v1___services___feed_service_pb2___FeedOperation: ...
-
+    def feed_operation(
+        self
+    ) -> google___ads___googleads___v1___services___feed_service_pb2___FeedOperation: ...
     @property
-    def label_operation(self) -> google___ads___googleads___v1___services___label_service_pb2___LabelOperation: ...
-
+    def label_operation(
+        self
+    ) -> google___ads___googleads___v1___services___label_service_pb2___LabelOperation: ...
     @property
-    def media_file_operation(self) -> google___ads___googleads___v1___services___media_file_service_pb2___MediaFileOperation: ...
-
+    def media_file_operation(
+        self
+    ) -> google___ads___googleads___v1___services___media_file_service_pb2___MediaFileOperation: ...
     @property
-    def remarketing_action_operation(self) -> google___ads___googleads___v1___services___remarketing_action_service_pb2___RemarketingActionOperation: ...
-
+    def remarketing_action_operation(
+        self
+    ) -> google___ads___googleads___v1___services___remarketing_action_service_pb2___RemarketingActionOperation: ...
     @property
-    def shared_criterion_operation(self) -> google___ads___googleads___v1___services___shared_criterion_service_pb2___SharedCriterionOperation: ...
-
+    def shared_criterion_operation(
+        self
+    ) -> google___ads___googleads___v1___services___shared_criterion_service_pb2___SharedCriterionOperation: ...
     @property
-    def shared_set_operation(self) -> google___ads___googleads___v1___services___shared_set_service_pb2___SharedSetOperation: ...
-
+    def shared_set_operation(
+        self
+    ) -> google___ads___googleads___v1___services___shared_set_service_pb2___SharedSetOperation: ...
     @property
-    def user_list_operation(self) -> google___ads___googleads___v1___services___user_list_service_pb2___UserListOperation: ...
-
-    def __init__(self,
+    def user_list_operation(
+        self
+    ) -> google___ads___googleads___v1___services___user_list_service_pb2___UserListOperation: ...
+    def __init__(
+        self,
         *,
-        ad_group_ad_label_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___AdGroupAdLabelOperation] = None,
-        ad_group_ad_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_ad_service_pb2___AdGroupAdOperation] = None,
-        ad_group_bid_modifier_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___AdGroupBidModifierOperation] = None,
-        ad_group_criterion_label_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___AdGroupCriterionLabelOperation] = None,
-        ad_group_criterion_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_criterion_service_pb2___AdGroupCriterionOperation] = None,
-        ad_group_extension_setting_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___AdGroupExtensionSettingOperation] = None,
-        ad_group_feed_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_feed_service_pb2___AdGroupFeedOperation] = None,
-        ad_group_label_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_label_service_pb2___AdGroupLabelOperation] = None,
-        ad_group_operation : typing___Optional[google___ads___googleads___v1___services___ad_group_service_pb2___AdGroupOperation] = None,
-        ad_parameter_operation : typing___Optional[google___ads___googleads___v1___services___ad_parameter_service_pb2___AdParameterOperation] = None,
-        asset_operation : typing___Optional[google___ads___googleads___v1___services___asset_service_pb2___AssetOperation] = None,
-        bidding_strategy_operation : typing___Optional[google___ads___googleads___v1___services___bidding_strategy_service_pb2___BiddingStrategyOperation] = None,
-        campaign_bid_modifier_operation : typing___Optional[google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___CampaignBidModifierOperation] = None,
-        campaign_budget_operation : typing___Optional[google___ads___googleads___v1___services___campaign_budget_service_pb2___CampaignBudgetOperation] = None,
-        campaign_criterion_operation : typing___Optional[google___ads___googleads___v1___services___campaign_criterion_service_pb2___CampaignCriterionOperation] = None,
-        campaign_draft_operation : typing___Optional[google___ads___googleads___v1___services___campaign_draft_service_pb2___CampaignDraftOperation] = None,
-        campaign_experiment_operation : typing___Optional[google___ads___googleads___v1___services___campaign_experiment_service_pb2___CampaignExperimentOperation] = None,
-        campaign_extension_setting_operation : typing___Optional[google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___CampaignExtensionSettingOperation] = None,
-        campaign_feed_operation : typing___Optional[google___ads___googleads___v1___services___campaign_feed_service_pb2___CampaignFeedOperation] = None,
-        campaign_label_operation : typing___Optional[google___ads___googleads___v1___services___campaign_label_service_pb2___CampaignLabelOperation] = None,
-        campaign_operation : typing___Optional[google___ads___googleads___v1___services___campaign_service_pb2___CampaignOperation] = None,
-        campaign_shared_set_operation : typing___Optional[google___ads___googleads___v1___services___campaign_shared_set_service_pb2___CampaignSharedSetOperation] = None,
-        conversion_action_operation : typing___Optional[google___ads___googleads___v1___services___conversion_action_service_pb2___ConversionActionOperation] = None,
-        customer_extension_setting_operation : typing___Optional[google___ads___googleads___v1___services___customer_extension_setting_service_pb2___CustomerExtensionSettingOperation] = None,
-        customer_feed_operation : typing___Optional[google___ads___googleads___v1___services___customer_feed_service_pb2___CustomerFeedOperation] = None,
-        customer_label_operation : typing___Optional[google___ads___googleads___v1___services___customer_label_service_pb2___CustomerLabelOperation] = None,
-        customer_negative_criterion_operation : typing___Optional[google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___CustomerNegativeCriterionOperation] = None,
-        customer_operation : typing___Optional[google___ads___googleads___v1___services___customer_service_pb2___CustomerOperation] = None,
-        extension_feed_item_operation : typing___Optional[google___ads___googleads___v1___services___extension_feed_item_service_pb2___ExtensionFeedItemOperation] = None,
-        feed_item_operation : typing___Optional[google___ads___googleads___v1___services___feed_item_service_pb2___FeedItemOperation] = None,
-        feed_item_target_operation : typing___Optional[google___ads___googleads___v1___services___feed_item_target_service_pb2___FeedItemTargetOperation] = None,
-        feed_mapping_operation : typing___Optional[google___ads___googleads___v1___services___feed_mapping_service_pb2___FeedMappingOperation] = None,
-        feed_operation : typing___Optional[google___ads___googleads___v1___services___feed_service_pb2___FeedOperation] = None,
-        label_operation : typing___Optional[google___ads___googleads___v1___services___label_service_pb2___LabelOperation] = None,
-        media_file_operation : typing___Optional[google___ads___googleads___v1___services___media_file_service_pb2___MediaFileOperation] = None,
-        remarketing_action_operation : typing___Optional[google___ads___googleads___v1___services___remarketing_action_service_pb2___RemarketingActionOperation] = None,
-        shared_criterion_operation : typing___Optional[google___ads___googleads___v1___services___shared_criterion_service_pb2___SharedCriterionOperation] = None,
-        shared_set_operation : typing___Optional[google___ads___googleads___v1___services___shared_set_service_pb2___SharedSetOperation] = None,
-        user_list_operation : typing___Optional[google___ads___googleads___v1___services___user_list_service_pb2___UserListOperation] = None,
-        ) -> None: ...
+        ad_group_ad_label_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___AdGroupAdLabelOperation
+        ] = None,
+        ad_group_ad_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_ad_service_pb2___AdGroupAdOperation
+        ] = None,
+        ad_group_bid_modifier_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___AdGroupBidModifierOperation
+        ] = None,
+        ad_group_criterion_label_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___AdGroupCriterionLabelOperation
+        ] = None,
+        ad_group_criterion_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_criterion_service_pb2___AdGroupCriterionOperation
+        ] = None,
+        ad_group_extension_setting_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___AdGroupExtensionSettingOperation
+        ] = None,
+        ad_group_feed_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_feed_service_pb2___AdGroupFeedOperation
+        ] = None,
+        ad_group_label_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_label_service_pb2___AdGroupLabelOperation
+        ] = None,
+        ad_group_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_service_pb2___AdGroupOperation
+        ] = None,
+        ad_parameter_operation: typing___Optional[
+            google___ads___googleads___v1___services___ad_parameter_service_pb2___AdParameterOperation
+        ] = None,
+        asset_operation: typing___Optional[
+            google___ads___googleads___v1___services___asset_service_pb2___AssetOperation
+        ] = None,
+        bidding_strategy_operation: typing___Optional[
+            google___ads___googleads___v1___services___bidding_strategy_service_pb2___BiddingStrategyOperation
+        ] = None,
+        campaign_bid_modifier_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___CampaignBidModifierOperation
+        ] = None,
+        campaign_budget_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_budget_service_pb2___CampaignBudgetOperation
+        ] = None,
+        campaign_criterion_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_criterion_service_pb2___CampaignCriterionOperation
+        ] = None,
+        campaign_draft_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_draft_service_pb2___CampaignDraftOperation
+        ] = None,
+        campaign_experiment_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_experiment_service_pb2___CampaignExperimentOperation
+        ] = None,
+        campaign_extension_setting_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___CampaignExtensionSettingOperation
+        ] = None,
+        campaign_feed_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_feed_service_pb2___CampaignFeedOperation
+        ] = None,
+        campaign_label_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_label_service_pb2___CampaignLabelOperation
+        ] = None,
+        campaign_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_service_pb2___CampaignOperation
+        ] = None,
+        campaign_shared_set_operation: typing___Optional[
+            google___ads___googleads___v1___services___campaign_shared_set_service_pb2___CampaignSharedSetOperation
+        ] = None,
+        conversion_action_operation: typing___Optional[
+            google___ads___googleads___v1___services___conversion_action_service_pb2___ConversionActionOperation
+        ] = None,
+        customer_extension_setting_operation: typing___Optional[
+            google___ads___googleads___v1___services___customer_extension_setting_service_pb2___CustomerExtensionSettingOperation
+        ] = None,
+        customer_feed_operation: typing___Optional[
+            google___ads___googleads___v1___services___customer_feed_service_pb2___CustomerFeedOperation
+        ] = None,
+        customer_label_operation: typing___Optional[
+            google___ads___googleads___v1___services___customer_label_service_pb2___CustomerLabelOperation
+        ] = None,
+        customer_negative_criterion_operation: typing___Optional[
+            google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___CustomerNegativeCriterionOperation
+        ] = None,
+        customer_operation: typing___Optional[
+            google___ads___googleads___v1___services___customer_service_pb2___CustomerOperation
+        ] = None,
+        extension_feed_item_operation: typing___Optional[
+            google___ads___googleads___v1___services___extension_feed_item_service_pb2___ExtensionFeedItemOperation
+        ] = None,
+        feed_item_operation: typing___Optional[
+            google___ads___googleads___v1___services___feed_item_service_pb2___FeedItemOperation
+        ] = None,
+        feed_item_target_operation: typing___Optional[
+            google___ads___googleads___v1___services___feed_item_target_service_pb2___FeedItemTargetOperation
+        ] = None,
+        feed_mapping_operation: typing___Optional[
+            google___ads___googleads___v1___services___feed_mapping_service_pb2___FeedMappingOperation
+        ] = None,
+        feed_operation: typing___Optional[
+            google___ads___googleads___v1___services___feed_service_pb2___FeedOperation
+        ] = None,
+        label_operation: typing___Optional[
+            google___ads___googleads___v1___services___label_service_pb2___LabelOperation
+        ] = None,
+        media_file_operation: typing___Optional[
+            google___ads___googleads___v1___services___media_file_service_pb2___MediaFileOperation
+        ] = None,
+        remarketing_action_operation: typing___Optional[
+            google___ads___googleads___v1___services___remarketing_action_service_pb2___RemarketingActionOperation
+        ] = None,
+        shared_criterion_operation: typing___Optional[
+            google___ads___googleads___v1___services___shared_criterion_service_pb2___SharedCriterionOperation
+        ] = None,
+        shared_set_operation: typing___Optional[
+            google___ads___googleads___v1___services___shared_set_service_pb2___SharedSetOperation
+        ] = None,
+        user_list_operation: typing___Optional[
+            google___ads___googleads___v1___services___user_list_service_pb2___UserListOperation
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MutateOperation: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MutateOperation: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MutateOperation: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"ad_group_ad_label_operation",b"ad_group_ad_label_operation",u"ad_group_ad_operation",b"ad_group_ad_operation",u"ad_group_bid_modifier_operation",b"ad_group_bid_modifier_operation",u"ad_group_criterion_label_operation",b"ad_group_criterion_label_operation",u"ad_group_criterion_operation",b"ad_group_criterion_operation",u"ad_group_extension_setting_operation",b"ad_group_extension_setting_operation",u"ad_group_feed_operation",b"ad_group_feed_operation",u"ad_group_label_operation",b"ad_group_label_operation",u"ad_group_operation",b"ad_group_operation",u"ad_parameter_operation",b"ad_parameter_operation",u"asset_operation",b"asset_operation",u"bidding_strategy_operation",b"bidding_strategy_operation",u"campaign_bid_modifier_operation",b"campaign_bid_modifier_operation",u"campaign_budget_operation",b"campaign_budget_operation",u"campaign_criterion_operation",b"campaign_criterion_operation",u"campaign_draft_operation",b"campaign_draft_operation",u"campaign_experiment_operation",b"campaign_experiment_operation",u"campaign_extension_setting_operation",b"campaign_extension_setting_operation",u"campaign_feed_operation",b"campaign_feed_operation",u"campaign_label_operation",b"campaign_label_operation",u"campaign_operation",b"campaign_operation",u"campaign_shared_set_operation",b"campaign_shared_set_operation",u"conversion_action_operation",b"conversion_action_operation",u"customer_extension_setting_operation",b"customer_extension_setting_operation",u"customer_feed_operation",b"customer_feed_operation",u"customer_label_operation",b"customer_label_operation",u"customer_negative_criterion_operation",b"customer_negative_criterion_operation",u"customer_operation",b"customer_operation",u"extension_feed_item_operation",b"extension_feed_item_operation",u"feed_item_operation",b"feed_item_operation",u"feed_item_target_operation",b"feed_item_target_operation",u"feed_mapping_operation",b"feed_mapping_operation",u"feed_operation",b"feed_operation",u"label_operation",b"label_operation",u"media_file_operation",b"media_file_operation",u"operation",b"operation",u"remarketing_action_operation",b"remarketing_action_operation",u"shared_criterion_operation",b"shared_criterion_operation",u"shared_set_operation",b"shared_set_operation",u"user_list_operation",b"user_list_operation"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_ad_label_operation",b"ad_group_ad_label_operation",u"ad_group_ad_operation",b"ad_group_ad_operation",u"ad_group_bid_modifier_operation",b"ad_group_bid_modifier_operation",u"ad_group_criterion_label_operation",b"ad_group_criterion_label_operation",u"ad_group_criterion_operation",b"ad_group_criterion_operation",u"ad_group_extension_setting_operation",b"ad_group_extension_setting_operation",u"ad_group_feed_operation",b"ad_group_feed_operation",u"ad_group_label_operation",b"ad_group_label_operation",u"ad_group_operation",b"ad_group_operation",u"ad_parameter_operation",b"ad_parameter_operation",u"asset_operation",b"asset_operation",u"bidding_strategy_operation",b"bidding_strategy_operation",u"campaign_bid_modifier_operation",b"campaign_bid_modifier_operation",u"campaign_budget_operation",b"campaign_budget_operation",u"campaign_criterion_operation",b"campaign_criterion_operation",u"campaign_draft_operation",b"campaign_draft_operation",u"campaign_experiment_operation",b"campaign_experiment_operation",u"campaign_extension_setting_operation",b"campaign_extension_setting_operation",u"campaign_feed_operation",b"campaign_feed_operation",u"campaign_label_operation",b"campaign_label_operation",u"campaign_operation",b"campaign_operation",u"campaign_shared_set_operation",b"campaign_shared_set_operation",u"conversion_action_operation",b"conversion_action_operation",u"customer_extension_setting_operation",b"customer_extension_setting_operation",u"customer_feed_operation",b"customer_feed_operation",u"customer_label_operation",b"customer_label_operation",u"customer_negative_criterion_operation",b"customer_negative_criterion_operation",u"customer_operation",b"customer_operation",u"extension_feed_item_operation",b"extension_feed_item_operation",u"feed_item_operation",b"feed_item_operation",u"feed_item_target_operation",b"feed_item_target_operation",u"feed_mapping_operation",b"feed_mapping_operation",u"feed_operation",b"feed_operation",u"label_operation",b"label_operation",u"media_file_operation",b"media_file_operation",u"operation",b"operation",u"remarketing_action_operation",b"remarketing_action_operation",u"shared_criterion_operation",b"shared_criterion_operation",u"shared_set_operation",b"shared_set_operation",u"user_list_operation",b"user_list_operation"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["ad_group_ad_label_operation","ad_group_ad_operation","ad_group_bid_modifier_operation","ad_group_criterion_label_operation","ad_group_criterion_operation","ad_group_extension_setting_operation","ad_group_feed_operation","ad_group_label_operation","ad_group_operation","ad_parameter_operation","asset_operation","bidding_strategy_operation","campaign_bid_modifier_operation","campaign_budget_operation","campaign_criterion_operation","campaign_draft_operation","campaign_experiment_operation","campaign_extension_setting_operation","campaign_feed_operation","campaign_label_operation","campaign_operation","campaign_shared_set_operation","conversion_action_operation","customer_extension_setting_operation","customer_feed_operation","customer_label_operation","customer_negative_criterion_operation","customer_operation","extension_feed_item_operation","feed_item_operation","feed_item_target_operation","feed_mapping_operation","feed_operation","label_operation","media_file_operation","remarketing_action_operation","shared_criterion_operation","shared_set_operation","user_list_operation"]: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group_ad_label_operation",
+            b"ad_group_ad_label_operation",
+            "ad_group_ad_operation",
+            b"ad_group_ad_operation",
+            "ad_group_bid_modifier_operation",
+            b"ad_group_bid_modifier_operation",
+            "ad_group_criterion_label_operation",
+            b"ad_group_criterion_label_operation",
+            "ad_group_criterion_operation",
+            b"ad_group_criterion_operation",
+            "ad_group_extension_setting_operation",
+            b"ad_group_extension_setting_operation",
+            "ad_group_feed_operation",
+            b"ad_group_feed_operation",
+            "ad_group_label_operation",
+            b"ad_group_label_operation",
+            "ad_group_operation",
+            b"ad_group_operation",
+            "ad_parameter_operation",
+            b"ad_parameter_operation",
+            "asset_operation",
+            b"asset_operation",
+            "bidding_strategy_operation",
+            b"bidding_strategy_operation",
+            "campaign_bid_modifier_operation",
+            b"campaign_bid_modifier_operation",
+            "campaign_budget_operation",
+            b"campaign_budget_operation",
+            "campaign_criterion_operation",
+            b"campaign_criterion_operation",
+            "campaign_draft_operation",
+            b"campaign_draft_operation",
+            "campaign_experiment_operation",
+            b"campaign_experiment_operation",
+            "campaign_extension_setting_operation",
+            b"campaign_extension_setting_operation",
+            "campaign_feed_operation",
+            b"campaign_feed_operation",
+            "campaign_label_operation",
+            b"campaign_label_operation",
+            "campaign_operation",
+            b"campaign_operation",
+            "campaign_shared_set_operation",
+            b"campaign_shared_set_operation",
+            "conversion_action_operation",
+            b"conversion_action_operation",
+            "customer_extension_setting_operation",
+            b"customer_extension_setting_operation",
+            "customer_feed_operation",
+            b"customer_feed_operation",
+            "customer_label_operation",
+            b"customer_label_operation",
+            "customer_negative_criterion_operation",
+            b"customer_negative_criterion_operation",
+            "customer_operation",
+            b"customer_operation",
+            "extension_feed_item_operation",
+            b"extension_feed_item_operation",
+            "feed_item_operation",
+            b"feed_item_operation",
+            "feed_item_target_operation",
+            b"feed_item_target_operation",
+            "feed_mapping_operation",
+            b"feed_mapping_operation",
+            "feed_operation",
+            b"feed_operation",
+            "label_operation",
+            b"label_operation",
+            "media_file_operation",
+            b"media_file_operation",
+            "operation",
+            b"operation",
+            "remarketing_action_operation",
+            b"remarketing_action_operation",
+            "shared_criterion_operation",
+            b"shared_criterion_operation",
+            "shared_set_operation",
+            b"shared_set_operation",
+            "user_list_operation",
+            b"user_list_operation",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group_ad_label_operation",
+            b"ad_group_ad_label_operation",
+            "ad_group_ad_operation",
+            b"ad_group_ad_operation",
+            "ad_group_bid_modifier_operation",
+            b"ad_group_bid_modifier_operation",
+            "ad_group_criterion_label_operation",
+            b"ad_group_criterion_label_operation",
+            "ad_group_criterion_operation",
+            b"ad_group_criterion_operation",
+            "ad_group_extension_setting_operation",
+            b"ad_group_extension_setting_operation",
+            "ad_group_feed_operation",
+            b"ad_group_feed_operation",
+            "ad_group_label_operation",
+            b"ad_group_label_operation",
+            "ad_group_operation",
+            b"ad_group_operation",
+            "ad_parameter_operation",
+            b"ad_parameter_operation",
+            "asset_operation",
+            b"asset_operation",
+            "bidding_strategy_operation",
+            b"bidding_strategy_operation",
+            "campaign_bid_modifier_operation",
+            b"campaign_bid_modifier_operation",
+            "campaign_budget_operation",
+            b"campaign_budget_operation",
+            "campaign_criterion_operation",
+            b"campaign_criterion_operation",
+            "campaign_draft_operation",
+            b"campaign_draft_operation",
+            "campaign_experiment_operation",
+            b"campaign_experiment_operation",
+            "campaign_extension_setting_operation",
+            b"campaign_extension_setting_operation",
+            "campaign_feed_operation",
+            b"campaign_feed_operation",
+            "campaign_label_operation",
+            b"campaign_label_operation",
+            "campaign_operation",
+            b"campaign_operation",
+            "campaign_shared_set_operation",
+            b"campaign_shared_set_operation",
+            "conversion_action_operation",
+            b"conversion_action_operation",
+            "customer_extension_setting_operation",
+            b"customer_extension_setting_operation",
+            "customer_feed_operation",
+            b"customer_feed_operation",
+            "customer_label_operation",
+            b"customer_label_operation",
+            "customer_negative_criterion_operation",
+            b"customer_negative_criterion_operation",
+            "customer_operation",
+            b"customer_operation",
+            "extension_feed_item_operation",
+            b"extension_feed_item_operation",
+            "feed_item_operation",
+            b"feed_item_operation",
+            "feed_item_target_operation",
+            b"feed_item_target_operation",
+            "feed_mapping_operation",
+            b"feed_mapping_operation",
+            "feed_operation",
+            b"feed_operation",
+            "label_operation",
+            b"label_operation",
+            "media_file_operation",
+            b"media_file_operation",
+            "operation",
+            b"operation",
+            "remarketing_action_operation",
+            b"remarketing_action_operation",
+            "shared_criterion_operation",
+            b"shared_criterion_operation",
+            "shared_set_operation",
+            b"shared_set_operation",
+            "user_list_operation",
+            b"user_list_operation",
+        ],
+    ) -> None: ...
+    def WhichOneof(
+        self, oneof_group: typing_extensions___Literal["operation", b"operation"]
+    ) -> typing_extensions___Literal[
+        "ad_group_ad_label_operation",
+        "ad_group_ad_operation",
+        "ad_group_bid_modifier_operation",
+        "ad_group_criterion_label_operation",
+        "ad_group_criterion_operation",
+        "ad_group_extension_setting_operation",
+        "ad_group_feed_operation",
+        "ad_group_label_operation",
+        "ad_group_operation",
+        "ad_parameter_operation",
+        "asset_operation",
+        "bidding_strategy_operation",
+        "campaign_bid_modifier_operation",
+        "campaign_budget_operation",
+        "campaign_criterion_operation",
+        "campaign_draft_operation",
+        "campaign_experiment_operation",
+        "campaign_extension_setting_operation",
+        "campaign_feed_operation",
+        "campaign_label_operation",
+        "campaign_operation",
+        "campaign_shared_set_operation",
+        "conversion_action_operation",
+        "customer_extension_setting_operation",
+        "customer_feed_operation",
+        "customer_label_operation",
+        "customer_negative_criterion_operation",
+        "customer_operation",
+        "extension_feed_item_operation",
+        "feed_item_operation",
+        "feed_item_target_operation",
+        "feed_mapping_operation",
+        "feed_operation",
+        "label_operation",
+        "media_file_operation",
+        "remarketing_action_operation",
+        "shared_criterion_operation",
+        "shared_set_operation",
+        "user_list_operation",
+    ]: ...
+
 global___MutateOperation = MutateOperation
 
 class MutateOperationResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
-    def ad_group_ad_label_result(self) -> google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___MutateAdGroupAdLabelResult: ...
-
+    def ad_group_ad_label_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___MutateAdGroupAdLabelResult: ...
     @property
-    def ad_group_ad_result(self) -> google___ads___googleads___v1___services___ad_group_ad_service_pb2___MutateAdGroupAdResult: ...
-
+    def ad_group_ad_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_ad_service_pb2___MutateAdGroupAdResult: ...
     @property
-    def ad_group_bid_modifier_result(self) -> google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___MutateAdGroupBidModifierResult: ...
-
+    def ad_group_bid_modifier_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___MutateAdGroupBidModifierResult: ...
     @property
-    def ad_group_criterion_label_result(self) -> google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___MutateAdGroupCriterionLabelResult: ...
-
+    def ad_group_criterion_label_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___MutateAdGroupCriterionLabelResult: ...
     @property
-    def ad_group_criterion_result(self) -> google___ads___googleads___v1___services___ad_group_criterion_service_pb2___MutateAdGroupCriterionResult: ...
-
+    def ad_group_criterion_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_criterion_service_pb2___MutateAdGroupCriterionResult: ...
     @property
-    def ad_group_extension_setting_result(self) -> google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___MutateAdGroupExtensionSettingResult: ...
-
+    def ad_group_extension_setting_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___MutateAdGroupExtensionSettingResult: ...
     @property
-    def ad_group_feed_result(self) -> google___ads___googleads___v1___services___ad_group_feed_service_pb2___MutateAdGroupFeedResult: ...
-
+    def ad_group_feed_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_feed_service_pb2___MutateAdGroupFeedResult: ...
     @property
-    def ad_group_label_result(self) -> google___ads___googleads___v1___services___ad_group_label_service_pb2___MutateAdGroupLabelResult: ...
-
+    def ad_group_label_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_label_service_pb2___MutateAdGroupLabelResult: ...
     @property
-    def ad_group_result(self) -> google___ads___googleads___v1___services___ad_group_service_pb2___MutateAdGroupResult: ...
-
+    def ad_group_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_group_service_pb2___MutateAdGroupResult: ...
     @property
-    def ad_parameter_result(self) -> google___ads___googleads___v1___services___ad_parameter_service_pb2___MutateAdParameterResult: ...
-
+    def ad_parameter_result(
+        self
+    ) -> google___ads___googleads___v1___services___ad_parameter_service_pb2___MutateAdParameterResult: ...
     @property
-    def asset_result(self) -> google___ads___googleads___v1___services___asset_service_pb2___MutateAssetResult: ...
-
+    def asset_result(
+        self
+    ) -> google___ads___googleads___v1___services___asset_service_pb2___MutateAssetResult: ...
     @property
-    def bidding_strategy_result(self) -> google___ads___googleads___v1___services___bidding_strategy_service_pb2___MutateBiddingStrategyResult: ...
-
+    def bidding_strategy_result(
+        self
+    ) -> google___ads___googleads___v1___services___bidding_strategy_service_pb2___MutateBiddingStrategyResult: ...
     @property
-    def campaign_bid_modifier_result(self) -> google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___MutateCampaignBidModifierResult: ...
-
+    def campaign_bid_modifier_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___MutateCampaignBidModifierResult: ...
     @property
-    def campaign_budget_result(self) -> google___ads___googleads___v1___services___campaign_budget_service_pb2___MutateCampaignBudgetResult: ...
-
+    def campaign_budget_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_budget_service_pb2___MutateCampaignBudgetResult: ...
     @property
-    def campaign_criterion_result(self) -> google___ads___googleads___v1___services___campaign_criterion_service_pb2___MutateCampaignCriterionResult: ...
-
+    def campaign_criterion_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_criterion_service_pb2___MutateCampaignCriterionResult: ...
     @property
-    def campaign_draft_result(self) -> google___ads___googleads___v1___services___campaign_draft_service_pb2___MutateCampaignDraftResult: ...
-
+    def campaign_draft_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_draft_service_pb2___MutateCampaignDraftResult: ...
     @property
-    def campaign_experiment_result(self) -> google___ads___googleads___v1___services___campaign_experiment_service_pb2___MutateCampaignExperimentResult: ...
-
+    def campaign_experiment_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_experiment_service_pb2___MutateCampaignExperimentResult: ...
     @property
-    def campaign_extension_setting_result(self) -> google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___MutateCampaignExtensionSettingResult: ...
-
+    def campaign_extension_setting_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___MutateCampaignExtensionSettingResult: ...
     @property
-    def campaign_feed_result(self) -> google___ads___googleads___v1___services___campaign_feed_service_pb2___MutateCampaignFeedResult: ...
-
+    def campaign_feed_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_feed_service_pb2___MutateCampaignFeedResult: ...
     @property
-    def campaign_label_result(self) -> google___ads___googleads___v1___services___campaign_label_service_pb2___MutateCampaignLabelResult: ...
-
+    def campaign_label_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_label_service_pb2___MutateCampaignLabelResult: ...
     @property
-    def campaign_result(self) -> google___ads___googleads___v1___services___campaign_service_pb2___MutateCampaignResult: ...
-
+    def campaign_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_service_pb2___MutateCampaignResult: ...
     @property
-    def campaign_shared_set_result(self) -> google___ads___googleads___v1___services___campaign_shared_set_service_pb2___MutateCampaignSharedSetResult: ...
-
+    def campaign_shared_set_result(
+        self
+    ) -> google___ads___googleads___v1___services___campaign_shared_set_service_pb2___MutateCampaignSharedSetResult: ...
     @property
-    def conversion_action_result(self) -> google___ads___googleads___v1___services___conversion_action_service_pb2___MutateConversionActionResult: ...
-
+    def conversion_action_result(
+        self
+    ) -> google___ads___googleads___v1___services___conversion_action_service_pb2___MutateConversionActionResult: ...
     @property
-    def customer_extension_setting_result(self) -> google___ads___googleads___v1___services___customer_extension_setting_service_pb2___MutateCustomerExtensionSettingResult: ...
-
+    def customer_extension_setting_result(
+        self
+    ) -> google___ads___googleads___v1___services___customer_extension_setting_service_pb2___MutateCustomerExtensionSettingResult: ...
     @property
-    def customer_feed_result(self) -> google___ads___googleads___v1___services___customer_feed_service_pb2___MutateCustomerFeedResult: ...
-
+    def customer_feed_result(
+        self
+    ) -> google___ads___googleads___v1___services___customer_feed_service_pb2___MutateCustomerFeedResult: ...
     @property
-    def customer_label_result(self) -> google___ads___googleads___v1___services___customer_label_service_pb2___MutateCustomerLabelResult: ...
-
+    def customer_label_result(
+        self
+    ) -> google___ads___googleads___v1___services___customer_label_service_pb2___MutateCustomerLabelResult: ...
     @property
-    def customer_negative_criterion_result(self) -> google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___MutateCustomerNegativeCriteriaResult: ...
-
+    def customer_negative_criterion_result(
+        self
+    ) -> google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___MutateCustomerNegativeCriteriaResult: ...
     @property
-    def customer_result(self) -> google___ads___googleads___v1___services___customer_service_pb2___MutateCustomerResult: ...
-
+    def customer_result(
+        self
+    ) -> google___ads___googleads___v1___services___customer_service_pb2___MutateCustomerResult: ...
     @property
-    def extension_feed_item_result(self) -> google___ads___googleads___v1___services___extension_feed_item_service_pb2___MutateExtensionFeedItemResult: ...
-
+    def extension_feed_item_result(
+        self
+    ) -> google___ads___googleads___v1___services___extension_feed_item_service_pb2___MutateExtensionFeedItemResult: ...
     @property
-    def feed_item_result(self) -> google___ads___googleads___v1___services___feed_item_service_pb2___MutateFeedItemResult: ...
-
+    def feed_item_result(
+        self
+    ) -> google___ads___googleads___v1___services___feed_item_service_pb2___MutateFeedItemResult: ...
     @property
-    def feed_item_target_result(self) -> google___ads___googleads___v1___services___feed_item_target_service_pb2___MutateFeedItemTargetResult: ...
-
+    def feed_item_target_result(
+        self
+    ) -> google___ads___googleads___v1___services___feed_item_target_service_pb2___MutateFeedItemTargetResult: ...
     @property
-    def feed_mapping_result(self) -> google___ads___googleads___v1___services___feed_mapping_service_pb2___MutateFeedMappingResult: ...
-
+    def feed_mapping_result(
+        self
+    ) -> google___ads___googleads___v1___services___feed_mapping_service_pb2___MutateFeedMappingResult: ...
     @property
-    def feed_result(self) -> google___ads___googleads___v1___services___feed_service_pb2___MutateFeedResult: ...
-
+    def feed_result(
+        self
+    ) -> google___ads___googleads___v1___services___feed_service_pb2___MutateFeedResult: ...
     @property
-    def label_result(self) -> google___ads___googleads___v1___services___label_service_pb2___MutateLabelResult: ...
-
+    def label_result(
+        self
+    ) -> google___ads___googleads___v1___services___label_service_pb2___MutateLabelResult: ...
     @property
-    def media_file_result(self) -> google___ads___googleads___v1___services___media_file_service_pb2___MutateMediaFileResult: ...
-
+    def media_file_result(
+        self
+    ) -> google___ads___googleads___v1___services___media_file_service_pb2___MutateMediaFileResult: ...
     @property
-    def remarketing_action_result(self) -> google___ads___googleads___v1___services___remarketing_action_service_pb2___MutateRemarketingActionResult: ...
-
+    def remarketing_action_result(
+        self
+    ) -> google___ads___googleads___v1___services___remarketing_action_service_pb2___MutateRemarketingActionResult: ...
     @property
-    def shared_criterion_result(self) -> google___ads___googleads___v1___services___shared_criterion_service_pb2___MutateSharedCriterionResult: ...
-
+    def shared_criterion_result(
+        self
+    ) -> google___ads___googleads___v1___services___shared_criterion_service_pb2___MutateSharedCriterionResult: ...
     @property
-    def shared_set_result(self) -> google___ads___googleads___v1___services___shared_set_service_pb2___MutateSharedSetResult: ...
-
+    def shared_set_result(
+        self
+    ) -> google___ads___googleads___v1___services___shared_set_service_pb2___MutateSharedSetResult: ...
     @property
-    def user_list_result(self) -> google___ads___googleads___v1___services___user_list_service_pb2___MutateUserListResult: ...
-
-    def __init__(self,
+    def user_list_result(
+        self
+    ) -> google___ads___googleads___v1___services___user_list_service_pb2___MutateUserListResult: ...
+    def __init__(
+        self,
         *,
-        ad_group_ad_label_result : typing___Optional[google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___MutateAdGroupAdLabelResult] = None,
-        ad_group_ad_result : typing___Optional[google___ads___googleads___v1___services___ad_group_ad_service_pb2___MutateAdGroupAdResult] = None,
-        ad_group_bid_modifier_result : typing___Optional[google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___MutateAdGroupBidModifierResult] = None,
-        ad_group_criterion_label_result : typing___Optional[google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___MutateAdGroupCriterionLabelResult] = None,
-        ad_group_criterion_result : typing___Optional[google___ads___googleads___v1___services___ad_group_criterion_service_pb2___MutateAdGroupCriterionResult] = None,
-        ad_group_extension_setting_result : typing___Optional[google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___MutateAdGroupExtensionSettingResult] = None,
-        ad_group_feed_result : typing___Optional[google___ads___googleads___v1___services___ad_group_feed_service_pb2___MutateAdGroupFeedResult] = None,
-        ad_group_label_result : typing___Optional[google___ads___googleads___v1___services___ad_group_label_service_pb2___MutateAdGroupLabelResult] = None,
-        ad_group_result : typing___Optional[google___ads___googleads___v1___services___ad_group_service_pb2___MutateAdGroupResult] = None,
-        ad_parameter_result : typing___Optional[google___ads___googleads___v1___services___ad_parameter_service_pb2___MutateAdParameterResult] = None,
-        asset_result : typing___Optional[google___ads___googleads___v1___services___asset_service_pb2___MutateAssetResult] = None,
-        bidding_strategy_result : typing___Optional[google___ads___googleads___v1___services___bidding_strategy_service_pb2___MutateBiddingStrategyResult] = None,
-        campaign_bid_modifier_result : typing___Optional[google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___MutateCampaignBidModifierResult] = None,
-        campaign_budget_result : typing___Optional[google___ads___googleads___v1___services___campaign_budget_service_pb2___MutateCampaignBudgetResult] = None,
-        campaign_criterion_result : typing___Optional[google___ads___googleads___v1___services___campaign_criterion_service_pb2___MutateCampaignCriterionResult] = None,
-        campaign_draft_result : typing___Optional[google___ads___googleads___v1___services___campaign_draft_service_pb2___MutateCampaignDraftResult] = None,
-        campaign_experiment_result : typing___Optional[google___ads___googleads___v1___services___campaign_experiment_service_pb2___MutateCampaignExperimentResult] = None,
-        campaign_extension_setting_result : typing___Optional[google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___MutateCampaignExtensionSettingResult] = None,
-        campaign_feed_result : typing___Optional[google___ads___googleads___v1___services___campaign_feed_service_pb2___MutateCampaignFeedResult] = None,
-        campaign_label_result : typing___Optional[google___ads___googleads___v1___services___campaign_label_service_pb2___MutateCampaignLabelResult] = None,
-        campaign_result : typing___Optional[google___ads___googleads___v1___services___campaign_service_pb2___MutateCampaignResult] = None,
-        campaign_shared_set_result : typing___Optional[google___ads___googleads___v1___services___campaign_shared_set_service_pb2___MutateCampaignSharedSetResult] = None,
-        conversion_action_result : typing___Optional[google___ads___googleads___v1___services___conversion_action_service_pb2___MutateConversionActionResult] = None,
-        customer_extension_setting_result : typing___Optional[google___ads___googleads___v1___services___customer_extension_setting_service_pb2___MutateCustomerExtensionSettingResult] = None,
-        customer_feed_result : typing___Optional[google___ads___googleads___v1___services___customer_feed_service_pb2___MutateCustomerFeedResult] = None,
-        customer_label_result : typing___Optional[google___ads___googleads___v1___services___customer_label_service_pb2___MutateCustomerLabelResult] = None,
-        customer_negative_criterion_result : typing___Optional[google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___MutateCustomerNegativeCriteriaResult] = None,
-        customer_result : typing___Optional[google___ads___googleads___v1___services___customer_service_pb2___MutateCustomerResult] = None,
-        extension_feed_item_result : typing___Optional[google___ads___googleads___v1___services___extension_feed_item_service_pb2___MutateExtensionFeedItemResult] = None,
-        feed_item_result : typing___Optional[google___ads___googleads___v1___services___feed_item_service_pb2___MutateFeedItemResult] = None,
-        feed_item_target_result : typing___Optional[google___ads___googleads___v1___services___feed_item_target_service_pb2___MutateFeedItemTargetResult] = None,
-        feed_mapping_result : typing___Optional[google___ads___googleads___v1___services___feed_mapping_service_pb2___MutateFeedMappingResult] = None,
-        feed_result : typing___Optional[google___ads___googleads___v1___services___feed_service_pb2___MutateFeedResult] = None,
-        label_result : typing___Optional[google___ads___googleads___v1___services___label_service_pb2___MutateLabelResult] = None,
-        media_file_result : typing___Optional[google___ads___googleads___v1___services___media_file_service_pb2___MutateMediaFileResult] = None,
-        remarketing_action_result : typing___Optional[google___ads___googleads___v1___services___remarketing_action_service_pb2___MutateRemarketingActionResult] = None,
-        shared_criterion_result : typing___Optional[google___ads___googleads___v1___services___shared_criterion_service_pb2___MutateSharedCriterionResult] = None,
-        shared_set_result : typing___Optional[google___ads___googleads___v1___services___shared_set_service_pb2___MutateSharedSetResult] = None,
-        user_list_result : typing___Optional[google___ads___googleads___v1___services___user_list_service_pb2___MutateUserListResult] = None,
-        ) -> None: ...
+        ad_group_ad_label_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_ad_label_service_pb2___MutateAdGroupAdLabelResult
+        ] = None,
+        ad_group_ad_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_ad_service_pb2___MutateAdGroupAdResult
+        ] = None,
+        ad_group_bid_modifier_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_bid_modifier_service_pb2___MutateAdGroupBidModifierResult
+        ] = None,
+        ad_group_criterion_label_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_criterion_label_service_pb2___MutateAdGroupCriterionLabelResult
+        ] = None,
+        ad_group_criterion_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_criterion_service_pb2___MutateAdGroupCriterionResult
+        ] = None,
+        ad_group_extension_setting_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_extension_setting_service_pb2___MutateAdGroupExtensionSettingResult
+        ] = None,
+        ad_group_feed_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_feed_service_pb2___MutateAdGroupFeedResult
+        ] = None,
+        ad_group_label_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_label_service_pb2___MutateAdGroupLabelResult
+        ] = None,
+        ad_group_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_group_service_pb2___MutateAdGroupResult
+        ] = None,
+        ad_parameter_result: typing___Optional[
+            google___ads___googleads___v1___services___ad_parameter_service_pb2___MutateAdParameterResult
+        ] = None,
+        asset_result: typing___Optional[
+            google___ads___googleads___v1___services___asset_service_pb2___MutateAssetResult
+        ] = None,
+        bidding_strategy_result: typing___Optional[
+            google___ads___googleads___v1___services___bidding_strategy_service_pb2___MutateBiddingStrategyResult
+        ] = None,
+        campaign_bid_modifier_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_bid_modifier_service_pb2___MutateCampaignBidModifierResult
+        ] = None,
+        campaign_budget_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_budget_service_pb2___MutateCampaignBudgetResult
+        ] = None,
+        campaign_criterion_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_criterion_service_pb2___MutateCampaignCriterionResult
+        ] = None,
+        campaign_draft_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_draft_service_pb2___MutateCampaignDraftResult
+        ] = None,
+        campaign_experiment_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_experiment_service_pb2___MutateCampaignExperimentResult
+        ] = None,
+        campaign_extension_setting_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_extension_setting_service_pb2___MutateCampaignExtensionSettingResult
+        ] = None,
+        campaign_feed_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_feed_service_pb2___MutateCampaignFeedResult
+        ] = None,
+        campaign_label_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_label_service_pb2___MutateCampaignLabelResult
+        ] = None,
+        campaign_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_service_pb2___MutateCampaignResult
+        ] = None,
+        campaign_shared_set_result: typing___Optional[
+            google___ads___googleads___v1___services___campaign_shared_set_service_pb2___MutateCampaignSharedSetResult
+        ] = None,
+        conversion_action_result: typing___Optional[
+            google___ads___googleads___v1___services___conversion_action_service_pb2___MutateConversionActionResult
+        ] = None,
+        customer_extension_setting_result: typing___Optional[
+            google___ads___googleads___v1___services___customer_extension_setting_service_pb2___MutateCustomerExtensionSettingResult
+        ] = None,
+        customer_feed_result: typing___Optional[
+            google___ads___googleads___v1___services___customer_feed_service_pb2___MutateCustomerFeedResult
+        ] = None,
+        customer_label_result: typing___Optional[
+            google___ads___googleads___v1___services___customer_label_service_pb2___MutateCustomerLabelResult
+        ] = None,
+        customer_negative_criterion_result: typing___Optional[
+            google___ads___googleads___v1___services___customer_negative_criterion_service_pb2___MutateCustomerNegativeCriteriaResult
+        ] = None,
+        customer_result: typing___Optional[
+            google___ads___googleads___v1___services___customer_service_pb2___MutateCustomerResult
+        ] = None,
+        extension_feed_item_result: typing___Optional[
+            google___ads___googleads___v1___services___extension_feed_item_service_pb2___MutateExtensionFeedItemResult
+        ] = None,
+        feed_item_result: typing___Optional[
+            google___ads___googleads___v1___services___feed_item_service_pb2___MutateFeedItemResult
+        ] = None,
+        feed_item_target_result: typing___Optional[
+            google___ads___googleads___v1___services___feed_item_target_service_pb2___MutateFeedItemTargetResult
+        ] = None,
+        feed_mapping_result: typing___Optional[
+            google___ads___googleads___v1___services___feed_mapping_service_pb2___MutateFeedMappingResult
+        ] = None,
+        feed_result: typing___Optional[
+            google___ads___googleads___v1___services___feed_service_pb2___MutateFeedResult
+        ] = None,
+        label_result: typing___Optional[
+            google___ads___googleads___v1___services___label_service_pb2___MutateLabelResult
+        ] = None,
+        media_file_result: typing___Optional[
+            google___ads___googleads___v1___services___media_file_service_pb2___MutateMediaFileResult
+        ] = None,
+        remarketing_action_result: typing___Optional[
+            google___ads___googleads___v1___services___remarketing_action_service_pb2___MutateRemarketingActionResult
+        ] = None,
+        shared_criterion_result: typing___Optional[
+            google___ads___googleads___v1___services___shared_criterion_service_pb2___MutateSharedCriterionResult
+        ] = None,
+        shared_set_result: typing___Optional[
+            google___ads___googleads___v1___services___shared_set_service_pb2___MutateSharedSetResult
+        ] = None,
+        user_list_result: typing___Optional[
+            google___ads___googleads___v1___services___user_list_service_pb2___MutateUserListResult
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MutateOperationResponse: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MutateOperationResponse: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MutateOperationResponse: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"ad_group_ad_label_result",b"ad_group_ad_label_result",u"ad_group_ad_result",b"ad_group_ad_result",u"ad_group_bid_modifier_result",b"ad_group_bid_modifier_result",u"ad_group_criterion_label_result",b"ad_group_criterion_label_result",u"ad_group_criterion_result",b"ad_group_criterion_result",u"ad_group_extension_setting_result",b"ad_group_extension_setting_result",u"ad_group_feed_result",b"ad_group_feed_result",u"ad_group_label_result",b"ad_group_label_result",u"ad_group_result",b"ad_group_result",u"ad_parameter_result",b"ad_parameter_result",u"asset_result",b"asset_result",u"bidding_strategy_result",b"bidding_strategy_result",u"campaign_bid_modifier_result",b"campaign_bid_modifier_result",u"campaign_budget_result",b"campaign_budget_result",u"campaign_criterion_result",b"campaign_criterion_result",u"campaign_draft_result",b"campaign_draft_result",u"campaign_experiment_result",b"campaign_experiment_result",u"campaign_extension_setting_result",b"campaign_extension_setting_result",u"campaign_feed_result",b"campaign_feed_result",u"campaign_label_result",b"campaign_label_result",u"campaign_result",b"campaign_result",u"campaign_shared_set_result",b"campaign_shared_set_result",u"conversion_action_result",b"conversion_action_result",u"customer_extension_setting_result",b"customer_extension_setting_result",u"customer_feed_result",b"customer_feed_result",u"customer_label_result",b"customer_label_result",u"customer_negative_criterion_result",b"customer_negative_criterion_result",u"customer_result",b"customer_result",u"extension_feed_item_result",b"extension_feed_item_result",u"feed_item_result",b"feed_item_result",u"feed_item_target_result",b"feed_item_target_result",u"feed_mapping_result",b"feed_mapping_result",u"feed_result",b"feed_result",u"label_result",b"label_result",u"media_file_result",b"media_file_result",u"remarketing_action_result",b"remarketing_action_result",u"response",b"response",u"shared_criterion_result",b"shared_criterion_result",u"shared_set_result",b"shared_set_result",u"user_list_result",b"user_list_result"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_ad_label_result",b"ad_group_ad_label_result",u"ad_group_ad_result",b"ad_group_ad_result",u"ad_group_bid_modifier_result",b"ad_group_bid_modifier_result",u"ad_group_criterion_label_result",b"ad_group_criterion_label_result",u"ad_group_criterion_result",b"ad_group_criterion_result",u"ad_group_extension_setting_result",b"ad_group_extension_setting_result",u"ad_group_feed_result",b"ad_group_feed_result",u"ad_group_label_result",b"ad_group_label_result",u"ad_group_result",b"ad_group_result",u"ad_parameter_result",b"ad_parameter_result",u"asset_result",b"asset_result",u"bidding_strategy_result",b"bidding_strategy_result",u"campaign_bid_modifier_result",b"campaign_bid_modifier_result",u"campaign_budget_result",b"campaign_budget_result",u"campaign_criterion_result",b"campaign_criterion_result",u"campaign_draft_result",b"campaign_draft_result",u"campaign_experiment_result",b"campaign_experiment_result",u"campaign_extension_setting_result",b"campaign_extension_setting_result",u"campaign_feed_result",b"campaign_feed_result",u"campaign_label_result",b"campaign_label_result",u"campaign_result",b"campaign_result",u"campaign_shared_set_result",b"campaign_shared_set_result",u"conversion_action_result",b"conversion_action_result",u"customer_extension_setting_result",b"customer_extension_setting_result",u"customer_feed_result",b"customer_feed_result",u"customer_label_result",b"customer_label_result",u"customer_negative_criterion_result",b"customer_negative_criterion_result",u"customer_result",b"customer_result",u"extension_feed_item_result",b"extension_feed_item_result",u"feed_item_result",b"feed_item_result",u"feed_item_target_result",b"feed_item_target_result",u"feed_mapping_result",b"feed_mapping_result",u"feed_result",b"feed_result",u"label_result",b"label_result",u"media_file_result",b"media_file_result",u"remarketing_action_result",b"remarketing_action_result",u"response",b"response",u"shared_criterion_result",b"shared_criterion_result",u"shared_set_result",b"shared_set_result",u"user_list_result",b"user_list_result"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"response",b"response"]) -> typing_extensions___Literal["ad_group_ad_label_result","ad_group_ad_result","ad_group_bid_modifier_result","ad_group_criterion_label_result","ad_group_criterion_result","ad_group_extension_setting_result","ad_group_feed_result","ad_group_label_result","ad_group_result","ad_parameter_result","asset_result","bidding_strategy_result","campaign_bid_modifier_result","campaign_budget_result","campaign_criterion_result","campaign_draft_result","campaign_experiment_result","campaign_extension_setting_result","campaign_feed_result","campaign_label_result","campaign_result","campaign_shared_set_result","conversion_action_result","customer_extension_setting_result","customer_feed_result","customer_label_result","customer_negative_criterion_result","customer_result","extension_feed_item_result","feed_item_result","feed_item_target_result","feed_mapping_result","feed_result","label_result","media_file_result","remarketing_action_result","shared_criterion_result","shared_set_result","user_list_result"]: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group_ad_label_result",
+            b"ad_group_ad_label_result",
+            "ad_group_ad_result",
+            b"ad_group_ad_result",
+            "ad_group_bid_modifier_result",
+            b"ad_group_bid_modifier_result",
+            "ad_group_criterion_label_result",
+            b"ad_group_criterion_label_result",
+            "ad_group_criterion_result",
+            b"ad_group_criterion_result",
+            "ad_group_extension_setting_result",
+            b"ad_group_extension_setting_result",
+            "ad_group_feed_result",
+            b"ad_group_feed_result",
+            "ad_group_label_result",
+            b"ad_group_label_result",
+            "ad_group_result",
+            b"ad_group_result",
+            "ad_parameter_result",
+            b"ad_parameter_result",
+            "asset_result",
+            b"asset_result",
+            "bidding_strategy_result",
+            b"bidding_strategy_result",
+            "campaign_bid_modifier_result",
+            b"campaign_bid_modifier_result",
+            "campaign_budget_result",
+            b"campaign_budget_result",
+            "campaign_criterion_result",
+            b"campaign_criterion_result",
+            "campaign_draft_result",
+            b"campaign_draft_result",
+            "campaign_experiment_result",
+            b"campaign_experiment_result",
+            "campaign_extension_setting_result",
+            b"campaign_extension_setting_result",
+            "campaign_feed_result",
+            b"campaign_feed_result",
+            "campaign_label_result",
+            b"campaign_label_result",
+            "campaign_result",
+            b"campaign_result",
+            "campaign_shared_set_result",
+            b"campaign_shared_set_result",
+            "conversion_action_result",
+            b"conversion_action_result",
+            "customer_extension_setting_result",
+            b"customer_extension_setting_result",
+            "customer_feed_result",
+            b"customer_feed_result",
+            "customer_label_result",
+            b"customer_label_result",
+            "customer_negative_criterion_result",
+            b"customer_negative_criterion_result",
+            "customer_result",
+            b"customer_result",
+            "extension_feed_item_result",
+            b"extension_feed_item_result",
+            "feed_item_result",
+            b"feed_item_result",
+            "feed_item_target_result",
+            b"feed_item_target_result",
+            "feed_mapping_result",
+            b"feed_mapping_result",
+            "feed_result",
+            b"feed_result",
+            "label_result",
+            b"label_result",
+            "media_file_result",
+            b"media_file_result",
+            "remarketing_action_result",
+            b"remarketing_action_result",
+            "response",
+            b"response",
+            "shared_criterion_result",
+            b"shared_criterion_result",
+            "shared_set_result",
+            b"shared_set_result",
+            "user_list_result",
+            b"user_list_result",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group_ad_label_result",
+            b"ad_group_ad_label_result",
+            "ad_group_ad_result",
+            b"ad_group_ad_result",
+            "ad_group_bid_modifier_result",
+            b"ad_group_bid_modifier_result",
+            "ad_group_criterion_label_result",
+            b"ad_group_criterion_label_result",
+            "ad_group_criterion_result",
+            b"ad_group_criterion_result",
+            "ad_group_extension_setting_result",
+            b"ad_group_extension_setting_result",
+            "ad_group_feed_result",
+            b"ad_group_feed_result",
+            "ad_group_label_result",
+            b"ad_group_label_result",
+            "ad_group_result",
+            b"ad_group_result",
+            "ad_parameter_result",
+            b"ad_parameter_result",
+            "asset_result",
+            b"asset_result",
+            "bidding_strategy_result",
+            b"bidding_strategy_result",
+            "campaign_bid_modifier_result",
+            b"campaign_bid_modifier_result",
+            "campaign_budget_result",
+            b"campaign_budget_result",
+            "campaign_criterion_result",
+            b"campaign_criterion_result",
+            "campaign_draft_result",
+            b"campaign_draft_result",
+            "campaign_experiment_result",
+            b"campaign_experiment_result",
+            "campaign_extension_setting_result",
+            b"campaign_extension_setting_result",
+            "campaign_feed_result",
+            b"campaign_feed_result",
+            "campaign_label_result",
+            b"campaign_label_result",
+            "campaign_result",
+            b"campaign_result",
+            "campaign_shared_set_result",
+            b"campaign_shared_set_result",
+            "conversion_action_result",
+            b"conversion_action_result",
+            "customer_extension_setting_result",
+            b"customer_extension_setting_result",
+            "customer_feed_result",
+            b"customer_feed_result",
+            "customer_label_result",
+            b"customer_label_result",
+            "customer_negative_criterion_result",
+            b"customer_negative_criterion_result",
+            "customer_result",
+            b"customer_result",
+            "extension_feed_item_result",
+            b"extension_feed_item_result",
+            "feed_item_result",
+            b"feed_item_result",
+            "feed_item_target_result",
+            b"feed_item_target_result",
+            "feed_mapping_result",
+            b"feed_mapping_result",
+            "feed_result",
+            b"feed_result",
+            "label_result",
+            b"label_result",
+            "media_file_result",
+            b"media_file_result",
+            "remarketing_action_result",
+            b"remarketing_action_result",
+            "response",
+            b"response",
+            "shared_criterion_result",
+            b"shared_criterion_result",
+            "shared_set_result",
+            b"shared_set_result",
+            "user_list_result",
+            b"user_list_result",
+        ],
+    ) -> None: ...
+    def WhichOneof(
+        self, oneof_group: typing_extensions___Literal["response", b"response"]
+    ) -> typing_extensions___Literal[
+        "ad_group_ad_label_result",
+        "ad_group_ad_result",
+        "ad_group_bid_modifier_result",
+        "ad_group_criterion_label_result",
+        "ad_group_criterion_result",
+        "ad_group_extension_setting_result",
+        "ad_group_feed_result",
+        "ad_group_label_result",
+        "ad_group_result",
+        "ad_parameter_result",
+        "asset_result",
+        "bidding_strategy_result",
+        "campaign_bid_modifier_result",
+        "campaign_budget_result",
+        "campaign_criterion_result",
+        "campaign_draft_result",
+        "campaign_experiment_result",
+        "campaign_extension_setting_result",
+        "campaign_feed_result",
+        "campaign_label_result",
+        "campaign_result",
+        "campaign_shared_set_result",
+        "conversion_action_result",
+        "customer_extension_setting_result",
+        "customer_feed_result",
+        "customer_label_result",
+        "customer_negative_criterion_result",
+        "customer_result",
+        "extension_feed_item_result",
+        "feed_item_result",
+        "feed_item_target_result",
+        "feed_mapping_result",
+        "feed_result",
+        "label_result",
+        "media_file_result",
+        "remarketing_action_result",
+        "shared_criterion_result",
+        "shared_set_result",
+        "user_list_result",
+    ]: ...
+
 global___MutateOperationResponse = MutateOperationResponse

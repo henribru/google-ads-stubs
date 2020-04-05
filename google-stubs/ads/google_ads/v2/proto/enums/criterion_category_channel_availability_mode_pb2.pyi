@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,7 +14,6 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
@@ -24,42 +21,92 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
-class CriterionCategoryChannelAvailabilityModeEnum(google___protobuf___message___Message):
+class CriterionCategoryChannelAvailabilityModeEnum(
+    google___protobuf___message___Message
+):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class CriterionCategoryChannelAvailabilityMode(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode']: ...
+        def values(
+            cls
+        ) -> typing___List[
+            "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode"
+        ]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode']]: ...
-        UNSPECIFIED = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 0)
-        UNKNOWN = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 1)
-        ALL_CHANNELS = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 2)
-        CHANNEL_TYPE_AND_ALL_SUBTYPES = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 3)
-        CHANNEL_TYPE_AND_SUBSET_SUBTYPES = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 4)
-    UNSPECIFIED = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 0)
-    UNKNOWN = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 1)
-    ALL_CHANNELS = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 2)
-    CHANNEL_TYPE_AND_ALL_SUBTYPES = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 3)
-    CHANNEL_TYPE_AND_SUBSET_SUBTYPES = typing___cast('CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode', 4)
-    global___CriterionCategoryChannelAvailabilityMode = CriterionCategoryChannelAvailabilityMode
-
-
-    def __init__(self,
-        ) -> None: ...
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str,
+                "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+            0,
+        )
+        UNKNOWN = typing___cast(
+            "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+            1,
+        )
+        ALL_CHANNELS = typing___cast(
+            "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+            2,
+        )
+        CHANNEL_TYPE_AND_ALL_SUBTYPES = typing___cast(
+            "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+            3,
+        )
+        CHANNEL_TYPE_AND_SUBSET_SUBTYPES = typing___cast(
+            "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+            4,
+        )
+    UNSPECIFIED = typing___cast(
+        "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+        0,
+    )
+    UNKNOWN = typing___cast(
+        "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+        1,
+    )
+    ALL_CHANNELS = typing___cast(
+        "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+        2,
+    )
+    CHANNEL_TYPE_AND_ALL_SUBTYPES = typing___cast(
+        "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+        3,
+    )
+    CHANNEL_TYPE_AND_SUBSET_SUBTYPES = typing___cast(
+        "CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode",
+        4,
+    )
+    global___CriterionCategoryChannelAvailabilityMode = (
+        CriterionCategoryChannelAvailabilityMode
+    )
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
-        def FromString(cls, s: builtin___bytes) -> CriterionCategoryChannelAvailabilityModeEnum: ...
+        def FromString(
+            cls, s: builtin___bytes
+        ) -> CriterionCategoryChannelAvailabilityModeEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CriterionCategoryChannelAvailabilityModeEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> CriterionCategoryChannelAvailabilityModeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-global___CriterionCategoryChannelAvailabilityModeEnum = CriterionCategoryChannelAvailabilityModeEnum
+
+global___CriterionCategoryChannelAvailabilityModeEnum = (
+    CriterionCategoryChannelAvailabilityModeEnum
+)

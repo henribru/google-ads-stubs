@@ -16,9 +16,7 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
@@ -32,10 +30,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -45,143 +40,323 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class Invoice(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class AccountBudgetSummary(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
         @property
         def customer(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
         @property
-        def customer_descriptive_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+        def customer_descriptive_name(
+            self
+        ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def account_budget(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
         @property
-        def account_budget_name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+        def account_budget_name(
+            self
+        ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
-        def purchase_order_number(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+        def purchase_order_number(
+            self
+        ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
-        def subtotal_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+        def subtotal_amount_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
-        def tax_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+        def tax_amount_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
-        def total_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+        def total_amount_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
         @property
-        def billable_activity_date_range(self) -> google___ads___googleads___v2___common___dates_pb2___DateRange: ...
-
-        def __init__(self,
+        def billable_activity_date_range(
+            self
+        ) -> google___ads___googleads___v2___common___dates_pb2___DateRange: ...
+        def __init__(
+            self,
             *,
-            customer : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            customer_descriptive_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            account_budget : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            account_budget_name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            purchase_order_number : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            subtotal_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            tax_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            total_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            billable_activity_date_range : typing___Optional[google___ads___googleads___v2___common___dates_pb2___DateRange] = None,
-            ) -> None: ...
+            customer: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            customer_descriptive_name: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            account_budget: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            account_budget_name: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            purchase_order_number: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            subtotal_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+            tax_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+            total_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+            billable_activity_date_range: typing___Optional[
+                google___ads___googleads___v2___common___dates_pb2___DateRange
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
             def FromString(cls, s: builtin___bytes) -> Invoice.AccountBudgetSummary: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Invoice.AccountBudgetSummary: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"account_budget",b"account_budget",u"account_budget_name",b"account_budget_name",u"billable_activity_date_range",b"billable_activity_date_range",u"customer",b"customer",u"customer_descriptive_name",b"customer_descriptive_name",u"purchase_order_number",b"purchase_order_number",u"subtotal_amount_micros",b"subtotal_amount_micros",u"tax_amount_micros",b"tax_amount_micros",u"total_amount_micros",b"total_amount_micros"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"account_budget",b"account_budget",u"account_budget_name",b"account_budget_name",u"billable_activity_date_range",b"billable_activity_date_range",u"customer",b"customer",u"customer_descriptive_name",b"customer_descriptive_name",u"purchase_order_number",b"purchase_order_number",u"subtotal_amount_micros",b"subtotal_amount_micros",u"tax_amount_micros",b"tax_amount_micros",u"total_amount_micros",b"total_amount_micros"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Invoice.AccountBudgetSummary: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "account_budget",
+                b"account_budget",
+                "account_budget_name",
+                b"account_budget_name",
+                "billable_activity_date_range",
+                b"billable_activity_date_range",
+                "customer",
+                b"customer",
+                "customer_descriptive_name",
+                b"customer_descriptive_name",
+                "purchase_order_number",
+                b"purchase_order_number",
+                "subtotal_amount_micros",
+                b"subtotal_amount_micros",
+                "tax_amount_micros",
+                b"tax_amount_micros",
+                "total_amount_micros",
+                b"total_amount_micros",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "account_budget",
+                b"account_budget",
+                "account_budget_name",
+                b"account_budget_name",
+                "billable_activity_date_range",
+                b"billable_activity_date_range",
+                "customer",
+                b"customer",
+                "customer_descriptive_name",
+                b"customer_descriptive_name",
+                "purchase_order_number",
+                b"purchase_order_number",
+                "subtotal_amount_micros",
+                b"subtotal_amount_micros",
+                "tax_amount_micros",
+                b"tax_amount_micros",
+                "total_amount_micros",
+                b"total_amount_micros",
+            ],
+        ) -> None: ...
     global___AccountBudgetSummary = AccountBudgetSummary
 
-    resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v2___enums___invoice_type_pb2___InvoiceTypeEnum.InvoiceType
-
+    resource_name = ...  # type: typing___Text
+    type = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___invoice_type_pb2___InvoiceTypeEnum.InvoiceType
     @property
     def id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def billing_setup(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def payments_account_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def payments_profile_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def issue_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def due_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def service_date_range(self) -> google___ads___googleads___v2___common___dates_pb2___DateRange: ...
-
+    def service_date_range(
+        self
+    ) -> google___ads___googleads___v2___common___dates_pb2___DateRange: ...
     @property
     def currency_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def invoice_level_adjustments_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def invoice_level_adjustments_micros(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
-    def subtotal_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def subtotal_amount_micros(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def tax_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def total_amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def corrected_invoice(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def replaced_invoices(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def replaced_invoices(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
     def pdf_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def account_budget_summaries(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[global___Invoice.AccountBudgetSummary]: ...
-
-    def __init__(self,
+    def account_budget_summaries(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        global___Invoice.AccountBudgetSummary
+    ]: ...
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        type : typing___Optional[google___ads___googleads___v2___enums___invoice_type_pb2___InvoiceTypeEnum.InvoiceType] = None,
-        billing_setup : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        payments_account_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        payments_profile_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        issue_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        due_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        service_date_range : typing___Optional[google___ads___googleads___v2___common___dates_pb2___DateRange] = None,
-        currency_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        invoice_level_adjustments_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        subtotal_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        tax_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        total_amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        corrected_invoice : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        replaced_invoices : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        pdf_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        account_budget_summaries : typing___Optional[typing___Iterable[global___Invoice.AccountBudgetSummary]] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        id: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        type: typing___Optional[
+            google___ads___googleads___v2___enums___invoice_type_pb2___InvoiceTypeEnum.InvoiceType
+        ] = None,
+        billing_setup: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        payments_account_id: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        payments_profile_id: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        issue_date: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        due_date: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        service_date_range: typing___Optional[
+            google___ads___googleads___v2___common___dates_pb2___DateRange
+        ] = None,
+        currency_code: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        invoice_level_adjustments_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        subtotal_amount_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        tax_amount_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        total_amount_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        corrected_invoice: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        replaced_invoices: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        pdf_url: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        account_budget_summaries: typing___Optional[
+            typing___Iterable[global___Invoice.AccountBudgetSummary]
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> Invoice: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Invoice: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> Invoice: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"billing_setup",b"billing_setup",u"corrected_invoice",b"corrected_invoice",u"currency_code",b"currency_code",u"due_date",b"due_date",u"id",b"id",u"invoice_level_adjustments_micros",b"invoice_level_adjustments_micros",u"issue_date",b"issue_date",u"payments_account_id",b"payments_account_id",u"payments_profile_id",b"payments_profile_id",u"pdf_url",b"pdf_url",u"service_date_range",b"service_date_range",u"subtotal_amount_micros",b"subtotal_amount_micros",u"tax_amount_micros",b"tax_amount_micros",u"total_amount_micros",b"total_amount_micros"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"account_budget_summaries",b"account_budget_summaries",u"billing_setup",b"billing_setup",u"corrected_invoice",b"corrected_invoice",u"currency_code",b"currency_code",u"due_date",b"due_date",u"id",b"id",u"invoice_level_adjustments_micros",b"invoice_level_adjustments_micros",u"issue_date",b"issue_date",u"payments_account_id",b"payments_account_id",u"payments_profile_id",b"payments_profile_id",u"pdf_url",b"pdf_url",u"replaced_invoices",b"replaced_invoices",u"resource_name",b"resource_name",u"service_date_range",b"service_date_range",u"subtotal_amount_micros",b"subtotal_amount_micros",u"tax_amount_micros",b"tax_amount_micros",u"total_amount_micros",b"total_amount_micros",u"type",b"type"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "billing_setup",
+            b"billing_setup",
+            "corrected_invoice",
+            b"corrected_invoice",
+            "currency_code",
+            b"currency_code",
+            "due_date",
+            b"due_date",
+            "id",
+            b"id",
+            "invoice_level_adjustments_micros",
+            b"invoice_level_adjustments_micros",
+            "issue_date",
+            b"issue_date",
+            "payments_account_id",
+            b"payments_account_id",
+            "payments_profile_id",
+            b"payments_profile_id",
+            "pdf_url",
+            b"pdf_url",
+            "service_date_range",
+            b"service_date_range",
+            "subtotal_amount_micros",
+            b"subtotal_amount_micros",
+            "tax_amount_micros",
+            b"tax_amount_micros",
+            "total_amount_micros",
+            b"total_amount_micros",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "account_budget_summaries",
+            b"account_budget_summaries",
+            "billing_setup",
+            b"billing_setup",
+            "corrected_invoice",
+            b"corrected_invoice",
+            "currency_code",
+            b"currency_code",
+            "due_date",
+            b"due_date",
+            "id",
+            b"id",
+            "invoice_level_adjustments_micros",
+            b"invoice_level_adjustments_micros",
+            "issue_date",
+            b"issue_date",
+            "payments_account_id",
+            b"payments_account_id",
+            "payments_profile_id",
+            b"payments_profile_id",
+            "pdf_url",
+            b"pdf_url",
+            "replaced_invoices",
+            b"replaced_invoices",
+            "resource_name",
+            b"resource_name",
+            "service_date_range",
+            b"service_date_range",
+            "subtotal_amount_micros",
+            b"subtotal_amount_micros",
+            "tax_amount_micros",
+            b"tax_amount_micros",
+            "total_amount_micros",
+            b"total_amount_micros",
+            "type",
+            b"type",
+        ],
+    ) -> None: ...
+
 global___Invoice = Invoice

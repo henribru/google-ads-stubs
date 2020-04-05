@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class AdGroupCriterionApprovalStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,36 +28,75 @@ class AdGroupCriterionApprovalStatusEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus']: ...
+        def values(
+            cls
+        ) -> typing___List[
+            "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus"
+        ]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus']]: ...
-        UNSPECIFIED = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 0)
-        UNKNOWN = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 1)
-        APPROVED = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 2)
-        DISAPPROVED = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 3)
-        PENDING_REVIEW = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 4)
-        UNDER_REVIEW = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 5)
-    UNSPECIFIED = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 0)
-    UNKNOWN = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 1)
-    APPROVED = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 2)
-    DISAPPROVED = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 3)
-    PENDING_REVIEW = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 4)
-    UNDER_REVIEW = typing___cast('AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus', 5)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str,
+                "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus",
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 0
+        )
+        UNKNOWN = typing___cast(
+            "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 1
+        )
+        APPROVED = typing___cast(
+            "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 2
+        )
+        DISAPPROVED = typing___cast(
+            "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 3
+        )
+        PENDING_REVIEW = typing___cast(
+            "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 4
+        )
+        UNDER_REVIEW = typing___cast(
+            "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 5
+        )
+    UNSPECIFIED = typing___cast(
+        "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 0
+    )
+    UNKNOWN = typing___cast(
+        "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 1
+    )
+    APPROVED = typing___cast(
+        "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 2
+    )
+    DISAPPROVED = typing___cast(
+        "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 3
+    )
+    PENDING_REVIEW = typing___cast(
+        "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 4
+    )
+    UNDER_REVIEW = typing___cast(
+        "AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus", 5
+    )
     global___AdGroupCriterionApprovalStatus = AdGroupCriterionApprovalStatus
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
-        def FromString(cls, s: builtin___bytes) -> AdGroupCriterionApprovalStatusEnum: ...
+        def FromString(
+            cls, s: builtin___bytes
+        ) -> AdGroupCriterionApprovalStatusEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroupCriterionApprovalStatusEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdGroupCriterionApprovalStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___AdGroupCriterionApprovalStatusEnum = AdGroupCriterionApprovalStatusEnum

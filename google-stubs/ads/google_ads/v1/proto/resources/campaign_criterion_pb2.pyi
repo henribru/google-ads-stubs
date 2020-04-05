@@ -41,9 +41,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     BoolValue as google___protobuf___wrappers_pb2___BoolValue,
@@ -58,10 +56,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -71,148 +66,407 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class CampaignCriterion(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType
-    status = ... # type: google___ads___googleads___v1___enums___campaign_criterion_status_pb2___CampaignCriterionStatusEnum.CampaignCriterionStatus
-
+    resource_name = ...  # type: typing___Text
+    type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType
+    status = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___campaign_criterion_status_pb2___CampaignCriterionStatusEnum.CampaignCriterionStatus
     @property
     def campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def criterion_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def bid_modifier(self) -> google___protobuf___wrappers_pb2___FloatValue: ...
-
     @property
     def negative(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
-
     @property
-    def keyword(self) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
-
+    def keyword(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___KeywordInfo: ...
     @property
-    def placement(self) -> google___ads___googleads___v1___common___criteria_pb2___PlacementInfo: ...
-
+    def placement(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___PlacementInfo: ...
     @property
-    def mobile_app_category(self) -> google___ads___googleads___v1___common___criteria_pb2___MobileAppCategoryInfo: ...
-
+    def mobile_app_category(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___MobileAppCategoryInfo: ...
     @property
-    def mobile_application(self) -> google___ads___googleads___v1___common___criteria_pb2___MobileApplicationInfo: ...
-
+    def mobile_application(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___MobileApplicationInfo: ...
     @property
-    def location(self) -> google___ads___googleads___v1___common___criteria_pb2___LocationInfo: ...
-
+    def location(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___LocationInfo: ...
     @property
-    def device(self) -> google___ads___googleads___v1___common___criteria_pb2___DeviceInfo: ...
-
+    def device(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___DeviceInfo: ...
     @property
-    def ad_schedule(self) -> google___ads___googleads___v1___common___criteria_pb2___AdScheduleInfo: ...
-
+    def ad_schedule(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___AdScheduleInfo: ...
     @property
-    def age_range(self) -> google___ads___googleads___v1___common___criteria_pb2___AgeRangeInfo: ...
-
+    def age_range(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___AgeRangeInfo: ...
     @property
-    def gender(self) -> google___ads___googleads___v1___common___criteria_pb2___GenderInfo: ...
-
+    def gender(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___GenderInfo: ...
     @property
-    def income_range(self) -> google___ads___googleads___v1___common___criteria_pb2___IncomeRangeInfo: ...
-
+    def income_range(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___IncomeRangeInfo: ...
     @property
-    def parental_status(self) -> google___ads___googleads___v1___common___criteria_pb2___ParentalStatusInfo: ...
-
+    def parental_status(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___ParentalStatusInfo: ...
     @property
-    def user_list(self) -> google___ads___googleads___v1___common___criteria_pb2___UserListInfo: ...
-
+    def user_list(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___UserListInfo: ...
     @property
-    def youtube_video(self) -> google___ads___googleads___v1___common___criteria_pb2___YouTubeVideoInfo: ...
-
+    def youtube_video(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___YouTubeVideoInfo: ...
     @property
-    def youtube_channel(self) -> google___ads___googleads___v1___common___criteria_pb2___YouTubeChannelInfo: ...
-
+    def youtube_channel(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___YouTubeChannelInfo: ...
     @property
-    def proximity(self) -> google___ads___googleads___v1___common___criteria_pb2___ProximityInfo: ...
-
+    def proximity(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___ProximityInfo: ...
     @property
-    def topic(self) -> google___ads___googleads___v1___common___criteria_pb2___TopicInfo: ...
-
+    def topic(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___TopicInfo: ...
     @property
-    def listing_scope(self) -> google___ads___googleads___v1___common___criteria_pb2___ListingScopeInfo: ...
-
+    def listing_scope(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___ListingScopeInfo: ...
     @property
-    def language(self) -> google___ads___googleads___v1___common___criteria_pb2___LanguageInfo: ...
-
+    def language(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___LanguageInfo: ...
     @property
-    def ip_block(self) -> google___ads___googleads___v1___common___criteria_pb2___IpBlockInfo: ...
-
+    def ip_block(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___IpBlockInfo: ...
     @property
-    def content_label(self) -> google___ads___googleads___v1___common___criteria_pb2___ContentLabelInfo: ...
-
+    def content_label(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___ContentLabelInfo: ...
     @property
-    def carrier(self) -> google___ads___googleads___v1___common___criteria_pb2___CarrierInfo: ...
-
+    def carrier(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___CarrierInfo: ...
     @property
-    def user_interest(self) -> google___ads___googleads___v1___common___criteria_pb2___UserInterestInfo: ...
-
+    def user_interest(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___UserInterestInfo: ...
     @property
-    def webpage(self) -> google___ads___googleads___v1___common___criteria_pb2___WebpageInfo: ...
-
+    def webpage(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___WebpageInfo: ...
     @property
-    def operating_system_version(self) -> google___ads___googleads___v1___common___criteria_pb2___OperatingSystemVersionInfo: ...
-
+    def operating_system_version(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___OperatingSystemVersionInfo: ...
     @property
-    def mobile_device(self) -> google___ads___googleads___v1___common___criteria_pb2___MobileDeviceInfo: ...
-
+    def mobile_device(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___MobileDeviceInfo: ...
     @property
-    def location_group(self) -> google___ads___googleads___v1___common___criteria_pb2___LocationGroupInfo: ...
-
-    def __init__(self,
+    def location_group(
+        self
+    ) -> google___ads___googleads___v1___common___criteria_pb2___LocationGroupInfo: ...
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        criterion_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        bid_modifier : typing___Optional[google___protobuf___wrappers_pb2___FloatValue] = None,
-        negative : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___campaign_criterion_status_pb2___CampaignCriterionStatusEnum.CampaignCriterionStatus] = None,
-        keyword : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___KeywordInfo] = None,
-        placement : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___PlacementInfo] = None,
-        mobile_app_category : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___MobileAppCategoryInfo] = None,
-        mobile_application : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___MobileApplicationInfo] = None,
-        location : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___LocationInfo] = None,
-        device : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___DeviceInfo] = None,
-        ad_schedule : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___AdScheduleInfo] = None,
-        age_range : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___AgeRangeInfo] = None,
-        gender : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___GenderInfo] = None,
-        income_range : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___IncomeRangeInfo] = None,
-        parental_status : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___ParentalStatusInfo] = None,
-        user_list : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___UserListInfo] = None,
-        youtube_video : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___YouTubeVideoInfo] = None,
-        youtube_channel : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___YouTubeChannelInfo] = None,
-        proximity : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___ProximityInfo] = None,
-        topic : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___TopicInfo] = None,
-        listing_scope : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___ListingScopeInfo] = None,
-        language : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___LanguageInfo] = None,
-        ip_block : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___IpBlockInfo] = None,
-        content_label : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___ContentLabelInfo] = None,
-        carrier : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___CarrierInfo] = None,
-        user_interest : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___UserInterestInfo] = None,
-        webpage : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___WebpageInfo] = None,
-        operating_system_version : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___OperatingSystemVersionInfo] = None,
-        mobile_device : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___MobileDeviceInfo] = None,
-        location_group : typing___Optional[google___ads___googleads___v1___common___criteria_pb2___LocationGroupInfo] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        campaign: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        criterion_id: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        bid_modifier: typing___Optional[
+            google___protobuf___wrappers_pb2___FloatValue
+        ] = None,
+        negative: typing___Optional[
+            google___protobuf___wrappers_pb2___BoolValue
+        ] = None,
+        type: typing___Optional[
+            google___ads___googleads___v1___enums___criterion_type_pb2___CriterionTypeEnum.CriterionType
+        ] = None,
+        status: typing___Optional[
+            google___ads___googleads___v1___enums___campaign_criterion_status_pb2___CampaignCriterionStatusEnum.CampaignCriterionStatus
+        ] = None,
+        keyword: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___KeywordInfo
+        ] = None,
+        placement: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___PlacementInfo
+        ] = None,
+        mobile_app_category: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___MobileAppCategoryInfo
+        ] = None,
+        mobile_application: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___MobileApplicationInfo
+        ] = None,
+        location: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___LocationInfo
+        ] = None,
+        device: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___DeviceInfo
+        ] = None,
+        ad_schedule: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___AdScheduleInfo
+        ] = None,
+        age_range: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___AgeRangeInfo
+        ] = None,
+        gender: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___GenderInfo
+        ] = None,
+        income_range: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___IncomeRangeInfo
+        ] = None,
+        parental_status: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___ParentalStatusInfo
+        ] = None,
+        user_list: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___UserListInfo
+        ] = None,
+        youtube_video: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___YouTubeVideoInfo
+        ] = None,
+        youtube_channel: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___YouTubeChannelInfo
+        ] = None,
+        proximity: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___ProximityInfo
+        ] = None,
+        topic: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___TopicInfo
+        ] = None,
+        listing_scope: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___ListingScopeInfo
+        ] = None,
+        language: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___LanguageInfo
+        ] = None,
+        ip_block: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___IpBlockInfo
+        ] = None,
+        content_label: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___ContentLabelInfo
+        ] = None,
+        carrier: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___CarrierInfo
+        ] = None,
+        user_interest: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___UserInterestInfo
+        ] = None,
+        webpage: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___WebpageInfo
+        ] = None,
+        operating_system_version: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___OperatingSystemVersionInfo
+        ] = None,
+        mobile_device: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___MobileDeviceInfo
+        ] = None,
+        location_group: typing___Optional[
+            google___ads___googleads___v1___common___criteria_pb2___LocationGroupInfo
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> CampaignCriterion: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignCriterion: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> CampaignCriterion: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"ad_schedule",b"ad_schedule",u"age_range",b"age_range",u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"carrier",b"carrier",u"content_label",b"content_label",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"gender",b"gender",u"income_range",b"income_range",u"ip_block",b"ip_block",u"keyword",b"keyword",u"language",b"language",u"listing_scope",b"listing_scope",u"location",b"location",u"location_group",b"location_group",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"mobile_device",b"mobile_device",u"negative",b"negative",u"operating_system_version",b"operating_system_version",u"parental_status",b"parental_status",u"placement",b"placement",u"proximity",b"proximity",u"topic",b"topic",u"user_interest",b"user_interest",u"user_list",b"user_list",u"webpage",b"webpage",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"ad_schedule",b"ad_schedule",u"age_range",b"age_range",u"bid_modifier",b"bid_modifier",u"campaign",b"campaign",u"carrier",b"carrier",u"content_label",b"content_label",u"criterion",b"criterion",u"criterion_id",b"criterion_id",u"device",b"device",u"gender",b"gender",u"income_range",b"income_range",u"ip_block",b"ip_block",u"keyword",b"keyword",u"language",b"language",u"listing_scope",b"listing_scope",u"location",b"location",u"location_group",b"location_group",u"mobile_app_category",b"mobile_app_category",u"mobile_application",b"mobile_application",u"mobile_device",b"mobile_device",u"negative",b"negative",u"operating_system_version",b"operating_system_version",u"parental_status",b"parental_status",u"placement",b"placement",u"proximity",b"proximity",u"resource_name",b"resource_name",u"status",b"status",u"topic",b"topic",u"type",b"type",u"user_interest",b"user_interest",u"user_list",b"user_list",u"webpage",b"webpage",u"youtube_channel",b"youtube_channel",u"youtube_video",b"youtube_video"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"criterion",b"criterion"]) -> typing_extensions___Literal["keyword","placement","mobile_app_category","mobile_application","location","device","ad_schedule","age_range","gender","income_range","parental_status","user_list","youtube_video","youtube_channel","proximity","topic","listing_scope","language","ip_block","content_label","carrier","user_interest","webpage","operating_system_version","mobile_device","location_group"]: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_schedule",
+            b"ad_schedule",
+            "age_range",
+            b"age_range",
+            "bid_modifier",
+            b"bid_modifier",
+            "campaign",
+            b"campaign",
+            "carrier",
+            b"carrier",
+            "content_label",
+            b"content_label",
+            "criterion",
+            b"criterion",
+            "criterion_id",
+            b"criterion_id",
+            "device",
+            b"device",
+            "gender",
+            b"gender",
+            "income_range",
+            b"income_range",
+            "ip_block",
+            b"ip_block",
+            "keyword",
+            b"keyword",
+            "language",
+            b"language",
+            "listing_scope",
+            b"listing_scope",
+            "location",
+            b"location",
+            "location_group",
+            b"location_group",
+            "mobile_app_category",
+            b"mobile_app_category",
+            "mobile_application",
+            b"mobile_application",
+            "mobile_device",
+            b"mobile_device",
+            "negative",
+            b"negative",
+            "operating_system_version",
+            b"operating_system_version",
+            "parental_status",
+            b"parental_status",
+            "placement",
+            b"placement",
+            "proximity",
+            b"proximity",
+            "topic",
+            b"topic",
+            "user_interest",
+            b"user_interest",
+            "user_list",
+            b"user_list",
+            "webpage",
+            b"webpage",
+            "youtube_channel",
+            b"youtube_channel",
+            "youtube_video",
+            b"youtube_video",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_schedule",
+            b"ad_schedule",
+            "age_range",
+            b"age_range",
+            "bid_modifier",
+            b"bid_modifier",
+            "campaign",
+            b"campaign",
+            "carrier",
+            b"carrier",
+            "content_label",
+            b"content_label",
+            "criterion",
+            b"criterion",
+            "criterion_id",
+            b"criterion_id",
+            "device",
+            b"device",
+            "gender",
+            b"gender",
+            "income_range",
+            b"income_range",
+            "ip_block",
+            b"ip_block",
+            "keyword",
+            b"keyword",
+            "language",
+            b"language",
+            "listing_scope",
+            b"listing_scope",
+            "location",
+            b"location",
+            "location_group",
+            b"location_group",
+            "mobile_app_category",
+            b"mobile_app_category",
+            "mobile_application",
+            b"mobile_application",
+            "mobile_device",
+            b"mobile_device",
+            "negative",
+            b"negative",
+            "operating_system_version",
+            b"operating_system_version",
+            "parental_status",
+            b"parental_status",
+            "placement",
+            b"placement",
+            "proximity",
+            b"proximity",
+            "resource_name",
+            b"resource_name",
+            "status",
+            b"status",
+            "topic",
+            b"topic",
+            "type",
+            b"type",
+            "user_interest",
+            b"user_interest",
+            "user_list",
+            b"user_list",
+            "webpage",
+            b"webpage",
+            "youtube_channel",
+            b"youtube_channel",
+            "youtube_video",
+            b"youtube_video",
+        ],
+    ) -> None: ...
+    def WhichOneof(
+        self, oneof_group: typing_extensions___Literal["criterion", b"criterion"]
+    ) -> typing_extensions___Literal[
+        "keyword",
+        "placement",
+        "mobile_app_category",
+        "mobile_application",
+        "location",
+        "device",
+        "ad_schedule",
+        "age_range",
+        "gender",
+        "income_range",
+        "parental_status",
+        "user_list",
+        "youtube_video",
+        "youtube_channel",
+        "proximity",
+        "topic",
+        "listing_scope",
+        "language",
+        "ip_block",
+        "content_label",
+        "carrier",
+        "user_interest",
+        "webpage",
+        "operating_system_version",
+        "mobile_device",
+        "location_group",
+    ]: ...
+
 global___CampaignCriterion = CampaignCriterion

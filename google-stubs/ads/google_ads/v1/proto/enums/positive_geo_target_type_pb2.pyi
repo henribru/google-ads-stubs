@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class PositiveGeoTargetTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,34 +28,54 @@ class PositiveGeoTargetTypeEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'PositiveGeoTargetTypeEnum.PositiveGeoTargetType': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "PositiveGeoTargetTypeEnum.PositiveGeoTargetType": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['PositiveGeoTargetTypeEnum.PositiveGeoTargetType']: ...
+        def values(
+            cls
+        ) -> typing___List["PositiveGeoTargetTypeEnum.PositiveGeoTargetType"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'PositiveGeoTargetTypeEnum.PositiveGeoTargetType']]: ...
-        UNSPECIFIED = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 0)
-        UNKNOWN = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 1)
-        DONT_CARE = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 2)
-        AREA_OF_INTEREST = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 3)
-        LOCATION_OF_PRESENCE = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 4)
-    UNSPECIFIED = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 0)
-    UNKNOWN = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 1)
-    DONT_CARE = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 2)
-    AREA_OF_INTEREST = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 3)
-    LOCATION_OF_PRESENCE = typing___cast('PositiveGeoTargetTypeEnum.PositiveGeoTargetType', 4)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str, "PositiveGeoTargetTypeEnum.PositiveGeoTargetType"
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 0
+        )
+        UNKNOWN = typing___cast("PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 1)
+        DONT_CARE = typing___cast("PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 2)
+        AREA_OF_INTEREST = typing___cast(
+            "PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 3
+        )
+        LOCATION_OF_PRESENCE = typing___cast(
+            "PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 4
+        )
+    UNSPECIFIED = typing___cast("PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 0)
+    UNKNOWN = typing___cast("PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 1)
+    DONT_CARE = typing___cast("PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 2)
+    AREA_OF_INTEREST = typing___cast(
+        "PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 3
+    )
+    LOCATION_OF_PRESENCE = typing___cast(
+        "PositiveGeoTargetTypeEnum.PositiveGeoTargetType", 4
+    )
     global___PositiveGeoTargetType = PositiveGeoTargetType
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> PositiveGeoTargetTypeEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> PositiveGeoTargetTypeEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> PositiveGeoTargetTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___PositiveGeoTargetTypeEnum = PositiveGeoTargetTypeEnum

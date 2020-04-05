@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class AdGroupAdStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,34 +28,40 @@ class AdGroupAdStatusEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'AdGroupAdStatusEnum.AdGroupAdStatus': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "AdGroupAdStatusEnum.AdGroupAdStatus": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['AdGroupAdStatusEnum.AdGroupAdStatus']: ...
+        def values(cls) -> typing___List["AdGroupAdStatusEnum.AdGroupAdStatus"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AdGroupAdStatusEnum.AdGroupAdStatus']]: ...
-        UNSPECIFIED = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 0)
-        UNKNOWN = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 1)
-        ENABLED = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 2)
-        PAUSED = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 3)
-        REMOVED = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 4)
-    UNSPECIFIED = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 0)
-    UNKNOWN = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 1)
-    ENABLED = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 2)
-    PAUSED = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 3)
-    REMOVED = typing___cast('AdGroupAdStatusEnum.AdGroupAdStatus', 4)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[builtin___str, "AdGroupAdStatusEnum.AdGroupAdStatus"]
+        ]: ...
+        UNSPECIFIED = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 0)
+        UNKNOWN = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 1)
+        ENABLED = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 2)
+        PAUSED = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 3)
+        REMOVED = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 4)
+    UNSPECIFIED = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 0)
+    UNKNOWN = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 1)
+    ENABLED = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 2)
+    PAUSED = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 3)
+    REMOVED = typing___cast("AdGroupAdStatusEnum.AdGroupAdStatus", 4)
     global___AdGroupAdStatus = AdGroupAdStatus
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AdGroupAdStatusEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroupAdStatusEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdGroupAdStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___AdGroupAdStatusEnum = AdGroupAdStatusEnum

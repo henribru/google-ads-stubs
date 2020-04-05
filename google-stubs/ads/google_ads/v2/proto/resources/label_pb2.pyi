@@ -12,9 +12,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
@@ -27,10 +25,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -40,37 +35,63 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class Label(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum.LabelStatus
-
+    resource_name = ...  # type: typing___Text
+    status = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum.LabelStatus
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def text_label(self) -> google___ads___googleads___v2___common___text_label_pb2___TextLabel: ...
-
-    def __init__(self,
+    def text_label(
+        self
+    ) -> google___ads___googleads___v2___common___text_label_pb2___TextLabel: ...
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum.LabelStatus] = None,
-        text_label : typing___Optional[google___ads___googleads___v2___common___text_label_pb2___TextLabel] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        id: typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
+        name: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        status: typing___Optional[
+            google___ads___googleads___v2___enums___label_status_pb2___LabelStatusEnum.LabelStatus
+        ] = None,
+        text_label: typing___Optional[
+            google___ads___googleads___v2___common___text_label_pb2___TextLabel
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> Label: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Label: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> Label: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"text_label",b"text_label"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"resource_name",b"resource_name",u"status",b"status",u"text_label",b"text_label"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "id", b"id", "name", b"name", "text_label", b"text_label"
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "id",
+            b"id",
+            "name",
+            b"name",
+            "resource_name",
+            b"resource_name",
+            "status",
+            b"status",
+            "text_label",
+            b"text_label",
+        ],
+    ) -> None: ...
+
 global___Label = Label

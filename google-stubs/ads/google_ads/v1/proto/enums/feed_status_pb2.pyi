@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class FeedStatusEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,32 +28,36 @@ class FeedStatusEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'FeedStatusEnum.FeedStatus': ...
+        def Value(cls, name: builtin___str) -> "FeedStatusEnum.FeedStatus": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['FeedStatusEnum.FeedStatus']: ...
+        def values(cls) -> typing___List["FeedStatusEnum.FeedStatus"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'FeedStatusEnum.FeedStatus']]: ...
-        UNSPECIFIED = typing___cast('FeedStatusEnum.FeedStatus', 0)
-        UNKNOWN = typing___cast('FeedStatusEnum.FeedStatus', 1)
-        ENABLED = typing___cast('FeedStatusEnum.FeedStatus', 2)
-        REMOVED = typing___cast('FeedStatusEnum.FeedStatus', 3)
-    UNSPECIFIED = typing___cast('FeedStatusEnum.FeedStatus', 0)
-    UNKNOWN = typing___cast('FeedStatusEnum.FeedStatus', 1)
-    ENABLED = typing___cast('FeedStatusEnum.FeedStatus', 2)
-    REMOVED = typing___cast('FeedStatusEnum.FeedStatus', 3)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[builtin___str, "FeedStatusEnum.FeedStatus"]
+        ]: ...
+        UNSPECIFIED = typing___cast("FeedStatusEnum.FeedStatus", 0)
+        UNKNOWN = typing___cast("FeedStatusEnum.FeedStatus", 1)
+        ENABLED = typing___cast("FeedStatusEnum.FeedStatus", 2)
+        REMOVED = typing___cast("FeedStatusEnum.FeedStatus", 3)
+    UNSPECIFIED = typing___cast("FeedStatusEnum.FeedStatus", 0)
+    UNKNOWN = typing___cast("FeedStatusEnum.FeedStatus", 1)
+    ENABLED = typing___cast("FeedStatusEnum.FeedStatus", 2)
+    REMOVED = typing___cast("FeedStatusEnum.FeedStatus", 3)
     global___FeedStatus = FeedStatus
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> FeedStatusEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> FeedStatusEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> FeedStatusEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___FeedStatusEnum = FeedStatusEnum

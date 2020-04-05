@@ -28,9 +28,7 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     StringValue as google___protobuf___wrappers_pb2___StringValue,
@@ -43,10 +41,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -56,64 +51,127 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class AdGroupAdAssetView(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    field_type = ... # type: google___ads___googleads___v2___enums___asset_field_type_pb2___AssetFieldTypeEnum.AssetFieldType
-    performance_label = ... # type: google___ads___googleads___v2___enums___asset_performance_label_pb2___AssetPerformanceLabelEnum.AssetPerformanceLabel
-
+    resource_name = ...  # type: typing___Text
+    field_type = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___asset_field_type_pb2___AssetFieldTypeEnum.AssetFieldType
+    performance_label = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___asset_performance_label_pb2___AssetPerformanceLabelEnum.AssetPerformanceLabel
     @property
     def ad_group_ad(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def asset(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def policy_summary(self) -> global___AdGroupAdAssetPolicySummary: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        ad_group_ad : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        asset : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        field_type : typing___Optional[google___ads___googleads___v2___enums___asset_field_type_pb2___AssetFieldTypeEnum.AssetFieldType] = None,
-        policy_summary : typing___Optional[global___AdGroupAdAssetPolicySummary] = None,
-        performance_label : typing___Optional[google___ads___googleads___v2___enums___asset_performance_label_pb2___AssetPerformanceLabelEnum.AssetPerformanceLabel] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        ad_group_ad: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        asset: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        field_type: typing___Optional[
+            google___ads___googleads___v2___enums___asset_field_type_pb2___AssetFieldTypeEnum.AssetFieldType
+        ] = None,
+        policy_summary: typing___Optional[global___AdGroupAdAssetPolicySummary] = None,
+        performance_label: typing___Optional[
+            google___ads___googleads___v2___enums___asset_performance_label_pb2___AssetPerformanceLabelEnum.AssetPerformanceLabel
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AdGroupAdAssetView: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroupAdAssetView: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdGroupAdAssetView: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"ad_group_ad",b"ad_group_ad",u"asset",b"asset",u"policy_summary",b"policy_summary"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group_ad",b"ad_group_ad",u"asset",b"asset",u"field_type",b"field_type",u"performance_label",b"performance_label",u"policy_summary",b"policy_summary",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group_ad",
+            b"ad_group_ad",
+            "asset",
+            b"asset",
+            "policy_summary",
+            b"policy_summary",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group_ad",
+            b"ad_group_ad",
+            "asset",
+            b"asset",
+            "field_type",
+            b"field_type",
+            "performance_label",
+            b"performance_label",
+            "policy_summary",
+            b"policy_summary",
+            "resource_name",
+            b"resource_name",
+        ],
+    ) -> None: ...
+
 global___AdGroupAdAssetView = AdGroupAdAssetView
 
 class AdGroupAdAssetPolicySummary(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    review_status = ... # type: google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus
-    approval_status = ... # type: google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus
-
+    review_status = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus
     @property
-    def policy_topic_entries(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry]: ...
-
-    def __init__(self,
+    def policy_topic_entries(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry
+    ]: ...
+    def __init__(
+        self,
         *,
-        policy_topic_entries : typing___Optional[typing___Iterable[google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry]] = None,
-        review_status : typing___Optional[google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus] = None,
-        approval_status : typing___Optional[google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus] = None,
-        ) -> None: ...
+        policy_topic_entries: typing___Optional[
+            typing___Iterable[
+                google___ads___googleads___v2___common___policy_pb2___PolicyTopicEntry
+            ]
+        ] = None,
+        review_status: typing___Optional[
+            google___ads___googleads___v2___enums___policy_review_status_pb2___PolicyReviewStatusEnum.PolicyReviewStatus
+        ] = None,
+        approval_status: typing___Optional[
+            google___ads___googleads___v2___enums___policy_approval_status_pb2___PolicyApprovalStatusEnum.PolicyApprovalStatus
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AdGroupAdAssetPolicySummary: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdGroupAdAssetPolicySummary: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdGroupAdAssetPolicySummary: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"approval_status",b"approval_status",u"policy_topic_entries",b"policy_topic_entries",u"review_status",b"review_status"]) -> None: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "approval_status",
+            b"approval_status",
+            "policy_topic_entries",
+            b"policy_topic_entries",
+            "review_status",
+            b"review_status",
+        ],
+    ) -> None: ...
+
 global___AdGroupAdAssetPolicySummary = AdGroupAdAssetPolicySummary

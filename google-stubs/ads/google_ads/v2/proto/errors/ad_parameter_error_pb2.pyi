@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class AdParameterErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,32 +28,46 @@ class AdParameterErrorEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'AdParameterErrorEnum.AdParameterError': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "AdParameterErrorEnum.AdParameterError": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['AdParameterErrorEnum.AdParameterError']: ...
+        def values(cls) -> typing___List["AdParameterErrorEnum.AdParameterError"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'AdParameterErrorEnum.AdParameterError']]: ...
-        UNSPECIFIED = typing___cast('AdParameterErrorEnum.AdParameterError', 0)
-        UNKNOWN = typing___cast('AdParameterErrorEnum.AdParameterError', 1)
-        AD_GROUP_CRITERION_MUST_BE_KEYWORD = typing___cast('AdParameterErrorEnum.AdParameterError', 2)
-        INVALID_INSERTION_TEXT_FORMAT = typing___cast('AdParameterErrorEnum.AdParameterError', 3)
-    UNSPECIFIED = typing___cast('AdParameterErrorEnum.AdParameterError', 0)
-    UNKNOWN = typing___cast('AdParameterErrorEnum.AdParameterError', 1)
-    AD_GROUP_CRITERION_MUST_BE_KEYWORD = typing___cast('AdParameterErrorEnum.AdParameterError', 2)
-    INVALID_INSERTION_TEXT_FORMAT = typing___cast('AdParameterErrorEnum.AdParameterError', 3)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[builtin___str, "AdParameterErrorEnum.AdParameterError"]
+        ]: ...
+        UNSPECIFIED = typing___cast("AdParameterErrorEnum.AdParameterError", 0)
+        UNKNOWN = typing___cast("AdParameterErrorEnum.AdParameterError", 1)
+        AD_GROUP_CRITERION_MUST_BE_KEYWORD = typing___cast(
+            "AdParameterErrorEnum.AdParameterError", 2
+        )
+        INVALID_INSERTION_TEXT_FORMAT = typing___cast(
+            "AdParameterErrorEnum.AdParameterError", 3
+        )
+    UNSPECIFIED = typing___cast("AdParameterErrorEnum.AdParameterError", 0)
+    UNKNOWN = typing___cast("AdParameterErrorEnum.AdParameterError", 1)
+    AD_GROUP_CRITERION_MUST_BE_KEYWORD = typing___cast(
+        "AdParameterErrorEnum.AdParameterError", 2
+    )
+    INVALID_INSERTION_TEXT_FORMAT = typing___cast(
+        "AdParameterErrorEnum.AdParameterError", 3
+    )
     global___AdParameterError = AdParameterError
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AdParameterErrorEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AdParameterErrorEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AdParameterErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___AdParameterErrorEnum = AdParameterErrorEnum

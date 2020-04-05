@@ -17,9 +17,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
@@ -32,10 +30,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -45,56 +40,134 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class FeedItemTarget(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    feed_item_target_type = ... # type: google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum.FeedItemTargetType
-    device = ... # type: google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice
-
+    resource_name = ...  # type: typing___Text
+    feed_item_target_type = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum.FeedItemTargetType
+    device = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice
     @property
     def feed_item(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def feed_item_target_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def ad_group(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def keyword(self) -> google___ads___googleads___v2___common___criteria_pb2___KeywordInfo: ...
-
+    def keyword(
+        self
+    ) -> google___ads___googleads___v2___common___criteria_pb2___KeywordInfo: ...
     @property
     def geo_target_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def ad_schedule(self) -> google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo: ...
-
-    def __init__(self,
+    def ad_schedule(
+        self
+    ) -> google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo: ...
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        feed_item : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        feed_item_target_type : typing___Optional[google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum.FeedItemTargetType] = None,
-        feed_item_target_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ad_group : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        keyword : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___KeywordInfo] = None,
-        geo_target_constant : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        device : typing___Optional[google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice] = None,
-        ad_schedule : typing___Optional[google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        feed_item: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        feed_item_target_type: typing___Optional[
+            google___ads___googleads___v2___enums___feed_item_target_type_pb2___FeedItemTargetTypeEnum.FeedItemTargetType
+        ] = None,
+        feed_item_target_id: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        campaign: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        ad_group: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        keyword: typing___Optional[
+            google___ads___googleads___v2___common___criteria_pb2___KeywordInfo
+        ] = None,
+        geo_target_constant: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        device: typing___Optional[
+            google___ads___googleads___v2___enums___feed_item_target_device_pb2___FeedItemTargetDeviceEnum.FeedItemTargetDevice
+        ] = None,
+        ad_schedule: typing___Optional[
+            google___ads___googleads___v2___common___criteria_pb2___AdScheduleInfo
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> FeedItemTarget: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> FeedItemTarget: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> FeedItemTarget: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_schedule",b"ad_schedule",u"campaign",b"campaign",u"device",b"device",u"feed_item",b"feed_item",u"feed_item_target_id",b"feed_item_target_id",u"geo_target_constant",b"geo_target_constant",u"keyword",b"keyword",u"target",b"target"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"ad_group",b"ad_group",u"ad_schedule",b"ad_schedule",u"campaign",b"campaign",u"device",b"device",u"feed_item",b"feed_item",u"feed_item_target_id",b"feed_item_target_id",u"feed_item_target_type",b"feed_item_target_type",u"geo_target_constant",b"geo_target_constant",u"keyword",b"keyword",u"resource_name",b"resource_name",u"target",b"target"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"target",b"target"]) -> typing_extensions___Literal["campaign","ad_group","keyword","geo_target_constant","device","ad_schedule"]: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group",
+            b"ad_group",
+            "ad_schedule",
+            b"ad_schedule",
+            "campaign",
+            b"campaign",
+            "device",
+            b"device",
+            "feed_item",
+            b"feed_item",
+            "feed_item_target_id",
+            b"feed_item_target_id",
+            "geo_target_constant",
+            b"geo_target_constant",
+            "keyword",
+            b"keyword",
+            "target",
+            b"target",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_group",
+            b"ad_group",
+            "ad_schedule",
+            b"ad_schedule",
+            "campaign",
+            b"campaign",
+            "device",
+            b"device",
+            "feed_item",
+            b"feed_item",
+            "feed_item_target_id",
+            b"feed_item_target_id",
+            "feed_item_target_type",
+            b"feed_item_target_type",
+            "geo_target_constant",
+            b"geo_target_constant",
+            "keyword",
+            b"keyword",
+            "resource_name",
+            b"resource_name",
+            "target",
+            b"target",
+        ],
+    ) -> None: ...
+    def WhichOneof(
+        self, oneof_group: typing_extensions___Literal["target", b"target"]
+    ) -> typing_extensions___Literal[
+        "campaign",
+        "ad_group",
+        "keyword",
+        "geo_target_constant",
+        "device",
+        "ad_schedule",
+    ]: ...
+
 global___FeedItemTarget = FeedItemTarget

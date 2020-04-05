@@ -16,9 +16,7 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     BoolValue as google___protobuf___wrappers_pb2___BoolValue,
@@ -32,10 +30,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -45,71 +40,158 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class GoogleAdsField(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    category = ... # type: google___ads___googleads___v2___enums___google_ads_field_category_pb2___GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory
-    data_type = ... # type: google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
-
+    resource_name = ...  # type: typing___Text
+    category = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___google_ads_field_category_pb2___GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory
+    data_type = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def selectable(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
-
     @property
     def filterable(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
-
     @property
     def sortable(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
-
     @property
-    def selectable_with(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def selectable_with(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
-    def attribute_resources(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def attribute_resources(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
-    def metrics(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def metrics(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
-    def segments(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def segments(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
-    def enum_values(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def enum_values(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
     def type_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def is_repeated(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        category : typing___Optional[google___ads___googleads___v2___enums___google_ads_field_category_pb2___GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory] = None,
-        selectable : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        filterable : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        sortable : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        selectable_with : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        attribute_resources : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        metrics : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        segments : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        enum_values : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        data_type : typing___Optional[google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType] = None,
-        type_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        is_repeated : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        name: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        category: typing___Optional[
+            google___ads___googleads___v2___enums___google_ads_field_category_pb2___GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory
+        ] = None,
+        selectable: typing___Optional[
+            google___protobuf___wrappers_pb2___BoolValue
+        ] = None,
+        filterable: typing___Optional[
+            google___protobuf___wrappers_pb2___BoolValue
+        ] = None,
+        sortable: typing___Optional[
+            google___protobuf___wrappers_pb2___BoolValue
+        ] = None,
+        selectable_with: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        attribute_resources: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        metrics: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        segments: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        enum_values: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        data_type: typing___Optional[
+            google___ads___googleads___v2___enums___google_ads_field_data_type_pb2___GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
+        ] = None,
+        type_url: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        is_repeated: typing___Optional[
+            google___protobuf___wrappers_pb2___BoolValue
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> GoogleAdsField: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> GoogleAdsField: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> GoogleAdsField: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"filterable",b"filterable",u"is_repeated",b"is_repeated",u"name",b"name",u"selectable",b"selectable",u"sortable",b"sortable",u"type_url",b"type_url"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"attribute_resources",b"attribute_resources",u"category",b"category",u"data_type",b"data_type",u"enum_values",b"enum_values",u"filterable",b"filterable",u"is_repeated",b"is_repeated",u"metrics",b"metrics",u"name",b"name",u"resource_name",b"resource_name",u"segments",b"segments",u"selectable",b"selectable",u"selectable_with",b"selectable_with",u"sortable",b"sortable",u"type_url",b"type_url"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "filterable",
+            b"filterable",
+            "is_repeated",
+            b"is_repeated",
+            "name",
+            b"name",
+            "selectable",
+            b"selectable",
+            "sortable",
+            b"sortable",
+            "type_url",
+            b"type_url",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "attribute_resources",
+            b"attribute_resources",
+            "category",
+            b"category",
+            "data_type",
+            b"data_type",
+            "enum_values",
+            b"enum_values",
+            "filterable",
+            b"filterable",
+            "is_repeated",
+            b"is_repeated",
+            "metrics",
+            b"metrics",
+            "name",
+            b"name",
+            "resource_name",
+            b"resource_name",
+            "segments",
+            b"segments",
+            "selectable",
+            b"selectable",
+            "selectable_with",
+            b"selectable_with",
+            "sortable",
+            b"sortable",
+            "type_url",
+            b"type_url",
+        ],
+    ) -> None: ...
+
 global___GoogleAdsField = GoogleAdsField

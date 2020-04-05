@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class PolicyValidationParameterErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,34 +28,69 @@ class PolicyValidationParameterErrorEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'PolicyValidationParameterErrorEnum.PolicyValidationParameterError': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "PolicyValidationParameterErrorEnum.PolicyValidationParameterError": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['PolicyValidationParameterErrorEnum.PolicyValidationParameterError']: ...
+        def values(
+            cls
+        ) -> typing___List[
+            "PolicyValidationParameterErrorEnum.PolicyValidationParameterError"
+        ]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'PolicyValidationParameterErrorEnum.PolicyValidationParameterError']]: ...
-        UNSPECIFIED = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 0)
-        UNKNOWN = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 1)
-        UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 2)
-        UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 3)
-        CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 4)
-    UNSPECIFIED = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 0)
-    UNKNOWN = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 1)
-    UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 2)
-    UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 3)
-    CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS = typing___cast('PolicyValidationParameterErrorEnum.PolicyValidationParameterError', 4)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str,
+                "PolicyValidationParameterErrorEnum.PolicyValidationParameterError",
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 0
+        )
+        UNKNOWN = typing___cast(
+            "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 1
+        )
+        UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS = typing___cast(
+            "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 2
+        )
+        UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS = typing___cast(
+            "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 3
+        )
+        CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS = typing___cast(
+            "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 4
+        )
+    UNSPECIFIED = typing___cast(
+        "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 0
+    )
+    UNKNOWN = typing___cast(
+        "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 1
+    )
+    UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS = typing___cast(
+        "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 2
+    )
+    UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS = typing___cast(
+        "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 3
+    )
+    CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS = typing___cast(
+        "PolicyValidationParameterErrorEnum.PolicyValidationParameterError", 4
+    )
     global___PolicyValidationParameterError = PolicyValidationParameterError
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
-        def FromString(cls, s: builtin___bytes) -> PolicyValidationParameterErrorEnum: ...
+        def FromString(
+            cls, s: builtin___bytes
+        ) -> PolicyValidationParameterErrorEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> PolicyValidationParameterErrorEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> PolicyValidationParameterErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___PolicyValidationParameterErrorEnum = PolicyValidationParameterErrorEnum

@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class CampaignSharedSetErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,30 +28,46 @@ class CampaignSharedSetErrorEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'CampaignSharedSetErrorEnum.CampaignSharedSetError': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "CampaignSharedSetErrorEnum.CampaignSharedSetError": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['CampaignSharedSetErrorEnum.CampaignSharedSetError']: ...
+        def values(
+            cls
+        ) -> typing___List["CampaignSharedSetErrorEnum.CampaignSharedSetError"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'CampaignSharedSetErrorEnum.CampaignSharedSetError']]: ...
-        UNSPECIFIED = typing___cast('CampaignSharedSetErrorEnum.CampaignSharedSetError', 0)
-        UNKNOWN = typing___cast('CampaignSharedSetErrorEnum.CampaignSharedSetError', 1)
-        SHARED_SET_ACCESS_DENIED = typing___cast('CampaignSharedSetErrorEnum.CampaignSharedSetError', 2)
-    UNSPECIFIED = typing___cast('CampaignSharedSetErrorEnum.CampaignSharedSetError', 0)
-    UNKNOWN = typing___cast('CampaignSharedSetErrorEnum.CampaignSharedSetError', 1)
-    SHARED_SET_ACCESS_DENIED = typing___cast('CampaignSharedSetErrorEnum.CampaignSharedSetError', 2)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str, "CampaignSharedSetErrorEnum.CampaignSharedSetError"
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "CampaignSharedSetErrorEnum.CampaignSharedSetError", 0
+        )
+        UNKNOWN = typing___cast("CampaignSharedSetErrorEnum.CampaignSharedSetError", 1)
+        SHARED_SET_ACCESS_DENIED = typing___cast(
+            "CampaignSharedSetErrorEnum.CampaignSharedSetError", 2
+        )
+    UNSPECIFIED = typing___cast("CampaignSharedSetErrorEnum.CampaignSharedSetError", 0)
+    UNKNOWN = typing___cast("CampaignSharedSetErrorEnum.CampaignSharedSetError", 1)
+    SHARED_SET_ACCESS_DENIED = typing___cast(
+        "CampaignSharedSetErrorEnum.CampaignSharedSetError", 2
+    )
     global___CampaignSharedSetError = CampaignSharedSetError
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> CampaignSharedSetErrorEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignSharedSetErrorEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> CampaignSharedSetErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___CampaignSharedSetErrorEnum = CampaignSharedSetErrorEnum

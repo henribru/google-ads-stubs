@@ -16,9 +16,7 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     Iterable as typing___Iterable,
@@ -27,10 +25,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -40,49 +35,79 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class ListInvoicesRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    customer_id = ... # type: typing___Text
-    billing_setup = ... # type: typing___Text
-    issue_year = ... # type: typing___Text
-    issue_month = ... # type: google___ads___googleads___v2___enums___month_of_year_pb2___MonthOfYearEnum.MonthOfYear
-
-    def __init__(self,
+    customer_id = ...  # type: typing___Text
+    billing_setup = ...  # type: typing___Text
+    issue_year = ...  # type: typing___Text
+    issue_month = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___month_of_year_pb2___MonthOfYearEnum.MonthOfYear
+    def __init__(
+        self,
         *,
-        customer_id : typing___Optional[typing___Text] = None,
-        billing_setup : typing___Optional[typing___Text] = None,
-        issue_year : typing___Optional[typing___Text] = None,
-        issue_month : typing___Optional[google___ads___googleads___v2___enums___month_of_year_pb2___MonthOfYearEnum.MonthOfYear] = None,
-        ) -> None: ...
+        customer_id: typing___Optional[typing___Text] = None,
+        billing_setup: typing___Optional[typing___Text] = None,
+        issue_year: typing___Optional[typing___Text] = None,
+        issue_month: typing___Optional[
+            google___ads___googleads___v2___enums___month_of_year_pb2___MonthOfYearEnum.MonthOfYear
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> ListInvoicesRequest: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ListInvoicesRequest: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> ListInvoicesRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"billing_setup",b"billing_setup",u"customer_id",b"customer_id",u"issue_month",b"issue_month",u"issue_year",b"issue_year"]) -> None: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "billing_setup",
+            b"billing_setup",
+            "customer_id",
+            b"customer_id",
+            "issue_month",
+            b"issue_month",
+            "issue_year",
+            b"issue_year",
+        ],
+    ) -> None: ...
+
 global___ListInvoicesRequest = ListInvoicesRequest
 
 class ListInvoicesResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
-    def invoices(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___ads___googleads___v2___resources___invoice_pb2___Invoice]: ...
-
-    def __init__(self,
+    def invoices(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___ads___googleads___v2___resources___invoice_pb2___Invoice
+    ]: ...
+    def __init__(
+        self,
         *,
-        invoices : typing___Optional[typing___Iterable[google___ads___googleads___v2___resources___invoice_pb2___Invoice]] = None,
-        ) -> None: ...
+        invoices: typing___Optional[
+            typing___Iterable[
+                google___ads___googleads___v2___resources___invoice_pb2___Invoice
+            ]
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> ListInvoicesResponse: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ListInvoicesResponse: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> ListInvoicesResponse: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"invoices",b"invoices"]) -> None: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["invoices", b"invoices"]
+    ) -> None: ...
+
 global___ListInvoicesResponse = ListInvoicesResponse

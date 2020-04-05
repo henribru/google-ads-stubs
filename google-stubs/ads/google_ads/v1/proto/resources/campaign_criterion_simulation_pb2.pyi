@@ -16,9 +16,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
@@ -31,10 +29,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -44,48 +39,105 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class CampaignCriterionSimulation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum.SimulationType
-    modification_method = ... # type: google___ads___googleads___v1___enums___simulation_modification_method_pb2___SimulationModificationMethodEnum.SimulationModificationMethod
-
+    resource_name = ...  # type: typing___Text
+    type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum.SimulationType
+    modification_method = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___simulation_modification_method_pb2___SimulationModificationMethodEnum.SimulationModificationMethod
     @property
     def campaign_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def criterion_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def start_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def end_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def bid_modifier_point_list(self) -> google___ads___googleads___v1___common___simulation_pb2___BidModifierSimulationPointList: ...
-
-    def __init__(self,
+    def bid_modifier_point_list(
+        self
+    ) -> google___ads___googleads___v1___common___simulation_pb2___BidModifierSimulationPointList: ...
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        campaign_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        criterion_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum.SimulationType] = None,
-        modification_method : typing___Optional[google___ads___googleads___v1___enums___simulation_modification_method_pb2___SimulationModificationMethodEnum.SimulationModificationMethod] = None,
-        start_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        end_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        bid_modifier_point_list : typing___Optional[google___ads___googleads___v1___common___simulation_pb2___BidModifierSimulationPointList] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        campaign_id: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        criterion_id: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        type: typing___Optional[
+            google___ads___googleads___v1___enums___simulation_type_pb2___SimulationTypeEnum.SimulationType
+        ] = None,
+        modification_method: typing___Optional[
+            google___ads___googleads___v1___enums___simulation_modification_method_pb2___SimulationModificationMethodEnum.SimulationModificationMethod
+        ] = None,
+        start_date: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        end_date: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        bid_modifier_point_list: typing___Optional[
+            google___ads___googleads___v1___common___simulation_pb2___BidModifierSimulationPointList
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> CampaignCriterionSimulation: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> CampaignCriterionSimulation: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> CampaignCriterionSimulation: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"bid_modifier_point_list",b"bid_modifier_point_list",u"campaign_id",b"campaign_id",u"criterion_id",b"criterion_id",u"end_date",b"end_date",u"point_list",b"point_list",u"start_date",b"start_date"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"bid_modifier_point_list",b"bid_modifier_point_list",u"campaign_id",b"campaign_id",u"criterion_id",b"criterion_id",u"end_date",b"end_date",u"modification_method",b"modification_method",u"point_list",b"point_list",u"resource_name",b"resource_name",u"start_date",b"start_date",u"type",b"type"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"point_list",b"point_list"]) -> typing_extensions___Literal["bid_modifier_point_list"]: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "bid_modifier_point_list",
+            b"bid_modifier_point_list",
+            "campaign_id",
+            b"campaign_id",
+            "criterion_id",
+            b"criterion_id",
+            "end_date",
+            b"end_date",
+            "point_list",
+            b"point_list",
+            "start_date",
+            b"start_date",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "bid_modifier_point_list",
+            b"bid_modifier_point_list",
+            "campaign_id",
+            b"campaign_id",
+            "criterion_id",
+            b"criterion_id",
+            "end_date",
+            b"end_date",
+            "modification_method",
+            b"modification_method",
+            "point_list",
+            b"point_list",
+            "resource_name",
+            b"resource_name",
+            "start_date",
+            b"start_date",
+            "type",
+            b"type",
+        ],
+    ) -> None: ...
+    def WhichOneof(
+        self, oneof_group: typing_extensions___Literal["point_list", b"point_list"]
+    ) -> typing_extensions___Literal["bid_modifier_point_list"]: ...
+
 global___CampaignCriterionSimulation = CampaignCriterionSimulation

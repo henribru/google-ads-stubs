@@ -16,9 +16,7 @@ from google.protobuf.internal.containers import (
     RepeatedScalarFieldContainer as google___protobuf___internal___containers___RepeatedScalarFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     DoubleValue as google___protobuf___wrappers_pb2___DoubleValue,
@@ -32,10 +30,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -45,453 +40,1143 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class Metrics(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    historical_creative_quality_score = ... # type: google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
-    historical_landing_page_quality_score = ... # type: google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
-    historical_search_predicted_ctr = ... # type: google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
-    interaction_event_types = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v1___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType]
-
+    historical_creative_quality_score = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+    historical_landing_page_quality_score = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+    historical_search_predicted_ctr = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+    interaction_event_types = (
+        ...
+    )  # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[google___ads___googleads___v1___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType]
     @property
-    def absolute_top_impression_percentage(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def absolute_top_impression_percentage(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def active_view_cpm(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def active_view_ctr(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
-    def active_view_impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def active_view_impressions(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
-    def active_view_measurability(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def active_view_measurability(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def active_view_measurable_cost_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def active_view_measurable_cost_micros(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
-    def active_view_measurable_impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def active_view_measurable_impressions(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
-    def active_view_viewability(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def active_view_viewability(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_interactions_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_interactions_rate(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_value(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def all_conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
-    def all_conversions_value_per_cost(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_value_per_cost(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_click_to_call(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_click_to_call(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_directions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_directions(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_interactions_value_per_interaction(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_interactions_value_per_interaction(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_menu(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_menu(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_order(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_order(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_other_engagement(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_other_engagement(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_store_visit(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_store_visit(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def all_conversions_from_store_website(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def all_conversions_from_store_website(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def average_cost(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def average_cpc(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def average_cpe(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def average_cpm(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def average_cpv(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def average_frequency(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def average_page_views(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def average_position(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
-    def average_time_on_site(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def average_time_on_site(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def benchmark_average_max_cpc(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def benchmark_average_max_cpc(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def benchmark_ctr(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def bounce_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def combined_clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def combined_clicks_per_query(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def combined_clicks_per_query(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def combined_queries(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def content_budget_lost_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def content_budget_lost_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def content_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def content_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def conversion_last_received_request_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+    def conversion_last_received_request_date_time(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
-    def conversion_last_conversion_date(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+    def conversion_last_conversion_date(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
-    def content_rank_lost_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def content_rank_lost_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def conversions_from_interactions_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def conversions_from_interactions_rate(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def conversions_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
-    def conversions_value_per_cost(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def conversions_value_per_cost(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def conversions_from_interactions_value_per_interaction(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def conversions_from_interactions_value_per_interaction(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def cost_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def cost_per_all_conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def cost_per_all_conversions(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def cost_per_conversion(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
-    def cost_per_current_model_attributed_conversion(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def cost_per_current_model_attributed_conversion(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def cross_device_conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def cross_device_conversions(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def ctr(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
-    def current_model_attributed_conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def current_model_attributed_conversions(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def current_model_attributed_conversions_from_interactions_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def current_model_attributed_conversions_from_interactions_rate(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def current_model_attributed_conversions_from_interactions_value_per_interaction(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def current_model_attributed_conversions_from_interactions_value_per_interaction(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def current_model_attributed_conversions_value(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def current_model_attributed_conversions_value(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def current_model_attributed_conversions_value_per_cost(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def current_model_attributed_conversions_value_per_cost(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def engagement_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def engagements(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def hotel_average_lead_value_micros(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def hotel_average_lead_value_micros(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def historical_quality_score(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def historical_quality_score(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def gmail_forwards(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def gmail_saves(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def gmail_secondary_clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def gmail_secondary_clicks(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def impression_reach(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def impressions_from_store_reach(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def impressions_from_store_reach(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def interaction_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def interactions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def invalid_click_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def invalid_clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def mobile_friendly_clicks_percentage(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def mobile_friendly_clicks_percentage(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def organic_clicks(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def organic_clicks_per_query(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def organic_clicks_per_query(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def organic_impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def organic_impressions_per_query(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def organic_impressions_per_query(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def organic_queries(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def percent_new_visitors(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def percent_new_visitors(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def phone_calls(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def phone_impressions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def phone_through_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def relative_ctr(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
-    def search_absolute_top_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_absolute_top_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def search_budget_lost_absolute_top_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_budget_lost_absolute_top_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def search_budget_lost_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_budget_lost_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def search_budget_lost_top_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_budget_lost_top_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def search_click_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
-    def search_exact_match_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_exact_match_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def search_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def search_rank_lost_absolute_top_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_rank_lost_absolute_top_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def search_rank_lost_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_rank_lost_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def search_rank_lost_top_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_rank_lost_top_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def search_top_impression_share(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def search_top_impression_share(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def speed_score(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def top_impression_percentage(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def top_impression_percentage(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def valid_accelerated_mobile_pages_clicks_percentage(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def valid_accelerated_mobile_pages_clicks_percentage(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def value_per_all_conversions(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def value_per_all_conversions(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def value_per_conversion(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def value_per_conversion(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def value_per_current_model_attributed_conversion(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def value_per_current_model_attributed_conversion(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def video_quartile_100_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def video_quartile_100_rate(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def video_quartile_25_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def video_quartile_25_rate(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def video_quartile_50_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def video_quartile_50_rate(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
-    def video_quartile_75_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
+    def video_quartile_75_rate(
+        self
+    ) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def video_view_rate(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
-
     @property
     def video_views(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def view_through_conversions(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-    def __init__(self,
+    def view_through_conversions(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+    def __init__(
+        self,
         *,
-        absolute_top_impression_percentage : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        active_view_cpm : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        active_view_ctr : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        active_view_impressions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        active_view_measurability : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        active_view_measurable_cost_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        active_view_measurable_impressions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        active_view_viewability : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_interactions_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_value : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_value_per_cost : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_click_to_call : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_directions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_interactions_value_per_interaction : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_menu : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_order : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_other_engagement : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_store_visit : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        all_conversions_from_store_website : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_cost : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_cpc : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_cpe : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_cpm : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_cpv : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_frequency : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_page_views : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_position : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        average_time_on_site : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        benchmark_average_max_cpc : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        benchmark_ctr : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        bounce_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        clicks : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        combined_clicks : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        combined_clicks_per_query : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        combined_queries : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        content_budget_lost_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        content_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        conversion_last_received_request_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        conversion_last_conversion_date : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        content_rank_lost_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        conversions_from_interactions_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        conversions_value : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        conversions_value_per_cost : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        conversions_from_interactions_value_per_interaction : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        conversions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        cost_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        cost_per_all_conversions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        cost_per_conversion : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        cost_per_current_model_attributed_conversion : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        cross_device_conversions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        ctr : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        current_model_attributed_conversions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        current_model_attributed_conversions_from_interactions_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        current_model_attributed_conversions_from_interactions_value_per_interaction : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        current_model_attributed_conversions_value : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        current_model_attributed_conversions_value_per_cost : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        engagement_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        engagements : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        hotel_average_lead_value_micros : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        historical_creative_quality_score : typing___Optional[google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
-        historical_landing_page_quality_score : typing___Optional[google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
-        historical_quality_score : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        historical_search_predicted_ctr : typing___Optional[google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket] = None,
-        gmail_forwards : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        gmail_saves : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        gmail_secondary_clicks : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        impression_reach : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        impressions_from_store_reach : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        impressions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        interaction_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        interactions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        interaction_event_types : typing___Optional[typing___Iterable[google___ads___googleads___v1___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType]] = None,
-        invalid_click_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        invalid_clicks : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        mobile_friendly_clicks_percentage : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        organic_clicks : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        organic_clicks_per_query : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        organic_impressions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        organic_impressions_per_query : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        organic_queries : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        percent_new_visitors : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        phone_calls : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        phone_impressions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        phone_through_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        relative_ctr : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_absolute_top_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_budget_lost_absolute_top_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_budget_lost_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_budget_lost_top_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_click_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_exact_match_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_rank_lost_absolute_top_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_rank_lost_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_rank_lost_top_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        search_top_impression_share : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        speed_score : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        top_impression_percentage : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        valid_accelerated_mobile_pages_clicks_percentage : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        value_per_all_conversions : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        value_per_conversion : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        value_per_current_model_attributed_conversion : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        video_quartile_100_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        video_quartile_25_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        video_quartile_50_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        video_quartile_75_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        video_view_rate : typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
-        video_views : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        view_through_conversions : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        ) -> None: ...
+        absolute_top_impression_percentage: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        active_view_cpm: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        active_view_ctr: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        active_view_impressions: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        active_view_measurability: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        active_view_measurable_cost_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        active_view_measurable_impressions: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        active_view_viewability: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_interactions_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_value: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_value_per_cost: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_click_to_call: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_directions: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_interactions_value_per_interaction: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_menu: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_order: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_other_engagement: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_store_visit: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        all_conversions_from_store_website: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_cost: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_cpc: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_cpe: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_cpm: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_cpv: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_frequency: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_page_views: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_position: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        average_time_on_site: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        benchmark_average_max_cpc: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        benchmark_ctr: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        bounce_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        clicks: typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
+        combined_clicks: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        combined_clicks_per_query: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        combined_queries: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        content_budget_lost_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        content_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        conversion_last_received_request_date_time: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        conversion_last_conversion_date: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        content_rank_lost_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        conversions_from_interactions_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        conversions_value: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        conversions_value_per_cost: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        conversions_from_interactions_value_per_interaction: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        conversions: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        cost_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        cost_per_all_conversions: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        cost_per_conversion: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        cost_per_current_model_attributed_conversion: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        cross_device_conversions: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        ctr: typing___Optional[google___protobuf___wrappers_pb2___DoubleValue] = None,
+        current_model_attributed_conversions: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        current_model_attributed_conversions_from_interactions_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        current_model_attributed_conversions_from_interactions_value_per_interaction: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        current_model_attributed_conversions_value: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        current_model_attributed_conversions_value_per_cost: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        engagement_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        engagements: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        hotel_average_lead_value_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        historical_creative_quality_score: typing___Optional[
+            google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+        ] = None,
+        historical_landing_page_quality_score: typing___Optional[
+            google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+        ] = None,
+        historical_quality_score: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        historical_search_predicted_ctr: typing___Optional[
+            google___ads___googleads___v1___enums___quality_score_bucket_pb2___QualityScoreBucketEnum.QualityScoreBucket
+        ] = None,
+        gmail_forwards: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        gmail_saves: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        gmail_secondary_clicks: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        impression_reach: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        impressions_from_store_reach: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        impressions: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        interaction_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        interactions: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        interaction_event_types: typing___Optional[
+            typing___Iterable[
+                google___ads___googleads___v1___enums___interaction_event_type_pb2___InteractionEventTypeEnum.InteractionEventType
+            ]
+        ] = None,
+        invalid_click_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        invalid_clicks: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        mobile_friendly_clicks_percentage: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        organic_clicks: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        organic_clicks_per_query: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        organic_impressions: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        organic_impressions_per_query: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        organic_queries: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        percent_new_visitors: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        phone_calls: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        phone_impressions: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        phone_through_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        relative_ctr: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_absolute_top_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_budget_lost_absolute_top_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_budget_lost_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_budget_lost_top_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_click_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_exact_match_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_rank_lost_absolute_top_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_rank_lost_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_rank_lost_top_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        search_top_impression_share: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        speed_score: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        top_impression_percentage: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        valid_accelerated_mobile_pages_clicks_percentage: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        value_per_all_conversions: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        value_per_conversion: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        value_per_current_model_attributed_conversion: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        video_quartile_100_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        video_quartile_25_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        video_quartile_50_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        video_quartile_75_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        video_view_rate: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
+        video_views: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        view_through_conversions: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> Metrics: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Metrics: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> Metrics: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"absolute_top_impression_percentage",b"absolute_top_impression_percentage",u"active_view_cpm",b"active_view_cpm",u"active_view_ctr",b"active_view_ctr",u"active_view_impressions",b"active_view_impressions",u"active_view_measurability",b"active_view_measurability",u"active_view_measurable_cost_micros",b"active_view_measurable_cost_micros",u"active_view_measurable_impressions",b"active_view_measurable_impressions",u"active_view_viewability",b"active_view_viewability",u"all_conversions",b"all_conversions",u"all_conversions_from_click_to_call",b"all_conversions_from_click_to_call",u"all_conversions_from_directions",b"all_conversions_from_directions",u"all_conversions_from_interactions_rate",b"all_conversions_from_interactions_rate",u"all_conversions_from_interactions_value_per_interaction",b"all_conversions_from_interactions_value_per_interaction",u"all_conversions_from_menu",b"all_conversions_from_menu",u"all_conversions_from_order",b"all_conversions_from_order",u"all_conversions_from_other_engagement",b"all_conversions_from_other_engagement",u"all_conversions_from_store_visit",b"all_conversions_from_store_visit",u"all_conversions_from_store_website",b"all_conversions_from_store_website",u"all_conversions_value",b"all_conversions_value",u"all_conversions_value_per_cost",b"all_conversions_value_per_cost",u"average_cost",b"average_cost",u"average_cpc",b"average_cpc",u"average_cpe",b"average_cpe",u"average_cpm",b"average_cpm",u"average_cpv",b"average_cpv",u"average_frequency",b"average_frequency",u"average_page_views",b"average_page_views",u"average_position",b"average_position",u"average_time_on_site",b"average_time_on_site",u"benchmark_average_max_cpc",b"benchmark_average_max_cpc",u"benchmark_ctr",b"benchmark_ctr",u"bounce_rate",b"bounce_rate",u"clicks",b"clicks",u"combined_clicks",b"combined_clicks",u"combined_clicks_per_query",b"combined_clicks_per_query",u"combined_queries",b"combined_queries",u"content_budget_lost_impression_share",b"content_budget_lost_impression_share",u"content_impression_share",b"content_impression_share",u"content_rank_lost_impression_share",b"content_rank_lost_impression_share",u"conversion_last_conversion_date",b"conversion_last_conversion_date",u"conversion_last_received_request_date_time",b"conversion_last_received_request_date_time",u"conversions",b"conversions",u"conversions_from_interactions_rate",b"conversions_from_interactions_rate",u"conversions_from_interactions_value_per_interaction",b"conversions_from_interactions_value_per_interaction",u"conversions_value",b"conversions_value",u"conversions_value_per_cost",b"conversions_value_per_cost",u"cost_micros",b"cost_micros",u"cost_per_all_conversions",b"cost_per_all_conversions",u"cost_per_conversion",b"cost_per_conversion",u"cost_per_current_model_attributed_conversion",b"cost_per_current_model_attributed_conversion",u"cross_device_conversions",b"cross_device_conversions",u"ctr",b"ctr",u"current_model_attributed_conversions",b"current_model_attributed_conversions",u"current_model_attributed_conversions_from_interactions_rate",b"current_model_attributed_conversions_from_interactions_rate",u"current_model_attributed_conversions_from_interactions_value_per_interaction",b"current_model_attributed_conversions_from_interactions_value_per_interaction",u"current_model_attributed_conversions_value",b"current_model_attributed_conversions_value",u"current_model_attributed_conversions_value_per_cost",b"current_model_attributed_conversions_value_per_cost",u"engagement_rate",b"engagement_rate",u"engagements",b"engagements",u"gmail_forwards",b"gmail_forwards",u"gmail_saves",b"gmail_saves",u"gmail_secondary_clicks",b"gmail_secondary_clicks",u"historical_quality_score",b"historical_quality_score",u"hotel_average_lead_value_micros",b"hotel_average_lead_value_micros",u"impression_reach",b"impression_reach",u"impressions",b"impressions",u"impressions_from_store_reach",b"impressions_from_store_reach",u"interaction_rate",b"interaction_rate",u"interactions",b"interactions",u"invalid_click_rate",b"invalid_click_rate",u"invalid_clicks",b"invalid_clicks",u"mobile_friendly_clicks_percentage",b"mobile_friendly_clicks_percentage",u"organic_clicks",b"organic_clicks",u"organic_clicks_per_query",b"organic_clicks_per_query",u"organic_impressions",b"organic_impressions",u"organic_impressions_per_query",b"organic_impressions_per_query",u"organic_queries",b"organic_queries",u"percent_new_visitors",b"percent_new_visitors",u"phone_calls",b"phone_calls",u"phone_impressions",b"phone_impressions",u"phone_through_rate",b"phone_through_rate",u"relative_ctr",b"relative_ctr",u"search_absolute_top_impression_share",b"search_absolute_top_impression_share",u"search_budget_lost_absolute_top_impression_share",b"search_budget_lost_absolute_top_impression_share",u"search_budget_lost_impression_share",b"search_budget_lost_impression_share",u"search_budget_lost_top_impression_share",b"search_budget_lost_top_impression_share",u"search_click_share",b"search_click_share",u"search_exact_match_impression_share",b"search_exact_match_impression_share",u"search_impression_share",b"search_impression_share",u"search_rank_lost_absolute_top_impression_share",b"search_rank_lost_absolute_top_impression_share",u"search_rank_lost_impression_share",b"search_rank_lost_impression_share",u"search_rank_lost_top_impression_share",b"search_rank_lost_top_impression_share",u"search_top_impression_share",b"search_top_impression_share",u"speed_score",b"speed_score",u"top_impression_percentage",b"top_impression_percentage",u"valid_accelerated_mobile_pages_clicks_percentage",b"valid_accelerated_mobile_pages_clicks_percentage",u"value_per_all_conversions",b"value_per_all_conversions",u"value_per_conversion",b"value_per_conversion",u"value_per_current_model_attributed_conversion",b"value_per_current_model_attributed_conversion",u"video_quartile_100_rate",b"video_quartile_100_rate",u"video_quartile_25_rate",b"video_quartile_25_rate",u"video_quartile_50_rate",b"video_quartile_50_rate",u"video_quartile_75_rate",b"video_quartile_75_rate",u"video_view_rate",b"video_view_rate",u"video_views",b"video_views",u"view_through_conversions",b"view_through_conversions"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"absolute_top_impression_percentage",b"absolute_top_impression_percentage",u"active_view_cpm",b"active_view_cpm",u"active_view_ctr",b"active_view_ctr",u"active_view_impressions",b"active_view_impressions",u"active_view_measurability",b"active_view_measurability",u"active_view_measurable_cost_micros",b"active_view_measurable_cost_micros",u"active_view_measurable_impressions",b"active_view_measurable_impressions",u"active_view_viewability",b"active_view_viewability",u"all_conversions",b"all_conversions",u"all_conversions_from_click_to_call",b"all_conversions_from_click_to_call",u"all_conversions_from_directions",b"all_conversions_from_directions",u"all_conversions_from_interactions_rate",b"all_conversions_from_interactions_rate",u"all_conversions_from_interactions_value_per_interaction",b"all_conversions_from_interactions_value_per_interaction",u"all_conversions_from_menu",b"all_conversions_from_menu",u"all_conversions_from_order",b"all_conversions_from_order",u"all_conversions_from_other_engagement",b"all_conversions_from_other_engagement",u"all_conversions_from_store_visit",b"all_conversions_from_store_visit",u"all_conversions_from_store_website",b"all_conversions_from_store_website",u"all_conversions_value",b"all_conversions_value",u"all_conversions_value_per_cost",b"all_conversions_value_per_cost",u"average_cost",b"average_cost",u"average_cpc",b"average_cpc",u"average_cpe",b"average_cpe",u"average_cpm",b"average_cpm",u"average_cpv",b"average_cpv",u"average_frequency",b"average_frequency",u"average_page_views",b"average_page_views",u"average_position",b"average_position",u"average_time_on_site",b"average_time_on_site",u"benchmark_average_max_cpc",b"benchmark_average_max_cpc",u"benchmark_ctr",b"benchmark_ctr",u"bounce_rate",b"bounce_rate",u"clicks",b"clicks",u"combined_clicks",b"combined_clicks",u"combined_clicks_per_query",b"combined_clicks_per_query",u"combined_queries",b"combined_queries",u"content_budget_lost_impression_share",b"content_budget_lost_impression_share",u"content_impression_share",b"content_impression_share",u"content_rank_lost_impression_share",b"content_rank_lost_impression_share",u"conversion_last_conversion_date",b"conversion_last_conversion_date",u"conversion_last_received_request_date_time",b"conversion_last_received_request_date_time",u"conversions",b"conversions",u"conversions_from_interactions_rate",b"conversions_from_interactions_rate",u"conversions_from_interactions_value_per_interaction",b"conversions_from_interactions_value_per_interaction",u"conversions_value",b"conversions_value",u"conversions_value_per_cost",b"conversions_value_per_cost",u"cost_micros",b"cost_micros",u"cost_per_all_conversions",b"cost_per_all_conversions",u"cost_per_conversion",b"cost_per_conversion",u"cost_per_current_model_attributed_conversion",b"cost_per_current_model_attributed_conversion",u"cross_device_conversions",b"cross_device_conversions",u"ctr",b"ctr",u"current_model_attributed_conversions",b"current_model_attributed_conversions",u"current_model_attributed_conversions_from_interactions_rate",b"current_model_attributed_conversions_from_interactions_rate",u"current_model_attributed_conversions_from_interactions_value_per_interaction",b"current_model_attributed_conversions_from_interactions_value_per_interaction",u"current_model_attributed_conversions_value",b"current_model_attributed_conversions_value",u"current_model_attributed_conversions_value_per_cost",b"current_model_attributed_conversions_value_per_cost",u"engagement_rate",b"engagement_rate",u"engagements",b"engagements",u"gmail_forwards",b"gmail_forwards",u"gmail_saves",b"gmail_saves",u"gmail_secondary_clicks",b"gmail_secondary_clicks",u"historical_creative_quality_score",b"historical_creative_quality_score",u"historical_landing_page_quality_score",b"historical_landing_page_quality_score",u"historical_quality_score",b"historical_quality_score",u"historical_search_predicted_ctr",b"historical_search_predicted_ctr",u"hotel_average_lead_value_micros",b"hotel_average_lead_value_micros",u"impression_reach",b"impression_reach",u"impressions",b"impressions",u"impressions_from_store_reach",b"impressions_from_store_reach",u"interaction_event_types",b"interaction_event_types",u"interaction_rate",b"interaction_rate",u"interactions",b"interactions",u"invalid_click_rate",b"invalid_click_rate",u"invalid_clicks",b"invalid_clicks",u"mobile_friendly_clicks_percentage",b"mobile_friendly_clicks_percentage",u"organic_clicks",b"organic_clicks",u"organic_clicks_per_query",b"organic_clicks_per_query",u"organic_impressions",b"organic_impressions",u"organic_impressions_per_query",b"organic_impressions_per_query",u"organic_queries",b"organic_queries",u"percent_new_visitors",b"percent_new_visitors",u"phone_calls",b"phone_calls",u"phone_impressions",b"phone_impressions",u"phone_through_rate",b"phone_through_rate",u"relative_ctr",b"relative_ctr",u"search_absolute_top_impression_share",b"search_absolute_top_impression_share",u"search_budget_lost_absolute_top_impression_share",b"search_budget_lost_absolute_top_impression_share",u"search_budget_lost_impression_share",b"search_budget_lost_impression_share",u"search_budget_lost_top_impression_share",b"search_budget_lost_top_impression_share",u"search_click_share",b"search_click_share",u"search_exact_match_impression_share",b"search_exact_match_impression_share",u"search_impression_share",b"search_impression_share",u"search_rank_lost_absolute_top_impression_share",b"search_rank_lost_absolute_top_impression_share",u"search_rank_lost_impression_share",b"search_rank_lost_impression_share",u"search_rank_lost_top_impression_share",b"search_rank_lost_top_impression_share",u"search_top_impression_share",b"search_top_impression_share",u"speed_score",b"speed_score",u"top_impression_percentage",b"top_impression_percentage",u"valid_accelerated_mobile_pages_clicks_percentage",b"valid_accelerated_mobile_pages_clicks_percentage",u"value_per_all_conversions",b"value_per_all_conversions",u"value_per_conversion",b"value_per_conversion",u"value_per_current_model_attributed_conversion",b"value_per_current_model_attributed_conversion",u"video_quartile_100_rate",b"video_quartile_100_rate",u"video_quartile_25_rate",b"video_quartile_25_rate",u"video_quartile_50_rate",b"video_quartile_50_rate",u"video_quartile_75_rate",b"video_quartile_75_rate",u"video_view_rate",b"video_view_rate",u"video_views",b"video_views",u"view_through_conversions",b"view_through_conversions"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "absolute_top_impression_percentage",
+            b"absolute_top_impression_percentage",
+            "active_view_cpm",
+            b"active_view_cpm",
+            "active_view_ctr",
+            b"active_view_ctr",
+            "active_view_impressions",
+            b"active_view_impressions",
+            "active_view_measurability",
+            b"active_view_measurability",
+            "active_view_measurable_cost_micros",
+            b"active_view_measurable_cost_micros",
+            "active_view_measurable_impressions",
+            b"active_view_measurable_impressions",
+            "active_view_viewability",
+            b"active_view_viewability",
+            "all_conversions",
+            b"all_conversions",
+            "all_conversions_from_click_to_call",
+            b"all_conversions_from_click_to_call",
+            "all_conversions_from_directions",
+            b"all_conversions_from_directions",
+            "all_conversions_from_interactions_rate",
+            b"all_conversions_from_interactions_rate",
+            "all_conversions_from_interactions_value_per_interaction",
+            b"all_conversions_from_interactions_value_per_interaction",
+            "all_conversions_from_menu",
+            b"all_conversions_from_menu",
+            "all_conversions_from_order",
+            b"all_conversions_from_order",
+            "all_conversions_from_other_engagement",
+            b"all_conversions_from_other_engagement",
+            "all_conversions_from_store_visit",
+            b"all_conversions_from_store_visit",
+            "all_conversions_from_store_website",
+            b"all_conversions_from_store_website",
+            "all_conversions_value",
+            b"all_conversions_value",
+            "all_conversions_value_per_cost",
+            b"all_conversions_value_per_cost",
+            "average_cost",
+            b"average_cost",
+            "average_cpc",
+            b"average_cpc",
+            "average_cpe",
+            b"average_cpe",
+            "average_cpm",
+            b"average_cpm",
+            "average_cpv",
+            b"average_cpv",
+            "average_frequency",
+            b"average_frequency",
+            "average_page_views",
+            b"average_page_views",
+            "average_position",
+            b"average_position",
+            "average_time_on_site",
+            b"average_time_on_site",
+            "benchmark_average_max_cpc",
+            b"benchmark_average_max_cpc",
+            "benchmark_ctr",
+            b"benchmark_ctr",
+            "bounce_rate",
+            b"bounce_rate",
+            "clicks",
+            b"clicks",
+            "combined_clicks",
+            b"combined_clicks",
+            "combined_clicks_per_query",
+            b"combined_clicks_per_query",
+            "combined_queries",
+            b"combined_queries",
+            "content_budget_lost_impression_share",
+            b"content_budget_lost_impression_share",
+            "content_impression_share",
+            b"content_impression_share",
+            "content_rank_lost_impression_share",
+            b"content_rank_lost_impression_share",
+            "conversion_last_conversion_date",
+            b"conversion_last_conversion_date",
+            "conversion_last_received_request_date_time",
+            b"conversion_last_received_request_date_time",
+            "conversions",
+            b"conversions",
+            "conversions_from_interactions_rate",
+            b"conversions_from_interactions_rate",
+            "conversions_from_interactions_value_per_interaction",
+            b"conversions_from_interactions_value_per_interaction",
+            "conversions_value",
+            b"conversions_value",
+            "conversions_value_per_cost",
+            b"conversions_value_per_cost",
+            "cost_micros",
+            b"cost_micros",
+            "cost_per_all_conversions",
+            b"cost_per_all_conversions",
+            "cost_per_conversion",
+            b"cost_per_conversion",
+            "cost_per_current_model_attributed_conversion",
+            b"cost_per_current_model_attributed_conversion",
+            "cross_device_conversions",
+            b"cross_device_conversions",
+            "ctr",
+            b"ctr",
+            "current_model_attributed_conversions",
+            b"current_model_attributed_conversions",
+            "current_model_attributed_conversions_from_interactions_rate",
+            b"current_model_attributed_conversions_from_interactions_rate",
+            "current_model_attributed_conversions_from_interactions_value_per_interaction",
+            b"current_model_attributed_conversions_from_interactions_value_per_interaction",
+            "current_model_attributed_conversions_value",
+            b"current_model_attributed_conversions_value",
+            "current_model_attributed_conversions_value_per_cost",
+            b"current_model_attributed_conversions_value_per_cost",
+            "engagement_rate",
+            b"engagement_rate",
+            "engagements",
+            b"engagements",
+            "gmail_forwards",
+            b"gmail_forwards",
+            "gmail_saves",
+            b"gmail_saves",
+            "gmail_secondary_clicks",
+            b"gmail_secondary_clicks",
+            "historical_quality_score",
+            b"historical_quality_score",
+            "hotel_average_lead_value_micros",
+            b"hotel_average_lead_value_micros",
+            "impression_reach",
+            b"impression_reach",
+            "impressions",
+            b"impressions",
+            "impressions_from_store_reach",
+            b"impressions_from_store_reach",
+            "interaction_rate",
+            b"interaction_rate",
+            "interactions",
+            b"interactions",
+            "invalid_click_rate",
+            b"invalid_click_rate",
+            "invalid_clicks",
+            b"invalid_clicks",
+            "mobile_friendly_clicks_percentage",
+            b"mobile_friendly_clicks_percentage",
+            "organic_clicks",
+            b"organic_clicks",
+            "organic_clicks_per_query",
+            b"organic_clicks_per_query",
+            "organic_impressions",
+            b"organic_impressions",
+            "organic_impressions_per_query",
+            b"organic_impressions_per_query",
+            "organic_queries",
+            b"organic_queries",
+            "percent_new_visitors",
+            b"percent_new_visitors",
+            "phone_calls",
+            b"phone_calls",
+            "phone_impressions",
+            b"phone_impressions",
+            "phone_through_rate",
+            b"phone_through_rate",
+            "relative_ctr",
+            b"relative_ctr",
+            "search_absolute_top_impression_share",
+            b"search_absolute_top_impression_share",
+            "search_budget_lost_absolute_top_impression_share",
+            b"search_budget_lost_absolute_top_impression_share",
+            "search_budget_lost_impression_share",
+            b"search_budget_lost_impression_share",
+            "search_budget_lost_top_impression_share",
+            b"search_budget_lost_top_impression_share",
+            "search_click_share",
+            b"search_click_share",
+            "search_exact_match_impression_share",
+            b"search_exact_match_impression_share",
+            "search_impression_share",
+            b"search_impression_share",
+            "search_rank_lost_absolute_top_impression_share",
+            b"search_rank_lost_absolute_top_impression_share",
+            "search_rank_lost_impression_share",
+            b"search_rank_lost_impression_share",
+            "search_rank_lost_top_impression_share",
+            b"search_rank_lost_top_impression_share",
+            "search_top_impression_share",
+            b"search_top_impression_share",
+            "speed_score",
+            b"speed_score",
+            "top_impression_percentage",
+            b"top_impression_percentage",
+            "valid_accelerated_mobile_pages_clicks_percentage",
+            b"valid_accelerated_mobile_pages_clicks_percentage",
+            "value_per_all_conversions",
+            b"value_per_all_conversions",
+            "value_per_conversion",
+            b"value_per_conversion",
+            "value_per_current_model_attributed_conversion",
+            b"value_per_current_model_attributed_conversion",
+            "video_quartile_100_rate",
+            b"video_quartile_100_rate",
+            "video_quartile_25_rate",
+            b"video_quartile_25_rate",
+            "video_quartile_50_rate",
+            b"video_quartile_50_rate",
+            "video_quartile_75_rate",
+            b"video_quartile_75_rate",
+            "video_view_rate",
+            b"video_view_rate",
+            "video_views",
+            b"video_views",
+            "view_through_conversions",
+            b"view_through_conversions",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "absolute_top_impression_percentage",
+            b"absolute_top_impression_percentage",
+            "active_view_cpm",
+            b"active_view_cpm",
+            "active_view_ctr",
+            b"active_view_ctr",
+            "active_view_impressions",
+            b"active_view_impressions",
+            "active_view_measurability",
+            b"active_view_measurability",
+            "active_view_measurable_cost_micros",
+            b"active_view_measurable_cost_micros",
+            "active_view_measurable_impressions",
+            b"active_view_measurable_impressions",
+            "active_view_viewability",
+            b"active_view_viewability",
+            "all_conversions",
+            b"all_conversions",
+            "all_conversions_from_click_to_call",
+            b"all_conversions_from_click_to_call",
+            "all_conversions_from_directions",
+            b"all_conversions_from_directions",
+            "all_conversions_from_interactions_rate",
+            b"all_conversions_from_interactions_rate",
+            "all_conversions_from_interactions_value_per_interaction",
+            b"all_conversions_from_interactions_value_per_interaction",
+            "all_conversions_from_menu",
+            b"all_conversions_from_menu",
+            "all_conversions_from_order",
+            b"all_conversions_from_order",
+            "all_conversions_from_other_engagement",
+            b"all_conversions_from_other_engagement",
+            "all_conversions_from_store_visit",
+            b"all_conversions_from_store_visit",
+            "all_conversions_from_store_website",
+            b"all_conversions_from_store_website",
+            "all_conversions_value",
+            b"all_conversions_value",
+            "all_conversions_value_per_cost",
+            b"all_conversions_value_per_cost",
+            "average_cost",
+            b"average_cost",
+            "average_cpc",
+            b"average_cpc",
+            "average_cpe",
+            b"average_cpe",
+            "average_cpm",
+            b"average_cpm",
+            "average_cpv",
+            b"average_cpv",
+            "average_frequency",
+            b"average_frequency",
+            "average_page_views",
+            b"average_page_views",
+            "average_position",
+            b"average_position",
+            "average_time_on_site",
+            b"average_time_on_site",
+            "benchmark_average_max_cpc",
+            b"benchmark_average_max_cpc",
+            "benchmark_ctr",
+            b"benchmark_ctr",
+            "bounce_rate",
+            b"bounce_rate",
+            "clicks",
+            b"clicks",
+            "combined_clicks",
+            b"combined_clicks",
+            "combined_clicks_per_query",
+            b"combined_clicks_per_query",
+            "combined_queries",
+            b"combined_queries",
+            "content_budget_lost_impression_share",
+            b"content_budget_lost_impression_share",
+            "content_impression_share",
+            b"content_impression_share",
+            "content_rank_lost_impression_share",
+            b"content_rank_lost_impression_share",
+            "conversion_last_conversion_date",
+            b"conversion_last_conversion_date",
+            "conversion_last_received_request_date_time",
+            b"conversion_last_received_request_date_time",
+            "conversions",
+            b"conversions",
+            "conversions_from_interactions_rate",
+            b"conversions_from_interactions_rate",
+            "conversions_from_interactions_value_per_interaction",
+            b"conversions_from_interactions_value_per_interaction",
+            "conversions_value",
+            b"conversions_value",
+            "conversions_value_per_cost",
+            b"conversions_value_per_cost",
+            "cost_micros",
+            b"cost_micros",
+            "cost_per_all_conversions",
+            b"cost_per_all_conversions",
+            "cost_per_conversion",
+            b"cost_per_conversion",
+            "cost_per_current_model_attributed_conversion",
+            b"cost_per_current_model_attributed_conversion",
+            "cross_device_conversions",
+            b"cross_device_conversions",
+            "ctr",
+            b"ctr",
+            "current_model_attributed_conversions",
+            b"current_model_attributed_conversions",
+            "current_model_attributed_conversions_from_interactions_rate",
+            b"current_model_attributed_conversions_from_interactions_rate",
+            "current_model_attributed_conversions_from_interactions_value_per_interaction",
+            b"current_model_attributed_conversions_from_interactions_value_per_interaction",
+            "current_model_attributed_conversions_value",
+            b"current_model_attributed_conversions_value",
+            "current_model_attributed_conversions_value_per_cost",
+            b"current_model_attributed_conversions_value_per_cost",
+            "engagement_rate",
+            b"engagement_rate",
+            "engagements",
+            b"engagements",
+            "gmail_forwards",
+            b"gmail_forwards",
+            "gmail_saves",
+            b"gmail_saves",
+            "gmail_secondary_clicks",
+            b"gmail_secondary_clicks",
+            "historical_creative_quality_score",
+            b"historical_creative_quality_score",
+            "historical_landing_page_quality_score",
+            b"historical_landing_page_quality_score",
+            "historical_quality_score",
+            b"historical_quality_score",
+            "historical_search_predicted_ctr",
+            b"historical_search_predicted_ctr",
+            "hotel_average_lead_value_micros",
+            b"hotel_average_lead_value_micros",
+            "impression_reach",
+            b"impression_reach",
+            "impressions",
+            b"impressions",
+            "impressions_from_store_reach",
+            b"impressions_from_store_reach",
+            "interaction_event_types",
+            b"interaction_event_types",
+            "interaction_rate",
+            b"interaction_rate",
+            "interactions",
+            b"interactions",
+            "invalid_click_rate",
+            b"invalid_click_rate",
+            "invalid_clicks",
+            b"invalid_clicks",
+            "mobile_friendly_clicks_percentage",
+            b"mobile_friendly_clicks_percentage",
+            "organic_clicks",
+            b"organic_clicks",
+            "organic_clicks_per_query",
+            b"organic_clicks_per_query",
+            "organic_impressions",
+            b"organic_impressions",
+            "organic_impressions_per_query",
+            b"organic_impressions_per_query",
+            "organic_queries",
+            b"organic_queries",
+            "percent_new_visitors",
+            b"percent_new_visitors",
+            "phone_calls",
+            b"phone_calls",
+            "phone_impressions",
+            b"phone_impressions",
+            "phone_through_rate",
+            b"phone_through_rate",
+            "relative_ctr",
+            b"relative_ctr",
+            "search_absolute_top_impression_share",
+            b"search_absolute_top_impression_share",
+            "search_budget_lost_absolute_top_impression_share",
+            b"search_budget_lost_absolute_top_impression_share",
+            "search_budget_lost_impression_share",
+            b"search_budget_lost_impression_share",
+            "search_budget_lost_top_impression_share",
+            b"search_budget_lost_top_impression_share",
+            "search_click_share",
+            b"search_click_share",
+            "search_exact_match_impression_share",
+            b"search_exact_match_impression_share",
+            "search_impression_share",
+            b"search_impression_share",
+            "search_rank_lost_absolute_top_impression_share",
+            b"search_rank_lost_absolute_top_impression_share",
+            "search_rank_lost_impression_share",
+            b"search_rank_lost_impression_share",
+            "search_rank_lost_top_impression_share",
+            b"search_rank_lost_top_impression_share",
+            "search_top_impression_share",
+            b"search_top_impression_share",
+            "speed_score",
+            b"speed_score",
+            "top_impression_percentage",
+            b"top_impression_percentage",
+            "valid_accelerated_mobile_pages_clicks_percentage",
+            b"valid_accelerated_mobile_pages_clicks_percentage",
+            "value_per_all_conversions",
+            b"value_per_all_conversions",
+            "value_per_conversion",
+            b"value_per_conversion",
+            "value_per_current_model_attributed_conversion",
+            b"value_per_current_model_attributed_conversion",
+            "video_quartile_100_rate",
+            b"video_quartile_100_rate",
+            "video_quartile_25_rate",
+            b"video_quartile_25_rate",
+            "video_quartile_50_rate",
+            b"video_quartile_50_rate",
+            "video_quartile_75_rate",
+            b"video_quartile_75_rate",
+            "video_view_rate",
+            b"video_view_rate",
+            "video_views",
+            b"video_views",
+            "view_through_conversions",
+            b"view_through_conversions",
+        ],
+    ) -> None: ...
+
 global___Metrics = Metrics

@@ -4,9 +4,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     BoolValue as google___protobuf___wrappers_pb2___BoolValue,
@@ -19,10 +17,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -32,31 +27,53 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class UserLocationView(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-
+    resource_name = ...  # type: typing___Text
     @property
     def country_criterion_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def targeting_location(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        country_criterion_id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        targeting_location : typing___Optional[google___protobuf___wrappers_pb2___BoolValue] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        country_criterion_id: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        targeting_location: typing___Optional[
+            google___protobuf___wrappers_pb2___BoolValue
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> UserLocationView: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> UserLocationView: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> UserLocationView: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"country_criterion_id",b"country_criterion_id",u"targeting_location",b"targeting_location"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"country_criterion_id",b"country_criterion_id",u"resource_name",b"resource_name",u"targeting_location",b"targeting_location"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "country_criterion_id",
+            b"country_criterion_id",
+            "targeting_location",
+            b"targeting_location",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "country_criterion_id",
+            b"country_criterion_id",
+            "resource_name",
+            b"resource_name",
+            "targeting_location",
+            b"targeting_location",
+        ],
+    ) -> None: ...
+
 global___UserLocationView = UserLocationView

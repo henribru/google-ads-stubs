@@ -4,24 +4,16 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
     StringValue as google___protobuf___wrappers_pb2___StringValue,
 )
 
-from typing import (
-    Optional as typing___Optional,
-    Union as typing___Union,
-)
+from typing import Optional as typing___Optional, Union as typing___Union
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -31,29 +23,43 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class Money(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def currency_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def amount_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        currency_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        amount_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        ) -> None: ...
+        currency_code: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        amount_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> Money: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> Money: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> Money: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"amount_micros",b"amount_micros",u"currency_code",b"currency_code"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"amount_micros",b"amount_micros",u"currency_code",b"currency_code"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "amount_micros", b"amount_micros", "currency_code", b"currency_code"
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "amount_micros", b"amount_micros", "currency_code", b"currency_code"
+        ],
+    ) -> None: ...
+
 global___Money = Money

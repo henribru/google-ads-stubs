@@ -4,9 +4,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int32Value as google___protobuf___wrappers_pb2___Int32Value,
@@ -19,10 +17,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -32,31 +27,38 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class MobileAppCategoryConstant(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-
+    resource_name = ...  # type: typing___Text
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int32Value: ...
-
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        id : typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
-        name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        id: typing___Optional[google___protobuf___wrappers_pb2___Int32Value] = None,
+        name: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MobileAppCategoryConstant: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MobileAppCategoryConstant: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MobileAppCategoryConstant: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"id",b"id",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["id", b"id", "name", b"name"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "id", b"id", "name", b"name", "resource_name", b"resource_name"
+        ],
+    ) -> None: ...
+
 global___MobileAppCategoryConstant = MobileAppCategoryConstant

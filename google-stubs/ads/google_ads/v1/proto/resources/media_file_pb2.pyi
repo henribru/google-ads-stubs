@@ -12,9 +12,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     BytesValue as google___protobuf___wrappers_pb2___BytesValue,
@@ -28,10 +26,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -41,160 +36,275 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class MediaFile(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    type = ... # type: google___ads___googleads___v1___enums___media_type_pb2___MediaTypeEnum.MediaType
-    mime_type = ... # type: google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum.MimeType
-
+    resource_name = ...  # type: typing___Text
+    type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___media_type_pb2___MediaTypeEnum.MediaType
+    mime_type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum.MimeType
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def source_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def file_size(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def image(self) -> global___MediaImage: ...
-
     @property
     def media_bundle(self) -> global___MediaBundle: ...
-
     @property
     def audio(self) -> global___MediaAudio: ...
-
     @property
     def video(self) -> global___MediaVideo: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        type : typing___Optional[google___ads___googleads___v1___enums___media_type_pb2___MediaTypeEnum.MediaType] = None,
-        mime_type : typing___Optional[google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum.MimeType] = None,
-        source_url : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        file_size : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        image : typing___Optional[global___MediaImage] = None,
-        media_bundle : typing___Optional[global___MediaBundle] = None,
-        audio : typing___Optional[global___MediaAudio] = None,
-        video : typing___Optional[global___MediaVideo] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        id: typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
+        type: typing___Optional[
+            google___ads___googleads___v1___enums___media_type_pb2___MediaTypeEnum.MediaType
+        ] = None,
+        mime_type: typing___Optional[
+            google___ads___googleads___v1___enums___mime_type_pb2___MimeTypeEnum.MimeType
+        ] = None,
+        source_url: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        name: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        file_size: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        image: typing___Optional[global___MediaImage] = None,
+        media_bundle: typing___Optional[global___MediaBundle] = None,
+        audio: typing___Optional[global___MediaAudio] = None,
+        video: typing___Optional[global___MediaVideo] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MediaFile: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MediaFile: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MediaFile: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"audio",b"audio",u"file_size",b"file_size",u"id",b"id",u"image",b"image",u"media_bundle",b"media_bundle",u"mediatype",b"mediatype",u"name",b"name",u"source_url",b"source_url",u"video",b"video"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"audio",b"audio",u"file_size",b"file_size",u"id",b"id",u"image",b"image",u"media_bundle",b"media_bundle",u"mediatype",b"mediatype",u"mime_type",b"mime_type",u"name",b"name",u"resource_name",b"resource_name",u"source_url",b"source_url",u"type",b"type",u"video",b"video"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"mediatype",b"mediatype"]) -> typing_extensions___Literal["image","media_bundle","audio","video"]: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "audio",
+            b"audio",
+            "file_size",
+            b"file_size",
+            "id",
+            b"id",
+            "image",
+            b"image",
+            "media_bundle",
+            b"media_bundle",
+            "mediatype",
+            b"mediatype",
+            "name",
+            b"name",
+            "source_url",
+            b"source_url",
+            "video",
+            b"video",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "audio",
+            b"audio",
+            "file_size",
+            b"file_size",
+            "id",
+            b"id",
+            "image",
+            b"image",
+            "media_bundle",
+            b"media_bundle",
+            "mediatype",
+            b"mediatype",
+            "mime_type",
+            b"mime_type",
+            "name",
+            b"name",
+            "resource_name",
+            b"resource_name",
+            "source_url",
+            b"source_url",
+            "type",
+            b"type",
+            "video",
+            b"video",
+        ],
+    ) -> None: ...
+    def WhichOneof(
+        self, oneof_group: typing_extensions___Literal["mediatype", b"mediatype"]
+    ) -> typing_extensions___Literal["image", "media_bundle", "audio", "video"]: ...
+
 global___MediaFile = MediaFile
 
 class MediaImage(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def data(self) -> google___protobuf___wrappers_pb2___BytesValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        data : typing___Optional[google___protobuf___wrappers_pb2___BytesValue] = None,
-        ) -> None: ...
+        data: typing___Optional[google___protobuf___wrappers_pb2___BytesValue] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MediaImage: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MediaImage: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MediaImage: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"data",b"data"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"data",b"data"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["data", b"data"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["data", b"data"]
+    ) -> None: ...
+
 global___MediaImage = MediaImage
 
 class MediaBundle(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def data(self) -> google___protobuf___wrappers_pb2___BytesValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        data : typing___Optional[google___protobuf___wrappers_pb2___BytesValue] = None,
-        ) -> None: ...
+        data: typing___Optional[google___protobuf___wrappers_pb2___BytesValue] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MediaBundle: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MediaBundle: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MediaBundle: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"data",b"data"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"data",b"data"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["data", b"data"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["data", b"data"]
+    ) -> None: ...
+
 global___MediaBundle = MediaBundle
 
 class MediaAudio(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def ad_duration_millis(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        ad_duration_millis : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        ) -> None: ...
+        ad_duration_millis: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MediaAudio: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MediaAudio: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MediaAudio: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"ad_duration_millis",b"ad_duration_millis"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"ad_duration_millis",b"ad_duration_millis"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_duration_millis", b"ad_duration_millis"
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_duration_millis", b"ad_duration_millis"
+        ],
+    ) -> None: ...
+
 global___MediaAudio = MediaAudio
 
 class MediaVideo(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def ad_duration_millis(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def youtube_video_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def advertising_id_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def isci_code(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        ad_duration_millis : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        youtube_video_id : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        advertising_id_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        isci_code : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ) -> None: ...
+        ad_duration_millis: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        youtube_video_id: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        advertising_id_code: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        isci_code: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MediaVideo: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MediaVideo: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MediaVideo: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"ad_duration_millis",b"ad_duration_millis",u"advertising_id_code",b"advertising_id_code",u"isci_code",b"isci_code",u"youtube_video_id",b"youtube_video_id"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"ad_duration_millis",b"ad_duration_millis",u"advertising_id_code",b"advertising_id_code",u"isci_code",b"isci_code",u"youtube_video_id",b"youtube_video_id"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_duration_millis",
+            b"ad_duration_millis",
+            "advertising_id_code",
+            b"advertising_id_code",
+            "isci_code",
+            b"isci_code",
+            "youtube_video_id",
+            b"youtube_video_id",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "ad_duration_millis",
+            b"ad_duration_millis",
+            "advertising_id_code",
+            b"advertising_id_code",
+            "isci_code",
+            b"isci_code",
+            "youtube_video_id",
+            b"youtube_video_id",
+        ],
+    ) -> None: ...
+
 global___MediaVideo = MediaVideo

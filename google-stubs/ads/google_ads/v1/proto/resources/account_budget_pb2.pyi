@@ -20,9 +20,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
@@ -36,10 +34,7 @@ from typing import (
     overload as typing___overload,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -49,165 +44,471 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class AccountBudget(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class PendingAccountBudgetProposal(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        proposal_type = ... # type: google___ads___googleads___v1___enums___account_budget_proposal_type_pb2___AccountBudgetProposalTypeEnum.AccountBudgetProposalType
-        end_time_type = ... # type: google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
-        spending_limit_type = ... # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
-
+        proposal_type = (
+            ...
+        )  # type: google___ads___googleads___v1___enums___account_budget_proposal_type_pb2___AccountBudgetProposalTypeEnum.AccountBudgetProposalType
+        end_time_type = (
+            ...
+        )  # type: google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
+        spending_limit_type = (
+            ...
+        )  # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
         @property
-        def account_budget_proposal(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+        def account_budget_proposal(
+            self
+        ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
         @property
         def start_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
         @property
-        def purchase_order_number(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+        def purchase_order_number(
+            self
+        ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def notes(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
         @property
-        def creation_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+        def creation_date_time(
+            self
+        ) -> google___protobuf___wrappers_pb2___StringValue: ...
         @property
         def end_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
         @property
-        def spending_limit_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-        def __init__(self,
+        def spending_limit_micros(
+            self
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        def __init__(
+            self,
             *,
-            account_budget_proposal : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            proposal_type : typing___Optional[google___ads___googleads___v1___enums___account_budget_proposal_type_pb2___AccountBudgetProposalTypeEnum.AccountBudgetProposalType] = None,
-            name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            purchase_order_number : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            notes : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            creation_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-            end_time_type : typing___Optional[google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType] = None,
-            spending_limit_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-            spending_limit_type : typing___Optional[google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType] = None,
-            ) -> None: ...
+            account_budget_proposal: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            proposal_type: typing___Optional[
+                google___ads___googleads___v1___enums___account_budget_proposal_type_pb2___AccountBudgetProposalTypeEnum.AccountBudgetProposalType
+            ] = None,
+            name: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            start_date_time: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            purchase_order_number: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            notes: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            creation_date_time: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            end_date_time: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            end_time_type: typing___Optional[
+                google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
+            ] = None,
+            spending_limit_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+            spending_limit_type: typing___Optional[
+                google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
+            ] = None,
+        ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> AccountBudget.PendingAccountBudgetProposal: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> AccountBudget.PendingAccountBudgetProposal: ...
         else:
             @classmethod
-            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AccountBudget.PendingAccountBudgetProposal: ...
-        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-        def HasField(self, field_name: typing_extensions___Literal[u"account_budget_proposal",b"account_budget_proposal",u"creation_date_time",b"creation_date_time",u"end_date_time",b"end_date_time",u"end_time",b"end_time",u"end_time_type",b"end_time_type",u"name",b"name",u"notes",b"notes",u"purchase_order_number",b"purchase_order_number",u"spending_limit",b"spending_limit",u"spending_limit_micros",b"spending_limit_micros",u"spending_limit_type",b"spending_limit_type",u"start_date_time",b"start_date_time"]) -> builtin___bool: ...
-        def ClearField(self, field_name: typing_extensions___Literal[u"account_budget_proposal",b"account_budget_proposal",u"creation_date_time",b"creation_date_time",u"end_date_time",b"end_date_time",u"end_time",b"end_time",u"end_time_type",b"end_time_type",u"name",b"name",u"notes",b"notes",u"proposal_type",b"proposal_type",u"purchase_order_number",b"purchase_order_number",u"spending_limit",b"spending_limit",u"spending_limit_micros",b"spending_limit_micros",u"spending_limit_type",b"spending_limit_type",u"start_date_time",b"start_date_time"]) -> None: ...
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> AccountBudget.PendingAccountBudgetProposal: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "account_budget_proposal",
+                b"account_budget_proposal",
+                "creation_date_time",
+                b"creation_date_time",
+                "end_date_time",
+                b"end_date_time",
+                "end_time",
+                b"end_time",
+                "end_time_type",
+                b"end_time_type",
+                "name",
+                b"name",
+                "notes",
+                b"notes",
+                "purchase_order_number",
+                b"purchase_order_number",
+                "spending_limit",
+                b"spending_limit",
+                "spending_limit_micros",
+                b"spending_limit_micros",
+                "spending_limit_type",
+                b"spending_limit_type",
+                "start_date_time",
+                b"start_date_time",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "account_budget_proposal",
+                b"account_budget_proposal",
+                "creation_date_time",
+                b"creation_date_time",
+                "end_date_time",
+                b"end_date_time",
+                "end_time",
+                b"end_time",
+                "end_time_type",
+                b"end_time_type",
+                "name",
+                b"name",
+                "notes",
+                b"notes",
+                "proposal_type",
+                b"proposal_type",
+                "purchase_order_number",
+                b"purchase_order_number",
+                "spending_limit",
+                b"spending_limit",
+                "spending_limit_micros",
+                b"spending_limit_micros",
+                "spending_limit_type",
+                b"spending_limit_type",
+                "start_date_time",
+                b"start_date_time",
+            ],
+        ) -> None: ...
         @typing___overload
-        def WhichOneof(self, oneof_group: typing_extensions___Literal[u"end_time",b"end_time"]) -> typing_extensions___Literal["end_date_time","end_time_type"]: ...
+        def WhichOneof(
+            self, oneof_group: typing_extensions___Literal["end_time", b"end_time"]
+        ) -> typing_extensions___Literal["end_date_time", "end_time_type"]: ...
         @typing___overload
-        def WhichOneof(self, oneof_group: typing_extensions___Literal[u"spending_limit",b"spending_limit"]) -> typing_extensions___Literal["spending_limit_micros","spending_limit_type"]: ...
+        def WhichOneof(
+            self,
+            oneof_group: typing_extensions___Literal[
+                "spending_limit", b"spending_limit"
+            ],
+        ) -> typing_extensions___Literal[
+            "spending_limit_micros", "spending_limit_type"
+        ]: ...
     global___PendingAccountBudgetProposal = PendingAccountBudgetProposal
 
-    resource_name = ... # type: typing___Text
-    status = ... # type: google___ads___googleads___v1___enums___account_budget_status_pb2___AccountBudgetStatusEnum.AccountBudgetStatus
-    proposed_end_time_type = ... # type: google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
-    approved_end_time_type = ... # type: google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
-    proposed_spending_limit_type = ... # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
-    approved_spending_limit_type = ... # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
-    adjusted_spending_limit_type = ... # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
-
+    resource_name = ...  # type: typing___Text
+    status = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___account_budget_status_pb2___AccountBudgetStatusEnum.AccountBudgetStatus
+    proposed_end_time_type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
+    approved_end_time_type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
+    proposed_spending_limit_type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
+    approved_spending_limit_type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
+    adjusted_spending_limit_type = (
+        ...
+    )  # type: google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def billing_setup(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def proposed_start_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+    def proposed_start_date_time(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
-    def approved_start_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+    def approved_start_date_time(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
-    def total_adjustments_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def total_adjustments_micros(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
     def amount_served_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def purchase_order_number(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+    def purchase_order_number(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def notes(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def pending_proposal(self) -> global___AccountBudget.PendingAccountBudgetProposal: ...
-
+    def pending_proposal(
+        self
+    ) -> global___AccountBudget.PendingAccountBudgetProposal: ...
     @property
-    def proposed_end_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+    def proposed_end_date_time(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
-    def approved_end_date_time(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+    def approved_end_date_time(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
-    def proposed_spending_limit_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def proposed_spending_limit_micros(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
-    def approved_spending_limit_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
+    def approved_spending_limit_micros(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
     @property
-    def adjusted_spending_limit_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-    def __init__(self,
+    def adjusted_spending_limit_micros(
+        self
+    ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        billing_setup : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        status : typing___Optional[google___ads___googleads___v1___enums___account_budget_status_pb2___AccountBudgetStatusEnum.AccountBudgetStatus] = None,
-        name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        proposed_start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        approved_start_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        total_adjustments_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        amount_served_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        purchase_order_number : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        notes : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        pending_proposal : typing___Optional[global___AccountBudget.PendingAccountBudgetProposal] = None,
-        proposed_end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        proposed_end_time_type : typing___Optional[google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType] = None,
-        approved_end_date_time : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        approved_end_time_type : typing___Optional[google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType] = None,
-        proposed_spending_limit_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        proposed_spending_limit_type : typing___Optional[google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType] = None,
-        approved_spending_limit_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        approved_spending_limit_type : typing___Optional[google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType] = None,
-        adjusted_spending_limit_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        adjusted_spending_limit_type : typing___Optional[google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        id: typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
+        billing_setup: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        status: typing___Optional[
+            google___ads___googleads___v1___enums___account_budget_status_pb2___AccountBudgetStatusEnum.AccountBudgetStatus
+        ] = None,
+        name: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        proposed_start_date_time: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        approved_start_date_time: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        total_adjustments_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        amount_served_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        purchase_order_number: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        notes: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        pending_proposal: typing___Optional[
+            global___AccountBudget.PendingAccountBudgetProposal
+        ] = None,
+        proposed_end_date_time: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        proposed_end_time_type: typing___Optional[
+            google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
+        ] = None,
+        approved_end_date_time: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        approved_end_time_type: typing___Optional[
+            google___ads___googleads___v1___enums___time_type_pb2___TimeTypeEnum.TimeType
+        ] = None,
+        proposed_spending_limit_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        proposed_spending_limit_type: typing___Optional[
+            google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
+        ] = None,
+        approved_spending_limit_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        approved_spending_limit_type: typing___Optional[
+            google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
+        ] = None,
+        adjusted_spending_limit_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        adjusted_spending_limit_type: typing___Optional[
+            google___ads___googleads___v1___enums___spending_limit_type_pb2___SpendingLimitTypeEnum.SpendingLimitType
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> AccountBudget: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> AccountBudget: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> AccountBudget: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"adjusted_spending_limit",b"adjusted_spending_limit",u"adjusted_spending_limit_micros",b"adjusted_spending_limit_micros",u"adjusted_spending_limit_type",b"adjusted_spending_limit_type",u"amount_served_micros",b"amount_served_micros",u"approved_end_date_time",b"approved_end_date_time",u"approved_end_time",b"approved_end_time",u"approved_end_time_type",b"approved_end_time_type",u"approved_spending_limit",b"approved_spending_limit",u"approved_spending_limit_micros",b"approved_spending_limit_micros",u"approved_spending_limit_type",b"approved_spending_limit_type",u"approved_start_date_time",b"approved_start_date_time",u"billing_setup",b"billing_setup",u"id",b"id",u"name",b"name",u"notes",b"notes",u"pending_proposal",b"pending_proposal",u"proposed_end_date_time",b"proposed_end_date_time",u"proposed_end_time",b"proposed_end_time",u"proposed_end_time_type",b"proposed_end_time_type",u"proposed_spending_limit",b"proposed_spending_limit",u"proposed_spending_limit_micros",b"proposed_spending_limit_micros",u"proposed_spending_limit_type",b"proposed_spending_limit_type",u"proposed_start_date_time",b"proposed_start_date_time",u"purchase_order_number",b"purchase_order_number",u"total_adjustments_micros",b"total_adjustments_micros"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"adjusted_spending_limit",b"adjusted_spending_limit",u"adjusted_spending_limit_micros",b"adjusted_spending_limit_micros",u"adjusted_spending_limit_type",b"adjusted_spending_limit_type",u"amount_served_micros",b"amount_served_micros",u"approved_end_date_time",b"approved_end_date_time",u"approved_end_time",b"approved_end_time",u"approved_end_time_type",b"approved_end_time_type",u"approved_spending_limit",b"approved_spending_limit",u"approved_spending_limit_micros",b"approved_spending_limit_micros",u"approved_spending_limit_type",b"approved_spending_limit_type",u"approved_start_date_time",b"approved_start_date_time",u"billing_setup",b"billing_setup",u"id",b"id",u"name",b"name",u"notes",b"notes",u"pending_proposal",b"pending_proposal",u"proposed_end_date_time",b"proposed_end_date_time",u"proposed_end_time",b"proposed_end_time",u"proposed_end_time_type",b"proposed_end_time_type",u"proposed_spending_limit",b"proposed_spending_limit",u"proposed_spending_limit_micros",b"proposed_spending_limit_micros",u"proposed_spending_limit_type",b"proposed_spending_limit_type",u"proposed_start_date_time",b"proposed_start_date_time",u"purchase_order_number",b"purchase_order_number",u"resource_name",b"resource_name",u"status",b"status",u"total_adjustments_micros",b"total_adjustments_micros"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "adjusted_spending_limit",
+            b"adjusted_spending_limit",
+            "adjusted_spending_limit_micros",
+            b"adjusted_spending_limit_micros",
+            "adjusted_spending_limit_type",
+            b"adjusted_spending_limit_type",
+            "amount_served_micros",
+            b"amount_served_micros",
+            "approved_end_date_time",
+            b"approved_end_date_time",
+            "approved_end_time",
+            b"approved_end_time",
+            "approved_end_time_type",
+            b"approved_end_time_type",
+            "approved_spending_limit",
+            b"approved_spending_limit",
+            "approved_spending_limit_micros",
+            b"approved_spending_limit_micros",
+            "approved_spending_limit_type",
+            b"approved_spending_limit_type",
+            "approved_start_date_time",
+            b"approved_start_date_time",
+            "billing_setup",
+            b"billing_setup",
+            "id",
+            b"id",
+            "name",
+            b"name",
+            "notes",
+            b"notes",
+            "pending_proposal",
+            b"pending_proposal",
+            "proposed_end_date_time",
+            b"proposed_end_date_time",
+            "proposed_end_time",
+            b"proposed_end_time",
+            "proposed_end_time_type",
+            b"proposed_end_time_type",
+            "proposed_spending_limit",
+            b"proposed_spending_limit",
+            "proposed_spending_limit_micros",
+            b"proposed_spending_limit_micros",
+            "proposed_spending_limit_type",
+            b"proposed_spending_limit_type",
+            "proposed_start_date_time",
+            b"proposed_start_date_time",
+            "purchase_order_number",
+            b"purchase_order_number",
+            "total_adjustments_micros",
+            b"total_adjustments_micros",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "adjusted_spending_limit",
+            b"adjusted_spending_limit",
+            "adjusted_spending_limit_micros",
+            b"adjusted_spending_limit_micros",
+            "adjusted_spending_limit_type",
+            b"adjusted_spending_limit_type",
+            "amount_served_micros",
+            b"amount_served_micros",
+            "approved_end_date_time",
+            b"approved_end_date_time",
+            "approved_end_time",
+            b"approved_end_time",
+            "approved_end_time_type",
+            b"approved_end_time_type",
+            "approved_spending_limit",
+            b"approved_spending_limit",
+            "approved_spending_limit_micros",
+            b"approved_spending_limit_micros",
+            "approved_spending_limit_type",
+            b"approved_spending_limit_type",
+            "approved_start_date_time",
+            b"approved_start_date_time",
+            "billing_setup",
+            b"billing_setup",
+            "id",
+            b"id",
+            "name",
+            b"name",
+            "notes",
+            b"notes",
+            "pending_proposal",
+            b"pending_proposal",
+            "proposed_end_date_time",
+            b"proposed_end_date_time",
+            "proposed_end_time",
+            b"proposed_end_time",
+            "proposed_end_time_type",
+            b"proposed_end_time_type",
+            "proposed_spending_limit",
+            b"proposed_spending_limit",
+            "proposed_spending_limit_micros",
+            b"proposed_spending_limit_micros",
+            "proposed_spending_limit_type",
+            b"proposed_spending_limit_type",
+            "proposed_start_date_time",
+            b"proposed_start_date_time",
+            "purchase_order_number",
+            b"purchase_order_number",
+            "resource_name",
+            b"resource_name",
+            "status",
+            b"status",
+            "total_adjustments_micros",
+            b"total_adjustments_micros",
+        ],
+    ) -> None: ...
     @typing___overload
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"adjusted_spending_limit",b"adjusted_spending_limit"]) -> typing_extensions___Literal["adjusted_spending_limit_micros","adjusted_spending_limit_type"]: ...
+    def WhichOneof(
+        self,
+        oneof_group: typing_extensions___Literal[
+            "adjusted_spending_limit", b"adjusted_spending_limit"
+        ],
+    ) -> typing_extensions___Literal[
+        "adjusted_spending_limit_micros", "adjusted_spending_limit_type"
+    ]: ...
     @typing___overload
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"approved_end_time",b"approved_end_time"]) -> typing_extensions___Literal["approved_end_date_time","approved_end_time_type"]: ...
+    def WhichOneof(
+        self,
+        oneof_group: typing_extensions___Literal[
+            "approved_end_time", b"approved_end_time"
+        ],
+    ) -> typing_extensions___Literal[
+        "approved_end_date_time", "approved_end_time_type"
+    ]: ...
     @typing___overload
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"approved_spending_limit",b"approved_spending_limit"]) -> typing_extensions___Literal["approved_spending_limit_micros","approved_spending_limit_type"]: ...
+    def WhichOneof(
+        self,
+        oneof_group: typing_extensions___Literal[
+            "approved_spending_limit", b"approved_spending_limit"
+        ],
+    ) -> typing_extensions___Literal[
+        "approved_spending_limit_micros", "approved_spending_limit_type"
+    ]: ...
     @typing___overload
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"proposed_end_time",b"proposed_end_time"]) -> typing_extensions___Literal["proposed_end_date_time","proposed_end_time_type"]: ...
+    def WhichOneof(
+        self,
+        oneof_group: typing_extensions___Literal[
+            "proposed_end_time", b"proposed_end_time"
+        ],
+    ) -> typing_extensions___Literal[
+        "proposed_end_date_time", "proposed_end_time_type"
+    ]: ...
     @typing___overload
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"proposed_spending_limit",b"proposed_spending_limit"]) -> typing_extensions___Literal["proposed_spending_limit_micros","proposed_spending_limit_type"]: ...
+    def WhichOneof(
+        self,
+        oneof_group: typing_extensions___Literal[
+            "proposed_spending_limit", b"proposed_spending_limit"
+        ],
+    ) -> typing_extensions___Literal[
+        "proposed_spending_limit_micros", "proposed_spending_limit_type"
+    ]: ...
+
 global___AccountBudget = AccountBudget

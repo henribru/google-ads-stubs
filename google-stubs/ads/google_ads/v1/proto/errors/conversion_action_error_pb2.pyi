@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class ConversionActionErrorEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,44 +28,86 @@ class ConversionActionErrorEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'ConversionActionErrorEnum.ConversionActionError': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "ConversionActionErrorEnum.ConversionActionError": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['ConversionActionErrorEnum.ConversionActionError']: ...
+        def values(
+            cls
+        ) -> typing___List["ConversionActionErrorEnum.ConversionActionError"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'ConversionActionErrorEnum.ConversionActionError']]: ...
-        UNSPECIFIED = typing___cast('ConversionActionErrorEnum.ConversionActionError', 0)
-        UNKNOWN = typing___cast('ConversionActionErrorEnum.ConversionActionError', 1)
-        DUPLICATE_NAME = typing___cast('ConversionActionErrorEnum.ConversionActionError', 2)
-        DUPLICATE_APP_ID = typing___cast('ConversionActionErrorEnum.ConversionActionError', 3)
-        TWO_CONVERSION_ACTIONS_BIDDING_ON_SAME_APP_DOWNLOAD = typing___cast('ConversionActionErrorEnum.ConversionActionError', 4)
-        BIDDING_ON_SAME_APP_DOWNLOAD_AS_GLOBAL_ACTION = typing___cast('ConversionActionErrorEnum.ConversionActionError', 5)
-        DATA_DRIVEN_MODEL_WAS_NEVER_GENERATED = typing___cast('ConversionActionErrorEnum.ConversionActionError', 6)
-        DATA_DRIVEN_MODEL_EXPIRED = typing___cast('ConversionActionErrorEnum.ConversionActionError', 7)
-        DATA_DRIVEN_MODEL_STALE = typing___cast('ConversionActionErrorEnum.ConversionActionError', 8)
-        DATA_DRIVEN_MODEL_UNKNOWN = typing___cast('ConversionActionErrorEnum.ConversionActionError', 9)
-    UNSPECIFIED = typing___cast('ConversionActionErrorEnum.ConversionActionError', 0)
-    UNKNOWN = typing___cast('ConversionActionErrorEnum.ConversionActionError', 1)
-    DUPLICATE_NAME = typing___cast('ConversionActionErrorEnum.ConversionActionError', 2)
-    DUPLICATE_APP_ID = typing___cast('ConversionActionErrorEnum.ConversionActionError', 3)
-    TWO_CONVERSION_ACTIONS_BIDDING_ON_SAME_APP_DOWNLOAD = typing___cast('ConversionActionErrorEnum.ConversionActionError', 4)
-    BIDDING_ON_SAME_APP_DOWNLOAD_AS_GLOBAL_ACTION = typing___cast('ConversionActionErrorEnum.ConversionActionError', 5)
-    DATA_DRIVEN_MODEL_WAS_NEVER_GENERATED = typing___cast('ConversionActionErrorEnum.ConversionActionError', 6)
-    DATA_DRIVEN_MODEL_EXPIRED = typing___cast('ConversionActionErrorEnum.ConversionActionError', 7)
-    DATA_DRIVEN_MODEL_STALE = typing___cast('ConversionActionErrorEnum.ConversionActionError', 8)
-    DATA_DRIVEN_MODEL_UNKNOWN = typing___cast('ConversionActionErrorEnum.ConversionActionError', 9)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str, "ConversionActionErrorEnum.ConversionActionError"
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 0
+        )
+        UNKNOWN = typing___cast("ConversionActionErrorEnum.ConversionActionError", 1)
+        DUPLICATE_NAME = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 2
+        )
+        DUPLICATE_APP_ID = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 3
+        )
+        TWO_CONVERSION_ACTIONS_BIDDING_ON_SAME_APP_DOWNLOAD = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 4
+        )
+        BIDDING_ON_SAME_APP_DOWNLOAD_AS_GLOBAL_ACTION = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 5
+        )
+        DATA_DRIVEN_MODEL_WAS_NEVER_GENERATED = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 6
+        )
+        DATA_DRIVEN_MODEL_EXPIRED = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 7
+        )
+        DATA_DRIVEN_MODEL_STALE = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 8
+        )
+        DATA_DRIVEN_MODEL_UNKNOWN = typing___cast(
+            "ConversionActionErrorEnum.ConversionActionError", 9
+        )
+    UNSPECIFIED = typing___cast("ConversionActionErrorEnum.ConversionActionError", 0)
+    UNKNOWN = typing___cast("ConversionActionErrorEnum.ConversionActionError", 1)
+    DUPLICATE_NAME = typing___cast("ConversionActionErrorEnum.ConversionActionError", 2)
+    DUPLICATE_APP_ID = typing___cast(
+        "ConversionActionErrorEnum.ConversionActionError", 3
+    )
+    TWO_CONVERSION_ACTIONS_BIDDING_ON_SAME_APP_DOWNLOAD = typing___cast(
+        "ConversionActionErrorEnum.ConversionActionError", 4
+    )
+    BIDDING_ON_SAME_APP_DOWNLOAD_AS_GLOBAL_ACTION = typing___cast(
+        "ConversionActionErrorEnum.ConversionActionError", 5
+    )
+    DATA_DRIVEN_MODEL_WAS_NEVER_GENERATED = typing___cast(
+        "ConversionActionErrorEnum.ConversionActionError", 6
+    )
+    DATA_DRIVEN_MODEL_EXPIRED = typing___cast(
+        "ConversionActionErrorEnum.ConversionActionError", 7
+    )
+    DATA_DRIVEN_MODEL_STALE = typing___cast(
+        "ConversionActionErrorEnum.ConversionActionError", 8
+    )
+    DATA_DRIVEN_MODEL_UNKNOWN = typing___cast(
+        "ConversionActionErrorEnum.ConversionActionError", 9
+    )
     global___ConversionActionError = ConversionActionError
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> ConversionActionErrorEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> ConversionActionErrorEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> ConversionActionErrorEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___ConversionActionErrorEnum = ConversionActionErrorEnum

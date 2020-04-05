@@ -8,9 +8,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     Optional as typing___Optional,
@@ -18,10 +16,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -31,112 +26,148 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class GetBillingSetupRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-
-    def __init__(self,
-        *,
-        resource_name : typing___Optional[typing___Text] = None,
-        ) -> None: ...
+    resource_name = ...  # type: typing___Text
+    def __init__(
+        self, *, resource_name: typing___Optional[typing___Text] = None
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> GetBillingSetupRequest: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> GetBillingSetupRequest: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> GetBillingSetupRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["resource_name", b"resource_name"]
+    ) -> None: ...
+
 global___GetBillingSetupRequest = GetBillingSetupRequest
 
 class MutateBillingSetupRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    customer_id = ... # type: typing___Text
-
+    customer_id = ...  # type: typing___Text
     @property
     def operation(self) -> global___BillingSetupOperation: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        customer_id : typing___Optional[typing___Text] = None,
-        operation : typing___Optional[global___BillingSetupOperation] = None,
-        ) -> None: ...
+        customer_id: typing___Optional[typing___Text] = None,
+        operation: typing___Optional[global___BillingSetupOperation] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MutateBillingSetupRequest: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MutateBillingSetupRequest: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MutateBillingSetupRequest: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"operation",b"operation"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"customer_id",b"customer_id",u"operation",b"operation"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["operation", b"operation"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "customer_id", b"customer_id", "operation", b"operation"
+        ],
+    ) -> None: ...
+
 global___MutateBillingSetupRequest = MutateBillingSetupRequest
 
 class BillingSetupOperation(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    remove = ... # type: typing___Text
-
+    remove = ...  # type: typing___Text
     @property
-    def create(self) -> google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup: ...
-
-    def __init__(self,
+    def create(
+        self
+    ) -> google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup: ...
+    def __init__(
+        self,
         *,
-        create : typing___Optional[google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup] = None,
-        remove : typing___Optional[typing___Text] = None,
-        ) -> None: ...
+        create: typing___Optional[
+            google___ads___googleads___v1___resources___billing_setup_pb2___BillingSetup
+        ] = None,
+        remove: typing___Optional[typing___Text] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> BillingSetupOperation: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> BillingSetupOperation: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> BillingSetupOperation: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"create",b"create",u"operation",b"operation",u"remove",b"remove"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"create",b"create",u"operation",b"operation",u"remove",b"remove"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions___Literal[u"operation",b"operation"]) -> typing_extensions___Literal["create","remove"]: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "create", b"create", "operation", b"operation", "remove", b"remove"
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "create", b"create", "operation", b"operation", "remove", b"remove"
+        ],
+    ) -> None: ...
+    def WhichOneof(
+        self, oneof_group: typing_extensions___Literal["operation", b"operation"]
+    ) -> typing_extensions___Literal["create", "remove"]: ...
+
 global___BillingSetupOperation = BillingSetupOperation
 
 class MutateBillingSetupResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def result(self) -> global___MutateBillingSetupResult: ...
-
-    def __init__(self,
-        *,
-        result : typing___Optional[global___MutateBillingSetupResult] = None,
-        ) -> None: ...
+    def __init__(
+        self, *, result: typing___Optional[global___MutateBillingSetupResult] = None
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MutateBillingSetupResponse: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MutateBillingSetupResponse: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MutateBillingSetupResponse: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"result",b"result"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"result",b"result"]) -> None: ...
+    def HasField(
+        self, field_name: typing_extensions___Literal["result", b"result"]
+    ) -> builtin___bool: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["result", b"result"]
+    ) -> None: ...
+
 global___MutateBillingSetupResponse = MutateBillingSetupResponse
 
 class MutateBillingSetupResult(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-
-    def __init__(self,
-        *,
-        resource_name : typing___Optional[typing___Text] = None,
-        ) -> None: ...
+    resource_name = ...  # type: typing___Text
+    def __init__(
+        self, *, resource_name: typing___Optional[typing___Text] = None
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> MutateBillingSetupResult: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> MutateBillingSetupResult: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> MutateBillingSetupResult: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"resource_name",b"resource_name"]) -> None: ...
+    def ClearField(
+        self, field_name: typing_extensions___Literal["resource_name", b"resource_name"]
+    ) -> None: ...
+
 global___MutateBillingSetupResult = MutateBillingSetupResult

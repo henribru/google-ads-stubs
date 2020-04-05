@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class SimulationTypeEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,36 +28,40 @@ class SimulationTypeEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'SimulationTypeEnum.SimulationType': ...
+        def Value(cls, name: builtin___str) -> "SimulationTypeEnum.SimulationType": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['SimulationTypeEnum.SimulationType']: ...
+        def values(cls) -> typing___List["SimulationTypeEnum.SimulationType"]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'SimulationTypeEnum.SimulationType']]: ...
-        UNSPECIFIED = typing___cast('SimulationTypeEnum.SimulationType', 0)
-        UNKNOWN = typing___cast('SimulationTypeEnum.SimulationType', 1)
-        CPC_BID = typing___cast('SimulationTypeEnum.SimulationType', 2)
-        CPV_BID = typing___cast('SimulationTypeEnum.SimulationType', 3)
-        TARGET_CPA = typing___cast('SimulationTypeEnum.SimulationType', 4)
-        BID_MODIFIER = typing___cast('SimulationTypeEnum.SimulationType', 5)
-    UNSPECIFIED = typing___cast('SimulationTypeEnum.SimulationType', 0)
-    UNKNOWN = typing___cast('SimulationTypeEnum.SimulationType', 1)
-    CPC_BID = typing___cast('SimulationTypeEnum.SimulationType', 2)
-    CPV_BID = typing___cast('SimulationTypeEnum.SimulationType', 3)
-    TARGET_CPA = typing___cast('SimulationTypeEnum.SimulationType', 4)
-    BID_MODIFIER = typing___cast('SimulationTypeEnum.SimulationType', 5)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[builtin___str, "SimulationTypeEnum.SimulationType"]
+        ]: ...
+        UNSPECIFIED = typing___cast("SimulationTypeEnum.SimulationType", 0)
+        UNKNOWN = typing___cast("SimulationTypeEnum.SimulationType", 1)
+        CPC_BID = typing___cast("SimulationTypeEnum.SimulationType", 2)
+        CPV_BID = typing___cast("SimulationTypeEnum.SimulationType", 3)
+        TARGET_CPA = typing___cast("SimulationTypeEnum.SimulationType", 4)
+        BID_MODIFIER = typing___cast("SimulationTypeEnum.SimulationType", 5)
+    UNSPECIFIED = typing___cast("SimulationTypeEnum.SimulationType", 0)
+    UNKNOWN = typing___cast("SimulationTypeEnum.SimulationType", 1)
+    CPC_BID = typing___cast("SimulationTypeEnum.SimulationType", 2)
+    CPV_BID = typing___cast("SimulationTypeEnum.SimulationType", 3)
+    TARGET_CPA = typing___cast("SimulationTypeEnum.SimulationType", 4)
+    BID_MODIFIER = typing___cast("SimulationTypeEnum.SimulationType", 5)
     global___SimulationType = SimulationType
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> SimulationTypeEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SimulationTypeEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> SimulationTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___SimulationTypeEnum = SimulationTypeEnum

@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,7 +14,6 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
@@ -24,40 +21,84 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
-class PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum(google___protobuf___message___Message):
+class PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum(
+    google___protobuf___message___Message
+):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     class PolicyTopicEvidenceDestinationNotWorkingDnsErrorType(builtin___int):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType']: ...
+        def values(
+            cls
+        ) -> typing___List[
+            "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType"
+        ]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType']]: ...
-        UNSPECIFIED = typing___cast('PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType', 0)
-        UNKNOWN = typing___cast('PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType', 1)
-        HOSTNAME_NOT_FOUND = typing___cast('PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType', 2)
-        GOOGLE_CRAWLER_DNS_ISSUE = typing___cast('PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType', 3)
-    UNSPECIFIED = typing___cast('PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType', 0)
-    UNKNOWN = typing___cast('PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType', 1)
-    HOSTNAME_NOT_FOUND = typing___cast('PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType', 2)
-    GOOGLE_CRAWLER_DNS_ISSUE = typing___cast('PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType', 3)
-    global___PolicyTopicEvidenceDestinationNotWorkingDnsErrorType = PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
-
-
-    def __init__(self,
-        ) -> None: ...
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str,
+                "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+            0,
+        )
+        UNKNOWN = typing___cast(
+            "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+            1,
+        )
+        HOSTNAME_NOT_FOUND = typing___cast(
+            "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+            2,
+        )
+        GOOGLE_CRAWLER_DNS_ISSUE = typing___cast(
+            "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+            3,
+        )
+    UNSPECIFIED = typing___cast(
+        "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+        0,
+    )
+    UNKNOWN = typing___cast(
+        "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+        1,
+    )
+    HOSTNAME_NOT_FOUND = typing___cast(
+        "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+        2,
+    )
+    GOOGLE_CRAWLER_DNS_ISSUE = typing___cast(
+        "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType",
+        3,
+    )
+    global___PolicyTopicEvidenceDestinationNotWorkingDnsErrorType = (
+        PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
+    )
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
-        def FromString(cls, s: builtin___bytes) -> PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum: ...
+        def FromString(
+            cls, s: builtin___bytes
+        ) -> PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-global___PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum = PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum
+
+global___PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum = (
+    PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum
+)

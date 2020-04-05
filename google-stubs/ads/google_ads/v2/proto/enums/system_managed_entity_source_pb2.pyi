@@ -5,9 +5,7 @@ from google.protobuf.descriptor import (
     EnumDescriptor as google___protobuf___descriptor___EnumDescriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from typing import (
     List as typing___List,
@@ -16,14 +14,12 @@ from typing import (
     cast as typing___cast,
 )
 
-
 builtin___bytes = bytes
 builtin___int = int
 builtin___str = str
 if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
-
 
 class SystemManagedResourceSourceEnum(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -32,30 +28,55 @@ class SystemManagedResourceSourceEnum(google___protobuf___message___Message):
         @classmethod
         def Name(cls, number: builtin___int) -> builtin___str: ...
         @classmethod
-        def Value(cls, name: builtin___str) -> 'SystemManagedResourceSourceEnum.SystemManagedResourceSource': ...
+        def Value(
+            cls, name: builtin___str
+        ) -> "SystemManagedResourceSourceEnum.SystemManagedResourceSource": ...
         @classmethod
         def keys(cls) -> typing___List[builtin___str]: ...
         @classmethod
-        def values(cls) -> typing___List['SystemManagedResourceSourceEnum.SystemManagedResourceSource']: ...
+        def values(
+            cls
+        ) -> typing___List[
+            "SystemManagedResourceSourceEnum.SystemManagedResourceSource"
+        ]: ...
         @classmethod
-        def items(cls) -> typing___List[typing___Tuple[builtin___str, 'SystemManagedResourceSourceEnum.SystemManagedResourceSource']]: ...
-        UNSPECIFIED = typing___cast('SystemManagedResourceSourceEnum.SystemManagedResourceSource', 0)
-        UNKNOWN = typing___cast('SystemManagedResourceSourceEnum.SystemManagedResourceSource', 1)
-        AD_VARIATIONS = typing___cast('SystemManagedResourceSourceEnum.SystemManagedResourceSource', 2)
-    UNSPECIFIED = typing___cast('SystemManagedResourceSourceEnum.SystemManagedResourceSource', 0)
-    UNKNOWN = typing___cast('SystemManagedResourceSourceEnum.SystemManagedResourceSource', 1)
-    AD_VARIATIONS = typing___cast('SystemManagedResourceSourceEnum.SystemManagedResourceSource', 2)
+        def items(
+            cls
+        ) -> typing___List[
+            typing___Tuple[
+                builtin___str,
+                "SystemManagedResourceSourceEnum.SystemManagedResourceSource",
+            ]
+        ]: ...
+        UNSPECIFIED = typing___cast(
+            "SystemManagedResourceSourceEnum.SystemManagedResourceSource", 0
+        )
+        UNKNOWN = typing___cast(
+            "SystemManagedResourceSourceEnum.SystemManagedResourceSource", 1
+        )
+        AD_VARIATIONS = typing___cast(
+            "SystemManagedResourceSourceEnum.SystemManagedResourceSource", 2
+        )
+    UNSPECIFIED = typing___cast(
+        "SystemManagedResourceSourceEnum.SystemManagedResourceSource", 0
+    )
+    UNKNOWN = typing___cast(
+        "SystemManagedResourceSourceEnum.SystemManagedResourceSource", 1
+    )
+    AD_VARIATIONS = typing___cast(
+        "SystemManagedResourceSourceEnum.SystemManagedResourceSource", 2
+    )
     global___SystemManagedResourceSource = SystemManagedResourceSource
-
-
-    def __init__(self,
-        ) -> None: ...
+    def __init__(self,) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> SystemManagedResourceSourceEnum: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SystemManagedResourceSourceEnum: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> SystemManagedResourceSourceEnum: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+
 global___SystemManagedResourceSourceEnum = SystemManagedResourceSourceEnum

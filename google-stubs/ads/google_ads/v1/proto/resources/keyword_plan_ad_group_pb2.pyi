@@ -4,9 +4,7 @@ from google.protobuf.descriptor import (
     Descriptor as google___protobuf___descriptor___Descriptor,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
@@ -19,10 +17,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -32,39 +27,69 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class KeywordPlanAdGroup(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-
+    resource_name = ...  # type: typing___Text
     @property
-    def keyword_plan_campaign(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
+    def keyword_plan_campaign(
+        self
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def cpc_bid_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        keyword_plan_campaign : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        cpc_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        keyword_plan_campaign: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        id: typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
+        name: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        cpc_bid_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> KeywordPlanAdGroup: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> KeywordPlanAdGroup: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> KeywordPlanAdGroup: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"id",b"id",u"keyword_plan_campaign",b"keyword_plan_campaign",u"name",b"name"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"id",b"id",u"keyword_plan_campaign",b"keyword_plan_campaign",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "cpc_bid_micros",
+            b"cpc_bid_micros",
+            "id",
+            b"id",
+            "keyword_plan_campaign",
+            b"keyword_plan_campaign",
+            "name",
+            b"name",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "cpc_bid_micros",
+            b"cpc_bid_micros",
+            "id",
+            b"id",
+            "keyword_plan_campaign",
+            b"keyword_plan_campaign",
+            "name",
+            b"name",
+            "resource_name",
+            b"resource_name",
+        ],
+    ) -> None: ...
+
 global___KeywordPlanAdGroup = KeywordPlanAdGroup

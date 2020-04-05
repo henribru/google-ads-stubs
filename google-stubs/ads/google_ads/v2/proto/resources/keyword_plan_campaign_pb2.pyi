@@ -12,9 +12,7 @@ from google.protobuf.internal.containers import (
     RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
 )
 
-from google.protobuf.message import (
-    Message as google___protobuf___message___Message,
-)
+from google.protobuf.message import Message as google___protobuf___message___Message
 
 from google.protobuf.wrappers_pb2 import (
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
@@ -28,10 +26,7 @@ from typing import (
     Union as typing___Union,
 )
 
-from typing_extensions import (
-    Literal as typing_extensions___Literal,
-)
-
+from typing_extensions import Literal as typing_extensions___Literal
 
 builtin___bool = bool
 builtin___bytes = bytes
@@ -41,71 +36,133 @@ if sys.version_info < (3,):
     builtin___buffer = buffer
     builtin___unicode = unicode
 
-
 class KeywordPlanCampaign(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-    resource_name = ... # type: typing___Text
-    keyword_plan_network = ... # type: google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork
-
+    resource_name = ...  # type: typing___Text
+    keyword_plan_network = (
+        ...
+    )  # type: google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork
     @property
     def keyword_plan(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
     def id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
     def name(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
     @property
-    def language_constants(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[google___protobuf___wrappers_pb2___StringValue]: ...
-
+    def language_constants(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        google___protobuf___wrappers_pb2___StringValue
+    ]: ...
     @property
     def cpc_bid_micros(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-
     @property
-    def geo_targets(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[global___KeywordPlanGeoTarget]: ...
-
-    def __init__(self,
+    def geo_targets(
+        self
+    ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+        global___KeywordPlanGeoTarget
+    ]: ...
+    def __init__(
+        self,
         *,
-        resource_name : typing___Optional[typing___Text] = None,
-        keyword_plan : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        id : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        name : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        language_constants : typing___Optional[typing___Iterable[google___protobuf___wrappers_pb2___StringValue]] = None,
-        keyword_plan_network : typing___Optional[google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork] = None,
-        cpc_bid_micros : typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
-        geo_targets : typing___Optional[typing___Iterable[global___KeywordPlanGeoTarget]] = None,
-        ) -> None: ...
+        resource_name: typing___Optional[typing___Text] = None,
+        keyword_plan: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        id: typing___Optional[google___protobuf___wrappers_pb2___Int64Value] = None,
+        name: typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
+        language_constants: typing___Optional[
+            typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+        ] = None,
+        keyword_plan_network: typing___Optional[
+            google___ads___googleads___v2___enums___keyword_plan_network_pb2___KeywordPlanNetworkEnum.KeywordPlanNetwork
+        ] = None,
+        cpc_bid_micros: typing___Optional[
+            google___protobuf___wrappers_pb2___Int64Value
+        ] = None,
+        geo_targets: typing___Optional[
+            typing___Iterable[global___KeywordPlanGeoTarget]
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> KeywordPlanCampaign: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> KeywordPlanCampaign: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> KeywordPlanCampaign: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"id",b"id",u"keyword_plan",b"keyword_plan",u"name",b"name"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"cpc_bid_micros",b"cpc_bid_micros",u"geo_targets",b"geo_targets",u"id",b"id",u"keyword_plan",b"keyword_plan",u"keyword_plan_network",b"keyword_plan_network",u"language_constants",b"language_constants",u"name",b"name",u"resource_name",b"resource_name"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "cpc_bid_micros",
+            b"cpc_bid_micros",
+            "id",
+            b"id",
+            "keyword_plan",
+            b"keyword_plan",
+            "name",
+            b"name",
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "cpc_bid_micros",
+            b"cpc_bid_micros",
+            "geo_targets",
+            b"geo_targets",
+            "id",
+            b"id",
+            "keyword_plan",
+            b"keyword_plan",
+            "keyword_plan_network",
+            b"keyword_plan_network",
+            "language_constants",
+            b"language_constants",
+            "name",
+            b"name",
+            "resource_name",
+            b"resource_name",
+        ],
+    ) -> None: ...
+
 global___KeywordPlanCampaign = KeywordPlanCampaign
 
 class KeywordPlanGeoTarget(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-
     @property
     def geo_target_constant(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        geo_target_constant : typing___Optional[google___protobuf___wrappers_pb2___StringValue] = None,
-        ) -> None: ...
+        geo_target_constant: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+    ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
         def FromString(cls, s: builtin___bytes) -> KeywordPlanGeoTarget: ...
     else:
         @classmethod
-        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> KeywordPlanGeoTarget: ...
+        def FromString(
+            cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]
+        ) -> KeywordPlanGeoTarget: ...
     def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-    def HasField(self, field_name: typing_extensions___Literal[u"geo_target_constant",b"geo_target_constant"]) -> builtin___bool: ...
-    def ClearField(self, field_name: typing_extensions___Literal[u"geo_target_constant",b"geo_target_constant"]) -> None: ...
+    def HasField(
+        self,
+        field_name: typing_extensions___Literal[
+            "geo_target_constant", b"geo_target_constant"
+        ],
+    ) -> builtin___bool: ...
+    def ClearField(
+        self,
+        field_name: typing_extensions___Literal[
+            "geo_target_constant", b"geo_target_constant"
+        ],
+    ) -> None: ...
+
 global___KeywordPlanGeoTarget = KeywordPlanGeoTarget
