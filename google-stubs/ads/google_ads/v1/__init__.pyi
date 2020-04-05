@@ -1,306 +1,306 @@
-from types import ModuleType
 from google.ads.google_ads.v1.services import account_budget_proposal_service_client, account_budget_service_client, ad_group_ad_label_service_client, ad_group_ad_service_client, ad_group_audience_view_service_client, ad_group_bid_modifier_service_client, ad_group_criterion_label_service_client, ad_group_criterion_service_client, ad_group_criterion_simulation_service_client, ad_group_extension_setting_service_client, ad_group_feed_service_client, ad_group_label_service_client, ad_group_service_client, ad_group_simulation_service_client, ad_parameter_service_client, ad_schedule_view_service_client, age_range_view_service_client, asset_service_client, bidding_strategy_service_client, billing_setup_service_client, campaign_audience_view_service_client, campaign_bid_modifier_service_client, campaign_budget_service_client, campaign_criterion_service_client, campaign_criterion_simulation_service_client, campaign_draft_service_client, campaign_experiment_service_client, campaign_extension_setting_service_client, campaign_feed_service_client, campaign_label_service_client, campaign_service_client, campaign_shared_set_service_client, carrier_constant_service_client, change_status_service_client, click_view_service_client, conversion_action_service_client, conversion_adjustment_upload_service_client, conversion_upload_service_client, custom_interest_service_client, customer_client_link_service_client, customer_client_service_client, customer_extension_setting_service_client, customer_feed_service_client, customer_label_service_client, customer_manager_link_service_client, customer_negative_criterion_service_client, customer_service_client, detail_placement_view_service_client, display_keyword_view_service_client, domain_category_service_client, dynamic_search_ads_search_term_view_service_client, enums as enums, expanded_landing_page_view_service_client, extension_feed_item_service_client, feed_item_service_client, feed_item_target_service_client, feed_mapping_service_client, feed_placeholder_view_service_client, feed_service_client, gender_view_service_client, geo_target_constant_service_client, geographic_view_service_client, google_ads_field_service_client, google_ads_service_client, group_placement_view_service_client, hotel_group_view_service_client, hotel_performance_view_service_client, keyword_plan_ad_group_service_client, keyword_plan_campaign_service_client, keyword_plan_idea_service_client, keyword_plan_keyword_service_client, keyword_plan_negative_keyword_service_client, keyword_plan_service_client, keyword_view_service_client, label_service_client, landing_page_view_service_client, language_constant_service_client, location_view_service_client, managed_placement_view_service_client, media_file_service_client, merchant_center_link_service_client, mobile_app_category_constant_service_client, mobile_device_constant_service_client, mutate_job_service_client, operating_system_version_constant_service_client, paid_organic_search_term_view_service_client, parental_status_view_service_client, payments_account_service_client, product_bidding_category_constant_service_client, product_group_view_service_client, recommendation_service_client, remarketing_action_service_client, search_term_view_service_client, shared_criterion_service_client, shared_set_service_client, shopping_performance_view_service_client, topic_constant_service_client, topic_view_service_client, user_interest_service_client, user_list_service_client, video_service_client
 from google.ads.google_ads.v1.services.transports import account_budget_proposal_service_grpc_transport, account_budget_service_grpc_transport, ad_group_ad_label_service_grpc_transport, ad_group_ad_service_grpc_transport, ad_group_audience_view_service_grpc_transport, ad_group_bid_modifier_service_grpc_transport, ad_group_criterion_label_service_grpc_transport, ad_group_criterion_service_grpc_transport, ad_group_criterion_simulation_service_grpc_transport, ad_group_extension_setting_service_grpc_transport, ad_group_feed_service_grpc_transport, ad_group_label_service_grpc_transport, ad_group_service_grpc_transport, ad_group_simulation_service_grpc_transport, ad_parameter_service_grpc_transport, ad_schedule_view_service_grpc_transport, age_range_view_service_grpc_transport, asset_service_grpc_transport, bidding_strategy_service_grpc_transport, billing_setup_service_grpc_transport, campaign_audience_view_service_grpc_transport, campaign_bid_modifier_service_grpc_transport, campaign_budget_service_grpc_transport, campaign_criterion_service_grpc_transport, campaign_criterion_simulation_service_grpc_transport, campaign_draft_service_grpc_transport, campaign_experiment_service_grpc_transport, campaign_extension_setting_service_grpc_transport, campaign_feed_service_grpc_transport, campaign_label_service_grpc_transport, campaign_service_grpc_transport, campaign_shared_set_service_grpc_transport, carrier_constant_service_grpc_transport, change_status_service_grpc_transport, click_view_service_grpc_transport, conversion_action_service_grpc_transport, conversion_adjustment_upload_service_grpc_transport, conversion_upload_service_grpc_transport, custom_interest_service_grpc_transport, customer_client_link_service_grpc_transport, customer_client_service_grpc_transport, customer_extension_setting_service_grpc_transport, customer_feed_service_grpc_transport, customer_label_service_grpc_transport, customer_manager_link_service_grpc_transport, customer_negative_criterion_service_grpc_transport, customer_service_grpc_transport, detail_placement_view_service_grpc_transport, display_keyword_view_service_grpc_transport, domain_category_service_grpc_transport, dynamic_search_ads_search_term_view_service_grpc_transport, expanded_landing_page_view_service_grpc_transport, extension_feed_item_service_grpc_transport, feed_item_service_grpc_transport, feed_item_target_service_grpc_transport, feed_mapping_service_grpc_transport, feed_placeholder_view_service_grpc_transport, feed_service_grpc_transport, gender_view_service_grpc_transport, geo_target_constant_service_grpc_transport, geographic_view_service_grpc_transport, google_ads_field_service_grpc_transport, google_ads_service_grpc_transport, group_placement_view_service_grpc_transport, hotel_group_view_service_grpc_transport, hotel_performance_view_service_grpc_transport, keyword_plan_ad_group_service_grpc_transport, keyword_plan_campaign_service_grpc_transport, keyword_plan_idea_service_grpc_transport, keyword_plan_keyword_service_grpc_transport, keyword_plan_negative_keyword_service_grpc_transport, keyword_plan_service_grpc_transport, keyword_view_service_grpc_transport, label_service_grpc_transport, landing_page_view_service_grpc_transport, language_constant_service_grpc_transport, location_view_service_grpc_transport, managed_placement_view_service_grpc_transport, media_file_service_grpc_transport, merchant_center_link_service_grpc_transport, mobile_app_category_constant_service_grpc_transport, mobile_device_constant_service_grpc_transport, mutate_job_service_grpc_transport, operating_system_version_constant_service_grpc_transport, paid_organic_search_term_view_service_grpc_transport, parental_status_view_service_grpc_transport, payments_account_service_grpc_transport, product_bidding_category_constant_service_grpc_transport, product_group_view_service_grpc_transport, recommendation_service_grpc_transport, remarketing_action_service_grpc_transport, search_term_view_service_grpc_transport, shared_criterion_service_grpc_transport, shared_set_service_grpc_transport, shopping_performance_view_service_grpc_transport, topic_constant_service_grpc_transport, topic_view_service_grpc_transport, user_interest_service_grpc_transport, user_list_service_grpc_transport, video_service_grpc_transport
 
+
 class AccountBudgetProposalServiceClient(account_budget_proposal_service_client.AccountBudgetProposalServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AccountBudgetServiceClient(account_budget_service_client.AccountBudgetServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupAdLabelServiceClient(ad_group_ad_label_service_client.AdGroupAdLabelServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupAdServiceClient(ad_group_ad_service_client.AdGroupAdServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupAudienceViewServiceClient(ad_group_audience_view_service_client.AdGroupAudienceViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupBidModifierServiceClient(ad_group_bid_modifier_service_client.AdGroupBidModifierServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupCriterionLabelServiceClient(ad_group_criterion_label_service_client.AdGroupCriterionLabelServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupCriterionServiceClient(ad_group_criterion_service_client.AdGroupCriterionServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupCriterionSimulationServiceClient(ad_group_criterion_simulation_service_client.AdGroupCriterionSimulationServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupExtensionSettingServiceClient(ad_group_extension_setting_service_client.AdGroupExtensionSettingServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupFeedServiceClient(ad_group_feed_service_client.AdGroupFeedServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupLabelServiceClient(ad_group_label_service_client.AdGroupLabelServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupServiceClient(ad_group_service_client.AdGroupServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdGroupSimulationServiceClient(ad_group_simulation_service_client.AdGroupSimulationServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdParameterServiceClient(ad_parameter_service_client.AdParameterServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AdScheduleViewServiceClient(ad_schedule_view_service_client.AdScheduleViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AgeRangeViewServiceClient(age_range_view_service_client.AgeRangeViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AssetServiceClient(asset_service_client.AssetServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class BiddingStrategyServiceClient(bidding_strategy_service_client.BiddingStrategyServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class BillingSetupServiceClient(billing_setup_service_client.BillingSetupServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignAudienceViewServiceClient(campaign_audience_view_service_client.CampaignAudienceViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignBidModifierServiceClient(campaign_bid_modifier_service_client.CampaignBidModifierServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignBudgetServiceClient(campaign_budget_service_client.CampaignBudgetServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignCriterionServiceClient(campaign_criterion_service_client.CampaignCriterionServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignCriterionSimulationServiceClient(campaign_criterion_simulation_service_client.CampaignCriterionSimulationServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignDraftServiceClient(campaign_draft_service_client.CampaignDraftServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignExperimentServiceClient(campaign_experiment_service_client.CampaignExperimentServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignExtensionSettingServiceClient(campaign_extension_setting_service_client.CampaignExtensionSettingServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignFeedServiceClient(campaign_feed_service_client.CampaignFeedServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignLabelServiceClient(campaign_label_service_client.CampaignLabelServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignServiceClient(campaign_service_client.CampaignServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CampaignSharedSetServiceClient(campaign_shared_set_service_client.CampaignSharedSetServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CarrierConstantServiceClient(carrier_constant_service_client.CarrierConstantServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ChangeStatusServiceClient(change_status_service_client.ChangeStatusServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ClickViewServiceClient(click_view_service_client.ClickViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ConversionActionServiceClient(conversion_action_service_client.ConversionActionServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ConversionAdjustmentUploadServiceClient(conversion_adjustment_upload_service_client.ConversionAdjustmentUploadServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ConversionUploadServiceClient(conversion_upload_service_client.ConversionUploadServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomerClientLinkServiceClient(customer_client_link_service_client.CustomerClientLinkServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomerClientServiceClient(customer_client_service_client.CustomerClientServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomerExtensionSettingServiceClient(customer_extension_setting_service_client.CustomerExtensionSettingServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomerFeedServiceClient(customer_feed_service_client.CustomerFeedServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomerLabelServiceClient(customer_label_service_client.CustomerLabelServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomerManagerLinkServiceClient(customer_manager_link_service_client.CustomerManagerLinkServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomerNegativeCriterionServiceClient(customer_negative_criterion_service_client.CustomerNegativeCriterionServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomerServiceClient(customer_service_client.CustomerServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class CustomInterestServiceClient(custom_interest_service_client.CustomInterestServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class DetailPlacementViewServiceClient(detail_placement_view_service_client.DetailPlacementViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class DisplayKeywordViewServiceClient(display_keyword_view_service_client.DisplayKeywordViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class DomainCategoryServiceClient(domain_category_service_client.DomainCategoryServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class DynamicSearchAdsSearchTermViewServiceClient(dynamic_search_ads_search_term_view_service_client.DynamicSearchAdsSearchTermViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ExpandedLandingPageViewServiceClient(expanded_landing_page_view_service_client.ExpandedLandingPageViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ExtensionFeedItemServiceClient(extension_feed_item_service_client.ExtensionFeedItemServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class FeedItemServiceClient(feed_item_service_client.FeedItemServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class FeedItemTargetServiceClient(feed_item_target_service_client.FeedItemTargetServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class FeedMappingServiceClient(feed_mapping_service_client.FeedMappingServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class FeedPlaceholderViewServiceClient(feed_placeholder_view_service_client.FeedPlaceholderViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class FeedServiceClient(feed_service_client.FeedServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class GenderViewServiceClient(gender_view_service_client.GenderViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class GeographicViewServiceClient(geographic_view_service_client.GeographicViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class GeoTargetConstantServiceClient(geo_target_constant_service_client.GeoTargetConstantServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class GoogleAdsFieldServiceClient(google_ads_field_service_client.GoogleAdsFieldServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class GoogleAdsServiceClient(google_ads_service_client.GoogleAdsServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class GroupPlacementViewServiceClient(group_placement_view_service_client.GroupPlacementViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class HotelGroupViewServiceClient(hotel_group_view_service_client.HotelGroupViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class HotelPerformanceViewServiceClient(hotel_performance_view_service_client.HotelPerformanceViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class KeywordPlanAdGroupServiceClient(keyword_plan_ad_group_service_client.KeywordPlanAdGroupServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class KeywordPlanCampaignServiceClient(keyword_plan_campaign_service_client.KeywordPlanCampaignServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class KeywordPlanIdeaServiceClient(keyword_plan_idea_service_client.KeywordPlanIdeaServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class KeywordPlanKeywordServiceClient(keyword_plan_keyword_service_client.KeywordPlanKeywordServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class KeywordPlanNegativeKeywordServiceClient(keyword_plan_negative_keyword_service_client.KeywordPlanNegativeKeywordServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class KeywordPlanServiceClient(keyword_plan_service_client.KeywordPlanServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class KeywordViewServiceClient(keyword_view_service_client.KeywordViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class LabelServiceClient(label_service_client.LabelServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class LandingPageViewServiceClient(landing_page_view_service_client.LandingPageViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class LanguageConstantServiceClient(language_constant_service_client.LanguageConstantServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class LocationViewServiceClient(location_view_service_client.LocationViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ManagedPlacementViewServiceClient(managed_placement_view_service_client.ManagedPlacementViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class MediaFileServiceClient(media_file_service_client.MediaFileServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class MerchantCenterLinkServiceClient(merchant_center_link_service_client.MerchantCenterLinkServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class MobileAppCategoryConstantServiceClient(mobile_app_category_constant_service_client.MobileAppCategoryConstantServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class MobileDeviceConstantServiceClient(mobile_device_constant_service_client.MobileDeviceConstantServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class MutateJobServiceClient(mutate_job_service_client.MutateJobServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class OperatingSystemVersionConstantServiceClient(operating_system_version_constant_service_client.OperatingSystemVersionConstantServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class PaidOrganicSearchTermViewServiceClient(paid_organic_search_term_view_service_client.PaidOrganicSearchTermViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ParentalStatusViewServiceClient(parental_status_view_service_client.ParentalStatusViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class PaymentsAccountServiceClient(payments_account_service_client.PaymentsAccountServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ProductBiddingCategoryConstantServiceClient(product_bidding_category_constant_service_client.ProductBiddingCategoryConstantServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ProductGroupViewServiceClient(product_group_view_service_client.ProductGroupViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class RecommendationServiceClient(recommendation_service_client.RecommendationServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class RemarketingActionServiceClient(remarketing_action_service_client.RemarketingActionServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class SearchTermViewServiceClient(search_term_view_service_client.SearchTermViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class SharedCriterionServiceClient(shared_criterion_service_client.SharedCriterionServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class SharedSetServiceClient(shared_set_service_client.SharedSetServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class ShoppingPerformanceViewServiceClient(shopping_performance_view_service_client.ShoppingPerformanceViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class TopicConstantServiceClient(topic_constant_service_client.TopicConstantServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class TopicViewServiceClient(topic_view_service_client.TopicViewServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class UserInterestServiceClient(user_interest_service_client.UserInterestServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class UserListServiceClient(user_list_service_client.UserListServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class VideoServiceClient(video_service_client.VideoServiceClient):
-    enums: ModuleType = ...
+    enums = enums
 
 class AccountBudgetProposalServiceGrpcTransport(account_budget_proposal_service_grpc_transport.AccountBudgetProposalServiceGrpcTransport):
     ...
