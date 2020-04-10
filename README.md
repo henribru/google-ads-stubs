@@ -26,16 +26,16 @@ the object directly.
 # Replace this:
 campaign_operation = client.get_type('CampaignOperation')
 # With this:
-from google.ads.google_ads.v2.types import CampaignOperation
+from google.ads.google_ads.v3.types import CampaignOperation
 campaign_operation: CampaignOperation = client.get_type('CampaignOperation')
 # Or this:
-from google.ads.google_ads.v2.types import CampaignOperation
+from google.ads.google_ads.v3.types import CampaignOperation
 campaign_operation = CampaignOperation()
 
 # Replace this:
 google_ads_service = client.get_service('GoogleAdsService')
 # With this:
-from google.ads.google_ads.v2.services.google_ads_service_client import GoogleAdsServiceClient
+from google.ads.google_ads.v3.services import GoogleAdsServiceClient
 google_ads_service: GoogleAdsServiceClient = client.get_service('GoogleAdsService')
 ```
 
