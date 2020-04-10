@@ -338,6 +338,15 @@ class ConversionUploadServiceClient(
     enums = enums
 
 from google.ads.google_ads.v2.services import (
+    custom_interest_service_client as custom_interest_service_client,
+)
+
+class CustomInterestServiceClient(
+    custom_interest_service_client.CustomInterestServiceClient
+):
+    enums = enums
+
+from google.ads.google_ads.v2.services import (
     customer_client_link_service_client as customer_client_link_service_client,
 )
 
@@ -403,15 +412,6 @@ from google.ads.google_ads.v2.services import (
 )
 
 class CustomerServiceClient(customer_service_client.CustomerServiceClient):
-    enums = enums
-
-from google.ads.google_ads.v2.services import (
-    custom_interest_service_client as custom_interest_service_client,
-)
-
-class CustomInterestServiceClient(
-    custom_interest_service_client.CustomInterestServiceClient
-):
     enums = enums
 
 from google.ads.google_ads.v2.services import (
@@ -520,20 +520,20 @@ class GenderViewServiceClient(gender_view_service_client.GenderViewServiceClient
     enums = enums
 
 from google.ads.google_ads.v2.services import (
-    geographic_view_service_client as geographic_view_service_client,
-)
-
-class GeographicViewServiceClient(
-    geographic_view_service_client.GeographicViewServiceClient
-):
-    enums = enums
-
-from google.ads.google_ads.v2.services import (
     geo_target_constant_service_client as geo_target_constant_service_client,
 )
 
 class GeoTargetConstantServiceClient(
     geo_target_constant_service_client.GeoTargetConstantServiceClient
+):
+    enums = enums
+
+from google.ads.google_ads.v2.services import (
+    geographic_view_service_client as geographic_view_service_client,
+)
+
+class GeographicViewServiceClient(
+    geographic_view_service_client.GeographicViewServiceClient
 ):
     enums = enums
 
@@ -1206,6 +1206,14 @@ class ConversionUploadServiceGrpcTransport(
 ): ...
 
 from google.ads.google_ads.v2.services.transports import (
+    custom_interest_service_grpc_transport as custom_interest_service_grpc_transport,
+)
+
+class CustomInterestServiceGrpcTransport(
+    custom_interest_service_grpc_transport.CustomInterestServiceGrpcTransport
+): ...
+
+from google.ads.google_ads.v2.services.transports import (
     customer_client_link_service_grpc_transport as customer_client_link_service_grpc_transport,
 )
 
@@ -1267,14 +1275,6 @@ from google.ads.google_ads.v2.services.transports import (
 
 class CustomerServiceGrpcTransport(
     customer_service_grpc_transport.CustomerServiceGrpcTransport
-): ...
-
-from google.ads.google_ads.v2.services.transports import (
-    custom_interest_service_grpc_transport as custom_interest_service_grpc_transport,
-)
-
-class CustomInterestServiceGrpcTransport(
-    custom_interest_service_grpc_transport.CustomInterestServiceGrpcTransport
 ): ...
 
 from google.ads.google_ads.v2.services.transports import (
@@ -1382,19 +1382,19 @@ class GenderViewServiceGrpcTransport(
 ): ...
 
 from google.ads.google_ads.v2.services.transports import (
-    geographic_view_service_grpc_transport as geographic_view_service_grpc_transport,
-)
-
-class GeographicViewServiceGrpcTransport(
-    geographic_view_service_grpc_transport.GeographicViewServiceGrpcTransport
-): ...
-
-from google.ads.google_ads.v2.services.transports import (
     geo_target_constant_service_grpc_transport as geo_target_constant_service_grpc_transport,
 )
 
 class GeoTargetConstantServiceGrpcTransport(
     geo_target_constant_service_grpc_transport.GeoTargetConstantServiceGrpcTransport
+): ...
+
+from google.ads.google_ads.v2.services.transports import (
+    geographic_view_service_grpc_transport as geographic_view_service_grpc_transport,
+)
+
+class GeographicViewServiceGrpcTransport(
+    geographic_view_service_grpc_transport.GeographicViewServiceGrpcTransport
 ): ...
 
 from google.ads.google_ads.v2.services.transports import (
@@ -1775,6 +1775,7 @@ __all__ = [
     "ConversionActionServiceClient",
     "ConversionAdjustmentUploadServiceClient",
     "ConversionUploadServiceClient",
+    "CustomInterestServiceClient",
     "CustomerClientLinkServiceClient",
     "CustomerClientServiceClient",
     "CustomerExtensionSettingServiceClient",
@@ -1783,13 +1784,11 @@ __all__ = [
     "CustomerManagerLinkServiceClient",
     "CustomerNegativeCriterionServiceClient",
     "CustomerServiceClient",
-    "CustomInterestServiceClient",
     "DetailPlacementViewServiceClient",
     "DisplayKeywordViewServiceClient",
     "DistanceViewServiceClient",
     "DomainCategoryServiceClient",
     "DynamicSearchAdsSearchTermViewServiceClient",
-    "Enums",
     "ExpandedLandingPageViewServiceClient",
     "ExtensionFeedItemServiceClient",
     "FeedItemServiceClient",
@@ -1798,8 +1797,8 @@ __all__ = [
     "FeedPlaceholderViewServiceClient",
     "FeedServiceClient",
     "GenderViewServiceClient",
-    "GeographicViewServiceClient",
     "GeoTargetConstantServiceClient",
+    "GeographicViewServiceClient",
     "GoogleAdsFieldServiceClient",
     "GoogleAdsServiceClient",
     "GroupPlacementViewServiceClient",
@@ -1842,6 +1841,7 @@ __all__ = [
     "UserListServiceClient",
     "UserLocationViewServiceClient",
     "VideoServiceClient",
+    "Enums",
     "AccountBudgetProposalServiceGrpcTransport",
     "AccountBudgetServiceGrpcTransport",
     "AdGroupAdAssetViewServiceGrpcTransport",
@@ -1882,6 +1882,7 @@ __all__ = [
     "ConversionActionServiceGrpcTransport",
     "ConversionAdjustmentUploadServiceGrpcTransport",
     "ConversionUploadServiceGrpcTransport",
+    "CustomInterestServiceGrpcTransport",
     "CustomerClientLinkServiceGrpcTransport",
     "CustomerClientServiceGrpcTransport",
     "CustomerExtensionSettingServiceGrpcTransport",
@@ -1890,7 +1891,6 @@ __all__ = [
     "CustomerManagerLinkServiceGrpcTransport",
     "CustomerNegativeCriterionServiceGrpcTransport",
     "CustomerServiceGrpcTransport",
-    "CustomInterestServiceGrpcTransport",
     "DetailPlacementViewServiceGrpcTransport",
     "DisplayKeywordViewServiceGrpcTransport",
     "DistanceViewServiceGrpcTransport",
@@ -1904,8 +1904,8 @@ __all__ = [
     "FeedPlaceholderViewServiceGrpcTransport",
     "FeedServiceGrpcTransport",
     "GenderViewServiceGrpcTransport",
-    "GeographicViewServiceGrpcTransport",
     "GeoTargetConstantServiceGrpcTransport",
+    "GeographicViewServiceGrpcTransport",
     "GoogleAdsFieldServiceGrpcTransport",
     "GoogleAdsServiceGrpcTransport",
     "GroupPlacementViewServiceGrpcTransport",

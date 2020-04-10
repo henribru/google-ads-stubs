@@ -53,8 +53,8 @@ EnhancedCpc = bidding_pb2.EnhancedCpc
 ManualCpc = bidding_pb2.ManualCpc
 ManualCpm = bidding_pb2.ManualCpm
 ManualCpv = bidding_pb2.ManualCpv
-MaximizeConversions = bidding_pb2.MaximizeConversions
 MaximizeConversionValue = bidding_pb2.MaximizeConversionValue
+MaximizeConversions = bidding_pb2.MaximizeConversions
 PageOnePromoted = bidding_pb2.PageOnePromoted
 PercentCpc = bidding_pb2.PercentCpc
 TargetCpa = bidding_pb2.TargetCpa
@@ -74,8 +74,8 @@ ClickLocation = click_location_pb2.ClickLocation
 from google.ads.google_ads.v2.proto.common import criteria_pb2 as criteria_pb2
 
 CriteriaPb2 = criteria_pb2
-AddressInfo = criteria_pb2.AddressInfo
 AdScheduleInfo = criteria_pb2.AdScheduleInfo
+AddressInfo = criteria_pb2.AddressInfo
 AgeRangeInfo = criteria_pb2.AgeRangeInfo
 AppPaymentModelInfo = criteria_pb2.AppPaymentModelInfo
 CarrierInfo = criteria_pb2.CarrierInfo
@@ -191,10 +191,6 @@ from google.ads.google_ads.v2.proto.common import final_app_url_pb2 as final_app
 FinalAppUrlPb2 = final_app_url_pb2
 FinalAppUrl = final_app_url_pb2.FinalAppUrl
 
-from google.ads.google_ads.v2.proto.common import final_url_pb2 as final_url_pb2
-
-FinalUrlPb2 = final_url_pb2
-
 from google.ads.google_ads.v2.proto.common import frequency_cap_pb2 as frequency_cap_pb2
 
 FrequencyCapPb2 = frequency_cap_pb2
@@ -220,16 +216,6 @@ from google.ads.google_ads.v2.proto.common import metrics_pb2 as metrics_pb2
 
 MetricsPb2 = metrics_pb2
 Metrics = metrics_pb2.Metrics
-
-from google.ads.google_ads.v2.proto.common import mutate_pb2 as mutate_pb2
-
-MutatePb2 = mutate_pb2
-
-from google.ads.google_ads.v2.proto.common import (
-    offline_user_data_pb2 as offline_user_data_pb2,
-)
-
-OfflineUserDataPb2 = offline_user_data_pb2
 
 from google.ads.google_ads.v2.proto.common import policy_pb2 as policy_pb2
 
@@ -275,8 +261,8 @@ from google.ads.google_ads.v2.proto.common import (
 )
 
 TargetingSettingPb2 = targeting_setting_pb2
-TargetingSetting = targeting_setting_pb2.TargetingSetting
 TargetRestriction = targeting_setting_pb2.TargetRestriction
+TargetingSetting = targeting_setting_pb2.TargetingSetting
 
 from google.ads.google_ads.v2.proto.common import text_label_pb2 as text_label_pb2
 
@@ -989,12 +975,6 @@ FeedItemTargetDevicePb2 = feed_item_target_device_pb2
 FeedItemTargetDeviceEnum = feed_item_target_device_pb2.FeedItemTargetDeviceEnum
 
 from google.ads.google_ads.v2.proto.enums import (
-    feed_item_target_status_pb2 as feed_item_target_status_pb2,
-)
-
-FeedItemTargetStatusPb2 = feed_item_target_status_pb2
-
-from google.ads.google_ads.v2.proto.enums import (
     feed_item_target_type_pb2 as feed_item_target_type_pb2,
 )
 
@@ -1271,12 +1251,6 @@ LocationPlaceholderFieldEnum = (
 )
 
 from google.ads.google_ads.v2.proto.enums import (
-    location_source_type_pb2 as location_source_type_pb2,
-)
-
-LocationSourceTypePb2 = location_source_type_pb2
-
-from google.ads.google_ads.v2.proto.enums import (
     manager_link_status_pb2 as manager_link_status_pb2,
 )
 
@@ -1359,24 +1333,6 @@ from google.ads.google_ads.v2.proto.enums import (
 
 NegativeGeoTargetTypePb2 = negative_geo_target_type_pb2
 NegativeGeoTargetTypeEnum = negative_geo_target_type_pb2.NegativeGeoTargetTypeEnum
-
-from google.ads.google_ads.v2.proto.enums import (
-    offline_user_data_job_failure_reason_pb2 as offline_user_data_job_failure_reason_pb2,
-)
-
-OfflineUserDataJobFailureReasonPb2 = offline_user_data_job_failure_reason_pb2
-
-from google.ads.google_ads.v2.proto.enums import (
-    offline_user_data_job_status_pb2 as offline_user_data_job_status_pb2,
-)
-
-OfflineUserDataJobStatusPb2 = offline_user_data_job_status_pb2
-
-from google.ads.google_ads.v2.proto.enums import (
-    offline_user_data_job_type_pb2 as offline_user_data_job_type_pb2,
-)
-
-OfflineUserDataJobTypePb2 = offline_user_data_job_type_pb2
 
 from google.ads.google_ads.v2.proto.enums import (
     operating_system_version_operator_type_pb2 as operating_system_version_operator_type_pb2,
@@ -1730,12 +1686,6 @@ StructuredSnippetPlaceholderFieldPb2 = structured_snippet_placeholder_field_pb2
 StructuredSnippetPlaceholderFieldEnum = (
     structured_snippet_placeholder_field_pb2.StructuredSnippetPlaceholderFieldEnum
 )
-
-from google.ads.google_ads.v2.proto.enums import (
-    summary_row_setting_pb2 as summary_row_setting_pb2,
-)
-
-SummaryRowSettingPb2 = summary_row_setting_pb2
 
 from google.ads.google_ads.v2.proto.enums import (
     system_managed_entity_source_pb2 as system_managed_entity_source_pb2,
@@ -2124,12 +2074,6 @@ ChangeStatusErrorPb2 = change_status_error_pb2
 ChangeStatusErrorEnum = change_status_error_pb2.ChangeStatusErrorEnum
 
 from google.ads.google_ads.v2.proto.errors import (
-    click_view_error_pb2 as click_view_error_pb2,
-)
-
-ClickViewErrorPb2 = click_view_error_pb2
-
-from google.ads.google_ads.v2.proto.errors import (
     collection_size_error_pb2 as collection_size_error_pb2,
 )
 
@@ -2223,12 +2167,6 @@ CustomerManagerLinkErrorEnum = (
 )
 
 from google.ads.google_ads.v2.proto.errors import (
-    customer_negative_criterion_error_pb2 as customer_negative_criterion_error_pb2,
-)
-
-CustomerNegativeCriterionErrorPb2 = customer_negative_criterion_error_pb2
-
-from google.ads.google_ads.v2.proto.errors import (
     database_error_pb2 as database_error_pb2,
 )
 
@@ -2269,12 +2207,6 @@ GoogleAdsError = errors_pb2.GoogleAdsError
 GoogleAdsFailure = errors_pb2.GoogleAdsFailure
 PolicyFindingDetails = errors_pb2.PolicyFindingDetails
 PolicyViolationDetails = errors_pb2.PolicyViolationDetails
-
-from google.ads.google_ads.v2.proto.errors import (
-    experiment_error_pb2 as experiment_error_pb2,
-)
-
-ExperimentErrorPb2 = experiment_error_pb2
 
 from google.ads.google_ads.v2.proto.errors import (
     extension_feed_item_error_pb2 as extension_feed_item_error_pb2,
@@ -2490,12 +2422,6 @@ MediaUploadErrorPb2 = media_upload_error_pb2
 MediaUploadErrorEnum = media_upload_error_pb2.MediaUploadErrorEnum
 
 from google.ads.google_ads.v2.proto.errors import (
-    merchant_center_link_error_pb2 as merchant_center_link_error_pb2,
-)
-
-MerchantCenterLinkErrorPb2 = merchant_center_link_error_pb2
-
-from google.ads.google_ads.v2.proto.errors import (
     multiplier_error_pb2 as multiplier_error_pb2,
 )
 
@@ -2541,12 +2467,6 @@ from google.ads.google_ads.v2.proto.errors import null_error_pb2 as null_error_p
 
 NullErrorPb2 = null_error_pb2
 NullErrorEnum = null_error_pb2.NullErrorEnum
-
-from google.ads.google_ads.v2.proto.errors import (
-    offline_user_data_job_error_pb2 as offline_user_data_job_error_pb2,
-)
-
-OfflineUserDataJobErrorPb2 = offline_user_data_job_error_pb2
 
 from google.ads.google_ads.v2.proto.errors import (
     operation_access_denied_error_pb2 as operation_access_denied_error_pb2,
@@ -2841,12 +2761,6 @@ AdScheduleViewPb2 = ad_schedule_view_pb2
 AdScheduleView = ad_schedule_view_pb2.AdScheduleView
 
 from google.ads.google_ads.v2.proto.resources import (
-    ad_variation_ad_view_pb2 as ad_variation_ad_view_pb2,
-)
-
-AdVariationAdViewPb2 = ad_variation_ad_view_pb2
-
-from google.ads.google_ads.v2.proto.resources import (
     age_range_view_pb2 as age_range_view_pb2,
 )
 
@@ -2983,12 +2897,6 @@ ConversionActionPb2 = conversion_action_pb2
 ConversionAction = conversion_action_pb2.ConversionAction
 
 from google.ads.google_ads.v2.proto.resources import (
-    currency_constant_pb2 as currency_constant_pb2,
-)
-
-CurrencyConstantPb2 = currency_constant_pb2
-
-from google.ads.google_ads.v2.proto.resources import (
     custom_interest_pb2 as custom_interest_pb2,
 )
 
@@ -3097,10 +3005,6 @@ from google.ads.google_ads.v2.proto.resources import (
 ExpandedLandingPageViewPb2 = expanded_landing_page_view_pb2
 ExpandedLandingPageView = expanded_landing_page_view_pb2.ExpandedLandingPageView
 
-from google.ads.google_ads.v2.proto.resources import experiment_pb2 as experiment_pb2
-
-ExperimentPb2 = experiment_pb2
-
 from google.ads.google_ads.v2.proto.resources import (
     extension_feed_item_pb2 as extension_feed_item_pb2,
 )
@@ -3111,8 +3015,8 @@ ExtensionFeedItem = extension_feed_item_pb2.ExtensionFeedItem
 from google.ads.google_ads.v2.proto.resources import feed_item_pb2 as feed_item_pb2
 
 FeedItemPb2 = feed_item_pb2
-FeedItemAttributeValue = feed_item_pb2.FeedItemAttributeValue
 FeedItem = feed_item_pb2.FeedItem
+FeedItemAttributeValue = feed_item_pb2.FeedItemAttributeValue
 FeedItemPlaceholderPolicyInfo = feed_item_pb2.FeedItemPlaceholderPolicyInfo
 FeedItemValidationError = feed_item_pb2.FeedItemValidationError
 
@@ -3134,9 +3038,9 @@ FeedMapping = feed_mapping_pb2.FeedMapping
 from google.ads.google_ads.v2.proto.resources import feed_pb2 as feed_pb2
 
 FeedPb2 = feed_pb2
+Feed = feed_pb2.Feed
 FeedAttribute = feed_pb2.FeedAttribute
 FeedAttributeOperation = feed_pb2.FeedAttributeOperation
-Feed = feed_pb2.Feed
 
 from google.ads.google_ads.v2.proto.resources import (
     feed_placeholder_view_pb2 as feed_placeholder_view_pb2,
@@ -3233,8 +3137,8 @@ from google.ads.google_ads.v2.proto.resources import (
 )
 
 KeywordPlanPb2 = keyword_plan_pb2
-KeywordPlanForecastPeriod = keyword_plan_pb2.KeywordPlanForecastPeriod
 KeywordPlan = keyword_plan_pb2.KeywordPlan
+KeywordPlanForecastPeriod = keyword_plan_pb2.KeywordPlanForecastPeriod
 
 from google.ads.google_ads.v2.proto.resources import (
     keyword_view_pb2 as keyword_view_pb2,
@@ -3310,12 +3214,6 @@ from google.ads.google_ads.v2.proto.resources import mutate_job_pb2 as mutate_jo
 
 MutateJobPb2 = mutate_job_pb2
 MutateJob = mutate_job_pb2.MutateJob
-
-from google.ads.google_ads.v2.proto.resources import (
-    offline_user_data_job_pb2 as offline_user_data_job_pb2,
-)
-
-OfflineUserDataJobPb2 = offline_user_data_job_pb2
 
 from google.ads.google_ads.v2.proto.resources import (
     operating_system_version_constant_pb2 as operating_system_version_constant_pb2,
@@ -3670,12 +3568,6 @@ MutateAdsRequest = ad_service_pb2.MutateAdsRequest
 MutateAdsResponse = ad_service_pb2.MutateAdsResponse
 
 from google.ads.google_ads.v2.proto.services import (
-    ad_variation_ad_view_service_pb2 as ad_variation_ad_view_service_pb2,
-)
-
-AdVariationAdViewServicePb2 = ad_variation_ad_view_service_pb2
-
-from google.ads.google_ads.v2.proto.services import (
     age_range_view_service_pb2 as age_range_view_service_pb2,
 )
 
@@ -4004,12 +3896,6 @@ UploadClickConversionsResponse = (
 )
 
 from google.ads.google_ads.v2.proto.services import (
-    currency_constant_service_pb2 as currency_constant_service_pb2,
-)
-
-CurrencyConstantServicePb2 = currency_constant_service_pb2
-
-from google.ads.google_ads.v2.proto.services import (
     custom_interest_service_pb2 as custom_interest_service_pb2,
 )
 
@@ -4151,6 +4037,15 @@ MutateCustomerResponse = customer_service_pb2.MutateCustomerResponse
 MutateCustomerResult = customer_service_pb2.MutateCustomerResult
 
 from google.ads.google_ads.v2.proto.services import (
+    detail_placement_view_service_pb2 as detail_placement_view_service_pb2,
+)
+
+DetailPlacementViewServicePb2 = detail_placement_view_service_pb2
+GetDetailPlacementViewRequest = (
+    detail_placement_view_service_pb2.GetDetailPlacementViewRequest
+)
+
+from google.ads.google_ads.v2.proto.services import (
     display_keyword_view_service_pb2 as display_keyword_view_service_pb2,
 )
 
@@ -4192,12 +4087,6 @@ ExpandedLandingPageViewServicePb2 = expanded_landing_page_view_service_pb2
 GetExpandedLandingPageViewRequest = (
     expanded_landing_page_view_service_pb2.GetExpandedLandingPageViewRequest
 )
-
-from google.ads.google_ads.v2.proto.services import (
-    experiment_service_pb2 as experiment_service_pb2,
-)
-
-ExperimentServicePb2 = experiment_service_pb2
 
 from google.ads.google_ads.v2.proto.services import (
     extension_feed_item_service_pb2 as extension_feed_item_service_pb2,
@@ -4326,6 +4215,15 @@ MutateOperation = google_ads_service_pb2.MutateOperation
 MutateOperationResponse = google_ads_service_pb2.MutateOperationResponse
 SearchGoogleAdsRequest = google_ads_service_pb2.SearchGoogleAdsRequest
 SearchGoogleAdsResponse = google_ads_service_pb2.SearchGoogleAdsResponse
+
+from google.ads.google_ads.v2.proto.services import (
+    group_placement_view_service_pb2 as group_placement_view_service_pb2,
+)
+
+GroupPlacementViewServicePb2 = group_placement_view_service_pb2
+GetGroupPlacementViewRequest = (
+    group_placement_view_service_pb2.GetGroupPlacementViewRequest
+)
 
 from google.ads.google_ads.v2.proto.services import (
     hotel_group_view_service_pb2 as hotel_group_view_service_pb2,
@@ -4595,12 +4493,6 @@ MutateJobResult = mutate_job_service_pb2.MutateJobResult
 RunMutateJobRequest = mutate_job_service_pb2.RunMutateJobRequest
 
 from google.ads.google_ads.v2.proto.services import (
-    offline_user_data_job_service_pb2 as offline_user_data_job_service_pb2,
-)
-
-OfflineUserDataJobServicePb2 = offline_user_data_job_service_pb2
-
-from google.ads.google_ads.v2.proto.services import (
     operating_system_version_constant_service_pb2 as operating_system_version_constant_service_pb2,
 )
 
@@ -4801,7 +4693,6 @@ ListOperationsRequest = operations_pb2.ListOperationsRequest
 ListOperationsResponse = operations_pb2.ListOperationsResponse
 Operation = operations_pb2.Operation
 OperationInfo = operations_pb2.OperationInfo
-OperationsStub = operations_pb2.OperationsStub
 
 from google.protobuf import any_pb2 as any_pb2
 
@@ -4834,6 +4725,7 @@ UInt64Value = wrappers_pb2.UInt64Value
 from google.rpc import status_pb2 as status_pb2
 
 StatusPb2 = status_pb2
+Status = status_pb2.Status
 
 __all__ = [
     "AdAssetPb2",
@@ -4849,13 +4741,10 @@ __all__ = [
     "ExtensionsPb2",
     "FeedCommonPb2",
     "FinalAppUrlPb2",
-    "FinalUrlPb2",
     "FrequencyCapPb2",
     "KeywordPlanCommonPb2",
     "MatchingFunctionPb2",
     "MetricsPb2",
-    "MutatePb2",
-    "OfflineUserDataPb2",
     "PolicyPb2",
     "RealTimeBiddingSettingPb2",
     "SegmentsPb2",
@@ -4956,7 +4845,6 @@ __all__ = [
     "FeedItemQualityDisapprovalReasonPb2",
     "FeedItemStatusPb2",
     "FeedItemTargetDevicePb2",
-    "FeedItemTargetStatusPb2",
     "FeedItemTargetTypePb2",
     "FeedItemValidationStatusPb2",
     "FeedLinkStatusPb2",
@@ -4995,7 +4883,6 @@ __all__ = [
     "LocationExtensionTargetingCriterionFieldPb2",
     "LocationGroupRadiusUnitsPb2",
     "LocationPlaceholderFieldPb2",
-    "LocationSourceTypePb2",
     "ManagerLinkStatusPb2",
     "MatchingFunctionContextTypePb2",
     "MatchingFunctionOperatorPb2",
@@ -5008,9 +4895,6 @@ __all__ = [
     "MonthOfYearPb2",
     "MutateJobStatusPb2",
     "NegativeGeoTargetTypePb2",
-    "OfflineUserDataJobFailureReasonPb2",
-    "OfflineUserDataJobStatusPb2",
-    "OfflineUserDataJobTypePb2",
     "OperatingSystemVersionOperatorTypePb2",
     "PageOnePromotedStrategyGoalPb2",
     "ParentalStatusTypePb2",
@@ -5056,7 +4940,6 @@ __all__ = [
     "SlotPb2",
     "SpendingLimitTypePb2",
     "StructuredSnippetPlaceholderFieldPb2",
-    "SummaryRowSettingPb2",
     "SystemManagedEntitySourcePb2",
     "TargetCpaOptInRecommendationGoalPb2",
     "TargetImpressionShareLocationPb2",
@@ -5109,7 +4992,6 @@ __all__ = [
     "CampaignFeedErrorPb2",
     "CampaignSharedSetErrorPb2",
     "ChangeStatusErrorPb2",
-    "ClickViewErrorPb2",
     "CollectionSizeErrorPb2",
     "ContextErrorPb2",
     "ConversionActionErrorPb2",
@@ -5123,14 +5005,12 @@ __all__ = [
     "CustomerErrorPb2",
     "CustomerFeedErrorPb2",
     "CustomerManagerLinkErrorPb2",
-    "CustomerNegativeCriterionErrorPb2",
     "DatabaseErrorPb2",
     "DateErrorPb2",
     "DateRangeErrorPb2",
     "DistinctErrorPb2",
     "EnumErrorPb2",
     "ErrorsPb2",
-    "ExperimentErrorPb2",
     "ExtensionFeedItemErrorPb2",
     "ExtensionSettingErrorPb2",
     "FeedAttributeReferenceErrorPb2",
@@ -5162,7 +5042,6 @@ __all__ = [
     "MediaBundleErrorPb2",
     "MediaFileErrorPb2",
     "MediaUploadErrorPb2",
-    "MerchantCenterLinkErrorPb2",
     "MultiplierErrorPb2",
     "MutateErrorPb2",
     "MutateJobErrorPb2",
@@ -5170,7 +5049,6 @@ __all__ = [
     "NotEmptyErrorPb2",
     "NotWhitelistedErrorPb2",
     "NullErrorPb2",
-    "OfflineUserDataJobErrorPb2",
     "OperationAccessDeniedErrorPb2",
     "OperatorErrorPb2",
     "PartialFailureErrorPb2",
@@ -5213,7 +5091,6 @@ __all__ = [
     "AdParameterPb2",
     "AdPb2",
     "AdScheduleViewPb2",
-    "AdVariationAdViewPb2",
     "AgeRangeViewPb2",
     "AssetPb2",
     "BiddingStrategyPb2",
@@ -5234,7 +5111,6 @@ __all__ = [
     "ChangeStatusPb2",
     "ClickViewPb2",
     "ConversionActionPb2",
-    "CurrencyConstantPb2",
     "CustomInterestPb2",
     "CustomerClientLinkPb2",
     "CustomerClientPb2",
@@ -5250,7 +5126,6 @@ __all__ = [
     "DomainCategoryPb2",
     "DynamicSearchAdsSearchTermViewPb2",
     "ExpandedLandingPageViewPb2",
-    "ExperimentPb2",
     "ExtensionFeedItemPb2",
     "FeedItemPb2",
     "FeedItemTargetPb2",
@@ -5281,7 +5156,6 @@ __all__ = [
     "MobileAppCategoryConstantPb2",
     "MobileDeviceConstantPb2",
     "MutateJobPb2",
-    "OfflineUserDataJobPb2",
     "OperatingSystemVersionConstantPb2",
     "PaidOrganicSearchTermViewPb2",
     "ParentalStatusViewPb2",
@@ -5318,7 +5192,6 @@ __all__ = [
     "AdParameterServicePb2",
     "AdScheduleViewServicePb2",
     "AdServicePb2",
-    "AdVariationAdViewServicePb2",
     "AgeRangeViewServicePb2",
     "AssetServicePb2",
     "BiddingStrategyServicePb2",
@@ -5341,7 +5214,6 @@ __all__ = [
     "ConversionActionServicePb2",
     "ConversionAdjustmentUploadServicePb2",
     "ConversionUploadServicePb2",
-    "CurrencyConstantServicePb2",
     "CustomInterestServicePb2",
     "CustomerClientLinkServicePb2",
     "CustomerClientServicePb2",
@@ -5351,12 +5223,12 @@ __all__ = [
     "CustomerManagerLinkServicePb2",
     "CustomerNegativeCriterionServicePb2",
     "CustomerServicePb2",
+    "DetailPlacementViewServicePb2",
     "DisplayKeywordViewServicePb2",
     "DistanceViewServicePb2",
     "DomainCategoryServicePb2",
     "DynamicSearchAdsSearchTermViewServicePb2",
     "ExpandedLandingPageViewServicePb2",
-    "ExperimentServicePb2",
     "ExtensionFeedItemServicePb2",
     "FeedItemServicePb2",
     "FeedItemTargetServicePb2",
@@ -5368,6 +5240,7 @@ __all__ = [
     "GeographicViewServicePb2",
     "GoogleAdsFieldServicePb2",
     "GoogleAdsServicePb2",
+    "GroupPlacementViewServicePb2",
     "HotelGroupViewServicePb2",
     "HotelPerformanceViewServicePb2",
     "InvoiceServicePb2",
@@ -5388,7 +5261,6 @@ __all__ = [
     "MobileAppCategoryConstantServicePb2",
     "MobileDeviceConstantServicePb2",
     "MutateJobServicePb2",
-    "OfflineUserDataJobServicePb2",
     "OperatingSystemVersionConstantServicePb2",
     "PaidOrganicSearchTermViewServicePb2",
     "ParentalStatusViewServicePb2",
@@ -5418,23 +5290,21 @@ __all__ = [
     "AccessReasonEnum",
     "AccessRoleEnum",
     "AccountBudget",
-    "AccountBudgetProposalErrorEnum",
     "AccountBudgetProposal",
+    "AccountBudgetProposalErrorEnum",
     "AccountBudgetProposalOperation",
     "AccountBudgetProposalStatusEnum",
     "AccountBudgetProposalTypeEnum",
     "AccountBudgetStatusEnum",
+    "Ad",
     "AdCustomizerErrorEnum",
     "AdCustomizerPlaceholderFieldEnum",
-    "AddMutateJobOperationsRequest",
-    "AddMutateJobOperationsResponse",
-    "AddressInfo",
     "AdErrorEnum",
-    "Ad",
+    "AdGroup",
+    "AdGroupAd",
     "AdGroupAdAssetPolicySummary",
     "AdGroupAdAssetView",
     "AdGroupAdErrorEnum",
-    "AdGroupAd",
     "AdGroupAdLabel",
     "AdGroupAdLabelOperation",
     "AdGroupAdOperation",
@@ -5442,12 +5312,12 @@ __all__ = [
     "AdGroupAdRotationModeEnum",
     "AdGroupAdStatusEnum",
     "AdGroupAudienceView",
-    "AdGroupBidModifierErrorEnum",
     "AdGroupBidModifier",
+    "AdGroupBidModifierErrorEnum",
     "AdGroupBidModifierOperation",
+    "AdGroupCriterion",
     "AdGroupCriterionApprovalStatusEnum",
     "AdGroupCriterionErrorEnum",
-    "AdGroupCriterion",
     "AdGroupCriterionLabel",
     "AdGroupCriterionLabelOperation",
     "AdGroupCriterionOperation",
@@ -5456,10 +5326,9 @@ __all__ = [
     "AdGroupErrorEnum",
     "AdGroupExtensionSetting",
     "AdGroupExtensionSettingOperation",
-    "AdGroupFeedErrorEnum",
     "AdGroupFeed",
+    "AdGroupFeedErrorEnum",
     "AdGroupFeedOperation",
-    "AdGroup",
     "AdGroupLabel",
     "AdGroupLabelOperation",
     "AdGroupOperation",
@@ -5470,8 +5339,8 @@ __all__ = [
     "AdMediaBundleAsset",
     "AdNetworkTypeEnum",
     "AdOperation",
-    "AdParameterErrorEnum",
     "AdParameter",
+    "AdParameterErrorEnum",
     "AdParameterOperation",
     "AdScheduleInfo",
     "AdScheduleView",
@@ -5480,9 +5349,12 @@ __all__ = [
     "AdStrengthEnum",
     "AdTextAsset",
     "AdTypeEnum",
+    "AdVideoAsset",
+    "AddMutateJobOperationsRequest",
+    "AddMutateJobOperationsResponse",
+    "AddressInfo",
     "AdvertisingChannelSubTypeEnum",
     "AdvertisingChannelTypeEnum",
-    "AdVideoAsset",
     "AdxErrorEnum",
     "AffiliateLocationFeedItem",
     "AffiliateLocationFeedRelationshipTypeEnum",
@@ -5495,18 +5367,18 @@ __all__ = [
     "AppCampaignBiddingStrategyGoalTypeEnum",
     "AppEngagementAdInfo",
     "AppFeedItem",
-    "ApplyRecommendationOperation",
-    "ApplyRecommendationRequest",
-    "ApplyRecommendationResponse",
-    "ApplyRecommendationResult",
     "AppPaymentModelInfo",
     "AppPaymentModelTypeEnum",
     "AppPlaceholderFieldEnum",
     "AppStoreEnum",
     "AppUrlOperatingSystemTypeEnum",
+    "ApplyRecommendationOperation",
+    "ApplyRecommendationRequest",
+    "ApplyRecommendationResponse",
+    "ApplyRecommendationResult",
+    "Asset",
     "AssetErrorEnum",
     "AssetFieldTypeEnum",
-    "Asset",
     "AssetOperation",
     "AssetPerformanceLabelEnum",
     "AssetTypeEnum",
@@ -5515,18 +5387,18 @@ __all__ = [
     "AuthenticationErrorEnum",
     "AuthorizationErrorEnum",
     "BasicUserListInfo",
-    "BiddingErrorEnum",
-    "BiddingSourceEnum",
-    "BiddingStrategyErrorEnum",
-    "BiddingStrategy",
-    "BiddingStrategyOperation",
-    "BiddingStrategyStatusEnum",
-    "BiddingStrategyTypeEnum",
     "BidModifierSimulationPoint",
     "BidModifierSimulationPointList",
     "BidModifierSourceEnum",
-    "BillingSetupErrorEnum",
+    "BiddingErrorEnum",
+    "BiddingSourceEnum",
+    "BiddingStrategy",
+    "BiddingStrategyErrorEnum",
+    "BiddingStrategyOperation",
+    "BiddingStrategyStatusEnum",
+    "BiddingStrategyTypeEnum",
     "BillingSetup",
+    "BillingSetupErrorEnum",
     "BillingSetupOperation",
     "BillingSetupStatusEnum",
     "BrandSafetySuitabilityEnum",
@@ -5539,52 +5411,52 @@ __all__ = [
     "CallConversionResult",
     "CallFeedItem",
     "CallOnlyAdInfo",
-    "CalloutFeedItem",
-    "CalloutPlaceholderFieldEnum",
     "CallPlaceholderFieldEnum",
     "CallReportingSetting",
+    "CalloutFeedItem",
+    "CalloutPlaceholderFieldEnum",
+    "Campaign",
     "CampaignAudienceView",
     "CampaignBidModifier",
     "CampaignBidModifierOperation",
-    "CampaignBudgetErrorEnum",
     "CampaignBudget",
+    "CampaignBudgetErrorEnum",
     "CampaignBudgetOperation",
-    "CampaignCriterionErrorEnum",
     "CampaignCriterion",
+    "CampaignCriterionErrorEnum",
     "CampaignCriterionOperation",
     "CampaignCriterionSimulation",
     "CampaignCriterionStatusEnum",
-    "CampaignDraftErrorEnum",
     "CampaignDraft",
+    "CampaignDraftErrorEnum",
     "CampaignDraftOperation",
     "CampaignDraftStatusEnum",
     "CampaignDuration",
     "CampaignErrorEnum",
-    "CampaignExperimentErrorEnum",
     "CampaignExperiment",
+    "CampaignExperimentErrorEnum",
     "CampaignExperimentOperation",
     "CampaignExperimentStatusEnum",
     "CampaignExperimentTrafficSplitTypeEnum",
     "CampaignExperimentTypeEnum",
     "CampaignExtensionSetting",
     "CampaignExtensionSettingOperation",
-    "CampaignFeedErrorEnum",
     "CampaignFeed",
+    "CampaignFeedErrorEnum",
     "CampaignFeedOperation",
-    "Campaign",
     "CampaignLabel",
     "CampaignLabelOperation",
     "CampaignOperation",
     "CampaignServingStatusEnum",
-    "CampaignSharedSetErrorEnum",
     "CampaignSharedSet",
+    "CampaignSharedSetErrorEnum",
     "CampaignSharedSetOperation",
     "CampaignSharedSetStatusEnum",
     "CampaignStatusEnum",
     "CarrierConstant",
     "CarrierInfo",
-    "ChangeStatusErrorEnum",
     "ChangeStatus",
+    "ChangeStatusErrorEnum",
     "ChangeStatusOperationEnum",
     "ChangeStatusResourceTypeEnum",
     "ClickConversion",
@@ -5598,10 +5470,10 @@ __all__ = [
     "ContentLabelInfo",
     "ContentLabelTypeEnum",
     "ContextErrorEnum",
+    "ConversionAction",
     "ConversionActionCategoryEnum",
     "ConversionActionCountingTypeEnum",
     "ConversionActionErrorEnum",
-    "ConversionAction",
     "ConversionActionOperation",
     "ConversionActionStatusEnum",
     "ConversionActionTypeEnum",
@@ -5636,30 +5508,9 @@ __all__ = [
     "CrmBasedUserListInfo",
     "CurrencyCodeErrorEnum",
     "CustomAffinityInfo",
-    "CustomerClient",
-    "CustomerClientLinkErrorEnum",
-    "CustomerClientLink",
-    "CustomerClientLinkOperation",
-    "CustomerErrorEnum",
-    "CustomerExtensionSetting",
-    "CustomerExtensionSettingOperation",
-    "CustomerFeedErrorEnum",
-    "CustomerFeed",
-    "CustomerFeedOperation",
-    "Customer",
-    "CustomerLabel",
-    "CustomerLabelOperation",
-    "CustomerManagerLinkErrorEnum",
-    "CustomerManagerLink",
-    "CustomerManagerLinkOperation",
-    "CustomerMatchUploadKeyTypeEnum",
-    "CustomerNegativeCriterion",
-    "CustomerNegativeCriterionOperation",
-    "CustomerOperation",
-    "CustomerPayPerConversionEligibilityFailureReasonEnum",
     "CustomIntentInfo",
-    "CustomInterestErrorEnum",
     "CustomInterest",
+    "CustomInterestErrorEnum",
     "CustomInterestMember",
     "CustomInterestMemberTypeEnum",
     "CustomInterestOperation",
@@ -5667,11 +5518,32 @@ __all__ = [
     "CustomInterestTypeEnum",
     "CustomParameter",
     "CustomPlaceholderFieldEnum",
-    "DatabaseErrorEnum",
+    "Customer",
+    "CustomerClient",
+    "CustomerClientLink",
+    "CustomerClientLinkErrorEnum",
+    "CustomerClientLinkOperation",
+    "CustomerErrorEnum",
+    "CustomerExtensionSetting",
+    "CustomerExtensionSettingOperation",
+    "CustomerFeed",
+    "CustomerFeedErrorEnum",
+    "CustomerFeedOperation",
+    "CustomerLabel",
+    "CustomerLabelOperation",
+    "CustomerManagerLink",
+    "CustomerManagerLinkErrorEnum",
+    "CustomerManagerLinkOperation",
+    "CustomerMatchUploadKeyTypeEnum",
+    "CustomerNegativeCriterion",
+    "CustomerNegativeCriterionOperation",
+    "CustomerOperation",
+    "CustomerPayPerConversionEligibilityFailureReasonEnum",
     "DataDrivenModelStatusEnum",
+    "DatabaseErrorEnum",
     "DateErrorEnum",
-    "DateRangeErrorEnum",
     "DateRange",
+    "DateRangeErrorEnum",
     "DateSpecificRuleUserListInfo",
     "DayOfWeekEnum",
     "DetailPlacementView",
@@ -5702,40 +5574,40 @@ __all__ = [
     "ExpandedTextAdInfo",
     "ExplorerAutoOptimizerSetting",
     "ExpressionRuleUserListInfo",
-    "ExtensionFeedItemErrorEnum",
     "ExtensionFeedItem",
+    "ExtensionFeedItemErrorEnum",
     "ExtensionFeedItemOperation",
     "ExtensionSettingDeviceEnum",
     "ExtensionSettingErrorEnum",
     "ExtensionTypeEnum",
     "ExternalAttributionData",
     "ExternalConversionSourceEnum",
+    "Feed",
     "FeedAttribute",
     "FeedAttributeOperation",
     "FeedAttributeReferenceErrorEnum",
     "FeedAttributeTypeEnum",
     "FeedErrorEnum",
-    "Feed",
+    "FeedItem",
     "FeedItemAttributeValue",
     "FeedItemErrorEnum",
-    "FeedItem",
     "FeedItemOperation",
     "FeedItemPlaceholderPolicyInfo",
     "FeedItemQualityApprovalStatusEnum",
     "FeedItemQualityDisapprovalReasonEnum",
     "FeedItemStatusEnum",
+    "FeedItemTarget",
     "FeedItemTargetDeviceEnum",
     "FeedItemTargetErrorEnum",
-    "FeedItemTarget",
     "FeedItemTargetOperation",
     "FeedItemTargetTypeEnum",
-    "FeedItemValidationErrorEnum",
     "FeedItemValidationError",
+    "FeedItemValidationErrorEnum",
     "FeedItemValidationStatusEnum",
     "FeedLinkStatusEnum",
+    "FeedMapping",
     "FeedMappingCriterionTypeEnum",
     "FeedMappingErrorEnum",
-    "FeedMapping",
     "FeedMappingOperation",
     "FeedMappingStatusEnum",
     "FeedOperation",
@@ -5770,14 +5642,14 @@ __all__ = [
     "GenerateProductMixIdeasResponse",
     "GenerateReachForecastRequest",
     "GenerateReachForecastResponse",
-    "GeographicView",
     "GeoPointInfo",
     "GeoTargetConstant",
     "GeoTargetConstantStatusEnum",
-    "GeoTargetConstantSuggestionErrorEnum",
     "GeoTargetConstantSuggestion",
+    "GeoTargetConstantSuggestionErrorEnum",
     "GeoTargetingRestrictionEnum",
     "GeoTargetingTypeEnum",
+    "GeographicView",
     "GetAccountBudgetProposalRequest",
     "GetAccountBudgetRequest",
     "GetAdGroupAdAssetViewRequest",
@@ -5816,6 +5688,7 @@ __all__ = [
     "GetChangeStatusRequest",
     "GetClickViewRequest",
     "GetConversionActionRequest",
+    "GetCustomInterestRequest",
     "GetCustomerClientLinkRequest",
     "GetCustomerClientRequest",
     "GetCustomerExtensionSettingRequest",
@@ -5824,7 +5697,6 @@ __all__ = [
     "GetCustomerManagerLinkRequest",
     "GetCustomerNegativeCriterionRequest",
     "GetCustomerRequest",
-    "GetCustomInterestRequest",
     "GetDetailPlacementViewRequest",
     "GetDisplayKeywordViewRequest",
     "GetDistanceViewRequest",
@@ -5838,8 +5710,8 @@ __all__ = [
     "GetFeedPlaceholderViewRequest",
     "GetFeedRequest",
     "GetGenderViewRequest",
-    "GetGeographicViewRequest",
     "GetGeoTargetConstantRequest",
+    "GetGeographicViewRequest",
     "GetGoogleAdsFieldRequest",
     "GetGroupPlacementViewRequest",
     "GetHotelGroupViewRequest",
@@ -5881,9 +5753,9 @@ __all__ = [
     "GmailTeaser",
     "GoogleAdsError",
     "GoogleAdsFailure",
+    "GoogleAdsField",
     "GoogleAdsFieldCategoryEnum",
     "GoogleAdsFieldDataTypeEnum",
-    "GoogleAdsField",
     "GoogleAdsRow",
     "GraduateCampaignExperimentRequest",
     "GraduateCampaignExperimentResponse",
@@ -5917,45 +5789,45 @@ __all__ = [
     "InteractionTypeEnum",
     "InteractionTypeInfo",
     "InternalErrorEnum",
-    "InvoiceErrorEnum",
     "Invoice",
+    "InvoiceErrorEnum",
     "InvoiceTypeEnum",
     "IpBlockInfo",
     "JobPlaceholderFieldEnum",
-    "KeywordAndUrlSeed",
     "Keyword",
+    "KeywordAndUrlSeed",
     "KeywordInfo",
     "KeywordMatchTypeEnum",
+    "KeywordPlan",
+    "KeywordPlanAdGroup",
     "KeywordPlanAdGroupErrorEnum",
     "KeywordPlanAdGroupForecast",
-    "KeywordPlanAdGroup",
     "KeywordPlanAdGroupOperation",
+    "KeywordPlanCampaign",
     "KeywordPlanCampaignErrorEnum",
     "KeywordPlanCampaignForecast",
-    "KeywordPlanCampaign",
     "KeywordPlanCampaignOperation",
     "KeywordPlanCompetitionLevelEnum",
     "KeywordPlanErrorEnum",
     "KeywordPlanForecastIntervalEnum",
     "KeywordPlanForecastPeriod",
     "KeywordPlanGeoTarget",
-    "KeywordPlan",
     "KeywordPlanHistoricalMetrics",
     "KeywordPlanIdeaErrorEnum",
+    "KeywordPlanKeyword",
     "KeywordPlanKeywordErrorEnum",
     "KeywordPlanKeywordForecast",
-    "KeywordPlanKeyword",
     "KeywordPlanKeywordHistoricalMetrics",
     "KeywordPlanKeywordOperation",
-    "KeywordPlanNegativeKeywordErrorEnum",
     "KeywordPlanNegativeKeyword",
+    "KeywordPlanNegativeKeywordErrorEnum",
     "KeywordPlanNegativeKeywordOperation",
     "KeywordPlanNetworkEnum",
     "KeywordPlanOperation",
     "KeywordSeed",
     "KeywordView",
-    "LabelErrorEnum",
     "Label",
+    "LabelErrorEnum",
     "LabelOperation",
     "LabelStatusEnum",
     "LandingPageView",
@@ -5971,13 +5843,6 @@ __all__ = [
     "ListCampaignDraftAsyncErrorsResponse",
     "ListCampaignExperimentAsyncErrorsRequest",
     "ListCampaignExperimentAsyncErrorsResponse",
-    "ListingBrandInfo",
-    "ListingCustomAttributeIndexEnum",
-    "ListingCustomAttributeInfo",
-    "ListingDimensionInfo",
-    "ListingGroupInfo",
-    "ListingGroupTypeEnum",
-    "ListingScopeInfo",
     "ListInvoicesRequest",
     "ListInvoicesResponse",
     "ListMerchantCenterLinksRequest",
@@ -5991,6 +5856,13 @@ __all__ = [
     "ListPlannableLocationsResponse",
     "ListPlannableProductsRequest",
     "ListPlannableProductsResponse",
+    "ListingBrandInfo",
+    "ListingCustomAttributeIndexEnum",
+    "ListingCustomAttributeInfo",
+    "ListingDimensionInfo",
+    "ListingGroupInfo",
+    "ListingGroupTypeEnum",
+    "ListingScopeInfo",
     "LocalPlaceholderFieldEnum",
     "LocationExtensionTargetingCriterionFieldEnum",
     "LocationFeedItem",
@@ -6007,17 +5879,17 @@ __all__ = [
     "ManualCpc",
     "ManualCpm",
     "ManualCpv",
-    "MatchingFunctionContextTypeEnum",
     "MatchingFunction",
+    "MatchingFunctionContextTypeEnum",
     "MatchingFunctionOperatorEnum",
-    "MaximizeConversions",
     "MaximizeConversionValue",
+    "MaximizeConversions",
     "MediaAudio",
+    "MediaBundle",
     "MediaBundleAsset",
     "MediaBundleErrorEnum",
-    "MediaBundle",
-    "MediaFileErrorEnum",
     "MediaFile",
+    "MediaFileErrorEnum",
     "MediaFileOperation",
     "MediaImage",
     "MediaTypeEnum",
@@ -6117,6 +5989,9 @@ __all__ = [
     "MutateConversionActionResult",
     "MutateConversionActionsRequest",
     "MutateConversionActionsResponse",
+    "MutateCustomInterestResult",
+    "MutateCustomInterestsRequest",
+    "MutateCustomInterestsResponse",
     "MutateCustomerClientLinkRequest",
     "MutateCustomerClientLinkResponse",
     "MutateCustomerClientLinkResult",
@@ -6138,19 +6013,16 @@ __all__ = [
     "MutateCustomerRequest",
     "MutateCustomerResponse",
     "MutateCustomerResult",
-    "MutateCustomInterestResult",
-    "MutateCustomInterestsRequest",
-    "MutateCustomInterestsResponse",
     "MutateErrorEnum",
     "MutateExtensionFeedItemResult",
     "MutateExtensionFeedItemsRequest",
     "MutateExtensionFeedItemsResponse",
     "MutateFeedItemResult",
-    "MutateFeedItemsRequest",
-    "MutateFeedItemsResponse",
     "MutateFeedItemTargetResult",
     "MutateFeedItemTargetsRequest",
     "MutateFeedItemTargetsResponse",
+    "MutateFeedItemsRequest",
+    "MutateFeedItemsResponse",
     "MutateFeedMappingResult",
     "MutateFeedMappingsRequest",
     "MutateFeedMappingsResponse",
@@ -6159,8 +6031,8 @@ __all__ = [
     "MutateFeedsResponse",
     "MutateGoogleAdsRequest",
     "MutateGoogleAdsResponse",
-    "MutateJobErrorEnum",
     "MutateJob",
+    "MutateJobErrorEnum",
     "MutateJobResult",
     "MutateJobStatusEnum",
     "MutateKeywordPlanAdGroupResult",
@@ -6236,12 +6108,12 @@ __all__ = [
     "PolicyTopicConstraint",
     "PolicyTopicEntry",
     "PolicyTopicEntryTypeEnum",
+    "PolicyTopicEvidence",
     "PolicyTopicEvidenceDestinationMismatchUrlTypeEnum",
     "PolicyTopicEvidenceDestinationNotWorkingDeviceEnum",
     "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum",
-    "PolicyTopicEvidence",
-    "PolicyValidationParameterErrorEnum",
     "PolicyValidationParameter",
+    "PolicyValidationParameterErrorEnum",
     "PolicyViolationDetails",
     "PolicyViolationErrorEnum",
     "PolicyViolationKey",
@@ -6292,8 +6164,8 @@ __all__ = [
     "ReachPlanErrorEnum",
     "RealEstatePlaceholderFieldEnum",
     "RealTimeBiddingSetting",
-    "RecommendationErrorEnum",
     "Recommendation",
+    "RecommendationErrorEnum",
     "RecommendationTypeEnum",
     "RegionCodeErrorEnum",
     "RemarketingAction",
@@ -6318,11 +6190,11 @@ __all__ = [
     "Segments",
     "ServedAssetFieldTypeEnum",
     "SettingErrorEnum",
-    "SharedCriterionErrorEnum",
     "SharedCriterion",
+    "SharedCriterionErrorEnum",
     "SharedCriterionOperation",
-    "SharedSetErrorEnum",
     "SharedSet",
+    "SharedSetErrorEnum",
     "SharedSetOperation",
     "SharedSetStatusEnum",
     "SharedSetTypeEnum",
@@ -6353,13 +6225,13 @@ __all__ = [
     "TargetCpm",
     "TargetImpressionShare",
     "TargetImpressionShareLocationEnum",
-    "TargetingDimensionEnum",
-    "Targeting",
-    "TargetingSetting",
     "TargetOutrankShare",
     "TargetRestriction",
     "TargetRoas",
     "TargetSpend",
+    "Targeting",
+    "TargetingDimensionEnum",
+    "TargetingSetting",
     "TextAdInfo",
     "TextAsset",
     "TextLabel",
@@ -6384,6 +6256,7 @@ __all__ = [
     "UserInterest",
     "UserInterestInfo",
     "UserInterestTaxonomyTypeEnum",
+    "UserList",
     "UserListAccessStatusEnum",
     "UserListActionInfo",
     "UserListClosingReasonEnum",
@@ -6392,7 +6265,6 @@ __all__ = [
     "UserListDateRuleItemInfo",
     "UserListDateRuleItemOperatorEnum",
     "UserListErrorEnum",
-    "UserList",
     "UserListInfo",
     "UserListLogicalRuleInfo",
     "UserListLogicalRuleOperatorEnum",
@@ -6413,9 +6285,9 @@ __all__ = [
     "Value",
     "VanityPharmaDisplayUrlModeEnum",
     "VanityPharmaTextEnum",
+    "Video",
     "VideoAdInfo",
     "VideoBumperInStreamAdInfo",
-    "Video",
     "VideoNonSkippableInStreamAdInfo",
     "VideoOutstreamAdInfo",
     "VideoTrueViewInStreamAdInfo",
@@ -6424,8 +6296,8 @@ __all__ = [
     "WebpageConditionOperatorEnum",
     "WebpageInfo",
     "YouTubeChannelInfo",
-    "YoutubeVideoAsset",
     "YouTubeVideoInfo",
+    "YoutubeVideoAsset",
     "YoutubeVideoRegistrationErrorEnum",
     "CancelOperationRequest",
     "DeleteOperationRequest",
@@ -6434,7 +6306,6 @@ __all__ = [
     "ListOperationsResponse",
     "Operation",
     "OperationInfo",
-    "OperationsStub",
     "Any",
     "Empty",
     "FieldMask",
