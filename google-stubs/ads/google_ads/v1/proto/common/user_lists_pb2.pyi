@@ -508,7 +508,7 @@ class ExpressionRuleUserListInfo(google___protobuf___message___Message):
     @property
     def rule(self) -> global___UserListRuleInfo: ...
     def __init__(
-        self, *, rule: typing___Optional[global___UserListRuleInfo] = None
+        self, *, rule: typing___Optional[global___UserListRuleInfo] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod

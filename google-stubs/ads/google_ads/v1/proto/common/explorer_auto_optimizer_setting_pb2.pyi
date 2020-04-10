@@ -10,7 +10,10 @@ from google.protobuf.wrappers_pb2 import (
     BoolValue as google___protobuf___wrappers_pb2___BoolValue,
 )
 
-from typing import Optional as typing___Optional, Union as typing___Union
+from typing import (
+    Optional as typing___Optional,
+    Union as typing___Union,
+)
 
 from typing_extensions import Literal as typing_extensions___Literal
 

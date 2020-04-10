@@ -41,7 +41,7 @@ class GetFeedRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ...  # type: typing___Text
     def __init__(
-        self, *, resource_name: typing___Optional[typing___Text] = None
+        self, *, resource_name: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -220,7 +220,7 @@ class MutateFeedResult(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ...  # type: typing___Text
     def __init__(
-        self, *, resource_name: typing___Optional[typing___Text] = None
+        self, *, resource_name: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod

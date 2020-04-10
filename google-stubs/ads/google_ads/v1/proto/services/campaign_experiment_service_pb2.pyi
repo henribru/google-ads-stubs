@@ -41,7 +41,7 @@ class GetCampaignExperimentRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ...  # type: typing___Text
     def __init__(
-        self, *, resource_name: typing___Optional[typing___Text] = None
+        self, *, resource_name: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -219,7 +219,7 @@ class MutateCampaignExperimentResult(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ...  # type: typing___Text
     def __init__(
-        self, *, resource_name: typing___Optional[typing___Text] = None
+        self, *, resource_name: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -288,7 +288,7 @@ class CreateCampaignExperimentMetadata(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     campaign_experiment = ...  # type: typing___Text
     def __init__(
-        self, *, campaign_experiment: typing___Optional[typing___Text] = None
+        self, *, campaign_experiment: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -347,7 +347,7 @@ class GraduateCampaignExperimentResponse(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     graduated_campaign = ...  # type: typing___Text
     def __init__(
-        self, *, graduated_campaign: typing___Optional[typing___Text] = None
+        self, *, graduated_campaign: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -374,7 +374,7 @@ class PromoteCampaignExperimentRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     campaign_experiment = ...  # type: typing___Text
     def __init__(
-        self, *, campaign_experiment: typing___Optional[typing___Text] = None
+        self, *, campaign_experiment: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -399,7 +399,7 @@ class EndCampaignExperimentRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     campaign_experiment = ...  # type: typing___Text
     def __init__(
-        self, *, campaign_experiment: typing___Optional[typing___Text] = None
+        self, *, campaign_experiment: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod

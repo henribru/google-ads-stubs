@@ -51,7 +51,7 @@ class GetKeywordPlanRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ...  # type: typing___Text
     def __init__(
-        self, *, resource_name: typing___Optional[typing___Text] = None
+        self, *, resource_name: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -238,7 +238,7 @@ class MutateKeywordPlansResult(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     resource_name = ...  # type: typing___Text
     def __init__(
-        self, *, resource_name: typing___Optional[typing___Text] = None
+        self, *, resource_name: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -260,7 +260,7 @@ class GenerateForecastMetricsRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     keyword_plan = ...  # type: typing___Text
     def __init__(
-        self, *, keyword_plan: typing___Optional[typing___Text] = None
+        self, *, keyword_plan: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
@@ -552,7 +552,7 @@ class GenerateHistoricalMetricsRequest(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
     keyword_plan = ...  # type: typing___Text
     def __init__(
-        self, *, keyword_plan: typing___Optional[typing___Text] = None
+        self, *, keyword_plan: typing___Optional[typing___Text] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
         @classmethod
