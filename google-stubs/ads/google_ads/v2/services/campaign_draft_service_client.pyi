@@ -6,12 +6,24 @@ from google.api_core.operation import Operation  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
-from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
+from typing import (
+    Optional,
+    Dict,
+    Any,
+    List,
+    Sequence,
+    Tuple,
+    Union,
+    Callable,
+    ClassVar,
+    Iterable,
+)
 from google.ads.google_ads.v2.proto.resources.campaign_draft_pb2 import CampaignDraft
 from google.ads.google_ads.v2.proto.services.campaign_draft_service_pb2 import (
     CampaignDraftOperation,
     MutateCampaignDraftsResponse,
 )
+from google.ads.google_ads.v2.types import Status
 
 class CampaignDraftServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -73,4 +85,4 @@ class CampaignDraftServiceClient:
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ): ...
+    ) -> Iterable[Status]: ...
