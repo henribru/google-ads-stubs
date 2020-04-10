@@ -1,13 +1,14 @@
 import grpc  # type: ignore
 
-from .interceptor_mixin import InterceptorMixin
-from grpc import UnaryUnaryClientInterceptor
+from .interceptor import Interceptor
 from typing import Callable, TypeVar
 
 _Request = TypeVar("_Request")
 _Response = TypeVar("_Response")
 
-class ExceptionInterceptor(InterceptorMixin, UnaryUnaryClientInterceptor):
+class ExceptionInterceptor(
+    Interceptor, grpc.UnaryUnaryClientInterceptor, grpc.UnaryStreamClientInterceptor
+):
     def __init__(self, api_version: str) -> None: ...
     def intercept_unary_unary(
         self,

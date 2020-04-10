@@ -2,20 +2,27 @@ import logging
 
 import grpc  # type: ignore
 
-from .interceptor_mixin import InterceptorMixin
-from grpc import UnaryUnaryClientInterceptor
+from .interceptor import Interceptor
 from typing import Optional, Callable, TypeVar
 
 _Request = TypeVar("_Request")
 _Response = TypeVar("_Response")
 
-class LoggingInterceptor(InterceptorMixin, UnaryUnaryClientInterceptor):
+class LoggingInterceptor(
+    Interceptor, grpc.UnaryUnaryClientInterceptor, grpc.UnaryStreamClientInterceptor
+):
     endpoint: str = ...
     logger: logging.Logger = ...
     def __init__(
-        self, logger: logging.Logger, endpoint: Optional[str] = ...
+        self, logger: logging.Logger, api_version: str, endpoint: Optional[str] = ...
     ) -> None: ...
     def intercept_unary_unary(
+        self,
+        continuation: Callable[[grpc.ClientCallDetails, _Request], _Response],
+        client_call_details: grpc.ClientCallDetails,
+        request: _Request,
+    ) -> _Response: ...
+    def intercept_unary_stream(
         self,
         continuation: Callable[[grpc.ClientCallDetails, _Request], _Response],
         client_call_details: grpc.ClientCallDetails,

@@ -15,7 +15,7 @@ python = "^3.7"
 typing = "^3.7"
 typing-extensions = "^3.7"
 googleapis-common-protos-stubs = "^1.0"
-google-ads = "^4.1.1"
+google-ads = "^5.0.2"
 
 [tool.poetry.dev-dependencies]
 protobuf = "^3.11.2"
