@@ -1734,7 +1734,6 @@ class VideoServiceGrpcTransport(
 ): ...
 
 __all__ = [
-    "Types",
     "AccountBudgetProposalServiceClient",
     "AccountBudgetServiceClient",
     "AdGroupAdAssetViewServiceClient",
@@ -1841,7 +1840,6 @@ __all__ = [
     "UserListServiceClient",
     "UserLocationViewServiceClient",
     "VideoServiceClient",
-    "Enums",
     "AccountBudgetProposalServiceGrpcTransport",
     "AccountBudgetServiceGrpcTransport",
     "AdGroupAdAssetViewServiceGrpcTransport",
