@@ -90,6 +90,9 @@ class CampaignBudgetErrorEnum(google___protobuf___message___Message):
         NON_MULTIPLE_OF_MINIMUM_CURRENCY_UNIT = typing___cast(
             "CampaignBudgetErrorEnum.CampaignBudgetError", 16
         )
+        TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY = typing___cast(
+            "CampaignBudgetErrorEnum.CampaignBudgetError", 18
+        )
     UNSPECIFIED = typing___cast("CampaignBudgetErrorEnum.CampaignBudgetError", 0)
     UNKNOWN = typing___cast("CampaignBudgetErrorEnum.CampaignBudgetError", 1)
     CAMPAIGN_BUDGET_CANNOT_BE_SHARED = typing___cast(
@@ -134,6 +137,9 @@ class CampaignBudgetErrorEnum(google___protobuf___message___Message):
     )
     NON_MULTIPLE_OF_MINIMUM_CURRENCY_UNIT = typing___cast(
         "CampaignBudgetErrorEnum.CampaignBudgetError", 16
+    )
+    TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY = typing___cast(
+        "CampaignBudgetErrorEnum.CampaignBudgetError", 18
     )
     global___CampaignBudgetError = CampaignBudgetError
     def __init__(self,) -> None: ...

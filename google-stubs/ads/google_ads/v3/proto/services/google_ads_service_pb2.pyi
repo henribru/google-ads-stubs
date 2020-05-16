@@ -332,6 +332,10 @@ from google.ads.google_ads.v3.proto.resources.mutate_job_pb2 import (
     MutateJob as google___ads___googleads___v3___resources___mutate_job_pb2___MutateJob,
 )
 
+from google.ads.google_ads.v3.proto.resources.offline_user_data_job_pb2 import (
+    OfflineUserDataJob as google___ads___googleads___v3___resources___offline_user_data_job_pb2___OfflineUserDataJob,
+)
+
 from google.ads.google_ads.v3.proto.resources.operating_system_version_constant_pb2 import (
     OperatingSystemVersionConstant as google___ads___googleads___v3___resources___operating_system_version_constant_pb2___OperatingSystemVersionConstant,
 )
@@ -448,6 +452,11 @@ from google.ads.google_ads.v3.proto.services.ad_group_service_pb2 import (
 from google.ads.google_ads.v3.proto.services.ad_parameter_service_pb2 import (
     AdParameterOperation as google___ads___googleads___v3___services___ad_parameter_service_pb2___AdParameterOperation,
     MutateAdParameterResult as google___ads___googleads___v3___services___ad_parameter_service_pb2___MutateAdParameterResult,
+)
+
+from google.ads.google_ads.v3.proto.services.ad_service_pb2 import (
+    AdOperation as google___ads___googleads___v3___services___ad_service_pb2___AdOperation,
+    MutateAdResult as google___ads___googleads___v3___services___ad_service_pb2___MutateAdResult,
 )
 
 from google.ads.google_ads.v3.proto.services.asset_service_pb2 import (
@@ -1155,6 +1164,10 @@ class GoogleAdsRow(google___protobuf___message___Message):
         self,
     ) -> google___ads___googleads___v3___resources___mutate_job_pb2___MutateJob: ...
     @property
+    def offline_user_data_job(
+        self,
+    ) -> google___ads___googleads___v3___resources___offline_user_data_job_pb2___OfflineUserDataJob: ...
+    @property
     def operating_system_version_constant(
         self,
     ) -> google___ads___googleads___v3___resources___operating_system_version_constant_pb2___OperatingSystemVersionConstant: ...
@@ -1473,6 +1486,9 @@ class GoogleAdsRow(google___protobuf___message___Message):
         mutate_job: typing___Optional[
             google___ads___googleads___v3___resources___mutate_job_pb2___MutateJob
         ] = None,
+        offline_user_data_job: typing___Optional[
+            google___ads___googleads___v3___resources___offline_user_data_job_pb2___OfflineUserDataJob
+        ] = None,
         operating_system_version_constant: typing___Optional[
             google___ads___googleads___v3___resources___operating_system_version_constant_pb2___OperatingSystemVersionConstant
         ] = None,
@@ -1706,6 +1722,8 @@ class GoogleAdsRow(google___protobuf___message___Message):
             b"mobile_device_constant",
             "mutate_job",
             b"mutate_job",
+            "offline_user_data_job",
+            b"offline_user_data_job",
             "operating_system_version_constant",
             b"operating_system_version_constant",
             "paid_organic_search_term_view",
@@ -1909,6 +1927,8 @@ class GoogleAdsRow(google___protobuf___message___Message):
             b"mobile_device_constant",
             "mutate_job",
             b"mutate_job",
+            "offline_user_data_job",
+            b"offline_user_data_job",
             "operating_system_version_constant",
             b"operating_system_version_constant",
             "paid_organic_search_term_view",
@@ -2084,6 +2104,10 @@ class MutateOperation(google___protobuf___message___Message):
         self,
     ) -> google___ads___googleads___v3___services___ad_group_service_pb2___AdGroupOperation: ...
     @property
+    def ad_operation(
+        self,
+    ) -> google___ads___googleads___v3___services___ad_service_pb2___AdOperation: ...
+    @property
     def ad_parameter_operation(
         self,
     ) -> google___ads___googleads___v3___services___ad_parameter_service_pb2___AdParameterOperation: ...
@@ -2233,6 +2257,9 @@ class MutateOperation(google___protobuf___message___Message):
         ad_group_operation: typing___Optional[
             google___ads___googleads___v3___services___ad_group_service_pb2___AdGroupOperation
         ] = None,
+        ad_operation: typing___Optional[
+            google___ads___googleads___v3___services___ad_service_pb2___AdOperation
+        ] = None,
         ad_parameter_operation: typing___Optional[
             google___ads___googleads___v3___services___ad_parameter_service_pb2___AdParameterOperation
         ] = None,
@@ -2355,6 +2382,8 @@ class MutateOperation(google___protobuf___message___Message):
             b"ad_group_label_operation",
             "ad_group_operation",
             b"ad_group_operation",
+            "ad_operation",
+            b"ad_operation",
             "ad_parameter_operation",
             b"ad_parameter_operation",
             "asset_operation",
@@ -2440,6 +2469,8 @@ class MutateOperation(google___protobuf___message___Message):
             b"ad_group_label_operation",
             "ad_group_operation",
             b"ad_group_operation",
+            "ad_operation",
+            b"ad_operation",
             "ad_parameter_operation",
             b"ad_parameter_operation",
             "asset_operation",
@@ -2516,6 +2547,7 @@ class MutateOperation(google___protobuf___message___Message):
         "ad_group_feed_operation",
         "ad_group_label_operation",
         "ad_group_operation",
+        "ad_operation",
         "ad_parameter_operation",
         "asset_operation",
         "bidding_strategy_operation",
@@ -2592,6 +2624,10 @@ class MutateOperationResponse(google___protobuf___message___Message):
     def ad_parameter_result(
         self,
     ) -> google___ads___googleads___v3___services___ad_parameter_service_pb2___MutateAdParameterResult: ...
+    @property
+    def ad_result(
+        self,
+    ) -> google___ads___googleads___v3___services___ad_service_pb2___MutateAdResult: ...
     @property
     def asset_result(
         self,
@@ -2741,6 +2777,9 @@ class MutateOperationResponse(google___protobuf___message___Message):
         ad_parameter_result: typing___Optional[
             google___ads___googleads___v3___services___ad_parameter_service_pb2___MutateAdParameterResult
         ] = None,
+        ad_result: typing___Optional[
+            google___ads___googleads___v3___services___ad_service_pb2___MutateAdResult
+        ] = None,
         asset_result: typing___Optional[
             google___ads___googleads___v3___services___asset_service_pb2___MutateAssetResult
         ] = None,
@@ -2862,6 +2901,8 @@ class MutateOperationResponse(google___protobuf___message___Message):
             b"ad_group_result",
             "ad_parameter_result",
             b"ad_parameter_result",
+            "ad_result",
+            b"ad_result",
             "asset_result",
             b"asset_result",
             "bidding_strategy_result",
@@ -2947,6 +2988,8 @@ class MutateOperationResponse(google___protobuf___message___Message):
             b"ad_group_result",
             "ad_parameter_result",
             b"ad_parameter_result",
+            "ad_result",
+            b"ad_result",
             "asset_result",
             b"asset_result",
             "bidding_strategy_result",
@@ -3022,6 +3065,7 @@ class MutateOperationResponse(google___protobuf___message___Message):
         "ad_group_label_result",
         "ad_group_result",
         "ad_parameter_result",
+        "ad_result",
         "asset_result",
         "bidding_strategy_result",
         "campaign_bid_modifier_result",

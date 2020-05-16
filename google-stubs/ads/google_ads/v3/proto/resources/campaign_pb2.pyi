@@ -103,6 +103,7 @@ from google.protobuf.message import Message as google___protobuf___message___Mes
 
 from google.protobuf.wrappers_pb2 import (
     BoolValue as google___protobuf___wrappers_pb2___BoolValue,
+    DoubleValue as google___protobuf___wrappers_pb2___DoubleValue,
     Int32Value as google___protobuf___wrappers_pb2___Int32Value,
     Int64Value as google___protobuf___wrappers_pb2___Int64Value,
     StringValue as google___protobuf___wrappers_pb2___StringValue,
@@ -242,6 +243,59 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     global___HotelSettingInfo = HotelSettingInfo
+    class AppCampaignSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        bidding_strategy_goal_type = (
+            ...
+        )  # type: google___ads___googleads___v3___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
+        app_store = (
+            ...
+        )  # type: google___ads___googleads___v3___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStore
+        @property
+        def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
+        def __init__(
+            self,
+            *,
+            bidding_strategy_goal_type: typing___Optional[
+                google___ads___googleads___v3___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
+            ] = None,
+            app_id: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            app_store: typing___Optional[
+                google___ads___googleads___v3___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStore
+            ] = None,
+        ) -> None: ...
+        if sys.version_info >= (3,):
+            @classmethod
+            def FromString(cls, s: builtin___bytes) -> Campaign.AppCampaignSetting: ...
+        else:
+            @classmethod
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Campaign.AppCampaignSetting: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self, field_name: typing_extensions___Literal["app_id", b"app_id"]
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "app_id",
+                b"app_id",
+                "app_store",
+                b"app_store",
+                "bidding_strategy_goal_type",
+                b"bidding_strategy_goal_type",
+            ],
+        ) -> None: ...
+    global___AppCampaignSetting = AppCampaignSetting
     class DynamicSearchAdsSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -316,45 +370,6 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     global___DynamicSearchAdsSetting = DynamicSearchAdsSetting
-    class SelectiveOptimization(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def conversion_actions(
-            self,
-        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
-            google___protobuf___wrappers_pb2___StringValue
-        ]: ...
-        def __init__(
-            self,
-            *,
-            conversion_actions: typing___Optional[
-                typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
-            ] = None,
-        ) -> None: ...
-        if sys.version_info >= (3,):
-            @classmethod
-            def FromString(
-                cls, s: builtin___bytes
-            ) -> Campaign.SelectiveOptimization: ...
-        else:
-            @classmethod
-            def FromString(
-                cls,
-                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
-            ) -> Campaign.SelectiveOptimization: ...
-        def MergeFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def CopyFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "conversion_actions", b"conversion_actions"
-            ],
-        ) -> None: ...
-    global___SelectiveOptimization = SelectiveOptimization
     class ShoppingSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -548,59 +563,45 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     global___GeoTargetTypeSetting = GeoTargetTypeSetting
-    class AppCampaignSetting(google___protobuf___message___Message):
+    class SelectiveOptimization(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        bidding_strategy_goal_type = (
-            ...
-        )  # type: google___ads___googleads___v3___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
-        app_store = (
-            ...
-        )  # type: google___ads___googleads___v3___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStore
         @property
-        def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
+        def conversion_actions(
+            self,
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___protobuf___wrappers_pb2___StringValue
+        ]: ...
         def __init__(
             self,
             *,
-            bidding_strategy_goal_type: typing___Optional[
-                google___ads___googleads___v3___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
-            ] = None,
-            app_id: typing___Optional[
-                google___protobuf___wrappers_pb2___StringValue
-            ] = None,
-            app_store: typing___Optional[
-                google___ads___googleads___v3___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStore
+            conversion_actions: typing___Optional[
+                typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
             ] = None,
         ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
-            def FromString(cls, s: builtin___bytes) -> Campaign.AppCampaignSetting: ...
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Campaign.SelectiveOptimization: ...
         else:
             @classmethod
             def FromString(
                 cls,
                 s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
-            ) -> Campaign.AppCampaignSetting: ...
+            ) -> Campaign.SelectiveOptimization: ...
         def MergeFrom(
             self, other_msg: google___protobuf___message___Message
         ) -> None: ...
         def CopyFrom(
             self, other_msg: google___protobuf___message___Message
         ) -> None: ...
-        def HasField(
-            self, field_name: typing_extensions___Literal["app_id", b"app_id"]
-        ) -> builtin___bool: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                "app_id",
-                b"app_id",
-                "app_store",
-                b"app_store",
-                "bidding_strategy_goal_type",
-                b"bidding_strategy_goal_type",
+                "conversion_actions", b"conversion_actions"
             ],
         ) -> None: ...
-    global___AppCampaignSetting = AppCampaignSetting
+    global___SelectiveOptimization = SelectiveOptimization
 
     resource_name = ...  # type: typing___Text
     status = (
@@ -694,6 +695,8 @@ class Campaign(google___protobuf___message___Message):
     def selective_optimization(self) -> global___Campaign.SelectiveOptimization: ...
     @property
     def tracking_setting(self) -> global___Campaign.TrackingSetting: ...
+    @property
+    def optimization_score(self) -> google___protobuf___wrappers_pb2___DoubleValue: ...
     @property
     def bidding_strategy(self) -> google___protobuf___wrappers_pb2___StringValue: ...
     @property
@@ -831,6 +834,9 @@ class Campaign(google___protobuf___message___Message):
         payment_mode: typing___Optional[
             google___ads___googleads___v3___enums___payment_mode_pb2___PaymentModeEnum.PaymentMode
         ] = None,
+        optimization_score: typing___Optional[
+            google___protobuf___wrappers_pb2___DoubleValue
+        ] = None,
         bidding_strategy: typing___Optional[
             google___protobuf___wrappers_pb2___StringValue
         ] = None,
@@ -922,6 +928,8 @@ class Campaign(google___protobuf___message___Message):
             b"name",
             "network_settings",
             b"network_settings",
+            "optimization_score",
+            b"optimization_score",
             "percent_cpc",
             b"percent_cpc",
             "real_time_bidding_setting",
@@ -1007,6 +1015,8 @@ class Campaign(google___protobuf___message___Message):
             b"name",
             "network_settings",
             b"network_settings",
+            "optimization_score",
+            b"optimization_score",
             "payment_mode",
             b"payment_mode",
             "percent_cpc",

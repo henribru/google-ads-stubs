@@ -41,6 +41,10 @@ class PaymentsAccount(google___protobuf___message___Message):
     def secondary_payments_profile_id(
         self,
     ) -> google___protobuf___wrappers_pb2___StringValue: ...
+    @property
+    def paying_manager_customer(
+        self,
+    ) -> google___protobuf___wrappers_pb2___StringValue: ...
     def __init__(
         self,
         *,
@@ -56,6 +60,9 @@ class PaymentsAccount(google___protobuf___message___Message):
             google___protobuf___wrappers_pb2___StringValue
         ] = None,
         secondary_payments_profile_id: typing___Optional[
+            google___protobuf___wrappers_pb2___StringValue
+        ] = None,
+        paying_manager_customer: typing___Optional[
             google___protobuf___wrappers_pb2___StringValue
         ] = None,
     ) -> None: ...
@@ -76,6 +83,8 @@ class PaymentsAccount(google___protobuf___message___Message):
             b"currency_code",
             "name",
             b"name",
+            "paying_manager_customer",
+            b"paying_manager_customer",
             "payments_account_id",
             b"payments_account_id",
             "payments_profile_id",
@@ -91,6 +100,8 @@ class PaymentsAccount(google___protobuf___message___Message):
             b"currency_code",
             "name",
             b"name",
+            "paying_manager_customer",
+            b"paying_manager_customer",
             "payments_account_id",
             b"payments_account_id",
             "payments_profile_id",

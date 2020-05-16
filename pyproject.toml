@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "google-ads-stubs"
-version = "3.0.1"
+version = "3.1.0"
 license = "Apache-2.0"
 description = "Type stubs for google-ads"
 authors = ["Henrik Bruåsdal <henrik.bruasdal@gmail.com>"]
@@ -15,7 +15,7 @@ python = "^3.7"
 typing = "^3.7"
 typing-extensions = "^3.7"
 googleapis-common-protos-stubs = "^1.0"
-google-ads = "^5.0.3"
+google-ads = "^5.1.0"
 
 [tool.poetry.dev-dependencies]
 protobuf = "^3.11.2"

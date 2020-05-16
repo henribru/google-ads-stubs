@@ -91,6 +91,9 @@ class BillingSetupErrorEnum(google___protobuf___message___Message):
         CUSTOMER_NEEDS_INTERNAL_APPROVAL = typing___cast(
             "BillingSetupErrorEnum.BillingSetupError", 17
         )
+        PAYMENTS_ACCOUNT_INELIGIBLE_CURRENCY_CODE_MISMATCH = typing___cast(
+            "BillingSetupErrorEnum.BillingSetupError", 19
+        )
     UNSPECIFIED = typing___cast("BillingSetupErrorEnum.BillingSetupError", 0)
     UNKNOWN = typing___cast("BillingSetupErrorEnum.BillingSetupError", 1)
     CANNOT_USE_EXISTING_AND_NEW_ACCOUNT = typing___cast(
@@ -138,6 +141,9 @@ class BillingSetupErrorEnum(google___protobuf___message___Message):
     )
     CUSTOMER_NEEDS_INTERNAL_APPROVAL = typing___cast(
         "BillingSetupErrorEnum.BillingSetupError", 17
+    )
+    PAYMENTS_ACCOUNT_INELIGIBLE_CURRENCY_CODE_MISMATCH = typing___cast(
+        "BillingSetupErrorEnum.BillingSetupError", 19
     )
     global___BillingSetupError = BillingSetupError
     def __init__(self,) -> None: ...

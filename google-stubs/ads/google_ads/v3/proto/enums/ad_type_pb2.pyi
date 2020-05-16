@@ -58,6 +58,7 @@ class AdTypeEnum(google___protobuf___message___Message):
         DYNAMIC_HTML5_AD = typing___cast("AdTypeEnum.AdType", 22)
         APP_ENGAGEMENT_AD = typing___cast("AdTypeEnum.AdType", 23)
         SHOPPING_COMPARISON_LISTING_AD = typing___cast("AdTypeEnum.AdType", 24)
+        VIDEO_RESPONSIVE_AD = typing___cast("AdTypeEnum.AdType", 30)
     UNSPECIFIED = typing___cast("AdTypeEnum.AdType", 0)
     UNKNOWN = typing___cast("AdTypeEnum.AdType", 1)
     TEXT_AD = typing___cast("AdTypeEnum.AdType", 2)
@@ -79,6 +80,7 @@ class AdTypeEnum(google___protobuf___message___Message):
     DYNAMIC_HTML5_AD = typing___cast("AdTypeEnum.AdType", 22)
     APP_ENGAGEMENT_AD = typing___cast("AdTypeEnum.AdType", 23)
     SHOPPING_COMPARISON_LISTING_AD = typing___cast("AdTypeEnum.AdType", 24)
+    VIDEO_RESPONSIVE_AD = typing___cast("AdTypeEnum.AdType", 30)
     global___AdType = AdType
     def __init__(self,) -> None: ...
     if sys.version_info >= (3,):

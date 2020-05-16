@@ -370,27 +370,6 @@ class Recommendation(google___protobuf___message___Message):
             ],
         ) -> None: ...
     global___KeywordRecommendation = KeywordRecommendation
-    class SearchPartnersOptInRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        def __init__(self,) -> None: ...
-        if sys.version_info >= (3,):
-            @classmethod
-            def FromString(
-                cls, s: builtin___bytes
-            ) -> Recommendation.SearchPartnersOptInRecommendation: ...
-        else:
-            @classmethod
-            def FromString(
-                cls,
-                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
-            ) -> Recommendation.SearchPartnersOptInRecommendation: ...
-        def MergeFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def CopyFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-    global___SearchPartnersOptInRecommendation = SearchPartnersOptInRecommendation
     class TextAdRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -452,96 +431,6 @@ class Recommendation(google___protobuf___message___Message):
             ],
         ) -> None: ...
     global___TextAdRecommendation = TextAdRecommendation
-    class CallExtensionRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def recommended_extensions(
-            self,
-        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
-            google___ads___googleads___v3___common___extensions_pb2___CallFeedItem
-        ]: ...
-        def __init__(
-            self,
-            *,
-            recommended_extensions: typing___Optional[
-                typing___Iterable[
-                    google___ads___googleads___v3___common___extensions_pb2___CallFeedItem
-                ]
-            ] = None,
-        ) -> None: ...
-        if sys.version_info >= (3,):
-            @classmethod
-            def FromString(
-                cls, s: builtin___bytes
-            ) -> Recommendation.CallExtensionRecommendation: ...
-        else:
-            @classmethod
-            def FromString(
-                cls,
-                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
-            ) -> Recommendation.CallExtensionRecommendation: ...
-        def MergeFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def CopyFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_extensions", b"recommended_extensions"
-            ],
-        ) -> None: ...
-    global___CallExtensionRecommendation = CallExtensionRecommendation
-    class KeywordMatchTypeRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        recommended_match_type = (
-            ...
-        )  # type: google___ads___googleads___v3___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
-        @property
-        def keyword(
-            self,
-        ) -> google___ads___googleads___v3___common___criteria_pb2___KeywordInfo: ...
-        def __init__(
-            self,
-            *,
-            keyword: typing___Optional[
-                google___ads___googleads___v3___common___criteria_pb2___KeywordInfo
-            ] = None,
-            recommended_match_type: typing___Optional[
-                google___ads___googleads___v3___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
-            ] = None,
-        ) -> None: ...
-        if sys.version_info >= (3,):
-            @classmethod
-            def FromString(
-                cls, s: builtin___bytes
-            ) -> Recommendation.KeywordMatchTypeRecommendation: ...
-        else:
-            @classmethod
-            def FromString(
-                cls,
-                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
-            ) -> Recommendation.KeywordMatchTypeRecommendation: ...
-        def MergeFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def CopyFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def HasField(
-            self, field_name: typing_extensions___Literal["keyword", b"keyword"]
-        ) -> builtin___bool: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "keyword",
-                b"keyword",
-                "recommended_match_type",
-                b"recommended_match_type",
-            ],
-        ) -> None: ...
-    global___KeywordMatchTypeRecommendation = KeywordMatchTypeRecommendation
     class TargetCpaOptInRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         class TargetCpaOptInRecommendationOption(google___protobuf___message___Message):
@@ -719,6 +608,90 @@ class Recommendation(google___protobuf___message___Message):
     global___MaximizeConversionsOptInRecommendation = (
         MaximizeConversionsOptInRecommendation
     )
+    class MaximizeClicksOptInRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def recommended_budget_amount_micros(
+            self,
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        def __init__(
+            self,
+            *,
+            recommended_budget_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+        ) -> None: ...
+        if sys.version_info >= (3,):
+            @classmethod
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.MaximizeClicksOptInRecommendation: ...
+        else:
+            @classmethod
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.MaximizeClicksOptInRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> None: ...
+    global___MaximizeClicksOptInRecommendation = MaximizeClicksOptInRecommendation
+    class CalloutExtensionRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def recommended_extensions(
+            self,
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___ads___googleads___v3___common___extensions_pb2___CalloutFeedItem
+        ]: ...
+        def __init__(
+            self,
+            *,
+            recommended_extensions: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v3___common___extensions_pb2___CalloutFeedItem
+                ]
+            ] = None,
+        ) -> None: ...
+        if sys.version_info >= (3,):
+            @classmethod
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.CalloutExtensionRecommendation: ...
+        else:
+            @classmethod
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.CalloutExtensionRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_extensions", b"recommended_extensions"
+            ],
+        ) -> None: ...
+    global___CalloutExtensionRecommendation = CalloutExtensionRecommendation
     class MoveUnusedBudgetRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -796,30 +769,36 @@ class Recommendation(google___protobuf___message___Message):
             self, other_msg: google___protobuf___message___Message
         ) -> None: ...
     global___EnhancedCpcOptInRecommendation = EnhancedCpcOptInRecommendation
-    class MaximizeClicksOptInRecommendation(google___protobuf___message___Message):
+    class KeywordMatchTypeRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        recommended_match_type = (
+            ...
+        )  # type: google___ads___googleads___v3___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
         @property
-        def recommended_budget_amount_micros(
+        def keyword(
             self,
-        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        ) -> google___ads___googleads___v3___common___criteria_pb2___KeywordInfo: ...
         def __init__(
             self,
             *,
-            recommended_budget_amount_micros: typing___Optional[
-                google___protobuf___wrappers_pb2___Int64Value
+            keyword: typing___Optional[
+                google___ads___googleads___v3___common___criteria_pb2___KeywordInfo
+            ] = None,
+            recommended_match_type: typing___Optional[
+                google___ads___googleads___v3___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchType
             ] = None,
         ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
             def FromString(
                 cls, s: builtin___bytes
-            ) -> Recommendation.MaximizeClicksOptInRecommendation: ...
+            ) -> Recommendation.KeywordMatchTypeRecommendation: ...
         else:
             @classmethod
             def FromString(
                 cls,
                 s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
-            ) -> Recommendation.MaximizeClicksOptInRecommendation: ...
+            ) -> Recommendation.KeywordMatchTypeRecommendation: ...
         def MergeFrom(
             self, other_msg: google___protobuf___message___Message
         ) -> None: ...
@@ -827,18 +806,80 @@ class Recommendation(google___protobuf___message___Message):
             self, other_msg: google___protobuf___message___Message
         ) -> None: ...
         def HasField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
-            ],
+            self, field_name: typing_extensions___Literal["keyword", b"keyword"]
         ) -> builtin___bool: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+                "keyword",
+                b"keyword",
+                "recommended_match_type",
+                b"recommended_match_type",
             ],
         ) -> None: ...
-    global___MaximizeClicksOptInRecommendation = MaximizeClicksOptInRecommendation
+    global___KeywordMatchTypeRecommendation = KeywordMatchTypeRecommendation
+    class SearchPartnersOptInRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        def __init__(self,) -> None: ...
+        if sys.version_info >= (3,):
+            @classmethod
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.SearchPartnersOptInRecommendation: ...
+        else:
+            @classmethod
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.SearchPartnersOptInRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+    global___SearchPartnersOptInRecommendation = SearchPartnersOptInRecommendation
+    class CallExtensionRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def recommended_extensions(
+            self,
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___ads___googleads___v3___common___extensions_pb2___CallFeedItem
+        ]: ...
+        def __init__(
+            self,
+            *,
+            recommended_extensions: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v3___common___extensions_pb2___CallFeedItem
+                ]
+            ] = None,
+        ) -> None: ...
+        if sys.version_info >= (3,):
+            @classmethod
+            def FromString(
+                cls, s: builtin___bytes
+            ) -> Recommendation.CallExtensionRecommendation: ...
+        else:
+            @classmethod
+            def FromString(
+                cls,
+                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
+            ) -> Recommendation.CallExtensionRecommendation: ...
+        def MergeFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def CopyFrom(
+            self, other_msg: google___protobuf___message___Message
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_extensions", b"recommended_extensions"
+            ],
+        ) -> None: ...
+    global___CallExtensionRecommendation = CallExtensionRecommendation
     class OptimizeAdRotationRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         def __init__(self,) -> None: ...
@@ -860,47 +901,6 @@ class Recommendation(google___protobuf___message___Message):
             self, other_msg: google___protobuf___message___Message
         ) -> None: ...
     global___OptimizeAdRotationRecommendation = OptimizeAdRotationRecommendation
-    class CalloutExtensionRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def recommended_extensions(
-            self,
-        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
-            google___ads___googleads___v3___common___extensions_pb2___CalloutFeedItem
-        ]: ...
-        def __init__(
-            self,
-            *,
-            recommended_extensions: typing___Optional[
-                typing___Iterable[
-                    google___ads___googleads___v3___common___extensions_pb2___CalloutFeedItem
-                ]
-            ] = None,
-        ) -> None: ...
-        if sys.version_info >= (3,):
-            @classmethod
-            def FromString(
-                cls, s: builtin___bytes
-            ) -> Recommendation.CalloutExtensionRecommendation: ...
-        else:
-            @classmethod
-            def FromString(
-                cls,
-                s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode],
-            ) -> Recommendation.CalloutExtensionRecommendation: ...
-        def MergeFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def CopyFrom(
-            self, other_msg: google___protobuf___message___Message
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_extensions", b"recommended_extensions"
-            ],
-        ) -> None: ...
-    global___CalloutExtensionRecommendation = CalloutExtensionRecommendation
     class SitelinkExtensionRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property

@@ -285,6 +285,24 @@ class CriterionErrorEnum(google___protobuf___message___Message):
         CANNOT_TARGET_USER_LIST_FOR_SMART_DISPLAY_CAMPAIGNS = typing___cast(
             "CriterionErrorEnum.CriterionError", 99
         )
+        LISTING_SCOPE_TOO_MANY_DIMENSION_TYPES = typing___cast(
+            "CriterionErrorEnum.CriterionError", 100
+        )
+        LISTING_SCOPE_TOO_MANY_IN_OPERATORS = typing___cast(
+            "CriterionErrorEnum.CriterionError", 101
+        )
+        LISTING_SCOPE_IN_OPERATOR_NOT_SUPPORTED = typing___cast(
+            "CriterionErrorEnum.CriterionError", 102
+        )
+        DUPLICATE_LISTING_DIMENSION_TYPE = typing___cast(
+            "CriterionErrorEnum.CriterionError", 103
+        )
+        DUPLICATE_LISTING_DIMENSION_VALUE = typing___cast(
+            "CriterionErrorEnum.CriterionError", 104
+        )
+        CANNOT_SET_BIDS_ON_LISTING_GROUP_SUBDIVISION = typing___cast(
+            "CriterionErrorEnum.CriterionError", 105
+        )
     UNSPECIFIED = typing___cast("CriterionErrorEnum.CriterionError", 0)
     UNKNOWN = typing___cast("CriterionErrorEnum.CriterionError", 1)
     CONCRETE_TYPE_REQUIRED = typing___cast("CriterionErrorEnum.CriterionError", 2)
@@ -484,6 +502,24 @@ class CriterionErrorEnum(google___protobuf___message___Message):
     )
     CANNOT_TARGET_USER_LIST_FOR_SMART_DISPLAY_CAMPAIGNS = typing___cast(
         "CriterionErrorEnum.CriterionError", 99
+    )
+    LISTING_SCOPE_TOO_MANY_DIMENSION_TYPES = typing___cast(
+        "CriterionErrorEnum.CriterionError", 100
+    )
+    LISTING_SCOPE_TOO_MANY_IN_OPERATORS = typing___cast(
+        "CriterionErrorEnum.CriterionError", 101
+    )
+    LISTING_SCOPE_IN_OPERATOR_NOT_SUPPORTED = typing___cast(
+        "CriterionErrorEnum.CriterionError", 102
+    )
+    DUPLICATE_LISTING_DIMENSION_TYPE = typing___cast(
+        "CriterionErrorEnum.CriterionError", 103
+    )
+    DUPLICATE_LISTING_DIMENSION_VALUE = typing___cast(
+        "CriterionErrorEnum.CriterionError", 104
+    )
+    CANNOT_SET_BIDS_ON_LISTING_GROUP_SUBDIVISION = typing___cast(
+        "CriterionErrorEnum.CriterionError", 105
     )
     global___CriterionError = CriterionError
     def __init__(self,) -> None: ...

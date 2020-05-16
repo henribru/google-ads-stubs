@@ -47,6 +47,10 @@ class MutateErrorEnum(google___protobuf___message___Message):
         MUTATE_NOT_ALLOWED = typing___cast("MutateErrorEnum.MutateError", 9)
         RESOURCE_NOT_IN_GOOGLE_ADS = typing___cast("MutateErrorEnum.MutateError", 10)
         RESOURCE_ALREADY_EXISTS = typing___cast("MutateErrorEnum.MutateError", 11)
+        RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY = typing___cast(
+            "MutateErrorEnum.MutateError", 12
+        )
+        RESOURCE_READ_ONLY = typing___cast("MutateErrorEnum.MutateError", 13)
     UNSPECIFIED = typing___cast("MutateErrorEnum.MutateError", 0)
     UNKNOWN = typing___cast("MutateErrorEnum.MutateError", 1)
     RESOURCE_NOT_FOUND = typing___cast("MutateErrorEnum.MutateError", 3)
@@ -55,6 +59,10 @@ class MutateErrorEnum(google___protobuf___message___Message):
     MUTATE_NOT_ALLOWED = typing___cast("MutateErrorEnum.MutateError", 9)
     RESOURCE_NOT_IN_GOOGLE_ADS = typing___cast("MutateErrorEnum.MutateError", 10)
     RESOURCE_ALREADY_EXISTS = typing___cast("MutateErrorEnum.MutateError", 11)
+    RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY = typing___cast(
+        "MutateErrorEnum.MutateError", 12
+    )
+    RESOURCE_READ_ONLY = typing___cast("MutateErrorEnum.MutateError", 13)
     global___MutateError = MutateError
     def __init__(self,) -> None: ...
     if sys.version_info >= (3,):

@@ -67,6 +67,48 @@ class ConversionActionCategoryEnum(google___protobuf___message___Message):
         DOWNLOAD = typing___cast(
             "ConversionActionCategoryEnum.ConversionActionCategory", 7
         )
+        ADD_TO_CART = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 8
+        )
+        BEGIN_CHECKOUT = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 9
+        )
+        SUBSCRIBE_PAID = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 10
+        )
+        PHONE_CALL_LEAD = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 11
+        )
+        IMPORTED_LEAD = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 12
+        )
+        SUBMIT_LEAD_FORM = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 13
+        )
+        BOOK_APPOINTMENT = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 14
+        )
+        REQUEST_QUOTE = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 15
+        )
+        GET_DIRECTIONS = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 16
+        )
+        OUTBOUND_CLICK = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 17
+        )
+        CONTACT = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 18
+        )
+        ENGAGEMENT = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 19
+        )
+        STORE_VISIT = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 20
+        )
+        STORE_SALE = typing___cast(
+            "ConversionActionCategoryEnum.ConversionActionCategory", 21
+        )
     UNSPECIFIED = typing___cast(
         "ConversionActionCategoryEnum.ConversionActionCategory", 0
     )
@@ -79,6 +121,46 @@ class ConversionActionCategoryEnum(google___protobuf___message___Message):
     SIGNUP = typing___cast("ConversionActionCategoryEnum.ConversionActionCategory", 5)
     LEAD = typing___cast("ConversionActionCategoryEnum.ConversionActionCategory", 6)
     DOWNLOAD = typing___cast("ConversionActionCategoryEnum.ConversionActionCategory", 7)
+    ADD_TO_CART = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 8
+    )
+    BEGIN_CHECKOUT = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 9
+    )
+    SUBSCRIBE_PAID = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 10
+    )
+    PHONE_CALL_LEAD = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 11
+    )
+    IMPORTED_LEAD = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 12
+    )
+    SUBMIT_LEAD_FORM = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 13
+    )
+    BOOK_APPOINTMENT = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 14
+    )
+    REQUEST_QUOTE = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 15
+    )
+    GET_DIRECTIONS = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 16
+    )
+    OUTBOUND_CLICK = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 17
+    )
+    CONTACT = typing___cast("ConversionActionCategoryEnum.ConversionActionCategory", 18)
+    ENGAGEMENT = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 19
+    )
+    STORE_VISIT = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 20
+    )
+    STORE_SALE = typing___cast(
+        "ConversionActionCategoryEnum.ConversionActionCategory", 21
+    )
     global___ConversionActionCategory = ConversionActionCategory
     def __init__(self,) -> None: ...
     if sys.version_info >= (3,):

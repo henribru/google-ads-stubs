@@ -61,6 +61,10 @@ from google.ads.google_ads.v3.proto.errors.asset_error_pb2 import (
     AssetErrorEnum as google___ads___googleads___v3___errors___asset_error_pb2___AssetErrorEnum,
 )
 
+from google.ads.google_ads.v3.proto.errors.asset_link_error_pb2 import (
+    AssetLinkErrorEnum as google___ads___googleads___v3___errors___asset_link_error_pb2___AssetLinkErrorEnum,
+)
+
 from google.ads.google_ads.v3.proto.errors.authentication_error_pb2 import (
     AuthenticationErrorEnum as google___ads___googleads___v3___errors___authentication_error_pb2___AuthenticationErrorEnum,
 )
@@ -337,6 +341,10 @@ from google.ads.google_ads.v3.proto.errors.null_error_pb2 import (
     NullErrorEnum as google___ads___googleads___v3___errors___null_error_pb2___NullErrorEnum,
 )
 
+from google.ads.google_ads.v3.proto.errors.offline_user_data_job_error_pb2 import (
+    OfflineUserDataJobErrorEnum as google___ads___googleads___v3___errors___offline_user_data_job_error_pb2___OfflineUserDataJobErrorEnum,
+)
+
 from google.ads.google_ads.v3.proto.errors.operation_access_denied_error_pb2 import (
     OperationAccessDeniedErrorEnum as google___ads___googleads___v3___errors___operation_access_denied_error_pb2___OperationAccessDeniedErrorEnum,
 )
@@ -431,6 +439,10 @@ from google.ads.google_ads.v3.proto.errors.time_zone_error_pb2 import (
 
 from google.ads.google_ads.v3.proto.errors.url_field_error_pb2 import (
     UrlFieldErrorEnum as google___ads___googleads___v3___errors___url_field_error_pb2___UrlFieldErrorEnum,
+)
+
+from google.ads.google_ads.v3.proto.errors.user_data_error_pb2 import (
+    UserDataErrorEnum as google___ads___googleads___v3___errors___user_data_error_pb2___UserDataErrorEnum,
 )
 
 from google.ads.google_ads.v3.proto.errors.user_list_error_pb2 import (
@@ -866,6 +878,9 @@ class ErrorCode(google___protobuf___message___Message):
     size_limit_error = (
         ...
     )  # type: google___ads___googleads___v3___errors___size_limit_error_pb2___SizeLimitErrorEnum.SizeLimitError
+    offline_user_data_job_error = (
+        ...
+    )  # type: google___ads___googleads___v3___errors___offline_user_data_job_error_pb2___OfflineUserDataJobErrorEnum.OfflineUserDataJobError
     not_whitelisted_error = (
         ...
     )  # type: google___ads___googleads___v3___errors___not_whitelisted_error_pb2___NotWhitelistedErrorEnum.NotWhitelistedError
@@ -890,6 +905,12 @@ class ErrorCode(google___protobuf___message___Message):
     time_zone_error = (
         ...
     )  # type: google___ads___googleads___v3___errors___time_zone_error_pb2___TimeZoneErrorEnum.TimeZoneError
+    asset_link_error = (
+        ...
+    )  # type: google___ads___googleads___v3___errors___asset_link_error_pb2___AssetLinkErrorEnum.AssetLinkError
+    user_data_error = (
+        ...
+    )  # type: google___ads___googleads___v3___errors___user_data_error_pb2___UserDataErrorEnum.UserDataError
     def __init__(
         self,
         *,
@@ -1193,6 +1214,9 @@ class ErrorCode(google___protobuf___message___Message):
         size_limit_error: typing___Optional[
             google___ads___googleads___v3___errors___size_limit_error_pb2___SizeLimitErrorEnum.SizeLimitError
         ] = None,
+        offline_user_data_job_error: typing___Optional[
+            google___ads___googleads___v3___errors___offline_user_data_job_error_pb2___OfflineUserDataJobErrorEnum.OfflineUserDataJobError
+        ] = None,
         not_whitelisted_error: typing___Optional[
             google___ads___googleads___v3___errors___not_whitelisted_error_pb2___NotWhitelistedErrorEnum.NotWhitelistedError
         ] = None,
@@ -1216,6 +1240,12 @@ class ErrorCode(google___protobuf___message___Message):
         ] = None,
         time_zone_error: typing___Optional[
             google___ads___googleads___v3___errors___time_zone_error_pb2___TimeZoneErrorEnum.TimeZoneError
+        ] = None,
+        asset_link_error: typing___Optional[
+            google___ads___googleads___v3___errors___asset_link_error_pb2___AssetLinkErrorEnum.AssetLinkError
+        ] = None,
+        user_data_error: typing___Optional[
+            google___ads___googleads___v3___errors___user_data_error_pb2___UserDataErrorEnum.UserDataError
         ] = None,
     ) -> None: ...
     if sys.version_info >= (3,):
@@ -1257,6 +1287,8 @@ class ErrorCode(google___protobuf___message___Message):
             b"adx_error",
             "asset_error",
             b"asset_error",
+            "asset_link_error",
+            b"asset_link_error",
             "authentication_error",
             b"authentication_error",
             "authorization_error",
@@ -1397,6 +1429,8 @@ class ErrorCode(google___protobuf___message___Message):
             b"not_whitelisted_error",
             "null_error",
             b"null_error",
+            "offline_user_data_job_error",
+            b"offline_user_data_job_error",
             "operation_access_denied_error",
             b"operation_access_denied_error",
             "operator_error",
@@ -1445,6 +1479,8 @@ class ErrorCode(google___protobuf___message___Message):
             b"time_zone_error",
             "url_field_error",
             b"url_field_error",
+            "user_data_error",
+            b"user_data_error",
             "user_list_error",
             b"user_list_error",
             "youtube_video_registration_error",
@@ -1480,6 +1516,8 @@ class ErrorCode(google___protobuf___message___Message):
             b"adx_error",
             "asset_error",
             b"asset_error",
+            "asset_link_error",
+            b"asset_link_error",
             "authentication_error",
             b"authentication_error",
             "authorization_error",
@@ -1620,6 +1658,8 @@ class ErrorCode(google___protobuf___message___Message):
             b"not_whitelisted_error",
             "null_error",
             b"null_error",
+            "offline_user_data_job_error",
+            b"offline_user_data_job_error",
             "operation_access_denied_error",
             b"operation_access_denied_error",
             "operator_error",
@@ -1668,6 +1708,8 @@ class ErrorCode(google___protobuf___message___Message):
             b"time_zone_error",
             "url_field_error",
             b"url_field_error",
+            "user_data_error",
+            b"user_data_error",
             "user_list_error",
             b"user_list_error",
             "youtube_video_registration_error",
@@ -1777,6 +1819,7 @@ class ErrorCode(google___protobuf___message___Message):
         "partial_failure_error",
         "policy_validation_parameter_error",
         "size_limit_error",
+        "offline_user_data_job_error",
         "not_whitelisted_error",
         "manager_link_error",
         "currency_code_error",
@@ -1785,6 +1828,8 @@ class ErrorCode(google___protobuf___message___Message):
         "invoice_error",
         "payments_account_error",
         "time_zone_error",
+        "asset_link_error",
+        "user_data_error",
     ]: ...
 
 global___ErrorCode = ErrorCode

@@ -67,6 +67,9 @@ class AdGroupErrorEnum(google___protobuf___message___Message):
         CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING = typing___cast(
             "AdGroupErrorEnum.AdGroupError", 14
         )
+        PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER = typing___cast(
+            "AdGroupErrorEnum.AdGroupError", 15
+        )
     UNSPECIFIED = typing___cast("AdGroupErrorEnum.AdGroupError", 0)
     UNKNOWN = typing___cast("AdGroupErrorEnum.AdGroupError", 1)
     DUPLICATE_ADGROUP_NAME = typing___cast("AdGroupErrorEnum.AdGroupError", 2)
@@ -92,6 +95,9 @@ class AdGroupErrorEnum(google___protobuf___message___Message):
     )
     CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING = typing___cast(
         "AdGroupErrorEnum.AdGroupError", 14
+    )
+    PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER = typing___cast(
+        "AdGroupErrorEnum.AdGroupError", 15
     )
     global___AdGroupError = AdGroupError
     def __init__(self,) -> None: ...

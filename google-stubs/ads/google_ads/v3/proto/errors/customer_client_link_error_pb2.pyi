@@ -72,6 +72,9 @@ class CustomerClientLinkErrorEnum(google___protobuf___message___Message):
         CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER = typing___cast(
             "CustomerClientLinkErrorEnum.CustomerClientLinkError", 8
         )
+        CLIENT_HAS_TOO_MANY_MANAGERS = typing___cast(
+            "CustomerClientLinkErrorEnum.CustomerClientLinkError", 9
+        )
     UNSPECIFIED = typing___cast(
         "CustomerClientLinkErrorEnum.CustomerClientLinkError", 0
     )
@@ -96,6 +99,9 @@ class CustomerClientLinkErrorEnum(google___protobuf___message___Message):
     )
     CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER = typing___cast(
         "CustomerClientLinkErrorEnum.CustomerClientLinkError", 8
+    )
+    CLIENT_HAS_TOO_MANY_MANAGERS = typing___cast(
+        "CustomerClientLinkErrorEnum.CustomerClientLinkError", 9
     )
     global___CustomerClientLinkError = CustomerClientLinkError
     def __init__(self,) -> None: ...

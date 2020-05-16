@@ -56,6 +56,7 @@ class AdGroupTypeEnum(google___protobuf___message___Message):
             "AdGroupTypeEnum.AdGroupType", 14
         )
         PROMOTED_HOTEL_ADS = typing___cast("AdGroupTypeEnum.AdGroupType", 15)
+        VIDEO_RESPONSIVE = typing___cast("AdGroupTypeEnum.AdGroupType", 16)
     UNSPECIFIED = typing___cast("AdGroupTypeEnum.AdGroupType", 0)
     UNKNOWN = typing___cast("AdGroupTypeEnum.AdGroupType", 1)
     SEARCH_STANDARD = typing___cast("AdGroupTypeEnum.AdGroupType", 2)
@@ -71,6 +72,7 @@ class AdGroupTypeEnum(google___protobuf___message___Message):
     SEARCH_DYNAMIC_ADS = typing___cast("AdGroupTypeEnum.AdGroupType", 13)
     SHOPPING_COMPARISON_LISTING_ADS = typing___cast("AdGroupTypeEnum.AdGroupType", 14)
     PROMOTED_HOTEL_ADS = typing___cast("AdGroupTypeEnum.AdGroupType", 15)
+    VIDEO_RESPONSIVE = typing___cast("AdGroupTypeEnum.AdGroupType", 16)
     global___AdGroupType = AdGroupType
     def __init__(self,) -> None: ...
     if sys.version_info >= (3,):

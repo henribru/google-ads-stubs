@@ -216,6 +216,20 @@ from google.ads.google_ads.v3.proto.common import metrics_pb2 as metrics_pb2
 MetricsPb2 = metrics_pb2
 Metrics = metrics_pb2.Metrics
 
+from google.ads.google_ads.v3.proto.common import (
+    offline_user_data_pb2 as offline_user_data_pb2,
+)
+
+OfflineUserDataPb2 = offline_user_data_pb2
+CustomerMatchUserListMetadata = offline_user_data_pb2.CustomerMatchUserListMetadata
+OfflineUserAddressInfo = offline_user_data_pb2.OfflineUserAddressInfo
+StoreAttribute = offline_user_data_pb2.StoreAttribute
+StoreSalesMetadata = offline_user_data_pb2.StoreSalesMetadata
+StoreSalesThirdPartyMetadata = offline_user_data_pb2.StoreSalesThirdPartyMetadata
+TransactionAttribute = offline_user_data_pb2.TransactionAttribute
+UserData = offline_user_data_pb2.UserData
+UserIdentifier = offline_user_data_pb2.UserIdentifier
+
 from google.ads.google_ads.v3.proto.common import policy_pb2 as policy_pb2
 
 PolicyPb2 = policy_pb2
@@ -1333,6 +1347,31 @@ NegativeGeoTargetTypePb2 = negative_geo_target_type_pb2
 NegativeGeoTargetTypeEnum = negative_geo_target_type_pb2.NegativeGeoTargetTypeEnum
 
 from google.ads.google_ads.v3.proto.enums import (
+    offline_user_data_job_failure_reason_pb2 as offline_user_data_job_failure_reason_pb2,
+)
+
+OfflineUserDataJobFailureReasonPb2 = offline_user_data_job_failure_reason_pb2
+OfflineUserDataJobFailureReasonEnum = (
+    offline_user_data_job_failure_reason_pb2.OfflineUserDataJobFailureReasonEnum
+)
+
+from google.ads.google_ads.v3.proto.enums import (
+    offline_user_data_job_status_pb2 as offline_user_data_job_status_pb2,
+)
+
+OfflineUserDataJobStatusPb2 = offline_user_data_job_status_pb2
+OfflineUserDataJobStatusEnum = (
+    offline_user_data_job_status_pb2.OfflineUserDataJobStatusEnum
+)
+
+from google.ads.google_ads.v3.proto.enums import (
+    offline_user_data_job_type_pb2 as offline_user_data_job_type_pb2,
+)
+
+OfflineUserDataJobTypePb2 = offline_user_data_job_type_pb2
+OfflineUserDataJobTypeEnum = offline_user_data_job_type_pb2.OfflineUserDataJobTypeEnum
+
+from google.ads.google_ads.v3.proto.enums import (
     operating_system_version_operator_type_pb2 as operating_system_version_operator_type_pb2,
 )
 
@@ -2003,6 +2042,13 @@ AssetErrorPb2 = asset_error_pb2
 AssetErrorEnum = asset_error_pb2.AssetErrorEnum
 
 from google.ads.google_ads.v3.proto.errors import (
+    asset_link_error_pb2 as asset_link_error_pb2,
+)
+
+AssetLinkErrorPb2 = asset_link_error_pb2
+AssetLinkErrorEnum = asset_link_error_pb2.AssetLinkErrorEnum
+
+from google.ads.google_ads.v3.proto.errors import (
     authentication_error_pb2 as authentication_error_pb2,
 )
 
@@ -2487,6 +2533,15 @@ NullErrorPb2 = null_error_pb2
 NullErrorEnum = null_error_pb2.NullErrorEnum
 
 from google.ads.google_ads.v3.proto.errors import (
+    offline_user_data_job_error_pb2 as offline_user_data_job_error_pb2,
+)
+
+OfflineUserDataJobErrorPb2 = offline_user_data_job_error_pb2
+OfflineUserDataJobErrorEnum = (
+    offline_user_data_job_error_pb2.OfflineUserDataJobErrorEnum
+)
+
+from google.ads.google_ads.v3.proto.errors import (
     operation_access_denied_error_pb2 as operation_access_denied_error_pb2,
 )
 
@@ -2651,6 +2706,13 @@ from google.ads.google_ads.v3.proto.errors import (
 
 UrlFieldErrorPb2 = url_field_error_pb2
 UrlFieldErrorEnum = url_field_error_pb2.UrlFieldErrorEnum
+
+from google.ads.google_ads.v3.proto.errors import (
+    user_data_error_pb2 as user_data_error_pb2,
+)
+
+UserDataErrorPb2 = user_data_error_pb2
+UserDataErrorEnum = user_data_error_pb2.UserDataErrorEnum
 
 from google.ads.google_ads.v3.proto.errors import (
     user_list_error_pb2 as user_list_error_pb2,
@@ -3253,6 +3315,13 @@ from google.ads.google_ads.v3.proto.resources import mutate_job_pb2 as mutate_jo
 
 MutateJobPb2 = mutate_job_pb2
 MutateJob = mutate_job_pb2.MutateJob
+
+from google.ads.google_ads.v3.proto.resources import (
+    offline_user_data_job_pb2 as offline_user_data_job_pb2,
+)
+
+OfflineUserDataJobPb2 = offline_user_data_job_pb2
+OfflineUserDataJob = offline_user_data_job_pb2.OfflineUserDataJob
 
 from google.ads.google_ads.v3.proto.resources import (
     operating_system_version_constant_pb2 as operating_system_version_constant_pb2,
@@ -4543,6 +4612,33 @@ MutateJobResult = mutate_job_service_pb2.MutateJobResult
 RunMutateJobRequest = mutate_job_service_pb2.RunMutateJobRequest
 
 from google.ads.google_ads.v3.proto.services import (
+    offline_user_data_job_service_pb2 as offline_user_data_job_service_pb2,
+)
+
+OfflineUserDataJobServicePb2 = offline_user_data_job_service_pb2
+AddOfflineUserDataJobOperationsRequest = (
+    offline_user_data_job_service_pb2.AddOfflineUserDataJobOperationsRequest
+)
+AddOfflineUserDataJobOperationsResponse = (
+    offline_user_data_job_service_pb2.AddOfflineUserDataJobOperationsResponse
+)
+CreateOfflineUserDataJobRequest = (
+    offline_user_data_job_service_pb2.CreateOfflineUserDataJobRequest
+)
+CreateOfflineUserDataJobResponse = (
+    offline_user_data_job_service_pb2.CreateOfflineUserDataJobResponse
+)
+GetOfflineUserDataJobRequest = (
+    offline_user_data_job_service_pb2.GetOfflineUserDataJobRequest
+)
+OfflineUserDataJobOperation = (
+    offline_user_data_job_service_pb2.OfflineUserDataJobOperation
+)
+RunOfflineUserDataJobRequest = (
+    offline_user_data_job_service_pb2.RunOfflineUserDataJobRequest
+)
+
+from google.ads.google_ads.v3.proto.services import (
     operating_system_version_constant_service_pb2 as operating_system_version_constant_service_pb2,
 )
 
@@ -4702,6 +4798,15 @@ TopicViewServicePb2 = topic_view_service_pb2
 GetTopicViewRequest = topic_view_service_pb2.GetTopicViewRequest
 
 from google.ads.google_ads.v3.proto.services import (
+    user_data_service_pb2 as user_data_service_pb2,
+)
+
+UserDataServicePb2 = user_data_service_pb2
+UploadUserDataRequest = user_data_service_pb2.UploadUserDataRequest
+UploadUserDataResponse = user_data_service_pb2.UploadUserDataResponse
+UserDataOperation = user_data_service_pb2.UserDataOperation
+
+from google.ads.google_ads.v3.proto.services import (
     user_interest_service_pb2 as user_interest_service_pb2,
 )
 
@@ -4795,6 +4900,7 @@ __all__ = [
     "KeywordPlanCommonPb2",
     "MatchingFunctionPb2",
     "MetricsPb2",
+    "OfflineUserDataPb2",
     "PolicyPb2",
     "RealTimeBiddingSettingPb2",
     "SegmentsPb2",
@@ -4945,6 +5051,9 @@ __all__ = [
     "MonthOfYearPb2",
     "MutateJobStatusPb2",
     "NegativeGeoTargetTypePb2",
+    "OfflineUserDataJobFailureReasonPb2",
+    "OfflineUserDataJobStatusPb2",
+    "OfflineUserDataJobTypePb2",
     "OperatingSystemVersionOperatorTypePb2",
     "PageOnePromotedStrategyGoalPb2",
     "ParentalStatusTypePb2",
@@ -5032,6 +5141,7 @@ __all__ = [
     "AdSharingErrorPb2",
     "AdxErrorPb2",
     "AssetErrorPb2",
+    "AssetLinkErrorPb2",
     "AuthenticationErrorPb2",
     "AuthorizationErrorPb2",
     "BiddingErrorPb2",
@@ -5102,6 +5212,7 @@ __all__ = [
     "NotEmptyErrorPb2",
     "NotWhitelistedErrorPb2",
     "NullErrorPb2",
+    "OfflineUserDataJobErrorPb2",
     "OperationAccessDeniedErrorPb2",
     "OperatorErrorPb2",
     "PartialFailureErrorPb2",
@@ -5126,6 +5237,7 @@ __all__ = [
     "StringLengthErrorPb2",
     "TimeZoneErrorPb2",
     "UrlFieldErrorPb2",
+    "UserDataErrorPb2",
     "UserListErrorPb2",
     "YoutubeVideoRegistrationErrorPb2",
     "AccountBudgetPb2",
@@ -5212,6 +5324,7 @@ __all__ = [
     "MobileAppCategoryConstantPb2",
     "MobileDeviceConstantPb2",
     "MutateJobPb2",
+    "OfflineUserDataJobPb2",
     "OperatingSystemVersionConstantPb2",
     "PaidOrganicSearchTermViewPb2",
     "ParentalStatusViewPb2",
@@ -5318,6 +5431,7 @@ __all__ = [
     "MobileAppCategoryConstantServicePb2",
     "MobileDeviceConstantServicePb2",
     "MutateJobServicePb2",
+    "OfflineUserDataJobServicePb2",
     "OperatingSystemVersionConstantServicePb2",
     "PaidOrganicSearchTermViewServicePb2",
     "ParentalStatusViewServicePb2",
@@ -5333,6 +5447,7 @@ __all__ = [
     "ShoppingPerformanceViewServicePb2",
     "TopicConstantServicePb2",
     "TopicViewServicePb2",
+    "UserDataServicePb2",
     "UserInterestServicePb2",
     "UserListServicePb2",
     "UserLocationViewServicePb2",
@@ -5409,6 +5524,8 @@ __all__ = [
     "AdVideoAsset",
     "AddMutateJobOperationsRequest",
     "AddMutateJobOperationsResponse",
+    "AddOfflineUserDataJobOperationsRequest",
+    "AddOfflineUserDataJobOperationsResponse",
     "AddressInfo",
     "AdvertisingChannelSubTypeEnum",
     "AdvertisingChannelTypeEnum",
@@ -5436,6 +5553,7 @@ __all__ = [
     "Asset",
     "AssetErrorEnum",
     "AssetFieldTypeEnum",
+    "AssetLinkErrorEnum",
     "AssetOperation",
     "AssetPerformanceLabelEnum",
     "AssetTypeEnum",
@@ -5554,6 +5672,8 @@ __all__ = [
     "CreateCustomerClientResponse",
     "CreateMutateJobRequest",
     "CreateMutateJobResponse",
+    "CreateOfflineUserDataJobRequest",
+    "CreateOfflineUserDataJobResponse",
     "CriterionCategoryAvailability",
     "CriterionCategoryChannelAvailability",
     "CriterionCategoryChannelAvailabilityModeEnum",
@@ -5593,6 +5713,7 @@ __all__ = [
     "CustomerManagerLinkErrorEnum",
     "CustomerManagerLinkOperation",
     "CustomerMatchUploadKeyTypeEnum",
+    "CustomerMatchUserListMetadata",
     "CustomerNegativeCriterion",
     "CustomerNegativeCriterionOperation",
     "CustomerOperation",
@@ -5792,6 +5913,7 @@ __all__ = [
     "GetMobileAppCategoryConstantRequest",
     "GetMobileDeviceConstantRequest",
     "GetMutateJobRequest",
+    "GetOfflineUserDataJobRequest",
     "GetOperatingSystemVersionConstantRequest",
     "GetPaidOrganicSearchTermViewRequest",
     "GetParentalStatusViewRequest",
@@ -6137,6 +6259,13 @@ __all__ = [
     "NotEmptyErrorEnum",
     "NotWhitelistedErrorEnum",
     "NullErrorEnum",
+    "OfflineUserAddressInfo",
+    "OfflineUserDataJob",
+    "OfflineUserDataJobErrorEnum",
+    "OfflineUserDataJobFailureReasonEnum",
+    "OfflineUserDataJobOperation",
+    "OfflineUserDataJobStatusEnum",
+    "OfflineUserDataJobTypeEnum",
     "OnTargetAudienceMetrics",
     "Operand",
     "OperatingSystemVersionConstant",
@@ -6241,6 +6370,7 @@ __all__ = [
     "RestatementValue",
     "RuleBasedUserListInfo",
     "RunMutateJobRequest",
+    "RunOfflineUserDataJobRequest",
     "SearchEngineResultsPageTypeEnum",
     "SearchGoogleAdsFieldsRequest",
     "SearchGoogleAdsFieldsResponse",
@@ -6274,6 +6404,9 @@ __all__ = [
     "SizeLimitErrorEnum",
     "SlotEnum",
     "SpendingLimitTypeEnum",
+    "StoreAttribute",
+    "StoreSalesMetadata",
+    "StoreSalesThirdPartyMetadata",
     "StringFormatErrorEnum",
     "StringLengthErrorEnum",
     "StructuredSnippetFeedItem",
@@ -6308,6 +6441,7 @@ __all__ = [
     "TopicView",
     "TrackingCodePageFormatEnum",
     "TrackingCodeTypeEnum",
+    "TransactionAttribute",
     "TravelPlaceholderFieldEnum",
     "UnknownListingDimensionInfo",
     "UploadCallConversionsRequest",
@@ -6316,9 +6450,15 @@ __all__ = [
     "UploadClickConversionsResponse",
     "UploadConversionAdjustmentsRequest",
     "UploadConversionAdjustmentsResponse",
+    "UploadUserDataRequest",
+    "UploadUserDataResponse",
     "UrlCollection",
     "UrlFieldErrorEnum",
     "UrlSeed",
+    "UserData",
+    "UserDataErrorEnum",
+    "UserDataOperation",
+    "UserIdentifier",
     "UserInterest",
     "UserInterestInfo",
     "UserInterestTaxonomyTypeEnum",

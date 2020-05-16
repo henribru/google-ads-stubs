@@ -120,6 +120,9 @@ class AccountBudgetProposalErrorEnum(google___protobuf___message___Message):
         INVALID_BILLING_SETUP = typing___cast(
             "AccountBudgetProposalErrorEnum.AccountBudgetProposalError", 23
         )
+        OVERLAPS_EXISTING_BUDGET = typing___cast(
+            "AccountBudgetProposalErrorEnum.AccountBudgetProposalError", 24
+        )
     UNSPECIFIED = typing___cast(
         "AccountBudgetProposalErrorEnum.AccountBudgetProposalError", 0
     )
@@ -191,6 +194,9 @@ class AccountBudgetProposalErrorEnum(google___protobuf___message___Message):
     )
     INVALID_BILLING_SETUP = typing___cast(
         "AccountBudgetProposalErrorEnum.AccountBudgetProposalError", 23
+    )
+    OVERLAPS_EXISTING_BUDGET = typing___cast(
+        "AccountBudgetProposalErrorEnum.AccountBudgetProposalError", 24
     )
     global___AccountBudgetProposalError = AccountBudgetProposalError
     def __init__(self,) -> None: ...

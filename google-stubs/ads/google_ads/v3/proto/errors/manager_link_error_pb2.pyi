@@ -76,6 +76,10 @@ class ManagerLinkErrorEnum(google___protobuf___message___Message):
             "ManagerLinkErrorEnum.ManagerLinkError", 15
         )
         CLIENT_OUTSIDE_TREE = typing___cast("ManagerLinkErrorEnum.ManagerLinkError", 16)
+        INVALID_STATUS_CHANGE = typing___cast(
+            "ManagerLinkErrorEnum.ManagerLinkError", 17
+        )
+        INVALID_CHANGE = typing___cast("ManagerLinkErrorEnum.ManagerLinkError", 18)
     UNSPECIFIED = typing___cast("ManagerLinkErrorEnum.ManagerLinkError", 0)
     UNKNOWN = typing___cast("ManagerLinkErrorEnum.ManagerLinkError", 1)
     ACCOUNTS_NOT_COMPATIBLE_FOR_LINKING = typing___cast(
@@ -107,6 +111,8 @@ class ManagerLinkErrorEnum(google___protobuf___message___Message):
         "ManagerLinkErrorEnum.ManagerLinkError", 15
     )
     CLIENT_OUTSIDE_TREE = typing___cast("ManagerLinkErrorEnum.ManagerLinkError", 16)
+    INVALID_STATUS_CHANGE = typing___cast("ManagerLinkErrorEnum.ManagerLinkError", 17)
+    INVALID_CHANGE = typing___cast("ManagerLinkErrorEnum.ManagerLinkError", 18)
     global___ManagerLinkError = ManagerLinkError
     def __init__(self,) -> None: ...
     if sys.version_info >= (3,):

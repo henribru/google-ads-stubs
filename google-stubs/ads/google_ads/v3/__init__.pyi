@@ -738,6 +738,15 @@ class MutateJobServiceClient(mutate_job_service_client.MutateJobServiceClient):
     enums = enums
 
 from google.ads.google_ads.v3.services import (
+    offline_user_data_job_service_client as offline_user_data_job_service_client,
+)
+
+class OfflineUserDataJobServiceClient(
+    offline_user_data_job_service_client.OfflineUserDataJobServiceClient
+):
+    enums = enums
+
+from google.ads.google_ads.v3.services import (
     operating_system_version_constant_service_client as operating_system_version_constant_service_client,
 )
 
@@ -864,6 +873,13 @@ from google.ads.google_ads.v3.services import (
 )
 
 class TopicViewServiceClient(topic_view_service_client.TopicViewServiceClient):
+    enums = enums
+
+from google.ads.google_ads.v3.services import (
+    user_data_service_client as user_data_service_client,
+)
+
+class UserDataServiceClient(user_data_service_client.UserDataServiceClient):
     enums = enums
 
 from google.ads.google_ads.v3.services import (
@@ -1599,6 +1615,14 @@ class MutateJobServiceGrpcTransport(
 ): ...
 
 from google.ads.google_ads.v3.services.transports import (
+    offline_user_data_job_service_grpc_transport as offline_user_data_job_service_grpc_transport,
+)
+
+class OfflineUserDataJobServiceGrpcTransport(
+    offline_user_data_job_service_grpc_transport.OfflineUserDataJobServiceGrpcTransport
+): ...
+
+from google.ads.google_ads.v3.services.transports import (
     operating_system_version_constant_service_grpc_transport as operating_system_version_constant_service_grpc_transport,
 )
 
@@ -1716,6 +1740,14 @@ from google.ads.google_ads.v3.services.transports import (
 
 class TopicViewServiceGrpcTransport(
     topic_view_service_grpc_transport.TopicViewServiceGrpcTransport
+): ...
+
+from google.ads.google_ads.v3.services.transports import (
+    user_data_service_grpc_transport as user_data_service_grpc_transport,
+)
+
+class UserDataServiceGrpcTransport(
+    user_data_service_grpc_transport.UserDataServiceGrpcTransport
 ): ...
 
 from google.ads.google_ads.v3.services.transports import (
@@ -1839,6 +1871,7 @@ __all__ = [
     "MobileAppCategoryConstantServiceClient",
     "MobileDeviceConstantServiceClient",
     "MutateJobServiceClient",
+    "OfflineUserDataJobServiceClient",
     "OperatingSystemVersionConstantServiceClient",
     "PaidOrganicSearchTermViewServiceClient",
     "ParentalStatusViewServiceClient",
@@ -1854,6 +1887,7 @@ __all__ = [
     "ShoppingPerformanceViewServiceClient",
     "TopicConstantServiceClient",
     "TopicViewServiceClient",
+    "UserDataServiceClient",
     "UserInterestServiceClient",
     "UserListServiceClient",
     "UserLocationViewServiceClient",
@@ -1946,6 +1980,7 @@ __all__ = [
     "MobileAppCategoryConstantServiceGrpcTransport",
     "MobileDeviceConstantServiceGrpcTransport",
     "MutateJobServiceGrpcTransport",
+    "OfflineUserDataJobServiceGrpcTransport",
     "OperatingSystemVersionConstantServiceGrpcTransport",
     "PaidOrganicSearchTermViewServiceGrpcTransport",
     "ParentalStatusViewServiceGrpcTransport",
@@ -1961,6 +1996,7 @@ __all__ = [
     "ShoppingPerformanceViewServiceGrpcTransport",
     "TopicConstantServiceGrpcTransport",
     "TopicViewServiceGrpcTransport",
+    "UserDataServiceGrpcTransport",
     "UserInterestServiceGrpcTransport",
     "UserListServiceGrpcTransport",
     "UserLocationViewServiceGrpcTransport",
