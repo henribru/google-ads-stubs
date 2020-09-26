@@ -20,7 +20,7 @@ google-ads = "^7.0.0"
 [tool.poetry.dev-dependencies]
 protobuf = "^3.11.2"
 mypy-protobuf = "^1.20"
-mypy = "^0.770"
+mypy = "^0.780"
 black = "^19.10b0"
 
 [build-system]
