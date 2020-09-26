@@ -50,7 +50,7 @@ class InvoiceServiceClient:
         customer_id: str,
         billing_setup: str,
         issue_year: str,
-        issue_month: MonthOfYearEnum.MonthOfYear,
+        issue_month: MonthOfYearEnum.MonthOfYearValue,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

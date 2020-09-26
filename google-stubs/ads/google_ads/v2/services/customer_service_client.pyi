@@ -88,7 +88,7 @@ class CustomerServiceClient:
         customer_id: str,
         customer_client: Union[Dict[str, Any], Customer],
         email_address: Optional[Union[StringValueDict, StringValue]] = ...,
-        access_role: Optional[AccessRoleEnum.AccessRole] = ...,
+        access_role: Optional[AccessRoleEnum.AccessRoleValue] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

@@ -69,7 +69,9 @@ class GoogleAdsServiceClient:
         page_size: Optional[int] = ...,
         validate_only: Optional[bool] = ...,
         return_total_results_count: Optional[bool] = ...,
-        summary_row_setting: Optional[SummaryRowSettingEnum.SummaryRowSetting] = ...,
+        summary_row_setting: Optional[
+            SummaryRowSettingEnum.SummaryRowSettingValue
+        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
@@ -78,7 +80,9 @@ class GoogleAdsServiceClient:
         self,
         customer_id: str,
         query: str,
-        summary_row_setting: Optional[SummaryRowSettingEnum.SummaryRowSetting] = ...,
+        summary_row_setting: Optional[
+            SummaryRowSettingEnum.SummaryRowSettingValue
+        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
