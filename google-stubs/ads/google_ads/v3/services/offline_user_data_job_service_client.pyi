@@ -7,7 +7,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     offline_user_data_job_service_grpc_transport as offline_user_data_job_service_grpc_transport,
 )
-from google.oauth2 import service_account as service_account
+from google.oauth2 import service_account as service_account  # type: ignore
 from google.protobuf import empty_pb2 as empty_pb2
 import grpc  # type: ignore
 from google.ads.google_ads.v3.services.transports.offline_user_data_job_service_grpc_transport import (

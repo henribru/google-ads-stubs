@@ -7,7 +7,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     user_data_service_grpc_transport as user_data_service_grpc_transport,
 )
-from google.oauth2 import service_account as service_account
+from google.oauth2 import service_account as service_account  # type: ignore
 import grpc  # type: ignore
 from google.ads.google_ads.v3.services.transports.user_data_service_grpc_transport import (
     UserDataServiceGrpcTransport,
