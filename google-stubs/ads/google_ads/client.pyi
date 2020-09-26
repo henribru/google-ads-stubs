@@ -3,9 +3,11 @@ from typing_extensions import Literal
 from google.ads.google_ads.config import _ConfigDataUnparsed
 from google.oauth2.credentials import Credentials  # type: ignore
 
-_V1 = Literal["v1"]
 _V2 = Literal["v2"]
 _V3 = Literal["v3"]
+_V4 = Literal["v4"]
+_V5 = Literal["v5"]
+_V = Union[_V2, _V3, _V4, _V5]
 
 class GoogleAdsClient:
     credentials: Credentials = ...
@@ -29,5 +31,5 @@ class GoogleAdsClient:
         logging_config: Optional[Dict[Any, Any]] = ...,
     ) -> None: ...
     @classmethod
-    def get_type(cls, name: str, version: Union[_V1, _V2, _V3] = ...) -> Any: ...
-    def get_service(self, name: str, version: Union[_V1, _V2, _V3] = ...) -> Any: ...
+    def get_type(cls, name: str, version: _V = ...) -> Any: ...
+    def get_service(self, name: str, version: _V = ...) -> Any: ...
