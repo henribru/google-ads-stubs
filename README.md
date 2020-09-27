@@ -1,7 +1,8 @@
 # Type stubs for the Google Ads API Client Library for Python
+
 [![PyPI version](https://badge.fury.io/py/google-ads-stubs.svg)](https://badge.fury.io/py/google-ads-stubs)
 
-This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). It's currently compatible with v.5.1.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
+This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). It's currently compatible with v.7.0.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
 
 **This is in no way affiliated with Google.**
 
@@ -12,14 +13,15 @@ a starting point.
 If you find incorrect annotations, please create an issue. Contributions for fixes are also welcome.
 
 ## Installation
+
 ```
 $ pip install google-ads-stubs
 ```
 
 ## Caveats
 
-There are some caveats. The primary one is that type inference does *not* work for the `get_type` and `get_service`
-methods of `Client`. The workaround is to explicitly state the type. For `get_type` you can also instantiate 
+There are some caveats. The primary one is that type inference does _not_ work for the `get_type` and `get_service`
+methods of `Client`. The workaround is to explicitly state the type. For `get_type` you can also instantiate
 the object directly.
 
 ```python
@@ -43,11 +45,11 @@ While it is technically possible to type these methods using a combination of ov
 this is not included in these stubs. The reason is that it requires about 10,000 overloads, which, while simple
 to generate, slows type checking to a crawl.
 
-This package does not provide complete type annotations, although it should cover what's used by most developers. 
+This package does not provide complete type annotations, although it should cover what's used by most developers.
 The bare output from `stubgen` is used by the service stubs and transport classes.
 The service stubs are unlikely to be typed as long as there is no `mypy-protobuf` equivalent
 for GRPC stubs. The transport classes may be typed in the future if there is a need for it.
 
 Some service methods allow you to pass in either a protobuf message or a dictionary for certain arguments.
 There is no check that the dictionary conforms to the message structure, as this would require a `TypedDict` subclass
-for each message. 
+for each message.
