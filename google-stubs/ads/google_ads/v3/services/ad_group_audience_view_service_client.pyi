@@ -1,3 +1,14 @@
+from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+
+import grpc  # type: ignore
+from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
+from google.api_core.retry import Retry  # type: ignore
+from google.auth.credentials import Credentials  # type: ignore
+from google.oauth2 import service_account as service_account  # type: ignore
+
+from google.ads.google_ads.v3.proto.resources.ad_group_audience_view_pb2 import (
+    AdGroupAudienceView,
+)
 from google.ads.google_ads.v3.proto.services import (
     ad_group_audience_view_service_pb2 as ad_group_audience_view_service_pb2,
 )
@@ -7,17 +18,8 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     ad_group_audience_view_service_grpc_transport as ad_group_audience_view_service_grpc_transport,
 )
-from google.oauth2 import service_account as service_account  # type: ignore
-import grpc  # type: ignore
 from google.ads.google_ads.v3.services.transports.ad_group_audience_view_service_grpc_transport import (
     AdGroupAudienceViewServiceGrpcTransport,
-)
-from google.auth.credentials import Credentials  # type: ignore
-from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
-from google.api_core.retry import Retry  # type: ignore
-from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
-from google.ads.google_ads.v3.proto.resources.ad_group_audience_view_pb2 import (
-    AdGroupAudienceView,
 )
 
 class AdGroupAudienceViewServiceClient:

@@ -1,13 +1,15 @@
 from typing import List, overload
-from google.ads.google_ads.config import (
-    _InstalledAppConfigDataRequired,
-    _ServiceAccountConfigDataRequired,
+
+from google.oauth2.credentials import (  # type: ignore
+    Credentials as InstalledAppCredentials,
 )
 from google.oauth2.service_account import (  # type: ignore
     Credentials as ServiceAccountCreds,
 )
-from google.oauth2.credentials import (  # type: ignore
-    Credentials as InstalledAppCredentials,
+
+from google.ads.google_ads.config import (
+    _InstalledAppConfigDataRequired,
+    _ServiceAccountConfigDataRequired,
 )
 
 def get_installed_app_credentials(

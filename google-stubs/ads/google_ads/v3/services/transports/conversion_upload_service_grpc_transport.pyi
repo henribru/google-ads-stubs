@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     conversion_upload_service_pb2_grpc as conversion_upload_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class ConversionUploadServiceGrpcTransport:
     def __init__(

@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     domain_category_service_pb2_grpc as domain_category_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class DomainCategoryServiceGrpcTransport:
     def __init__(

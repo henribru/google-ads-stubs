@@ -1,7 +1,9 @@
-from typing import Any, Optional, Dict, Union
-from typing_extensions import Literal
-from google.ads.google_ads.config import _ConfigDataUnparsed
+from typing import Any, Dict, Optional, Union
+
 from google.oauth2.credentials import Credentials  # type: ignore
+from typing_extensions import Literal
+
+from google.ads.google_ads.config import _ConfigDataUnparsed
 
 _V2 = Literal["v2"]
 _V3 = Literal["v3"]

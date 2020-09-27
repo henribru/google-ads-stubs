@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     paid_organic_search_term_view_service_pb2_grpc as paid_organic_search_term_view_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class PaidOrganicSearchTermViewServiceGrpcTransport:
     def __init__(

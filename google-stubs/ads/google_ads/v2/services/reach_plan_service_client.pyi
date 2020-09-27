@@ -1,33 +1,35 @@
-import grpc  # type: ignore
-from google.ads.google_ads.v2.services.transports.reach_plan_service_grpc_transport import (
-    ReachPlanServiceGrpcTransport,
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    List,
+    Optional,
+    Sequence,
+    Text,
+    Tuple,
+    Union,
 )
+
+import grpc  # type: ignore
+from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
+from google.api_core.retry import Retry  # type: ignore
+from google.auth.credentials import Credentials  # type: ignore
+from google.protobuf.wrappers_pb2 import Int32Value, Int64Value, StringValue
+from typing_extensions import TypedDict
+
 from google.ads.google_ads.v2.proto.services.reach_plan_service_pb2 import (
-    ListPlannableLocationsResponse,
-    ListPlannableProductsResponse,
     GenerateProductMixIdeasResponse,
     GenerateReachForecastResponse,
+    ListPlannableLocationsResponse,
+    ListPlannableProductsResponse,
     PlannedProduct,
     Preferences,
     Targeting,
 )
-from google.auth.credentials import Credentials  # type: ignore
-from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
-from google.api_core.retry import Retry  # type: ignore
-from typing import (
-    Optional,
-    Dict,
-    Any,
-    List,
-    Sequence,
-    Tuple,
-    Union,
-    Callable,
-    ClassVar,
-    Text,
+from google.ads.google_ads.v2.services.transports.reach_plan_service_grpc_transport import (
+    ReachPlanServiceGrpcTransport,
 )
-from google.protobuf.wrappers_pb2 import StringValue, Int64Value, Int32Value
-from typing_extensions import TypedDict
 
 class StringValueDict(TypedDict):
     value: Text

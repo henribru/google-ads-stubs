@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     dynamic_search_ads_search_term_view_service_pb2_grpc as dynamic_search_ads_search_term_view_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class DynamicSearchAdsSearchTermViewServiceGrpcTransport:
     def __init__(

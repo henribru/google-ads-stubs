@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     remarketing_action_service_pb2_grpc as remarketing_action_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class RemarketingActionServiceGrpcTransport:
     def __init__(

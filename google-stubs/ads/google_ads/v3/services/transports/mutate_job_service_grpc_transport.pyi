@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     mutate_job_service_pb2_grpc as mutate_job_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class MutateJobServiceGrpcTransport:
     def __init__(

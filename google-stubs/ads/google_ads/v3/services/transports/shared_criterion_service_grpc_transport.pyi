@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     shared_criterion_service_pb2_grpc as shared_criterion_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class SharedCriterionServiceGrpcTransport:
     def __init__(

@@ -1,17 +1,19 @@
+from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+
 import grpc  # type: ignore
-from google.ads.google_ads.v2.services.transports.customer_manager_link_service_grpc_transport import (
-    CustomerManagerLinkServiceGrpcTransport,
-)
-from google.auth.credentials import Credentials  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
-from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
+from google.auth.credentials import Credentials  # type: ignore
+
 from google.ads.google_ads.v2.proto.resources.customer_manager_link_pb2 import (
     CustomerManagerLink,
 )
 from google.ads.google_ads.v2.proto.services.customer_manager_link_service_pb2 import (
     CustomerManagerLinkOperation,
     MutateCustomerManagerLinkResponse,
+)
+from google.ads.google_ads.v2.services.transports.customer_manager_link_service_grpc_transport import (
+    CustomerManagerLinkServiceGrpcTransport,
 )
 
 class CustomerManagerLinkServiceClient:

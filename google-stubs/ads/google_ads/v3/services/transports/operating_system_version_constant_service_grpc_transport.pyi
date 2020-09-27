@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     operating_system_version_constant_service_pb2_grpc as operating_system_version_constant_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class OperatingSystemVersionConstantServiceGrpcTransport:
     def __init__(

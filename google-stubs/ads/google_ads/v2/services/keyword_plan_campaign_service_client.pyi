@@ -1,17 +1,19 @@
+from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+
 import grpc  # type: ignore
-from google.ads.google_ads.v2.services.transports.keyword_plan_campaign_service_grpc_transport import (
-    KeywordPlanCampaignServiceGrpcTransport,
-)
-from google.auth.credentials import Credentials  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
-from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
+from google.auth.credentials import Credentials  # type: ignore
+
 from google.ads.google_ads.v2.proto.resources.keyword_plan_campaign_pb2 import (
     KeywordPlanCampaign,
 )
 from google.ads.google_ads.v2.proto.services.keyword_plan_campaign_service_pb2 import (
     KeywordPlanCampaignOperation,
     MutateKeywordPlanCampaignsResponse,
+)
+from google.ads.google_ads.v2.services.transports.keyword_plan_campaign_service_grpc_transport import (
+    KeywordPlanCampaignServiceGrpcTransport,
 )
 
 class KeywordPlanCampaignServiceClient:

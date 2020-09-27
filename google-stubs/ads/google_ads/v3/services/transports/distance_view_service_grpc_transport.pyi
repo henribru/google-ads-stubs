@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     distance_view_service_pb2_grpc as distance_view_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class DistanceViewServiceGrpcTransport:
     def __init__(

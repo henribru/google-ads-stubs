@@ -1,13 +1,15 @@
+from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+
 import grpc  # type: ignore
-from google.ads.google_ads.v2.services.transports.product_group_view_service_grpc_transport import (
-    ProductGroupViewServiceGrpcTransport,
-)
-from google.auth.credentials import Credentials  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
-from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
+from google.auth.credentials import Credentials  # type: ignore
+
 from google.ads.google_ads.v2.proto.resources.product_group_view_pb2 import (
     ProductGroupView,
+)
+from google.ads.google_ads.v2.services.transports.product_group_view_service_grpc_transport import (
+    ProductGroupViewServiceGrpcTransport,
 )
 
 class ProductGroupViewServiceClient:

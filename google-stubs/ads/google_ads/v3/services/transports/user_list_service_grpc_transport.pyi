@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     user_list_service_pb2_grpc as user_list_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class UserListServiceGrpcTransport:
     def __init__(

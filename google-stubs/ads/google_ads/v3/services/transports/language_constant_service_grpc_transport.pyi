@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     language_constant_service_pb2_grpc as language_constant_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class LanguageConstantServiceGrpcTransport:
     def __init__(

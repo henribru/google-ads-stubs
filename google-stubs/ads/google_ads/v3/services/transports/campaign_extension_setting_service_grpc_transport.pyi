@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     campaign_extension_setting_service_pb2_grpc as campaign_extension_setting_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class CampaignExtensionSettingServiceGrpcTransport:
     def __init__(

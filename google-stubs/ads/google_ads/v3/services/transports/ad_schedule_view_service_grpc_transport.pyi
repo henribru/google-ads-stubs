@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     ad_schedule_view_service_pb2_grpc as ad_schedule_view_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class AdScheduleViewServiceGrpcTransport:
     def __init__(

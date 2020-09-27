@@ -1,6 +1,8 @@
-from google.ads.google_ads.errors import GoogleAdsException as GoogleAdsException
-from google.protobuf.message import DecodeError as DecodeError
 from typing import Any, Optional
+
+from google.protobuf.message import DecodeError as DecodeError
+
+from google.ads.google_ads.errors import GoogleAdsException as GoogleAdsException
 
 class Interceptor:
     @classmethod

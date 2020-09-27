@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     hotel_group_view_service_pb2_grpc as hotel_group_view_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class HotelGroupViewServiceGrpcTransport:
     def __init__(

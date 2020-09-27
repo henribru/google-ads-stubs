@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     recommendation_service_pb2_grpc as recommendation_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class RecommendationServiceGrpcTransport:
     def __init__(

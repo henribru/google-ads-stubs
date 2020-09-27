@@ -1,8 +1,9 @@
+from typing import Callable, Optional, Tuple, TypeVar
+
 import grpc  # type: ignore
+from grpc import UnaryUnaryClientInterceptor
 
 from .interceptor import Interceptor
-from grpc import UnaryUnaryClientInterceptor
-from typing import Callable, Tuple, Optional, TypeVar
 
 _Request = TypeVar("_Request")
 _Response = TypeVar("_Response")

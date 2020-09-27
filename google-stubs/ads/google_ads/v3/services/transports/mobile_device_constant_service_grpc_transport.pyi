@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     mobile_device_constant_service_pb2_grpc as mobile_device_constant_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class MobileDeviceConstantServiceGrpcTransport:
     def __init__(

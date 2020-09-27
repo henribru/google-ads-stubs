@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     google_ads_field_service_pb2_grpc as google_ads_field_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class GoogleAdsFieldServiceGrpcTransport:
     def __init__(

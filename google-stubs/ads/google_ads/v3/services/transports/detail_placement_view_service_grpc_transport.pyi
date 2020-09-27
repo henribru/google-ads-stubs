@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     detail_placement_view_service_pb2_grpc as detail_placement_view_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class DetailPlacementViewServiceGrpcTransport:
     def __init__(

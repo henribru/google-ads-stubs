@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     change_status_service_pb2_grpc as change_status_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class ChangeStatusServiceGrpcTransport:
     def __init__(

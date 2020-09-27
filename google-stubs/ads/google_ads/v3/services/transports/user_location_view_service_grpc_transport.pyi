@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     user_location_view_service_pb2_grpc as user_location_view_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class UserLocationViewServiceGrpcTransport:
     def __init__(

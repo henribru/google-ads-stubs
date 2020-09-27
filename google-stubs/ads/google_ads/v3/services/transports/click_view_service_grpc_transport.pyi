@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     click_view_service_pb2_grpc as click_view_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class ClickViewServiceGrpcTransport:
     def __init__(

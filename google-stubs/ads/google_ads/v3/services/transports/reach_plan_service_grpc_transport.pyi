@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     reach_plan_service_pb2_grpc as reach_plan_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class ReachPlanServiceGrpcTransport:
     def __init__(

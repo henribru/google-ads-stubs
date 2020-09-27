@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     customer_negative_criterion_service_pb2_grpc as customer_negative_criterion_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class CustomerNegativeCriterionServiceGrpcTransport:
     def __init__(

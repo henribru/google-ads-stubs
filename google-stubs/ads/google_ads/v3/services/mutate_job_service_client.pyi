@@ -1,4 +1,26 @@
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
+
+import grpc  # type: ignore
+from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
+from google.api_core.operation import Operation  # type: ignore
+from google.api_core.retry import Retry  # type: ignore
+from google.auth.credentials import Credentials  # type: ignore
+from google.oauth2 import service_account as service_account  # type: ignore
+from google.protobuf import empty_pb2 as empty_pb2
+
 from google.ads.google_ads.v3.proto.resources import mutate_job_pb2 as mutate_job_pb2
+from google.ads.google_ads.v3.proto.resources.mutate_job_pb2 import MutateJob
 from google.ads.google_ads.v3.proto.services import (
     mutate_job_service_pb2 as mutate_job_service_pb2,
 )
@@ -8,35 +30,15 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     mutate_job_service_grpc_transport as mutate_job_service_grpc_transport,
 )
-from google.oauth2 import service_account as service_account  # type: ignore
-from google.protobuf import empty_pb2 as empty_pb2
-import grpc  # type: ignore
 from google.ads.google_ads.v3.services.transports.mutate_job_service_grpc_transport import (
     MutateJobServiceGrpcTransport,
 )
-from google.auth.credentials import Credentials  # type: ignore
-from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
-from google.api_core.retry import Retry  # type: ignore
-from typing import (
-    Optional,
-    Dict,
-    Any,
-    List,
-    Sequence,
-    Tuple,
-    Union,
-    Callable,
-    ClassVar,
-    Iterable,
-)
-from google.ads.google_ads.v3.proto.resources.mutate_job_pb2 import MutateJob
 from google.ads.google_ads.v3.types import (
-    MutateOperation,
+    AddMutateJobOperationsResponse,
     CreateMutateJobResponse,
     MutateJobResult,
-    AddMutateJobOperationsResponse,
+    MutateOperation,
 )
-from google.api_core.operation import Operation  # type: ignore
 
 class MutateJobServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...

@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     campaign_shared_set_service_pb2_grpc as campaign_shared_set_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class CampaignSharedSetServiceGrpcTransport:
     def __init__(

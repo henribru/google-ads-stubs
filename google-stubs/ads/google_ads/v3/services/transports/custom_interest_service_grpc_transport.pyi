@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     custom_interest_service_pb2_grpc as custom_interest_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class CustomInterestServiceGrpcTransport:
     def __init__(

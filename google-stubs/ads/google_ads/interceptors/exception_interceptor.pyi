@@ -1,7 +1,8 @@
+from typing import Callable, TypeVar
+
 import grpc  # type: ignore
 
 from .interceptor import Interceptor
-from typing import Callable, TypeVar
 
 _Request = TypeVar("_Request")
 _Response = TypeVar("_Response")

@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     merchant_center_link_service_pb2_grpc as merchant_center_link_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class MerchantCenterLinkServiceGrpcTransport:
     def __init__(

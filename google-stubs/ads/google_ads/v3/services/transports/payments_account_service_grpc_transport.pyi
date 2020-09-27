@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     payments_account_service_pb2_grpc as payments_account_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class PaymentsAccountServiceGrpcTransport:
     def __init__(

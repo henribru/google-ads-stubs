@@ -1,4 +1,5 @@
-from typing import Any, Optional, Dict, Union, Tuple, overload
+from typing import Any, Dict, Optional, Tuple, Union, overload
+
 from typing_extensions import TypedDict
 
 class _ConfigDataRequired(TypedDict):

@@ -1,8 +1,7 @@
-from google.ads.google_ads.v2.services import enums as enums
 from google.ads.google_ads.v2 import types as types
-
 from google.ads.google_ads.v2.services import (
     account_budget_proposal_service_client as account_budget_proposal_service_client,
+    enums as enums,
 )
 
 class AccountBudgetProposalServiceClient(

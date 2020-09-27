@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     offline_user_data_job_service_pb2_grpc as offline_user_data_job_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class OfflineUserDataJobServiceGrpcTransport:
     def __init__(

@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     video_service_pb2_grpc as video_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class VideoServiceGrpcTransport:
     def __init__(

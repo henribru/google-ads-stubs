@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     topic_constant_service_pb2_grpc as topic_constant_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class TopicConstantServiceGrpcTransport:
     def __init__(

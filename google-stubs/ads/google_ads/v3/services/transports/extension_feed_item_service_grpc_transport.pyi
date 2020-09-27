@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     extension_feed_item_service_pb2_grpc as extension_feed_item_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class ExtensionFeedItemServiceGrpcTransport:
     def __init__(

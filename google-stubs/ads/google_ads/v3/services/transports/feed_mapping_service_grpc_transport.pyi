@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     feed_mapping_service_pb2_grpc as feed_mapping_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class FeedMappingServiceGrpcTransport:
     def __init__(

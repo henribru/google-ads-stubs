@@ -1,9 +1,9 @@
 import logging
+from typing import Callable, Optional, TypeVar
 
 import grpc  # type: ignore
 
 from .interceptor import Interceptor
-from typing import Optional, Callable, TypeVar
 
 _Request = TypeVar("_Request")
 _Response = TypeVar("_Response")

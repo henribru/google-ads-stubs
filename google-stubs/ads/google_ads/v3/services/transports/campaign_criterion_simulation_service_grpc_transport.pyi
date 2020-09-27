@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     campaign_criterion_simulation_service_pb2_grpc as campaign_criterion_simulation_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class CampaignCriterionSimulationServiceGrpcTransport:
     def __init__(

@@ -1,17 +1,19 @@
+from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+
 import grpc  # type: ignore
-from google.ads.google_ads.v2.services.transports.customer_negative_criterion_service_grpc_transport import (
-    CustomerNegativeCriterionServiceGrpcTransport,
-)
-from google.auth.credentials import Credentials  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
-from typing import Optional, Dict, Any, List, Sequence, Tuple, Union, Callable, ClassVar
+from google.auth.credentials import Credentials  # type: ignore
+
 from google.ads.google_ads.v2.proto.resources.customer_negative_criterion_pb2 import (
     CustomerNegativeCriterion,
 )
 from google.ads.google_ads.v2.proto.services.customer_negative_criterion_service_pb2 import (
     CustomerNegativeCriterionOperation,
     MutateCustomerNegativeCriteriaResponse,
+)
+from google.ads.google_ads.v2.services.transports.customer_negative_criterion_service_grpc_transport import (
+    CustomerNegativeCriterionServiceGrpcTransport,
 )
 
 class CustomerNegativeCriterionServiceClient:

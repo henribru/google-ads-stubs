@@ -1,7 +1,8 @@
+from typing import Any, Optional
+
 from google.ads.google_ads.v3.proto.services import (
     bidding_strategy_service_pb2_grpc as bidding_strategy_service_pb2_grpc,
 )
-from typing import Any, Optional
 
 class BiddingStrategyServiceGrpcTransport:
     def __init__(
