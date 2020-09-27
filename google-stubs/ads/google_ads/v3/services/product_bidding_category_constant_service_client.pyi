@@ -1,14 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.product_bidding_category_constant_pb2 import (
-    ProductBiddingCategoryConstant,
-)
 from google.ads.google_ads.v3.proto.services import (
     product_bidding_category_constant_service_pb2 as product_bidding_category_constant_service_pb2,
 )
@@ -18,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     product_bidding_category_constant_service_grpc_transport as product_bidding_category_constant_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.product_bidding_category_constant_service_grpc_transport import (
-    ProductBiddingCategoryConstantServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import ProductBiddingCategoryConstant
 
 class ProductBiddingCategoryConstantServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -35,21 +42,22 @@ class ProductBiddingCategoryConstantServiceClient:
     @classmethod
     def product_bidding_category_constant_path(
         cls, product_bidding_category_constant: Any
-    ): ...
+    ) -> str: ...
     transport: Union[
-        ProductBiddingCategoryConstantServiceGrpcTransport,
+        product_bidding_category_constant_service_grpc_transport.ProductBiddingCategoryConstantServiceGrpcTransport,
         Callable[
-            [Credentials, type], ProductBiddingCategoryConstantServiceGrpcTransport
+            [Credentials, type],
+            product_bidding_category_constant_service_grpc_transport.ProductBiddingCategoryConstantServiceGrpcTransport,
         ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                ProductBiddingCategoryConstantServiceGrpcTransport,
+                product_bidding_category_constant_service_grpc_transport.ProductBiddingCategoryConstantServiceGrpcTransport,
                 Callable[
                     [Credentials, type],
-                    ProductBiddingCategoryConstantServiceGrpcTransport,
+                    product_bidding_category_constant_service_grpc_transport.ProductBiddingCategoryConstantServiceGrpcTransport,
                 ],
             ]
         ] = ...,

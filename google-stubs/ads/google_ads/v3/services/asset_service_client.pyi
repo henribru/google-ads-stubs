@@ -1,18 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.asset_pb2 import Asset
 from google.ads.google_ads.v3.proto.services import (
     asset_service_pb2 as asset_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.asset_service_pb2 import (
-    AssetOperation,
-    MutateAssetsResponse,
 )
 from google.ads.google_ads.v3.services import (
     asset_service_client_config as asset_service_client_config,
@@ -20,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     asset_service_grpc_transport as asset_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.asset_service_grpc_transport import (
-    AssetServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import Asset
 
 class AssetServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,15 +42,20 @@ class AssetServiceClient:
     @classmethod
     def asset_path(cls, customer: Any, asset: Any) -> str: ...
     transport: Union[
-        AssetServiceGrpcTransport,
-        Callable[[Credentials, type], AssetServiceGrpcTransport],
+        asset_service_grpc_transport.AssetServiceGrpcTransport,
+        Callable[
+            [Credentials, type], asset_service_grpc_transport.AssetServiceGrpcTransport
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                AssetServiceGrpcTransport,
-                Callable[[Credentials, type], AssetServiceGrpcTransport],
+                asset_service_grpc_transport.AssetServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    asset_service_grpc_transport.AssetServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -63,8 +73,8 @@ class AssetServiceClient:
     def mutate_assets(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], AssetOperation]],
+        operations: List[Union[Dict[str, Any], asset_service_pb2.AssetOperation]],
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateAssetsResponse: ...
+    ) -> asset_service_pb2.MutateAssetsResponse: ...

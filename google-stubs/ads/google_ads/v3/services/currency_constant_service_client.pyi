@@ -1,14 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.currency_constant_pb2 import (
-    CurrencyConstant,
-)
 from google.ads.google_ads.v3.proto.services import (
     currency_constant_service_pb2 as currency_constant_service_pb2,
 )
@@ -18,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     currency_constant_service_grpc_transport as currency_constant_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.currency_constant_service_grpc_transport import (
-    CurrencyConstantServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CurrencyConstant
 
 class CurrencyConstantServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,17 +40,23 @@ class CurrencyConstantServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CurrencyConstantServiceClient: ...
     @classmethod
-    def currency_constant_path(cls, currency_constant: Any): ...
+    def currency_constant_path(cls, currency_constant: Any) -> str: ...
     transport: Union[
-        CurrencyConstantServiceGrpcTransport,
-        Callable[[Credentials, type], CurrencyConstantServiceGrpcTransport],
+        currency_constant_service_grpc_transport.CurrencyConstantServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            currency_constant_service_grpc_transport.CurrencyConstantServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CurrencyConstantServiceGrpcTransport,
-                Callable[[Credentials, type], CurrencyConstantServiceGrpcTransport],
+                currency_constant_service_grpc_transport.CurrencyConstantServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    currency_constant_service_grpc_transport.CurrencyConstantServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

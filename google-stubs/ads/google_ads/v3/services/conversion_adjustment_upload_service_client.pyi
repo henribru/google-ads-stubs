@@ -1,6 +1,18 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
@@ -14,9 +26,6 @@ from google.ads.google_ads.v3.services import (
 )
 from google.ads.google_ads.v3.services.transports import (
     conversion_adjustment_upload_service_grpc_transport as conversion_adjustment_upload_service_grpc_transport,
-)
-from google.ads.google_ads.v3.services.transports.conversion_adjustment_upload_service_grpc_transport import (
-    ConversionAdjustmentUploadServiceGrpcTransport,
 )
 from google.ads.google_ads.v3.types import (
     ConversionAdjustment,
@@ -34,16 +43,20 @@ class ConversionAdjustmentUploadServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> ConversionAdjustmentUploadServiceClient: ...
     transport: Union[
-        ConversionAdjustmentUploadServiceGrpcTransport,
-        Callable[[Credentials, type], ConversionAdjustmentUploadServiceGrpcTransport],
+        conversion_adjustment_upload_service_grpc_transport.ConversionAdjustmentUploadServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            conversion_adjustment_upload_service_grpc_transport.ConversionAdjustmentUploadServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                ConversionAdjustmentUploadServiceGrpcTransport,
+                conversion_adjustment_upload_service_grpc_transport.ConversionAdjustmentUploadServiceGrpcTransport,
                 Callable[
-                    [Credentials, type], ConversionAdjustmentUploadServiceGrpcTransport
+                    [Credentials, type],
+                    conversion_adjustment_upload_service_grpc_transport.ConversionAdjustmentUploadServiceGrpcTransport,
                 ],
             ]
         ] = ...,
@@ -56,8 +69,8 @@ class ConversionAdjustmentUploadServiceClient:
         self,
         customer_id: str,
         conversion_adjustments: List[Union[Dict[str, Any], ConversionAdjustment]],
-        partial_failure: Optional[str] = ...,
-        validate_only: Optional[str] = ...,
+        partial_failure: Optional[bool] = ...,
+        validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.recommendation_pb2 import Recommendation
 from google.ads.google_ads.v3.proto.services import (
     recommendation_service_pb2 as recommendation_service_pb2,
 )
@@ -16,14 +27,12 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     recommendation_service_grpc_transport as recommendation_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.recommendation_service_grpc_transport import (
-    RecommendationServiceGrpcTransport,
-)
 from google.ads.google_ads.v3.types import (
     ApplyRecommendationOperation,
     ApplyRecommendationResponse,
     DismissRecommendationRequest,
     DismissRecommendationResponse,
+    Recommendation,
 )
 
 class RecommendationServiceClient:
@@ -39,15 +48,21 @@ class RecommendationServiceClient:
     @classmethod
     def recommendation_path(cls, customer: Any, recommendation: Any) -> str: ...
     transport: Union[
-        RecommendationServiceGrpcTransport,
-        Callable[[Credentials, type], RecommendationServiceGrpcTransport],
+        recommendation_service_grpc_transport.RecommendationServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            recommendation_service_grpc_transport.RecommendationServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                RecommendationServiceGrpcTransport,
-                Callable[[Credentials, type], RecommendationServiceGrpcTransport],
+                recommendation_service_grpc_transport.RecommendationServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    recommendation_service_grpc_transport.RecommendationServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

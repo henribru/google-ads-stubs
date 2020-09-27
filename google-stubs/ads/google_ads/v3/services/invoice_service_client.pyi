@@ -1,6 +1,18 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
@@ -15,9 +27,6 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     invoice_service_grpc_transport as invoice_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.invoice_service_grpc_transport import (
-    InvoiceServiceGrpcTransport,
-)
 from google.ads.google_ads.v3.types import ListInvoicesResponse, MonthOfYearEnum
 
 class InvoiceServiceClient:
@@ -31,15 +40,21 @@ class InvoiceServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> InvoiceServiceClient: ...
     transport: Union[
-        InvoiceServiceGrpcTransport,
-        Callable[[Credentials, type], InvoiceServiceGrpcTransport],
+        invoice_service_grpc_transport.InvoiceServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            invoice_service_grpc_transport.InvoiceServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                InvoiceServiceGrpcTransport,
-                Callable[[Credentials, type], InvoiceServiceGrpcTransport],
+                invoice_service_grpc_transport.InvoiceServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    invoice_service_grpc_transport.InvoiceServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

@@ -1,20 +1,38 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
+from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v2.proto.resources.account_budget_proposal_pb2 import (
-    AccountBudgetProposal,
+from google.ads.google_ads.v2.proto.resources import (
+    account_budget_proposal_pb2 as account_budget_proposal_pb2,
 )
-from google.ads.google_ads.v2.proto.services.account_budget_proposal_service_pb2 import (
-    AccountBudgetProposalOperation,
-    MutateAccountBudgetProposalResponse,
+from google.ads.google_ads.v2.proto.services import (
+    account_budget_proposal_service_pb2 as account_budget_proposal_service_pb2,
+    account_budget_proposal_service_pb2_grpc as account_budget_proposal_service_pb2_grpc,
 )
-from google.ads.google_ads.v2.services.transports.account_budget_proposal_service_grpc_transport import (
-    AccountBudgetProposalServiceGrpcTransport,
+from google.ads.google_ads.v2.services import (
+    account_budget_proposal_service_client_config as account_budget_proposal_service_client_config,
+    enums as enums,
 )
+from google.ads.google_ads.v2.services.transports import (
+    account_budget_proposal_service_grpc_transport as account_budget_proposal_service_grpc_transport,
+)
+from google.ads.google_ads.v2.types import AccountBudgetProposal
 
 class AccountBudgetProposalServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -31,16 +49,20 @@ class AccountBudgetProposalServiceClient:
         cls, customer: Any, account_budget_proposal: Any
     ) -> str: ...
     transport: Union[
-        AccountBudgetProposalServiceGrpcTransport,
-        Callable[[Credentials, type], AccountBudgetProposalServiceGrpcTransport],
+        account_budget_proposal_service_grpc_transport.AccountBudgetProposalServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            account_budget_proposal_service_grpc_transport.AccountBudgetProposalServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                AccountBudgetProposalServiceGrpcTransport,
+                account_budget_proposal_service_grpc_transport.AccountBudgetProposalServiceGrpcTransport,
                 Callable[
-                    [Credentials, type], AccountBudgetProposalServiceGrpcTransport
+                    [Credentials, type],
+                    account_budget_proposal_service_grpc_transport.AccountBudgetProposalServiceGrpcTransport,
                 ],
             ]
         ] = ...,
@@ -59,9 +81,12 @@ class AccountBudgetProposalServiceClient:
     def mutate_account_budget_proposal(
         self,
         customer_id: str,
-        operation_: Union[Dict[str, Any], AccountBudgetProposalOperation],
+        operation_: Union[
+            Dict[str, Any],
+            account_budget_proposal_service_pb2.AccountBudgetProposalOperation,
+        ],
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateAccountBudgetProposalResponse: ...
+    ) -> account_budget_proposal_service_pb2.MutateAccountBudgetProposalResponse: ...

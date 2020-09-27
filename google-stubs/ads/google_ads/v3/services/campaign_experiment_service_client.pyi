@@ -12,6 +12,7 @@ from typing import (
 )
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.operation import Operation  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
@@ -19,15 +20,8 @@ from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 from google.protobuf import empty_pb2 as empty_pb2
 
-from google.ads.google_ads.v3.proto.resources.campaign_experiment_pb2 import (
-    CampaignExperiment,
-)
 from google.ads.google_ads.v3.proto.services import (
     campaign_experiment_service_pb2 as campaign_experiment_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.campaign_experiment_service_pb2 import (
-    CampaignExperimentOperation,
-    MutateCampaignExperimentsResponse,
 )
 from google.ads.google_ads.v3.services import (
     campaign_experiment_service_client_config as campaign_experiment_service_client_config,
@@ -35,10 +29,11 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     campaign_experiment_service_grpc_transport as campaign_experiment_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.campaign_experiment_service_grpc_transport import (
-    CampaignExperimentServiceGrpcTransport,
+from google.ads.google_ads.v3.types import (
+    CampaignExperiment,
+    GraduateCampaignExperimentResponse,
+    Status,
 )
-from google.ads.google_ads.v3.types import GraduateCampaignExperimentResponse, Status
 
 class CampaignExperimentServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -55,15 +50,21 @@ class CampaignExperimentServiceClient:
         cls, customer: Any, campaign_experiment: Any
     ) -> str: ...
     transport: Union[
-        CampaignExperimentServiceGrpcTransport,
-        Callable[[Credentials, type], CampaignExperimentServiceGrpcTransport],
+        campaign_experiment_service_grpc_transport.CampaignExperimentServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            campaign_experiment_service_grpc_transport.CampaignExperimentServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CampaignExperimentServiceGrpcTransport,
-                Callable[[Credentials, type], CampaignExperimentServiceGrpcTransport],
+                campaign_experiment_service_grpc_transport.CampaignExperimentServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    campaign_experiment_service_grpc_transport.CampaignExperimentServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -80,23 +81,28 @@ class CampaignExperimentServiceClient:
     ) -> CampaignExperiment: ...
     def create_campaign_experiment(
         self,
-        customer_id: Any,
-        campaign_experiment: Any,
-        validate_only: Optional[Any] = ...,
+        customer_id: str,
+        campaign_experiment: Union[Dict[str, Any], CampaignExperiment],
+        validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ): ...
+    ) -> Operation: ...
     def mutate_campaign_experiments(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CampaignExperimentOperation]],
+        operations: List[
+            Union[
+                Dict[str, Any],
+                campaign_experiment_service_pb2.CampaignExperimentOperation,
+            ]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCampaignExperimentsResponse: ...
+    ) -> campaign_experiment_service_pb2.MutateCampaignExperimentsResponse: ...
     def graduate_campaign_experiment(
         self,
         campaign_experiment: str,

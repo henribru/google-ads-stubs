@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.change_status_pb2 import ChangeStatus
 from google.ads.google_ads.v3.proto.services import (
     change_status_service_pb2 as change_status_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     change_status_service_grpc_transport as change_status_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.change_status_service_grpc_transport import (
-    ChangeStatusServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import ChangeStatus
 
 class ChangeStatusServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class ChangeStatusServiceClient:
     @classmethod
     def change_status_path(cls, customer: Any, change_status: Any) -> str: ...
     transport: Union[
-        ChangeStatusServiceGrpcTransport,
-        Callable[[Credentials, type], ChangeStatusServiceGrpcTransport],
+        change_status_service_grpc_transport.ChangeStatusServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            change_status_service_grpc_transport.ChangeStatusServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                ChangeStatusServiceGrpcTransport,
-                Callable[[Credentials, type], ChangeStatusServiceGrpcTransport],
+                change_status_service_grpc_transport.ChangeStatusServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    change_status_service_grpc_transport.ChangeStatusServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

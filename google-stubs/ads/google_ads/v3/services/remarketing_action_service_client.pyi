@@ -1,20 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.remarketing_action_pb2 import (
-    RemarketingAction,
-)
 from google.ads.google_ads.v3.proto.services import (
     remarketing_action_service_pb2 as remarketing_action_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.remarketing_action_service_pb2 import (
-    MutateRemarketingActionsResponse,
-    RemarketingActionOperation,
 )
 from google.ads.google_ads.v3.services import (
     remarketing_action_service_client_config as remarketing_action_service_client_config,
@@ -22,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     remarketing_action_service_grpc_transport as remarketing_action_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.remarketing_action_service_grpc_transport import (
-    RemarketingActionServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import RemarketingAction
 
 class RemarketingActionServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -39,15 +42,21 @@ class RemarketingActionServiceClient:
     @classmethod
     def remarketing_action_path(cls, customer: Any, remarketing_action: Any) -> str: ...
     transport: Union[
-        RemarketingActionServiceGrpcTransport,
-        Callable[[Credentials, type], RemarketingActionServiceGrpcTransport],
+        remarketing_action_service_grpc_transport.RemarketingActionServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            remarketing_action_service_grpc_transport.RemarketingActionServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                RemarketingActionServiceGrpcTransport,
-                Callable[[Credentials, type], RemarketingActionServiceGrpcTransport],
+                remarketing_action_service_grpc_transport.RemarketingActionServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    remarketing_action_service_grpc_transport.RemarketingActionServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -65,10 +74,15 @@ class RemarketingActionServiceClient:
     def mutate_remarketing_actions(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], RemarketingActionOperation]],
+        operations: List[
+            Union[
+                Dict[str, Any],
+                remarketing_action_service_pb2.RemarketingActionOperation,
+            ]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateRemarketingActionsResponse: ...
+    ) -> remarketing_action_service_pb2.MutateRemarketingActionsResponse: ...

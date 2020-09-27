@@ -1,18 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.customer_feed_pb2 import CustomerFeed
 from google.ads.google_ads.v3.proto.services import (
     customer_feed_service_pb2 as customer_feed_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.customer_feed_service_pb2 import (
-    CustomerFeedOperation,
-    MutateCustomerFeedsResponse,
 )
 from google.ads.google_ads.v3.services import (
     customer_feed_service_client_config as customer_feed_service_client_config,
@@ -20,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     customer_feed_service_grpc_transport as customer_feed_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.customer_feed_service_grpc_transport import (
-    CustomerFeedServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CustomerFeed
 
 class CustomerFeedServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,15 +42,21 @@ class CustomerFeedServiceClient:
     @classmethod
     def customer_feed_path(cls, customer: Any, customer_feed: Any) -> str: ...
     transport: Union[
-        CustomerFeedServiceGrpcTransport,
-        Callable[[Credentials, type], CustomerFeedServiceGrpcTransport],
+        customer_feed_service_grpc_transport.CustomerFeedServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            customer_feed_service_grpc_transport.CustomerFeedServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CustomerFeedServiceGrpcTransport,
-                Callable[[Credentials, type], CustomerFeedServiceGrpcTransport],
+                customer_feed_service_grpc_transport.CustomerFeedServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    customer_feed_service_grpc_transport.CustomerFeedServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -63,10 +74,12 @@ class CustomerFeedServiceClient:
     def mutate_customer_feeds(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CustomerFeedOperation]],
+        operations: List[
+            Union[Dict[str, Any], customer_feed_service_pb2.CustomerFeedOperation]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCustomerFeedsResponse: ...
+    ) -> customer_feed_service_pb2.MutateCustomerFeedsResponse: ...

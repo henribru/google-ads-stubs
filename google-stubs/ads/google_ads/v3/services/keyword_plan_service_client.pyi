@@ -1,20 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.keyword_plan_pb2 import KeywordPlan
 from google.ads.google_ads.v3.proto.services import (
     keyword_plan_service_pb2 as keyword_plan_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.keyword_plan_service_pb2 import (
-    GenerateForecastMetricsResponse,
-    GenerateHistoricalMetricsResponse,
-    KeywordPlanOperation,
-    MutateKeywordPlansResponse,
 )
 from google.ads.google_ads.v3.services import (
     keyword_plan_service_client_config as keyword_plan_service_client_config,
@@ -22,8 +27,10 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     keyword_plan_service_grpc_transport as keyword_plan_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.keyword_plan_service_grpc_transport import (
-    KeywordPlanServiceGrpcTransport,
+from google.ads.google_ads.v3.types import (
+    GenerateForecastMetricsResponse,
+    GenerateHistoricalMetricsResponse,
+    KeywordPlan,
 )
 
 class KeywordPlanServiceClient:
@@ -39,15 +46,21 @@ class KeywordPlanServiceClient:
     @classmethod
     def keyword_plan_path(cls, customer: Any, keyword_plan: Any) -> str: ...
     transport: Union[
-        KeywordPlanServiceGrpcTransport,
-        Callable[[Credentials, type], KeywordPlanServiceGrpcTransport],
+        keyword_plan_service_grpc_transport.KeywordPlanServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            keyword_plan_service_grpc_transport.KeywordPlanServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                KeywordPlanServiceGrpcTransport,
-                Callable[[Credentials, type], KeywordPlanServiceGrpcTransport],
+                keyword_plan_service_grpc_transport.KeywordPlanServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    keyword_plan_service_grpc_transport.KeywordPlanServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -65,13 +78,15 @@ class KeywordPlanServiceClient:
     def mutate_keyword_plans(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], KeywordPlanOperation]],
+        operations: List[
+            Union[Dict[str, Any], keyword_plan_service_pb2.KeywordPlanOperation]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateKeywordPlansResponse: ...
+    ) -> keyword_plan_service_pb2.MutateKeywordPlansResponse: ...
     def generate_forecast_metrics(
         self,
         keyword_plan: str,

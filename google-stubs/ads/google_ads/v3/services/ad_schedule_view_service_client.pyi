@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.ad_schedule_view_pb2 import AdScheduleView
 from google.ads.google_ads.v3.proto.services import (
     ad_schedule_view_service_pb2 as ad_schedule_view_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     ad_schedule_view_service_grpc_transport as ad_schedule_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.ad_schedule_view_service_grpc_transport import (
-    AdScheduleViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import AdScheduleView
 
 class AdScheduleViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class AdScheduleViewServiceClient:
     @classmethod
     def ad_schedule_view_path(cls, customer: Any, ad_schedule_view: Any) -> str: ...
     transport: Union[
-        AdScheduleViewServiceGrpcTransport,
-        Callable[[Credentials, type], AdScheduleViewServiceGrpcTransport],
+        ad_schedule_view_service_grpc_transport.AdScheduleViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            ad_schedule_view_service_grpc_transport.AdScheduleViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                AdScheduleViewServiceGrpcTransport,
-                Callable[[Credentials, type], AdScheduleViewServiceGrpcTransport],
+                ad_schedule_view_service_grpc_transport.AdScheduleViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    ad_schedule_view_service_grpc_transport.AdScheduleViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

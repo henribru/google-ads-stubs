@@ -1,18 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.user_list_pb2 import UserList
 from google.ads.google_ads.v3.proto.services import (
     user_list_service_pb2 as user_list_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.user_list_service_pb2 import (
-    MutateUserListsResponse,
-    UserListOperation,
 )
 from google.ads.google_ads.v3.services import (
     user_list_service_client_config as user_list_service_client_config,
@@ -20,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     user_list_service_grpc_transport as user_list_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.user_list_service_grpc_transport import (
-    UserListServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import UserList
 
 class UserListServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,15 +42,21 @@ class UserListServiceClient:
     @classmethod
     def user_list_path(cls, customer: Any, user_list: Any) -> str: ...
     transport: Union[
-        UserListServiceGrpcTransport,
-        Callable[[Credentials, type], UserListServiceGrpcTransport],
+        user_list_service_grpc_transport.UserListServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            user_list_service_grpc_transport.UserListServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                UserListServiceGrpcTransport,
-                Callable[[Credentials, type], UserListServiceGrpcTransport],
+                user_list_service_grpc_transport.UserListServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    user_list_service_grpc_transport.UserListServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -63,10 +74,12 @@ class UserListServiceClient:
     def mutate_user_lists(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], UserListOperation]],
+        operations: List[
+            Union[Dict[str, Any], user_list_service_pb2.UserListOperation]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateUserListsResponse: ...
+    ) -> user_list_service_pb2.MutateUserListsResponse: ...

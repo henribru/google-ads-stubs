@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.topic_constant_pb2 import TopicConstant
 from google.ads.google_ads.v3.proto.services import (
     topic_constant_service_pb2 as topic_constant_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     topic_constant_service_grpc_transport as topic_constant_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.topic_constant_service_grpc_transport import (
-    TopicConstantServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import TopicConstant
 
 class TopicConstantServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -31,17 +40,23 @@ class TopicConstantServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> TopicConstantServiceClient: ...
     @classmethod
-    def topic_constant_path(cls, topic_constant: Any): ...
+    def topic_constant_path(cls, topic_constant: Any) -> str: ...
     transport: Union[
-        TopicConstantServiceGrpcTransport,
-        Callable[[Credentials, type], TopicConstantServiceGrpcTransport],
+        topic_constant_service_grpc_transport.TopicConstantServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            topic_constant_service_grpc_transport.TopicConstantServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                TopicConstantServiceGrpcTransport,
-                Callable[[Credentials, type], TopicConstantServiceGrpcTransport],
+                topic_constant_service_grpc_transport.TopicConstantServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    topic_constant_service_grpc_transport.TopicConstantServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

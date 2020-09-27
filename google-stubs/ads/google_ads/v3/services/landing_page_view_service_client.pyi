@@ -1,14 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.landing_page_view_pb2 import (
-    LandingPageView,
-)
 from google.ads.google_ads.v3.proto.services import (
     landing_page_view_service_pb2 as landing_page_view_service_pb2,
 )
@@ -18,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     landing_page_view_service_grpc_transport as landing_page_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.landing_page_view_service_grpc_transport import (
-    LandingPageViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import LandingPageView
 
 class LandingPageViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -35,15 +42,21 @@ class LandingPageViewServiceClient:
     @classmethod
     def landing_page_view_path(cls, customer: Any, landing_page_view: Any) -> str: ...
     transport: Union[
-        LandingPageViewServiceGrpcTransport,
-        Callable[[Credentials, type], LandingPageViewServiceGrpcTransport],
+        landing_page_view_service_grpc_transport.LandingPageViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            landing_page_view_service_grpc_transport.LandingPageViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                LandingPageViewServiceGrpcTransport,
-                Callable[[Credentials, type], LandingPageViewServiceGrpcTransport],
+                landing_page_view_service_grpc_transport.LandingPageViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    landing_page_view_service_grpc_transport.LandingPageViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

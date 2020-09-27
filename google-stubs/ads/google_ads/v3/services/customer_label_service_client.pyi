@@ -1,18 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.customer_label_pb2 import CustomerLabel
 from google.ads.google_ads.v3.proto.services import (
     customer_label_service_pb2 as customer_label_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.customer_label_service_pb2 import (
-    CustomerLabelOperation,
-    MutateCustomerLabelsResponse,
 )
 from google.ads.google_ads.v3.services import (
     customer_label_service_client_config as customer_label_service_client_config,
@@ -20,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     customer_label_service_grpc_transport as customer_label_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.customer_label_service_grpc_transport import (
-    CustomerLabelServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CustomerLabel
 
 class CustomerLabelServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,15 +42,21 @@ class CustomerLabelServiceClient:
     @classmethod
     def customer_label_path(cls, customer: Any, customer_label: Any) -> str: ...
     transport: Union[
-        CustomerLabelServiceGrpcTransport,
-        Callable[[Credentials, type], CustomerLabelServiceGrpcTransport],
+        customer_label_service_grpc_transport.CustomerLabelServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            customer_label_service_grpc_transport.CustomerLabelServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CustomerLabelServiceGrpcTransport,
-                Callable[[Credentials, type], CustomerLabelServiceGrpcTransport],
+                customer_label_service_grpc_transport.CustomerLabelServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    customer_label_service_grpc_transport.CustomerLabelServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -63,10 +74,12 @@ class CustomerLabelServiceClient:
     def mutate_customer_labels(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CustomerLabelOperation]],
+        operations: List[
+            Union[Dict[str, Any], customer_label_service_pb2.CustomerLabelOperation]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCustomerLabelsResponse: ...
+    ) -> customer_label_service_pb2.MutateCustomerLabelsResponse: ...

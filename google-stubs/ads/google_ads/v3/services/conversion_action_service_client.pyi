@@ -1,20 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.conversion_action_pb2 import (
-    ConversionAction,
-)
 from google.ads.google_ads.v3.proto.services import (
     conversion_action_service_pb2 as conversion_action_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.conversion_action_service_pb2 import (
-    ConversionActionOperation,
-    MutateConversionActionsResponse,
 )
 from google.ads.google_ads.v3.services import (
     conversion_action_service_client_config as conversion_action_service_client_config,
@@ -22,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     conversion_action_service_grpc_transport as conversion_action_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.conversion_action_service_grpc_transport import (
-    ConversionActionServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import ConversionAction
 
 class ConversionActionServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -39,15 +42,21 @@ class ConversionActionServiceClient:
     @classmethod
     def conversion_action_path(cls, customer: Any, conversion_action: Any) -> str: ...
     transport: Union[
-        ConversionActionServiceGrpcTransport,
-        Callable[[Credentials, type], ConversionActionServiceGrpcTransport],
+        conversion_action_service_grpc_transport.ConversionActionServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            conversion_action_service_grpc_transport.ConversionActionServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                ConversionActionServiceGrpcTransport,
-                Callable[[Credentials, type], ConversionActionServiceGrpcTransport],
+                conversion_action_service_grpc_transport.ConversionActionServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    conversion_action_service_grpc_transport.ConversionActionServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -65,10 +74,14 @@ class ConversionActionServiceClient:
     def mutate_conversion_actions(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], ConversionActionOperation]],
+        operations: List[
+            Union[
+                Dict[str, Any], conversion_action_service_pb2.ConversionActionOperation
+            ]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateConversionActionsResponse: ...
+    ) -> conversion_action_service_pb2.MutateConversionActionsResponse: ...

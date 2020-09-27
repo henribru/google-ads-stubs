@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.hotel_group_view_pb2 import HotelGroupView
 from google.ads.google_ads.v3.proto.services import (
     hotel_group_view_service_pb2 as hotel_group_view_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     hotel_group_view_service_grpc_transport as hotel_group_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.hotel_group_view_service_grpc_transport import (
-    HotelGroupViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import HotelGroupView
 
 class HotelGroupViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class HotelGroupViewServiceClient:
     @classmethod
     def hotel_group_view_path(cls, customer: Any, hotel_group_view: Any) -> str: ...
     transport: Union[
-        HotelGroupViewServiceGrpcTransport,
-        Callable[[Credentials, type], HotelGroupViewServiceGrpcTransport],
+        hotel_group_view_service_grpc_transport.HotelGroupViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            hotel_group_view_service_grpc_transport.HotelGroupViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                HotelGroupViewServiceGrpcTransport,
-                Callable[[Credentials, type], HotelGroupViewServiceGrpcTransport],
+                hotel_group_view_service_grpc_transport.HotelGroupViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    hotel_group_view_service_grpc_transport.HotelGroupViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

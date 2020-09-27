@@ -1,14 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.carrier_constant_pb2 import (
-    CarrierConstant,
-)
 from google.ads.google_ads.v3.proto.services import (
     carrier_constant_service_pb2 as carrier_constant_service_pb2,
 )
@@ -18,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     carrier_constant_service_grpc_transport as carrier_constant_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.carrier_constant_service_grpc_transport import (
-    CarrierConstantServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CarrierConstant
 
 class CarrierConstantServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,17 +40,23 @@ class CarrierConstantServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CarrierConstantServiceClient: ...
     @classmethod
-    def carrier_constant_path(cls, carrier_constant: Any): ...
+    def carrier_constant_path(cls, carrier_constant: Any) -> str: ...
     transport: Union[
-        CarrierConstantServiceGrpcTransport,
-        Callable[[Credentials, type], CarrierConstantServiceGrpcTransport],
+        carrier_constant_service_grpc_transport.CarrierConstantServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            carrier_constant_service_grpc_transport.CarrierConstantServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CarrierConstantServiceGrpcTransport,
-                Callable[[Credentials, type], CarrierConstantServiceGrpcTransport],
+                carrier_constant_service_grpc_transport.CarrierConstantServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    carrier_constant_service_grpc_transport.CarrierConstantServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

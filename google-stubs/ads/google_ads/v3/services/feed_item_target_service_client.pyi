@@ -1,18 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.feed_item_target_pb2 import FeedItemTarget
 from google.ads.google_ads.v3.proto.services import (
     feed_item_target_service_pb2 as feed_item_target_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.feed_item_target_service_pb2 import (
-    FeedItemTargetOperation,
-    MutateFeedItemTargetsResponse,
 )
 from google.ads.google_ads.v3.services import (
     feed_item_target_service_client_config as feed_item_target_service_client_config,
@@ -20,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     feed_item_target_service_grpc_transport as feed_item_target_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.feed_item_target_service_grpc_transport import (
-    FeedItemTargetServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import FeedItemTarget
 
 class FeedItemTargetServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,15 +42,21 @@ class FeedItemTargetServiceClient:
     @classmethod
     def feed_item_target_path(cls, customer: Any, feed_item_target: Any) -> str: ...
     transport: Union[
-        FeedItemTargetServiceGrpcTransport,
-        Callable[[Credentials, type], FeedItemTargetServiceGrpcTransport],
+        feed_item_target_service_grpc_transport.FeedItemTargetServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            feed_item_target_service_grpc_transport.FeedItemTargetServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                FeedItemTargetServiceGrpcTransport,
-                Callable[[Credentials, type], FeedItemTargetServiceGrpcTransport],
+                feed_item_target_service_grpc_transport.FeedItemTargetServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    feed_item_target_service_grpc_transport.FeedItemTargetServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -63,8 +74,10 @@ class FeedItemTargetServiceClient:
     def mutate_feed_item_targets(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], FeedItemTargetOperation]],
+        operations: List[
+            Union[Dict[str, Any], feed_item_target_service_pb2.FeedItemTargetOperation]
+        ],
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateFeedItemTargetsResponse: ...
+    ) -> feed_item_target_service_pb2.MutateFeedItemTargetsResponse: ...

@@ -1,18 +1,110 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
+from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v2.proto.resources.campaign_budget_pb2 import CampaignBudget
-from google.ads.google_ads.v2.proto.services.campaign_budget_service_pb2 import (
-    CampaignBudgetOperation,
-    MutateCampaignBudgetsResponse,
+from google.ads.google_ads.v2.proto.resources import (
+    account_budget_pb2 as account_budget_pb2,
+    account_budget_proposal_pb2 as account_budget_proposal_pb2,
+    ad_group_ad_asset_view_pb2 as ad_group_ad_asset_view_pb2,
+    ad_group_ad_label_pb2 as ad_group_ad_label_pb2,
+    ad_group_ad_pb2 as ad_group_ad_pb2,
+    ad_group_audience_view_pb2 as ad_group_audience_view_pb2,
+    ad_group_bid_modifier_pb2 as ad_group_bid_modifier_pb2,
+    ad_group_criterion_label_pb2 as ad_group_criterion_label_pb2,
+    ad_group_criterion_pb2 as ad_group_criterion_pb2,
+    ad_group_criterion_simulation_pb2 as ad_group_criterion_simulation_pb2,
+    ad_group_extension_setting_pb2 as ad_group_extension_setting_pb2,
+    ad_group_feed_pb2 as ad_group_feed_pb2,
+    ad_group_label_pb2 as ad_group_label_pb2,
+    ad_group_pb2 as ad_group_pb2,
+    ad_group_simulation_pb2 as ad_group_simulation_pb2,
+    ad_parameter_pb2 as ad_parameter_pb2,
+    ad_pb2 as ad_pb2,
+    ad_schedule_view_pb2 as ad_schedule_view_pb2,
+    age_range_view_pb2 as age_range_view_pb2,
+    asset_pb2 as asset_pb2,
+    bidding_strategy_pb2 as bidding_strategy_pb2,
+    billing_setup_pb2 as billing_setup_pb2,
+    campaign_audience_view_pb2 as campaign_audience_view_pb2,
+    campaign_bid_modifier_pb2 as campaign_bid_modifier_pb2,
+    campaign_budget_pb2 as campaign_budget_pb2,
 )
-from google.ads.google_ads.v2.services.transports.campaign_budget_service_grpc_transport import (
-    CampaignBudgetServiceGrpcTransport,
+from google.ads.google_ads.v2.proto.services import (
+    account_budget_proposal_service_pb2 as account_budget_proposal_service_pb2,
+    account_budget_proposal_service_pb2_grpc as account_budget_proposal_service_pb2_grpc,
+    account_budget_service_pb2 as account_budget_service_pb2,
+    account_budget_service_pb2_grpc as account_budget_service_pb2_grpc,
+    ad_group_ad_asset_view_service_pb2 as ad_group_ad_asset_view_service_pb2,
+    ad_group_ad_asset_view_service_pb2_grpc as ad_group_ad_asset_view_service_pb2_grpc,
+    ad_group_ad_label_service_pb2 as ad_group_ad_label_service_pb2,
+    ad_group_ad_label_service_pb2_grpc as ad_group_ad_label_service_pb2_grpc,
+    ad_group_ad_service_pb2 as ad_group_ad_service_pb2,
+    ad_group_ad_service_pb2_grpc as ad_group_ad_service_pb2_grpc,
+    ad_group_audience_view_service_pb2 as ad_group_audience_view_service_pb2,
+    ad_group_audience_view_service_pb2_grpc as ad_group_audience_view_service_pb2_grpc,
+    ad_group_bid_modifier_service_pb2 as ad_group_bid_modifier_service_pb2,
+    ad_group_bid_modifier_service_pb2_grpc as ad_group_bid_modifier_service_pb2_grpc,
+    ad_group_criterion_label_service_pb2 as ad_group_criterion_label_service_pb2,
+    ad_group_criterion_label_service_pb2_grpc as ad_group_criterion_label_service_pb2_grpc,
+    ad_group_criterion_service_pb2 as ad_group_criterion_service_pb2,
+    ad_group_criterion_service_pb2_grpc as ad_group_criterion_service_pb2_grpc,
+    ad_group_criterion_simulation_service_pb2 as ad_group_criterion_simulation_service_pb2,
+    ad_group_criterion_simulation_service_pb2_grpc as ad_group_criterion_simulation_service_pb2_grpc,
+    ad_group_extension_setting_service_pb2 as ad_group_extension_setting_service_pb2,
+    ad_group_extension_setting_service_pb2_grpc as ad_group_extension_setting_service_pb2_grpc,
+    ad_group_feed_service_pb2 as ad_group_feed_service_pb2,
+    ad_group_feed_service_pb2_grpc as ad_group_feed_service_pb2_grpc,
+    ad_group_label_service_pb2 as ad_group_label_service_pb2,
+    ad_group_label_service_pb2_grpc as ad_group_label_service_pb2_grpc,
+    ad_group_service_pb2 as ad_group_service_pb2,
+    ad_group_service_pb2_grpc as ad_group_service_pb2_grpc,
+    ad_group_simulation_service_pb2 as ad_group_simulation_service_pb2,
+    ad_group_simulation_service_pb2_grpc as ad_group_simulation_service_pb2_grpc,
+    ad_parameter_service_pb2 as ad_parameter_service_pb2,
+    ad_parameter_service_pb2_grpc as ad_parameter_service_pb2_grpc,
+    ad_schedule_view_service_pb2 as ad_schedule_view_service_pb2,
+    ad_schedule_view_service_pb2_grpc as ad_schedule_view_service_pb2_grpc,
+    ad_service_pb2 as ad_service_pb2,
+    ad_service_pb2_grpc as ad_service_pb2_grpc,
+    age_range_view_service_pb2 as age_range_view_service_pb2,
+    age_range_view_service_pb2_grpc as age_range_view_service_pb2_grpc,
+    asset_service_pb2 as asset_service_pb2,
+    asset_service_pb2_grpc as asset_service_pb2_grpc,
+    bidding_strategy_service_pb2 as bidding_strategy_service_pb2,
+    bidding_strategy_service_pb2_grpc as bidding_strategy_service_pb2_grpc,
+    billing_setup_service_pb2 as billing_setup_service_pb2,
+    billing_setup_service_pb2_grpc as billing_setup_service_pb2_grpc,
+    campaign_audience_view_service_pb2 as campaign_audience_view_service_pb2,
+    campaign_audience_view_service_pb2_grpc as campaign_audience_view_service_pb2_grpc,
+    campaign_bid_modifier_service_pb2 as campaign_bid_modifier_service_pb2,
+    campaign_bid_modifier_service_pb2_grpc as campaign_bid_modifier_service_pb2_grpc,
+    campaign_budget_service_pb2 as campaign_budget_service_pb2,
+    campaign_budget_service_pb2_grpc as campaign_budget_service_pb2_grpc,
 )
+from google.ads.google_ads.v2.services import (
+    campaign_budget_service_client_config as campaign_budget_service_client_config,
+    enums as enums,
+)
+from google.ads.google_ads.v2.services.transports import (
+    campaign_budget_service_grpc_transport as campaign_budget_service_grpc_transport,
+)
+from google.ads.google_ads.v2.types import CampaignBudget
 
 class CampaignBudgetServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -27,15 +119,21 @@ class CampaignBudgetServiceClient:
     @classmethod
     def campaign_budget_path(cls, customer: Any, campaign_budget: Any) -> str: ...
     transport: Union[
-        CampaignBudgetServiceGrpcTransport,
-        Callable[[Credentials, type], CampaignBudgetServiceGrpcTransport],
+        campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CampaignBudgetServiceGrpcTransport,
-                Callable[[Credentials, type], CampaignBudgetServiceGrpcTransport],
+                campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -53,10 +151,12 @@ class CampaignBudgetServiceClient:
     def mutate_campaign_budgets(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CampaignBudgetOperation]],
+        operations: List[
+            Union[Dict[str, Any], campaign_budget_service_pb2.CampaignBudgetOperation]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCampaignBudgetsResponse: ...
+    ) -> campaign_budget_service_pb2.MutateCampaignBudgetsResponse: ...

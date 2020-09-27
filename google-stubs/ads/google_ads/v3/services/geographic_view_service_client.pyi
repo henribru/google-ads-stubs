@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.geographic_view_pb2 import GeographicView
 from google.ads.google_ads.v3.proto.services import (
     geographic_view_service_pb2 as geographic_view_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     geographic_view_service_grpc_transport as geographic_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.geographic_view_service_grpc_transport import (
-    GeographicViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import GeographicView
 
 class GeographicViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class GeographicViewServiceClient:
     @classmethod
     def geographic_view_path(cls, customer: Any, geographic_view: Any) -> str: ...
     transport: Union[
-        GeographicViewServiceGrpcTransport,
-        Callable[[Credentials, type], GeographicViewServiceGrpcTransport],
+        geographic_view_service_grpc_transport.GeographicViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            geographic_view_service_grpc_transport.GeographicViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                GeographicViewServiceGrpcTransport,
-                Callable[[Credentials, type], GeographicViewServiceGrpcTransport],
+                geographic_view_service_grpc_transport.GeographicViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    geographic_view_service_grpc_transport.GeographicViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

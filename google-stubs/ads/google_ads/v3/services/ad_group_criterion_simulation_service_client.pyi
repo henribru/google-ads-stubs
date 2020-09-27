@@ -1,14 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.ad_group_criterion_simulation_pb2 import (
-    AdGroupCriterionSimulation,
-)
 from google.ads.google_ads.v3.proto.services import (
     ad_group_criterion_simulation_service_pb2 as ad_group_criterion_simulation_service_pb2,
 )
@@ -18,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     ad_group_criterion_simulation_service_grpc_transport as ad_group_criterion_simulation_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.ad_group_criterion_simulation_service_grpc_transport import (
-    AdGroupCriterionSimulationServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import AdGroupCriterionSimulation
 
 class AdGroupCriterionSimulationServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,16 +44,20 @@ class AdGroupCriterionSimulationServiceClient:
         cls, customer: Any, ad_group_criterion_simulation: Any
     ) -> str: ...
     transport: Union[
-        AdGroupCriterionSimulationServiceGrpcTransport,
-        Callable[[Credentials, type], AdGroupCriterionSimulationServiceGrpcTransport],
+        ad_group_criterion_simulation_service_grpc_transport.AdGroupCriterionSimulationServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            ad_group_criterion_simulation_service_grpc_transport.AdGroupCriterionSimulationServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                AdGroupCriterionSimulationServiceGrpcTransport,
+                ad_group_criterion_simulation_service_grpc_transport.AdGroupCriterionSimulationServiceGrpcTransport,
                 Callable[
-                    [Credentials, type], AdGroupCriterionSimulationServiceGrpcTransport
+                    [Credentials, type],
+                    ad_group_criterion_simulation_service_grpc_transport.AdGroupCriterionSimulationServiceGrpcTransport,
                 ],
             ]
         ] = ...,

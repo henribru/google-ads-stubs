@@ -12,6 +12,7 @@ from typing import (
 )
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.operation import Operation  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
@@ -20,7 +21,6 @@ from google.oauth2 import service_account as service_account  # type: ignore
 from google.protobuf import empty_pb2 as empty_pb2
 
 from google.ads.google_ads.v3.proto.resources import mutate_job_pb2 as mutate_job_pb2
-from google.ads.google_ads.v3.proto.resources.mutate_job_pb2 import MutateJob
 from google.ads.google_ads.v3.proto.services import (
     mutate_job_service_pb2 as mutate_job_service_pb2,
 )
@@ -30,12 +30,10 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     mutate_job_service_grpc_transport as mutate_job_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.mutate_job_service_grpc_transport import (
-    MutateJobServiceGrpcTransport,
-)
 from google.ads.google_ads.v3.types import (
     AddMutateJobOperationsResponse,
     CreateMutateJobResponse,
+    MutateJob,
     MutateJobResult,
     MutateOperation,
 )
@@ -53,15 +51,21 @@ class MutateJobServiceClient:
     @classmethod
     def mutate_job_path(cls, customer: Any, mutate_job: Any) -> str: ...
     transport: Union[
-        MutateJobServiceGrpcTransport,
-        Callable[[Credentials, type], MutateJobServiceGrpcTransport],
+        mutate_job_service_grpc_transport.MutateJobServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            mutate_job_service_grpc_transport.MutateJobServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                MutateJobServiceGrpcTransport,
-                Callable[[Credentials, type], MutateJobServiceGrpcTransport],
+                mutate_job_service_grpc_transport.MutateJobServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    mutate_job_service_grpc_transport.MutateJobServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

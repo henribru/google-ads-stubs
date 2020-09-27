@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.click_view_pb2 import ClickView
 from google.ads.google_ads.v3.proto.services import (
     click_view_service_pb2 as click_view_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     click_view_service_grpc_transport as click_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.click_view_service_grpc_transport import (
-    ClickViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import ClickView
 
 class ClickViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class ClickViewServiceClient:
     @classmethod
     def click_view_path(cls, customer: Any, click_view: Any) -> str: ...
     transport: Union[
-        ClickViewServiceGrpcTransport,
-        Callable[[Credentials, type], ClickViewServiceGrpcTransport],
+        click_view_service_grpc_transport.ClickViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            click_view_service_grpc_transport.ClickViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                ClickViewServiceGrpcTransport,
-                Callable[[Credentials, type], ClickViewServiceGrpcTransport],
+                click_view_service_grpc_transport.ClickViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    click_view_service_grpc_transport.ClickViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

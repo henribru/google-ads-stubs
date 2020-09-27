@@ -1,18 +1,77 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
+from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v2.proto.resources.ad_group_pb2 import AdGroup
-from google.ads.google_ads.v2.proto.services.ad_group_service_pb2 import (
-    AdGroupOperation,
-    MutateAdGroupsResponse,
+from google.ads.google_ads.v2.proto.resources import (
+    account_budget_pb2 as account_budget_pb2,
+    account_budget_proposal_pb2 as account_budget_proposal_pb2,
+    ad_group_ad_asset_view_pb2 as ad_group_ad_asset_view_pb2,
+    ad_group_ad_label_pb2 as ad_group_ad_label_pb2,
+    ad_group_ad_pb2 as ad_group_ad_pb2,
+    ad_group_audience_view_pb2 as ad_group_audience_view_pb2,
+    ad_group_bid_modifier_pb2 as ad_group_bid_modifier_pb2,
+    ad_group_criterion_label_pb2 as ad_group_criterion_label_pb2,
+    ad_group_criterion_pb2 as ad_group_criterion_pb2,
+    ad_group_criterion_simulation_pb2 as ad_group_criterion_simulation_pb2,
+    ad_group_extension_setting_pb2 as ad_group_extension_setting_pb2,
+    ad_group_feed_pb2 as ad_group_feed_pb2,
+    ad_group_label_pb2 as ad_group_label_pb2,
+    ad_group_pb2 as ad_group_pb2,
 )
-from google.ads.google_ads.v2.services.transports.ad_group_service_grpc_transport import (
-    AdGroupServiceGrpcTransport,
+from google.ads.google_ads.v2.proto.services import (
+    account_budget_proposal_service_pb2 as account_budget_proposal_service_pb2,
+    account_budget_proposal_service_pb2_grpc as account_budget_proposal_service_pb2_grpc,
+    account_budget_service_pb2 as account_budget_service_pb2,
+    account_budget_service_pb2_grpc as account_budget_service_pb2_grpc,
+    ad_group_ad_asset_view_service_pb2 as ad_group_ad_asset_view_service_pb2,
+    ad_group_ad_asset_view_service_pb2_grpc as ad_group_ad_asset_view_service_pb2_grpc,
+    ad_group_ad_label_service_pb2 as ad_group_ad_label_service_pb2,
+    ad_group_ad_label_service_pb2_grpc as ad_group_ad_label_service_pb2_grpc,
+    ad_group_ad_service_pb2 as ad_group_ad_service_pb2,
+    ad_group_ad_service_pb2_grpc as ad_group_ad_service_pb2_grpc,
+    ad_group_audience_view_service_pb2 as ad_group_audience_view_service_pb2,
+    ad_group_audience_view_service_pb2_grpc as ad_group_audience_view_service_pb2_grpc,
+    ad_group_bid_modifier_service_pb2 as ad_group_bid_modifier_service_pb2,
+    ad_group_bid_modifier_service_pb2_grpc as ad_group_bid_modifier_service_pb2_grpc,
+    ad_group_criterion_label_service_pb2 as ad_group_criterion_label_service_pb2,
+    ad_group_criterion_label_service_pb2_grpc as ad_group_criterion_label_service_pb2_grpc,
+    ad_group_criterion_service_pb2 as ad_group_criterion_service_pb2,
+    ad_group_criterion_service_pb2_grpc as ad_group_criterion_service_pb2_grpc,
+    ad_group_criterion_simulation_service_pb2 as ad_group_criterion_simulation_service_pb2,
+    ad_group_criterion_simulation_service_pb2_grpc as ad_group_criterion_simulation_service_pb2_grpc,
+    ad_group_extension_setting_service_pb2 as ad_group_extension_setting_service_pb2,
+    ad_group_extension_setting_service_pb2_grpc as ad_group_extension_setting_service_pb2_grpc,
+    ad_group_feed_service_pb2 as ad_group_feed_service_pb2,
+    ad_group_feed_service_pb2_grpc as ad_group_feed_service_pb2_grpc,
+    ad_group_label_service_pb2 as ad_group_label_service_pb2,
+    ad_group_label_service_pb2_grpc as ad_group_label_service_pb2_grpc,
+    ad_group_service_pb2 as ad_group_service_pb2,
+    ad_group_service_pb2_grpc as ad_group_service_pb2_grpc,
 )
+from google.ads.google_ads.v2.services import (
+    ad_group_service_client_config as ad_group_service_client_config,
+    enums as enums,
+)
+from google.ads.google_ads.v2.services.transports import (
+    ad_group_service_grpc_transport as ad_group_service_grpc_transport,
+)
+from google.ads.google_ads.v2.types import AdGroup
 
 class AdGroupServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -27,15 +86,21 @@ class AdGroupServiceClient:
     @classmethod
     def ad_group_path(cls, customer: Any, ad_group: Any) -> str: ...
     transport: Union[
-        AdGroupServiceGrpcTransport,
-        Callable[[Credentials, type], AdGroupServiceGrpcTransport],
+        ad_group_service_grpc_transport.AdGroupServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            ad_group_service_grpc_transport.AdGroupServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                AdGroupServiceGrpcTransport,
-                Callable[[Credentials, type], AdGroupServiceGrpcTransport],
+                ad_group_service_grpc_transport.AdGroupServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    ad_group_service_grpc_transport.AdGroupServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -53,10 +118,10 @@ class AdGroupServiceClient:
     def mutate_ad_groups(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], AdGroupOperation]],
+        operations: List[Union[Dict[str, Any], ad_group_service_pb2.AdGroupOperation]],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateAdGroupsResponse: ...
+    ) -> ad_group_service_pb2.MutateAdGroupsResponse: ...

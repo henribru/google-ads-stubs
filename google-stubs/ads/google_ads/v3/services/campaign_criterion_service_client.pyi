@@ -1,20 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.campaign_criterion_pb2 import (
-    CampaignCriterion,
-)
 from google.ads.google_ads.v3.proto.services import (
     campaign_criterion_service_pb2 as campaign_criterion_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.campaign_criterion_service_pb2 import (
-    CampaignCriterionOperation,
-    MutateCampaignCriteriaResponse,
 )
 from google.ads.google_ads.v3.services import (
     campaign_criterion_service_client_config as campaign_criterion_service_client_config,
@@ -22,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     campaign_criterion_service_grpc_transport as campaign_criterion_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.campaign_criterion_service_grpc_transport import (
-    CampaignCriterionServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CampaignCriterion
 
 class CampaignCriterionServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -39,15 +42,21 @@ class CampaignCriterionServiceClient:
     @classmethod
     def campaign_criteria_path(cls, customer: Any, campaign_criteria: Any) -> str: ...
     transport: Union[
-        CampaignCriterionServiceGrpcTransport,
-        Callable[[Credentials, type], CampaignCriterionServiceGrpcTransport],
+        campaign_criterion_service_grpc_transport.CampaignCriterionServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            campaign_criterion_service_grpc_transport.CampaignCriterionServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CampaignCriterionServiceGrpcTransport,
-                Callable[[Credentials, type], CampaignCriterionServiceGrpcTransport],
+                campaign_criterion_service_grpc_transport.CampaignCriterionServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    campaign_criterion_service_grpc_transport.CampaignCriterionServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -65,10 +74,15 @@ class CampaignCriterionServiceClient:
     def mutate_campaign_criteria(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CampaignCriterionOperation]],
+        operations: List[
+            Union[
+                Dict[str, Any],
+                campaign_criterion_service_pb2.CampaignCriterionOperation,
+            ]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCampaignCriteriaResponse: ...
+    ) -> campaign_criterion_service_pb2.MutateCampaignCriteriaResponse: ...

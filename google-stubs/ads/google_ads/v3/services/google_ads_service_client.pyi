@@ -12,6 +12,7 @@ from typing import (
 )
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
@@ -25,9 +26,6 @@ from google.ads.google_ads.v3.services import (
 )
 from google.ads.google_ads.v3.services.transports import (
     google_ads_service_grpc_transport as google_ads_service_grpc_transport,
-)
-from google.ads.google_ads.v3.services.transports.google_ads_service_grpc_transport import (
-    GoogleAdsServiceGrpcTransport,
 )
 from google.ads.google_ads.v3.types import (
     GoogleAdsRow,
@@ -48,15 +46,21 @@ class GoogleAdsServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> GoogleAdsServiceClient: ...
     transport: Union[
-        GoogleAdsServiceGrpcTransport,
-        Callable[[Credentials, type], GoogleAdsServiceGrpcTransport],
+        google_ads_service_grpc_transport.GoogleAdsServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            google_ads_service_grpc_transport.GoogleAdsServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                GoogleAdsServiceGrpcTransport,
-                Callable[[Credentials, type], GoogleAdsServiceGrpcTransport],
+                google_ads_service_grpc_transport.GoogleAdsServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    google_ads_service_grpc_transport.GoogleAdsServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

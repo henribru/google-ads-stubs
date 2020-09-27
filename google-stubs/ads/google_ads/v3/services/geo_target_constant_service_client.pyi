@@ -3,24 +3,21 @@ from typing import (
     Callable,
     ClassVar,
     Dict,
+    Iterable,
     List,
     Optional,
     Sequence,
-    Text,
     Tuple,
     Union,
 )
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
-from typing_extensions import TypedDict
 
-from google.ads.google_ads.v3.proto.resources.geo_target_constant_pb2 import (
-    GeoTargetConstant,
-)
 from google.ads.google_ads.v3.proto.services import (
     geo_target_constant_service_pb2 as geo_target_constant_service_pb2,
 )
@@ -30,17 +27,12 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     geo_target_constant_service_grpc_transport as geo_target_constant_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.geo_target_constant_service_grpc_transport import (
-    GeoTargetConstantServiceGrpcTransport,
-)
 from google.ads.google_ads.v3.types import (
+    GeoTargetConstant,
     StringValue,
     SuggestGeoTargetConstantsRequest,
     SuggestGeoTargetConstantsResponse,
 )
-
-class StringValueDict(TypedDict):
-    value: Text
 
 class GeoTargetConstantServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -53,17 +45,23 @@ class GeoTargetConstantServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> GeoTargetConstantServiceClient: ...
     @classmethod
-    def geo_target_constant_path(cls, geo_target_constant: Any): ...
+    def geo_target_constant_path(cls, geo_target_constant: Any) -> str: ...
     transport: Union[
-        GeoTargetConstantServiceGrpcTransport,
-        Callable[[Credentials, type], GeoTargetConstantServiceGrpcTransport],
+        geo_target_constant_service_grpc_transport.GeoTargetConstantServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            geo_target_constant_service_grpc_transport.GeoTargetConstantServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                GeoTargetConstantServiceGrpcTransport,
-                Callable[[Credentials, type], GeoTargetConstantServiceGrpcTransport],
+                geo_target_constant_service_grpc_transport.GeoTargetConstantServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    geo_target_constant_service_grpc_transport.GeoTargetConstantServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -80,14 +78,10 @@ class GeoTargetConstantServiceClient:
     ) -> GeoTargetConstant: ...
     def suggest_geo_target_constants(
         self,
-        locale: Union[StringValueDict, StringValue],
-        country_code: Union[StringValueDict, StringValue],
-        location_names: Optional[
-            Union[Dict[str, Any], SuggestGeoTargetConstantsRequest.LocationNames]
-        ] = ...,
-        geo_targets: Optional[
-            Union[Dict[str, Any], SuggestGeoTargetConstantsRequest.GeoTargets]
-        ] = ...,
+        locale: Union[Dict[str, Any], StringValue],
+        country_code: Union[Dict[str, Any], StringValue],
+        location_names: Optional[SuggestGeoTargetConstantsRequest.LocationNames] = ...,
+        geo_targets: Optional[SuggestGeoTargetConstantsRequest.GeoTargets] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

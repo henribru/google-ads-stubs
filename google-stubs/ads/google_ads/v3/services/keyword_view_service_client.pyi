@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.keyword_view_pb2 import KeywordView
 from google.ads.google_ads.v3.proto.services import (
     keyword_view_service_pb2 as keyword_view_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     keyword_view_service_grpc_transport as keyword_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.keyword_view_service_grpc_transport import (
-    KeywordViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import KeywordView
 
 class KeywordViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class KeywordViewServiceClient:
     @classmethod
     def keyword_view_path(cls, customer: Any, keyword_view: Any) -> str: ...
     transport: Union[
-        KeywordViewServiceGrpcTransport,
-        Callable[[Credentials, type], KeywordViewServiceGrpcTransport],
+        keyword_view_service_grpc_transport.KeywordViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            keyword_view_service_grpc_transport.KeywordViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                KeywordViewServiceGrpcTransport,
-                Callable[[Credentials, type], KeywordViewServiceGrpcTransport],
+                keyword_view_service_grpc_transport.KeywordViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    keyword_view_service_grpc_transport.KeywordViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

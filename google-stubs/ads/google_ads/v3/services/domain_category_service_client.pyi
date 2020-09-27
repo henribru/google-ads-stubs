@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.domain_category_pb2 import DomainCategory
 from google.ads.google_ads.v3.proto.services import (
     domain_category_service_pb2 as domain_category_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     domain_category_service_grpc_transport as domain_category_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.domain_category_service_grpc_transport import (
-    DomainCategoryServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import DomainCategory
 
 class DomainCategoryServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class DomainCategoryServiceClient:
     @classmethod
     def domain_category_path(cls, customer: Any, domain_category: Any) -> str: ...
     transport: Union[
-        DomainCategoryServiceGrpcTransport,
-        Callable[[Credentials, type], DomainCategoryServiceGrpcTransport],
+        domain_category_service_grpc_transport.DomainCategoryServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            domain_category_service_grpc_transport.DomainCategoryServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                DomainCategoryServiceGrpcTransport,
-                Callable[[Credentials, type], DomainCategoryServiceGrpcTransport],
+                domain_category_service_grpc_transport.DomainCategoryServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    domain_category_service_grpc_transport.DomainCategoryServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

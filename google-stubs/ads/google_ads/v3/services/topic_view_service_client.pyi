@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.topic_view_pb2 import TopicView
 from google.ads.google_ads.v3.proto.services import (
     topic_view_service_pb2 as topic_view_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     topic_view_service_grpc_transport as topic_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.topic_view_service_grpc_transport import (
-    TopicViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import TopicView
 
 class TopicViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class TopicViewServiceClient:
     @classmethod
     def topic_view_path(cls, customer: Any, topic_view: Any) -> str: ...
     transport: Union[
-        TopicViewServiceGrpcTransport,
-        Callable[[Credentials, type], TopicViewServiceGrpcTransport],
+        topic_view_service_grpc_transport.TopicViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            topic_view_service_grpc_transport.TopicViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                TopicViewServiceGrpcTransport,
-                Callable[[Credentials, type], TopicViewServiceGrpcTransport],
+                topic_view_service_grpc_transport.TopicViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    topic_view_service_grpc_transport.TopicViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

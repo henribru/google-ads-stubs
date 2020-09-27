@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.customer_client_pb2 import CustomerClient
 from google.ads.google_ads.v3.proto.services import (
     customer_client_service_pb2 as customer_client_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     customer_client_service_grpc_transport as customer_client_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.customer_client_service_grpc_transport import (
-    CustomerClientServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CustomerClient
 
 class CustomerClientServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class CustomerClientServiceClient:
     @classmethod
     def customer_client_path(cls, customer: Any, customer_client: Any) -> str: ...
     transport: Union[
-        CustomerClientServiceGrpcTransport,
-        Callable[[Credentials, type], CustomerClientServiceGrpcTransport],
+        customer_client_service_grpc_transport.CustomerClientServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            customer_client_service_grpc_transport.CustomerClientServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CustomerClientServiceGrpcTransport,
-                Callable[[Credentials, type], CustomerClientServiceGrpcTransport],
+                customer_client_service_grpc_transport.CustomerClientServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    customer_client_service_grpc_transport.CustomerClientServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

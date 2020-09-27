@@ -1,18 +1,50 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
+from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v2.proto.resources.ad_group_ad_pb2 import AdGroupAd
-from google.ads.google_ads.v2.proto.services.ad_group_ad_service_pb2 import (
-    AdGroupAdOperation,
-    MutateAdGroupAdsResponse,
+from google.ads.google_ads.v2.proto.resources import (
+    account_budget_pb2 as account_budget_pb2,
+    account_budget_proposal_pb2 as account_budget_proposal_pb2,
+    ad_group_ad_asset_view_pb2 as ad_group_ad_asset_view_pb2,
+    ad_group_ad_label_pb2 as ad_group_ad_label_pb2,
+    ad_group_ad_pb2 as ad_group_ad_pb2,
 )
-from google.ads.google_ads.v2.services.transports.ad_group_ad_service_grpc_transport import (
-    AdGroupAdServiceGrpcTransport,
+from google.ads.google_ads.v2.proto.services import (
+    account_budget_proposal_service_pb2 as account_budget_proposal_service_pb2,
+    account_budget_proposal_service_pb2_grpc as account_budget_proposal_service_pb2_grpc,
+    account_budget_service_pb2 as account_budget_service_pb2,
+    account_budget_service_pb2_grpc as account_budget_service_pb2_grpc,
+    ad_group_ad_asset_view_service_pb2 as ad_group_ad_asset_view_service_pb2,
+    ad_group_ad_asset_view_service_pb2_grpc as ad_group_ad_asset_view_service_pb2_grpc,
+    ad_group_ad_label_service_pb2 as ad_group_ad_label_service_pb2,
+    ad_group_ad_label_service_pb2_grpc as ad_group_ad_label_service_pb2_grpc,
+    ad_group_ad_service_pb2 as ad_group_ad_service_pb2,
+    ad_group_ad_service_pb2_grpc as ad_group_ad_service_pb2_grpc,
 )
+from google.ads.google_ads.v2.services import (
+    ad_group_ad_service_client_config as ad_group_ad_service_client_config,
+    enums as enums,
+)
+from google.ads.google_ads.v2.services.transports import (
+    ad_group_ad_service_grpc_transport as ad_group_ad_service_grpc_transport,
+)
+from google.ads.google_ads.v2.types import AdGroupAd
 
 class AdGroupAdServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -27,15 +59,21 @@ class AdGroupAdServiceClient:
     @classmethod
     def ad_group_ad_path(cls, customer: Any, ad_group_ad: Any) -> str: ...
     transport: Union[
-        AdGroupAdServiceGrpcTransport,
-        Callable[[Credentials, type], AdGroupAdServiceGrpcTransport],
+        ad_group_ad_service_grpc_transport.AdGroupAdServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            ad_group_ad_service_grpc_transport.AdGroupAdServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                AdGroupAdServiceGrpcTransport,
-                Callable[[Credentials, type], AdGroupAdServiceGrpcTransport],
+                ad_group_ad_service_grpc_transport.AdGroupAdServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    ad_group_ad_service_grpc_transport.AdGroupAdServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -53,10 +91,12 @@ class AdGroupAdServiceClient:
     def mutate_ad_group_ads(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], AdGroupAdOperation]],
+        operations: List[
+            Union[Dict[str, Any], ad_group_ad_service_pb2.AdGroupAdOperation]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateAdGroupAdsResponse: ...
+    ) -> ad_group_ad_service_pb2.MutateAdGroupAdsResponse: ...

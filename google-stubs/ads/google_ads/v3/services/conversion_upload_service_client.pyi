@@ -1,6 +1,18 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
@@ -14,9 +26,6 @@ from google.ads.google_ads.v3.services import (
 )
 from google.ads.google_ads.v3.services.transports import (
     conversion_upload_service_grpc_transport as conversion_upload_service_grpc_transport,
-)
-from google.ads.google_ads.v3.services.transports.conversion_upload_service_grpc_transport import (
-    ConversionUploadServiceGrpcTransport,
 )
 from google.ads.google_ads.v3.types import (
     CallConversion,
@@ -36,15 +45,21 @@ class ConversionUploadServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> ConversionUploadServiceClient: ...
     transport: Union[
-        ConversionUploadServiceGrpcTransport,
-        Callable[[Credentials, type], ConversionUploadServiceGrpcTransport],
+        conversion_upload_service_grpc_transport.ConversionUploadServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            conversion_upload_service_grpc_transport.ConversionUploadServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                ConversionUploadServiceGrpcTransport,
-                Callable[[Credentials, type], ConversionUploadServiceGrpcTransport],
+                conversion_upload_service_grpc_transport.ConversionUploadServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    conversion_upload_service_grpc_transport.ConversionUploadServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

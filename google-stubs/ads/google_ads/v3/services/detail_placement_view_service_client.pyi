@@ -1,14 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.detail_placement_view_pb2 import (
-    DetailPlacementView,
-)
 from google.ads.google_ads.v3.proto.services import (
     detail_placement_view_service_pb2 as detail_placement_view_service_pb2,
 )
@@ -18,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     detail_placement_view_service_grpc_transport as detail_placement_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.detail_placement_view_service_grpc_transport import (
-    DetailPlacementViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import DetailPlacementView
 
 class DetailPlacementViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,15 +44,21 @@ class DetailPlacementViewServiceClient:
         cls, customer: Any, detail_placement_view: Any
     ) -> str: ...
     transport: Union[
-        DetailPlacementViewServiceGrpcTransport,
-        Callable[[Credentials, type], DetailPlacementViewServiceGrpcTransport],
+        detail_placement_view_service_grpc_transport.DetailPlacementViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            detail_placement_view_service_grpc_transport.DetailPlacementViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                DetailPlacementViewServiceGrpcTransport,
-                Callable[[Credentials, type], DetailPlacementViewServiceGrpcTransport],
+                detail_placement_view_service_grpc_transport.DetailPlacementViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    detail_placement_view_service_grpc_transport.DetailPlacementViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

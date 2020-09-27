@@ -3,20 +3,20 @@ from typing import (
     Callable,
     ClassVar,
     Dict,
+    Iterable,
     List,
     Optional,
     Sequence,
-    Text,
     Tuple,
     Union,
 )
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
-from typing_extensions import TypedDict
 
 from google.ads.google_ads.v3.proto.services import (
     keyword_plan_idea_service_pb2 as keyword_plan_idea_service_pb2,
@@ -27,20 +27,14 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     keyword_plan_idea_service_grpc_transport as keyword_plan_idea_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.keyword_plan_idea_service_grpc_transport import (
-    KeywordPlanIdeaServiceGrpcTransport,
-)
 from google.ads.google_ads.v3.types import (
-    GenerateKeywordIdeaResponse,
+    GenerateKeywordIdeaResult,
     KeywordAndUrlSeed,
     KeywordPlanNetworkEnum,
     KeywordSeed,
     StringValue,
     UrlSeed,
 )
-
-class StringValueDict(TypedDict):
-    value: Text
 
 class KeywordPlanIdeaServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -53,15 +47,21 @@ class KeywordPlanIdeaServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> KeywordPlanIdeaServiceClient: ...
     transport: Union[
-        KeywordPlanIdeaServiceGrpcTransport,
-        Callable[[Credentials, type], KeywordPlanIdeaServiceGrpcTransport],
+        keyword_plan_idea_service_grpc_transport.KeywordPlanIdeaServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            keyword_plan_idea_service_grpc_transport.KeywordPlanIdeaServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                KeywordPlanIdeaServiceGrpcTransport,
-                Callable[[Credentials, type], KeywordPlanIdeaServiceGrpcTransport],
+                keyword_plan_idea_service_grpc_transport.KeywordPlanIdeaServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    keyword_plan_idea_service_grpc_transport.KeywordPlanIdeaServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -72,8 +72,8 @@ class KeywordPlanIdeaServiceClient:
     def generate_keyword_ideas(
         self,
         customer_id: str,
-        language: Union[StringValueDict, StringValue],
-        geo_target_constants: List[Union[StringValueDict, StringValue]],
+        language: Union[Dict[str, Any], StringValue],
+        geo_target_constants: List[Union[Dict[str, Any], StringValue]],
         keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetworkValue,
         keyword_and_url_seed: Optional[Union[Dict[str, Any], KeywordAndUrlSeed]] = ...,
         keyword_seed: Optional[Union[Dict[str, Any], KeywordSeed]] = ...,
@@ -81,4 +81,4 @@ class KeywordPlanIdeaServiceClient:
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> GenerateKeywordIdeaResponse: ...
+    ) -> Iterable[GenerateKeywordIdeaResult]: ...

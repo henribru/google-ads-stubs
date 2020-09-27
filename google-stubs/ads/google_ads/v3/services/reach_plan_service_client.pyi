@@ -3,20 +3,20 @@ from typing import (
     Callable,
     ClassVar,
     Dict,
+    Iterable,
     List,
     Optional,
     Sequence,
-    Text,
     Tuple,
     Union,
 )
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
-from typing_extensions import TypedDict
 
 from google.ads.google_ads.v3.proto.services import (
     reach_plan_service_pb2 as reach_plan_service_pb2,
@@ -26,9 +26,6 @@ from google.ads.google_ads.v3.services import (
 )
 from google.ads.google_ads.v3.services.transports import (
     reach_plan_service_grpc_transport as reach_plan_service_grpc_transport,
-)
-from google.ads.google_ads.v3.services.transports.reach_plan_service_grpc_transport import (
-    ReachPlanServiceGrpcTransport,
 )
 from google.ads.google_ads.v3.types import (
     CampaignDuration,
@@ -44,15 +41,6 @@ from google.ads.google_ads.v3.types import (
     Targeting,
 )
 
-class StringValueDict(TypedDict):
-    value: Text
-
-class Int64ValueDict(TypedDict):
-    value: int
-
-class Int32ValueDict(TypedDict):
-    value: int
-
 class ReachPlanServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
     @classmethod
@@ -64,15 +52,21 @@ class ReachPlanServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> ReachPlanServiceClient: ...
     transport: Union[
-        ReachPlanServiceGrpcTransport,
-        Callable[[Credentials, type], ReachPlanServiceGrpcTransport],
+        reach_plan_service_grpc_transport.ReachPlanServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            reach_plan_service_grpc_transport.ReachPlanServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                ReachPlanServiceGrpcTransport,
-                Callable[[Credentials, type], ReachPlanServiceGrpcTransport],
+                reach_plan_service_grpc_transport.ReachPlanServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    reach_plan_service_grpc_transport.ReachPlanServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -88,7 +82,7 @@ class ReachPlanServiceClient:
     ) -> ListPlannableLocationsResponse: ...
     def list_plannable_products(
         self,
-        plannable_location_id: Union[StringValueDict, StringValue],
+        plannable_location_id: Union[Dict[str, Any], StringValue],
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
@@ -96,10 +90,10 @@ class ReachPlanServiceClient:
     def generate_product_mix_ideas(
         self,
         customer_id: str,
-        plannable_location_id: Union[StringValueDict, StringValue],
-        currency_code: Union[StringValueDict, StringValue],
-        budget_micros: Union[Int64ValueDict, Int64Value],
-        preferences: Union[Dict[str, Any], Preferences],
+        plannable_location_id: Union[Dict[str, Any], StringValue],
+        currency_code: Union[Dict[str, Any], StringValue],
+        budget_micros: Union[Dict[str, Any], Int64Value],
+        preferences: Optional[Union[Dict[str, Any], Preferences]],
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
@@ -107,11 +101,11 @@ class ReachPlanServiceClient:
     def generate_reach_forecast(
         self,
         customer_id: str,
-        currency_code: Union[StringValueDict, StringValue],
+        currency_code: Optional[Union[Dict[str, Any], StringValue]],
         campaign_duration: Union[Dict[str, Any], CampaignDuration],
-        cookie_frequency_cap: Union[Int32ValueDict, Int32Value],
-        min_effective_frequency: Union[Int32ValueDict, Int32Value],
-        targeting: Union[Dict[str, Any], Targeting],
+        cookie_frequency_cap: Optional[Union[Dict[str, Any], Int32Value]],
+        min_effective_frequency: Optional[Union[Dict[str, Any], Int32Value]],
+        targeting: Optional[Union[Dict[str, Any], Targeting]],
         planned_products: List[Union[Dict[str, Any], PlannedProduct]],
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

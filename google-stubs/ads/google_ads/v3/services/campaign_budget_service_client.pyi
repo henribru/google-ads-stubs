@@ -1,18 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.campaign_budget_pb2 import CampaignBudget
 from google.ads.google_ads.v3.proto.services import (
     campaign_budget_service_pb2 as campaign_budget_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.campaign_budget_service_pb2 import (
-    CampaignBudgetOperation,
-    MutateCampaignBudgetsResponse,
 )
 from google.ads.google_ads.v3.services import (
     campaign_budget_service_client_config as campaign_budget_service_client_config,
@@ -20,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     campaign_budget_service_grpc_transport as campaign_budget_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.campaign_budget_service_grpc_transport import (
-    CampaignBudgetServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CampaignBudget
 
 class CampaignBudgetServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,15 +42,21 @@ class CampaignBudgetServiceClient:
     @classmethod
     def campaign_budget_path(cls, customer: Any, campaign_budget: Any) -> str: ...
     transport: Union[
-        CampaignBudgetServiceGrpcTransport,
-        Callable[[Credentials, type], CampaignBudgetServiceGrpcTransport],
+        campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CampaignBudgetServiceGrpcTransport,
-                Callable[[Credentials, type], CampaignBudgetServiceGrpcTransport],
+                campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -63,10 +74,12 @@ class CampaignBudgetServiceClient:
     def mutate_campaign_budgets(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CampaignBudgetOperation]],
+        operations: List[
+            Union[Dict[str, Any], campaign_budget_service_pb2.CampaignBudgetOperation]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCampaignBudgetsResponse: ...
+    ) -> campaign_budget_service_pb2.MutateCampaignBudgetsResponse: ...

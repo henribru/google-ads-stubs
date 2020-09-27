@@ -1,20 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.campaign_extension_setting_pb2 import (
-    CampaignExtensionSetting,
-)
 from google.ads.google_ads.v3.proto.services import (
     campaign_extension_setting_service_pb2 as campaign_extension_setting_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.campaign_extension_setting_service_pb2 import (
-    CampaignExtensionSettingOperation,
-    MutateCampaignExtensionSettingsResponse,
 )
 from google.ads.google_ads.v3.services import (
     campaign_extension_setting_service_client_config as campaign_extension_setting_service_client_config,
@@ -22,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     campaign_extension_setting_service_grpc_transport as campaign_extension_setting_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.campaign_extension_setting_service_grpc_transport import (
-    CampaignExtensionSettingServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CampaignExtensionSetting
 
 class CampaignExtensionSettingServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -41,16 +44,20 @@ class CampaignExtensionSettingServiceClient:
         cls, customer: Any, campaign_extension_setting: Any
     ) -> str: ...
     transport: Union[
-        CampaignExtensionSettingServiceGrpcTransport,
-        Callable[[Credentials, type], CampaignExtensionSettingServiceGrpcTransport],
+        campaign_extension_setting_service_grpc_transport.CampaignExtensionSettingServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            campaign_extension_setting_service_grpc_transport.CampaignExtensionSettingServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CampaignExtensionSettingServiceGrpcTransport,
+                campaign_extension_setting_service_grpc_transport.CampaignExtensionSettingServiceGrpcTransport,
                 Callable[
-                    [Credentials, type], CampaignExtensionSettingServiceGrpcTransport
+                    [Credentials, type],
+                    campaign_extension_setting_service_grpc_transport.CampaignExtensionSettingServiceGrpcTransport,
                 ],
             ]
         ] = ...,
@@ -69,10 +76,15 @@ class CampaignExtensionSettingServiceClient:
     def mutate_campaign_extension_settings(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CampaignExtensionSettingOperation]],
+        operations: List[
+            Union[
+                Dict[str, Any],
+                campaign_extension_setting_service_pb2.CampaignExtensionSettingOperation,
+            ]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCampaignExtensionSettingsResponse: ...
+    ) -> campaign_extension_setting_service_pb2.MutateCampaignExtensionSettingsResponse: ...

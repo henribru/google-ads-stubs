@@ -1,6 +1,18 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
@@ -15,9 +27,6 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     payments_account_service_grpc_transport as payments_account_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.payments_account_service_grpc_transport import (
-    PaymentsAccountServiceGrpcTransport,
-)
 from google.ads.google_ads.v3.types import ListPaymentsAccountsResponse
 
 class PaymentsAccountServiceClient:
@@ -31,15 +40,21 @@ class PaymentsAccountServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> PaymentsAccountServiceClient: ...
     transport: Union[
-        PaymentsAccountServiceGrpcTransport,
-        Callable[[Credentials, type], PaymentsAccountServiceGrpcTransport],
+        payments_account_service_grpc_transport.PaymentsAccountServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            payments_account_service_grpc_transport.PaymentsAccountServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                PaymentsAccountServiceGrpcTransport,
-                Callable[[Credentials, type], PaymentsAccountServiceGrpcTransport],
+                payments_account_service_grpc_transport.PaymentsAccountServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    payments_account_service_grpc_transport.PaymentsAccountServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

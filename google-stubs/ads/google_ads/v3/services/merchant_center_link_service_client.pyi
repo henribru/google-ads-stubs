@@ -1,21 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.merchant_center_link_pb2 import (
-    MerchantCenterLink,
-)
 from google.ads.google_ads.v3.proto.services import (
     merchant_center_link_service_pb2 as merchant_center_link_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.merchant_center_link_service_pb2 import (
-    ListMerchantCenterLinksResponse,
-    MerchantCenterLinkOperation,
-    MutateMerchantCenterLinkResponse,
 )
 from google.ads.google_ads.v3.services import (
     merchant_center_link_service_client_config as merchant_center_link_service_client_config,
@@ -23,8 +27,9 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     merchant_center_link_service_grpc_transport as merchant_center_link_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.merchant_center_link_service_grpc_transport import (
-    MerchantCenterLinkServiceGrpcTransport,
+from google.ads.google_ads.v3.types import (
+    ListMerchantCenterLinksResponse,
+    MerchantCenterLink,
 )
 
 class MerchantCenterLinkServiceClient:
@@ -42,15 +47,21 @@ class MerchantCenterLinkServiceClient:
         cls, customer: Any, merchant_center_link: Any
     ) -> str: ...
     transport: Union[
-        MerchantCenterLinkServiceGrpcTransport,
-        Callable[[Credentials, type], MerchantCenterLinkServiceGrpcTransport],
+        merchant_center_link_service_grpc_transport.MerchantCenterLinkServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            merchant_center_link_service_grpc_transport.MerchantCenterLinkServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                MerchantCenterLinkServiceGrpcTransport,
-                Callable[[Credentials, type], MerchantCenterLinkServiceGrpcTransport],
+                merchant_center_link_service_grpc_transport.MerchantCenterLinkServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    merchant_center_link_service_grpc_transport.MerchantCenterLinkServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -75,8 +86,10 @@ class MerchantCenterLinkServiceClient:
     def mutate_merchant_center_link(
         self,
         customer_id: str,
-        operation_: Union[Dict[str, Any], MerchantCenterLinkOperation],
+        operation_: Union[
+            Dict[str, Any], merchant_center_link_service_pb2.MerchantCenterLinkOperation
+        ],
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateMerchantCenterLinkResponse: ...
+    ) -> merchant_center_link_service_pb2.MutateMerchantCenterLinkResponse: ...

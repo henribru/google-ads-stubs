@@ -1,20 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.customer_extension_setting_pb2 import (
-    CustomerExtensionSetting,
-)
 from google.ads.google_ads.v3.proto.services import (
     customer_extension_setting_service_pb2 as customer_extension_setting_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.customer_extension_setting_service_pb2 import (
-    CustomerExtensionSettingOperation,
-    MutateCustomerExtensionSettingsResponse,
 )
 from google.ads.google_ads.v3.services import (
     customer_extension_setting_service_client_config as customer_extension_setting_service_client_config,
@@ -22,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     customer_extension_setting_service_grpc_transport as customer_extension_setting_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.customer_extension_setting_service_grpc_transport import (
-    CustomerExtensionSettingServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CustomerExtensionSetting
 
 class CustomerExtensionSettingServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -41,16 +44,20 @@ class CustomerExtensionSettingServiceClient:
         cls, customer: Any, customer_extension_setting: Any
     ) -> str: ...
     transport: Union[
-        CustomerExtensionSettingServiceGrpcTransport,
-        Callable[[Credentials, type], CustomerExtensionSettingServiceGrpcTransport],
+        customer_extension_setting_service_grpc_transport.CustomerExtensionSettingServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            customer_extension_setting_service_grpc_transport.CustomerExtensionSettingServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CustomerExtensionSettingServiceGrpcTransport,
+                customer_extension_setting_service_grpc_transport.CustomerExtensionSettingServiceGrpcTransport,
                 Callable[
-                    [Credentials, type], CustomerExtensionSettingServiceGrpcTransport
+                    [Credentials, type],
+                    customer_extension_setting_service_grpc_transport.CustomerExtensionSettingServiceGrpcTransport,
                 ],
             ]
         ] = ...,
@@ -69,10 +76,15 @@ class CustomerExtensionSettingServiceClient:
     def mutate_customer_extension_settings(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CustomerExtensionSettingOperation]],
+        operations: List[
+            Union[
+                Dict[str, Any],
+                customer_extension_setting_service_pb2.CustomerExtensionSettingOperation,
+            ]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCustomerExtensionSettingsResponse: ...
+    ) -> customer_extension_setting_service_pb2.MutateCustomerExtensionSettingsResponse: ...

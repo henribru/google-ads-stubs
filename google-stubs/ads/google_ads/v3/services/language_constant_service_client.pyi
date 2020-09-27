@@ -1,14 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.language_constant_pb2 import (
-    LanguageConstant,
-)
 from google.ads.google_ads.v3.proto.services import (
     language_constant_service_pb2 as language_constant_service_pb2,
 )
@@ -18,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     language_constant_service_grpc_transport as language_constant_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.language_constant_service_grpc_transport import (
-    LanguageConstantServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import LanguageConstant
 
 class LanguageConstantServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,17 +40,23 @@ class LanguageConstantServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> LanguageConstantServiceClient: ...
     @classmethod
-    def language_constant_path(cls, language_constant: Any): ...
+    def language_constant_path(cls, language_constant: Any) -> str: ...
     transport: Union[
-        LanguageConstantServiceGrpcTransport,
-        Callable[[Credentials, type], LanguageConstantServiceGrpcTransport],
+        language_constant_service_grpc_transport.LanguageConstantServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            language_constant_service_grpc_transport.LanguageConstantServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                LanguageConstantServiceGrpcTransport,
-                Callable[[Credentials, type], LanguageConstantServiceGrpcTransport],
+                language_constant_service_grpc_transport.LanguageConstantServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    language_constant_service_grpc_transport.LanguageConstantServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

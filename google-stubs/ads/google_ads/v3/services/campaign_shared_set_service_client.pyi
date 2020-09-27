@@ -1,20 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.campaign_shared_set_pb2 import (
-    CampaignSharedSet,
-)
 from google.ads.google_ads.v3.proto.services import (
     campaign_shared_set_service_pb2 as campaign_shared_set_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.campaign_shared_set_service_pb2 import (
-    CampaignSharedSetOperation,
-    MutateCampaignSharedSetsResponse,
 )
 from google.ads.google_ads.v3.services import (
     campaign_shared_set_service_client_config as campaign_shared_set_service_client_config,
@@ -22,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     campaign_shared_set_service_grpc_transport as campaign_shared_set_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.campaign_shared_set_service_grpc_transport import (
-    CampaignSharedSetServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import CampaignSharedSet
 
 class CampaignSharedSetServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -41,15 +44,21 @@ class CampaignSharedSetServiceClient:
         cls, customer: Any, campaign_shared_set: Any
     ) -> str: ...
     transport: Union[
-        CampaignSharedSetServiceGrpcTransport,
-        Callable[[Credentials, type], CampaignSharedSetServiceGrpcTransport],
+        campaign_shared_set_service_grpc_transport.CampaignSharedSetServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            campaign_shared_set_service_grpc_transport.CampaignSharedSetServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CampaignSharedSetServiceGrpcTransport,
-                Callable[[Credentials, type], CampaignSharedSetServiceGrpcTransport],
+                campaign_shared_set_service_grpc_transport.CampaignSharedSetServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    campaign_shared_set_service_grpc_transport.CampaignSharedSetServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -67,10 +76,15 @@ class CampaignSharedSetServiceClient:
     def mutate_campaign_shared_sets(
         self,
         customer_id: str,
-        operations: List[Union[Dict[str, Any], CampaignSharedSetOperation]],
+        operations: List[
+            Union[
+                Dict[str, Any],
+                campaign_shared_set_service_pb2.CampaignSharedSetOperation,
+            ]
+        ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCampaignSharedSetsResponse: ...
+    ) -> campaign_shared_set_service_pb2.MutateCampaignSharedSetsResponse: ...

@@ -1,18 +1,25 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.billing_setup_pb2 import BillingSetup
 from google.ads.google_ads.v3.proto.services import (
     billing_setup_service_pb2 as billing_setup_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.billing_setup_service_pb2 import (
-    BillingSetupOperation,
-    MutateBillingSetupResponse,
 )
 from google.ads.google_ads.v3.services import (
     billing_setup_service_client_config as billing_setup_service_client_config,
@@ -20,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     billing_setup_service_grpc_transport as billing_setup_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.billing_setup_service_grpc_transport import (
-    BillingSetupServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import BillingSetup
 
 class BillingSetupServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -37,15 +42,21 @@ class BillingSetupServiceClient:
     @classmethod
     def billing_setup_path(cls, customer: Any, billing_setup: Any) -> str: ...
     transport: Union[
-        BillingSetupServiceGrpcTransport,
-        Callable[[Credentials, type], BillingSetupServiceGrpcTransport],
+        billing_setup_service_grpc_transport.BillingSetupServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            billing_setup_service_grpc_transport.BillingSetupServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                BillingSetupServiceGrpcTransport,
-                Callable[[Credentials, type], BillingSetupServiceGrpcTransport],
+                billing_setup_service_grpc_transport.BillingSetupServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    billing_setup_service_grpc_transport.BillingSetupServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -63,8 +74,10 @@ class BillingSetupServiceClient:
     def mutate_billing_setup(
         self,
         customer_id: str,
-        operation_: Union[Dict[str, Any], BillingSetupOperation],
+        operation_: Union[
+            Dict[str, Any], billing_setup_service_pb2.BillingSetupOperation
+        ],
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateBillingSetupResponse: ...
+    ) -> billing_setup_service_pb2.MutateBillingSetupResponse: ...

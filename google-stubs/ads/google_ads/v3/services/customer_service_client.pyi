@@ -3,30 +3,23 @@ from typing import (
     Callable,
     ClassVar,
     Dict,
+    Iterable,
     List,
     Optional,
     Sequence,
-    Text,
     Tuple,
     Union,
 )
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
-from typing_extensions import TypedDict
 
-from google.ads.google_ads.v3.proto.resources.customer_pb2 import Customer
 from google.ads.google_ads.v3.proto.services import (
     customer_service_pb2 as customer_service_pb2,
-)
-from google.ads.google_ads.v3.proto.services.customer_service_pb2 import (
-    CreateCustomerClientResponse,
-    CustomerOperation,
-    ListAccessibleCustomersResponse,
-    MutateCustomerResponse,
 )
 from google.ads.google_ads.v3.services import (
     customer_service_client_config as customer_service_client_config,
@@ -34,13 +27,13 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     customer_service_grpc_transport as customer_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.customer_service_grpc_transport import (
-    CustomerServiceGrpcTransport,
+from google.ads.google_ads.v3.types import (
+    AccessRoleEnum,
+    CreateCustomerClientResponse,
+    Customer,
+    ListAccessibleCustomersResponse,
+    StringValue,
 )
-from google.ads.google_ads.v3.types import AccessRoleEnum, Customer, StringValue
-
-class StringValueDict(TypedDict):
-    value: Text
 
 class CustomerServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -53,17 +46,23 @@ class CustomerServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CustomerServiceClient: ...
     @classmethod
-    def customer_path(cls, customer: Any): ...
+    def customer_path(cls, customer: Any) -> str: ...
     transport: Union[
-        CustomerServiceGrpcTransport,
-        Callable[[Credentials, type], CustomerServiceGrpcTransport],
+        customer_service_grpc_transport.CustomerServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            customer_service_grpc_transport.CustomerServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                CustomerServiceGrpcTransport,
-                Callable[[Credentials, type], CustomerServiceGrpcTransport],
+                customer_service_grpc_transport.CustomerServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    customer_service_grpc_transport.CustomerServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
@@ -81,12 +80,12 @@ class CustomerServiceClient:
     def mutate_customer(
         self,
         customer_id: str,
-        operation_: Union[Dict[str, Any], CustomerOperation],
+        operation_: Union[Dict[str, Any], customer_service_pb2.CustomerOperation],
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> MutateCustomerResponse: ...
+    ) -> customer_service_pb2.MutateCustomerResponse: ...
     def list_accessible_customers(
         self,
         retry: Optional[Retry] = ...,
@@ -97,7 +96,7 @@ class CustomerServiceClient:
         self,
         customer_id: str,
         customer_client: Union[Dict[str, Any], Customer],
-        email_address: Optional[Union[StringValueDict, StringValue]] = ...,
+        email_address: Optional[Union[Dict[str, Any], StringValue]] = ...,
         access_role: Optional[AccessRoleEnum.AccessRoleValue] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

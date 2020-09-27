@@ -1,14 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.mobile_device_constant_pb2 import (
-    MobileDeviceConstant,
-)
 from google.ads.google_ads.v3.proto.services import (
     mobile_device_constant_service_pb2 as mobile_device_constant_service_pb2,
 )
@@ -18,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     mobile_device_constant_service_grpc_transport as mobile_device_constant_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.mobile_device_constant_service_grpc_transport import (
-    MobileDeviceConstantServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import MobileDeviceConstant
 
 class MobileDeviceConstantServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,17 +40,23 @@ class MobileDeviceConstantServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> MobileDeviceConstantServiceClient: ...
     @classmethod
-    def mobile_device_constant_path(cls, mobile_device_constant: Any): ...
+    def mobile_device_constant_path(cls, mobile_device_constant: Any) -> str: ...
     transport: Union[
-        MobileDeviceConstantServiceGrpcTransport,
-        Callable[[Credentials, type], MobileDeviceConstantServiceGrpcTransport],
+        mobile_device_constant_service_grpc_transport.MobileDeviceConstantServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            mobile_device_constant_service_grpc_transport.MobileDeviceConstantServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                MobileDeviceConstantServiceGrpcTransport,
-                Callable[[Credentials, type], MobileDeviceConstantServiceGrpcTransport],
+                mobile_device_constant_service_grpc_transport.MobileDeviceConstantServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    mobile_device_constant_service_grpc_transport.MobileDeviceConstantServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,

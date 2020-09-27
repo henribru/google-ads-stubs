@@ -1,12 +1,23 @@
-from typing import Any, Callable, ClassVar, Dict, List, Optional, Sequence, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import grpc  # type: ignore
+from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore
 from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
-from google.ads.google_ads.v3.proto.resources.gender_view_pb2 import GenderView
 from google.ads.google_ads.v3.proto.services import (
     gender_view_service_pb2 as gender_view_service_pb2,
 )
@@ -16,9 +27,7 @@ from google.ads.google_ads.v3.services import (
 from google.ads.google_ads.v3.services.transports import (
     gender_view_service_grpc_transport as gender_view_service_grpc_transport,
 )
-from google.ads.google_ads.v3.services.transports.gender_view_service_grpc_transport import (
-    GenderViewServiceGrpcTransport,
-)
+from google.ads.google_ads.v3.types import GenderView
 
 class GenderViewServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -33,15 +42,21 @@ class GenderViewServiceClient:
     @classmethod
     def gender_view_path(cls, customer: Any, gender_view: Any) -> str: ...
     transport: Union[
-        GenderViewServiceGrpcTransport,
-        Callable[[Credentials, type], GenderViewServiceGrpcTransport],
+        gender_view_service_grpc_transport.GenderViewServiceGrpcTransport,
+        Callable[
+            [Credentials, type],
+            gender_view_service_grpc_transport.GenderViewServiceGrpcTransport,
+        ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                GenderViewServiceGrpcTransport,
-                Callable[[Credentials, type], GenderViewServiceGrpcTransport],
+                gender_view_service_grpc_transport.GenderViewServiceGrpcTransport,
+                Callable[
+                    [Credentials, type],
+                    gender_view_service_grpc_transport.GenderViewServiceGrpcTransport,
+                ],
             ]
         ] = ...,
         channel: Optional[grpc.Channel] = ...,
