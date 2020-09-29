@@ -92,7 +92,7 @@ class GoogleAdsServiceClient:
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> SearchGoogleAdsStreamResponse: ...
+    ) -> Iterable[SearchGoogleAdsStreamResponse]: ...
     def mutate(
         self,
         customer_id: str,
