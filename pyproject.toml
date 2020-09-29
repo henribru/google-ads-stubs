@@ -25,6 +25,11 @@ black = "^19.10b0"
 astunparse = "^1.6.3"
 isort = "^5.5.3"
 
+[tool.isort]
+profile = "black"
+known_first_party = "google.ads.google_ads"
+combine_as_imports = true
+
 
 [build-system]
 requires = ["poetry>=0.12"]
