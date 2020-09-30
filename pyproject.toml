@@ -12,7 +12,6 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-typing = "^3.7"
 typing-extensions = "^3.7"
 googleapis-common-protos-stubs = "^1.0"
 google-ads = "^7.0.0"
