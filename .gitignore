@@ -1,5 +1,6 @@
 *
 !*/
+!/.github/**
 !/.gitignore
 !/google-stubs/{__init__.pyi, py.typed}
 !/google-stubs/ads/**
