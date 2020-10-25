@@ -9,6 +9,9 @@ repository = "https://github.com/henribru/google-ads-stubs"
 packages = [
     { include = "google-stubs" },
 ]
+classifiers = [
+    "Typing :: Typed",
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"
