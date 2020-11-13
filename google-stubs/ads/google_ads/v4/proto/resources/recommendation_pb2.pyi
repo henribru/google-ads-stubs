@@ -271,20 +271,20 @@ class Recommendation(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___KeywordRecommendation = KeywordRecommendation
-    class CallExtensionRecommendation(google___protobuf___message___Message):
+    class CalloutExtensionRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
         def recommended_extensions(
             self,
         ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
-            google___ads___googleads___v4___common___extensions_pb2___CallFeedItem
+            google___ads___googleads___v4___common___extensions_pb2___CalloutFeedItem
         ]: ...
         def __init__(
             self,
             *,
             recommended_extensions: typing___Optional[
                 typing___Iterable[
-                    google___ads___googleads___v4___common___extensions_pb2___CallFeedItem
+                    google___ads___googleads___v4___common___extensions_pb2___CalloutFeedItem
                 ]
             ] = None,
         ) -> None: ...
@@ -294,7 +294,7 @@ class Recommendation(google___protobuf___message___Message):
                 "recommended_extensions", b"recommended_extensions"
             ],
         ) -> None: ...
-    type___CallExtensionRecommendation = CallExtensionRecommendation
+    type___CalloutExtensionRecommendation = CalloutExtensionRecommendation
     class TextAdRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -339,36 +339,6 @@ class Recommendation(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___TextAdRecommendation = TextAdRecommendation
-    class KeywordMatchTypeRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        recommended_match_type: google___ads___googleads___v4___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchTypeValue = ...
-        @property
-        def keyword(
-            self,
-        ) -> google___ads___googleads___v4___common___criteria_pb2___KeywordInfo: ...
-        def __init__(
-            self,
-            *,
-            keyword: typing___Optional[
-                google___ads___googleads___v4___common___criteria_pb2___KeywordInfo
-            ] = None,
-            recommended_match_type: typing___Optional[
-                google___ads___googleads___v4___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchTypeValue
-            ] = None,
-        ) -> None: ...
-        def HasField(
-            self, field_name: typing_extensions___Literal["keyword", b"keyword"]
-        ) -> builtin___bool: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "keyword",
-                b"keyword",
-                "recommended_match_type",
-                b"recommended_match_type",
-            ],
-        ) -> None: ...
-    type___KeywordMatchTypeRecommendation = KeywordMatchTypeRecommendation
     class TargetCpaOptInRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         class TargetCpaOptInRecommendationOption(google___protobuf___message___Message):
@@ -463,120 +433,10 @@ class Recommendation(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___TargetCpaOptInRecommendation = TargetCpaOptInRecommendation
-    class MaximizeConversionsOptInRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def recommended_budget_amount_micros(
-            self,
-        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
-        def __init__(
-            self,
-            *,
-            recommended_budget_amount_micros: typing___Optional[
-                google___protobuf___wrappers_pb2___Int64Value
-            ] = None,
-        ) -> None: ...
-        def HasField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
-            ],
-        ) -> builtin___bool: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
-            ],
-        ) -> None: ...
-    type___MaximizeConversionsOptInRecommendation = (
-        MaximizeConversionsOptInRecommendation
-    )
-    class SitelinkExtensionRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def recommended_extensions(
-            self,
-        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
-            google___ads___googleads___v4___common___extensions_pb2___SitelinkFeedItem
-        ]: ...
-        def __init__(
-            self,
-            *,
-            recommended_extensions: typing___Optional[
-                typing___Iterable[
-                    google___ads___googleads___v4___common___extensions_pb2___SitelinkFeedItem
-                ]
-            ] = None,
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_extensions", b"recommended_extensions"
-            ],
-        ) -> None: ...
-    type___SitelinkExtensionRecommendation = SitelinkExtensionRecommendation
-    class EnhancedCpcOptInRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        def __init__(self,) -> None: ...
-    type___EnhancedCpcOptInRecommendation = EnhancedCpcOptInRecommendation
-    class SearchPartnersOptInRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        def __init__(self,) -> None: ...
-    type___SearchPartnersOptInRecommendation = SearchPartnersOptInRecommendation
-    class MaximizeClicksOptInRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def recommended_budget_amount_micros(
-            self,
-        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
-        def __init__(
-            self,
-            *,
-            recommended_budget_amount_micros: typing___Optional[
-                google___protobuf___wrappers_pb2___Int64Value
-            ] = None,
-        ) -> None: ...
-        def HasField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
-            ],
-        ) -> builtin___bool: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
-            ],
-        ) -> None: ...
-    type___MaximizeClicksOptInRecommendation = MaximizeClicksOptInRecommendation
     class OptimizeAdRotationRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         def __init__(self,) -> None: ...
     type___OptimizeAdRotationRecommendation = OptimizeAdRotationRecommendation
-    class CalloutExtensionRecommendation(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def recommended_extensions(
-            self,
-        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
-            google___ads___googleads___v4___common___extensions_pb2___CalloutFeedItem
-        ]: ...
-        def __init__(
-            self,
-            *,
-            recommended_extensions: typing___Optional[
-                typing___Iterable[
-                    google___ads___googleads___v4___common___extensions_pb2___CalloutFeedItem
-                ]
-            ] = None,
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "recommended_extensions", b"recommended_extensions"
-            ],
-        ) -> None: ...
-    type___CalloutExtensionRecommendation = CalloutExtensionRecommendation
     class MoveUnusedBudgetRecommendation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -616,6 +476,146 @@ class Recommendation(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___MoveUnusedBudgetRecommendation = MoveUnusedBudgetRecommendation
+    class MaximizeConversionsOptInRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def recommended_budget_amount_micros(
+            self,
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        def __init__(
+            self,
+            *,
+            recommended_budget_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> None: ...
+    type___MaximizeConversionsOptInRecommendation = (
+        MaximizeConversionsOptInRecommendation
+    )
+    class SearchPartnersOptInRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        def __init__(self,) -> None: ...
+    type___SearchPartnersOptInRecommendation = SearchPartnersOptInRecommendation
+    class CallExtensionRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def recommended_extensions(
+            self,
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___ads___googleads___v4___common___extensions_pb2___CallFeedItem
+        ]: ...
+        def __init__(
+            self,
+            *,
+            recommended_extensions: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v4___common___extensions_pb2___CallFeedItem
+                ]
+            ] = None,
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_extensions", b"recommended_extensions"
+            ],
+        ) -> None: ...
+    type___CallExtensionRecommendation = CallExtensionRecommendation
+    class EnhancedCpcOptInRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        def __init__(self,) -> None: ...
+    type___EnhancedCpcOptInRecommendation = EnhancedCpcOptInRecommendation
+    class MaximizeClicksOptInRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def recommended_budget_amount_micros(
+            self,
+        ) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        def __init__(
+            self,
+            *,
+            recommended_budget_amount_micros: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_budget_amount_micros", b"recommended_budget_amount_micros"
+            ],
+        ) -> None: ...
+    type___MaximizeClicksOptInRecommendation = MaximizeClicksOptInRecommendation
+    class SitelinkExtensionRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def recommended_extensions(
+            self,
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___ads___googleads___v4___common___extensions_pb2___SitelinkFeedItem
+        ]: ...
+        def __init__(
+            self,
+            *,
+            recommended_extensions: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v4___common___extensions_pb2___SitelinkFeedItem
+                ]
+            ] = None,
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "recommended_extensions", b"recommended_extensions"
+            ],
+        ) -> None: ...
+    type___SitelinkExtensionRecommendation = SitelinkExtensionRecommendation
+    class KeywordMatchTypeRecommendation(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        recommended_match_type: google___ads___googleads___v4___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchTypeValue = ...
+        @property
+        def keyword(
+            self,
+        ) -> google___ads___googleads___v4___common___criteria_pb2___KeywordInfo: ...
+        def __init__(
+            self,
+            *,
+            keyword: typing___Optional[
+                google___ads___googleads___v4___common___criteria_pb2___KeywordInfo
+            ] = None,
+            recommended_match_type: typing___Optional[
+                google___ads___googleads___v4___enums___keyword_match_type_pb2___KeywordMatchTypeEnum.KeywordMatchTypeValue
+            ] = None,
+        ) -> None: ...
+        def HasField(
+            self, field_name: typing_extensions___Literal["keyword", b"keyword"]
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "keyword",
+                b"keyword",
+                "recommended_match_type",
+                b"recommended_match_type",
+            ],
+        ) -> None: ...
+    type___KeywordMatchTypeRecommendation = KeywordMatchTypeRecommendation
 
     resource_name: typing___Text = ...
     type: google___ads___googleads___v4___enums___recommendation_type_pb2___RecommendationTypeEnum.RecommendationTypeValue = ...

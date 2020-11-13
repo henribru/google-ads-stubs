@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "google-ads-stubs"
-version = "4.1.0.post1"
+version = "5.0.0"
 license = "Apache-2.0"
 description = "Type stubs for google-ads"
 authors = ["Henrik Bruåsdal <henrik.bruasdal@gmail.com>"]
@@ -17,12 +17,12 @@ classifiers = [
 python = "^3.7"
 typing-extensions = "^3.7"
 googleapis-common-protos-stubs = "^1.0"
-google-ads = "^7.0.0"
+google-ads = "^8.0.0"
 
 [tool.poetry.dev-dependencies]
 protobuf = "^3.11.2"
 mypy-protobuf = "^1.20"
-mypy = "^0.780"
+mypy = "^0.790"
 black = "^19.10b0"
 astunparse = "^1.6.3"
 isort = "^5.5.3"

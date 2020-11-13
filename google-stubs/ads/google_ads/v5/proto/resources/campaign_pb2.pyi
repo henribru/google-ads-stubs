@@ -221,102 +221,23 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> typing_extensions___Literal["hotel_center_id"]: ...
     type___HotelSettingInfo = HotelSettingInfo
-    class DynamicSearchAdsSetting(google___protobuf___message___Message):
+    class LocalCampaignSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        domain_name: typing___Text = ...
-        language_code: typing___Text = ...
-        use_supplied_urls_only: builtin___bool = ...
-        feeds: google___protobuf___internal___containers___RepeatedScalarFieldContainer[
-            typing___Text
-        ] = ...
+        location_source_type: google___ads___googleads___v5___enums___location_source_type_pb2___LocationSourceTypeEnum.LocationSourceTypeValue = ...
         def __init__(
             self,
             *,
-            domain_name: typing___Optional[typing___Text] = None,
-            language_code: typing___Optional[typing___Text] = None,
-            use_supplied_urls_only: typing___Optional[builtin___bool] = None,
-            feeds: typing___Optional[typing___Iterable[typing___Text]] = None,
-        ) -> None: ...
-        def HasField(
-            self,
-            field_name: typing_extensions___Literal[
-                "_domain_name",
-                b"_domain_name",
-                "_language_code",
-                b"_language_code",
-                "_use_supplied_urls_only",
-                b"_use_supplied_urls_only",
-                "domain_name",
-                b"domain_name",
-                "language_code",
-                b"language_code",
-                "use_supplied_urls_only",
-                b"use_supplied_urls_only",
-            ],
-        ) -> builtin___bool: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "_domain_name",
-                b"_domain_name",
-                "_language_code",
-                b"_language_code",
-                "_use_supplied_urls_only",
-                b"_use_supplied_urls_only",
-                "domain_name",
-                b"domain_name",
-                "feeds",
-                b"feeds",
-                "language_code",
-                b"language_code",
-                "use_supplied_urls_only",
-                b"use_supplied_urls_only",
-            ],
-        ) -> None: ...
-        @typing___overload
-        def WhichOneof(
-            self,
-            oneof_group: typing_extensions___Literal["_domain_name", b"_domain_name"],
-        ) -> typing_extensions___Literal["domain_name"]: ...
-        @typing___overload
-        def WhichOneof(
-            self,
-            oneof_group: typing_extensions___Literal[
-                "_language_code", b"_language_code"
-            ],
-        ) -> typing_extensions___Literal["language_code"]: ...
-        @typing___overload
-        def WhichOneof(
-            self,
-            oneof_group: typing_extensions___Literal[
-                "_use_supplied_urls_only", b"_use_supplied_urls_only"
-            ],
-        ) -> typing_extensions___Literal["use_supplied_urls_only"]: ...
-    type___DynamicSearchAdsSetting = DynamicSearchAdsSetting
-    class GeoTargetTypeSetting(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        positive_geo_target_type: google___ads___googleads___v5___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue = ...
-        negative_geo_target_type: google___ads___googleads___v5___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetTypeValue = ...
-        def __init__(
-            self,
-            *,
-            positive_geo_target_type: typing___Optional[
-                google___ads___googleads___v5___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue
-            ] = None,
-            negative_geo_target_type: typing___Optional[
-                google___ads___googleads___v5___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetTypeValue
+            location_source_type: typing___Optional[
+                google___ads___googleads___v5___enums___location_source_type_pb2___LocationSourceTypeEnum.LocationSourceTypeValue
             ] = None,
         ) -> None: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                "negative_geo_target_type",
-                b"negative_geo_target_type",
-                "positive_geo_target_type",
-                b"positive_geo_target_type",
+                "location_source_type", b"location_source_type"
             ],
         ) -> None: ...
-    type___GeoTargetTypeSetting = GeoTargetTypeSetting
+    type___LocalCampaignSetting = LocalCampaignSetting
     class AppCampaignSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         bidding_strategy_goal_type: google___ads___googleads___v5___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalTypeValue = ...
@@ -356,6 +277,117 @@ class Campaign(google___protobuf___message___Message):
             self, oneof_group: typing_extensions___Literal["_app_id", b"_app_id"]
         ) -> typing_extensions___Literal["app_id"]: ...
     type___AppCampaignSetting = AppCampaignSetting
+    class DynamicSearchAdsSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        domain_name: typing___Text = ...
+        language_code: typing___Text = ...
+        use_supplied_urls_only: builtin___bool = ...
+        feeds: google___protobuf___internal___containers___RepeatedScalarFieldContainer[
+            typing___Text
+        ] = ...
+        def __init__(
+            self,
+            *,
+            domain_name: typing___Optional[typing___Text] = None,
+            language_code: typing___Optional[typing___Text] = None,
+            use_supplied_urls_only: typing___Optional[builtin___bool] = None,
+            feeds: typing___Optional[typing___Iterable[typing___Text]] = None,
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "_use_supplied_urls_only",
+                b"_use_supplied_urls_only",
+                "use_supplied_urls_only",
+                b"use_supplied_urls_only",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "_use_supplied_urls_only",
+                b"_use_supplied_urls_only",
+                "domain_name",
+                b"domain_name",
+                "feeds",
+                b"feeds",
+                "language_code",
+                b"language_code",
+                "use_supplied_urls_only",
+                b"use_supplied_urls_only",
+            ],
+        ) -> None: ...
+        def WhichOneof(
+            self,
+            oneof_group: typing_extensions___Literal[
+                "_use_supplied_urls_only", b"_use_supplied_urls_only"
+            ],
+        ) -> typing_extensions___Literal["use_supplied_urls_only"]: ...
+    type___DynamicSearchAdsSetting = DynamicSearchAdsSetting
+    class VanityPharma(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        vanity_pharma_display_url_mode: google___ads___googleads___v5___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue = ...
+        vanity_pharma_text: google___ads___googleads___v5___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaTextValue = ...
+        def __init__(
+            self,
+            *,
+            vanity_pharma_display_url_mode: typing___Optional[
+                google___ads___googleads___v5___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue
+            ] = None,
+            vanity_pharma_text: typing___Optional[
+                google___ads___googleads___v5___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaTextValue
+            ] = None,
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "vanity_pharma_display_url_mode",
+                b"vanity_pharma_display_url_mode",
+                "vanity_pharma_text",
+                b"vanity_pharma_text",
+            ],
+        ) -> None: ...
+    type___VanityPharma = VanityPharma
+    class SelectiveOptimization(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        conversion_actions: google___protobuf___internal___containers___RepeatedScalarFieldContainer[
+            typing___Text
+        ] = ...
+        def __init__(
+            self,
+            *,
+            conversion_actions: typing___Optional[
+                typing___Iterable[typing___Text]
+            ] = None,
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "conversion_actions", b"conversion_actions"
+            ],
+        ) -> None: ...
+    type___SelectiveOptimization = SelectiveOptimization
+    class OptimizationGoalSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        optimization_goal_types: google___protobuf___internal___containers___RepeatedScalarFieldContainer[
+            google___ads___googleads___v5___enums___optimization_goal_type_pb2___OptimizationGoalTypeEnum.OptimizationGoalTypeValue
+        ] = ...
+        def __init__(
+            self,
+            *,
+            optimization_goal_types: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v5___enums___optimization_goal_type_pb2___OptimizationGoalTypeEnum.OptimizationGoalTypeValue
+                ]
+            ] = None,
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "optimization_goal_types", b"optimization_goal_types"
+            ],
+        ) -> None: ...
+    type___OptimizationGoalSetting = OptimizationGoalSetting
     class ShoppingSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         merchant_id: builtin___int = ...
@@ -460,87 +492,30 @@ class Campaign(google___protobuf___message___Message):
             oneof_group: typing_extensions___Literal["_tracking_url", b"_tracking_url"],
         ) -> typing_extensions___Literal["tracking_url"]: ...
     type___TrackingSetting = TrackingSetting
-    class OptimizationGoalSetting(google___protobuf___message___Message):
+    class GeoTargetTypeSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        optimization_goal_types: google___protobuf___internal___containers___RepeatedScalarFieldContainer[
-            google___ads___googleads___v5___enums___optimization_goal_type_pb2___OptimizationGoalTypeEnum.OptimizationGoalTypeValue
-        ] = ...
+        positive_geo_target_type: google___ads___googleads___v5___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue = ...
+        negative_geo_target_type: google___ads___googleads___v5___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetTypeValue = ...
         def __init__(
             self,
             *,
-            optimization_goal_types: typing___Optional[
-                typing___Iterable[
-                    google___ads___googleads___v5___enums___optimization_goal_type_pb2___OptimizationGoalTypeEnum.OptimizationGoalTypeValue
-                ]
+            positive_geo_target_type: typing___Optional[
+                google___ads___googleads___v5___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue
+            ] = None,
+            negative_geo_target_type: typing___Optional[
+                google___ads___googleads___v5___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetTypeValue
             ] = None,
         ) -> None: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                "optimization_goal_types", b"optimization_goal_types"
+                "negative_geo_target_type",
+                b"negative_geo_target_type",
+                "positive_geo_target_type",
+                b"positive_geo_target_type",
             ],
         ) -> None: ...
-    type___OptimizationGoalSetting = OptimizationGoalSetting
-    class LocalCampaignSetting(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        location_source_type: google___ads___googleads___v5___enums___location_source_type_pb2___LocationSourceTypeEnum.LocationSourceTypeValue = ...
-        def __init__(
-            self,
-            *,
-            location_source_type: typing___Optional[
-                google___ads___googleads___v5___enums___location_source_type_pb2___LocationSourceTypeEnum.LocationSourceTypeValue
-            ] = None,
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "location_source_type", b"location_source_type"
-            ],
-        ) -> None: ...
-    type___LocalCampaignSetting = LocalCampaignSetting
-    class VanityPharma(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        vanity_pharma_display_url_mode: google___ads___googleads___v5___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue = ...
-        vanity_pharma_text: google___ads___googleads___v5___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaTextValue = ...
-        def __init__(
-            self,
-            *,
-            vanity_pharma_display_url_mode: typing___Optional[
-                google___ads___googleads___v5___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue
-            ] = None,
-            vanity_pharma_text: typing___Optional[
-                google___ads___googleads___v5___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaTextValue
-            ] = None,
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "vanity_pharma_display_url_mode",
-                b"vanity_pharma_display_url_mode",
-                "vanity_pharma_text",
-                b"vanity_pharma_text",
-            ],
-        ) -> None: ...
-    type___VanityPharma = VanityPharma
-    class SelectiveOptimization(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        conversion_actions: google___protobuf___internal___containers___RepeatedScalarFieldContainer[
-            typing___Text
-        ] = ...
-        def __init__(
-            self,
-            *,
-            conversion_actions: typing___Optional[
-                typing___Iterable[typing___Text]
-            ] = None,
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "conversion_actions", b"conversion_actions"
-            ],
-        ) -> None: ...
-    type___SelectiveOptimization = SelectiveOptimization
+    type___GeoTargetTypeSetting = GeoTargetTypeSetting
 
     resource_name: typing___Text = ...
     id: builtin___int = ...

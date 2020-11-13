@@ -253,85 +253,6 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___DynamicSearchAdsSetting = DynamicSearchAdsSetting
-    class GeoTargetTypeSetting(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        positive_geo_target_type: google___ads___googleads___v4___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue = ...
-        negative_geo_target_type: google___ads___googleads___v4___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetTypeValue = ...
-        def __init__(
-            self,
-            *,
-            positive_geo_target_type: typing___Optional[
-                google___ads___googleads___v4___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue
-            ] = None,
-            negative_geo_target_type: typing___Optional[
-                google___ads___googleads___v4___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetTypeValue
-            ] = None,
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "negative_geo_target_type",
-                b"negative_geo_target_type",
-                "positive_geo_target_type",
-                b"positive_geo_target_type",
-            ],
-        ) -> None: ...
-    type___GeoTargetTypeSetting = GeoTargetTypeSetting
-    class AppCampaignSetting(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        bidding_strategy_goal_type: google___ads___googleads___v4___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalTypeValue = ...
-        app_store: google___ads___googleads___v4___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStoreValue = ...
-        @property
-        def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-        def __init__(
-            self,
-            *,
-            bidding_strategy_goal_type: typing___Optional[
-                google___ads___googleads___v4___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalTypeValue
-            ] = None,
-            app_id: typing___Optional[
-                google___protobuf___wrappers_pb2___StringValue
-            ] = None,
-            app_store: typing___Optional[
-                google___ads___googleads___v4___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStoreValue
-            ] = None,
-        ) -> None: ...
-        def HasField(
-            self, field_name: typing_extensions___Literal["app_id", b"app_id"]
-        ) -> builtin___bool: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "app_id",
-                b"app_id",
-                "app_store",
-                b"app_store",
-                "bidding_strategy_goal_type",
-                b"bidding_strategy_goal_type",
-            ],
-        ) -> None: ...
-    type___AppCampaignSetting = AppCampaignSetting
-    class OptimizationGoalSetting(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        optimization_goal_types: google___protobuf___internal___containers___RepeatedScalarFieldContainer[
-            google___ads___googleads___v4___enums___optimization_goal_type_pb2___OptimizationGoalTypeEnum.OptimizationGoalTypeValue
-        ] = ...
-        def __init__(
-            self,
-            *,
-            optimization_goal_types: typing___Optional[
-                typing___Iterable[
-                    google___ads___googleads___v4___enums___optimization_goal_type_pb2___OptimizationGoalTypeEnum.OptimizationGoalTypeValue
-                ]
-            ] = None,
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "optimization_goal_types", b"optimization_goal_types"
-            ],
-        ) -> None: ...
-    type___OptimizationGoalSetting = OptimizationGoalSetting
     class ShoppingSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -387,6 +308,28 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___ShoppingSetting = ShoppingSetting
+    class SelectiveOptimization(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def conversion_actions(
+            self,
+        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
+            google___protobuf___wrappers_pb2___StringValue
+        ]: ...
+        def __init__(
+            self,
+            *,
+            conversion_actions: typing___Optional[
+                typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+            ] = None,
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "conversion_actions", b"conversion_actions"
+            ],
+        ) -> None: ...
+    type___SelectiveOptimization = SelectiveOptimization
     class TrackingSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -407,6 +350,30 @@ class Campaign(google___protobuf___message___Message):
             field_name: typing_extensions___Literal["tracking_url", b"tracking_url"],
         ) -> None: ...
     type___TrackingSetting = TrackingSetting
+    class GeoTargetTypeSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        positive_geo_target_type: google___ads___googleads___v4___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue = ...
+        negative_geo_target_type: google___ads___googleads___v4___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetTypeValue = ...
+        def __init__(
+            self,
+            *,
+            positive_geo_target_type: typing___Optional[
+                google___ads___googleads___v4___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue
+            ] = None,
+            negative_geo_target_type: typing___Optional[
+                google___ads___googleads___v4___enums___negative_geo_target_type_pb2___NegativeGeoTargetTypeEnum.NegativeGeoTargetTypeValue
+            ] = None,
+        ) -> None: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "negative_geo_target_type",
+                b"negative_geo_target_type",
+                "positive_geo_target_type",
+                b"positive_geo_target_type",
+            ],
+        ) -> None: ...
+    type___GeoTargetTypeSetting = GeoTargetTypeSetting
     class LocalCampaignSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         location_source_type: google___ads___googleads___v4___enums___location_source_type_pb2___LocationSourceTypeEnum.LocationSourceTypeValue = ...
@@ -424,6 +391,40 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___LocalCampaignSetting = LocalCampaignSetting
+    class AppCampaignSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        bidding_strategy_goal_type: google___ads___googleads___v4___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalTypeValue = ...
+        app_store: google___ads___googleads___v4___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStoreValue = ...
+        @property
+        def app_id(self) -> google___protobuf___wrappers_pb2___StringValue: ...
+        def __init__(
+            self,
+            *,
+            bidding_strategy_goal_type: typing___Optional[
+                google___ads___googleads___v4___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalTypeValue
+            ] = None,
+            app_id: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            app_store: typing___Optional[
+                google___ads___googleads___v4___enums___app_campaign_app_store_pb2___AppCampaignAppStoreEnum.AppCampaignAppStoreValue
+            ] = None,
+        ) -> None: ...
+        def HasField(
+            self, field_name: typing_extensions___Literal["app_id", b"app_id"]
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "app_id",
+                b"app_id",
+                "app_store",
+                b"app_store",
+                "bidding_strategy_goal_type",
+                b"bidding_strategy_goal_type",
+            ],
+        ) -> None: ...
+    type___AppCampaignSetting = AppCampaignSetting
     class VanityPharma(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         vanity_pharma_display_url_mode: google___ads___googleads___v4___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue = ...
@@ -448,28 +449,27 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___VanityPharma = VanityPharma
-    class SelectiveOptimization(google___protobuf___message___Message):
+    class OptimizationGoalSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def conversion_actions(
-            self,
-        ) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[
-            google___protobuf___wrappers_pb2___StringValue
-        ]: ...
+        optimization_goal_types: google___protobuf___internal___containers___RepeatedScalarFieldContainer[
+            google___ads___googleads___v4___enums___optimization_goal_type_pb2___OptimizationGoalTypeEnum.OptimizationGoalTypeValue
+        ] = ...
         def __init__(
             self,
             *,
-            conversion_actions: typing___Optional[
-                typing___Iterable[google___protobuf___wrappers_pb2___StringValue]
+            optimization_goal_types: typing___Optional[
+                typing___Iterable[
+                    google___ads___googleads___v4___enums___optimization_goal_type_pb2___OptimizationGoalTypeEnum.OptimizationGoalTypeValue
+                ]
             ] = None,
         ) -> None: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                "conversion_actions", b"conversion_actions"
+                "optimization_goal_types", b"optimization_goal_types"
             ],
         ) -> None: ...
-    type___SelectiveOptimization = SelectiveOptimization
+    type___OptimizationGoalSetting = OptimizationGoalSetting
 
     resource_name: typing___Text = ...
     status: google___ads___googleads___v4___enums___campaign_status_pb2___CampaignStatusEnum.CampaignStatusValue = ...

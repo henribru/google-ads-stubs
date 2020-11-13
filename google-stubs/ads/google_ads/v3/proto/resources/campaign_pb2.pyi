@@ -189,81 +189,30 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___HotelSettingInfo = HotelSettingInfo
-    class ShoppingSetting(google___protobuf___message___Message):
+    class VanityPharma(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def merchant_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
-        @property
-        def sales_country(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-        @property
-        def campaign_priority(
-            self,
-        ) -> google___protobuf___wrappers_pb2___Int32Value: ...
-        @property
-        def enable_local(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
+        vanity_pharma_display_url_mode: google___ads___googleads___v3___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue = ...
+        vanity_pharma_text: google___ads___googleads___v3___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaTextValue = ...
         def __init__(
             self,
             *,
-            merchant_id: typing___Optional[
-                google___protobuf___wrappers_pb2___Int64Value
+            vanity_pharma_display_url_mode: typing___Optional[
+                google___ads___googleads___v3___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue
             ] = None,
-            sales_country: typing___Optional[
-                google___protobuf___wrappers_pb2___StringValue
-            ] = None,
-            campaign_priority: typing___Optional[
-                google___protobuf___wrappers_pb2___Int32Value
-            ] = None,
-            enable_local: typing___Optional[
-                google___protobuf___wrappers_pb2___BoolValue
+            vanity_pharma_text: typing___Optional[
+                google___ads___googleads___v3___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaTextValue
             ] = None,
         ) -> None: ...
-        def HasField(
-            self,
-            field_name: typing_extensions___Literal[
-                "campaign_priority",
-                b"campaign_priority",
-                "enable_local",
-                b"enable_local",
-                "merchant_id",
-                b"merchant_id",
-                "sales_country",
-                b"sales_country",
-            ],
-        ) -> builtin___bool: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                "campaign_priority",
-                b"campaign_priority",
-                "enable_local",
-                b"enable_local",
-                "merchant_id",
-                b"merchant_id",
-                "sales_country",
-                b"sales_country",
+                "vanity_pharma_display_url_mode",
+                b"vanity_pharma_display_url_mode",
+                "vanity_pharma_text",
+                b"vanity_pharma_text",
             ],
         ) -> None: ...
-    type___ShoppingSetting = ShoppingSetting
-    class TrackingSetting(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        @property
-        def tracking_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
-        def __init__(
-            self,
-            *,
-            tracking_url: typing___Optional[
-                google___protobuf___wrappers_pb2___StringValue
-            ] = None,
-        ) -> None: ...
-        def HasField(
-            self,
-            field_name: typing_extensions___Literal["tracking_url", b"tracking_url"],
-        ) -> builtin___bool: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal["tracking_url", b"tracking_url"],
-        ) -> None: ...
-    type___TrackingSetting = TrackingSetting
+    type___VanityPharma = VanityPharma
     class DynamicSearchAdsSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
@@ -321,6 +270,61 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___DynamicSearchAdsSetting = DynamicSearchAdsSetting
+    class ShoppingSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def merchant_id(self) -> google___protobuf___wrappers_pb2___Int64Value: ...
+        @property
+        def sales_country(self) -> google___protobuf___wrappers_pb2___StringValue: ...
+        @property
+        def campaign_priority(
+            self,
+        ) -> google___protobuf___wrappers_pb2___Int32Value: ...
+        @property
+        def enable_local(self) -> google___protobuf___wrappers_pb2___BoolValue: ...
+        def __init__(
+            self,
+            *,
+            merchant_id: typing___Optional[
+                google___protobuf___wrappers_pb2___Int64Value
+            ] = None,
+            sales_country: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+            campaign_priority: typing___Optional[
+                google___protobuf___wrappers_pb2___Int32Value
+            ] = None,
+            enable_local: typing___Optional[
+                google___protobuf___wrappers_pb2___BoolValue
+            ] = None,
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal[
+                "campaign_priority",
+                b"campaign_priority",
+                "enable_local",
+                b"enable_local",
+                "merchant_id",
+                b"merchant_id",
+                "sales_country",
+                b"sales_country",
+            ],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal[
+                "campaign_priority",
+                b"campaign_priority",
+                "enable_local",
+                b"enable_local",
+                "merchant_id",
+                b"merchant_id",
+                "sales_country",
+                b"sales_country",
+            ],
+        ) -> None: ...
+    type___ShoppingSetting = ShoppingSetting
     class GeoTargetTypeSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         positive_geo_target_type: google___ads___googleads___v3___enums___positive_geo_target_type_pb2___PositiveGeoTargetTypeEnum.PositiveGeoTargetTypeValue = ...
@@ -345,6 +349,26 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___GeoTargetTypeSetting = GeoTargetTypeSetting
+    class TrackingSetting(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        @property
+        def tracking_url(self) -> google___protobuf___wrappers_pb2___StringValue: ...
+        def __init__(
+            self,
+            *,
+            tracking_url: typing___Optional[
+                google___protobuf___wrappers_pb2___StringValue
+            ] = None,
+        ) -> None: ...
+        def HasField(
+            self,
+            field_name: typing_extensions___Literal["tracking_url", b"tracking_url"],
+        ) -> builtin___bool: ...
+        def ClearField(
+            self,
+            field_name: typing_extensions___Literal["tracking_url", b"tracking_url"],
+        ) -> None: ...
+    type___TrackingSetting = TrackingSetting
     class AppCampaignSetting(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         bidding_strategy_goal_type: google___ads___googleads___v3___enums___app_campaign_bidding_strategy_goal_type_pb2___AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalTypeValue = ...
@@ -379,30 +403,6 @@ class Campaign(google___protobuf___message___Message):
             ],
         ) -> None: ...
     type___AppCampaignSetting = AppCampaignSetting
-    class VanityPharma(google___protobuf___message___Message):
-        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-        vanity_pharma_display_url_mode: google___ads___googleads___v3___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue = ...
-        vanity_pharma_text: google___ads___googleads___v3___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaTextValue = ...
-        def __init__(
-            self,
-            *,
-            vanity_pharma_display_url_mode: typing___Optional[
-                google___ads___googleads___v3___enums___vanity_pharma_display_url_mode_pb2___VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlModeValue
-            ] = None,
-            vanity_pharma_text: typing___Optional[
-                google___ads___googleads___v3___enums___vanity_pharma_text_pb2___VanityPharmaTextEnum.VanityPharmaTextValue
-            ] = None,
-        ) -> None: ...
-        def ClearField(
-            self,
-            field_name: typing_extensions___Literal[
-                "vanity_pharma_display_url_mode",
-                b"vanity_pharma_display_url_mode",
-                "vanity_pharma_text",
-                b"vanity_pharma_text",
-            ],
-        ) -> None: ...
-    type___VanityPharma = VanityPharma
     class SelectiveOptimization(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
         @property
