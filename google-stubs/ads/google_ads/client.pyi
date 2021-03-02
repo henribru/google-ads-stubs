@@ -5,11 +5,10 @@ from typing_extensions import Literal
 
 from google.ads.google_ads.config import _ConfigDataUnparsed
 
-_V3 = Literal["v3"]
 _V4 = Literal["v4"]
 _V5 = Literal["v5"]
 _V6 = Literal["v6"]
-_V = Union[_V3, _V4, _V5, _V6]
+_V = Union[_V4, _V5, _V6]
 
 class GoogleAdsClient:
     credentials: Credentials = ...
