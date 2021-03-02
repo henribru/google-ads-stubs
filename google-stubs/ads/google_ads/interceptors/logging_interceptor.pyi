@@ -1,7 +1,7 @@
 import logging
 from typing import Callable, Optional, TypeVar
 
-import grpc  # type: ignore
+import grpc
 
 from .interceptor import Interceptor
 

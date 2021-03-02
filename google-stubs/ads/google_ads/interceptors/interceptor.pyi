@@ -1,6 +1,6 @@
 from typing import Any, List, NamedTuple, Optional, Tuple
 
-import grpc  # type: ignore
+import grpc
 
 class _ClientCallDetails(
     NamedTuple(
