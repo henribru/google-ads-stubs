@@ -17,7 +17,7 @@ classifiers = [
 python = "^3.7"
 typing-extensions = "^3.7"
 googleapis-common-protos-stubs = "^1.0"
-google-ads = "^8.0.0"
+google-ads = "^8.2.0"
 
 [tool.poetry.dev-dependencies]
 protobuf = "^3.11.2"

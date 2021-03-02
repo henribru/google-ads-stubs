@@ -7,13 +7,16 @@ class _ConfigDataRequired(TypedDict):
 
 class _ConfigDataOptional(TypedDict, total=False):
     endpoint: str
-    logging: Dict[str, Any]
 
 class _ConfigDataParsedOptional(_ConfigDataOptional, total=False):
     login_customer_id: str
+    linked_customer_id: str
+    logging: Dict[str, Any]
 
 class _ConfigDataUnparsedOptional(_ConfigDataOptional, total=False):
     login_customer_id: Union[int, str]
+    linked_customer_id: Union[int, str]
+    logging: Union[Dict[str, Any], str]
 
 class _InstalledAppConfigDataRequired(TypedDict):
     client_id: str
@@ -21,8 +24,8 @@ class _InstalledAppConfigDataRequired(TypedDict):
     refresh_token: str
 
 class _ServiceAccountConfigDataRequired(TypedDict):
-    path_to_private_key_file: str
-    delegated_account: str
+    json_key_file_path: str
+    impersonated_email: str
 
 class _InstalledAppConfigData(
     _ConfigDataRequired, _ConfigDataParsedOptional, _InstalledAppConfigDataRequired
@@ -51,6 +54,7 @@ _ConfigDataUnparsed = Union[
 
 def validate_dict(config_data: _ConfigData) -> None: ...
 def validate_login_customer_id(login_customer_id: Optional[str]) -> None: ...
+def validate_linked_customer_id(linked_customer_id: Optional[str]) -> None: ...
 def load_from_yaml_file(path: Optional[str] = ...) -> _ConfigData: ...
 @overload
 def load_from_dict(
@@ -70,5 +74,13 @@ def convert_login_customer_id_to_str(
 ) -> _InstalledAppConfigData: ...
 @overload
 def convert_login_customer_id_to_str(
+    config_data: _ServiceAccountConfigDataUnparsed,
+) -> _ServiceAccountConfigData: ...
+@overload
+def convert_linked_customer_id_to_str(
+    config_data: _InstalledAppConfigDataUnparsed,
+) -> _InstalledAppConfigData: ...
+@overload
+def convert_linked_customer_id_to_str(
     config_data: _ServiceAccountConfigDataUnparsed,
 ) -> _ServiceAccountConfigData: ...
