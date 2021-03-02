@@ -11,7 +11,7 @@ from typing import (
     Union,
 )
 
-import grpc  # type: ignore
+import grpc
 from google.api_core.client_options import ClientOptions  # type: ignore
 from google.api_core.gapic_v1.client_info import ClientInfo  # type: ignore
 from google.api_core.retry import Retry  # type: ignore

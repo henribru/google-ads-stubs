@@ -1,6 +1,6 @@
 from typing import Callable, Optional, Tuple, TypeVar
 
-import grpc  # type: ignore
+import grpc
 from grpc import UnaryUnaryClientInterceptor
 
 from .interceptor import Interceptor

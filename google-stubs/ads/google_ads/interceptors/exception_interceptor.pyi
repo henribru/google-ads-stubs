@@ -1,6 +1,6 @@
 from typing import Callable, TypeVar
 
-import grpc  # type: ignore
+import grpc
 
 from .interceptor import Interceptor
 
