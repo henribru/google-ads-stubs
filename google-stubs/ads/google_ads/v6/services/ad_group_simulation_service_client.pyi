@@ -41,7 +41,13 @@ class AdGroupSimulationServiceClient:
     ) -> AdGroupSimulationServiceClient: ...
     @classmethod
     def ad_group_simulation_path(
-        cls, customer: Any, ad_group_simulation: Any
+        cls,
+        customer_id: Any,
+        ad_group_id: Any,
+        type_: Any,
+        modification_method: Any,
+        start_date: Any,
+        end_date: Any,
     ) -> str: ...
     transport: Union[
         ad_group_simulation_service_grpc_transport.AdGroupSimulationServiceGrpcTransport,

@@ -40,7 +40,13 @@ class DomainCategoryServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> DomainCategoryServiceClient: ...
     @classmethod
-    def domain_category_path(cls, customer: Any, domain_category: Any) -> str: ...
+    def domain_category_path(
+        cls,
+        customer_id: Any,
+        campaign_id: Any,
+        base64_category: Any,
+        language_code: Any,
+    ) -> str: ...
     transport: Union[
         domain_category_service_grpc_transport.DomainCategoryServiceGrpcTransport,
         Callable[

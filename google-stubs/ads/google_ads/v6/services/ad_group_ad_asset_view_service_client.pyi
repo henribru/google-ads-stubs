@@ -41,7 +41,12 @@ class AdGroupAdAssetViewServiceClient:
     ) -> AdGroupAdAssetViewServiceClient: ...
     @classmethod
     def ad_group_ad_asset_view_path(
-        cls, customer: Any, ad_group_ad_asset_view: Any
+        cls,
+        customer_id: Any,
+        ad_group_id: Any,
+        ad_id: Any,
+        asset_id: Any,
+        field_type: Any,
     ) -> str: ...
     transport: Union[
         ad_group_ad_asset_view_service_grpc_transport.AdGroupAdAssetViewServiceGrpcTransport,

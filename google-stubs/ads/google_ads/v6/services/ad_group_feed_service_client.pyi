@@ -40,7 +40,9 @@ class AdGroupFeedServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AdGroupFeedServiceClient: ...
     @classmethod
-    def ad_group_feed_path(cls, customer: Any, ad_group_feed: Any) -> str: ...
+    def ad_group_feed_path(
+        cls, customer_id: Any, ad_group_id: Any, feed_id: Any
+    ) -> str: ...
     transport: Union[
         ad_group_feed_service_grpc_transport.AdGroupFeedServiceGrpcTransport,
         Callable[
@@ -81,7 +83,7 @@ class AdGroupFeedServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

@@ -40,9 +40,7 @@ class OperatingSystemVersionConstantServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> OperatingSystemVersionConstantServiceClient: ...
     @classmethod
-    def operating_system_version_constant_path(
-        cls, operating_system_version_constant: Any
-    ) -> str: ...
+    def operating_system_version_constant_path(cls, criterion_id: Any) -> str: ...
     transport: Union[
         operating_system_version_constant_service_grpc_transport.OperatingSystemVersionConstantServiceGrpcTransport,
         Callable[

@@ -70,7 +70,7 @@ class ConversionAdjustmentUploadServiceClient:
         self,
         customer_id: str,
         conversion_adjustments: List[Union[Dict[str, Any], ConversionAdjustment]],
-        partial_failure: Optional[bool] = ...,
+        partial_failure: bool,
         validate_only: Optional[bool] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

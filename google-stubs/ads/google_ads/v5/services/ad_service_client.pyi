@@ -72,7 +72,7 @@ class AdServiceClient:
         customer_id: str,
         operations: List[Union[Dict[str, Any], ad_service_pb2.AdOperation]],
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

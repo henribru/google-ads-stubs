@@ -40,7 +40,7 @@ class CampaignBudgetServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CampaignBudgetServiceClient: ...
     @classmethod
-    def campaign_budget_path(cls, customer: Any, campaign_budget: Any) -> str: ...
+    def campaign_budget_path(cls, customer_id: Any, campaign_budget_id: Any) -> str: ...
     transport: Union[
         campaign_budget_service_grpc_transport.CampaignBudgetServiceGrpcTransport,
         Callable[
@@ -81,7 +81,7 @@ class CampaignBudgetServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

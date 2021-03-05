@@ -40,7 +40,9 @@ class CampaignCriterionServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CampaignCriterionServiceClient: ...
     @classmethod
-    def campaign_criteria_path(cls, customer: Any, campaign_criteria: Any) -> str: ...
+    def campaign_criteria_path(
+        cls, customer_id: Any, campaign_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         campaign_criterion_service_grpc_transport.CampaignCriterionServiceGrpcTransport,
         Callable[
@@ -84,7 +86,7 @@ class CampaignCriterionServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

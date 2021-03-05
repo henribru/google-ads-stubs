@@ -40,7 +40,9 @@ class RemarketingActionServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> RemarketingActionServiceClient: ...
     @classmethod
-    def remarketing_action_path(cls, customer: Any, remarketing_action: Any) -> str: ...
+    def remarketing_action_path(
+        cls, customer_id: Any, remarketing_action_id: Any
+    ) -> str: ...
     transport: Union[
         remarketing_action_service_grpc_transport.RemarketingActionServiceGrpcTransport,
         Callable[

@@ -40,7 +40,9 @@ class CampaignLabelServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CampaignLabelServiceClient: ...
     @classmethod
-    def campaign_label_path(cls, customer: Any, campaign_label: Any) -> str: ...
+    def campaign_label_path(
+        cls, customer_id: Any, campaign_id: Any, label_id: Any
+    ) -> str: ...
     transport: Union[
         campaign_label_service_grpc_transport.CampaignLabelServiceGrpcTransport,
         Callable[

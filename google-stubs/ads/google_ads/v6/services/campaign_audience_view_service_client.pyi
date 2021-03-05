@@ -41,7 +41,7 @@ class CampaignAudienceViewServiceClient:
     ) -> CampaignAudienceViewServiceClient: ...
     @classmethod
     def campaign_audience_view_path(
-        cls, customer: Any, campaign_audience_view: Any
+        cls, customer_id: Any, campaign_id: Any, criterion_id: Any
     ) -> str: ...
     transport: Union[
         campaign_audience_view_service_grpc_transport.CampaignAudienceViewServiceGrpcTransport,

@@ -40,9 +40,7 @@ class MobileAppCategoryConstantServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> MobileAppCategoryConstantServiceClient: ...
     @classmethod
-    def mobile_app_category_constant_path(
-        cls, mobile_app_category_constant: Any
-    ) -> str: ...
+    def mobile_app_category_constant_path(cls, mobile_app_category_id: Any) -> str: ...
     transport: Union[
         mobile_app_category_constant_service_grpc_transport.MobileAppCategoryConstantServiceGrpcTransport,
         Callable[

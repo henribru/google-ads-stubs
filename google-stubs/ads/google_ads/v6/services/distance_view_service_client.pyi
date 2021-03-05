@@ -40,7 +40,9 @@ class DistanceViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> DistanceViewServiceClient: ...
     @classmethod
-    def distance_view_path(cls, customer: Any, distance_view: Any) -> str: ...
+    def distance_view_path(
+        cls, customer_id: Any, placeholder_chain_id: Any, distance_bucket: Any
+    ) -> str: ...
     transport: Union[
         distance_view_service_grpc_transport.DistanceViewServiceGrpcTransport,
         Callable[

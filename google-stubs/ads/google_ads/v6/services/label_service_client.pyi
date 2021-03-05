@@ -40,7 +40,7 @@ class LabelServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> LabelServiceClient: ...
     @classmethod
-    def label_path(cls, customer: Any, label: Any) -> str: ...
+    def label_path(cls, customer_id: Any, label_id: Any) -> str: ...
     transport: Union[
         label_service_grpc_transport.LabelServiceGrpcTransport,
         Callable[
@@ -78,7 +78,7 @@ class LabelServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

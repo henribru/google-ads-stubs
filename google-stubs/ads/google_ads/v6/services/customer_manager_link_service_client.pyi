@@ -41,7 +41,7 @@ class CustomerManagerLinkServiceClient:
     ) -> CustomerManagerLinkServiceClient: ...
     @classmethod
     def customer_manager_link_path(
-        cls, customer: Any, customer_manager_link: Any
+        cls, customer_id: Any, manager_customer_id: Any, manager_link_id: Any
     ) -> str: ...
     transport: Union[
         customer_manager_link_service_grpc_transport.CustomerManagerLinkServiceGrpcTransport,

@@ -38,7 +38,7 @@ class AdServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AdServiceClient: ...
     @classmethod
-    def ad_path(cls, customer: Any, ad: Any) -> str: ...
+    def ad_path(cls, customer_id: Any, ad_id: Any) -> str: ...
     transport: Union[
         ad_service_grpc_transport.AdServiceGrpcTransport,
         Callable[[Credentials, type], ad_service_grpc_transport.AdServiceGrpcTransport],
@@ -72,7 +72,7 @@ class AdServiceClient:
         customer_id: str,
         operations: List[Union[Dict[str, Any], ad_service_pb2.AdOperation]],
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

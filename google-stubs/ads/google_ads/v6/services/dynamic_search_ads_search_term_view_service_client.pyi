@@ -41,7 +41,13 @@ class DynamicSearchAdsSearchTermViewServiceClient:
     ) -> DynamicSearchAdsSearchTermViewServiceClient: ...
     @classmethod
     def dynamic_search_ads_search_term_view_path(
-        cls, customer: Any, dynamic_search_ads_search_term_view: Any
+        cls,
+        customer_id: Any,
+        ad_group_id: Any,
+        search_term_fingerprint: Any,
+        headline_fingerprint: Any,
+        landing_page_fingerprint: Any,
+        page_url_fingerprint: Any,
     ) -> str: ...
     transport: Union[
         dynamic_search_ads_search_term_view_service_grpc_transport.DynamicSearchAdsSearchTermViewServiceGrpcTransport,

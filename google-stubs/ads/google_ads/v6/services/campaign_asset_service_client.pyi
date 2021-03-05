@@ -40,7 +40,9 @@ class CampaignAssetServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CampaignAssetServiceClient: ...
     @classmethod
-    def campaign_asset_path(cls, customer: Any, campaign_asset: Any) -> str: ...
+    def campaign_asset_path(
+        cls, customer_id: Any, campaign_id: Any, asset_id: Any, field_type: Any
+    ) -> str: ...
     transport: Union[
         campaign_asset_service_grpc_transport.CampaignAssetServiceGrpcTransport,
         Callable[

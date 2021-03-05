@@ -41,7 +41,11 @@ class PaidOrganicSearchTermViewServiceClient:
     ) -> PaidOrganicSearchTermViewServiceClient: ...
     @classmethod
     def paid_organic_search_term_view_path(
-        cls, customer: Any, paid_organic_search_term_view: Any
+        cls,
+        customer_id: Any,
+        campaign_id: Any,
+        ad_group_id: Any,
+        base64_search_term: Any,
     ) -> str: ...
     transport: Union[
         paid_organic_search_term_view_service_grpc_transport.PaidOrganicSearchTermViewServiceGrpcTransport,

@@ -27,7 +27,10 @@ from google.ads.google_ads.v6.services import (
 from google.ads.google_ads.v6.services.transports import (
     customer_negative_criterion_service_grpc_transport as customer_negative_criterion_service_grpc_transport,
 )
-from google.ads.google_ads.v6.types import CustomerNegativeCriterion
+from google.ads.google_ads.v6.types import (
+    CustomerNegativeCriterion,
+    ResponseContentTypeEnum,
+)
 
 class CustomerNegativeCriterionServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -41,7 +44,7 @@ class CustomerNegativeCriterionServiceClient:
     ) -> CustomerNegativeCriterionServiceClient: ...
     @classmethod
     def customer_negative_criteria_path(
-        cls, customer: Any, customer_negative_criteria: Any
+        cls, customer_id: Any, criterion_id: Any
     ) -> str: ...
     transport: Union[
         customer_negative_criterion_service_grpc_transport.CustomerNegativeCriterionServiceGrpcTransport,
@@ -85,6 +88,9 @@ class CustomerNegativeCriterionServiceClient:
         ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
+        response_content_type: Optional[
+            ResponseContentTypeEnum.ResponseContentType.V
+        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

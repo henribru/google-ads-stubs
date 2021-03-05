@@ -40,7 +40,9 @@ class KeywordViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> KeywordViewServiceClient: ...
     @classmethod
-    def keyword_view_path(cls, customer: Any, keyword_view: Any) -> str: ...
+    def keyword_view_path(
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         keyword_view_service_grpc_transport.KeywordViewServiceGrpcTransport,
         Callable[

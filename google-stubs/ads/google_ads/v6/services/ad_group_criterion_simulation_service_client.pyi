@@ -41,7 +41,14 @@ class AdGroupCriterionSimulationServiceClient:
     ) -> AdGroupCriterionSimulationServiceClient: ...
     @classmethod
     def ad_group_criterion_simulation_path(
-        cls, customer: Any, ad_group_criterion_simulation: Any
+        cls,
+        customer_id: Any,
+        ad_group_id: Any,
+        criterion_id: Any,
+        type_: Any,
+        modification_method: Any,
+        start_date: Any,
+        end_date: Any,
     ) -> str: ...
     transport: Union[
         ad_group_criterion_simulation_service_grpc_transport.AdGroupCriterionSimulationServiceGrpcTransport,

@@ -41,7 +41,7 @@ class ParentalStatusViewServiceClient:
     ) -> ParentalStatusViewServiceClient: ...
     @classmethod
     def parental_status_view_path(
-        cls, customer: Any, parental_status_view: Any
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
     ) -> str: ...
     transport: Union[
         parental_status_view_service_grpc_transport.ParentalStatusViewServiceGrpcTransport,

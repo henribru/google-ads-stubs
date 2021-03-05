@@ -41,7 +41,7 @@ class AdGroupBidModifierServiceClient:
     ) -> AdGroupBidModifierServiceClient: ...
     @classmethod
     def ad_group_bid_modifier_path(
-        cls, customer: Any, ad_group_bid_modifier: Any
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
     ) -> str: ...
     transport: Union[
         ad_group_bid_modifier_service_grpc_transport.AdGroupBidModifierServiceGrpcTransport,
@@ -86,7 +86,7 @@ class AdGroupBidModifierServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

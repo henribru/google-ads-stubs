@@ -40,7 +40,9 @@ class HotelGroupViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> HotelGroupViewServiceClient: ...
     @classmethod
-    def hotel_group_view_path(cls, customer: Any, hotel_group_view: Any) -> str: ...
+    def hotel_group_view_path(
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         hotel_group_view_service_grpc_transport.HotelGroupViewServiceGrpcTransport,
         Callable[

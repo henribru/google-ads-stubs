@@ -41,7 +41,7 @@ class ExpandedLandingPageViewServiceClient:
     ) -> ExpandedLandingPageViewServiceClient: ...
     @classmethod
     def expanded_landing_page_view_path(
-        cls, customer: Any, expanded_landing_page_view: Any
+        cls, customer_id: Any, expanded_final_url_fingerprint: Any
     ) -> str: ...
     transport: Union[
         expanded_landing_page_view_service_grpc_transport.ExpandedLandingPageViewServiceGrpcTransport,

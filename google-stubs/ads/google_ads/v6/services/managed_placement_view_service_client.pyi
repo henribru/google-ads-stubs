@@ -41,7 +41,7 @@ class ManagedPlacementViewServiceClient:
     ) -> ManagedPlacementViewServiceClient: ...
     @classmethod
     def managed_placement_view_path(
-        cls, customer: Any, managed_placement_view: Any
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
     ) -> str: ...
     transport: Union[
         managed_placement_view_service_grpc_transport.ManagedPlacementViewServiceGrpcTransport,

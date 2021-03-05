@@ -40,7 +40,9 @@ class ProductGroupViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> ProductGroupViewServiceClient: ...
     @classmethod
-    def product_group_view_path(cls, customer: Any, product_group_view: Any) -> str: ...
+    def product_group_view_path(
+        cls, customer_id: Any, adgroup_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         product_group_view_service_grpc_transport.ProductGroupViewServiceGrpcTransport,
         Callable[

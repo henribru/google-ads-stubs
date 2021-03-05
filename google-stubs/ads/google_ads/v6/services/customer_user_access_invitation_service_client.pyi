@@ -19,45 +19,45 @@ from google.auth.credentials import Credentials  # type: ignore
 from google.oauth2 import service_account as service_account  # type: ignore
 
 from google.ads.google_ads.v6.proto.services import (
-    ad_group_ad_service_pb2 as ad_group_ad_service_pb2,
+    customer_user_access_invitation_service_pb2 as customer_user_access_invitation_service_pb2,
 )
 from google.ads.google_ads.v6.services import (
-    ad_group_ad_service_client_config as ad_group_ad_service_client_config,
+    customer_user_access_invitation_service_client_config as customer_user_access_invitation_service_client_config,
 )
 from google.ads.google_ads.v6.services.transports import (
-    ad_group_ad_service_grpc_transport as ad_group_ad_service_grpc_transport,
+    customer_user_access_invitation_service_grpc_transport as customer_user_access_invitation_service_grpc_transport,
 )
-from google.ads.google_ads.v6.types import AdGroupAd, ResponseContentTypeEnum
+from google.ads.google_ads.v6.types import CustomerUserAccessInvitation
 
-class AdGroupAdServiceClient:
+class CustomerUserAccessInvitationServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
     @classmethod
     def from_service_account_file(
         cls, filename: str, *args: Any, **kwargs: Any
-    ) -> AdGroupAdServiceClient: ...
+    ) -> CustomerUserAccessInvitationServiceClient: ...
     @classmethod
     def from_service_account_json(
         cls, filename: str, *args: Any, **kwargs: Any
-    ) -> AdGroupAdServiceClient: ...
+    ) -> CustomerUserAccessInvitationServiceClient: ...
     @classmethod
-    def ad_group_ad_path(
-        cls, customer_id: Any, ad_group_id: Any, ad_id: Any
+    def customer_user_access_invitation_path(
+        cls, customer_id: Any, invitation_id: Any
     ) -> str: ...
     transport: Union[
-        ad_group_ad_service_grpc_transport.AdGroupAdServiceGrpcTransport,
+        customer_user_access_invitation_service_grpc_transport.CustomerUserAccessInvitationServiceGrpcTransport,
         Callable[
             [Credentials, type],
-            ad_group_ad_service_grpc_transport.AdGroupAdServiceGrpcTransport,
+            customer_user_access_invitation_service_grpc_transport.CustomerUserAccessInvitationServiceGrpcTransport,
         ],
     ] = ...
     def __init__(
         self,
         transport: Optional[
             Union[
-                ad_group_ad_service_grpc_transport.AdGroupAdServiceGrpcTransport,
+                customer_user_access_invitation_service_grpc_transport.CustomerUserAccessInvitationServiceGrpcTransport,
                 Callable[
                     [Credentials, type],
-                    ad_group_ad_service_grpc_transport.AdGroupAdServiceGrpcTransport,
+                    customer_user_access_invitation_service_grpc_transport.CustomerUserAccessInvitationServiceGrpcTransport,
                 ],
             ]
         ] = ...,
@@ -67,25 +67,21 @@ class AdGroupAdServiceClient:
         client_info: Optional[ClientInfo] = ...,
         client_options: Optional[Union[Dict[str, Any], ClientOptions]] = ...,
     ) -> None: ...
-    def get_ad_group_ad(
+    def get_customer_user_access_invitation(
         self,
         resource_name: str,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> AdGroupAd: ...
-    def mutate_ad_group_ads(
+    ) -> CustomerUserAccessInvitation: ...
+    def mutate_customer_user_access_invitation(
         self,
         customer_id: str,
-        operations: List[
-            Union[Dict[str, Any], ad_group_ad_service_pb2.AdGroupAdOperation]
+        operation_: Union[
+            Dict[str, Any],
+            customer_user_access_invitation_service_pb2.CustomerUserAccessInvitationOperation,
         ],
-        partial_failure: Optional[bool] = ...,
-        validate_only: Optional[bool] = ...,
-        response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentType.V
-        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> ad_group_ad_service_pb2.MutateAdGroupAdsResponse: ...
+    ) -> customer_user_access_invitation_service_pb2.MutateCustomerUserAccessInvitationResponse: ...

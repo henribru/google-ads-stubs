@@ -40,7 +40,7 @@ class SharedSetServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> SharedSetServiceClient: ...
     @classmethod
-    def shared_set_path(cls, customer: Any, shared_set: Any) -> str: ...
+    def shared_set_path(cls, customer_id: Any, shared_set_id: Any) -> str: ...
     transport: Union[
         shared_set_service_grpc_transport.SharedSetServiceGrpcTransport,
         Callable[
@@ -81,7 +81,7 @@ class SharedSetServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

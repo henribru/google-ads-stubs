@@ -44,7 +44,7 @@ class ThirdPartyAppAnalyticsLinkServiceClient:
     ) -> ThirdPartyAppAnalyticsLinkServiceClient: ...
     @classmethod
     def third_party_app_analytics_link_path(
-        cls, customer: Any, third_party_app_analytics_link: Any
+        cls, customer_id: Any, customer_link_id: Any
     ) -> str: ...
     transport: Union[
         third_party_app_analytics_link_service_grpc_transport.ThirdPartyAppAnalyticsLinkServiceGrpcTransport,
@@ -72,14 +72,14 @@ class ThirdPartyAppAnalyticsLinkServiceClient:
     ) -> None: ...
     def get_third_party_app_analytics_link(
         self,
-        resource_name: str,
+        resource_name: Optional[str] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
     ) -> ThirdPartyAppAnalyticsLink: ...
     def regenerate_shareable_link_id(
         self,
-        resource_name: str,
+        resource_name: Optional[str] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

@@ -48,7 +48,7 @@ class OfflineUserDataJobServiceClient:
     ) -> OfflineUserDataJobServiceClient: ...
     @classmethod
     def offline_user_data_job_path(
-        cls, customer: Any, offline_user_data_job: Any
+        cls, customer_id: Any, offline_user_data_update_id: Any
     ) -> str: ...
     transport: Union[
         offline_user_data_job_service_grpc_transport.OfflineUserDataJobServiceGrpcTransport,
@@ -74,6 +74,13 @@ class OfflineUserDataJobServiceClient:
         client_info: Optional[ClientInfo] = ...,
         client_options: Optional[Union[Dict[str, Any], ClientOptions]] = ...,
     ) -> None: ...
+    def run_offline_user_data_job(
+        self,
+        resource_name: str,
+        retry: Optional[Retry] = ...,
+        timeout: Optional[float] = ...,
+        metadata: Optional[Sequence[Tuple[str, str]]] = ...,
+    ) -> Operation: ...
     def create_offline_user_data_job(
         self,
         customer_id: str,
@@ -98,10 +105,3 @@ class OfflineUserDataJobServiceClient:
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
     ) -> AddOfflineUserDataJobOperationsResponse: ...
-    def run_offline_user_data_job(
-        self,
-        resource_name: str,
-        retry: Optional[Retry] = ...,
-        timeout: Optional[float] = ...,
-        metadata: Optional[Sequence[Tuple[str, str]]] = ...,
-    ) -> Operation: ...

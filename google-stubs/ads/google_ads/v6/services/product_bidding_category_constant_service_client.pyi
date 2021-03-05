@@ -41,7 +41,7 @@ class ProductBiddingCategoryConstantServiceClient:
     ) -> ProductBiddingCategoryConstantServiceClient: ...
     @classmethod
     def product_bidding_category_constant_path(
-        cls, product_bidding_category_constant: Any
+        cls, country_code: Any, level: Any, id_: Any
     ) -> str: ...
     transport: Union[
         product_bidding_category_constant_service_grpc_transport.ProductBiddingCategoryConstantServiceGrpcTransport,

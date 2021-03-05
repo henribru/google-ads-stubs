@@ -41,7 +41,7 @@ class FeedPlaceholderViewServiceClient:
     ) -> FeedPlaceholderViewServiceClient: ...
     @classmethod
     def feed_placeholder_view_path(
-        cls, customer: Any, feed_placeholder_view: Any
+        cls, customer_id: Any, placeholder_type: Any
     ) -> str: ...
     transport: Union[
         feed_placeholder_view_service_grpc_transport.FeedPlaceholderViewServiceGrpcTransport,

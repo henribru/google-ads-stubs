@@ -27,7 +27,7 @@ from google.ads.google_ads.v6.services import (
 from google.ads.google_ads.v6.services.transports import (
     ad_parameter_service_grpc_transport as ad_parameter_service_grpc_transport,
 )
-from google.ads.google_ads.v6.types import AdParameter
+from google.ads.google_ads.v6.types import AdParameter, ResponseContentTypeEnum
 
 class AdParameterServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -40,7 +40,9 @@ class AdParameterServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AdParameterServiceClient: ...
     @classmethod
-    def ad_parameter_path(cls, customer: Any, ad_parameter: Any) -> str: ...
+    def ad_parameter_path(
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any, parameter_index: Any
+    ) -> str: ...
     transport: Union[
         ad_parameter_service_grpc_transport.AdParameterServiceGrpcTransport,
         Callable[
@@ -80,6 +82,9 @@ class AdParameterServiceClient:
         ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
+        response_content_type: Optional[
+            ResponseContentTypeEnum.ResponseContentType.V
+        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

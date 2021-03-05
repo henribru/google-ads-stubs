@@ -41,7 +41,7 @@ class AccountBudgetProposalServiceClient:
     ) -> AccountBudgetProposalServiceClient: ...
     @classmethod
     def account_budget_proposal_path(
-        cls, customer: Any, account_budget_proposal: Any
+        cls, customer_id: Any, account_budget_proposal_id: Any
     ) -> str: ...
     transport: Union[
         account_budget_proposal_service_grpc_transport.AccountBudgetProposalServiceGrpcTransport,

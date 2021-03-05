@@ -27,7 +27,7 @@ from google.ads.google_ads.v6.services import (
 from google.ads.google_ads.v6.services.transports import (
     feed_mapping_service_grpc_transport as feed_mapping_service_grpc_transport,
 )
-from google.ads.google_ads.v6.types import FeedMapping
+from google.ads.google_ads.v6.types import FeedMapping, ResponseContentTypeEnum
 
 class FeedMappingServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -40,7 +40,9 @@ class FeedMappingServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> FeedMappingServiceClient: ...
     @classmethod
-    def feed_mapping_path(cls, customer: Any, feed_mapping: Any) -> str: ...
+    def feed_mapping_path(
+        cls, customer_id: Any, feed_id: Any, feed_mapping_id: Any
+    ) -> str: ...
     transport: Union[
         feed_mapping_service_grpc_transport.FeedMappingServiceGrpcTransport,
         Callable[
@@ -80,6 +82,9 @@ class FeedMappingServiceClient:
         ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
+        response_content_type: Optional[
+            ResponseContentTypeEnum.ResponseContentType.V
+        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

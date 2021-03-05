@@ -40,7 +40,7 @@ class MediaFileServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> MediaFileServiceClient: ...
     @classmethod
-    def media_file_path(cls, customer: Any, media_file: Any) -> str: ...
+    def media_file_path(cls, customer_id: Any, media_file_id: Any) -> str: ...
     transport: Union[
         media_file_service_grpc_transport.MediaFileServiceGrpcTransport,
         Callable[
@@ -81,7 +81,7 @@ class MediaFileServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

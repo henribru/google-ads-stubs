@@ -40,7 +40,9 @@ class FeedItemSetLinkServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> FeedItemSetLinkServiceClient: ...
     @classmethod
-    def feed_item_set_link_path(cls, customer: Any, feed_item_set_link: Any) -> str: ...
+    def feed_item_set_link_path(
+        cls, customer_id: Any, feed_id: Any, feed_item_set_id: Any, feed_item_id: Any
+    ) -> str: ...
     transport: Union[
         feed_item_set_link_service_grpc_transport.FeedItemSetLinkServiceGrpcTransport,
         Callable[

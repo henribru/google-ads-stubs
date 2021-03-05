@@ -46,7 +46,9 @@ class CampaignDraftServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CampaignDraftServiceClient: ...
     @classmethod
-    def campaign_draft_path(cls, customer: Any, campaign_draft: Any) -> str: ...
+    def campaign_draft_path(
+        cls, customer_id: Any, base_campaign_id: Any, draft_id: Any
+    ) -> str: ...
     transport: Union[
         campaign_draft_service_grpc_transport.CampaignDraftServiceGrpcTransport,
         Callable[
@@ -87,7 +89,7 @@ class CampaignDraftServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

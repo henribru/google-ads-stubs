@@ -41,7 +41,7 @@ class KeywordPlanCampaignKeywordServiceClient:
     ) -> KeywordPlanCampaignKeywordServiceClient: ...
     @classmethod
     def keyword_plan_campaign_keyword_path(
-        cls, customer: Any, keyword_plan_campaign_keyword: Any
+        cls, customer_id: Any, keyword_plan_campaign_keyword_id: Any
     ) -> str: ...
     transport: Union[
         keyword_plan_campaign_keyword_service_grpc_transport.KeywordPlanCampaignKeywordServiceGrpcTransport,

@@ -41,7 +41,14 @@ class CampaignCriterionSimulationServiceClient:
     ) -> CampaignCriterionSimulationServiceClient: ...
     @classmethod
     def campaign_criterion_simulation_path(
-        cls, customer: Any, campaign_criterion_simulation: Any
+        cls,
+        customer_id: Any,
+        campaign_id: Any,
+        criterion_id: Any,
+        type_: Any,
+        modification_method: Any,
+        start_date: Any,
+        end_date: Any,
     ) -> str: ...
     transport: Union[
         campaign_criterion_simulation_service_grpc_transport.CampaignCriterionSimulationServiceGrpcTransport,

@@ -48,7 +48,7 @@ class BatchJobServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> BatchJobServiceClient: ...
     @classmethod
-    def batch_job_path(cls, customer: Any, batch_job: Any) -> str: ...
+    def batch_job_path(cls, customer_id: Any, batch_job_id: Any) -> str: ...
     transport: Union[
         batch_job_service_grpc_transport.BatchJobServiceGrpcTransport,
         Callable[
@@ -106,8 +106,8 @@ class BatchJobServiceClient:
     def add_batch_job_operations(
         self,
         resource_name: str,
-        sequence_token: str,
         mutate_operations: List[Union[Dict[str, Any], MutateOperation]],
+        sequence_token: Optional[str] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,
