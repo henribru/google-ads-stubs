@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/google-ads-stubs.svg)](https://badge.fury.io/py/google-ads-stubs)
 
 This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). 
-It's currently compatible with v.8.0.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
+It's currently compatible with v.9.0.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
 
 **This is in no way affiliated with Google.**
 
@@ -47,9 +47,7 @@ this is not included in these stubs. The reason is that it requires about 10,000
 to generate, slows type checking to a crawl.
 
 This package does not provide complete type annotations, although it should cover what's used by most developers.
-The bare output from `stubgen` is used by the service stubs and transport classes.
-The service stubs are unlikely to be typed as long as there is no `mypy-protobuf` equivalent
-for GRPC stubs. The transport classes may be typed in the future if there is a need for it.
+The bare output from `stubgen` is used by the ransport classes. These may be typed in the future if there is a need for it.
 
 Some service methods allow you to pass in either a protobuf message or a dictionary for certain arguments.
 There is no check that the dictionary conforms to the message structure, as this would require a `TypedDict` subclass
