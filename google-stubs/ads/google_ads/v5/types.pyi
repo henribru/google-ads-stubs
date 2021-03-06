@@ -5038,6 +5038,7 @@ ListOperationsRequest = operations_pb2.ListOperationsRequest
 ListOperationsResponse = operations_pb2.ListOperationsResponse
 Operation = operations_pb2.Operation
 OperationInfo = operations_pb2.OperationInfo
+WaitOperationRequest = operations_pb2.WaitOperationRequest
 
 from google.protobuf import any_pb2 as any_pb2
 
@@ -6777,6 +6778,7 @@ __all__ = [
     "ListOperationsResponse",
     "Operation",
     "OperationInfo",
+    "WaitOperationRequest",
     "Any",
     "Empty",
     "FieldMask",
