@@ -40,9 +40,7 @@ class CustomerUserAccessServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CustomerUserAccessServiceClient: ...
     @classmethod
-    def customer_user_access_path(
-        cls, customer: Any, customer_user_access: Any
-    ) -> str: ...
+    def customer_user_access_path(cls, customer_id: Any, user_id: Any) -> str: ...
     transport: Union[
         customer_user_access_service_grpc_transport.CustomerUserAccessServiceGrpcTransport,
         Callable[

@@ -40,9 +40,7 @@ class ExtensionFeedItemServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> ExtensionFeedItemServiceClient: ...
     @classmethod
-    def extension_feed_item_path(
-        cls, customer: Any, extension_feed_item: Any
-    ) -> str: ...
+    def extension_feed_item_path(cls, customer_id: Any, feed_item_id: Any) -> str: ...
     transport: Union[
         extension_feed_item_service_grpc_transport.ExtensionFeedItemServiceGrpcTransport,
         Callable[
@@ -86,7 +84,7 @@ class ExtensionFeedItemServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

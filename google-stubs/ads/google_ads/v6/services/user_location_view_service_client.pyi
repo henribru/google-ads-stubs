@@ -40,7 +40,9 @@ class UserLocationViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> UserLocationViewServiceClient: ...
     @classmethod
-    def user_location_view_path(cls, customer: Any, user_location_view: Any) -> str: ...
+    def user_location_view_path(
+        cls, customer_id: Any, country_criterion_id: Any, is_targeting_location: Any
+    ) -> str: ...
     transport: Union[
         user_location_view_service_grpc_transport.UserLocationViewServiceGrpcTransport,
         Callable[

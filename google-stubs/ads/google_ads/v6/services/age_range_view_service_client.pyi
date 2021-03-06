@@ -40,7 +40,9 @@ class AgeRangeViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AgeRangeViewServiceClient: ...
     @classmethod
-    def age_range_view_path(cls, customer: Any, age_range_view: Any) -> str: ...
+    def age_range_view_path(
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         age_range_view_service_grpc_transport.AgeRangeViewServiceGrpcTransport,
         Callable[

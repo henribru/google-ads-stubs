@@ -40,7 +40,9 @@ class AdScheduleViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AdScheduleViewServiceClient: ...
     @classmethod
-    def ad_schedule_view_path(cls, customer: Any, ad_schedule_view: Any) -> str: ...
+    def ad_schedule_view_path(
+        cls, customer_id: Any, campaign_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         ad_schedule_view_service_grpc_transport.AdScheduleViewServiceGrpcTransport,
         Callable[

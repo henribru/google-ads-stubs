@@ -40,7 +40,9 @@ class GeographicViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> GeographicViewServiceClient: ...
     @classmethod
-    def geographic_view_path(cls, customer: Any, geographic_view: Any) -> str: ...
+    def geographic_view_path(
+        cls, customer_id: Any, country_criterion_id: Any, location_type: Any
+    ) -> str: ...
     transport: Union[
         geographic_view_service_grpc_transport.GeographicViewServiceGrpcTransport,
         Callable[

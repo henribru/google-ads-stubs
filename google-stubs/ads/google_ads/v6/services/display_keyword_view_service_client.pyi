@@ -41,7 +41,7 @@ class DisplayKeywordViewServiceClient:
     ) -> DisplayKeywordViewServiceClient: ...
     @classmethod
     def display_keyword_view_path(
-        cls, customer: Any, display_keyword_view: Any
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
     ) -> str: ...
     transport: Union[
         display_keyword_view_service_grpc_transport.DisplayKeywordViewServiceGrpcTransport,

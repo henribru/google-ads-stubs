@@ -40,7 +40,9 @@ class BiddingStrategyServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> BiddingStrategyServiceClient: ...
     @classmethod
-    def bidding_strategy_path(cls, customer: Any, bidding_strategy: Any) -> str: ...
+    def bidding_strategy_path(
+        cls, customer_id: Any, bidding_strategy_id: Any
+    ) -> str: ...
     transport: Union[
         bidding_strategy_service_grpc_transport.BiddingStrategyServiceGrpcTransport,
         Callable[

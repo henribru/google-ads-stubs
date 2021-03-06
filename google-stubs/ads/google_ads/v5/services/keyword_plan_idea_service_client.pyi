@@ -77,7 +77,7 @@ class KeywordPlanIdeaServiceClient:
         language: Union[Dict[str, Any], StringValue],
         geo_target_constants: List[Union[Dict[str, Any], StringValue]],
         include_adult_keywords: bool,
-        keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetworkValue,
+        keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork.V,
         page_size: Optional[int] = ...,
         keyword_and_url_seed: Optional[Union[Dict[str, Any], KeywordAndUrlSeed]] = ...,
         keyword_seed: Optional[Union[Dict[str, Any], KeywordSeed]] = ...,

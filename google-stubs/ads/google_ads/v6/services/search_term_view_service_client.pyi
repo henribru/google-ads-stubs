@@ -40,7 +40,9 @@ class SearchTermViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> SearchTermViewServiceClient: ...
     @classmethod
-    def search_term_view_path(cls, customer: Any, search_term_view: Any) -> str: ...
+    def search_term_view_path(
+        cls, customer_id: Any, campaign_id: Any, ad_group_id: Any, query: Any
+    ) -> str: ...
     transport: Union[
         search_term_view_service_grpc_transport.SearchTermViewServiceGrpcTransport,
         Callable[

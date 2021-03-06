@@ -40,7 +40,7 @@ class AdGroupServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AdGroupServiceClient: ...
     @classmethod
-    def ad_group_path(cls, customer: Any, ad_group: Any) -> str: ...
+    def ad_group_path(cls, customer_id: Any, ad_group_id: Any) -> str: ...
     transport: Union[
         ad_group_service_grpc_transport.AdGroupServiceGrpcTransport,
         Callable[
@@ -79,7 +79,7 @@ class AdGroupServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

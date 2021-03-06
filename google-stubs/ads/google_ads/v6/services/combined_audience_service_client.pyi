@@ -40,7 +40,9 @@ class CombinedAudienceServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CombinedAudienceServiceClient: ...
     @classmethod
-    def combined_audience_path(cls, customer: Any, combined_audience: Any) -> str: ...
+    def combined_audience_path(
+        cls, customer_id: Any, combined_audience_id: Any
+    ) -> str: ...
     transport: Union[
         combined_audience_service_grpc_transport.CombinedAudienceServiceGrpcTransport,
         Callable[

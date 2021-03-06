@@ -47,8 +47,10 @@ class CampaignExperimentServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CampaignExperimentServiceClient: ...
     @classmethod
-    def campaign_experiment_path(
-        cls, customer: Any, campaign_experiment: Any
+    def campaign_path(cls, customer_id: Any, campaign_id: Any) -> str: ...
+    @classmethod
+    def campaign_draft_path(
+        cls, customer_id: Any, base_campaign_id: Any, draft_id: Any
     ) -> str: ...
     transport: Union[
         campaign_experiment_service_grpc_transport.CampaignExperimentServiceGrpcTransport,
@@ -102,7 +104,7 @@ class CampaignExperimentServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

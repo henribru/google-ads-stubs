@@ -464,6 +464,15 @@ class CustomerServiceClient(customer_service_client.CustomerServiceClient):
     enums = enums
 
 from google.ads.google_ads.v6.services import (
+    customer_user_access_invitation_service_client as customer_user_access_invitation_service_client,
+)
+
+class CustomerUserAccessInvitationServiceClient(
+    customer_user_access_invitation_service_client.CustomerUserAccessInvitationServiceClient
+):
+    enums = enums
+
+from google.ads.google_ads.v6.services import (
     customer_user_access_service_client as customer_user_access_service_client,
 )
 
@@ -1427,6 +1436,14 @@ class CustomerServiceGrpcTransport(
 ): ...
 
 from google.ads.google_ads.v6.services.transports import (
+    customer_user_access_invitation_service_grpc_transport as customer_user_access_invitation_service_grpc_transport,
+)
+
+class CustomerUserAccessInvitationServiceGrpcTransport(
+    customer_user_access_invitation_service_grpc_transport.CustomerUserAccessInvitationServiceGrpcTransport
+): ...
+
+from google.ads.google_ads.v6.services.transports import (
     customer_user_access_service_grpc_transport as customer_user_access_service_grpc_transport,
 )
 
@@ -1986,6 +2003,7 @@ __all__ = [
     "CustomerManagerLinkServiceClient",
     "CustomerNegativeCriterionServiceClient",
     "CustomerServiceClient",
+    "CustomerUserAccessInvitationServiceClient",
     "CustomerUserAccessServiceClient",
     "DetailPlacementViewServiceClient",
     "DisplayKeywordViewServiceClient",
@@ -2104,6 +2122,7 @@ __all__ = [
     "CustomerManagerLinkServiceGrpcTransport",
     "CustomerNegativeCriterionServiceGrpcTransport",
     "CustomerServiceGrpcTransport",
+    "CustomerUserAccessInvitationServiceGrpcTransport",
     "CustomerUserAccessServiceGrpcTransport",
     "DetailPlacementViewServiceGrpcTransport",
     "DisplayKeywordViewServiceGrpcTransport",

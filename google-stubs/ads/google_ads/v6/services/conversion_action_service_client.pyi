@@ -40,7 +40,9 @@ class ConversionActionServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> ConversionActionServiceClient: ...
     @classmethod
-    def conversion_action_path(cls, customer: Any, conversion_action: Any) -> str: ...
+    def conversion_action_path(
+        cls, customer_id: Any, conversion_action_id: Any
+    ) -> str: ...
     transport: Union[
         conversion_action_service_grpc_transport.ConversionActionServiceGrpcTransport,
         Callable[

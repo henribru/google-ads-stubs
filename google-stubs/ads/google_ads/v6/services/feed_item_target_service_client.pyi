@@ -40,7 +40,14 @@ class FeedItemTargetServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> FeedItemTargetServiceClient: ...
     @classmethod
-    def feed_item_target_path(cls, customer: Any, feed_item_target: Any) -> str: ...
+    def feed_item_target_path(
+        cls,
+        customer_id: Any,
+        feed_id: Any,
+        feed_item_id: Any,
+        feed_item_target_type: Any,
+        feed_item_target_id: Any,
+    ) -> str: ...
     transport: Union[
         feed_item_target_service_grpc_transport.FeedItemTargetServiceGrpcTransport,
         Callable[
@@ -79,7 +86,7 @@ class FeedItemTargetServiceClient:
             Union[Dict[str, Any], feed_item_target_service_pb2.FeedItemTargetOperation]
         ],
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

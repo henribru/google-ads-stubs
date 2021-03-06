@@ -40,7 +40,7 @@ class AssetServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AssetServiceClient: ...
     @classmethod
-    def asset_path(cls, customer: Any, asset: Any) -> str: ...
+    def asset_path(cls, customer_id: Any, asset_id: Any) -> str: ...
     transport: Union[
         asset_service_grpc_transport.AssetServiceGrpcTransport,
         Callable[
@@ -76,7 +76,7 @@ class AssetServiceClient:
         customer_id: str,
         operations: List[Union[Dict[str, Any], asset_service_pb2.AssetOperation]],
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

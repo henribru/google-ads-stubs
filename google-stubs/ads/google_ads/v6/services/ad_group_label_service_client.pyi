@@ -40,7 +40,9 @@ class AdGroupLabelServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AdGroupLabelServiceClient: ...
     @classmethod
-    def ad_group_label_path(cls, customer: Any, ad_group_label: Any) -> str: ...
+    def ad_group_label_path(
+        cls, customer_id: Any, ad_group_id: Any, label_id: Any
+    ) -> str: ...
     transport: Union[
         ad_group_label_service_grpc_transport.AdGroupLabelServiceGrpcTransport,
         Callable[

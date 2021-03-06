@@ -40,7 +40,9 @@ class LocationViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> LocationViewServiceClient: ...
     @classmethod
-    def location_view_path(cls, customer: Any, location_view: Any) -> str: ...
+    def location_view_path(
+        cls, customer_id: Any, campaign_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         location_view_service_grpc_transport.LocationViewServiceGrpcTransport,
         Callable[

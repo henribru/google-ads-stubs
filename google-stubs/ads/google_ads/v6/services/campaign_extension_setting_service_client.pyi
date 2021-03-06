@@ -41,7 +41,7 @@ class CampaignExtensionSettingServiceClient:
     ) -> CampaignExtensionSettingServiceClient: ...
     @classmethod
     def campaign_extension_setting_path(
-        cls, customer: Any, campaign_extension_setting: Any
+        cls, customer_id: Any, campaign_id: Any, extension_type: Any
     ) -> str: ...
     transport: Union[
         campaign_extension_setting_service_grpc_transport.CampaignExtensionSettingServiceGrpcTransport,

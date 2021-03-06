@@ -27,7 +27,7 @@ from google.ads.google_ads.v6.services import (
 from google.ads.google_ads.v6.services.transports import (
     campaign_shared_set_service_grpc_transport as campaign_shared_set_service_grpc_transport,
 )
-from google.ads.google_ads.v6.types import CampaignSharedSet
+from google.ads.google_ads.v6.types import CampaignSharedSet, ResponseContentTypeEnum
 
 class CampaignSharedSetServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -41,7 +41,7 @@ class CampaignSharedSetServiceClient:
     ) -> CampaignSharedSetServiceClient: ...
     @classmethod
     def campaign_shared_set_path(
-        cls, customer: Any, campaign_shared_set: Any
+        cls, customer_id: Any, campaign_id: Any, shared_set_id: Any
     ) -> str: ...
     transport: Union[
         campaign_shared_set_service_grpc_transport.CampaignSharedSetServiceGrpcTransport,
@@ -85,6 +85,9 @@ class CampaignSharedSetServiceClient:
         ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
+        response_content_type: Optional[
+            ResponseContentTypeEnum.ResponseContentType.V
+        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

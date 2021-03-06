@@ -44,7 +44,7 @@ class MerchantCenterLinkServiceClient:
     ) -> MerchantCenterLinkServiceClient: ...
     @classmethod
     def merchant_center_link_path(
-        cls, customer: Any, merchant_center_link: Any
+        cls, customer_id: Any, merchant_center_id: Any
     ) -> str: ...
     transport: Union[
         merchant_center_link_service_grpc_transport.MerchantCenterLinkServiceGrpcTransport,

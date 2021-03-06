@@ -27,7 +27,7 @@ from google.ads.google_ads.v6.services import (
 from google.ads.google_ads.v6.services.transports import (
     shared_criterion_service_grpc_transport as shared_criterion_service_grpc_transport,
 )
-from google.ads.google_ads.v6.types import SharedCriterion
+from google.ads.google_ads.v6.types import ResponseContentTypeEnum, SharedCriterion
 
 class SharedCriterionServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -40,7 +40,9 @@ class SharedCriterionServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> SharedCriterionServiceClient: ...
     @classmethod
-    def shared_criteria_path(cls, customer: Any, shared_criteria: Any) -> str: ...
+    def shared_criteria_path(
+        cls, customer_id: Any, shared_set_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         shared_criterion_service_grpc_transport.SharedCriterionServiceGrpcTransport,
         Callable[
@@ -80,6 +82,9 @@ class SharedCriterionServiceClient:
         ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
+        response_content_type: Optional[
+            ResponseContentTypeEnum.ResponseContentType.V
+        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

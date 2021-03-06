@@ -40,7 +40,9 @@ class AdGroupCriterionServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> AdGroupCriterionServiceClient: ...
     @classmethod
-    def ad_group_criteria_path(cls, customer: Any, ad_group_criteria: Any) -> str: ...
+    def ad_group_criteria_path(
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         ad_group_criterion_service_grpc_transport.AdGroupCriterionServiceGrpcTransport,
         Callable[
@@ -83,7 +85,7 @@ class AdGroupCriterionServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

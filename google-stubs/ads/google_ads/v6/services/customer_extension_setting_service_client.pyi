@@ -41,7 +41,7 @@ class CustomerExtensionSettingServiceClient:
     ) -> CustomerExtensionSettingServiceClient: ...
     @classmethod
     def customer_extension_setting_path(
-        cls, customer: Any, customer_extension_setting: Any
+        cls, customer_id: Any, extension_type: Any
     ) -> str: ...
     transport: Union[
         customer_extension_setting_service_grpc_transport.CustomerExtensionSettingServiceGrpcTransport,

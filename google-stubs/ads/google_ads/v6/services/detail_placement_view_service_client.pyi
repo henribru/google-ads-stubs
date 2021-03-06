@@ -41,7 +41,7 @@ class DetailPlacementViewServiceClient:
     ) -> DetailPlacementViewServiceClient: ...
     @classmethod
     def detail_placement_view_path(
-        cls, customer: Any, detail_placement_view: Any
+        cls, customer_id: Any, ad_group_id: Any, base64_placement: Any
     ) -> str: ...
     transport: Union[
         detail_placement_view_service_grpc_transport.DetailPlacementViewServiceGrpcTransport,

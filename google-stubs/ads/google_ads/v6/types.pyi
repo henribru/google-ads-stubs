@@ -351,6 +351,13 @@ from google.ads.google_ads.v6.proto.common import value_pb2 as value_pb2
 ValuePb2 = value_pb2
 Value = value_pb2.Value
 
+from google.ads.google_ads.v6.proto.enums import (
+    access_invitation_status_pb2 as access_invitation_status_pb2,
+)
+
+AccessInvitationStatusPb2 = access_invitation_status_pb2
+AccessInvitationStatusEnum = access_invitation_status_pb2.AccessInvitationStatusEnum
+
 from google.ads.google_ads.v6.proto.enums import access_reason_pb2 as access_reason_pb2
 
 AccessReasonPb2 = access_reason_pb2
@@ -690,6 +697,20 @@ from google.ads.google_ads.v6.proto.enums import (
 
 CallPlaceholderFieldPb2 = call_placeholder_field_pb2
 CallPlaceholderFieldEnum = call_placeholder_field_pb2.CallPlaceholderFieldEnum
+
+from google.ads.google_ads.v6.proto.enums import (
+    call_tracking_display_location_pb2 as call_tracking_display_location_pb2,
+)
+
+CallTrackingDisplayLocationPb2 = call_tracking_display_location_pb2
+CallTrackingDisplayLocationEnum = (
+    call_tracking_display_location_pb2.CallTrackingDisplayLocationEnum
+)
+
+from google.ads.google_ads.v6.proto.enums import call_type_pb2 as call_type_pb2
+
+CallTypePb2 = call_type_pb2
+CallTypeEnum = call_type_pb2.CallTypeEnum
 
 from google.ads.google_ads.v6.proto.enums import (
     callout_placeholder_field_pb2 as callout_placeholder_field_pb2,
@@ -1245,6 +1266,13 @@ GoogleAdsFieldDataTypePb2 = google_ads_field_data_type_pb2
 GoogleAdsFieldDataTypeEnum = google_ads_field_data_type_pb2.GoogleAdsFieldDataTypeEnum
 
 from google.ads.google_ads.v6.proto.enums import (
+    google_voice_call_status_pb2 as google_voice_call_status_pb2,
+)
+
+GoogleVoiceCallStatusPb2 = google_voice_call_status_pb2
+GoogleVoiceCallStatusEnum = google_voice_call_status_pb2.GoogleVoiceCallStatusEnum
+
+from google.ads.google_ads.v6.proto.enums import (
     hotel_date_selection_type_pb2 as hotel_date_selection_type_pb2,
 )
 
@@ -1277,6 +1305,7 @@ from google.ads.google_ads.v6.proto.enums import (
 )
 
 ImagePlaceholderFieldPb2 = image_placeholder_field_pb2
+ImagePlaceholderFieldEnum = image_placeholder_field_pb2.ImagePlaceholderFieldEnum
 
 from google.ads.google_ads.v6.proto.enums import (
     income_range_type_pb2 as income_range_type_pb2,
@@ -3166,6 +3195,11 @@ from google.ads.google_ads.v6.proto.resources import (
 BillingSetupPb2 = billing_setup_pb2
 BillingSetup = billing_setup_pb2.BillingSetup
 
+from google.ads.google_ads.v6.proto.resources import call_view_pb2 as call_view_pb2
+
+CallViewPb2 = call_view_pb2
+CallView = call_view_pb2.CallView
+
 from google.ads.google_ads.v6.proto.resources import (
     campaign_asset_pb2 as campaign_asset_pb2,
 )
@@ -3376,6 +3410,15 @@ CallReportingSetting = customer_pb2.CallReportingSetting
 ConversionTrackingSetting = customer_pb2.ConversionTrackingSetting
 Customer = customer_pb2.Customer
 RemarketingSetting = customer_pb2.RemarketingSetting
+
+from google.ads.google_ads.v6.proto.resources import (
+    customer_user_access_invitation_pb2 as customer_user_access_invitation_pb2,
+)
+
+CustomerUserAccessInvitationPb2 = customer_user_access_invitation_pb2
+CustomerUserAccessInvitation = (
+    customer_user_access_invitation_pb2.CustomerUserAccessInvitation
+)
 
 from google.ads.google_ads.v6.proto.resources import (
     customer_user_access_pb2 as customer_user_access_pb2,
@@ -4562,6 +4605,27 @@ MutateCustomerResponse = customer_service_pb2.MutateCustomerResponse
 MutateCustomerResult = customer_service_pb2.MutateCustomerResult
 
 from google.ads.google_ads.v6.proto.services import (
+    customer_user_access_invitation_service_pb2 as customer_user_access_invitation_service_pb2,
+)
+
+CustomerUserAccessInvitationServicePb2 = customer_user_access_invitation_service_pb2
+CustomerUserAccessInvitationOperation = (
+    customer_user_access_invitation_service_pb2.CustomerUserAccessInvitationOperation
+)
+GetCustomerUserAccessInvitationRequest = (
+    customer_user_access_invitation_service_pb2.GetCustomerUserAccessInvitationRequest
+)
+MutateCustomerUserAccessInvitationRequest = (
+    customer_user_access_invitation_service_pb2.MutateCustomerUserAccessInvitationRequest
+)
+MutateCustomerUserAccessInvitationResponse = (
+    customer_user_access_invitation_service_pb2.MutateCustomerUserAccessInvitationResponse
+)
+MutateCustomerUserAccessInvitationResult = (
+    customer_user_access_invitation_service_pb2.MutateCustomerUserAccessInvitationResult
+)
+
+from google.ads.google_ads.v6.proto.services import (
     customer_user_access_service_pb2 as customer_user_access_service_pb2,
 )
 
@@ -5399,6 +5463,7 @@ __all__ = [
     "UrlCollectionPb2",
     "UserListsPb2",
     "ValuePb2",
+    "AccessInvitationStatusPb2",
     "AccessReasonPb2",
     "AccessRolePb2",
     "AccountBudgetProposalStatusPb2",
@@ -5447,6 +5512,8 @@ __all__ = [
     "BudgetTypePb2",
     "CallConversionReportingStatePb2",
     "CallPlaceholderFieldPb2",
+    "CallTrackingDisplayLocationPb2",
+    "CallTypePb2",
     "CalloutPlaceholderFieldPb2",
     "CampaignCriterionStatusPb2",
     "CampaignDraftStatusPb2",
@@ -5520,6 +5587,7 @@ __all__ = [
     "GeoTargetingTypePb2",
     "GoogleAdsFieldCategoryPb2",
     "GoogleAdsFieldDataTypePb2",
+    "GoogleVoiceCallStatusPb2",
     "HotelDateSelectionTypePb2",
     "HotelPlaceholderFieldPb2",
     "HotelPriceBucketPb2",
@@ -5783,6 +5851,7 @@ __all__ = [
     "BatchJobPb2",
     "BiddingStrategyPb2",
     "BillingSetupPb2",
+    "CallViewPb2",
     "CampaignAssetPb2",
     "CampaignAudienceViewPb2",
     "CampaignBidModifierPb2",
@@ -5813,6 +5882,7 @@ __all__ = [
     "CustomerManagerLinkPb2",
     "CustomerNegativeCriterionPb2",
     "CustomerPb2",
+    "CustomerUserAccessInvitationPb2",
     "CustomerUserAccessPb2",
     "DetailPlacementViewPb2",
     "DisplayKeywordViewPb2",
@@ -5927,6 +5997,7 @@ __all__ = [
     "CustomerManagerLinkServicePb2",
     "CustomerNegativeCriterionServicePb2",
     "CustomerServicePb2",
+    "CustomerUserAccessInvitationServicePb2",
     "CustomerUserAccessServicePb2",
     "DetailPlacementViewServicePb2",
     "DisplayKeywordViewServicePb2",
@@ -5997,6 +6068,7 @@ __all__ = [
     "WrappersPb2",
     "StatusPb2",
     "AccessInvitationErrorEnum",
+    "AccessInvitationStatusEnum",
     "AccessReasonEnum",
     "AccessRoleEnum",
     "AccountBudget",
@@ -6143,6 +6215,9 @@ __all__ = [
     "CallOnlyAdInfo",
     "CallPlaceholderFieldEnum",
     "CallReportingSetting",
+    "CallTrackingDisplayLocationEnum",
+    "CallTypeEnum",
+    "CallView",
     "CalloutFeedItem",
     "CalloutPlaceholderFieldEnum",
     "Campaign",
@@ -6292,6 +6367,8 @@ __all__ = [
     "CustomerPayPerConversionEligibilityFailureReasonEnum",
     "CustomerUserAccess",
     "CustomerUserAccessErrorEnum",
+    "CustomerUserAccessInvitation",
+    "CustomerUserAccessInvitationOperation",
     "CustomerUserAccessOperation",
     "DataDrivenModelStatusEnum",
     "DataPartnerLinkIdentifier",
@@ -6474,6 +6551,7 @@ __all__ = [
     "GetCustomerManagerLinkRequest",
     "GetCustomerNegativeCriterionRequest",
     "GetCustomerRequest",
+    "GetCustomerUserAccessInvitationRequest",
     "GetCustomerUserAccessRequest",
     "GetDetailPlacementViewRequest",
     "GetDisplayKeywordViewRequest",
@@ -6540,6 +6618,7 @@ __all__ = [
     "GoogleAdsFieldDataTypeEnum",
     "GoogleAdsLinkIdentifier",
     "GoogleAdsRow",
+    "GoogleVoiceCallStatusEnum",
     "GraduateCampaignExperimentRequest",
     "GraduateCampaignExperimentResponse",
     "GroupPlacementView",
@@ -6567,6 +6646,7 @@ __all__ = [
     "ImageDimension",
     "ImageErrorEnum",
     "ImageFeedItem",
+    "ImagePlaceholderFieldEnum",
     "IncomeRangeInfo",
     "IncomeRangeTypeEnum",
     "IncomeRangeView",
@@ -6827,6 +6907,9 @@ __all__ = [
     "MutateCustomerRequest",
     "MutateCustomerResponse",
     "MutateCustomerResult",
+    "MutateCustomerUserAccessInvitationRequest",
+    "MutateCustomerUserAccessInvitationResponse",
+    "MutateCustomerUserAccessInvitationResult",
     "MutateCustomerUserAccessRequest",
     "MutateCustomerUserAccessResponse",
     "MutateCustomerUserAccessResult",

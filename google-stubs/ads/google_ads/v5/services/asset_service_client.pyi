@@ -76,7 +76,7 @@ class AssetServiceClient:
         customer_id: str,
         operations: List[Union[Dict[str, Any], asset_service_pb2.AssetOperation]],
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

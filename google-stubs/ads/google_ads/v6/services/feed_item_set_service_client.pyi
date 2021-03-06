@@ -40,7 +40,9 @@ class FeedItemSetServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> FeedItemSetServiceClient: ...
     @classmethod
-    def feed_item_set_path(cls, customer: Any, feed_item_set: Any) -> str: ...
+    def feed_item_set_path(
+        cls, customer_id: Any, feed_id: Any, feed_item_set_id: Any
+    ) -> str: ...
     transport: Union[
         feed_item_set_service_grpc_transport.FeedItemSetServiceGrpcTransport,
         Callable[

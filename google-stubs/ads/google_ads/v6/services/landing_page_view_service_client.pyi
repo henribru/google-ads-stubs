@@ -40,7 +40,9 @@ class LandingPageViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> LandingPageViewServiceClient: ...
     @classmethod
-    def landing_page_view_path(cls, customer: Any, landing_page_view: Any) -> str: ...
+    def landing_page_view_path(
+        cls, customer_id: Any, unexpanded_final_url_fingerprint: Any
+    ) -> str: ...
     transport: Union[
         landing_page_view_service_grpc_transport.LandingPageViewServiceGrpcTransport,
         Callable[

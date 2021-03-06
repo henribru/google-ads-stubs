@@ -41,7 +41,7 @@ class AdGroupExtensionSettingServiceClient:
     ) -> AdGroupExtensionSettingServiceClient: ...
     @classmethod
     def ad_group_extension_setting_path(
-        cls, customer: Any, ad_group_extension_setting: Any
+        cls, customer_id: Any, ad_group_id: Any, extension_type: Any
     ) -> str: ...
     transport: Union[
         ad_group_extension_setting_service_grpc_transport.AdGroupExtensionSettingServiceGrpcTransport,

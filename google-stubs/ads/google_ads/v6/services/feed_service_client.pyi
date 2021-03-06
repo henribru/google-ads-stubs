@@ -38,7 +38,7 @@ class FeedServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> FeedServiceClient: ...
     @classmethod
-    def feed_path(cls, customer: Any, feed: Any) -> str: ...
+    def feed_path(cls, customer_id: Any, feed_id: Any) -> str: ...
     transport: Union[
         feed_service_grpc_transport.FeedServiceGrpcTransport,
         Callable[
@@ -76,7 +76,7 @@ class FeedServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

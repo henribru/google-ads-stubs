@@ -41,7 +41,7 @@ class KeywordPlanAdGroupKeywordServiceClient:
     ) -> KeywordPlanAdGroupKeywordServiceClient: ...
     @classmethod
     def keyword_plan_ad_group_keyword_path(
-        cls, customer: Any, keyword_plan_ad_group_keyword: Any
+        cls, customer_id: Any, keyword_plan_ad_group_keyword_id: Any
     ) -> str: ...
     transport: Union[
         keyword_plan_ad_group_keyword_service_grpc_transport.KeywordPlanAdGroupKeywordServiceGrpcTransport,

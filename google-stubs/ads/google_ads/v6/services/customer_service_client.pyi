@@ -46,7 +46,7 @@ class CustomerServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CustomerServiceClient: ...
     @classmethod
-    def customer_path(cls, customer: Any) -> str: ...
+    def customer_path(cls, customer_id: Any) -> str: ...
     transport: Union[
         customer_service_grpc_transport.CustomerServiceGrpcTransport,
         Callable[
@@ -84,7 +84,7 @@ class CustomerServiceClient:
         operation_: Union[Dict[str, Any], customer_service_pb2.CustomerOperation],
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
@@ -101,7 +101,7 @@ class CustomerServiceClient:
         customer_id: str,
         customer_client: Union[Dict[str, Any], Customer],
         email_address: Optional[str] = ...,
-        access_role: Optional[AccessRoleEnum.AccessRoleValue] = ...,
+        access_role: Optional[AccessRoleEnum.AccessRole.V] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

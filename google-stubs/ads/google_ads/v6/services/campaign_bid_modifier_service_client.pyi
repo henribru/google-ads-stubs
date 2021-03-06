@@ -27,7 +27,7 @@ from google.ads.google_ads.v6.services import (
 from google.ads.google_ads.v6.services.transports import (
     campaign_bid_modifier_service_grpc_transport as campaign_bid_modifier_service_grpc_transport,
 )
-from google.ads.google_ads.v6.types import CampaignBidModifier
+from google.ads.google_ads.v6.types import CampaignBidModifier, ResponseContentTypeEnum
 
 class CampaignBidModifierServiceClient:
     SERVICE_ADDRESS: ClassVar[str] = ...
@@ -41,7 +41,7 @@ class CampaignBidModifierServiceClient:
     ) -> CampaignBidModifierServiceClient: ...
     @classmethod
     def campaign_bid_modifier_path(
-        cls, customer: Any, campaign_bid_modifier: Any
+        cls, customer_id: Any, campaign_id: Any, criterion_id: Any
     ) -> str: ...
     transport: Union[
         campaign_bid_modifier_service_grpc_transport.CampaignBidModifierServiceGrpcTransport,
@@ -85,6 +85,9 @@ class CampaignBidModifierServiceClient:
         ],
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
+        response_content_type: Optional[
+            ResponseContentTypeEnum.ResponseContentType.V
+        ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,
         metadata: Optional[Sequence[Tuple[str, str]]] = ...,

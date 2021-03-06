@@ -40,7 +40,9 @@ class CampaignFeedServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> CampaignFeedServiceClient: ...
     @classmethod
-    def campaign_feed_path(cls, customer: Any, campaign_feed: Any) -> str: ...
+    def campaign_feed_path(
+        cls, customer_id: Any, campaign_id: Any, feed_id: Any
+    ) -> str: ...
     transport: Union[
         campaign_feed_service_grpc_transport.CampaignFeedServiceGrpcTransport,
         Callable[
@@ -81,7 +83,7 @@ class CampaignFeedServiceClient:
         partial_failure: Optional[bool] = ...,
         validate_only: Optional[bool] = ...,
         response_content_type: Optional[
-            ResponseContentTypeEnum.ResponseContentTypeValue
+            ResponseContentTypeEnum.ResponseContentType.V
         ] = ...,
         retry: Optional[Retry] = ...,
         timeout: Optional[float] = ...,

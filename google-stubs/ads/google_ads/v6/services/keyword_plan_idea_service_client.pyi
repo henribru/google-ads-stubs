@@ -72,12 +72,14 @@ class KeywordPlanIdeaServiceClient:
     ) -> None: ...
     def generate_keyword_ideas(
         self,
-        customer_id: str,
-        geo_target_constants: List[str],
-        include_adult_keywords: bool,
-        keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetworkValue,
+        customer_id: Optional[str] = ...,
         language: Optional[str] = ...,
+        geo_target_constants: Optional[List[str]] = ...,
+        include_adult_keywords: Optional[bool] = ...,
         page_size: Optional[int] = ...,
+        keyword_plan_network: Optional[
+            KeywordPlanNetworkEnum.KeywordPlanNetwork.V
+        ] = ...,
         keyword_and_url_seed: Optional[Union[Dict[str, Any], KeywordAndUrlSeed]] = ...,
         keyword_seed: Optional[Union[Dict[str, Any], KeywordSeed]] = ...,
         url_seed: Optional[Union[Dict[str, Any], UrlSeed]] = ...,

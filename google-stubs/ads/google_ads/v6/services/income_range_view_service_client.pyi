@@ -40,7 +40,9 @@ class IncomeRangeViewServiceClient:
         cls, filename: str, *args: Any, **kwargs: Any
     ) -> IncomeRangeViewServiceClient: ...
     @classmethod
-    def income_range_view_path(cls, customer: Any, income_range_view: Any) -> str: ...
+    def income_range_view_path(
+        cls, customer_id: Any, ad_group_id: Any, criterion_id: Any
+    ) -> str: ...
     transport: Union[
         income_range_view_service_grpc_transport.IncomeRangeViewServiceGrpcTransport,
         Callable[
