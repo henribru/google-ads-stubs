@@ -14,7 +14,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 typing-extensions = "^3.7.4.3"
 googleapis-common-protos-stubs = "^1.2.1"
 google-ads = "^9.0.0"
