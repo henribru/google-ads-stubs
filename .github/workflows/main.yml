@@ -100,4 +100,4 @@ jobs:
       - name: Run Mypy
         run: |
           mv google-stubs google
-          poetry run mypy google
+          poetry run mypy --namespace-packages --explicit-package-bases google

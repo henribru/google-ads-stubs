@@ -52,3 +52,5 @@ The bare output from `stubgen` is used by the ransport classes. These may be typ
 Some service methods allow you to pass in either a protobuf message or a dictionary for certain arguments.
 There is no check that the dictionary conforms to the message structure, as this would require a `TypedDict` subclass
 for each message.
+
+Note that if you're using Mypy you need to use the `--namespace-packages` option as `google` and `google.ads` are namespace packages.
