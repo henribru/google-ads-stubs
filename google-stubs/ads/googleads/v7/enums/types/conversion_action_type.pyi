@@ -1,0 +1,45 @@
+from typing import Any
+
+import proto
+
+__protobuf__: Any
+
+class ConversionActionTypeEnum(proto.Message):
+    class ConversionActionType(proto.Enum):
+        UNSPECIFIED: int
+        UNKNOWN: int
+        AD_CALL: int
+        CLICK_TO_CALL: int
+        GOOGLE_PLAY_DOWNLOAD: int
+        GOOGLE_PLAY_IN_APP_PURCHASE: int
+        UPLOAD_CALLS: int
+        UPLOAD_CLICKS: int
+        WEBPAGE: int
+        WEBSITE_CALL: int
+        STORE_SALES_DIRECT_UPLOAD: int
+        STORE_SALES: int
+        FIREBASE_ANDROID_FIRST_OPEN: int
+        FIREBASE_ANDROID_IN_APP_PURCHASE: int
+        FIREBASE_ANDROID_CUSTOM: int
+        FIREBASE_IOS_FIRST_OPEN: int
+        FIREBASE_IOS_IN_APP_PURCHASE: int
+        FIREBASE_IOS_CUSTOM: int
+        THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN: int
+        THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE: int
+        THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM: int
+        THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN: int
+        THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE: int
+        THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM: int
+        ANDROID_APP_PRE_REGISTRATION: int
+        ANDROID_INSTALLS_ALL_OTHER_APPS: int
+        FLOODLIGHT_ACTION: int
+        FLOODLIGHT_TRANSACTION: int
+        GOOGLE_HOSTED: int
+        LEAD_FORM_SUBMIT: int
+        SALESFORCE: int
+        SEARCH_ADS_360: int
+        SMART_CAMPAIGN_AD_CLICKS_TO_CALL: int
+        SMART_CAMPAIGN_MAP_CLICKS_TO_CALL: int
+        SMART_CAMPAIGN_MAP_DIRECTIONS: int
+        SMART_CAMPAIGN_TRACKED_CALLS: int
+        STORE_VISITS: int

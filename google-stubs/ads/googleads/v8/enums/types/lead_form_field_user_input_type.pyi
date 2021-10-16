@@ -1,0 +1,70 @@
+from typing import Any
+
+import proto
+
+__protobuf__: Any
+
+class LeadFormFieldUserInputTypeEnum(proto.Message):
+    class LeadFormFieldUserInputType(proto.Enum):
+        UNSPECIFIED: int
+        UNKNOWN: int
+        FULL_NAME: int
+        EMAIL: int
+        PHONE_NUMBER: int
+        POSTAL_CODE: int
+        CITY: int
+        REGION: int
+        COUNTRY: int
+        WORK_EMAIL: int
+        COMPANY_NAME: int
+        WORK_PHONE: int
+        JOB_TITLE: int
+        FIRST_NAME: int
+        LAST_NAME: int
+        VEHICLE_MODEL: int
+        VEHICLE_TYPE: int
+        PREFERRED_DEALERSHIP: int
+        VEHICLE_PURCHASE_TIMELINE: int
+        VEHICLE_OWNERSHIP: int
+        VEHICLE_PAYMENT_TYPE: int
+        VEHICLE_CONDITION: int
+        COMPANY_SIZE: int
+        ANNUAL_SALES: int
+        YEARS_IN_BUSINESS: int
+        JOB_DEPARTMENT: int
+        JOB_ROLE: int
+        EDUCATION_PROGRAM: int
+        EDUCATION_COURSE: int
+        PRODUCT: int
+        SERVICE: int
+        OFFER: int
+        CATEGORY: int
+        PREFERRED_CONTACT_METHOD: int
+        PREFERRED_LOCATION: int
+        PREFERRED_CONTACT_TIME: int
+        PURCHASE_TIMELINE: int
+        YEARS_OF_EXPERIENCE: int
+        JOB_INDUSTRY: int
+        LEVEL_OF_EDUCATION: int
+        PROPERTY_TYPE: int
+        REALTOR_HELP_GOAL: int
+        PROPERTY_COMMUNITY: int
+        PRICE_RANGE: int
+        NUMBER_OF_BEDROOMS: int
+        FURNISHED_PROPERTY: int
+        PETS_ALLOWED_PROPERTY: int
+        NEXT_PLANNED_PURCHASE: int
+        EVENT_SIGNUP_INTEREST: int
+        PREFERRED_SHOPPING_PLACES: int
+        FAVORITE_BRAND: int
+        TRANSPORTATION_COMMERCIAL_LICENSE_TYPE: int
+        EVENT_BOOKING_INTEREST: int
+        DESTINATION_COUNTRY: int
+        DESTINATION_CITY: int
+        DEPARTURE_COUNTRY: int
+        DEPARTURE_CITY: int
+        DEPARTURE_DATE: int
+        RETURN_DATE: int
+        NUMBER_OF_TRAVELERS: int
+        TRAVEL_BUDGET: int
+        TRAVEL_ACCOMMODATION: int

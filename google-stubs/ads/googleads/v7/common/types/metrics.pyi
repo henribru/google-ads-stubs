@@ -1,0 +1,131 @@
+from typing import Any
+
+import proto
+
+from google.ads.googleads.v7.enums.types import (
+    interaction_event_type as interaction_event_type,
+    quality_score_bucket as quality_score_bucket,
+)
+
+__protobuf__: Any
+
+class Metrics(proto.Message):
+    absolute_top_impression_percentage: Any
+    active_view_cpm: Any
+    active_view_ctr: Any
+    active_view_impressions: Any
+    active_view_measurability: Any
+    active_view_measurable_cost_micros: Any
+    active_view_measurable_impressions: Any
+    active_view_viewability: Any
+    all_conversions_from_interactions_rate: Any
+    all_conversions_value: Any
+    all_conversions_value_by_conversion_date: Any
+    all_conversions: Any
+    all_conversions_by_conversion_date: Any
+    all_conversions_value_per_cost: Any
+    all_conversions_from_click_to_call: Any
+    all_conversions_from_directions: Any
+    all_conversions_from_interactions_value_per_interaction: Any
+    all_conversions_from_menu: Any
+    all_conversions_from_order: Any
+    all_conversions_from_other_engagement: Any
+    all_conversions_from_store_visit: Any
+    all_conversions_from_store_website: Any
+    average_cost: Any
+    average_cpc: Any
+    average_cpe: Any
+    average_cpm: Any
+    average_cpv: Any
+    average_page_views: Any
+    average_time_on_site: Any
+    benchmark_average_max_cpc: Any
+    benchmark_ctr: Any
+    bounce_rate: Any
+    clicks: Any
+    combined_clicks: Any
+    combined_clicks_per_query: Any
+    combined_queries: Any
+    content_budget_lost_impression_share: Any
+    content_impression_share: Any
+    conversion_last_received_request_date_time: Any
+    conversion_last_conversion_date: Any
+    content_rank_lost_impression_share: Any
+    conversions_from_interactions_rate: Any
+    conversions_value: Any
+    conversions_value_by_conversion_date: Any
+    conversions_value_per_cost: Any
+    conversions_from_interactions_value_per_interaction: Any
+    conversions: Any
+    conversions_by_conversion_date: Any
+    cost_micros: Any
+    cost_per_all_conversions: Any
+    cost_per_conversion: Any
+    cost_per_current_model_attributed_conversion: Any
+    cross_device_conversions: Any
+    ctr: Any
+    current_model_attributed_conversions: Any
+    current_model_attributed_conversions_from_interactions_rate: Any
+    current_model_attributed_conversions_from_interactions_value_per_interaction: Any
+    current_model_attributed_conversions_value: Any
+    current_model_attributed_conversions_value_per_cost: Any
+    engagement_rate: Any
+    engagements: Any
+    hotel_average_lead_value_micros: Any
+    hotel_price_difference_percentage: Any
+    hotel_eligible_impressions: Any
+    historical_creative_quality_score: Any
+    historical_landing_page_quality_score: Any
+    historical_quality_score: Any
+    historical_search_predicted_ctr: Any
+    gmail_forwards: Any
+    gmail_saves: Any
+    gmail_secondary_clicks: Any
+    impressions_from_store_reach: Any
+    impressions: Any
+    interaction_rate: Any
+    interactions: Any
+    interaction_event_types: Any
+    invalid_click_rate: Any
+    invalid_clicks: Any
+    message_chats: Any
+    message_impressions: Any
+    message_chat_rate: Any
+    mobile_friendly_clicks_percentage: Any
+    organic_clicks: Any
+    organic_clicks_per_query: Any
+    organic_impressions: Any
+    organic_impressions_per_query: Any
+    organic_queries: Any
+    percent_new_visitors: Any
+    phone_calls: Any
+    phone_impressions: Any
+    phone_through_rate: Any
+    relative_ctr: Any
+    search_absolute_top_impression_share: Any
+    search_budget_lost_absolute_top_impression_share: Any
+    search_budget_lost_impression_share: Any
+    search_budget_lost_top_impression_share: Any
+    search_click_share: Any
+    search_exact_match_impression_share: Any
+    search_impression_share: Any
+    search_rank_lost_absolute_top_impression_share: Any
+    search_rank_lost_impression_share: Any
+    search_rank_lost_top_impression_share: Any
+    search_top_impression_share: Any
+    speed_score: Any
+    top_impression_percentage: Any
+    valid_accelerated_mobile_pages_clicks_percentage: Any
+    value_per_all_conversions: Any
+    value_per_all_conversions_by_conversion_date: Any
+    value_per_conversion: Any
+    value_per_conversions_by_conversion_date: Any
+    value_per_current_model_attributed_conversion: Any
+    video_quartile_p100_rate: Any
+    video_quartile_p25_rate: Any
+    video_quartile_p50_rate: Any
+    video_quartile_p75_rate: Any
+    video_view_rate: Any
+    video_views: Any
+    view_through_conversions: Any
+    sk_ad_network_conversions: Any
