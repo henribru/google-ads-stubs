@@ -1,0 +1,34 @@
+from typing import Any
+
+import proto
+
+__protobuf__: Any
+
+class AccountBudgetProposalErrorEnum(proto.Message):
+    class AccountBudgetProposalError(proto.Enum):
+        UNSPECIFIED: int
+        UNKNOWN: int
+        FIELD_MASK_NOT_ALLOWED: int
+        IMMUTABLE_FIELD: int
+        REQUIRED_FIELD_MISSING: int
+        CANNOT_CANCEL_APPROVED_PROPOSAL: int
+        CANNOT_REMOVE_UNAPPROVED_BUDGET: int
+        CANNOT_REMOVE_RUNNING_BUDGET: int
+        CANNOT_END_UNAPPROVED_BUDGET: int
+        CANNOT_END_INACTIVE_BUDGET: int
+        BUDGET_NAME_REQUIRED: int
+        CANNOT_UPDATE_OLD_BUDGET: int
+        CANNOT_END_IN_PAST: int
+        CANNOT_EXTEND_END_TIME: int
+        PURCHASE_ORDER_NUMBER_REQUIRED: int
+        PENDING_UPDATE_PROPOSAL_EXISTS: int
+        MULTIPLE_BUDGETS_NOT_ALLOWED_FOR_UNAPPROVED_BILLING_SETUP: int
+        CANNOT_UPDATE_START_TIME_FOR_STARTED_BUDGET: int
+        SPENDING_LIMIT_LOWER_THAN_ACCRUED_COST_NOT_ALLOWED: int
+        UPDATE_IS_NO_OP: int
+        END_TIME_MUST_FOLLOW_START_TIME: int
+        BUDGET_DATE_RANGE_INCOMPATIBLE_WITH_BILLING_SETUP: int
+        NOT_AUTHORIZED: int
+        INVALID_BILLING_SETUP: int
+        OVERLAPS_EXISTING_BUDGET: int
+        CANNOT_CREATE_BUDGET_THROUGH_API: int

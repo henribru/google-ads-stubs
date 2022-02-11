@@ -9,7 +9,8 @@ from google.ads.googleads.config import _ConfigDataUnparsed
 
 _V7 = Literal["v7"]
 _V8 = Literal["v8"]
-_V = Union[_V7, _V8]
+_V9 = Literal["v9"]
+_V = Union[_V7, _V8, _V9]
 
 class GoogleAdsClient:
     credentials: Credentials
