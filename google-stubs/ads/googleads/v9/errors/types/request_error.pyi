@@ -1,0 +1,33 @@
+from typing import Any
+
+import proto
+
+__protobuf__: Any
+
+class RequestErrorEnum(proto.Message):
+    class RequestError(proto.Enum):
+        UNSPECIFIED: int
+        UNKNOWN: int
+        RESOURCE_NAME_MISSING: int
+        RESOURCE_NAME_MALFORMED: int
+        BAD_RESOURCE_ID: int
+        INVALID_CUSTOMER_ID: int
+        OPERATION_REQUIRED: int
+        RESOURCE_NOT_FOUND: int
+        INVALID_PAGE_TOKEN: int
+        EXPIRED_PAGE_TOKEN: int
+        INVALID_PAGE_SIZE: int
+        REQUIRED_FIELD_MISSING: int
+        IMMUTABLE_FIELD: int
+        TOO_MANY_MUTATE_OPERATIONS: int
+        CANNOT_BE_EXECUTED_BY_MANAGER_ACCOUNT: int
+        CANNOT_MODIFY_FOREIGN_FIELD: int
+        INVALID_ENUM_VALUE: int
+        DEVELOPER_TOKEN_PARAMETER_MISSING: int
+        LOGIN_CUSTOMER_ID_PARAMETER_MISSING: int
+        VALIDATE_ONLY_REQUEST_HAS_PAGE_TOKEN: int
+        CANNOT_RETURN_SUMMARY_ROW_FOR_REQUEST_WITHOUT_METRICS: int
+        CANNOT_RETURN_SUMMARY_ROW_FOR_VALIDATE_ONLY_REQUESTS: int
+        INCONSISTENT_RETURN_SUMMARY_ROW_VALUE: int
+        TOTAL_RESULTS_COUNT_NOT_ORIGINALLY_REQUESTED: int
+        RPC_DEADLINE_TOO_SHORT: int

@@ -1,0 +1,49 @@
+from typing import Any
+
+import proto
+
+__protobuf__: Any
+
+class ImageErrorEnum(proto.Message):
+    class ImageError(proto.Enum):
+        UNSPECIFIED: int
+        UNKNOWN: int
+        INVALID_IMAGE: int
+        STORAGE_ERROR: int
+        BAD_REQUEST: int
+        UNEXPECTED_SIZE: int
+        ANIMATED_NOT_ALLOWED: int
+        ANIMATION_TOO_LONG: int
+        SERVER_ERROR: int
+        CMYK_JPEG_NOT_ALLOWED: int
+        FLASH_NOT_ALLOWED: int
+        FLASH_WITHOUT_CLICKTAG: int
+        FLASH_ERROR_AFTER_FIXING_CLICK_TAG: int
+        ANIMATED_VISUAL_EFFECT: int
+        FLASH_ERROR: int
+        LAYOUT_PROBLEM: int
+        PROBLEM_READING_IMAGE_FILE: int
+        ERROR_STORING_IMAGE: int
+        ASPECT_RATIO_NOT_ALLOWED: int
+        FLASH_HAS_NETWORK_OBJECTS: int
+        FLASH_HAS_NETWORK_METHODS: int
+        FLASH_HAS_URL: int
+        FLASH_HAS_MOUSE_TRACKING: int
+        FLASH_HAS_RANDOM_NUM: int
+        FLASH_SELF_TARGETS: int
+        FLASH_BAD_GETURL_TARGET: int
+        FLASH_VERSION_NOT_SUPPORTED: int
+        FLASH_WITHOUT_HARD_CODED_CLICK_URL: int
+        INVALID_FLASH_FILE: int
+        FAILED_TO_FIX_CLICK_TAG_IN_FLASH: int
+        FLASH_ACCESSES_NETWORK_RESOURCES: int
+        FLASH_EXTERNAL_JS_CALL: int
+        FLASH_EXTERNAL_FS_CALL: int
+        FILE_TOO_LARGE: int
+        IMAGE_DATA_TOO_LARGE: int
+        IMAGE_PROCESSING_ERROR: int
+        IMAGE_TOO_SMALL: int
+        INVALID_INPUT: int
+        PROBLEM_READING_FILE: int
+        IMAGE_CONSTRAINTS_VIOLATED: int
+        FORMAT_NOT_ALLOWED: int

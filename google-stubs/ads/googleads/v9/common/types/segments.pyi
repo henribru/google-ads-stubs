@@ -1,0 +1,105 @@
+from typing import Any
+
+import proto
+
+from google.ads.googleads.v9.common.types import criteria as criteria
+
+__protobuf__: Any
+
+class Segments(proto.Message):
+    ad_destination_type: Any
+    ad_network_type: Any
+    budget_campaign_association_status: Any
+    click_type: Any
+    conversion_action: Any
+    conversion_action_category: Any
+    conversion_action_name: Any
+    conversion_adjustment: Any
+    conversion_attribution_event_type: Any
+    conversion_lag_bucket: Any
+    conversion_or_adjustment_lag_bucket: Any
+    date: Any
+    day_of_week: Any
+    device: Any
+    external_conversion_source: Any
+    geo_target_airport: Any
+    geo_target_canton: Any
+    geo_target_city: Any
+    geo_target_country: Any
+    geo_target_county: Any
+    geo_target_district: Any
+    geo_target_metro: Any
+    geo_target_most_specific_location: Any
+    geo_target_postal_code: Any
+    geo_target_province: Any
+    geo_target_region: Any
+    geo_target_state: Any
+    hotel_booking_window_days: Any
+    hotel_center_id: Any
+    hotel_check_in_date: Any
+    hotel_check_in_day_of_week: Any
+    hotel_city: Any
+    hotel_class: Any
+    hotel_country: Any
+    hotel_date_selection_type: Any
+    hotel_length_of_stay: Any
+    hotel_rate_rule_id: Any
+    hotel_rate_type: Any
+    hotel_price_bucket: Any
+    hotel_state: Any
+    hour: Any
+    interaction_on_this_extension: Any
+    keyword: Any
+    month: Any
+    month_of_year: Any
+    partner_hotel_id: Any
+    placeholder_type: Any
+    product_aggregator_id: Any
+    product_bidding_category_level1: Any
+    product_bidding_category_level2: Any
+    product_bidding_category_level3: Any
+    product_bidding_category_level4: Any
+    product_bidding_category_level5: Any
+    product_brand: Any
+    product_channel: Any
+    product_channel_exclusivity: Any
+    product_condition: Any
+    product_country: Any
+    product_custom_attribute0: Any
+    product_custom_attribute1: Any
+    product_custom_attribute2: Any
+    product_custom_attribute3: Any
+    product_custom_attribute4: Any
+    product_item_id: Any
+    product_language: Any
+    product_merchant_id: Any
+    product_store_id: Any
+    product_title: Any
+    product_type_l1: Any
+    product_type_l2: Any
+    product_type_l3: Any
+    product_type_l4: Any
+    product_type_l5: Any
+    quarter: Any
+    recommendation_type: Any
+    search_engine_results_page_type: Any
+    search_term_match_type: Any
+    slot: Any
+    conversion_value_rule_primary_dimension: Any
+    webpage: Any
+    week: Any
+    year: Any
+    sk_ad_network_conversion_value: Any
+    asset_interaction_target: Any
+
+class Keyword(proto.Message):
+    ad_group_criterion: Any
+    info: Any
+
+class BudgetCampaignAssociationStatus(proto.Message):
+    campaign: Any
+    status: Any
+
+class AssetInteractionTarget(proto.Message):
+    asset: Any
+    interaction_on_this_asset: Any
