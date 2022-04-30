@@ -23,6 +23,7 @@ class AdGroupCriterion(proto.Message):
         creative_quality_score: Any
         post_click_quality_score: Any
         search_predicted_ctr: Any
+
     class PositionEstimates(proto.Message):
         first_page_cpc_micros: Any
         first_position_cpc_micros: Any

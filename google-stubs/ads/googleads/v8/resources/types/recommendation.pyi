@@ -18,12 +18,14 @@ class Recommendation(proto.Message):
     class RecommendationImpact(proto.Message):
         base_metrics: Any
         potential_metrics: Any
+
     class RecommendationMetrics(proto.Message):
         impressions: Any
         clicks: Any
         cost_micros: Any
         conversions: Any
         video_views: Any
+
     class CampaignBudgetRecommendation(proto.Message):
         class CampaignBudgetRecommendationOption(proto.Message):
             budget_amount_micros: Any
@@ -31,20 +33,26 @@ class Recommendation(proto.Message):
         current_budget_amount_micros: Any
         recommended_budget_amount_micros: Any
         budget_options: Any
+
     class KeywordRecommendation(proto.Message):
         keyword: Any
         recommended_cpc_bid_micros: Any
+
     class MaximizeConversionsOptInRecommendation(proto.Message):
         recommended_budget_amount_micros: Any
+
     class CalloutExtensionRecommendation(proto.Message):
         recommended_extensions: Any
+
     class TextAdRecommendation(proto.Message):
         ad: Any
         creation_date: Any
         auto_apply_date: Any
+
     class MoveUnusedBudgetRecommendation(proto.Message):
         excess_campaign_budget: Any
         budget_recommendation: Any
+
     class TargetCpaOptInRecommendation(proto.Message):
         class TargetCpaOptInRecommendationOption(proto.Message):
             goal: Any
@@ -53,21 +61,29 @@ class Recommendation(proto.Message):
             impact: Any
         options: Any
         recommended_target_cpa_micros: Any
+
     class KeywordMatchTypeRecommendation(proto.Message):
         keyword: Any
         recommended_match_type: Any
+
     class EnhancedCpcOptInRecommendation(proto.Message): ...
     class SearchPartnersOptInRecommendation(proto.Message): ...
+
     class CallExtensionRecommendation(proto.Message):
         recommended_extensions: Any
+
     class TargetRoasOptInRecommendation(proto.Message):
         recommended_target_roas: Any
         required_campaign_budget_amount_micros: Any
+
     class ResponsiveSearchAdRecommendation(proto.Message):
         ad: Any
+
     class MaximizeClicksOptInRecommendation(proto.Message):
         recommended_budget_amount_micros: Any
+
     class OptimizeAdRotationRecommendation(proto.Message): ...
+
     class SitelinkExtensionRecommendation(proto.Message):
         recommended_extensions: Any
     resource_name: Any

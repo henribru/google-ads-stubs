@@ -18,26 +18,35 @@ class ApplyRecommendationRequest(proto.Message):
 class ApplyRecommendationOperation(proto.Message):
     class CampaignBudgetParameters(proto.Message):
         new_budget_amount_micros: Any
+
     class TextAdParameters(proto.Message):
         ad: Any
+
     class KeywordParameters(proto.Message):
         ad_group: Any
         match_type: Any
         cpc_bid_micros: Any
+
     class TargetCpaOptInParameters(proto.Message):
         target_cpa_micros: Any
         new_campaign_budget_amount_micros: Any
+
     class TargetRoasOptInParameters(proto.Message):
         target_roas: Any
         new_campaign_budget_amount_micros: Any
+
     class CalloutExtensionParameters(proto.Message):
         callout_extensions: Any
+
     class CallExtensionParameters(proto.Message):
         call_extensions: Any
+
     class SitelinkExtensionParameters(proto.Message):
         sitelink_extensions: Any
+
     class MoveUnusedBudgetParameters(proto.Message):
         budget_micros_to_move: Any
+
     class ResponsiveSearchAdParameters(proto.Message):
         ad: Any
     resource_name: Any

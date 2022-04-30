@@ -23,6 +23,7 @@ class Feed(proto.Message):
         business_name_filter: Any
         category_filters: Any
         label_filters: Any
+
     class AffiliateLocationFeedData(proto.Message):
         chain_ids: Any
         relationship_type: Any

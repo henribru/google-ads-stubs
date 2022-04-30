@@ -21,11 +21,14 @@ class Operand(proto.Message):
         long_value: Any
         boolean_value: Any
         double_value: Any
+
     class FeedAttributeOperand(proto.Message):
         feed_id: Any
         feed_attribute_id: Any
+
     class FunctionOperand(proto.Message):
         matching_function: Any
+
     class RequestContextOperand(proto.Message):
         context_type: Any
     constant_operand: Any

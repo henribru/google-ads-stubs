@@ -10,6 +10,7 @@ class GetGeoTargetConstantRequest(proto.Message):
 class SuggestGeoTargetConstantsRequest(proto.Message):
     class LocationNames(proto.Message):
         names: Any
+
     class GeoTargets(proto.Message):
         geo_target_constants: Any
     locale: Any

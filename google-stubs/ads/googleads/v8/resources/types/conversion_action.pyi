@@ -16,13 +16,16 @@ class ConversionAction(proto.Message):
     class AttributionModelSettings(proto.Message):
         attribution_model: Any
         data_driven_model_status: Any
+
     class ValueSettings(proto.Message):
         default_value: Any
         default_currency_code: Any
         always_use_default_value: Any
+
     class ThirdPartyAppAnalyticsSettings(proto.Message):
         event_name: Any
         provider_name: Any
+
     class FirebaseSettings(proto.Message):
         event_name: Any
         project_id: Any

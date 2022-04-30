@@ -28,12 +28,16 @@ class PolicyTopicEntry(proto.Message):
 class PolicyTopicEvidence(proto.Message):
     class TextList(proto.Message):
         texts: Any
+
     class WebsiteList(proto.Message):
         websites: Any
+
     class DestinationTextList(proto.Message):
         destination_texts: Any
+
     class DestinationMismatch(proto.Message):
         url_types: Any
+
     class DestinationNotWorking(proto.Message):
         expanded_url: Any
         device: Any
@@ -51,7 +55,9 @@ class PolicyTopicConstraint(proto.Message):
     class CountryConstraintList(proto.Message):
         total_targeted_countries: Any
         countries: Any
+
     class ResellerConstraint(proto.Message): ...
+
     class CountryConstraint(proto.Message):
         country_criterion: Any
     country_constraint_list: Any

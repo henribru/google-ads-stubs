@@ -17,6 +17,7 @@ class SuggestSmartCampaignBudgetOptionsRequest(proto.Message):
 class SmartCampaignSuggestionInfo(proto.Message):
     class LocationList(proto.Message):
         locations: Any
+
     class BusinessContext(proto.Message):
         business_name: Any
     final_url: Any
@@ -32,6 +33,7 @@ class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
     class Metrics(proto.Message):
         min_daily_clicks: Any
         max_daily_clicks: Any
+
     class BudgetOption(proto.Message):
         daily_amount_micros: Any
         metrics: Any

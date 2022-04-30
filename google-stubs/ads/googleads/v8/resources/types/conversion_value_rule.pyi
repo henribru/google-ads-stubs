@@ -15,14 +15,17 @@ class ConversionValueRule(proto.Message):
     class ValueRuleAction(proto.Message):
         operation: Any
         value: Any
+
     class ValueRuleGeoLocationCondition(proto.Message):
         excluded_geo_target_constants: Any
         excluded_geo_match_type: Any
         geo_target_constants: Any
         geo_match_type: Any
+
     class ValueRuleAudienceCondition(proto.Message):
         user_lists: Any
         user_interests: Any
+
     class ValueRuleDeviceCondition(proto.Message):
         device_types: Any
     resource_name: Any

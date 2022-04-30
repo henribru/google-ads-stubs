@@ -26,32 +26,42 @@ class Campaign(proto.Message):
         target_search_network: Any
         target_content_network: Any
         target_partner_search_network: Any
+
     class HotelSettingInfo(proto.Message):
         hotel_center_id: Any
+
     class LocalCampaignSetting(proto.Message):
         location_source_type: Any
+
     class DynamicSearchAdsSetting(proto.Message):
         domain_name: Any
         language_code: Any
         use_supplied_urls_only: Any
         feeds: Any
+
     class TrackingSetting(proto.Message):
         tracking_url: Any
+
     class VanityPharma(proto.Message):
         vanity_pharma_display_url_mode: Any
         vanity_pharma_text: Any
+
     class ShoppingSetting(proto.Message):
         merchant_id: Any
         sales_country: Any
         campaign_priority: Any
         enable_local: Any
+
     class OptimizationGoalSetting(proto.Message):
         optimization_goal_types: Any
+
     class GeoTargetTypeSetting(proto.Message):
         positive_geo_target_type: Any
         negative_geo_target_type: Any
+
     class SelectiveOptimization(proto.Message):
         conversion_actions: Any
+
     class AppCampaignSetting(proto.Message):
         bidding_strategy_goal_type: Any
         app_id: Any

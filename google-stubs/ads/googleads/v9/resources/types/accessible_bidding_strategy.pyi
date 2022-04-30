@@ -12,17 +12,22 @@ __protobuf__: Any
 class AccessibleBiddingStrategy(proto.Message):
     class MaximizeConversionValue(proto.Message):
         target_roas: Any
+
     class MaximizeConversions(proto.Message):
         target_cpa: Any
+
     class TargetSpend(proto.Message):
         target_spend_micros: Any
         cpc_bid_ceiling_micros: Any
+
     class TargetCpa(proto.Message):
         target_cpa_micros: Any
+
     class TargetImpressionShare(proto.Message):
         location: Any
         location_fraction_micros: Any
         cpc_bid_ceiling_micros: Any
+
     class TargetRoas(proto.Message):
         target_roas: Any
     resource_name: Any

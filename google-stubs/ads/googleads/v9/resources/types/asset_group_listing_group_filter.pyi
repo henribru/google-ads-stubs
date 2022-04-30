@@ -27,17 +27,23 @@ class ListingGroupFilterDimension(proto.Message):
     class ProductBiddingCategory(proto.Message):
         id: Any
         level: Any
+
     class ProductBrand(proto.Message):
         value: Any
+
     class ProductChannel(proto.Message):
         channel: Any
+
     class ProductCondition(proto.Message):
         condition: Any
+
     class ProductCustomAttribute(proto.Message):
         value: Any
         index: Any
+
     class ProductItemId(proto.Message):
         value: Any
+
     class ProductType(proto.Message):
         value: Any
         level: Any
