@@ -1,0 +1,24 @@
+import proto
+from _typeshed import Incomplete
+from google.rpc import status_pb2 as status_pb2
+
+from google.ads.googleads.v10.resources.types import ad_group_label as ad_group_label
+
+__protobuf__: Incomplete
+
+class MutateAdGroupLabelsRequest(proto.Message):
+    customer_id: Incomplete
+    operations: Incomplete
+    partial_failure: Incomplete
+    validate_only: Incomplete
+
+class AdGroupLabelOperation(proto.Message):
+    create: Incomplete
+    remove: Incomplete
+
+class MutateAdGroupLabelsResponse(proto.Message):
+    partial_failure_error: Incomplete
+    results: Incomplete
+
+class MutateAdGroupLabelResult(proto.Message):
+    resource_name: Incomplete

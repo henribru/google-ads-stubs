@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/google-ads-stubs.svg)](https://badge.fury.io/py/google-ads-stubs)
 
 This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). 
-It's currently compatible with v14.0.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
+It's currently compatible with v16.0.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
 
 **This is in no way affiliated with Google.**
 
@@ -27,16 +27,16 @@ the object directly.
 # Replace this:
 campaign_operation = client.get_type('CampaignOperation')
 # With this:
-from google.ads.googleads.v8 import CampaignOperation
+from google.ads.googleads.v10 import CampaignOperation
 campaign_operation: CampaignOperation = client.get_type('CampaignOperation')
 # Or this:
-from google.ads.googleads.v8 import CampaignOperation
+from google.ads.googleads.v10 import CampaignOperation
 campaign_operation = CampaignOperation()
 
 # Replace this:
 google_ads_service = client.get_service('GoogleAdsService')
 # With this:
-from google.ads.googleads.v8 import GoogleAdsServiceClient
+from google.ads.googleads.v10 import GoogleAdsServiceClient
 google_ads_service: GoogleAdsServiceClient = client.get_service('GoogleAdsService')
 ```
 

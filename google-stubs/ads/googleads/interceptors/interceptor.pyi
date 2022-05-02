@@ -1,4 +1,4 @@
-from typing import Any, List, NamedTuple, Optional, Tuple
+from typing import Any, List, NamedTuple, Tuple
 
 import grpc
 
@@ -7,9 +7,9 @@ class _ClientCallDetails(
         "_ClientCallDetails",
         [
             ("method", str),
-            ("timeout", Optional[float]),
-            ("metadata", Optional[Tuple[Tuple[str, Any], ...]]),
-            ("credentials", Optional[grpc.CallCredentials]),
+            ("timeout", float | None),
+            ("metadata", Tuple[Tuple[str, Any], ...] | None),
+            ("credentials", grpc.CallCredentials | None),
         ],
     ),
     grpc.ClientCallDetails,
@@ -20,7 +20,7 @@ class Interceptor:
     @classmethod
     def get_request_id_from_metadata(
         cls, trailing_metadata: Tuple[Tuple[str, Any]]
-    ) -> Optional[str]: ...
+    ) -> str | None: ...
     @classmethod
     def parse_metadata_to_json(cls, metadata: List[Tuple[str, Any]]) -> str: ...
     @classmethod
@@ -35,6 +35,6 @@ class Interceptor:
         method: str,
         timeout: float,
         metadata: List[Tuple[str, Any]],
-        credentials: Optional[grpc.CallCredentials] = ...,
+        credentials: grpc.CallCredentials | None = ...,
     ) -> _ClientCallDetails: ...
     def __init__(self, api_version: str) -> None: ...
