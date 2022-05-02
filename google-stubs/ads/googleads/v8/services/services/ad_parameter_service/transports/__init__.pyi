@@ -1,2 +1,0 @@
-from .base import AdParameterServiceTransport as AdParameterServiceTransport
-from .grpc import AdParameterServiceGrpcTransport as AdParameterServiceGrpcTransport

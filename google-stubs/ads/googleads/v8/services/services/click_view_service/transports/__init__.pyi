@@ -1,2 +1,0 @@
-from .base import ClickViewServiceTransport as ClickViewServiceTransport
-from .grpc import ClickViewServiceGrpcTransport as ClickViewServiceGrpcTransport
