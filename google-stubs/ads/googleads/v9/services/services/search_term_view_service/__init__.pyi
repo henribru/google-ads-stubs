@@ -1,1 +1,0 @@
-from .client import SearchTermViewServiceClient as SearchTermViewServiceClient

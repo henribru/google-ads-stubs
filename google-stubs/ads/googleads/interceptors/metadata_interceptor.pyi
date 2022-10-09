@@ -2,16 +2,16 @@ from typing import Callable, Tuple, TypeVar
 
 import grpc
 
-from google.ads.googleads import v9, v10
+from google.ads.googleads import v10, v11
 
 from .interceptor import Interceptor
 
 _Request = TypeVar(
     "_Request",
-    v9.SearchGoogleAdsRequest,
-    v9.SearchGoogleAdsStreamRequest,
     v10.SearchGoogleAdsRequest,
     v10.SearchGoogleAdsStreamRequest,
+    v11.SearchGoogleAdsRequest,
+    v11.SearchGoogleAdsStreamRequest,
 )
 _Response = TypeVar("_Response")
 

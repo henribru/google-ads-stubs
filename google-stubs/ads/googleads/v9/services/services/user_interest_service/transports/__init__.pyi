@@ -1,2 +1,0 @@
-from .base import UserInterestServiceTransport as UserInterestServiceTransport
-from .grpc import UserInterestServiceGrpcTransport as UserInterestServiceGrpcTransport

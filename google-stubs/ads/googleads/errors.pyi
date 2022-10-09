@@ -2,10 +2,10 @@ from typing import Union
 
 import grpc
 
-from google.ads.googleads.v9 import GoogleAdsFailure as GoogleAdsFailureV9
 from google.ads.googleads.v10 import GoogleAdsFailure as GoogleAdsFailureV10
+from google.ads.googleads.v11 import GoogleAdsFailure as GoogleAdsFailureV11
 
-GoogleAdsFailure = Union[GoogleAdsFailureV9, GoogleAdsFailureV10]
+GoogleAdsFailure = Union[GoogleAdsFailureV10, GoogleAdsFailureV11]
 
 class GoogleAdsException(Exception):
     error: grpc.RpcError = ...
