@@ -7,9 +7,9 @@ from typing_extensions import Literal
 
 from google.ads.googleads.config import _ConfigDataUnparsed
 
-_V9 = Literal["v9"]
 _V10 = Literal["v10"]
-_V = Union[_V9, _V10]
+_V11 = Literal["v11"]
+_V = Union[_V10, _V11]
 
 class GoogleAdsClient:
     credentials: Credentials

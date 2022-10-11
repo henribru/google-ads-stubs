@@ -1,4 +1,4 @@
-from typing import Dict, Sequence, Tuple, Type, Union
+from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -68,9 +68,9 @@ class AccountBudgetProposalServiceClient(
     def __init__(
         self,
         *,
-        credentials: ga_credentials.Credentials | None = ...,
+        credentials: Optional[ga_credentials.Credentials] = ...,
         transport: Union[str, AccountBudgetProposalServiceTransport, None] = ...,
-        client_options: client_options_lib.ClientOptions | None = ...,
+        client_options: Optional[client_options_lib.ClientOptions] = ...,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_account_budget_proposal(
