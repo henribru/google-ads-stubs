@@ -1,10 +1,11 @@
-from typing import Any, Dict, Union
+from typing import Any, Dict, Union, overload
 
 import proto
 from google.oauth2.credentials import Credentials
 from google.protobuf.message import Message
 from typing_extensions import Literal
 
+from google.ads.googleads import v10, v11
 from google.ads.googleads.config import _ConfigDataUnparsed
 
 _V10 = Literal["v10"]
@@ -54,4 +55,17 @@ class GoogleAdsClient:
         use_proto_plus: bool = ...,
     ) -> None: ...
     def get_type(cls, name: str, version: _V = ...) -> Any: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsService"], version: _V10
+    ) -> v10.GoogleAdsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsService"], version: _V11
+    ) -> v11.GoogleAdsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsService"]
+    ) -> v11.GoogleAdsServiceClient: ...
+    @overload
     def get_service(self, name: str, version: _V = ...) -> Any: ...
