@@ -20,8 +20,7 @@ $ pip install google-ads-stubs
 ## Caveats
 
 There are some caveats. The primary one is that type inference does _not_ work for the `get_type` and `get_service`
-methods of `Client`. The workaround is to explicitly state the type. For `get_type` you can also instantiate
-the object directly.
+methods of `Client`. The only exception is `get_service("GoogleAdsService")`, which is supported since it's so common. The workaround in other cases is to explicitly state the type. For `get_type` you can also instantiate the object directly to get inference. 
 
 ```python
 # Replace this:
@@ -34,14 +33,17 @@ from google.ads.googleads.v10 import CampaignOperation
 campaign_operation = CampaignOperation()
 
 # Replace this:
-google_ads_service = client.get_service('GoogleAdsService')
+campaign_service = client.get_service('CampaignService')
 # With this:
-from google.ads.googleads.v10 import GoogleAdsServiceClient
-google_ads_service: GoogleAdsServiceClient = client.get_service('GoogleAdsService')
+from google.ads.googleads.v10 import CampaignServiceClient
+campaign_service: CampaignServiceClient = client.get_service('CampaignService')
+# But you can keep this:
+google_ads_service = client.get_service('GoogleAdsService')
 ```
 
 While it is technically possible to type these methods using a combination of overloading and literal types,
 this is not included in these stubs. The reason is that it requires about 10,000 overloads, which makes most typecheckers fairly slow.
+The only overloads included are those necessary to make it work for GoogleAdsService.
 
 Another big caveat since v8.0.0 of this package is that the attributes and constructor arguments of the protobuf messages are all typed as `Any` instead of their proper types. This is due to `google-ads-python` switching from raw protobuf message classes to `proto-plus` classes. Better types for these might be introduced in the future. `GoogleAdsClient.enums` is also typed as `Any`.
 
