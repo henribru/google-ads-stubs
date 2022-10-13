@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class TargetCpaOptInRecommendationGoalEnum(proto.Message):
     class TargetCpaOptInRecommendationGoal(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        SAME_COST: int
-        SAME_CONVERSIONS: int
-        SAME_CPA: int
-        CLOSEST_CPA: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        SAME_COST = 2
+        SAME_CONVERSIONS = 3
+        SAME_CPA = 4
+        CLOSEST_CPA = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

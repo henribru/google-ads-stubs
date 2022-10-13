@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class LinkedAccountTypeEnum(proto.Message):
     class LinkedAccountType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        THIRD_PARTY_APP_ANALYTICS: int
-        DATA_PARTNER: int
-        GOOGLE_ADS: int
-        HOTEL_CENTER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        THIRD_PARTY_APP_ANALYTICS = 2
+        DATA_PARTNER = 3
+        GOOGLE_ADS = 4
+        HOTEL_CENTER = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

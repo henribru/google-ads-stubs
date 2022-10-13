@@ -1,34 +1,86 @@
-import proto
-from _typeshed import Incomplete
-from google.protobuf import field_mask_pb2 as field_mask_pb2
+from typing import Any
 
-from google.ads.googleads.v10.resources.types import (
-    merchant_center_link as merchant_center_link,
+import proto
+from google.protobuf.field_mask_pb2 import FieldMask
+
+from google.ads.googleads.v10.resources.types.merchant_center_link import (
+    MerchantCenterLink,
 )
 
-__protobuf__: Incomplete
+class GetMerchantCenterLinkRequest(proto.Message):
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...
 
 class ListMerchantCenterLinksRequest(proto.Message):
-    customer_id: Incomplete
+    customer_id: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...
+    ) -> None: ...
 
 class ListMerchantCenterLinksResponse(proto.Message):
-    merchant_center_links: Incomplete
-
-class GetMerchantCenterLinkRequest(proto.Message):
-    resource_name: Incomplete
-
-class MutateMerchantCenterLinkRequest(proto.Message):
-    customer_id: Incomplete
-    operation: Incomplete
-    validate_only: Incomplete
+    merchant_center_links: list[MerchantCenterLink]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        merchant_center_links: list[MerchantCenterLink] = ...
+    ) -> None: ...
 
 class MerchantCenterLinkOperation(proto.Message):
-    update_mask: Incomplete
-    update: Incomplete
-    remove: Incomplete
+    update_mask: FieldMask
+    update: MerchantCenterLink
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        update_mask: FieldMask = ...,
+        update: MerchantCenterLink = ...,
+        remove: str = ...
+    ) -> None: ...
+
+class MutateMerchantCenterLinkRequest(proto.Message):
+    customer_id: str
+    operation: MerchantCenterLinkOperation
+    validate_only: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operation: MerchantCenterLinkOperation = ...,
+        validate_only: bool = ...
+    ) -> None: ...
 
 class MutateMerchantCenterLinkResponse(proto.Message):
-    result: Incomplete
+    result: MutateMerchantCenterLinkResult
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        result: MutateMerchantCenterLinkResult = ...
+    ) -> None: ...
 
 class MutateMerchantCenterLinkResult(proto.Message):
-    resource_name: Incomplete
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...

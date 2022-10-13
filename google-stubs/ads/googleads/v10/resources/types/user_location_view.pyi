@@ -1,9 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class UserLocationView(proto.Message):
-    resource_name: Incomplete
-    country_criterion_id: Incomplete
-    targeting_location: Incomplete
+    resource_name: str
+    country_criterion_id: int
+    targeting_location: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        country_criterion_id: int = ...,
+        targeting_location: bool = ...
+    ) -> None: ...

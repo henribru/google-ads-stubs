@@ -1,10 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CarrierConstant(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    country_code: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    country_code: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        country_code: str = ...
+    ) -> None: ...

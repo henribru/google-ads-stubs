@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PlacementTypeEnum(proto.Message):
     class PlacementType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        WEBSITE: int
-        MOBILE_APP_CATEGORY: int
-        MOBILE_APPLICATION: int
-        YOUTUBE_VIDEO: int
-        YOUTUBE_CHANNEL: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        WEBSITE = 2
+        MOBILE_APP_CATEGORY = 3
+        MOBILE_APPLICATION = 4
+        YOUTUBE_VIDEO = 5
+        YOUTUBE_CHANNEL = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,11 +1,23 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
+
+from google.ads.googleads.v11.enums.types.placement_type import PlacementTypeEnum
 
 class GroupPlacementView(proto.Message):
-    resource_name: Incomplete
-    placement: Incomplete
-    display_name: Incomplete
-    target_url: Incomplete
-    placement_type: Incomplete
+    resource_name: str
+    placement: str
+    display_name: str
+    target_url: str
+    placement_type: PlacementTypeEnum.PlacementType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        placement: str = ...,
+        display_name: str = ...,
+        target_url: str = ...,
+        placement_type: PlacementTypeEnum.PlacementType = ...
+    ) -> None: ...

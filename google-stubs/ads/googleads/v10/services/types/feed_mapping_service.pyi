@@ -1,24 +1,63 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2 as status_pb2
+from google.rpc.status_pb2 import Status
 
-__protobuf__: Incomplete
-
-class MutateFeedMappingsRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    partial_failure: Incomplete
-    validate_only: Incomplete
-    response_content_type: Incomplete
+from google.ads.googleads.v10.enums.types.response_content_type import (
+    ResponseContentTypeEnum,
+)
+from google.ads.googleads.v10.resources.types.feed_mapping import FeedMapping
 
 class FeedMappingOperation(proto.Message):
-    create: Incomplete
-    remove: Incomplete
-
-class MutateFeedMappingsResponse(proto.Message):
-    partial_failure_error: Incomplete
-    results: Incomplete
+    create: FeedMapping
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        create: FeedMapping = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class MutateFeedMappingResult(proto.Message):
-    resource_name: Incomplete
-    feed_mapping: Incomplete
+    resource_name: str
+    feed_mapping: FeedMapping
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        feed_mapping: FeedMapping = ...
+    ) -> None: ...
+
+class MutateFeedMappingsRequest(proto.Message):
+    customer_id: str
+    operations: list[FeedMappingOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[FeedMappingOperation] = ...,
+        partial_failure: bool = ...,
+        validate_only: bool = ...,
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+    ) -> None: ...
+
+class MutateFeedMappingsResponse(proto.Message):
+    partial_failure_error: Status
+    results: list[MutateFeedMappingResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        partial_failure_error: Status = ...,
+        results: list[MutateFeedMappingResult] = ...
+    ) -> None: ...

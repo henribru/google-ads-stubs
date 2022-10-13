@@ -1,18 +1,31 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    geo_target_constant_status as geo_target_constant_status,
+import proto
+
+from google.ads.googleads.v10.enums.types.geo_target_constant_status import (
+    GeoTargetConstantStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class GeoTargetConstant(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    country_code: Incomplete
-    target_type: Incomplete
-    status: Incomplete
-    canonical_name: Incomplete
-    parent_geo_target: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    country_code: str
+    target_type: str
+    status: GeoTargetConstantStatusEnum.GeoTargetConstantStatus
+    canonical_name: str
+    parent_geo_target: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        country_code: str = ...,
+        target_type: str = ...,
+        status: GeoTargetConstantStatusEnum.GeoTargetConstantStatus = ...,
+        canonical_name: str = ...,
+        parent_geo_target: str = ...
+    ) -> None: ...

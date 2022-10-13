@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ConversionActionCountingTypeEnum(proto.Message):
     class ConversionActionCountingType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ONE_PER_CLICK: int
-        MANY_PER_CLICK: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ONE_PER_CLICK = 2
+        MANY_PER_CLICK = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

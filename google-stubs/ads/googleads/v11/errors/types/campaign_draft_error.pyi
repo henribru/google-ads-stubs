@@ -1,19 +1,24 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CampaignDraftErrorEnum(proto.Message):
     class CampaignDraftError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DUPLICATE_DRAFT_NAME: int
-        INVALID_STATUS_TRANSITION_FROM_REMOVED: int
-        INVALID_STATUS_TRANSITION_FROM_PROMOTED: int
-        INVALID_STATUS_TRANSITION_FROM_PROMOTE_FAILED: int
-        CUSTOMER_CANNOT_CREATE_DRAFT: int
-        CAMPAIGN_CANNOT_CREATE_DRAFT: int
-        INVALID_DRAFT_CHANGE: int
-        INVALID_STATUS_TRANSITION: int
-        MAX_NUMBER_OF_DRAFTS_PER_CAMPAIGN_REACHED: int
-        LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DUPLICATE_DRAFT_NAME = 2
+        INVALID_STATUS_TRANSITION_FROM_REMOVED = 3
+        INVALID_STATUS_TRANSITION_FROM_PROMOTED = 4
+        INVALID_STATUS_TRANSITION_FROM_PROMOTE_FAILED = 5
+        CUSTOMER_CANNOT_CREATE_DRAFT = 6
+        CAMPAIGN_CANNOT_CREATE_DRAFT = 7
+        INVALID_DRAFT_CHANGE = 8
+        INVALID_STATUS_TRANSITION = 9
+        MAX_NUMBER_OF_DRAFTS_PER_CAMPAIGN_REACHED = 10
+        LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY = 11
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

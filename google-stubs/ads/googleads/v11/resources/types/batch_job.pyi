@@ -1,21 +1,44 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v11.enums.types import batch_job_status as batch_job_status
-
-__protobuf__: Incomplete
+from google.ads.googleads.v11.enums.types.batch_job_status import BatchJobStatusEnum
 
 class BatchJob(proto.Message):
     class BatchJobMetadata(proto.Message):
-        creation_date_time: Incomplete
-        start_date_time: Incomplete
-        completion_date_time: Incomplete
-        estimated_completion_ratio: Incomplete
-        operation_count: Incomplete
-        executed_operation_count: Incomplete
-    resource_name: Incomplete
-    id: Incomplete
-    next_add_sequence_token: Incomplete
-    metadata: Incomplete
-    status: Incomplete
-    long_running_operation: Incomplete
+        creation_date_time: str
+        start_date_time: str
+        completion_date_time: str
+        estimated_completion_ratio: float
+        operation_count: int
+        executed_operation_count: int
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            creation_date_time: str = ...,
+            start_date_time: str = ...,
+            completion_date_time: str = ...,
+            estimated_completion_ratio: float = ...,
+            operation_count: int = ...,
+            executed_operation_count: int = ...
+        ) -> None: ...
+    resource_name: str
+    id: int
+    next_add_sequence_token: str
+    metadata: BatchJob.BatchJobMetadata
+    status: BatchJobStatusEnum.BatchJobStatus
+    long_running_operation: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        next_add_sequence_token: str = ...,
+        metadata: BatchJob.BatchJobMetadata = ...,
+        status: BatchJobStatusEnum.BatchJobStatus = ...,
+        long_running_operation: str = ...
+    ) -> None: ...

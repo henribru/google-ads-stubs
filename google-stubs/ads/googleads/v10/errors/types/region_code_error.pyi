@@ -1,10 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class RegionCodeErrorEnum(proto.Message):
     class RegionCodeError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_REGION_CODE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_REGION_CODE = 2
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

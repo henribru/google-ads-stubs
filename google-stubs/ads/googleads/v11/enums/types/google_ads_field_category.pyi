@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class GoogleAdsFieldCategoryEnum(proto.Message):
     class GoogleAdsFieldCategory(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        RESOURCE: int
-        ATTRIBUTE: int
-        SEGMENT: int
-        METRIC: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        RESOURCE = 2
+        ATTRIBUTE = 3
+        SEGMENT = 5
+        METRIC = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ValueRuleSetDimensionEnum(proto.Message):
     class ValueRuleSetDimension(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        GEO_LOCATION: int
-        DEVICE: int
-        AUDIENCE: int
-        NO_CONDITION: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        GEO_LOCATION = 2
+        DEVICE = 3
+        AUDIENCE = 4
+        NO_CONDITION = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

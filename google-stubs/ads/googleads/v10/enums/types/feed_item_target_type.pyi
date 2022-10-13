@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class FeedItemTargetTypeEnum(proto.Message):
     class FeedItemTargetType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CAMPAIGN: int
-        AD_GROUP: int
-        CRITERION: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CAMPAIGN = 2
+        AD_GROUP = 3
+        CRITERION = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

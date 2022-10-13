@@ -1,18 +1,23 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class MutateErrorEnum(proto.Message):
     class MutateError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        RESOURCE_NOT_FOUND: int
-        ID_EXISTS_IN_MULTIPLE_MUTATES: int
-        INCONSISTENT_FIELD_VALUES: int
-        MUTATE_NOT_ALLOWED: int
-        RESOURCE_NOT_IN_GOOGLE_ADS: int
-        RESOURCE_ALREADY_EXISTS: int
-        RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY: int
-        OPERATION_DOES_NOT_SUPPORT_PARTIAL_FAILURE: int
-        RESOURCE_READ_ONLY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        RESOURCE_NOT_FOUND = 3
+        ID_EXISTS_IN_MULTIPLE_MUTATES = 7
+        INCONSISTENT_FIELD_VALUES = 8
+        MUTATE_NOT_ALLOWED = 9
+        RESOURCE_NOT_IN_GOOGLE_ADS = 10
+        RESOURCE_ALREADY_EXISTS = 11
+        RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY = 12
+        OPERATION_DOES_NOT_SUPPORT_PARTIAL_FAILURE = 16
+        RESOURCE_READ_ONLY = 13
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

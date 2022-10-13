@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class FrequencyCapLevelEnum(proto.Message):
     class FrequencyCapLevel(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        AD_GROUP_AD: int
-        AD_GROUP: int
-        CAMPAIGN: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        AD_GROUP_AD = 2
+        AD_GROUP = 3
+        CAMPAIGN = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

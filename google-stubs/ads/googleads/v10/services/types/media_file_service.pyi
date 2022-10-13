@@ -1,23 +1,61 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2 as status_pb2
+from google.rpc.status_pb2 import Status
 
-__protobuf__: Incomplete
-
-class MutateMediaFilesRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    partial_failure: Incomplete
-    validate_only: Incomplete
-    response_content_type: Incomplete
+from google.ads.googleads.v10.enums.types.response_content_type import (
+    ResponseContentTypeEnum,
+)
+from google.ads.googleads.v10.resources.types.media_file import MediaFile
 
 class MediaFileOperation(proto.Message):
-    create: Incomplete
-
-class MutateMediaFilesResponse(proto.Message):
-    partial_failure_error: Incomplete
-    results: Incomplete
+    create: MediaFile
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        create: MediaFile = ...
+    ) -> None: ...
 
 class MutateMediaFileResult(proto.Message):
-    resource_name: Incomplete
-    media_file: Incomplete
+    resource_name: str
+    media_file: MediaFile
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        media_file: MediaFile = ...
+    ) -> None: ...
+
+class MutateMediaFilesRequest(proto.Message):
+    customer_id: str
+    operations: list[MediaFileOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[MediaFileOperation] = ...,
+        partial_failure: bool = ...,
+        validate_only: bool = ...,
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+    ) -> None: ...
+
+class MutateMediaFilesResponse(proto.Message):
+    partial_failure_error: Status
+    results: list[MutateMediaFileResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        partial_failure_error: Status = ...,
+        results: list[MutateMediaFileResult] = ...
+    ) -> None: ...

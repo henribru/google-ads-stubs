@@ -1,23 +1,43 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.resources.types import (
-    google_ads_field as google_ads_field,
-)
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.resources.types.google_ads_field import GoogleAdsField
 
 class GetGoogleAdsFieldRequest(proto.Message):
-    resource_name: Incomplete
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...
 
 class SearchGoogleAdsFieldsRequest(proto.Message):
-    query: Incomplete
-    page_token: Incomplete
-    page_size: Incomplete
+    query: str
+    page_token: str
+    page_size: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        query: str = ...,
+        page_token: str = ...,
+        page_size: int = ...
+    ) -> None: ...
 
 class SearchGoogleAdsFieldsResponse(proto.Message):
-    @property
-    def raw_page(self): ...
-    results: Incomplete
-    next_page_token: Incomplete
-    total_results_count: Incomplete
+    results: list[GoogleAdsField]
+    next_page_token: str
+    total_results_count: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        results: list[GoogleAdsField] = ...,
+        next_page_token: str = ...,
+        total_results_count: int = ...
+    ) -> None: ...

@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class KeywordPlanCompetitionLevelEnum(proto.Message):
     class KeywordPlanCompetitionLevel(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        LOW: int
-        MEDIUM: int
-        HIGH: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        LOW = 2
+        MEDIUM = 3
+        HIGH = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

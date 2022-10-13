@@ -1,54 +1,157 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    target_impression_share_location as target_impression_share_location,
+import proto
+
+from google.ads.googleads.v10.enums.types.target_impression_share_location import (
+    TargetImpressionShareLocationEnum,
 )
 
-__protobuf__: Incomplete
-
 class Commission(proto.Message):
-    commission_rate_micros: Incomplete
+    commission_rate_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        commission_rate_micros: int = ...,
+    ) -> None: ...
 
-class EnhancedCpc(proto.Message): ...
+class EnhancedCpc(proto.Message):
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...
+    ...
 
 class ManualCpc(proto.Message):
-    enhanced_cpc_enabled: Incomplete
+    enhanced_cpc_enabled: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        enhanced_cpc_enabled: bool = ...,
+    ) -> None: ...
 
-class ManualCpm(proto.Message): ...
-class ManualCpv(proto.Message): ...
+class ManualCpm(proto.Message):
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...
+    ...
 
-class MaximizeConversions(proto.Message):
-    target_cpa: Incomplete
-    cpc_bid_ceiling_micros: Incomplete
-    cpc_bid_floor_micros: Incomplete
+class ManualCpv(proto.Message):
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...
+    ...
 
 class MaximizeConversionValue(proto.Message):
-    target_roas: Incomplete
-    cpc_bid_ceiling_micros: Incomplete
-    cpc_bid_floor_micros: Incomplete
+    target_roas: float
+    cpc_bid_ceiling_micros: int
+    cpc_bid_floor_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        target_roas: float = ...,
+        cpc_bid_ceiling_micros: int = ...,
+        cpc_bid_floor_micros: int = ...,
+    ) -> None: ...
 
-class TargetCpa(proto.Message):
-    target_cpa_micros: Incomplete
-    cpc_bid_ceiling_micros: Incomplete
-    cpc_bid_floor_micros: Incomplete
-
-class TargetCpm(proto.Message): ...
-
-class TargetImpressionShare(proto.Message):
-    location: Incomplete
-    location_fraction_micros: Incomplete
-    cpc_bid_ceiling_micros: Incomplete
-
-class TargetRoas(proto.Message):
-    target_roas: Incomplete
-    cpc_bid_ceiling_micros: Incomplete
-    cpc_bid_floor_micros: Incomplete
-
-class TargetSpend(proto.Message):
-    target_spend_micros: Incomplete
-    cpc_bid_ceiling_micros: Incomplete
+class MaximizeConversions(proto.Message):
+    target_cpa: int
+    cpc_bid_ceiling_micros: int
+    cpc_bid_floor_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        target_cpa: int = ...,
+        cpc_bid_ceiling_micros: int = ...,
+        cpc_bid_floor_micros: int = ...,
+    ) -> None: ...
 
 class PercentCpc(proto.Message):
-    cpc_bid_ceiling_micros: Incomplete
-    enhanced_cpc_enabled: Incomplete
+    cpc_bid_ceiling_micros: int
+    enhanced_cpc_enabled: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        cpc_bid_ceiling_micros: int = ...,
+        enhanced_cpc_enabled: bool = ...,
+    ) -> None: ...
+
+class TargetCpa(proto.Message):
+    target_cpa_micros: int
+    cpc_bid_ceiling_micros: int
+    cpc_bid_floor_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        target_cpa_micros: int = ...,
+        cpc_bid_ceiling_micros: int = ...,
+        cpc_bid_floor_micros: int = ...,
+    ) -> None: ...
+
+class TargetCpm(proto.Message):
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...
+    ...
+
+class TargetImpressionShare(proto.Message):
+    location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation
+    location_fraction_micros: int
+    cpc_bid_ceiling_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation = ...,
+        location_fraction_micros: int = ...,
+        cpc_bid_ceiling_micros: int = ...,
+    ) -> None: ...
+
+class TargetRoas(proto.Message):
+    target_roas: float
+    cpc_bid_ceiling_micros: int
+    cpc_bid_floor_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        target_roas: float = ...,
+        cpc_bid_ceiling_micros: int = ...,
+        cpc_bid_floor_micros: int = ...,
+    ) -> None: ...
+
+class TargetSpend(proto.Message):
+    target_spend_micros: int
+    cpc_bid_ceiling_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        target_spend_micros: int = ...,
+        cpc_bid_ceiling_micros: int = ...,
+    ) -> None: ...

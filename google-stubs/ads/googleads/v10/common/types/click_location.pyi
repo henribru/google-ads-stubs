@@ -1,11 +1,21 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ClickLocation(proto.Message):
-    city: Incomplete
-    country: Incomplete
-    metro: Incomplete
-    most_specific: Incomplete
-    region: Incomplete
+    city: str
+    country: str
+    metro: str
+    most_specific: str
+    region: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        city: str = ...,
+        country: str = ...,
+        metro: str = ...,
+        most_specific: str = ...,
+        region: str = ...
+    ) -> None: ...

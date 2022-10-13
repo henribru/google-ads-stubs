@@ -1,8 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ExpandedLandingPageView(proto.Message):
-    resource_name: Incomplete
-    expanded_final_url: Incomplete
+    resource_name: str
+    expanded_final_url: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        expanded_final_url: str = ...
+    ) -> None: ...

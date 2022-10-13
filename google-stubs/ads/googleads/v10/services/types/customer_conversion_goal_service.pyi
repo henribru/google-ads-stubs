@@ -1,24 +1,54 @@
-import proto
-from _typeshed import Incomplete
-from google.protobuf import field_mask_pb2 as field_mask_pb2
+from typing import Any
 
-from google.ads.googleads.v10.resources.types import (
-    customer_conversion_goal as customer_conversion_goal,
+import proto
+from google.protobuf.field_mask_pb2 import FieldMask
+
+from google.ads.googleads.v10.resources.types.customer_conversion_goal import (
+    CustomerConversionGoal,
 )
 
-__protobuf__: Incomplete
-
-class MutateCustomerConversionGoalsRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    validate_only: Incomplete
-
 class CustomerConversionGoalOperation(proto.Message):
-    update_mask: Incomplete
-    update: Incomplete
-
-class MutateCustomerConversionGoalsResponse(proto.Message):
-    results: Incomplete
+    update_mask: FieldMask
+    update: CustomerConversionGoal
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        update_mask: FieldMask = ...,
+        update: CustomerConversionGoal = ...
+    ) -> None: ...
 
 class MutateCustomerConversionGoalResult(proto.Message):
-    resource_name: Incomplete
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...
+
+class MutateCustomerConversionGoalsRequest(proto.Message):
+    customer_id: str
+    operations: list[CustomerConversionGoalOperation]
+    validate_only: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[CustomerConversionGoalOperation] = ...,
+        validate_only: bool = ...
+    ) -> None: ...
+
+class MutateCustomerConversionGoalsResponse(proto.Message):
+    results: list[MutateCustomerConversionGoalResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        results: list[MutateCustomerConversionGoalResult] = ...
+    ) -> None: ...

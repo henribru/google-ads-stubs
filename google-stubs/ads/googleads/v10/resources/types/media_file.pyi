@@ -1,37 +1,88 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.enums.types import media_type as media_type
-
-__protobuf__: Incomplete
-
-class MediaFile(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    type_: Incomplete
-    mime_type: Incomplete
-    source_url: Incomplete
-    name: Incomplete
-    file_size: Incomplete
-    image: Incomplete
-    media_bundle: Incomplete
-    audio: Incomplete
-    video: Incomplete
-
-class MediaImage(proto.Message):
-    data: Incomplete
-    full_size_image_url: Incomplete
-    preview_size_image_url: Incomplete
-
-class MediaBundle(proto.Message):
-    data: Incomplete
-    url: Incomplete
+from google.ads.googleads.v10.enums.types.media_type import MediaTypeEnum
+from google.ads.googleads.v10.enums.types.mime_type import MimeTypeEnum
 
 class MediaAudio(proto.Message):
-    ad_duration_millis: Incomplete
+    ad_duration_millis: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        ad_duration_millis: int = ...
+    ) -> None: ...
+
+class MediaBundle(proto.Message):
+    data: bytes
+    url: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        data: bytes = ...,
+        url: str = ...
+    ) -> None: ...
+
+class MediaFile(proto.Message):
+    resource_name: str
+    id: int
+    type_: MediaTypeEnum.MediaType
+    mime_type: MimeTypeEnum.MimeType
+    source_url: str
+    name: str
+    file_size: int
+    image: MediaImage
+    media_bundle: MediaBundle
+    audio: MediaAudio
+    video: MediaVideo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        type_: MediaTypeEnum.MediaType = ...,
+        mime_type: MimeTypeEnum.MimeType = ...,
+        source_url: str = ...,
+        name: str = ...,
+        file_size: int = ...,
+        image: MediaImage = ...,
+        media_bundle: MediaBundle = ...,
+        audio: MediaAudio = ...,
+        video: MediaVideo = ...
+    ) -> None: ...
+
+class MediaImage(proto.Message):
+    data: bytes
+    full_size_image_url: str
+    preview_size_image_url: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        data: bytes = ...,
+        full_size_image_url: str = ...,
+        preview_size_image_url: str = ...
+    ) -> None: ...
 
 class MediaVideo(proto.Message):
-    ad_duration_millis: Incomplete
-    youtube_video_id: Incomplete
-    advertising_id_code: Incomplete
-    isci_code: Incomplete
+    ad_duration_millis: int
+    youtube_video_id: str
+    advertising_id_code: str
+    isci_code: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        ad_duration_millis: int = ...,
+        youtube_video_id: str = ...,
+        advertising_id_code: str = ...,
+        isci_code: str = ...
+    ) -> None: ...

@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class KeywordPlanConceptGroupTypeEnum(proto.Message):
     class KeywordPlanConceptGroupType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        BRAND: int
-        OTHER_BRANDS: int
-        NON_BRAND: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        BRAND = 2
+        OTHER_BRANDS = 3
+        NON_BRAND = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

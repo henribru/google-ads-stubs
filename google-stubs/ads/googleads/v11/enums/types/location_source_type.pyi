@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class LocationSourceTypeEnum(proto.Message):
     class LocationSourceType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        GOOGLE_MY_BUSINESS: int
-        AFFILIATE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        GOOGLE_MY_BUSINESS = 2
+        AFFILIATE = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

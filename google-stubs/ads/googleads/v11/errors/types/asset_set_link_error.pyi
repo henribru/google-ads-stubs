@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AssetSetLinkErrorEnum(proto.Message):
     class AssetSetLinkError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INCOMPATIBLE_ADVERTISING_CHANNEL_TYPE: int
-        DUPLICATE_FEED_LINK: int
-        INCOMPATIBLE_ASSET_SET_TYPE_WITH_CAMPAIGN_TYPE: int
-        DUPLICATE_ASSET_SET_LINK: int
-        ASSET_SET_LINK_CANNOT_BE_REMOVED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INCOMPATIBLE_ADVERTISING_CHANNEL_TYPE = 2
+        DUPLICATE_FEED_LINK = 3
+        INCOMPATIBLE_ASSET_SET_TYPE_WITH_CAMPAIGN_TYPE = 4
+        DUPLICATE_ASSET_SET_LINK = 5
+        ASSET_SET_LINK_CANNOT_BE_REMOVED = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

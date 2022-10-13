@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ConversionAdjustmentTypeEnum(proto.Message):
     class ConversionAdjustmentType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        RETRACTION: int
-        RESTATEMENT: int
-        ENHANCEMENT: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        RETRACTION = 2
+        RESTATEMENT = 3
+        ENHANCEMENT = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AccountBudgetProposalStatusEnum(proto.Message):
     class AccountBudgetProposalStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PENDING: int
-        APPROVED_HELD: int
-        APPROVED: int
-        CANCELLED: int
-        REJECTED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PENDING = 2
+        APPROVED_HELD = 3
+        APPROVED = 4
+        CANCELLED = 5
+        REJECTED = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

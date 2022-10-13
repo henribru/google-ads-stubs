@@ -1,16 +1,28 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.enums.types import (
-    access_invitation_status as access_invitation_status,
+from google.ads.googleads.v10.enums.types.access_invitation_status import (
+    AccessInvitationStatusEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.access_role import AccessRoleEnum
 
 class CustomerUserAccessInvitation(proto.Message):
-    resource_name: Incomplete
-    invitation_id: Incomplete
-    access_role: Incomplete
-    email_address: Incomplete
-    creation_date_time: Incomplete
-    invitation_status: Incomplete
+    resource_name: str
+    invitation_id: int
+    access_role: AccessRoleEnum.AccessRole
+    email_address: str
+    creation_date_time: str
+    invitation_status: AccessInvitationStatusEnum.AccessInvitationStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        invitation_id: int = ...,
+        access_role: AccessRoleEnum.AccessRole = ...,
+        email_address: str = ...,
+        creation_date_time: str = ...,
+        invitation_status: AccessInvitationStatusEnum.AccessInvitationStatus = ...
+    ) -> None: ...

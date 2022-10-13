@@ -1,11 +1,21 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class Video(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    channel_id: Incomplete
-    duration_millis: Incomplete
-    title: Incomplete
+    resource_name: str
+    id: str
+    channel_id: str
+    duration_millis: int
+    title: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: str = ...,
+        channel_id: str = ...,
+        duration_millis: int = ...,
+        title: str = ...
+    ) -> None: ...

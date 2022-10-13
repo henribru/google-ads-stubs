@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class UserDataErrorEnum(proto.Message):
     class UserDataError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        OPERATIONS_FOR_CUSTOMER_MATCH_NOT_ALLOWED: int
-        TOO_MANY_USER_IDENTIFIERS: int
-        USER_LIST_NOT_APPLICABLE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        OPERATIONS_FOR_CUSTOMER_MATCH_NOT_ALLOWED = 2
+        TOO_MANY_USER_IDENTIFIERS = 3
+        USER_LIST_NOT_APPLICABLE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

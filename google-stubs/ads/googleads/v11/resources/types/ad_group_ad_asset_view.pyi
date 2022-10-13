@@ -1,26 +1,51 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.common.types import policy as policy
-from google.ads.googleads.v11.enums.types import (
-    asset_field_type as asset_field_type,
-    asset_performance_label as asset_performance_label,
-    policy_approval_status as policy_approval_status,
-    policy_review_status as policy_review_status,
+import proto
+
+from google.ads.googleads.v11.common.types.policy import PolicyTopicEntry
+from google.ads.googleads.v11.enums.types.asset_field_type import AssetFieldTypeEnum
+from google.ads.googleads.v11.enums.types.asset_performance_label import (
+    AssetPerformanceLabelEnum,
+)
+from google.ads.googleads.v11.enums.types.policy_approval_status import (
+    PolicyApprovalStatusEnum,
+)
+from google.ads.googleads.v11.enums.types.policy_review_status import (
+    PolicyReviewStatusEnum,
 )
 
-__protobuf__: Incomplete
+class AdGroupAdAssetPolicySummary(proto.Message):
+    policy_topic_entries: list[PolicyTopicEntry]
+    review_status: PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        policy_topic_entries: list[PolicyTopicEntry] = ...,
+        review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
+        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
+    ) -> None: ...
 
 class AdGroupAdAssetView(proto.Message):
-    resource_name: Incomplete
-    ad_group_ad: Incomplete
-    asset: Incomplete
-    field_type: Incomplete
-    enabled: Incomplete
-    policy_summary: Incomplete
-    performance_label: Incomplete
-
-class AdGroupAdAssetPolicySummary(proto.Message):
-    policy_topic_entries: Incomplete
-    review_status: Incomplete
-    approval_status: Incomplete
+    resource_name: str
+    ad_group_ad: str
+    asset: str
+    field_type: AssetFieldTypeEnum.AssetFieldType
+    enabled: bool
+    policy_summary: AdGroupAdAssetPolicySummary
+    performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        ad_group_ad: str = ...,
+        asset: str = ...,
+        field_type: AssetFieldTypeEnum.AssetFieldType = ...,
+        enabled: bool = ...,
+        policy_summary: AdGroupAdAssetPolicySummary = ...,
+        performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...
+    ) -> None: ...

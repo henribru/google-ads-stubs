@@ -1,18 +1,23 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PriceExtensionTypeEnum(proto.Message):
     class PriceExtensionType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        BRANDS: int
-        EVENTS: int
-        LOCATIONS: int
-        NEIGHBORHOODS: int
-        PRODUCT_CATEGORIES: int
-        PRODUCT_TIERS: int
-        SERVICES: int
-        SERVICE_CATEGORIES: int
-        SERVICE_TIERS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        BRANDS = 2
+        EVENTS = 3
+        LOCATIONS = 4
+        NEIGHBORHOODS = 5
+        PRODUCT_CATEGORIES = 6
+        PRODUCT_TIERS = 7
+        SERVICES = 8
+        SERVICE_CATEGORIES = 9
+        SERVICE_TIERS = 10
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

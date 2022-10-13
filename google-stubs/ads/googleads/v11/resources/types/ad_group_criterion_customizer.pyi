@@ -1,16 +1,26 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.common.types import customizer_value as customizer_value
-from google.ads.googleads.v11.enums.types import (
-    customizer_value_status as customizer_value_status,
+import proto
+
+from google.ads.googleads.v11.common.types.customizer_value import CustomizerValue
+from google.ads.googleads.v11.enums.types.customizer_value_status import (
+    CustomizerValueStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class AdGroupCriterionCustomizer(proto.Message):
-    resource_name: Incomplete
-    ad_group_criterion: Incomplete
-    customizer_attribute: Incomplete
-    status: Incomplete
-    value: Incomplete
+    resource_name: str
+    ad_group_criterion: str
+    customizer_attribute: str
+    status: CustomizerValueStatusEnum.CustomizerValueStatus
+    value: CustomizerValue
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        ad_group_criterion: str = ...,
+        customizer_attribute: str = ...,
+        status: CustomizerValueStatusEnum.CustomizerValueStatus = ...,
+        value: CustomizerValue = ...
+    ) -> None: ...

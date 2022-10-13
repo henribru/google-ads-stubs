@@ -1,10 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CountryCodeErrorEnum(proto.Message):
     class CountryCodeError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_COUNTRY_CODE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_COUNTRY_CODE = 2
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

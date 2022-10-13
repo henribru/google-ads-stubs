@@ -1,7 +1,13 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class RealTimeBiddingSetting(proto.Message):
-    opt_in: Incomplete
+    opt_in: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        opt_in: bool = ...
+    ) -> None: ...

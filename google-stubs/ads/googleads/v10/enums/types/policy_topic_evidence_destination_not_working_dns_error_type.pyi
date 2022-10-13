@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum(proto.Message):
     class PolicyTopicEvidenceDestinationNotWorkingDnsErrorType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        HOSTNAME_NOT_FOUND: int
-        GOOGLE_CRAWLER_DNS_ISSUE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        HOSTNAME_NOT_FOUND = 2
+        GOOGLE_CRAWLER_DNS_ISSUE = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

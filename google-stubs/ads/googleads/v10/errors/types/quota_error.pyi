@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class QuotaErrorEnum(proto.Message):
     class QuotaError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        RESOURCE_EXHAUSTED: int
-        ACCESS_PROHIBITED: int
-        RESOURCE_TEMPORARILY_EXHAUSTED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        RESOURCE_EXHAUSTED = 2
+        ACCESS_PROHIBITED = 3
+        RESOURCE_TEMPORARILY_EXHAUSTED = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

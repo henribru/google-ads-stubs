@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class TargetImpressionShareLocationEnum(proto.Message):
     class TargetImpressionShareLocation(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ANYWHERE_ON_PAGE: int
-        TOP_OF_PAGE: int
-        ABSOLUTE_TOP_OF_PAGE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ANYWHERE_ON_PAGE = 2
+        TOP_OF_PAGE = 3
+        ABSOLUTE_TOP_OF_PAGE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

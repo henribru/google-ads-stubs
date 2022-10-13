@@ -1,46 +1,95 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.enums.types import (
-    account_budget_proposal_type as account_budget_proposal_type,
-    account_budget_status as account_budget_status,
-    time_type as time_type,
+from google.ads.googleads.v10.enums.types.account_budget_proposal_type import (
+    AccountBudgetProposalTypeEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.account_budget_status import (
+    AccountBudgetStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.spending_limit_type import (
+    SpendingLimitTypeEnum,
+)
+from google.ads.googleads.v10.enums.types.time_type import TimeTypeEnum
 
 class AccountBudget(proto.Message):
     class PendingAccountBudgetProposal(proto.Message):
-        account_budget_proposal: Incomplete
-        proposal_type: Incomplete
-        name: Incomplete
-        start_date_time: Incomplete
-        purchase_order_number: Incomplete
-        notes: Incomplete
-        creation_date_time: Incomplete
-        end_date_time: Incomplete
-        end_time_type: Incomplete
-        spending_limit_micros: Incomplete
-        spending_limit_type: Incomplete
-    resource_name: Incomplete
-    id: Incomplete
-    billing_setup: Incomplete
-    status: Incomplete
-    name: Incomplete
-    proposed_start_date_time: Incomplete
-    approved_start_date_time: Incomplete
-    total_adjustments_micros: Incomplete
-    amount_served_micros: Incomplete
-    purchase_order_number: Incomplete
-    notes: Incomplete
-    pending_proposal: Incomplete
-    proposed_end_date_time: Incomplete
-    proposed_end_time_type: Incomplete
-    approved_end_date_time: Incomplete
-    approved_end_time_type: Incomplete
-    proposed_spending_limit_micros: Incomplete
-    proposed_spending_limit_type: Incomplete
-    approved_spending_limit_micros: Incomplete
-    approved_spending_limit_type: Incomplete
-    adjusted_spending_limit_micros: Incomplete
-    adjusted_spending_limit_type: Incomplete
+        account_budget_proposal: str
+        proposal_type: AccountBudgetProposalTypeEnum.AccountBudgetProposalType
+        name: str
+        start_date_time: str
+        purchase_order_number: str
+        notes: str
+        creation_date_time: str
+        end_date_time: str
+        end_time_type: TimeTypeEnum.TimeType
+        spending_limit_micros: int
+        spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            account_budget_proposal: str = ...,
+            proposal_type: AccountBudgetProposalTypeEnum.AccountBudgetProposalType = ...,
+            name: str = ...,
+            start_date_time: str = ...,
+            purchase_order_number: str = ...,
+            notes: str = ...,
+            creation_date_time: str = ...,
+            end_date_time: str = ...,
+            end_time_type: TimeTypeEnum.TimeType = ...,
+            spending_limit_micros: int = ...,
+            spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...
+        ) -> None: ...
+    resource_name: str
+    id: int
+    billing_setup: str
+    status: AccountBudgetStatusEnum.AccountBudgetStatus
+    name: str
+    proposed_start_date_time: str
+    approved_start_date_time: str
+    total_adjustments_micros: int
+    amount_served_micros: int
+    purchase_order_number: str
+    notes: str
+    pending_proposal: AccountBudget.PendingAccountBudgetProposal
+    proposed_end_date_time: str
+    proposed_end_time_type: TimeTypeEnum.TimeType
+    approved_end_date_time: str
+    approved_end_time_type: TimeTypeEnum.TimeType
+    proposed_spending_limit_micros: int
+    proposed_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType
+    approved_spending_limit_micros: int
+    approved_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType
+    adjusted_spending_limit_micros: int
+    adjusted_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        billing_setup: str = ...,
+        status: AccountBudgetStatusEnum.AccountBudgetStatus = ...,
+        name: str = ...,
+        proposed_start_date_time: str = ...,
+        approved_start_date_time: str = ...,
+        total_adjustments_micros: int = ...,
+        amount_served_micros: int = ...,
+        purchase_order_number: str = ...,
+        notes: str = ...,
+        pending_proposal: AccountBudget.PendingAccountBudgetProposal = ...,
+        proposed_end_date_time: str = ...,
+        proposed_end_time_type: TimeTypeEnum.TimeType = ...,
+        approved_end_date_time: str = ...,
+        approved_end_time_type: TimeTypeEnum.TimeType = ...,
+        proposed_spending_limit_micros: int = ...,
+        proposed_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...,
+        approved_spending_limit_micros: int = ...,
+        approved_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...,
+        adjusted_spending_limit_micros: int = ...,
+        adjusted_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...
+    ) -> None: ...

@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class GenderTypeEnum(proto.Message):
     class GenderType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        MALE: int
-        FEMALE: int
-        UNDETERMINED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        MALE = 10
+        FEMALE = 11
+        UNDETERMINED = 20
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

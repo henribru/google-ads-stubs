@@ -1,28 +1,59 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.common.types import bidding as bidding
-from google.ads.googleads.v10.enums.types import (
-    bidding_strategy_status as bidding_strategy_status,
-    bidding_strategy_type as bidding_strategy_type,
+import proto
+
+from google.ads.googleads.v10.common.types.bidding import (
+    EnhancedCpc,
+    MaximizeConversions,
+    MaximizeConversionValue,
+    TargetCpa,
+    TargetImpressionShare,
+    TargetRoas,
+    TargetSpend,
+)
+from google.ads.googleads.v10.enums.types.bidding_strategy_status import (
+    BiddingStrategyStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.bidding_strategy_type import (
+    BiddingStrategyTypeEnum,
 )
 
-__protobuf__: Incomplete
-
 class BiddingStrategy(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    status: Incomplete
-    type_: Incomplete
-    currency_code: Incomplete
-    effective_currency_code: Incomplete
-    campaign_count: Incomplete
-    non_removed_campaign_count: Incomplete
-    enhanced_cpc: Incomplete
-    maximize_conversion_value: Incomplete
-    maximize_conversions: Incomplete
-    target_cpa: Incomplete
-    target_impression_share: Incomplete
-    target_roas: Incomplete
-    target_spend: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    status: BiddingStrategyStatusEnum.BiddingStrategyStatus
+    type_: BiddingStrategyTypeEnum.BiddingStrategyType
+    currency_code: str
+    effective_currency_code: str
+    campaign_count: int
+    non_removed_campaign_count: int
+    enhanced_cpc: EnhancedCpc
+    maximize_conversion_value: MaximizeConversionValue
+    maximize_conversions: MaximizeConversions
+    target_cpa: TargetCpa
+    target_impression_share: TargetImpressionShare
+    target_roas: TargetRoas
+    target_spend: TargetSpend
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        status: BiddingStrategyStatusEnum.BiddingStrategyStatus = ...,
+        type_: BiddingStrategyTypeEnum.BiddingStrategyType = ...,
+        currency_code: str = ...,
+        effective_currency_code: str = ...,
+        campaign_count: int = ...,
+        non_removed_campaign_count: int = ...,
+        enhanced_cpc: EnhancedCpc = ...,
+        maximize_conversion_value: MaximizeConversionValue = ...,
+        maximize_conversions: MaximizeConversions = ...,
+        target_cpa: TargetCpa = ...,
+        target_impression_share: TargetImpressionShare = ...,
+        target_roas: TargetRoas = ...,
+        target_spend: TargetSpend = ...
+    ) -> None: ...

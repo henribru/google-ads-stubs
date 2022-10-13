@@ -1,24 +1,65 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.protobuf import field_mask_pb2 as field_mask_pb2
+from google.protobuf.field_mask_pb2 import FieldMask
 
-__protobuf__: Incomplete
-
-class MutateAssetGroupListingGroupFiltersRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    validate_only: Incomplete
-    response_content_type: Incomplete
+from google.ads.googleads.v10.enums.types.response_content_type import (
+    ResponseContentTypeEnum,
+)
+from google.ads.googleads.v10.resources.types.asset_group_listing_group_filter import (
+    AssetGroupListingGroupFilter,
+)
 
 class AssetGroupListingGroupFilterOperation(proto.Message):
-    update_mask: Incomplete
-    create: Incomplete
-    update: Incomplete
-    remove: Incomplete
-
-class MutateAssetGroupListingGroupFiltersResponse(proto.Message):
-    results: Incomplete
+    update_mask: FieldMask
+    create: AssetGroupListingGroupFilter
+    update: AssetGroupListingGroupFilter
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        update_mask: FieldMask = ...,
+        create: AssetGroupListingGroupFilter = ...,
+        update: AssetGroupListingGroupFilter = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class MutateAssetGroupListingGroupFilterResult(proto.Message):
-    resource_name: Incomplete
-    asset_group_listing_group_filter: Incomplete
+    resource_name: str
+    asset_group_listing_group_filter: AssetGroupListingGroupFilter
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        asset_group_listing_group_filter: AssetGroupListingGroupFilter = ...
+    ) -> None: ...
+
+class MutateAssetGroupListingGroupFiltersRequest(proto.Message):
+    customer_id: str
+    operations: list[AssetGroupListingGroupFilterOperation]
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[AssetGroupListingGroupFilterOperation] = ...,
+        validate_only: bool = ...,
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+    ) -> None: ...
+
+class MutateAssetGroupListingGroupFiltersResponse(proto.Message):
+    results: list[MutateAssetGroupListingGroupFilterResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        results: list[MutateAssetGroupListingGroupFilterResult] = ...
+    ) -> None: ...

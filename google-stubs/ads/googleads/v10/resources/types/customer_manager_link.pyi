@@ -1,14 +1,23 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    manager_link_status as manager_link_status,
+import proto
+
+from google.ads.googleads.v10.enums.types.manager_link_status import (
+    ManagerLinkStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class CustomerManagerLink(proto.Message):
-    resource_name: Incomplete
-    manager_customer: Incomplete
-    manager_link_id: Incomplete
-    status: Incomplete
+    resource_name: str
+    manager_customer: str
+    manager_link_id: int
+    status: ManagerLinkStatusEnum.ManagerLinkStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        manager_customer: str = ...,
+        manager_link_id: int = ...,
+        status: ManagerLinkStatusEnum.ManagerLinkStatus = ...
+    ) -> None: ...

@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AdSharingErrorEnum(proto.Message):
     class AdSharingError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        AD_GROUP_ALREADY_CONTAINS_AD: int
-        INCOMPATIBLE_AD_UNDER_AD_GROUP: int
-        CANNOT_SHARE_INACTIVE_AD: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        AD_GROUP_ALREADY_CONTAINS_AD = 2
+        INCOMPATIBLE_AD_UNDER_AD_GROUP = 3
+        CANNOT_SHARE_INACTIVE_AD = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

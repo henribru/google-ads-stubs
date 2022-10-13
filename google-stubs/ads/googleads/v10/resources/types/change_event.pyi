@@ -1,47 +1,118 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.protobuf import field_mask_pb2 as field_mask_pb2
+from google.protobuf.field_mask_pb2 import FieldMask
 
-from google.ads.googleads.v10.enums.types import (
-    change_client_type as change_client_type,
-    change_event_resource_type as change_event_resource_type,
+from google.ads.googleads.v10.enums.types.change_client_type import ChangeClientTypeEnum
+from google.ads.googleads.v10.enums.types.change_event_resource_type import (
+    ChangeEventResourceTypeEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.resource_change_operation import (
+    ResourceChangeOperationEnum,
+)
+from google.ads.googleads.v10.resources.types.ad import Ad
+from google.ads.googleads.v10.resources.types.ad_group import AdGroup
+from google.ads.googleads.v10.resources.types.ad_group_ad import AdGroupAd
+from google.ads.googleads.v10.resources.types.ad_group_asset import AdGroupAsset
+from google.ads.googleads.v10.resources.types.ad_group_bid_modifier import (
+    AdGroupBidModifier,
+)
+from google.ads.googleads.v10.resources.types.ad_group_criterion import AdGroupCriterion
+from google.ads.googleads.v10.resources.types.ad_group_feed import AdGroupFeed
+from google.ads.googleads.v10.resources.types.asset import Asset
+from google.ads.googleads.v10.resources.types.asset_set import AssetSet
+from google.ads.googleads.v10.resources.types.asset_set_asset import AssetSetAsset
+from google.ads.googleads.v10.resources.types.campaign import Campaign
+from google.ads.googleads.v10.resources.types.campaign_asset import CampaignAsset
+from google.ads.googleads.v10.resources.types.campaign_asset_set import CampaignAssetSet
+from google.ads.googleads.v10.resources.types.campaign_budget import CampaignBudget
+from google.ads.googleads.v10.resources.types.campaign_criterion import (
+    CampaignCriterion,
+)
+from google.ads.googleads.v10.resources.types.campaign_feed import CampaignFeed
+from google.ads.googleads.v10.resources.types.customer_asset import CustomerAsset
+from google.ads.googleads.v10.resources.types.feed import Feed
+from google.ads.googleads.v10.resources.types.feed_item import FeedItem
 
 class ChangeEvent(proto.Message):
     class ChangedResource(proto.Message):
-        ad: Incomplete
-        ad_group: Incomplete
-        ad_group_criterion: Incomplete
-        campaign: Incomplete
-        campaign_budget: Incomplete
-        ad_group_bid_modifier: Incomplete
-        campaign_criterion: Incomplete
-        feed: Incomplete
-        feed_item: Incomplete
-        campaign_feed: Incomplete
-        ad_group_feed: Incomplete
-        ad_group_ad: Incomplete
-        asset: Incomplete
-        customer_asset: Incomplete
-        campaign_asset: Incomplete
-        ad_group_asset: Incomplete
-        asset_set: Incomplete
-        asset_set_asset: Incomplete
-        campaign_asset_set: Incomplete
-    resource_name: Incomplete
-    change_date_time: Incomplete
-    change_resource_type: Incomplete
-    change_resource_name: Incomplete
-    client_type: Incomplete
-    user_email: Incomplete
-    old_resource: Incomplete
-    new_resource: Incomplete
-    resource_change_operation: Incomplete
-    changed_fields: Incomplete
-    campaign: Incomplete
-    ad_group: Incomplete
-    feed: Incomplete
-    feed_item: Incomplete
-    asset: Incomplete
+        ad: Ad
+        ad_group: AdGroup
+        ad_group_criterion: AdGroupCriterion
+        campaign: Campaign
+        campaign_budget: CampaignBudget
+        ad_group_bid_modifier: AdGroupBidModifier
+        campaign_criterion: CampaignCriterion
+        feed: Feed
+        feed_item: FeedItem
+        campaign_feed: CampaignFeed
+        ad_group_feed: AdGroupFeed
+        ad_group_ad: AdGroupAd
+        asset: Asset
+        customer_asset: CustomerAsset
+        campaign_asset: CampaignAsset
+        ad_group_asset: AdGroupAsset
+        asset_set: AssetSet
+        asset_set_asset: AssetSetAsset
+        campaign_asset_set: CampaignAssetSet
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            ad: Ad = ...,
+            ad_group: AdGroup = ...,
+            ad_group_criterion: AdGroupCriterion = ...,
+            campaign: Campaign = ...,
+            campaign_budget: CampaignBudget = ...,
+            ad_group_bid_modifier: AdGroupBidModifier = ...,
+            campaign_criterion: CampaignCriterion = ...,
+            feed: Feed = ...,
+            feed_item: FeedItem = ...,
+            campaign_feed: CampaignFeed = ...,
+            ad_group_feed: AdGroupFeed = ...,
+            ad_group_ad: AdGroupAd = ...,
+            asset: Asset = ...,
+            customer_asset: CustomerAsset = ...,
+            campaign_asset: CampaignAsset = ...,
+            ad_group_asset: AdGroupAsset = ...,
+            asset_set: AssetSet = ...,
+            asset_set_asset: AssetSetAsset = ...,
+            campaign_asset_set: CampaignAssetSet = ...
+        ) -> None: ...
+    resource_name: str
+    change_date_time: str
+    change_resource_type: ChangeEventResourceTypeEnum.ChangeEventResourceType
+    change_resource_name: str
+    client_type: ChangeClientTypeEnum.ChangeClientType
+    user_email: str
+    old_resource: ChangeEvent.ChangedResource
+    new_resource: ChangeEvent.ChangedResource
+    resource_change_operation: ResourceChangeOperationEnum.ResourceChangeOperation
+    changed_fields: FieldMask
+    campaign: str
+    ad_group: str
+    feed: str
+    feed_item: str
+    asset: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        change_date_time: str = ...,
+        change_resource_type: ChangeEventResourceTypeEnum.ChangeEventResourceType = ...,
+        change_resource_name: str = ...,
+        client_type: ChangeClientTypeEnum.ChangeClientType = ...,
+        user_email: str = ...,
+        old_resource: ChangeEvent.ChangedResource = ...,
+        new_resource: ChangeEvent.ChangedResource = ...,
+        resource_change_operation: ResourceChangeOperationEnum.ResourceChangeOperation = ...,
+        changed_fields: FieldMask = ...,
+        campaign: str = ...,
+        ad_group: str = ...,
+        feed: str = ...,
+        feed_item: str = ...,
+        asset: str = ...
+    ) -> None: ...

@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class BudgetPeriodEnum(proto.Message):
     class BudgetPeriod(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DAILY: int
-        CUSTOM_PERIOD: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DAILY = 2
+        CUSTOM_PERIOD = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

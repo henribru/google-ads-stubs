@@ -1,21 +1,26 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class MonthOfYearEnum(proto.Message):
     class MonthOfYear(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        JANUARY: int
-        FEBRUARY: int
-        MARCH: int
-        APRIL: int
-        MAY: int
-        JUNE: int
-        JULY: int
-        AUGUST: int
-        SEPTEMBER: int
-        OCTOBER: int
-        NOVEMBER: int
-        DECEMBER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        JANUARY = 2
+        FEBRUARY = 3
+        MARCH = 4
+        APRIL = 5
+        MAY = 6
+        JUNE = 7
+        JULY = 8
+        AUGUST = 9
+        SEPTEMBER = 10
+        OCTOBER = 11
+        NOVEMBER = 12
+        DECEMBER = 13
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

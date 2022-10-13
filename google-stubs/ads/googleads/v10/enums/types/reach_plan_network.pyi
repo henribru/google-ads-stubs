@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ReachPlanNetworkEnum(proto.Message):
     class ReachPlanNetwork(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        YOUTUBE: int
-        GOOGLE_VIDEO_PARTNERS: int
-        YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        YOUTUBE = 2
+        GOOGLE_VIDEO_PARTNERS = 3
+        YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

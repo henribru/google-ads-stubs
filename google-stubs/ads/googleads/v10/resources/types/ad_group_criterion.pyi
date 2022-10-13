@@ -1,83 +1,187 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import (
-    criteria as criteria,
-    custom_parameter as custom_parameter,
+from google.ads.googleads.v10.common.types.criteria import (
+    AgeRangeInfo,
+    AppPaymentModelInfo,
+    AudienceInfo,
+    CombinedAudienceInfo,
+    CustomAffinityInfo,
+    CustomAudienceInfo,
+    CustomIntentInfo,
+    GenderInfo,
+    IncomeRangeInfo,
+    KeywordInfo,
+    ListingGroupInfo,
+    MobileAppCategoryInfo,
+    MobileApplicationInfo,
+    ParentalStatusInfo,
+    PlacementInfo,
+    TopicInfo,
+    UserInterestInfo,
+    UserListInfo,
+    WebpageInfo,
+    YouTubeChannelInfo,
+    YouTubeVideoInfo,
 )
-from google.ads.googleads.v10.enums.types import (
-    ad_group_criterion_approval_status as ad_group_criterion_approval_status,
-    ad_group_criterion_status as ad_group_criterion_status,
-    bidding_source as bidding_source,
-    criterion_system_serving_status as criterion_system_serving_status,
-    criterion_type as criterion_type,
-    quality_score_bucket as quality_score_bucket,
+from google.ads.googleads.v10.common.types.custom_parameter import CustomParameter
+from google.ads.googleads.v10.enums.types.ad_group_criterion_approval_status import (
+    AdGroupCriterionApprovalStatusEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.ad_group_criterion_status import (
+    AdGroupCriterionStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.bidding_source import BiddingSourceEnum
+from google.ads.googleads.v10.enums.types.criterion_system_serving_status import (
+    CriterionSystemServingStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.criterion_type import CriterionTypeEnum
+from google.ads.googleads.v10.enums.types.quality_score_bucket import (
+    QualityScoreBucketEnum,
+)
 
 class AdGroupCriterion(proto.Message):
-    class QualityInfo(proto.Message):
-        quality_score: Incomplete
-        creative_quality_score: Incomplete
-        post_click_quality_score: Incomplete
-        search_predicted_ctr: Incomplete
-
     class PositionEstimates(proto.Message):
-        first_page_cpc_micros: Incomplete
-        first_position_cpc_micros: Incomplete
-        top_of_page_cpc_micros: Incomplete
-        estimated_add_clicks_at_first_position_cpc: Incomplete
-        estimated_add_cost_at_first_position_cpc: Incomplete
-    resource_name: Incomplete
-    criterion_id: Incomplete
-    display_name: Incomplete
-    status: Incomplete
-    quality_info: Incomplete
-    ad_group: Incomplete
-    type_: Incomplete
-    negative: Incomplete
-    system_serving_status: Incomplete
-    approval_status: Incomplete
-    disapproval_reasons: Incomplete
-    labels: Incomplete
-    bid_modifier: Incomplete
-    cpc_bid_micros: Incomplete
-    cpm_bid_micros: Incomplete
-    cpv_bid_micros: Incomplete
-    percent_cpc_bid_micros: Incomplete
-    effective_cpc_bid_micros: Incomplete
-    effective_cpm_bid_micros: Incomplete
-    effective_cpv_bid_micros: Incomplete
-    effective_percent_cpc_bid_micros: Incomplete
-    effective_cpc_bid_source: Incomplete
-    effective_cpm_bid_source: Incomplete
-    effective_cpv_bid_source: Incomplete
-    effective_percent_cpc_bid_source: Incomplete
-    position_estimates: Incomplete
-    final_urls: Incomplete
-    final_mobile_urls: Incomplete
-    final_url_suffix: Incomplete
-    tracking_url_template: Incomplete
-    url_custom_parameters: Incomplete
-    keyword: Incomplete
-    placement: Incomplete
-    mobile_app_category: Incomplete
-    mobile_application: Incomplete
-    listing_group: Incomplete
-    age_range: Incomplete
-    gender: Incomplete
-    income_range: Incomplete
-    parental_status: Incomplete
-    user_list: Incomplete
-    youtube_video: Incomplete
-    youtube_channel: Incomplete
-    topic: Incomplete
-    user_interest: Incomplete
-    webpage: Incomplete
-    app_payment_model: Incomplete
-    custom_affinity: Incomplete
-    custom_intent: Incomplete
-    custom_audience: Incomplete
-    combined_audience: Incomplete
-    audience: Incomplete
+        first_page_cpc_micros: int
+        first_position_cpc_micros: int
+        top_of_page_cpc_micros: int
+        estimated_add_clicks_at_first_position_cpc: int
+        estimated_add_cost_at_first_position_cpc: int
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            first_page_cpc_micros: int = ...,
+            first_position_cpc_micros: int = ...,
+            top_of_page_cpc_micros: int = ...,
+            estimated_add_clicks_at_first_position_cpc: int = ...,
+            estimated_add_cost_at_first_position_cpc: int = ...
+        ) -> None: ...
+
+    class QualityInfo(proto.Message):
+        quality_score: int
+        creative_quality_score: QualityScoreBucketEnum.QualityScoreBucket
+        post_click_quality_score: QualityScoreBucketEnum.QualityScoreBucket
+        search_predicted_ctr: QualityScoreBucketEnum.QualityScoreBucket
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            quality_score: int = ...,
+            creative_quality_score: QualityScoreBucketEnum.QualityScoreBucket = ...,
+            post_click_quality_score: QualityScoreBucketEnum.QualityScoreBucket = ...,
+            search_predicted_ctr: QualityScoreBucketEnum.QualityScoreBucket = ...
+        ) -> None: ...
+    resource_name: str
+    criterion_id: int
+    display_name: str
+    status: AdGroupCriterionStatusEnum.AdGroupCriterionStatus
+    quality_info: AdGroupCriterion.QualityInfo
+    ad_group: str
+    type_: CriterionTypeEnum.CriterionType
+    negative: bool
+    system_serving_status: CriterionSystemServingStatusEnum.CriterionSystemServingStatus
+    approval_status: AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus
+    disapproval_reasons: list[str]
+    labels: list[str]
+    bid_modifier: float
+    cpc_bid_micros: int
+    cpm_bid_micros: int
+    cpv_bid_micros: int
+    percent_cpc_bid_micros: int
+    effective_cpc_bid_micros: int
+    effective_cpm_bid_micros: int
+    effective_cpv_bid_micros: int
+    effective_percent_cpc_bid_micros: int
+    effective_cpc_bid_source: BiddingSourceEnum.BiddingSource
+    effective_cpm_bid_source: BiddingSourceEnum.BiddingSource
+    effective_cpv_bid_source: BiddingSourceEnum.BiddingSource
+    effective_percent_cpc_bid_source: BiddingSourceEnum.BiddingSource
+    position_estimates: AdGroupCriterion.PositionEstimates
+    final_urls: list[str]
+    final_mobile_urls: list[str]
+    final_url_suffix: str
+    tracking_url_template: str
+    url_custom_parameters: list[CustomParameter]
+    keyword: KeywordInfo
+    placement: PlacementInfo
+    mobile_app_category: MobileAppCategoryInfo
+    mobile_application: MobileApplicationInfo
+    listing_group: ListingGroupInfo
+    age_range: AgeRangeInfo
+    gender: GenderInfo
+    income_range: IncomeRangeInfo
+    parental_status: ParentalStatusInfo
+    user_list: UserListInfo
+    youtube_video: YouTubeVideoInfo
+    youtube_channel: YouTubeChannelInfo
+    topic: TopicInfo
+    user_interest: UserInterestInfo
+    webpage: WebpageInfo
+    app_payment_model: AppPaymentModelInfo
+    custom_affinity: CustomAffinityInfo
+    custom_intent: CustomIntentInfo
+    custom_audience: CustomAudienceInfo
+    combined_audience: CombinedAudienceInfo
+    audience: AudienceInfo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        criterion_id: int = ...,
+        display_name: str = ...,
+        status: AdGroupCriterionStatusEnum.AdGroupCriterionStatus = ...,
+        quality_info: AdGroupCriterion.QualityInfo = ...,
+        ad_group: str = ...,
+        type_: CriterionTypeEnum.CriterionType = ...,
+        negative: bool = ...,
+        system_serving_status: CriterionSystemServingStatusEnum.CriterionSystemServingStatus = ...,
+        approval_status: AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus = ...,
+        disapproval_reasons: list[str] = ...,
+        labels: list[str] = ...,
+        bid_modifier: float = ...,
+        cpc_bid_micros: int = ...,
+        cpm_bid_micros: int = ...,
+        cpv_bid_micros: int = ...,
+        percent_cpc_bid_micros: int = ...,
+        effective_cpc_bid_micros: int = ...,
+        effective_cpm_bid_micros: int = ...,
+        effective_cpv_bid_micros: int = ...,
+        effective_percent_cpc_bid_micros: int = ...,
+        effective_cpc_bid_source: BiddingSourceEnum.BiddingSource = ...,
+        effective_cpm_bid_source: BiddingSourceEnum.BiddingSource = ...,
+        effective_cpv_bid_source: BiddingSourceEnum.BiddingSource = ...,
+        effective_percent_cpc_bid_source: BiddingSourceEnum.BiddingSource = ...,
+        position_estimates: AdGroupCriterion.PositionEstimates = ...,
+        final_urls: list[str] = ...,
+        final_mobile_urls: list[str] = ...,
+        final_url_suffix: str = ...,
+        tracking_url_template: str = ...,
+        url_custom_parameters: list[CustomParameter] = ...,
+        keyword: KeywordInfo = ...,
+        placement: PlacementInfo = ...,
+        mobile_app_category: MobileAppCategoryInfo = ...,
+        mobile_application: MobileApplicationInfo = ...,
+        listing_group: ListingGroupInfo = ...,
+        age_range: AgeRangeInfo = ...,
+        gender: GenderInfo = ...,
+        income_range: IncomeRangeInfo = ...,
+        parental_status: ParentalStatusInfo = ...,
+        user_list: UserListInfo = ...,
+        youtube_video: YouTubeVideoInfo = ...,
+        youtube_channel: YouTubeChannelInfo = ...,
+        topic: TopicInfo = ...,
+        user_interest: UserInterestInfo = ...,
+        webpage: WebpageInfo = ...,
+        app_payment_model: AppPaymentModelInfo = ...,
+        custom_affinity: CustomAffinityInfo = ...,
+        custom_intent: CustomIntentInfo = ...,
+        custom_audience: CustomAudienceInfo = ...,
+        combined_audience: CombinedAudienceInfo = ...,
+        audience: AudienceInfo = ...
+    ) -> None: ...

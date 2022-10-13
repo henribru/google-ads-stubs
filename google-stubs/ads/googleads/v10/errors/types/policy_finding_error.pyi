@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PolicyFindingErrorEnum(proto.Message):
     class PolicyFindingError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        POLICY_FINDING: int
-        POLICY_TOPIC_NOT_FOUND: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        POLICY_FINDING = 2
+        POLICY_TOPIC_NOT_FOUND = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

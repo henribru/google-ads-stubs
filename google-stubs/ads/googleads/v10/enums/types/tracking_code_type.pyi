@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class TrackingCodeTypeEnum(proto.Message):
     class TrackingCodeType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        WEBPAGE: int
-        WEBPAGE_ONCLICK: int
-        CLICK_TO_CALL: int
-        WEBSITE_CALL: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        WEBPAGE = 2
+        WEBPAGE_ONCLICK = 3
+        CLICK_TO_CALL = 4
+        WEBSITE_CALL = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

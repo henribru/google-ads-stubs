@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CustomerUserAccessErrorEnum(proto.Message):
     class CustomerUserAccessError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_USER_ID: int
-        REMOVAL_DISALLOWED: int
-        DISALLOWED_ACCESS_ROLE: int
-        LAST_ADMIN_USER_OF_SERVING_CUSTOMER: int
-        LAST_ADMIN_USER_OF_MANAGER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_USER_ID = 2
+        REMOVAL_DISALLOWED = 3
+        DISALLOWED_ACCESS_ROLE = 4
+        LAST_ADMIN_USER_OF_SERVING_CUSTOMER = 5
+        LAST_ADMIN_USER_OF_MANAGER = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class HotelPriceBucketEnum(proto.Message):
     class HotelPriceBucket(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        LOWEST_UNIQUE: int
-        LOWEST_TIED: int
-        NOT_LOWEST: int
-        ONLY_PARTNER_SHOWN: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        LOWEST_UNIQUE = 2
+        LOWEST_TIED = 3
+        NOT_LOWEST = 4
+        ONLY_PARTNER_SHOWN = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

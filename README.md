@@ -45,7 +45,15 @@ While it is technically possible to type these methods using a combination of ov
 this is not included in these stubs. The reason is that it requires about 10,000 overloads, which makes most typecheckers fairly slow.
 The only overloads included are those necessary to make it work for GoogleAdsService.
 
-Another big caveat since v8.0.0 of this package is that the attributes and constructor arguments of the protobuf messages are all typed as `Any` instead of their proper types. This is due to `google-ads-python` switching from raw protobuf message classes to `proto-plus` classes. Better types for these might be introduced in the future. `GoogleAdsClient.enums` is also typed as `Any`.
+Certain types are too lenient compared to what's allowed at runtime. `GoogleAdsClient.enums` is typed as `Any` and so is the `mapping` argument to protobuf message constructors. 
+On the other hand certain types are more strict than what's allowed at runtime. You can't substitute a protobuf message for an equivalent dict or an enum with it's equivalent name or value. This might improve in the future, but for now:
 
+```python
+# Replace this:
+AdGroupAd({"status": "ENABLED", ad={"type": 2}})
+# With this:
+from google.ads.googleads.v10 import AdGroupAdStatusEnum, AdTypeEnum, Ad
+AdGroupAd(status=AdGroupAdStatusEnum.AdGroupAdStatus.ENABLED, ad=Ad(type=AdTypeEnum.AdType.TEXT_AD))
+```
 
 Note that if you're using Mypy you need to use the `--namespace-packages` option as `google` and `google.ads` are namespace packages.

@@ -1,19 +1,36 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.common.types import dates as dates
-from google.ads.googleads.v11.enums.types import (
-    keyword_plan_forecast_interval as keyword_plan_forecast_interval,
+import proto
+
+from google.ads.googleads.v11.common.types.dates import DateRange
+from google.ads.googleads.v11.enums.types.keyword_plan_forecast_interval import (
+    KeywordPlanForecastIntervalEnum,
 )
 
-__protobuf__: Incomplete
-
 class KeywordPlan(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    forecast_period: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    forecast_period: KeywordPlanForecastPeriod
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        forecast_period: KeywordPlanForecastPeriod = ...
+    ) -> None: ...
 
 class KeywordPlanForecastPeriod(proto.Message):
-    date_interval: Incomplete
-    date_range: Incomplete
+    date_interval: KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
+    date_range: DateRange
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        date_interval: KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval = ...,
+        date_range: DateRange = ...
+    ) -> None: ...

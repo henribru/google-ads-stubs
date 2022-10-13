@@ -1,10 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class TimeZoneErrorEnum(proto.Message):
     class TimeZoneError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_TIME_ZONE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_TIME_ZONE = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

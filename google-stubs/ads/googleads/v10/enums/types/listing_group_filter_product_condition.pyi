@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ListingGroupFilterProductConditionEnum(proto.Message):
     class ListingGroupFilterProductCondition(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NEW: int
-        REFURBISHED: int
-        USED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NEW = 2
+        REFURBISHED = 3
+        USED = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

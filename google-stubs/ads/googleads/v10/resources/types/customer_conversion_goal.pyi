@@ -1,15 +1,24 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.enums.types import (
-    conversion_action_category as conversion_action_category,
-    conversion_origin as conversion_origin,
+from google.ads.googleads.v10.enums.types.conversion_action_category import (
+    ConversionActionCategoryEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.conversion_origin import ConversionOriginEnum
 
 class CustomerConversionGoal(proto.Message):
-    resource_name: Incomplete
-    category: Incomplete
-    origin: Incomplete
-    biddable: Incomplete
+    resource_name: str
+    category: ConversionActionCategoryEnum.ConversionActionCategory
+    origin: ConversionOriginEnum.ConversionOrigin
+    biddable: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        category: ConversionActionCategoryEnum.ConversionActionCategory = ...,
+        origin: ConversionOriginEnum.ConversionOrigin = ...,
+        biddable: bool = ...
+    ) -> None: ...

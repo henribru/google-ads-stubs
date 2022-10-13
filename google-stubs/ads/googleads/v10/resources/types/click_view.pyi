@@ -1,21 +1,34 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import (
-    click_location as click_location,
-    criteria as criteria,
-)
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.common.types.click_location import ClickLocation
+from google.ads.googleads.v10.common.types.criteria import KeywordInfo
 
 class ClickView(proto.Message):
-    resource_name: Incomplete
-    gclid: Incomplete
-    area_of_interest: Incomplete
-    location_of_presence: Incomplete
-    page_number: Incomplete
-    ad_group_ad: Incomplete
-    campaign_location_target: Incomplete
-    user_list: Incomplete
-    keyword: Incomplete
-    keyword_info: Incomplete
+    resource_name: str
+    gclid: str
+    area_of_interest: ClickLocation
+    location_of_presence: ClickLocation
+    page_number: int
+    ad_group_ad: str
+    campaign_location_target: str
+    user_list: str
+    keyword: str
+    keyword_info: KeywordInfo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        gclid: str = ...,
+        area_of_interest: ClickLocation = ...,
+        location_of_presence: ClickLocation = ...,
+        page_number: int = ...,
+        ad_group_ad: str = ...,
+        campaign_location_target: str = ...,
+        user_list: str = ...,
+        keyword: str = ...,
+        keyword_info: KeywordInfo = ...
+    ) -> None: ...

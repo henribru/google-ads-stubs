@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class OfflineUserDataJobStatusEnum(proto.Message):
     class OfflineUserDataJobStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PENDING: int
-        RUNNING: int
-        SUCCESS: int
-        FAILED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PENDING = 2
+        RUNNING = 3
+        SUCCESS = 4
+        FAILED = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

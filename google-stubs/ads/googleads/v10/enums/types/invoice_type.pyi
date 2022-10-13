@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class InvoiceTypeEnum(proto.Message):
     class InvoiceType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CREDIT_MEMO: int
-        INVOICE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CREDIT_MEMO = 2
+        INVOICE = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

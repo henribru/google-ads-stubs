@@ -1,57 +1,124 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v11.common.types import (
-    ad_type_infos as ad_type_infos,
-    custom_parameter as custom_parameter,
-    final_app_url as final_app_url,
-    url_collection as url_collection,
+from google.ads.googleads.v11.common.types.ad_type_infos import (
+    AppAdInfo,
+    AppEngagementAdInfo,
+    AppPreRegistrationAdInfo,
+    CallAdInfo,
+    DiscoveryCarouselAdInfo,
+    DiscoveryMultiAssetAdInfo,
+    DisplayUploadAdInfo,
+    ExpandedDynamicSearchAdInfo,
+    ExpandedTextAdInfo,
+    GmailAdInfo,
+    HotelAdInfo,
+    ImageAdInfo,
+    LegacyAppInstallAdInfo,
+    LegacyResponsiveDisplayAdInfo,
+    LocalAdInfo,
+    ResponsiveDisplayAdInfo,
+    ResponsiveSearchAdInfo,
+    ShoppingComparisonListingAdInfo,
+    ShoppingProductAdInfo,
+    ShoppingSmartAdInfo,
+    SmartCampaignAdInfo,
+    TextAdInfo,
+    VideoAdInfo,
+    VideoResponsiveAdInfo,
 )
-from google.ads.googleads.v11.enums.types import (
-    ad_type as ad_type,
-    device as device,
-    system_managed_entity_source as system_managed_entity_source,
+from google.ads.googleads.v11.common.types.custom_parameter import CustomParameter
+from google.ads.googleads.v11.common.types.final_app_url import FinalAppUrl
+from google.ads.googleads.v11.common.types.url_collection import UrlCollection
+from google.ads.googleads.v11.enums.types.ad_type import AdTypeEnum
+from google.ads.googleads.v11.enums.types.device import DeviceEnum
+from google.ads.googleads.v11.enums.types.system_managed_entity_source import (
+    SystemManagedResourceSourceEnum,
 )
-
-__protobuf__: Incomplete
 
 class Ad(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    final_urls: Incomplete
-    final_app_urls: Incomplete
-    final_mobile_urls: Incomplete
-    tracking_url_template: Incomplete
-    final_url_suffix: Incomplete
-    url_custom_parameters: Incomplete
-    display_url: Incomplete
-    type_: Incomplete
-    added_by_google_ads: Incomplete
-    device_preference: Incomplete
-    url_collections: Incomplete
-    name: Incomplete
-    system_managed_resource_source: Incomplete
-    text_ad: Incomplete
-    expanded_text_ad: Incomplete
-    call_ad: Incomplete
-    expanded_dynamic_search_ad: Incomplete
-    hotel_ad: Incomplete
-    shopping_smart_ad: Incomplete
-    shopping_product_ad: Incomplete
-    gmail_ad: Incomplete
-    image_ad: Incomplete
-    video_ad: Incomplete
-    video_responsive_ad: Incomplete
-    responsive_search_ad: Incomplete
-    legacy_responsive_display_ad: Incomplete
-    app_ad: Incomplete
-    legacy_app_install_ad: Incomplete
-    responsive_display_ad: Incomplete
-    local_ad: Incomplete
-    display_upload_ad: Incomplete
-    app_engagement_ad: Incomplete
-    shopping_comparison_listing_ad: Incomplete
-    smart_campaign_ad: Incomplete
-    app_pre_registration_ad: Incomplete
-    discovery_multi_asset_ad: Incomplete
-    discovery_carousel_ad: Incomplete
+    resource_name: str
+    id: int
+    final_urls: list[str]
+    final_app_urls: list[FinalAppUrl]
+    final_mobile_urls: list[str]
+    tracking_url_template: str
+    final_url_suffix: str
+    url_custom_parameters: list[CustomParameter]
+    display_url: str
+    type_: AdTypeEnum.AdType
+    added_by_google_ads: bool
+    device_preference: DeviceEnum.Device
+    url_collections: list[UrlCollection]
+    name: str
+    system_managed_resource_source: SystemManagedResourceSourceEnum.SystemManagedResourceSource
+    text_ad: TextAdInfo
+    expanded_text_ad: ExpandedTextAdInfo
+    call_ad: CallAdInfo
+    expanded_dynamic_search_ad: ExpandedDynamicSearchAdInfo
+    hotel_ad: HotelAdInfo
+    shopping_smart_ad: ShoppingSmartAdInfo
+    shopping_product_ad: ShoppingProductAdInfo
+    gmail_ad: GmailAdInfo
+    image_ad: ImageAdInfo
+    video_ad: VideoAdInfo
+    video_responsive_ad: VideoResponsiveAdInfo
+    responsive_search_ad: ResponsiveSearchAdInfo
+    legacy_responsive_display_ad: LegacyResponsiveDisplayAdInfo
+    app_ad: AppAdInfo
+    legacy_app_install_ad: LegacyAppInstallAdInfo
+    responsive_display_ad: ResponsiveDisplayAdInfo
+    local_ad: LocalAdInfo
+    display_upload_ad: DisplayUploadAdInfo
+    app_engagement_ad: AppEngagementAdInfo
+    shopping_comparison_listing_ad: ShoppingComparisonListingAdInfo
+    smart_campaign_ad: SmartCampaignAdInfo
+    app_pre_registration_ad: AppPreRegistrationAdInfo
+    discovery_multi_asset_ad: DiscoveryMultiAssetAdInfo
+    discovery_carousel_ad: DiscoveryCarouselAdInfo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        final_urls: list[str] = ...,
+        final_app_urls: list[FinalAppUrl] = ...,
+        final_mobile_urls: list[str] = ...,
+        tracking_url_template: str = ...,
+        final_url_suffix: str = ...,
+        url_custom_parameters: list[CustomParameter] = ...,
+        display_url: str = ...,
+        type_: AdTypeEnum.AdType = ...,
+        added_by_google_ads: bool = ...,
+        device_preference: DeviceEnum.Device = ...,
+        url_collections: list[UrlCollection] = ...,
+        name: str = ...,
+        system_managed_resource_source: SystemManagedResourceSourceEnum.SystemManagedResourceSource = ...,
+        text_ad: TextAdInfo = ...,
+        expanded_text_ad: ExpandedTextAdInfo = ...,
+        call_ad: CallAdInfo = ...,
+        expanded_dynamic_search_ad: ExpandedDynamicSearchAdInfo = ...,
+        hotel_ad: HotelAdInfo = ...,
+        shopping_smart_ad: ShoppingSmartAdInfo = ...,
+        shopping_product_ad: ShoppingProductAdInfo = ...,
+        gmail_ad: GmailAdInfo = ...,
+        image_ad: ImageAdInfo = ...,
+        video_ad: VideoAdInfo = ...,
+        video_responsive_ad: VideoResponsiveAdInfo = ...,
+        responsive_search_ad: ResponsiveSearchAdInfo = ...,
+        legacy_responsive_display_ad: LegacyResponsiveDisplayAdInfo = ...,
+        app_ad: AppAdInfo = ...,
+        legacy_app_install_ad: LegacyAppInstallAdInfo = ...,
+        responsive_display_ad: ResponsiveDisplayAdInfo = ...,
+        local_ad: LocalAdInfo = ...,
+        display_upload_ad: DisplayUploadAdInfo = ...,
+        app_engagement_ad: AppEngagementAdInfo = ...,
+        shopping_comparison_listing_ad: ShoppingComparisonListingAdInfo = ...,
+        smart_campaign_ad: SmartCampaignAdInfo = ...,
+        app_pre_registration_ad: AppPreRegistrationAdInfo = ...,
+        discovery_multi_asset_ad: DiscoveryMultiAssetAdInfo = ...,
+        discovery_carousel_ad: DiscoveryCarouselAdInfo = ...
+    ) -> None: ...

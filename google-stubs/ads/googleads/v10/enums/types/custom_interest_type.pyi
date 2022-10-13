@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CustomInterestTypeEnum(proto.Message):
     class CustomInterestType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CUSTOM_AFFINITY: int
-        CUSTOM_INTENT: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CUSTOM_AFFINITY = 2
+        CUSTOM_INTENT = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

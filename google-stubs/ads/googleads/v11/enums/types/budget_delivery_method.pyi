@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class BudgetDeliveryMethodEnum(proto.Message):
     class BudgetDeliveryMethod(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        STANDARD: int
-        ACCELERATED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        STANDARD = 2
+        ACCELERATED = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

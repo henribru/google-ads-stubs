@@ -1,14 +1,23 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    campaign_group_status as campaign_group_status,
+import proto
+
+from google.ads.googleads.v10.enums.types.campaign_group_status import (
+    CampaignGroupStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class CampaignGroup(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    status: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    status: CampaignGroupStatusEnum.CampaignGroupStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        status: CampaignGroupStatusEnum.CampaignGroupStatus = ...
+    ) -> None: ...

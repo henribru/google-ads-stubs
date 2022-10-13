@@ -1,15 +1,20 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AdStrengthEnum(proto.Message):
     class AdStrength(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PENDING: int
-        NO_ADS: int
-        POOR: int
-        AVERAGE: int
-        GOOD: int
-        EXCELLENT: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PENDING = 2
+        NO_ADS = 3
+        POOR = 4
+        AVERAGE = 5
+        GOOD = 6
+        EXCELLENT = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

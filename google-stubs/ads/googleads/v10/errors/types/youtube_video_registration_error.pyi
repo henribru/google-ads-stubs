@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class YoutubeVideoRegistrationErrorEnum(proto.Message):
     class YoutubeVideoRegistrationError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        VIDEO_NOT_FOUND: int
-        VIDEO_NOT_ACCESSIBLE: int
-        VIDEO_NOT_ELIGIBLE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        VIDEO_NOT_FOUND = 2
+        VIDEO_NOT_ACCESSIBLE = 3
+        VIDEO_NOT_ELIGIBLE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

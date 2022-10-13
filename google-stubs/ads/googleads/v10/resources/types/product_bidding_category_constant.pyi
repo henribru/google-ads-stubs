@@ -1,19 +1,34 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    product_bidding_category_level as product_bidding_category_level,
-    product_bidding_category_status as product_bidding_category_status,
+import proto
+
+from google.ads.googleads.v10.enums.types.product_bidding_category_level import (
+    ProductBiddingCategoryLevelEnum,
+)
+from google.ads.googleads.v10.enums.types.product_bidding_category_status import (
+    ProductBiddingCategoryStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class ProductBiddingCategoryConstant(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    country_code: Incomplete
-    product_bidding_category_constant_parent: Incomplete
-    level: Incomplete
-    status: Incomplete
-    language_code: Incomplete
-    localized_name: Incomplete
+    resource_name: str
+    id: int
+    country_code: str
+    product_bidding_category_constant_parent: str
+    level: ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel
+    status: ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus
+    language_code: str
+    localized_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        country_code: str = ...,
+        product_bidding_category_constant_parent: str = ...,
+        level: ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel = ...,
+        status: ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus = ...,
+        language_code: str = ...,
+        localized_name: str = ...
+    ) -> None: ...

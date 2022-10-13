@@ -1,12 +1,21 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import tag_snippet as tag_snippet
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.common.types.tag_snippet import TagSnippet
 
 class RemarketingAction(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    tag_snippets: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    tag_snippets: list[TagSnippet]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        tag_snippets: list[TagSnippet] = ...
+    ) -> None: ...

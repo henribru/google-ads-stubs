@@ -1,16 +1,21 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CustomerPayPerConversionEligibilityFailureReasonEnum(proto.Message):
     class CustomerPayPerConversionEligibilityFailureReason(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NOT_ENOUGH_CONVERSIONS: int
-        CONVERSION_LAG_TOO_HIGH: int
-        HAS_CAMPAIGN_WITH_SHARED_BUDGET: int
-        HAS_UPLOAD_CLICKS_CONVERSION: int
-        AVERAGE_DAILY_SPEND_TOO_HIGH: int
-        ANALYSIS_NOT_COMPLETE: int
-        OTHER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NOT_ENOUGH_CONVERSIONS = 2
+        CONVERSION_LAG_TOO_HIGH = 3
+        HAS_CAMPAIGN_WITH_SHARED_BUDGET = 4
+        HAS_UPLOAD_CLICKS_CONVERSION = 5
+        AVERAGE_DAILY_SPEND_TOO_HIGH = 6
+        ANALYSIS_NOT_COMPLETE = 7
+        OTHER = 8
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

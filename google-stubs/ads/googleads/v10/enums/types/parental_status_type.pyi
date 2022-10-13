@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ParentalStatusTypeEnum(proto.Message):
     class ParentalStatusType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PARENT: int
-        NOT_A_PARENT: int
-        UNDETERMINED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PARENT = 300
+        NOT_A_PARENT = 301
+        UNDETERMINED = 302
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

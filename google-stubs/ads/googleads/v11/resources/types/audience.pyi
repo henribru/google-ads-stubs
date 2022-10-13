@@ -1,16 +1,31 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v11.common.types import audiences as audiences
-from google.ads.googleads.v11.enums.types import audience_status as audience_status
-
-__protobuf__: Incomplete
+from google.ads.googleads.v11.common.types.audiences import (
+    AudienceDimension,
+    AudienceExclusionDimension,
+)
+from google.ads.googleads.v11.enums.types.audience_status import AudienceStatusEnum
 
 class Audience(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    status: Incomplete
-    name: Incomplete
-    description: Incomplete
-    dimensions: Incomplete
-    exclusion_dimension: Incomplete
+    resource_name: str
+    id: int
+    status: AudienceStatusEnum.AudienceStatus
+    name: str
+    description: str
+    dimensions: list[AudienceDimension]
+    exclusion_dimension: AudienceExclusionDimension
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        status: AudienceStatusEnum.AudienceStatus = ...,
+        name: str = ...,
+        description: str = ...,
+        dimensions: list[AudienceDimension] = ...,
+        exclusion_dimension: AudienceExclusionDimension = ...
+    ) -> None: ...

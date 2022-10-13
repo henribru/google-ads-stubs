@@ -1,23 +1,45 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import simulation as simulation
-from google.ads.googleads.v10.enums.types import (
-    simulation_modification_method as simulation_modification_method,
-    simulation_type as simulation_type,
+from google.ads.googleads.v10.common.types.simulation import (
+    BudgetSimulationPointList,
+    CpcBidSimulationPointList,
+    TargetCpaSimulationPointList,
+    TargetImpressionShareSimulationPointList,
+    TargetRoasSimulationPointList,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.simulation_modification_method import (
+    SimulationModificationMethodEnum,
+)
+from google.ads.googleads.v10.enums.types.simulation_type import SimulationTypeEnum
 
 class CampaignSimulation(proto.Message):
-    resource_name: Incomplete
-    campaign_id: Incomplete
-    type_: Incomplete
-    modification_method: Incomplete
-    start_date: Incomplete
-    end_date: Incomplete
-    cpc_bid_point_list: Incomplete
-    target_cpa_point_list: Incomplete
-    target_roas_point_list: Incomplete
-    target_impression_share_point_list: Incomplete
-    budget_point_list: Incomplete
+    resource_name: str
+    campaign_id: int
+    type_: SimulationTypeEnum.SimulationType
+    modification_method: SimulationModificationMethodEnum.SimulationModificationMethod
+    start_date: str
+    end_date: str
+    cpc_bid_point_list: CpcBidSimulationPointList
+    target_cpa_point_list: TargetCpaSimulationPointList
+    target_roas_point_list: TargetRoasSimulationPointList
+    target_impression_share_point_list: TargetImpressionShareSimulationPointList
+    budget_point_list: BudgetSimulationPointList
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        campaign_id: int = ...,
+        type_: SimulationTypeEnum.SimulationType = ...,
+        modification_method: SimulationModificationMethodEnum.SimulationModificationMethod = ...,
+        start_date: str = ...,
+        end_date: str = ...,
+        cpc_bid_point_list: CpcBidSimulationPointList = ...,
+        target_cpa_point_list: TargetCpaSimulationPointList = ...,
+        target_roas_point_list: TargetRoasSimulationPointList = ...,
+        target_impression_share_point_list: TargetImpressionShareSimulationPointList = ...,
+        budget_point_list: BudgetSimulationPointList = ...
+    ) -> None: ...

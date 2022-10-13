@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AdGroupBidModifierErrorEnum(proto.Message):
     class AdGroupBidModifierError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CRITERION_ID_NOT_SUPPORTED: int
-        CANNOT_OVERRIDE_OPTED_OUT_CAMPAIGN_CRITERION_BID_MODIFIER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CRITERION_ID_NOT_SUPPORTED = 2
+        CANNOT_OVERRIDE_OPTED_OUT_CAMPAIGN_CRITERION_BID_MODIFIER = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

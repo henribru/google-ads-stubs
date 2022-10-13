@@ -1,24 +1,56 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2 as status_pb2
+from google.rpc.status_pb2 import Status
 
-from google.ads.googleads.v10.resources.types import campaign_label as campaign_label
-
-__protobuf__: Incomplete
-
-class MutateCampaignLabelsRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    partial_failure: Incomplete
-    validate_only: Incomplete
+from google.ads.googleads.v10.resources.types.campaign_label import CampaignLabel
 
 class CampaignLabelOperation(proto.Message):
-    create: Incomplete
-    remove: Incomplete
-
-class MutateCampaignLabelsResponse(proto.Message):
-    partial_failure_error: Incomplete
-    results: Incomplete
+    create: CampaignLabel
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        create: CampaignLabel = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class MutateCampaignLabelResult(proto.Message):
-    resource_name: Incomplete
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...
+
+class MutateCampaignLabelsRequest(proto.Message):
+    customer_id: str
+    operations: list[CampaignLabelOperation]
+    partial_failure: bool
+    validate_only: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[CampaignLabelOperation] = ...,
+        partial_failure: bool = ...,
+        validate_only: bool = ...
+    ) -> None: ...
+
+class MutateCampaignLabelsResponse(proto.Message):
+    partial_failure_error: Status
+    results: list[MutateCampaignLabelResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        partial_failure_error: Status = ...,
+        results: list[MutateCampaignLabelResult] = ...
+    ) -> None: ...

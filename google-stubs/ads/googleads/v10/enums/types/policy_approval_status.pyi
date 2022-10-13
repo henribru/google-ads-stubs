@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PolicyApprovalStatusEnum(proto.Message):
     class PolicyApprovalStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DISAPPROVED: int
-        APPROVED_LIMITED: int
-        APPROVED: int
-        AREA_OF_INTEREST_ONLY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DISAPPROVED = 2
+        APPROVED_LIMITED = 3
+        APPROVED = 4
+        AREA_OF_INTEREST_ONLY = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

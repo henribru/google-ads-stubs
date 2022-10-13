@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ResourceChangeOperationEnum(proto.Message):
     class ResourceChangeOperation(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CREATE: int
-        UPDATE: int
-        REMOVE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CREATE = 2
+        UPDATE = 3
+        REMOVE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

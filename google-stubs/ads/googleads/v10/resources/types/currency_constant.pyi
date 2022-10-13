@@ -1,11 +1,21 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CurrencyConstant(proto.Message):
-    resource_name: Incomplete
-    code: Incomplete
-    name: Incomplete
-    symbol: Incomplete
-    billable_unit_micros: Incomplete
+    resource_name: str
+    code: str
+    name: str
+    symbol: str
+    billable_unit_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        code: str = ...,
+        name: str = ...,
+        symbol: str = ...,
+        billable_unit_micros: int = ...
+    ) -> None: ...

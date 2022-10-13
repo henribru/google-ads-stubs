@@ -1,43 +1,107 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.enums.types import (
-    bidding_strategy_type as bidding_strategy_type,
-    target_impression_share_location as target_impression_share_location,
+from google.ads.googleads.v10.enums.types.bidding_strategy_type import (
+    BiddingStrategyTypeEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.target_impression_share_location import (
+    TargetImpressionShareLocationEnum,
+)
 
 class AccessibleBiddingStrategy(proto.Message):
     class MaximizeConversionValue(proto.Message):
-        target_roas: Incomplete
+        target_roas: float
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            target_roas: float = ...
+        ) -> None: ...
 
     class MaximizeConversions(proto.Message):
-        target_cpa: Incomplete
+        target_cpa: int
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            target_cpa: int = ...
+        ) -> None: ...
 
     class TargetCpa(proto.Message):
-        target_cpa_micros: Incomplete
+        target_cpa_micros: int
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            target_cpa_micros: int = ...
+        ) -> None: ...
 
     class TargetImpressionShare(proto.Message):
-        location: Incomplete
-        location_fraction_micros: Incomplete
-        cpc_bid_ceiling_micros: Incomplete
+        location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation
+        location_fraction_micros: int
+        cpc_bid_ceiling_micros: int
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation = ...,
+            location_fraction_micros: int = ...,
+            cpc_bid_ceiling_micros: int = ...
+        ) -> None: ...
 
     class TargetRoas(proto.Message):
-        target_roas: Incomplete
+        target_roas: float
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            target_roas: float = ...
+        ) -> None: ...
 
     class TargetSpend(proto.Message):
-        target_spend_micros: Incomplete
-        cpc_bid_ceiling_micros: Incomplete
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    type_: Incomplete
-    owner_customer_id: Incomplete
-    owner_descriptive_name: Incomplete
-    maximize_conversion_value: Incomplete
-    maximize_conversions: Incomplete
-    target_cpa: Incomplete
-    target_impression_share: Incomplete
-    target_roas: Incomplete
-    target_spend: Incomplete
+        target_spend_micros: int
+        cpc_bid_ceiling_micros: int
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            target_spend_micros: int = ...,
+            cpc_bid_ceiling_micros: int = ...
+        ) -> None: ...
+    resource_name: str
+    id: int
+    name: str
+    type_: BiddingStrategyTypeEnum.BiddingStrategyType
+    owner_customer_id: int
+    owner_descriptive_name: str
+    maximize_conversion_value: AccessibleBiddingStrategy.MaximizeConversionValue
+    maximize_conversions: AccessibleBiddingStrategy.MaximizeConversions
+    target_cpa: AccessibleBiddingStrategy.TargetCpa
+    target_impression_share: AccessibleBiddingStrategy.TargetImpressionShare
+    target_roas: AccessibleBiddingStrategy.TargetRoas
+    target_spend: AccessibleBiddingStrategy.TargetSpend
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        type_: BiddingStrategyTypeEnum.BiddingStrategyType = ...,
+        owner_customer_id: int = ...,
+        owner_descriptive_name: str = ...,
+        maximize_conversion_value: AccessibleBiddingStrategy.MaximizeConversionValue = ...,
+        maximize_conversions: AccessibleBiddingStrategy.MaximizeConversions = ...,
+        target_cpa: AccessibleBiddingStrategy.TargetCpa = ...,
+        target_impression_share: AccessibleBiddingStrategy.TargetImpressionShare = ...,
+        target_roas: AccessibleBiddingStrategy.TargetRoas = ...,
+        target_spend: AccessibleBiddingStrategy.TargetSpend = ...
+    ) -> None: ...

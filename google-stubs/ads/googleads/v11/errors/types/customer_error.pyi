@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CustomerErrorEnum(proto.Message):
     class CustomerError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        STATUS_CHANGE_DISALLOWED: int
-        ACCOUNT_NOT_SET_UP: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        STATUS_CHANGE_DISALLOWED = 2
+        ACCOUNT_NOT_SET_UP = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

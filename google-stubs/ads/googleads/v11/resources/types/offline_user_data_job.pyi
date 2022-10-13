@@ -1,26 +1,56 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.common.types import offline_user_data as offline_user_data
-from google.ads.googleads.v11.enums.types import (
-    offline_user_data_job_failure_reason as offline_user_data_job_failure_reason,
-    offline_user_data_job_match_rate_range as offline_user_data_job_match_rate_range,
-    offline_user_data_job_status as offline_user_data_job_status,
-    offline_user_data_job_type as offline_user_data_job_type,
+import proto
+
+from google.ads.googleads.v11.common.types.offline_user_data import (
+    CustomerMatchUserListMetadata,
+    StoreSalesMetadata,
+)
+from google.ads.googleads.v11.enums.types.offline_user_data_job_failure_reason import (
+    OfflineUserDataJobFailureReasonEnum,
+)
+from google.ads.googleads.v11.enums.types.offline_user_data_job_match_rate_range import (
+    OfflineUserDataJobMatchRateRangeEnum,
+)
+from google.ads.googleads.v11.enums.types.offline_user_data_job_status import (
+    OfflineUserDataJobStatusEnum,
+)
+from google.ads.googleads.v11.enums.types.offline_user_data_job_type import (
+    OfflineUserDataJobTypeEnum,
 )
 
-__protobuf__: Incomplete
-
 class OfflineUserDataJob(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    external_id: Incomplete
-    type_: Incomplete
-    status: Incomplete
-    failure_reason: Incomplete
-    operation_metadata: Incomplete
-    customer_match_user_list_metadata: Incomplete
-    store_sales_metadata: Incomplete
+    resource_name: str
+    id: int
+    external_id: int
+    type_: OfflineUserDataJobTypeEnum.OfflineUserDataJobType
+    status: OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus
+    failure_reason: OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason
+    operation_metadata: OfflineUserDataJobMetadata
+    customer_match_user_list_metadata: CustomerMatchUserListMetadata
+    store_sales_metadata: StoreSalesMetadata
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        external_id: int = ...,
+        type_: OfflineUserDataJobTypeEnum.OfflineUserDataJobType = ...,
+        status: OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus = ...,
+        failure_reason: OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason = ...,
+        operation_metadata: OfflineUserDataJobMetadata = ...,
+        customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...,
+        store_sales_metadata: StoreSalesMetadata = ...
+    ) -> None: ...
 
 class OfflineUserDataJobMetadata(proto.Message):
-    match_rate_range: Incomplete
+    match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange = ...
+    ) -> None: ...

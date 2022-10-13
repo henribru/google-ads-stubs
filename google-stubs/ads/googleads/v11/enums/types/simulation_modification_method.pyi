@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class SimulationModificationMethodEnum(proto.Message):
     class SimulationModificationMethod(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        UNIFORM: int
-        DEFAULT: int
-        SCALING: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        UNIFORM = 2
+        DEFAULT = 3
+        SCALING = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

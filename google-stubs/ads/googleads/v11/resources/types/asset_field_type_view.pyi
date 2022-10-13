@@ -1,10 +1,17 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v11.enums.types import asset_field_type as asset_field_type
-
-__protobuf__: Incomplete
+from google.ads.googleads.v11.enums.types.asset_field_type import AssetFieldTypeEnum
 
 class AssetFieldTypeView(proto.Message):
-    resource_name: Incomplete
-    field_type: Incomplete
+    resource_name: str
+    field_type: AssetFieldTypeEnum.AssetFieldType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        field_type: AssetFieldTypeEnum.AssetFieldType = ...
+    ) -> None: ...

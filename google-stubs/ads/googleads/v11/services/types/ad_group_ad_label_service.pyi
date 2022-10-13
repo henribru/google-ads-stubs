@@ -1,26 +1,56 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2 as status_pb2
+from google.rpc.status_pb2 import Status
 
-from google.ads.googleads.v11.resources.types import (
-    ad_group_ad_label as ad_group_ad_label,
-)
-
-__protobuf__: Incomplete
-
-class MutateAdGroupAdLabelsRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    partial_failure: Incomplete
-    validate_only: Incomplete
+from google.ads.googleads.v11.resources.types.ad_group_ad_label import AdGroupAdLabel
 
 class AdGroupAdLabelOperation(proto.Message):
-    create: Incomplete
-    remove: Incomplete
-
-class MutateAdGroupAdLabelsResponse(proto.Message):
-    partial_failure_error: Incomplete
-    results: Incomplete
+    create: AdGroupAdLabel
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        create: AdGroupAdLabel = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class MutateAdGroupAdLabelResult(proto.Message):
-    resource_name: Incomplete
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...
+
+class MutateAdGroupAdLabelsRequest(proto.Message):
+    customer_id: str
+    operations: list[AdGroupAdLabelOperation]
+    partial_failure: bool
+    validate_only: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[AdGroupAdLabelOperation] = ...,
+        partial_failure: bool = ...,
+        validate_only: bool = ...
+    ) -> None: ...
+
+class MutateAdGroupAdLabelsResponse(proto.Message):
+    partial_failure_error: Status
+    results: list[MutateAdGroupAdLabelResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        partial_failure_error: Status = ...,
+        results: list[MutateAdGroupAdLabelResult] = ...
+    ) -> None: ...

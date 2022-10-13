@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CollectionSizeErrorEnum(proto.Message):
     class CollectionSizeError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        TOO_FEW: int
-        TOO_MANY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        TOO_FEW = 2
+        TOO_MANY = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

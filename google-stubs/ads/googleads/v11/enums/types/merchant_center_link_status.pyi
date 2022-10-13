@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class MerchantCenterLinkStatusEnum(proto.Message):
     class MerchantCenterLinkStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ENABLED: int
-        PENDING: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ENABLED = 2
+        PENDING = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

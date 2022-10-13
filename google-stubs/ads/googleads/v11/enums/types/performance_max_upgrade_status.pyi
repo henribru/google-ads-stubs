@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PerformanceMaxUpgradeStatusEnum(proto.Message):
     class PerformanceMaxUpgradeStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        UPGRADE_ELIBIGLE: int
-        UPGRADE_IN_PROGRESS: int
-        UPGRADE_COMPLETE: int
-        UPGRADE_FAILED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        UPGRADE_ELIBIGLE = 2
+        UPGRADE_IN_PROGRESS = 3
+        UPGRADE_COMPLETE = 4
+        UPGRADE_FAILED = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

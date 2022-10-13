@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class SearchTermMatchTypeEnum(proto.Message):
     class SearchTermMatchType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        BROAD: int
-        EXACT: int
-        PHRASE: int
-        NEAR_EXACT: int
-        NEAR_PHRASE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        BROAD = 2
+        EXACT = 3
+        PHRASE = 4
+        NEAR_EXACT = 5
+        NEAR_PHRASE = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

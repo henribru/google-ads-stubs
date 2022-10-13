@@ -1,16 +1,27 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.common.types import (
-    criterion_category_availability as criterion_category_availability,
+import proto
+
+from google.ads.googleads.v10.common.types.criterion_category_availability import (
+    CriterionCategoryAvailability,
 )
 
-__protobuf__: Incomplete
-
 class LifeEvent(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    parent: Incomplete
-    launched_to_all: Incomplete
-    availabilities: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    parent: str
+    launched_to_all: bool
+    availabilities: list[CriterionCategoryAvailability]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        parent: str = ...,
+        launched_to_all: bool = ...,
+        availabilities: list[CriterionCategoryAvailability] = ...
+    ) -> None: ...

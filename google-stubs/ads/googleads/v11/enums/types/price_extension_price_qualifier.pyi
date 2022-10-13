@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PriceExtensionPriceQualifierEnum(proto.Message):
     class PriceExtensionPriceQualifier(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        FROM: int
-        UP_TO: int
-        AVERAGE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        FROM = 2
+        UP_TO = 3
+        AVERAGE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

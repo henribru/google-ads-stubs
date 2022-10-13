@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CustomAudienceMemberTypeEnum(proto.Message):
     class CustomAudienceMemberType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        KEYWORD: int
-        URL: int
-        PLACE_CATEGORY: int
-        APP: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        KEYWORD = 2
+        URL = 3
+        PLACE_CATEGORY = 4
+        APP = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...
