@@ -1,21 +1,48 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-__protobuf__: Incomplete
-
-class TargetingSetting(proto.Message):
-    target_restrictions: Incomplete
-    target_restriction_operations: Incomplete
+from google.ads.googleads.v11.enums.types.targeting_dimension import (
+    TargetingDimensionEnum,
+)
 
 class TargetRestriction(proto.Message):
-    targeting_dimension: Incomplete
-    bid_only: Incomplete
+    targeting_dimension: TargetingDimensionEnum.TargetingDimension
+    bid_only: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        targeting_dimension: TargetingDimensionEnum.TargetingDimension = ...,
+        bid_only: bool = ...
+    ) -> None: ...
 
 class TargetRestrictionOperation(proto.Message):
     class Operator(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ADD: int
-        REMOVE: int
-    operator: Incomplete
-    value: Incomplete
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ADD = 2
+        REMOVE = 3
+    operator: TargetRestrictionOperation.Operator
+    value: TargetRestriction
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        operator: TargetRestrictionOperation.Operator = ...,
+        value: TargetRestriction = ...
+    ) -> None: ...
+
+class TargetingSetting(proto.Message):
+    target_restrictions: list[TargetRestriction]
+    target_restriction_operations: list[TargetRestrictionOperation]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        target_restrictions: list[TargetRestriction] = ...,
+        target_restriction_operations: list[TargetRestrictionOperation] = ...
+    ) -> None: ...

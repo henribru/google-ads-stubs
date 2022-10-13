@@ -1,15 +1,20 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class BatchJobErrorEnum(proto.Message):
     class BatchJobError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CANNOT_MODIFY_JOB_AFTER_JOB_STARTS_RUNNING: int
-        EMPTY_OPERATIONS: int
-        INVALID_SEQUENCE_TOKEN: int
-        RESULTS_NOT_READY: int
-        INVALID_PAGE_SIZE: int
-        CAN_ONLY_REMOVE_PENDING_JOB: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CANNOT_MODIFY_JOB_AFTER_JOB_STARTS_RUNNING = 2
+        EMPTY_OPERATIONS = 3
+        INVALID_SEQUENCE_TOKEN = 4
+        RESULTS_NOT_READY = 5
+        INVALID_PAGE_SIZE = 6
+        CAN_ONLY_REMOVE_PENDING_JOB = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class GeoTargetingTypeEnum(proto.Message):
     class GeoTargetingType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        AREA_OF_INTEREST: int
-        LOCATION_OF_PRESENCE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        AREA_OF_INTEREST = 2
+        LOCATION_OF_PRESENCE = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

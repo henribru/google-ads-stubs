@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class LegacyAppInstallAdAppStoreEnum(proto.Message):
     class LegacyAppInstallAdAppStore(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        APPLE_APP_STORE: int
-        GOOGLE_PLAY: int
-        WINDOWS_STORE: int
-        WINDOWS_PHONE_STORE: int
-        CN_APP_STORE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        APPLE_APP_STORE = 2
+        GOOGLE_PLAY = 3
+        WINDOWS_STORE = 4
+        WINDOWS_PHONE_STORE = 5
+        CN_APP_STORE = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

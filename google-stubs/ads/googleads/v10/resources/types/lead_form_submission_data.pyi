@@ -1,23 +1,45 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    lead_form_field_user_input_type as lead_form_field_user_input_type,
+import proto
+
+from google.ads.googleads.v10.enums.types.lead_form_field_user_input_type import (
+    LeadFormFieldUserInputTypeEnum,
 )
 
-__protobuf__: Incomplete
-
 class LeadFormSubmissionData(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    asset: Incomplete
-    campaign: Incomplete
-    lead_form_submission_fields: Incomplete
-    ad_group: Incomplete
-    ad_group_ad: Incomplete
-    gclid: Incomplete
-    submission_date_time: Incomplete
+    resource_name: str
+    id: str
+    asset: str
+    campaign: str
+    lead_form_submission_fields: list[LeadFormSubmissionField]
+    ad_group: str
+    ad_group_ad: str
+    gclid: str
+    submission_date_time: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: str = ...,
+        asset: str = ...,
+        campaign: str = ...,
+        lead_form_submission_fields: list[LeadFormSubmissionField] = ...,
+        ad_group: str = ...,
+        ad_group_ad: str = ...,
+        gclid: str = ...,
+        submission_date_time: str = ...
+    ) -> None: ...
 
 class LeadFormSubmissionField(proto.Message):
-    field_type: Incomplete
-    field_value: Incomplete
+    field_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType
+    field_value: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        field_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType = ...,
+        field_value: str = ...
+    ) -> None: ...

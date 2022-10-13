@@ -1,39 +1,81 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import user_lists as user_lists
-from google.ads.googleads.v10.enums.types import (
-    user_list_access_status as user_list_access_status,
-    user_list_closing_reason as user_list_closing_reason,
-    user_list_membership_status as user_list_membership_status,
-    user_list_size_range as user_list_size_range,
-    user_list_type as user_list_type,
+from google.ads.googleads.v10.common.types.user_lists import (
+    BasicUserListInfo,
+    CrmBasedUserListInfo,
+    LogicalUserListInfo,
+    RuleBasedUserListInfo,
+    SimilarUserListInfo,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.access_reason import AccessReasonEnum
+from google.ads.googleads.v10.enums.types.user_list_access_status import (
+    UserListAccessStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.user_list_closing_reason import (
+    UserListClosingReasonEnum,
+)
+from google.ads.googleads.v10.enums.types.user_list_membership_status import (
+    UserListMembershipStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.user_list_size_range import (
+    UserListSizeRangeEnum,
+)
+from google.ads.googleads.v10.enums.types.user_list_type import UserListTypeEnum
 
 class UserList(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    read_only: Incomplete
-    name: Incomplete
-    description: Incomplete
-    membership_status: Incomplete
-    integration_code: Incomplete
-    membership_life_span: Incomplete
-    size_for_display: Incomplete
-    size_range_for_display: Incomplete
-    size_for_search: Incomplete
-    size_range_for_search: Incomplete
-    type_: Incomplete
-    closing_reason: Incomplete
-    access_reason: Incomplete
-    account_user_list_status: Incomplete
-    eligible_for_search: Incomplete
-    eligible_for_display: Incomplete
-    match_rate_percentage: Incomplete
-    crm_based_user_list: Incomplete
-    similar_user_list: Incomplete
-    rule_based_user_list: Incomplete
-    logical_user_list: Incomplete
-    basic_user_list: Incomplete
+    resource_name: str
+    id: int
+    read_only: bool
+    name: str
+    description: str
+    membership_status: UserListMembershipStatusEnum.UserListMembershipStatus
+    integration_code: str
+    membership_life_span: int
+    size_for_display: int
+    size_range_for_display: UserListSizeRangeEnum.UserListSizeRange
+    size_for_search: int
+    size_range_for_search: UserListSizeRangeEnum.UserListSizeRange
+    type_: UserListTypeEnum.UserListType
+    closing_reason: UserListClosingReasonEnum.UserListClosingReason
+    access_reason: AccessReasonEnum.AccessReason
+    account_user_list_status: UserListAccessStatusEnum.UserListAccessStatus
+    eligible_for_search: bool
+    eligible_for_display: bool
+    match_rate_percentage: int
+    crm_based_user_list: CrmBasedUserListInfo
+    similar_user_list: SimilarUserListInfo
+    rule_based_user_list: RuleBasedUserListInfo
+    logical_user_list: LogicalUserListInfo
+    basic_user_list: BasicUserListInfo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        read_only: bool = ...,
+        name: str = ...,
+        description: str = ...,
+        membership_status: UserListMembershipStatusEnum.UserListMembershipStatus = ...,
+        integration_code: str = ...,
+        membership_life_span: int = ...,
+        size_for_display: int = ...,
+        size_range_for_display: UserListSizeRangeEnum.UserListSizeRange = ...,
+        size_for_search: int = ...,
+        size_range_for_search: UserListSizeRangeEnum.UserListSizeRange = ...,
+        type_: UserListTypeEnum.UserListType = ...,
+        closing_reason: UserListClosingReasonEnum.UserListClosingReason = ...,
+        access_reason: AccessReasonEnum.AccessReason = ...,
+        account_user_list_status: UserListAccessStatusEnum.UserListAccessStatus = ...,
+        eligible_for_search: bool = ...,
+        eligible_for_display: bool = ...,
+        match_rate_percentage: int = ...,
+        crm_based_user_list: CrmBasedUserListInfo = ...,
+        similar_user_list: SimilarUserListInfo = ...,
+        rule_based_user_list: RuleBasedUserListInfo = ...,
+        logical_user_list: LogicalUserListInfo = ...,
+        basic_user_list: BasicUserListInfo = ...
+    ) -> None: ...

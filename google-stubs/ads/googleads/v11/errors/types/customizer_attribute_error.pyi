@@ -1,10 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CustomizerAttributeErrorEnum(proto.Message):
     class CustomizerAttributeError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DUPLICATE_CUSTOMIZER_ATTRIBUTE_NAME: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DUPLICATE_CUSTOMIZER_ATTRIBUTE_NAME = 2
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,8 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ThirdPartyAppAnalyticsLink(proto.Message):
-    resource_name: Incomplete
-    shareable_link_id: Incomplete
+    resource_name: str
+    shareable_link_id: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        shareable_link_id: str = ...
+    ) -> None: ...

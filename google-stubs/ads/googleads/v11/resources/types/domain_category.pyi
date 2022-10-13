@@ -1,15 +1,29 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class DomainCategory(proto.Message):
-    resource_name: Incomplete
-    campaign: Incomplete
-    category: Incomplete
-    language_code: Incomplete
-    domain: Incomplete
-    coverage_fraction: Incomplete
-    category_rank: Incomplete
-    has_children: Incomplete
-    recommended_cpc_bid_micros: Incomplete
+    resource_name: str
+    campaign: str
+    category: str
+    language_code: str
+    domain: str
+    coverage_fraction: float
+    category_rank: int
+    has_children: bool
+    recommended_cpc_bid_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        campaign: str = ...,
+        category: str = ...,
+        language_code: str = ...,
+        domain: str = ...,
+        coverage_fraction: float = ...,
+        category_rank: int = ...,
+        has_children: bool = ...,
+        recommended_cpc_bid_micros: int = ...
+    ) -> None: ...

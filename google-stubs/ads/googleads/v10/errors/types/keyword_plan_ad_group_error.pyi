@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class KeywordPlanAdGroupErrorEnum(proto.Message):
     class KeywordPlanAdGroupError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_NAME: int
-        DUPLICATE_NAME: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_NAME = 2
+        DUPLICATE_NAME = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

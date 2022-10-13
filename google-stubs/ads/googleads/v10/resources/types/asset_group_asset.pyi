@@ -1,19 +1,32 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    asset_field_type as asset_field_type,
-    asset_link_status as asset_link_status,
-    asset_performance_label as asset_performance_label,
+import proto
+
+from google.ads.googleads.v10.common.types.policy_summary import PolicySummary
+from google.ads.googleads.v10.enums.types.asset_field_type import AssetFieldTypeEnum
+from google.ads.googleads.v10.enums.types.asset_link_status import AssetLinkStatusEnum
+from google.ads.googleads.v10.enums.types.asset_performance_label import (
+    AssetPerformanceLabelEnum,
 )
 
-__protobuf__: Incomplete
-
 class AssetGroupAsset(proto.Message):
-    resource_name: Incomplete
-    asset_group: Incomplete
-    asset: Incomplete
-    field_type: Incomplete
-    status: Incomplete
-    performance_label: Incomplete
-    policy_summary: Incomplete
+    resource_name: str
+    asset_group: str
+    asset: str
+    field_type: AssetFieldTypeEnum.AssetFieldType
+    status: AssetLinkStatusEnum.AssetLinkStatus
+    performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel
+    policy_summary: PolicySummary
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        asset_group: str = ...,
+        asset: str = ...,
+        field_type: AssetFieldTypeEnum.AssetFieldType = ...,
+        status: AssetLinkStatusEnum.AssetLinkStatus = ...,
+        performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
+        policy_summary: PolicySummary = ...
+    ) -> None: ...

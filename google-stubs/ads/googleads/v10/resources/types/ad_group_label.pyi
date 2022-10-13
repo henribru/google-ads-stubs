@@ -1,9 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AdGroupLabel(proto.Message):
-    resource_name: Incomplete
-    ad_group: Incomplete
-    label: Incomplete
+    resource_name: str
+    ad_group: str
+    label: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        ad_group: str = ...,
+        label: str = ...
+    ) -> None: ...

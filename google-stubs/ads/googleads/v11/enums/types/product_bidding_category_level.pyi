@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ProductBiddingCategoryLevelEnum(proto.Message):
     class ProductBiddingCategoryLevel(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        LEVEL1: int
-        LEVEL2: int
-        LEVEL3: int
-        LEVEL4: int
-        LEVEL5: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        LEVEL1 = 2
+        LEVEL2 = 3
+        LEVEL3 = 4
+        LEVEL4 = 5
+        LEVEL5 = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

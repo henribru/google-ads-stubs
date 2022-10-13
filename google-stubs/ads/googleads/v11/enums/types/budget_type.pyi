@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class BudgetTypeEnum(proto.Message):
     class BudgetType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        STANDARD: int
-        FIXED_CPA: int
-        SMART_CAMPAIGN: int
-        LOCAL_SERVICES: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        STANDARD = 2
+        FIXED_CPA = 4
+        SMART_CAMPAIGN = 5
+        LOCAL_SERVICES = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

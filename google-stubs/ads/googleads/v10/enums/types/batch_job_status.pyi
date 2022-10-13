@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class BatchJobStatusEnum(proto.Message):
     class BatchJobStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PENDING: int
-        RUNNING: int
-        DONE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PENDING = 2
+        RUNNING = 3
+        DONE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

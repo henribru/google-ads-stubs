@@ -1,15 +1,20 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AppCampaignBiddingStrategyGoalTypeEnum(proto.Message):
     class AppCampaignBiddingStrategyGoalType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        OPTIMIZE_INSTALLS_TARGET_INSTALL_COST: int
-        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST: int
-        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST: int
-        OPTIMIZE_RETURN_ON_ADVERTISING_SPEND: int
-        OPTIMIZE_PRE_REGISTRATION_CONVERSION_VOLUME: int
-        OPTIMIZE_INSTALLS_WITHOUT_TARGET_INSTALL_COST: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        OPTIMIZE_INSTALLS_TARGET_INSTALL_COST = 2
+        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST = 3
+        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST = 4
+        OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = 5
+        OPTIMIZE_PRE_REGISTRATION_CONVERSION_VOLUME = 6
+        OPTIMIZE_INSTALLS_WITHOUT_TARGET_INSTALL_COST = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

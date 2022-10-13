@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class UserListRuleTypeEnum(proto.Message):
     class UserListRuleType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        AND_OF_ORS: int
-        OR_OF_ANDS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        AND_OF_ORS = 2
+        OR_OF_ANDS = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

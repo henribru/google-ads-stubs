@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CallPlaceholderFieldEnum(proto.Message):
     class CallPlaceholderField(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PHONE_NUMBER: int
-        COUNTRY_CODE: int
-        TRACKED: int
-        CONVERSION_TYPE_ID: int
-        CONVERSION_REPORTING_STATE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PHONE_NUMBER = 2
+        COUNTRY_CODE = 3
+        TRACKED = 4
+        CONVERSION_TYPE_ID = 5
+        CONVERSION_REPORTING_STATE = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

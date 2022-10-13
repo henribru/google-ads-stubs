@@ -1,12 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    customizer_attribute_type as customizer_attribute_type,
+import proto
+
+from google.ads.googleads.v10.enums.types.customizer_attribute_type import (
+    CustomizerAttributeTypeEnum,
 )
 
-__protobuf__: Incomplete
-
 class CustomizerValue(proto.Message):
-    type_: Incomplete
-    string_value: Incomplete
+    type_: CustomizerAttributeTypeEnum.CustomizerAttributeType
+    string_value: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        type_: CustomizerAttributeTypeEnum.CustomizerAttributeType = ...,
+        string_value: str = ...
+    ) -> None: ...

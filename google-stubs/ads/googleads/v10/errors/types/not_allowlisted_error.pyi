@@ -1,10 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class NotAllowlistedErrorEnum(proto.Message):
     class NotAllowlistedError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CUSTOMER_NOT_ALLOWLISTED_FOR_THIS_FEATURE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CUSTOMER_NOT_ALLOWLISTED_FOR_THIS_FEATURE = 2
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

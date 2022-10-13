@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class UserListCrmDataSourceTypeEnum(proto.Message):
     class UserListCrmDataSourceType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        FIRST_PARTY: int
-        THIRD_PARTY_CREDIT_BUREAU: int
-        THIRD_PARTY_VOTER_FILE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        FIRST_PARTY = 2
+        THIRD_PARTY_CREDIT_BUREAU = 3
+        THIRD_PARTY_VOTER_FILE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

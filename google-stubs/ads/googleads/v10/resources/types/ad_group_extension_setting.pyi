@@ -1,15 +1,26 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.enums.types import (
-    extension_setting_device as extension_setting_device,
+from google.ads.googleads.v10.enums.types.extension_setting_device import (
+    ExtensionSettingDeviceEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.extension_type import ExtensionTypeEnum
 
 class AdGroupExtensionSetting(proto.Message):
-    resource_name: Incomplete
-    extension_type: Incomplete
-    ad_group: Incomplete
-    extension_feed_items: Incomplete
-    device: Incomplete
+    resource_name: str
+    extension_type: ExtensionTypeEnum.ExtensionType
+    ad_group: str
+    extension_feed_items: list[str]
+    device: ExtensionSettingDeviceEnum.ExtensionSettingDevice
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        extension_type: ExtensionTypeEnum.ExtensionType = ...,
+        ad_group: str = ...,
+        extension_feed_items: list[str] = ...,
+        device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...
+    ) -> None: ...

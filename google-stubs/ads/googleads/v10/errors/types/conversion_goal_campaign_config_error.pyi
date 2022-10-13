@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ConversionGoalCampaignConfigErrorEnum(proto.Message):
     class ConversionGoalCampaignConfigError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CANNOT_USE_CAMPAIGN_GOAL_FOR_SEARCH_ADS_360_MANAGED_CAMPAIGN: int
-        CUSTOM_GOAL_DOES_NOT_BELONG_TO_GOOGLE_ADS_CONVERSION_CUSTOMER: int
-        CAMPAIGN_CANNOT_USE_UNIFIED_GOALS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CANNOT_USE_CAMPAIGN_GOAL_FOR_SEARCH_ADS_360_MANAGED_CAMPAIGN = 2
+        CUSTOM_GOAL_DOES_NOT_BELONG_TO_GOOGLE_ADS_CONVERSION_CUSTOMER = 3
+        CAMPAIGN_CANNOT_USE_UNIFIED_GOALS = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

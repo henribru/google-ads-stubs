@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class InternalErrorEnum(proto.Message):
     class InternalError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INTERNAL_ERROR: int
-        ERROR_CODE_NOT_PUBLISHED: int
-        TRANSIENT_ERROR: int
-        DEADLINE_EXCEEDED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INTERNAL_ERROR = 2
+        ERROR_CODE_NOT_PUBLISHED = 3
+        TRANSIENT_ERROR = 4
+        DEADLINE_EXCEEDED = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

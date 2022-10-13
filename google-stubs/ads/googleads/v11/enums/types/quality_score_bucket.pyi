@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class QualityScoreBucketEnum(proto.Message):
     class QualityScoreBucket(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        BELOW_AVERAGE: int
-        AVERAGE: int
-        ABOVE_AVERAGE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        BELOW_AVERAGE = 2
+        AVERAGE = 3
+        ABOVE_AVERAGE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

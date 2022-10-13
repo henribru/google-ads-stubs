@@ -1,11 +1,21 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class Value(proto.Message):
-    boolean_value: Incomplete
-    int64_value: Incomplete
-    float_value: Incomplete
-    double_value: Incomplete
-    string_value: Incomplete
+    boolean_value: bool
+    int64_value: int
+    float_value: float
+    double_value: float
+    string_value: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        boolean_value: bool = ...,
+        int64_value: int = ...,
+        float_value: float = ...,
+        double_value: float = ...,
+        string_value: str = ...
+    ) -> None: ...

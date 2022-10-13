@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class VideoThumbnailEnum(proto.Message):
     class VideoThumbnail(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DEFAULT_THUMBNAIL: int
-        THUMBNAIL_1: int
-        THUMBNAIL_2: int
-        THUMBNAIL_3: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DEFAULT_THUMBNAIL = 2
+        THUMBNAIL_1 = 3
+        THUMBNAIL_2 = 4
+        THUMBNAIL_3 = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

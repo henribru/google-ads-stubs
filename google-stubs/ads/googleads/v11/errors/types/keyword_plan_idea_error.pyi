@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class KeywordPlanIdeaErrorEnum(proto.Message):
     class KeywordPlanIdeaError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        URL_CRAWL_ERROR: int
-        INVALID_VALUE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        URL_CRAWL_ERROR = 2
+        INVALID_VALUE = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

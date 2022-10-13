@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class KeywordPlanForecastIntervalEnum(proto.Message):
     class KeywordPlanForecastInterval(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NEXT_WEEK: int
-        NEXT_MONTH: int
-        NEXT_QUARTER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NEXT_WEEK = 3
+        NEXT_MONTH = 4
+        NEXT_QUARTER = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

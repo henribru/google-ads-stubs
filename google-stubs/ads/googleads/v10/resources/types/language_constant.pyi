@@ -1,11 +1,21 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class LanguageConstant(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    code: Incomplete
-    name: Incomplete
-    targetable: Incomplete
+    resource_name: str
+    id: int
+    code: str
+    name: str
+    targetable: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        code: str = ...,
+        name: str = ...,
+        targetable: bool = ...
+    ) -> None: ...

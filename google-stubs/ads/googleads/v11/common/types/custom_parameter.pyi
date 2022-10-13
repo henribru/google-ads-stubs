@@ -1,8 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CustomParameter(proto.Message):
-    key: Incomplete
-    value: Incomplete
+    key: str
+    value: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        key: str = ...,
+        value: str = ...
+    ) -> None: ...

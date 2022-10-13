@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PositiveGeoTargetTypeEnum(proto.Message):
     class PositiveGeoTargetType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PRESENCE_OR_INTEREST: int
-        SEARCH_INTEREST: int
-        PRESENCE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PRESENCE_OR_INTEREST = 5
+        SEARCH_INTEREST = 6
+        PRESENCE = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,16 +1,27 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    operating_system_version_operator_type as operating_system_version_operator_type,
+import proto
+
+from google.ads.googleads.v11.enums.types.operating_system_version_operator_type import (
+    OperatingSystemVersionOperatorTypeEnum,
 )
 
-__protobuf__: Incomplete
-
 class OperatingSystemVersionConstant(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    os_major_version: Incomplete
-    os_minor_version: Incomplete
-    operator_type: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    os_major_version: int
+    os_minor_version: int
+    operator_type: OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        os_major_version: int = ...,
+        os_minor_version: int = ...,
+        operator_type: OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType = ...
+    ) -> None: ...

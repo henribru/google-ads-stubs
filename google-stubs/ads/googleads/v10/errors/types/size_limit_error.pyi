@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class SizeLimitErrorEnum(proto.Message):
     class SizeLimitError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        REQUEST_SIZE_LIMIT_EXCEEDED: int
-        RESPONSE_SIZE_LIMIT_EXCEEDED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        REQUEST_SIZE_LIMIT_EXCEEDED = 2
+        RESPONSE_SIZE_LIMIT_EXCEEDED = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,26 +1,68 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.protobuf import field_mask_pb2 as field_mask_pb2
-from google.rpc import status_pb2 as status_pb2
+from google.protobuf.field_mask_pb2 import FieldMask
+from google.rpc.status_pb2 import Status
 
-__protobuf__: Incomplete
-
-class MutateCustomizerAttributesRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    partial_failure: Incomplete
-    validate_only: Incomplete
-    response_content_type: Incomplete
+from google.ads.googleads.v11.enums.types.response_content_type import (
+    ResponseContentTypeEnum,
+)
+from google.ads.googleads.v11.resources.types.customizer_attribute import (
+    CustomizerAttribute,
+)
 
 class CustomizerAttributeOperation(proto.Message):
-    update_mask: Incomplete
-    create: Incomplete
-    remove: Incomplete
-
-class MutateCustomizerAttributesResponse(proto.Message):
-    results: Incomplete
-    partial_failure_error: Incomplete
+    update_mask: FieldMask
+    create: CustomizerAttribute
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        update_mask: FieldMask = ...,
+        create: CustomizerAttribute = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class MutateCustomizerAttributeResult(proto.Message):
-    resource_name: Incomplete
-    customizer_attribute: Incomplete
+    resource_name: str
+    customizer_attribute: CustomizerAttribute
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        customizer_attribute: CustomizerAttribute = ...
+    ) -> None: ...
+
+class MutateCustomizerAttributesRequest(proto.Message):
+    customer_id: str
+    operations: list[CustomizerAttributeOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[CustomizerAttributeOperation] = ...,
+        partial_failure: bool = ...,
+        validate_only: bool = ...,
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+    ) -> None: ...
+
+class MutateCustomizerAttributesResponse(proto.Message):
+    results: list[MutateCustomizerAttributeResult]
+    partial_failure_error: Status
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        results: list[MutateCustomizerAttributeResult] = ...,
+        partial_failure_error: Status = ...
+    ) -> None: ...

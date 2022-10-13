@@ -1,16 +1,32 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.enums.types import month_of_year as month_of_year
-from google.ads.googleads.v10.resources.types import invoice as invoice
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.month_of_year import MonthOfYearEnum
+from google.ads.googleads.v10.resources.types.invoice import Invoice
 
 class ListInvoicesRequest(proto.Message):
-    customer_id: Incomplete
-    billing_setup: Incomplete
-    issue_year: Incomplete
-    issue_month: Incomplete
+    customer_id: str
+    billing_setup: str
+    issue_year: str
+    issue_month: MonthOfYearEnum.MonthOfYear
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        billing_setup: str = ...,
+        issue_year: str = ...,
+        issue_month: MonthOfYearEnum.MonthOfYear = ...
+    ) -> None: ...
 
 class ListInvoicesResponse(proto.Message):
-    invoices: Incomplete
+    invoices: list[Invoice]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        invoices: list[Invoice] = ...
+    ) -> None: ...

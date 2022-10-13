@@ -1,52 +1,122 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import tag_snippet as tag_snippet
-from google.ads.googleads.v10.enums.types import (
-    conversion_action_category as conversion_action_category,
-    conversion_action_counting_type as conversion_action_counting_type,
-    conversion_action_status as conversion_action_status,
-    conversion_action_type as conversion_action_type,
-    conversion_origin as conversion_origin,
+from google.ads.googleads.v10.common.types.tag_snippet import TagSnippet
+from google.ads.googleads.v10.enums.types.attribution_model import AttributionModelEnum
+from google.ads.googleads.v10.enums.types.conversion_action_category import (
+    ConversionActionCategoryEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.conversion_action_counting_type import (
+    ConversionActionCountingTypeEnum,
+)
+from google.ads.googleads.v10.enums.types.conversion_action_status import (
+    ConversionActionStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.conversion_action_type import (
+    ConversionActionTypeEnum,
+)
+from google.ads.googleads.v10.enums.types.conversion_origin import ConversionOriginEnum
+from google.ads.googleads.v10.enums.types.data_driven_model_status import (
+    DataDrivenModelStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.mobile_app_vendor import MobileAppVendorEnum
 
 class ConversionAction(proto.Message):
     class AttributionModelSettings(proto.Message):
-        attribution_model: Incomplete
-        data_driven_model_status: Incomplete
-
-    class ValueSettings(proto.Message):
-        default_value: Incomplete
-        default_currency_code: Incomplete
-        always_use_default_value: Incomplete
-
-    class ThirdPartyAppAnalyticsSettings(proto.Message):
-        event_name: Incomplete
-        provider_name: Incomplete
+        attribution_model: AttributionModelEnum.AttributionModel
+        data_driven_model_status: DataDrivenModelStatusEnum.DataDrivenModelStatus
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            attribution_model: AttributionModelEnum.AttributionModel = ...,
+            data_driven_model_status: DataDrivenModelStatusEnum.DataDrivenModelStatus = ...
+        ) -> None: ...
 
     class FirebaseSettings(proto.Message):
-        event_name: Incomplete
-        project_id: Incomplete
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    status: Incomplete
-    type_: Incomplete
-    origin: Incomplete
-    primary_for_goal: Incomplete
-    category: Incomplete
-    owner_customer: Incomplete
-    include_in_conversions_metric: Incomplete
-    click_through_lookback_window_days: Incomplete
-    view_through_lookback_window_days: Incomplete
-    value_settings: Incomplete
-    counting_type: Incomplete
-    attribution_model_settings: Incomplete
-    tag_snippets: Incomplete
-    phone_call_duration_seconds: Incomplete
-    app_id: Incomplete
-    mobile_app_vendor: Incomplete
-    firebase_settings: Incomplete
-    third_party_app_analytics_settings: Incomplete
+        event_name: str
+        project_id: str
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            event_name: str = ...,
+            project_id: str = ...
+        ) -> None: ...
+
+    class ThirdPartyAppAnalyticsSettings(proto.Message):
+        event_name: str
+        provider_name: str
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            event_name: str = ...,
+            provider_name: str = ...
+        ) -> None: ...
+
+    class ValueSettings(proto.Message):
+        default_value: float
+        default_currency_code: str
+        always_use_default_value: bool
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            default_value: float = ...,
+            default_currency_code: str = ...,
+            always_use_default_value: bool = ...
+        ) -> None: ...
+    resource_name: str
+    id: int
+    name: str
+    status: ConversionActionStatusEnum.ConversionActionStatus
+    type_: ConversionActionTypeEnum.ConversionActionType
+    origin: ConversionOriginEnum.ConversionOrigin
+    primary_for_goal: bool
+    category: ConversionActionCategoryEnum.ConversionActionCategory
+    owner_customer: str
+    include_in_conversions_metric: bool
+    click_through_lookback_window_days: int
+    view_through_lookback_window_days: int
+    value_settings: ConversionAction.ValueSettings
+    counting_type: ConversionActionCountingTypeEnum.ConversionActionCountingType
+    attribution_model_settings: ConversionAction.AttributionModelSettings
+    tag_snippets: list[TagSnippet]
+    phone_call_duration_seconds: int
+    app_id: str
+    mobile_app_vendor: MobileAppVendorEnum.MobileAppVendor
+    firebase_settings: ConversionAction.FirebaseSettings
+    third_party_app_analytics_settings: ConversionAction.ThirdPartyAppAnalyticsSettings
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        status: ConversionActionStatusEnum.ConversionActionStatus = ...,
+        type_: ConversionActionTypeEnum.ConversionActionType = ...,
+        origin: ConversionOriginEnum.ConversionOrigin = ...,
+        primary_for_goal: bool = ...,
+        category: ConversionActionCategoryEnum.ConversionActionCategory = ...,
+        owner_customer: str = ...,
+        include_in_conversions_metric: bool = ...,
+        click_through_lookback_window_days: int = ...,
+        view_through_lookback_window_days: int = ...,
+        value_settings: ConversionAction.ValueSettings = ...,
+        counting_type: ConversionActionCountingTypeEnum.ConversionActionCountingType = ...,
+        attribution_model_settings: ConversionAction.AttributionModelSettings = ...,
+        tag_snippets: list[TagSnippet] = ...,
+        phone_call_duration_seconds: int = ...,
+        app_id: str = ...,
+        mobile_app_vendor: MobileAppVendorEnum.MobileAppVendor = ...,
+        firebase_settings: ConversionAction.FirebaseSettings = ...,
+        third_party_app_analytics_settings: ConversionAction.ThirdPartyAppAnalyticsSettings = ...
+    ) -> None: ...

@@ -1,26 +1,52 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import policy as policy
-from google.ads.googleads.v10.enums.types import (
-    ad_group_ad_status as ad_group_ad_status,
-    policy_approval_status as policy_approval_status,
-    policy_review_status as policy_review_status,
+from google.ads.googleads.v10.common.types.policy import PolicyTopicEntry
+from google.ads.googleads.v10.enums.types.ad_group_ad_status import AdGroupAdStatusEnum
+from google.ads.googleads.v10.enums.types.ad_strength import AdStrengthEnum
+from google.ads.googleads.v10.enums.types.policy_approval_status import (
+    PolicyApprovalStatusEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.policy_review_status import (
+    PolicyReviewStatusEnum,
+)
+from google.ads.googleads.v10.resources.types.ad import Ad
 
 class AdGroupAd(proto.Message):
-    resource_name: Incomplete
-    status: Incomplete
-    ad_group: Incomplete
-    ad: Incomplete
-    policy_summary: Incomplete
-    ad_strength: Incomplete
-    action_items: Incomplete
-    labels: Incomplete
+    resource_name: str
+    status: AdGroupAdStatusEnum.AdGroupAdStatus
+    ad_group: str
+    ad: Ad
+    policy_summary: AdGroupAdPolicySummary
+    ad_strength: AdStrengthEnum.AdStrength
+    action_items: list[str]
+    labels: list[str]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        status: AdGroupAdStatusEnum.AdGroupAdStatus = ...,
+        ad_group: str = ...,
+        ad: Ad = ...,
+        policy_summary: AdGroupAdPolicySummary = ...,
+        ad_strength: AdStrengthEnum.AdStrength = ...,
+        action_items: list[str] = ...,
+        labels: list[str] = ...
+    ) -> None: ...
 
 class AdGroupAdPolicySummary(proto.Message):
-    policy_topic_entries: Incomplete
-    review_status: Incomplete
-    approval_status: Incomplete
+    policy_topic_entries: list[PolicyTopicEntry]
+    review_status: PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        policy_topic_entries: list[PolicyTopicEntry] = ...,
+        review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
+        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
+    ) -> None: ...

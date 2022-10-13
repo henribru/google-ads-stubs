@@ -1,23 +1,44 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.common.types import criteria as criteria
-from google.ads.googleads.v11.enums.types import (
-    feed_item_target_device as feed_item_target_device,
-    feed_item_target_status as feed_item_target_status,
+import proto
+
+from google.ads.googleads.v11.common.types.criteria import AdScheduleInfo, KeywordInfo
+from google.ads.googleads.v11.enums.types.feed_item_target_device import (
+    FeedItemTargetDeviceEnum,
+)
+from google.ads.googleads.v11.enums.types.feed_item_target_status import (
+    FeedItemTargetStatusEnum,
+)
+from google.ads.googleads.v11.enums.types.feed_item_target_type import (
+    FeedItemTargetTypeEnum,
 )
 
-__protobuf__: Incomplete
-
 class FeedItemTarget(proto.Message):
-    resource_name: Incomplete
-    feed_item: Incomplete
-    feed_item_target_type: Incomplete
-    feed_item_target_id: Incomplete
-    status: Incomplete
-    campaign: Incomplete
-    ad_group: Incomplete
-    keyword: Incomplete
-    geo_target_constant: Incomplete
-    device: Incomplete
-    ad_schedule: Incomplete
+    resource_name: str
+    feed_item: str
+    feed_item_target_type: FeedItemTargetTypeEnum.FeedItemTargetType
+    feed_item_target_id: int
+    status: FeedItemTargetStatusEnum.FeedItemTargetStatus
+    campaign: str
+    ad_group: str
+    keyword: KeywordInfo
+    geo_target_constant: str
+    device: FeedItemTargetDeviceEnum.FeedItemTargetDevice
+    ad_schedule: AdScheduleInfo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        feed_item: str = ...,
+        feed_item_target_type: FeedItemTargetTypeEnum.FeedItemTargetType = ...,
+        feed_item_target_id: int = ...,
+        status: FeedItemTargetStatusEnum.FeedItemTargetStatus = ...,
+        campaign: str = ...,
+        ad_group: str = ...,
+        keyword: KeywordInfo = ...,
+        geo_target_constant: str = ...,
+        device: FeedItemTargetDeviceEnum.FeedItemTargetDevice = ...,
+        ad_schedule: AdScheduleInfo = ...
+    ) -> None: ...

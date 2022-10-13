@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ListingGroupFilterProductChannelEnum(proto.Message):
     class ListingGroupFilterProductChannel(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ONLINE: int
-        LOCAL: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ONLINE = 2
+        LOCAL = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

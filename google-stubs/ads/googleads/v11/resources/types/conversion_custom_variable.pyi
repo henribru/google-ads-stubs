@@ -1,16 +1,27 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    conversion_custom_variable_status as conversion_custom_variable_status,
+import proto
+
+from google.ads.googleads.v11.enums.types.conversion_custom_variable_status import (
+    ConversionCustomVariableStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class ConversionCustomVariable(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    tag: Incomplete
-    status: Incomplete
-    owner_customer: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    tag: str
+    status: ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus
+    owner_customer: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        tag: str = ...,
+        status: ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus = ...,
+        owner_customer: str = ...
+    ) -> None: ...

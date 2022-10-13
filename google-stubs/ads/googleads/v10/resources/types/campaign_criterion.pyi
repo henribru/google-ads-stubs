@@ -1,50 +1,124 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import criteria as criteria
-from google.ads.googleads.v10.enums.types import (
-    campaign_criterion_status as campaign_criterion_status,
-    criterion_type as criterion_type,
+from google.ads.googleads.v10.common.types.criteria import (
+    AdScheduleInfo,
+    AgeRangeInfo,
+    CarrierInfo,
+    CombinedAudienceInfo,
+    ContentLabelInfo,
+    CustomAffinityInfo,
+    CustomAudienceInfo,
+    DeviceInfo,
+    GenderInfo,
+    IncomeRangeInfo,
+    IpBlockInfo,
+    KeywordInfo,
+    KeywordThemeInfo,
+    LanguageInfo,
+    ListingScopeInfo,
+    LocationGroupInfo,
+    LocationInfo,
+    MobileAppCategoryInfo,
+    MobileApplicationInfo,
+    MobileDeviceInfo,
+    OperatingSystemVersionInfo,
+    ParentalStatusInfo,
+    PlacementInfo,
+    ProximityInfo,
+    TopicInfo,
+    UserInterestInfo,
+    UserListInfo,
+    WebpageInfo,
+    YouTubeChannelInfo,
+    YouTubeVideoInfo,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.campaign_criterion_status import (
+    CampaignCriterionStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.criterion_type import CriterionTypeEnum
 
 class CampaignCriterion(proto.Message):
-    resource_name: Incomplete
-    campaign: Incomplete
-    criterion_id: Incomplete
-    display_name: Incomplete
-    bid_modifier: Incomplete
-    negative: Incomplete
-    type_: Incomplete
-    status: Incomplete
-    keyword: Incomplete
-    placement: Incomplete
-    mobile_app_category: Incomplete
-    mobile_application: Incomplete
-    location: Incomplete
-    device: Incomplete
-    ad_schedule: Incomplete
-    age_range: Incomplete
-    gender: Incomplete
-    income_range: Incomplete
-    parental_status: Incomplete
-    user_list: Incomplete
-    youtube_video: Incomplete
-    youtube_channel: Incomplete
-    proximity: Incomplete
-    topic: Incomplete
-    listing_scope: Incomplete
-    language: Incomplete
-    ip_block: Incomplete
-    content_label: Incomplete
-    carrier: Incomplete
-    user_interest: Incomplete
-    webpage: Incomplete
-    operating_system_version: Incomplete
-    mobile_device: Incomplete
-    location_group: Incomplete
-    custom_affinity: Incomplete
-    custom_audience: Incomplete
-    combined_audience: Incomplete
-    keyword_theme: Incomplete
+    resource_name: str
+    campaign: str
+    criterion_id: int
+    display_name: str
+    bid_modifier: float
+    negative: bool
+    type_: CriterionTypeEnum.CriterionType
+    status: CampaignCriterionStatusEnum.CampaignCriterionStatus
+    keyword: KeywordInfo
+    placement: PlacementInfo
+    mobile_app_category: MobileAppCategoryInfo
+    mobile_application: MobileApplicationInfo
+    location: LocationInfo
+    device: DeviceInfo
+    ad_schedule: AdScheduleInfo
+    age_range: AgeRangeInfo
+    gender: GenderInfo
+    income_range: IncomeRangeInfo
+    parental_status: ParentalStatusInfo
+    user_list: UserListInfo
+    youtube_video: YouTubeVideoInfo
+    youtube_channel: YouTubeChannelInfo
+    proximity: ProximityInfo
+    topic: TopicInfo
+    listing_scope: ListingScopeInfo
+    language: LanguageInfo
+    ip_block: IpBlockInfo
+    content_label: ContentLabelInfo
+    carrier: CarrierInfo
+    user_interest: UserInterestInfo
+    webpage: WebpageInfo
+    operating_system_version: OperatingSystemVersionInfo
+    mobile_device: MobileDeviceInfo
+    location_group: LocationGroupInfo
+    custom_affinity: CustomAffinityInfo
+    custom_audience: CustomAudienceInfo
+    combined_audience: CombinedAudienceInfo
+    keyword_theme: KeywordThemeInfo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        campaign: str = ...,
+        criterion_id: int = ...,
+        display_name: str = ...,
+        bid_modifier: float = ...,
+        negative: bool = ...,
+        type_: CriterionTypeEnum.CriterionType = ...,
+        status: CampaignCriterionStatusEnum.CampaignCriterionStatus = ...,
+        keyword: KeywordInfo = ...,
+        placement: PlacementInfo = ...,
+        mobile_app_category: MobileAppCategoryInfo = ...,
+        mobile_application: MobileApplicationInfo = ...,
+        location: LocationInfo = ...,
+        device: DeviceInfo = ...,
+        ad_schedule: AdScheduleInfo = ...,
+        age_range: AgeRangeInfo = ...,
+        gender: GenderInfo = ...,
+        income_range: IncomeRangeInfo = ...,
+        parental_status: ParentalStatusInfo = ...,
+        user_list: UserListInfo = ...,
+        youtube_video: YouTubeVideoInfo = ...,
+        youtube_channel: YouTubeChannelInfo = ...,
+        proximity: ProximityInfo = ...,
+        topic: TopicInfo = ...,
+        listing_scope: ListingScopeInfo = ...,
+        language: LanguageInfo = ...,
+        ip_block: IpBlockInfo = ...,
+        content_label: ContentLabelInfo = ...,
+        carrier: CarrierInfo = ...,
+        user_interest: UserInterestInfo = ...,
+        webpage: WebpageInfo = ...,
+        operating_system_version: OperatingSystemVersionInfo = ...,
+        mobile_device: MobileDeviceInfo = ...,
+        location_group: LocationGroupInfo = ...,
+        custom_affinity: CustomAffinityInfo = ...,
+        custom_audience: CustomAudienceInfo = ...,
+        combined_audience: CombinedAudienceInfo = ...,
+        keyword_theme: KeywordThemeInfo = ...
+    ) -> None: ...

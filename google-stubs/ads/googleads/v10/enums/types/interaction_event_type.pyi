@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class InteractionEventTypeEnum(proto.Message):
     class InteractionEventType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CLICK: int
-        ENGAGEMENT: int
-        VIDEO_VIEW: int
-        NONE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CLICK = 2
+        ENGAGEMENT = 3
+        VIDEO_VIEW = 4
+        NONE = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

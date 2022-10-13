@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ProductChannelExclusivityEnum(proto.Message):
     class ProductChannelExclusivity(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        SINGLE_CHANNEL: int
-        MULTI_CHANNEL: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        SINGLE_CHANNEL = 2
+        MULTI_CHANNEL = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,15 +1,20 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class MediaTypeEnum(proto.Message):
     class MediaType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        IMAGE: int
-        ICON: int
-        MEDIA_BUNDLE: int
-        AUDIO: int
-        VIDEO: int
-        DYNAMIC_IMAGE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        IMAGE = 2
+        ICON = 3
+        MEDIA_BUNDLE = 4
+        AUDIO = 5
+        VIDEO = 6
+        DYNAMIC_IMAGE = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

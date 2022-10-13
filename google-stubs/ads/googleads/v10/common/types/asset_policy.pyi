@@ -1,15 +1,25 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.common.types import policy as policy
-from google.ads.googleads.v10.enums.types import (
-    policy_approval_status as policy_approval_status,
-    policy_review_status as policy_review_status,
+import proto
+
+from google.ads.googleads.v10.common.types.policy import PolicyTopicEntry
+from google.ads.googleads.v10.enums.types.policy_approval_status import (
+    PolicyApprovalStatusEnum,
+)
+from google.ads.googleads.v10.enums.types.policy_review_status import (
+    PolicyReviewStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class AdAssetPolicySummary(proto.Message):
-    policy_topic_entries: Incomplete
-    review_status: Incomplete
-    approval_status: Incomplete
+    policy_topic_entries: list[PolicyTopicEntry]
+    review_status: PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        policy_topic_entries: list[PolicyTopicEntry] = ...,
+        review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
+        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
+    ) -> None: ...

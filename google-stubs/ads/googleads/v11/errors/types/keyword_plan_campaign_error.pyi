@@ -1,15 +1,20 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class KeywordPlanCampaignErrorEnum(proto.Message):
     class KeywordPlanCampaignError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_NAME: int
-        INVALID_LANGUAGES: int
-        INVALID_GEOS: int
-        DUPLICATE_NAME: int
-        MAX_GEOS_EXCEEDED: int
-        MAX_LANGUAGES_EXCEEDED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_NAME = 2
+        INVALID_LANGUAGES = 3
+        INVALID_GEOS = 4
+        DUPLICATE_NAME = 5
+        MAX_GEOS_EXCEEDED = 6
+        MAX_LANGUAGES_EXCEEDED = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,10 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AssetSetErrorEnum(proto.Message):
     class AssetSetError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DUPLICATE_ASSET_SET_NAME: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DUPLICATE_ASSET_SET_NAME = 2
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

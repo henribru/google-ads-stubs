@@ -1,26 +1,51 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v11.enums.types import (
-    billing_setup_status as billing_setup_status,
-    time_type as time_type,
+from google.ads.googleads.v11.enums.types.billing_setup_status import (
+    BillingSetupStatusEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v11.enums.types.time_type import TimeTypeEnum
 
 class BillingSetup(proto.Message):
     class PaymentsAccountInfo(proto.Message):
-        payments_account_id: Incomplete
-        payments_account_name: Incomplete
-        payments_profile_id: Incomplete
-        payments_profile_name: Incomplete
-        secondary_payments_profile_id: Incomplete
-    resource_name: Incomplete
-    id: Incomplete
-    status: Incomplete
-    payments_account: Incomplete
-    payments_account_info: Incomplete
-    start_date_time: Incomplete
-    start_time_type: Incomplete
-    end_date_time: Incomplete
-    end_time_type: Incomplete
+        payments_account_id: str
+        payments_account_name: str
+        payments_profile_id: str
+        payments_profile_name: str
+        secondary_payments_profile_id: str
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            payments_account_id: str = ...,
+            payments_account_name: str = ...,
+            payments_profile_id: str = ...,
+            payments_profile_name: str = ...,
+            secondary_payments_profile_id: str = ...
+        ) -> None: ...
+    resource_name: str
+    id: int
+    status: BillingSetupStatusEnum.BillingSetupStatus
+    payments_account: str
+    payments_account_info: BillingSetup.PaymentsAccountInfo
+    start_date_time: str
+    start_time_type: TimeTypeEnum.TimeType
+    end_date_time: str
+    end_time_type: TimeTypeEnum.TimeType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        status: BillingSetupStatusEnum.BillingSetupStatus = ...,
+        payments_account: str = ...,
+        payments_account_info: BillingSetup.PaymentsAccountInfo = ...,
+        start_date_time: str = ...,
+        start_time_type: TimeTypeEnum.TimeType = ...,
+        end_date_time: str = ...,
+        end_time_type: TimeTypeEnum.TimeType = ...
+    ) -> None: ...

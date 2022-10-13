@@ -1,24 +1,65 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2 as status_pb2
+from google.rpc.status_pb2 import Status
 
-__protobuf__: Incomplete
-
-class MutateCustomerNegativeCriteriaRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    partial_failure: Incomplete
-    validate_only: Incomplete
-    response_content_type: Incomplete
+from google.ads.googleads.v10.enums.types.response_content_type import (
+    ResponseContentTypeEnum,
+)
+from google.ads.googleads.v10.resources.types.customer_negative_criterion import (
+    CustomerNegativeCriterion,
+)
 
 class CustomerNegativeCriterionOperation(proto.Message):
-    create: Incomplete
-    remove: Incomplete
+    create: CustomerNegativeCriterion
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        create: CustomerNegativeCriterion = ...,
+        remove: str = ...
+    ) -> None: ...
+
+class MutateCustomerNegativeCriteriaRequest(proto.Message):
+    customer_id: str
+    operations: list[CustomerNegativeCriterionOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[CustomerNegativeCriterionOperation] = ...,
+        partial_failure: bool = ...,
+        validate_only: bool = ...,
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+    ) -> None: ...
 
 class MutateCustomerNegativeCriteriaResponse(proto.Message):
-    partial_failure_error: Incomplete
-    results: Incomplete
+    partial_failure_error: Status
+    results: list[MutateCustomerNegativeCriteriaResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        partial_failure_error: Status = ...,
+        results: list[MutateCustomerNegativeCriteriaResult] = ...
+    ) -> None: ...
 
 class MutateCustomerNegativeCriteriaResult(proto.Message):
-    resource_name: Incomplete
-    customer_negative_criterion: Incomplete
+    resource_name: str
+    customer_negative_criterion: CustomerNegativeCriterion
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        customer_negative_criterion: CustomerNegativeCriterion = ...
+    ) -> None: ...

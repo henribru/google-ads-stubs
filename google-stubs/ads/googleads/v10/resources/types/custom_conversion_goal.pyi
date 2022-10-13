@@ -1,15 +1,25 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    custom_conversion_goal_status as custom_conversion_goal_status,
+import proto
+
+from google.ads.googleads.v10.enums.types.custom_conversion_goal_status import (
+    CustomConversionGoalStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class CustomConversionGoal(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    conversion_actions: Incomplete
-    status: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    conversion_actions: list[str]
+    status: CustomConversionGoalStatusEnum.CustomConversionGoalStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        conversion_actions: list[str] = ...,
+        status: CustomConversionGoalStatusEnum.CustomConversionGoalStatus = ...
+    ) -> None: ...

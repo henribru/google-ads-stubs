@@ -1,16 +1,31 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.resources.types import (
-    keyword_theme_constant as keyword_theme_constant,
+import proto
+
+from google.ads.googleads.v11.resources.types.keyword_theme_constant import (
+    KeywordThemeConstant,
 )
 
-__protobuf__: Incomplete
-
 class SuggestKeywordThemeConstantsRequest(proto.Message):
-    query_text: Incomplete
-    country_code: Incomplete
-    language_code: Incomplete
+    query_text: str
+    country_code: str
+    language_code: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        query_text: str = ...,
+        country_code: str = ...,
+        language_code: str = ...
+    ) -> None: ...
 
 class SuggestKeywordThemeConstantsResponse(proto.Message):
-    keyword_theme_constants: Incomplete
+    keyword_theme_constants: list[KeywordThemeConstant]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        keyword_theme_constants: list[KeywordThemeConstant] = ...
+    ) -> None: ...

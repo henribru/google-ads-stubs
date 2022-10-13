@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AssetGroupAssetErrorEnum(proto.Message):
     class AssetGroupAssetError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DUPLICATE_RESOURCE: int
-        EXPANDABLE_TAGS_NOT_ALLOWED_IN_DESCRIPTION: int
-        AD_CUSTOMIZER_NOT_SUPPORTED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DUPLICATE_RESOURCE = 2
+        EXPANDABLE_TAGS_NOT_ALLOWED_IN_DESCRIPTION = 3
+        AD_CUSTOMIZER_NOT_SUPPORTED = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

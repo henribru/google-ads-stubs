@@ -1,15 +1,20 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PolicyTopicEntryTypeEnum(proto.Message):
     class PolicyTopicEntryType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PROHIBITED: int
-        LIMITED: int
-        FULLY_LIMITED: int
-        DESCRIPTIVE: int
-        BROADENING: int
-        AREA_OF_INTEREST_ONLY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PROHIBITED = 2
+        LIMITED = 4
+        FULLY_LIMITED = 8
+        DESCRIPTIVE = 5
+        BROADENING = 6
+        AREA_OF_INTEREST_ONLY = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

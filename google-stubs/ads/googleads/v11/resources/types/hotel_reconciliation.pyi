@@ -1,21 +1,37 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    hotel_reconciliation_status as hotel_reconciliation_status,
+import proto
+
+from google.ads.googleads.v11.enums.types.hotel_reconciliation_status import (
+    HotelReconciliationStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class HotelReconciliation(proto.Message):
-    resource_name: Incomplete
-    commission_id: Incomplete
-    order_id: Incomplete
-    campaign: Incomplete
-    hotel_center_id: Incomplete
-    hotel_id: Incomplete
-    check_in_date: Incomplete
-    check_out_date: Incomplete
-    reconciled_value_micros: Incomplete
-    billed: Incomplete
-    status: Incomplete
+    resource_name: str
+    commission_id: str
+    order_id: str
+    campaign: str
+    hotel_center_id: int
+    hotel_id: str
+    check_in_date: str
+    check_out_date: str
+    reconciled_value_micros: int
+    billed: bool
+    status: HotelReconciliationStatusEnum.HotelReconciliationStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        commission_id: str = ...,
+        order_id: str = ...,
+        campaign: str = ...,
+        hotel_center_id: int = ...,
+        hotel_id: str = ...,
+        check_in_date: str = ...,
+        check_out_date: str = ...,
+        reconciled_value_micros: int = ...,
+        billed: bool = ...,
+        status: HotelReconciliationStatusEnum.HotelReconciliationStatus = ...
+    ) -> None: ...

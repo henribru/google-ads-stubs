@@ -1,26 +1,56 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2 as status_pb2
+from google.rpc.status_pb2 import Status
 
-from google.ads.googleads.v11.resources.types import (
-    feed_item_set_link as feed_item_set_link,
-)
-
-__protobuf__: Incomplete
-
-class MutateFeedItemSetLinksRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    partial_failure: Incomplete
-    validate_only: Incomplete
+from google.ads.googleads.v11.resources.types.feed_item_set_link import FeedItemSetLink
 
 class FeedItemSetLinkOperation(proto.Message):
-    create: Incomplete
-    remove: Incomplete
-
-class MutateFeedItemSetLinksResponse(proto.Message):
-    results: Incomplete
-    partial_failure_error: Incomplete
+    create: FeedItemSetLink
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        create: FeedItemSetLink = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class MutateFeedItemSetLinkResult(proto.Message):
-    resource_name: Incomplete
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...
+
+class MutateFeedItemSetLinksRequest(proto.Message):
+    customer_id: str
+    operations: list[FeedItemSetLinkOperation]
+    partial_failure: bool
+    validate_only: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[FeedItemSetLinkOperation] = ...,
+        partial_failure: bool = ...,
+        validate_only: bool = ...
+    ) -> None: ...
+
+class MutateFeedItemSetLinksResponse(proto.Message):
+    results: list[MutateFeedItemSetLinkResult]
+    partial_failure_error: Status
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        results: list[MutateFeedItemSetLinkResult] = ...,
+        partial_failure_error: Status = ...
+    ) -> None: ...

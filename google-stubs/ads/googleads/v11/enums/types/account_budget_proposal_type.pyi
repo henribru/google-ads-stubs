@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AccountBudgetProposalTypeEnum(proto.Message):
     class AccountBudgetProposalType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CREATE: int
-        UPDATE: int
-        END: int
-        REMOVE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CREATE = 2
+        UPDATE = 3
+        END = 4
+        REMOVE = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

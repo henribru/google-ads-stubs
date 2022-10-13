@@ -1,20 +1,33 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v11.common.types import (
-    feed_item_set_filter_type_infos as feed_item_set_filter_type_infos,
+from google.ads.googleads.v11.common.types.feed_item_set_filter_type_infos import (
+    DynamicAffiliateLocationSetFilter,
+    DynamicLocationSetFilter,
 )
-from google.ads.googleads.v11.enums.types import (
-    feed_item_set_status as feed_item_set_status,
+from google.ads.googleads.v11.enums.types.feed_item_set_status import (
+    FeedItemSetStatusEnum,
 )
-
-__protobuf__: Incomplete
 
 class FeedItemSet(proto.Message):
-    resource_name: Incomplete
-    feed: Incomplete
-    feed_item_set_id: Incomplete
-    display_name: Incomplete
-    status: Incomplete
-    dynamic_location_set_filter: Incomplete
-    dynamic_affiliate_location_set_filter: Incomplete
+    resource_name: str
+    feed: str
+    feed_item_set_id: int
+    display_name: str
+    status: FeedItemSetStatusEnum.FeedItemSetStatus
+    dynamic_location_set_filter: DynamicLocationSetFilter
+    dynamic_affiliate_location_set_filter: DynamicAffiliateLocationSetFilter
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        feed: str = ...,
+        feed_item_set_id: int = ...,
+        display_name: str = ...,
+        status: FeedItemSetStatusEnum.FeedItemSetStatus = ...,
+        dynamic_location_set_filter: DynamicLocationSetFilter = ...,
+        dynamic_affiliate_location_set_filter: DynamicAffiliateLocationSetFilter = ...
+    ) -> None: ...

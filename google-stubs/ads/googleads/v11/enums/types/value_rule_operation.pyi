@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ValueRuleOperationEnum(proto.Message):
     class ValueRuleOperation(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ADD: int
-        MULTIPLY: int
-        SET: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ADD = 2
+        MULTIPLY = 3
+        SET = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

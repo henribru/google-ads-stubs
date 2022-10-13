@@ -1,20 +1,25 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AdvertisingChannelTypeEnum(proto.Message):
     class AdvertisingChannelType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        SEARCH: int
-        DISPLAY: int
-        SHOPPING: int
-        HOTEL: int
-        VIDEO: int
-        MULTI_CHANNEL: int
-        LOCAL: int
-        SMART: int
-        PERFORMANCE_MAX: int
-        LOCAL_SERVICES: int
-        DISCOVERY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        SEARCH = 2
+        DISPLAY = 3
+        SHOPPING = 4
+        HOTEL = 5
+        VIDEO = 6
+        MULTI_CHANNEL = 7
+        LOCAL = 8
+        SMART = 9
+        PERFORMANCE_MAX = 10
+        LOCAL_SERVICES = 11
+        DISCOVERY = 12
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

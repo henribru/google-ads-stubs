@@ -1,25 +1,46 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    google_ads_field_category as google_ads_field_category,
-    google_ads_field_data_type as google_ads_field_data_type,
+import proto
+
+from google.ads.googleads.v11.enums.types.google_ads_field_category import (
+    GoogleAdsFieldCategoryEnum,
+)
+from google.ads.googleads.v11.enums.types.google_ads_field_data_type import (
+    GoogleAdsFieldDataTypeEnum,
 )
 
-__protobuf__: Incomplete
-
 class GoogleAdsField(proto.Message):
-    resource_name: Incomplete
-    name: Incomplete
-    category: Incomplete
-    selectable: Incomplete
-    filterable: Incomplete
-    sortable: Incomplete
-    selectable_with: Incomplete
-    attribute_resources: Incomplete
-    metrics: Incomplete
-    segments: Incomplete
-    enum_values: Incomplete
-    data_type: Incomplete
-    type_url: Incomplete
-    is_repeated: Incomplete
+    resource_name: str
+    name: str
+    category: GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory
+    selectable: bool
+    filterable: bool
+    sortable: bool
+    selectable_with: list[str]
+    attribute_resources: list[str]
+    metrics: list[str]
+    segments: list[str]
+    enum_values: list[str]
+    data_type: GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
+    type_url: str
+    is_repeated: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        name: str = ...,
+        category: GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory = ...,
+        selectable: bool = ...,
+        filterable: bool = ...,
+        sortable: bool = ...,
+        selectable_with: list[str] = ...,
+        attribute_resources: list[str] = ...,
+        metrics: list[str] = ...,
+        segments: list[str] = ...,
+        enum_values: list[str] = ...,
+        data_type: GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType = ...,
+        type_url: str = ...,
+        is_repeated: bool = ...
+    ) -> None: ...

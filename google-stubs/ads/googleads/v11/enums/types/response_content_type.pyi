@@ -1,10 +1,15 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ResponseContentTypeEnum(proto.Message):
     class ResponseContentType(proto.Enum):
-        UNSPECIFIED: int
-        RESOURCE_NAME_ONLY: int
-        MUTABLE_RESOURCE: int
+        UNSPECIFIED = 0
+        RESOURCE_NAME_ONLY = 1
+        MUTABLE_RESOURCE = 2
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

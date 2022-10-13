@@ -1,14 +1,23 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    search_term_targeting_status as search_term_targeting_status,
+import proto
+
+from google.ads.googleads.v10.enums.types.search_term_targeting_status import (
+    SearchTermTargetingStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class SearchTermView(proto.Message):
-    resource_name: Incomplete
-    search_term: Incomplete
-    ad_group: Incomplete
-    status: Incomplete
+    resource_name: str
+    search_term: str
+    ad_group: str
+    status: SearchTermTargetingStatusEnum.SearchTermTargetingStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        search_term: str = ...,
+        ad_group: str = ...,
+        status: SearchTermTargetingStatusEnum.SearchTermTargetingStatus = ...
+    ) -> None: ...

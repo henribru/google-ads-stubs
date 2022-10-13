@@ -1,24 +1,62 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    criterion_category_channel_availability_mode as criterion_category_channel_availability_mode,
-    criterion_category_locale_availability_mode as criterion_category_locale_availability_mode,
+import proto
+
+from google.ads.googleads.v10.enums.types.advertising_channel_sub_type import (
+    AdvertisingChannelSubTypeEnum,
+)
+from google.ads.googleads.v10.enums.types.advertising_channel_type import (
+    AdvertisingChannelTypeEnum,
+)
+from google.ads.googleads.v10.enums.types.criterion_category_channel_availability_mode import (
+    CriterionCategoryChannelAvailabilityModeEnum,
+)
+from google.ads.googleads.v10.enums.types.criterion_category_locale_availability_mode import (
+    CriterionCategoryLocaleAvailabilityModeEnum,
 )
 
-__protobuf__: Incomplete
-
 class CriterionCategoryAvailability(proto.Message):
-    channel: Incomplete
-    locale: Incomplete
+    channel: CriterionCategoryChannelAvailability
+    locale: list[CriterionCategoryLocaleAvailability]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        channel: CriterionCategoryChannelAvailability = ...,
+        locale: list[CriterionCategoryLocaleAvailability] = ...
+    ) -> None: ...
 
 class CriterionCategoryChannelAvailability(proto.Message):
-    availability_mode: Incomplete
-    advertising_channel_type: Incomplete
-    advertising_channel_sub_type: Incomplete
-    include_default_channel_sub_type: Incomplete
+    availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
+    advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType
+    advertising_channel_sub_type: list[
+        AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
+    ]
+    include_default_channel_sub_type: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode = ...,
+        advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType = ...,
+        advertising_channel_sub_type: list[
+            AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
+        ] = ...,
+        include_default_channel_sub_type: bool = ...
+    ) -> None: ...
 
 class CriterionCategoryLocaleAvailability(proto.Message):
-    availability_mode: Incomplete
-    country_code: Incomplete
-    language_code: Incomplete
+    availability_mode: CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
+    country_code: str
+    language_code: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        availability_mode: CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode = ...,
+        country_code: str = ...,
+        language_code: str = ...
+    ) -> None: ...

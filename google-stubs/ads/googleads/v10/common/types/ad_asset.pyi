@@ -1,27 +1,67 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.common.types import asset_policy as asset_policy
-from google.ads.googleads.v10.enums.types import (
-    served_asset_field_type as served_asset_field_type,
+import proto
+
+from google.ads.googleads.v10.common.types.asset_policy import AdAssetPolicySummary
+from google.ads.googleads.v10.enums.types.asset_performance_label import (
+    AssetPerformanceLabelEnum,
+)
+from google.ads.googleads.v10.enums.types.served_asset_field_type import (
+    ServedAssetFieldTypeEnum,
 )
 
-__protobuf__: Incomplete
-
-class AdTextAsset(proto.Message):
-    text: Incomplete
-    pinned_field: Incomplete
-    asset_performance_label: Incomplete
-    policy_summary_info: Incomplete
+class AdDiscoveryCarouselCardAsset(proto.Message):
+    asset: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        asset: str = ...
+    ) -> None: ...
 
 class AdImageAsset(proto.Message):
-    asset: Incomplete
-
-class AdVideoAsset(proto.Message):
-    asset: Incomplete
+    asset: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        asset: str = ...
+    ) -> None: ...
 
 class AdMediaBundleAsset(proto.Message):
-    asset: Incomplete
+    asset: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        asset: str = ...
+    ) -> None: ...
 
-class AdDiscoveryCarouselCardAsset(proto.Message):
-    asset: Incomplete
+class AdTextAsset(proto.Message):
+    text: str
+    pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType
+    asset_performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel
+    policy_summary_info: AdAssetPolicySummary
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        text: str = ...,
+        pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType = ...,
+        asset_performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
+        policy_summary_info: AdAssetPolicySummary = ...
+    ) -> None: ...
+
+class AdVideoAsset(proto.Message):
+    asset: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        asset: str = ...
+    ) -> None: ...

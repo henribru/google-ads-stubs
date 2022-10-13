@@ -1,14 +1,23 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    asset_set_asset_status as asset_set_asset_status,
+import proto
+
+from google.ads.googleads.v10.enums.types.asset_set_asset_status import (
+    AssetSetAssetStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class AssetSetAsset(proto.Message):
-    resource_name: Incomplete
-    asset_set: Incomplete
-    asset: Incomplete
-    status: Incomplete
+    resource_name: str
+    asset_set: str
+    asset: str
+    status: AssetSetAssetStatusEnum.AssetSetAssetStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        asset_set: str = ...,
+        asset: str = ...,
+        status: AssetSetAssetStatusEnum.AssetSetAssetStatus = ...
+    ) -> None: ...

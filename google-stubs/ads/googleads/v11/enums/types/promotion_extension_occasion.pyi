@@ -1,46 +1,51 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PromotionExtensionOccasionEnum(proto.Message):
     class PromotionExtensionOccasion(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NEW_YEARS: int
-        CHINESE_NEW_YEAR: int
-        VALENTINES_DAY: int
-        EASTER: int
-        MOTHERS_DAY: int
-        FATHERS_DAY: int
-        LABOR_DAY: int
-        BACK_TO_SCHOOL: int
-        HALLOWEEN: int
-        BLACK_FRIDAY: int
-        CYBER_MONDAY: int
-        CHRISTMAS: int
-        BOXING_DAY: int
-        INDEPENDENCE_DAY: int
-        NATIONAL_DAY: int
-        END_OF_SEASON: int
-        WINTER_SALE: int
-        SUMMER_SALE: int
-        FALL_SALE: int
-        SPRING_SALE: int
-        RAMADAN: int
-        EID_AL_FITR: int
-        EID_AL_ADHA: int
-        SINGLES_DAY: int
-        WOMENS_DAY: int
-        HOLI: int
-        PARENTS_DAY: int
-        ST_NICHOLAS_DAY: int
-        CARNIVAL: int
-        EPIPHANY: int
-        ROSH_HASHANAH: int
-        PASSOVER: int
-        HANUKKAH: int
-        DIWALI: int
-        NAVRATRI: int
-        SONGKRAN: int
-        YEAR_END_GIFT: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NEW_YEARS = 2
+        CHINESE_NEW_YEAR = 3
+        VALENTINES_DAY = 4
+        EASTER = 5
+        MOTHERS_DAY = 6
+        FATHERS_DAY = 7
+        LABOR_DAY = 8
+        BACK_TO_SCHOOL = 9
+        HALLOWEEN = 10
+        BLACK_FRIDAY = 11
+        CYBER_MONDAY = 12
+        CHRISTMAS = 13
+        BOXING_DAY = 14
+        INDEPENDENCE_DAY = 15
+        NATIONAL_DAY = 16
+        END_OF_SEASON = 17
+        WINTER_SALE = 18
+        SUMMER_SALE = 19
+        FALL_SALE = 20
+        SPRING_SALE = 21
+        RAMADAN = 22
+        EID_AL_FITR = 23
+        EID_AL_ADHA = 24
+        SINGLES_DAY = 25
+        WOMENS_DAY = 26
+        HOLI = 27
+        PARENTS_DAY = 28
+        ST_NICHOLAS_DAY = 29
+        CARNIVAL = 30
+        EPIPHANY = 31
+        ROSH_HASHANAH = 32
+        PASSOVER = 33
+        HANUKKAH = 34
+        DIWALI = 35
+        NAVRATRI = 36
+        SONGKRAN = 37
+        YEAR_END_GIFT = 38
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

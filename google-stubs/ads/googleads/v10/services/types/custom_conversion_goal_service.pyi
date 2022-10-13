@@ -1,24 +1,65 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
-from google.protobuf import field_mask_pb2 as field_mask_pb2
+from google.protobuf.field_mask_pb2 import FieldMask
 
-__protobuf__: Incomplete
-
-class MutateCustomConversionGoalsRequest(proto.Message):
-    customer_id: Incomplete
-    operations: Incomplete
-    validate_only: Incomplete
-    response_content_type: Incomplete
+from google.ads.googleads.v10.enums.types.response_content_type import (
+    ResponseContentTypeEnum,
+)
+from google.ads.googleads.v10.resources.types.custom_conversion_goal import (
+    CustomConversionGoal,
+)
 
 class CustomConversionGoalOperation(proto.Message):
-    update_mask: Incomplete
-    create: Incomplete
-    update: Incomplete
-    remove: Incomplete
-
-class MutateCustomConversionGoalsResponse(proto.Message):
-    results: Incomplete
+    update_mask: FieldMask
+    create: CustomConversionGoal
+    update: CustomConversionGoal
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        update_mask: FieldMask = ...,
+        create: CustomConversionGoal = ...,
+        update: CustomConversionGoal = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class MutateCustomConversionGoalResult(proto.Message):
-    resource_name: Incomplete
-    custom_conversion_goal: Incomplete
+    resource_name: str
+    custom_conversion_goal: CustomConversionGoal
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        custom_conversion_goal: CustomConversionGoal = ...
+    ) -> None: ...
+
+class MutateCustomConversionGoalsRequest(proto.Message):
+    customer_id: str
+    operations: list[CustomConversionGoalOperation]
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operations: list[CustomConversionGoalOperation] = ...,
+        validate_only: bool = ...,
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+    ) -> None: ...
+
+class MutateCustomConversionGoalsResponse(proto.Message):
+    results: list[MutateCustomConversionGoalResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        results: list[MutateCustomConversionGoalResult] = ...
+    ) -> None: ...

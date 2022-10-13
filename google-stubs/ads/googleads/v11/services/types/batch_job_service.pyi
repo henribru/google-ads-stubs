@@ -1,53 +1,135 @@
-import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2 as status_pb2
+from typing import Any
 
-from google.ads.googleads.v11.resources.types import batch_job as batch_job
-from google.ads.googleads.v11.services.types import (
-    google_ads_service as google_ads_service,
+import proto
+from google.rpc.status_pb2 import Status
+
+from google.ads.googleads.v11.enums.types.response_content_type import (
+    ResponseContentTypeEnum,
+)
+from google.ads.googleads.v11.resources.types.batch_job import BatchJob
+from google.ads.googleads.v11.services.types.google_ads_service import (
+    MutateOperation,
+    MutateOperationResponse,
 )
 
-__protobuf__: Incomplete
-
-class MutateBatchJobRequest(proto.Message):
-    customer_id: Incomplete
-    operation: Incomplete
-
-class BatchJobOperation(proto.Message):
-    create: Incomplete
-    remove: Incomplete
-
-class MutateBatchJobResponse(proto.Message):
-    result: Incomplete
-
-class MutateBatchJobResult(proto.Message):
-    resource_name: Incomplete
-
-class RunBatchJobRequest(proto.Message):
-    resource_name: Incomplete
-
 class AddBatchJobOperationsRequest(proto.Message):
-    resource_name: Incomplete
-    sequence_token: Incomplete
-    mutate_operations: Incomplete
+    resource_name: str
+    sequence_token: str
+    mutate_operations: list[MutateOperation]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        sequence_token: str = ...,
+        mutate_operations: list[MutateOperation] = ...
+    ) -> None: ...
 
 class AddBatchJobOperationsResponse(proto.Message):
-    total_operations: Incomplete
-    next_sequence_token: Incomplete
+    total_operations: int
+    next_sequence_token: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        total_operations: int = ...,
+        next_sequence_token: str = ...
+    ) -> None: ...
 
-class ListBatchJobResultsRequest(proto.Message):
-    resource_name: Incomplete
-    page_token: Incomplete
-    page_size: Incomplete
-    response_content_type: Incomplete
-
-class ListBatchJobResultsResponse(proto.Message):
-    @property
-    def raw_page(self): ...
-    results: Incomplete
-    next_page_token: Incomplete
+class BatchJobOperation(proto.Message):
+    create: BatchJob
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        create: BatchJob = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class BatchJobResult(proto.Message):
-    operation_index: Incomplete
-    mutate_operation_response: Incomplete
-    status: Incomplete
+    operation_index: int
+    mutate_operation_response: MutateOperationResponse
+    status: Status
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        operation_index: int = ...,
+        mutate_operation_response: MutateOperationResponse = ...,
+        status: Status = ...
+    ) -> None: ...
+
+class ListBatchJobResultsRequest(proto.Message):
+    resource_name: str
+    page_token: str
+    page_size: int
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        page_token: str = ...,
+        page_size: int = ...,
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+    ) -> None: ...
+
+class ListBatchJobResultsResponse(proto.Message):
+    results: list[BatchJobResult]
+    next_page_token: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        results: list[BatchJobResult] = ...,
+        next_page_token: str = ...
+    ) -> None: ...
+
+class MutateBatchJobRequest(proto.Message):
+    customer_id: str
+    operation: BatchJobOperation
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operation: BatchJobOperation = ...
+    ) -> None: ...
+
+class MutateBatchJobResponse(proto.Message):
+    result: MutateBatchJobResult
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        result: MutateBatchJobResult = ...
+    ) -> None: ...
+
+class MutateBatchJobResult(proto.Message):
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...
+
+class RunBatchJobRequest(proto.Message):
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...

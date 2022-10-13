@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class MobileDeviceTypeEnum(proto.Message):
     class MobileDeviceType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        MOBILE: int
-        TABLET: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        MOBILE = 2
+        TABLET = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

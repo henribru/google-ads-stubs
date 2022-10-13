@@ -1,59 +1,135 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v11.common.types import (
-    asset_types as asset_types,
-    custom_parameter as custom_parameter,
-    policy as policy,
+from google.ads.googleads.v11.common.types.asset_types import (
+    BookOnGoogleAsset,
+    CallAsset,
+    CalloutAsset,
+    CallToActionAsset,
+    DiscoveryCarouselCardAsset,
+    DynamicCustomAsset,
+    DynamicEducationAsset,
+    DynamicFlightsAsset,
+    DynamicHotelsAndRentalsAsset,
+    DynamicJobsAsset,
+    DynamicLocalAsset,
+    DynamicRealEstateAsset,
+    DynamicTravelAsset,
+    HotelCalloutAsset,
+    ImageAsset,
+    LeadFormAsset,
+    MediaBundleAsset,
+    MobileAppAsset,
+    PageFeedAsset,
+    PriceAsset,
+    PromotionAsset,
+    SitelinkAsset,
+    StructuredSnippetAsset,
+    TextAsset,
+    YoutubeVideoAsset,
 )
-from google.ads.googleads.v11.enums.types import (
-    asset_source as asset_source,
-    asset_type as asset_type,
-    policy_approval_status as policy_approval_status,
-    policy_review_status as policy_review_status,
+from google.ads.googleads.v11.common.types.custom_parameter import CustomParameter
+from google.ads.googleads.v11.common.types.policy import PolicyTopicEntry
+from google.ads.googleads.v11.enums.types.asset_source import AssetSourceEnum
+from google.ads.googleads.v11.enums.types.asset_type import AssetTypeEnum
+from google.ads.googleads.v11.enums.types.policy_approval_status import (
+    PolicyApprovalStatusEnum,
 )
-
-__protobuf__: Incomplete
+from google.ads.googleads.v11.enums.types.policy_review_status import (
+    PolicyReviewStatusEnum,
+)
 
 class Asset(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    name: Incomplete
-    type_: Incomplete
-    final_urls: Incomplete
-    final_mobile_urls: Incomplete
-    tracking_url_template: Incomplete
-    url_custom_parameters: Incomplete
-    final_url_suffix: Incomplete
-    source: Incomplete
-    policy_summary: Incomplete
-    youtube_video_asset: Incomplete
-    media_bundle_asset: Incomplete
-    image_asset: Incomplete
-    text_asset: Incomplete
-    lead_form_asset: Incomplete
-    book_on_google_asset: Incomplete
-    promotion_asset: Incomplete
-    callout_asset: Incomplete
-    structured_snippet_asset: Incomplete
-    sitelink_asset: Incomplete
-    page_feed_asset: Incomplete
-    dynamic_education_asset: Incomplete
-    mobile_app_asset: Incomplete
-    hotel_callout_asset: Incomplete
-    call_asset: Incomplete
-    price_asset: Incomplete
-    call_to_action_asset: Incomplete
-    dynamic_real_estate_asset: Incomplete
-    dynamic_custom_asset: Incomplete
-    dynamic_hotels_and_rentals_asset: Incomplete
-    dynamic_flights_asset: Incomplete
-    discovery_carousel_card_asset: Incomplete
-    dynamic_travel_asset: Incomplete
-    dynamic_local_asset: Incomplete
-    dynamic_jobs_asset: Incomplete
+    resource_name: str
+    id: int
+    name: str
+    type_: AssetTypeEnum.AssetType
+    final_urls: list[str]
+    final_mobile_urls: list[str]
+    tracking_url_template: str
+    url_custom_parameters: list[CustomParameter]
+    final_url_suffix: str
+    source: AssetSourceEnum.AssetSource
+    policy_summary: AssetPolicySummary
+    youtube_video_asset: YoutubeVideoAsset
+    media_bundle_asset: MediaBundleAsset
+    image_asset: ImageAsset
+    text_asset: TextAsset
+    lead_form_asset: LeadFormAsset
+    book_on_google_asset: BookOnGoogleAsset
+    promotion_asset: PromotionAsset
+    callout_asset: CalloutAsset
+    structured_snippet_asset: StructuredSnippetAsset
+    sitelink_asset: SitelinkAsset
+    page_feed_asset: PageFeedAsset
+    dynamic_education_asset: DynamicEducationAsset
+    mobile_app_asset: MobileAppAsset
+    hotel_callout_asset: HotelCalloutAsset
+    call_asset: CallAsset
+    price_asset: PriceAsset
+    call_to_action_asset: CallToActionAsset
+    dynamic_real_estate_asset: DynamicRealEstateAsset
+    dynamic_custom_asset: DynamicCustomAsset
+    dynamic_hotels_and_rentals_asset: DynamicHotelsAndRentalsAsset
+    dynamic_flights_asset: DynamicFlightsAsset
+    discovery_carousel_card_asset: DiscoveryCarouselCardAsset
+    dynamic_travel_asset: DynamicTravelAsset
+    dynamic_local_asset: DynamicLocalAsset
+    dynamic_jobs_asset: DynamicJobsAsset
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        name: str = ...,
+        type_: AssetTypeEnum.AssetType = ...,
+        final_urls: list[str] = ...,
+        final_mobile_urls: list[str] = ...,
+        tracking_url_template: str = ...,
+        url_custom_parameters: list[CustomParameter] = ...,
+        final_url_suffix: str = ...,
+        source: AssetSourceEnum.AssetSource = ...,
+        policy_summary: AssetPolicySummary = ...,
+        youtube_video_asset: YoutubeVideoAsset = ...,
+        media_bundle_asset: MediaBundleAsset = ...,
+        image_asset: ImageAsset = ...,
+        text_asset: TextAsset = ...,
+        lead_form_asset: LeadFormAsset = ...,
+        book_on_google_asset: BookOnGoogleAsset = ...,
+        promotion_asset: PromotionAsset = ...,
+        callout_asset: CalloutAsset = ...,
+        structured_snippet_asset: StructuredSnippetAsset = ...,
+        sitelink_asset: SitelinkAsset = ...,
+        page_feed_asset: PageFeedAsset = ...,
+        dynamic_education_asset: DynamicEducationAsset = ...,
+        mobile_app_asset: MobileAppAsset = ...,
+        hotel_callout_asset: HotelCalloutAsset = ...,
+        call_asset: CallAsset = ...,
+        price_asset: PriceAsset = ...,
+        call_to_action_asset: CallToActionAsset = ...,
+        dynamic_real_estate_asset: DynamicRealEstateAsset = ...,
+        dynamic_custom_asset: DynamicCustomAsset = ...,
+        dynamic_hotels_and_rentals_asset: DynamicHotelsAndRentalsAsset = ...,
+        dynamic_flights_asset: DynamicFlightsAsset = ...,
+        discovery_carousel_card_asset: DiscoveryCarouselCardAsset = ...,
+        dynamic_travel_asset: DynamicTravelAsset = ...,
+        dynamic_local_asset: DynamicLocalAsset = ...,
+        dynamic_jobs_asset: DynamicJobsAsset = ...
+    ) -> None: ...
 
 class AssetPolicySummary(proto.Message):
-    policy_topic_entries: Incomplete
-    review_status: Incomplete
-    approval_status: Incomplete
+    policy_topic_entries: list[PolicyTopicEntry]
+    review_status: PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        policy_topic_entries: list[PolicyTopicEntry] = ...,
+        review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
+        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
+    ) -> None: ...

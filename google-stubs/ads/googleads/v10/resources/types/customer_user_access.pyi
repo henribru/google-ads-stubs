@@ -1,12 +1,25 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
+
+from google.ads.googleads.v10.enums.types.access_role import AccessRoleEnum
 
 class CustomerUserAccess(proto.Message):
-    resource_name: Incomplete
-    user_id: Incomplete
-    email_address: Incomplete
-    access_role: Incomplete
-    access_creation_date_time: Incomplete
-    inviter_user_email_address: Incomplete
+    resource_name: str
+    user_id: int
+    email_address: str
+    access_role: AccessRoleEnum.AccessRole
+    access_creation_date_time: str
+    inviter_user_email_address: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        user_id: int = ...,
+        email_address: str = ...,
+        access_role: AccessRoleEnum.AccessRole = ...,
+        access_creation_date_time: str = ...,
+        inviter_user_email_address: str = ...
+    ) -> None: ...

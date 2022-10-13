@@ -1,20 +1,25 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class FunctionParsingErrorEnum(proto.Message):
     class FunctionParsingError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NO_MORE_INPUT: int
-        EXPECTED_CHARACTER: int
-        UNEXPECTED_SEPARATOR: int
-        UNMATCHED_LEFT_BRACKET: int
-        UNMATCHED_RIGHT_BRACKET: int
-        TOO_MANY_NESTED_FUNCTIONS: int
-        MISSING_RIGHT_HAND_OPERAND: int
-        INVALID_OPERATOR_NAME: int
-        FEED_ATTRIBUTE_OPERAND_ARGUMENT_NOT_INTEGER: int
-        NO_OPERANDS: int
-        TOO_MANY_OPERANDS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NO_MORE_INPUT = 2
+        EXPECTED_CHARACTER = 3
+        UNEXPECTED_SEPARATOR = 4
+        UNMATCHED_LEFT_BRACKET = 5
+        UNMATCHED_RIGHT_BRACKET = 6
+        TOO_MANY_NESTED_FUNCTIONS = 7
+        MISSING_RIGHT_HAND_OPERAND = 8
+        INVALID_OPERATOR_NAME = 9
+        FEED_ATTRIBUTE_OPERAND_ARGUMENT_NOT_INTEGER = 10
+        NO_OPERANDS = 11
+        TOO_MANY_OPERANDS = 12
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

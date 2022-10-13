@@ -1,18 +1,31 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    campaign_draft_status as campaign_draft_status,
+import proto
+
+from google.ads.googleads.v11.enums.types.campaign_draft_status import (
+    CampaignDraftStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class CampaignDraft(proto.Message):
-    resource_name: Incomplete
-    draft_id: Incomplete
-    base_campaign: Incomplete
-    name: Incomplete
-    draft_campaign: Incomplete
-    status: Incomplete
-    has_experiment_running: Incomplete
-    long_running_operation: Incomplete
+    resource_name: str
+    draft_id: int
+    base_campaign: str
+    name: str
+    draft_campaign: str
+    status: CampaignDraftStatusEnum.CampaignDraftStatus
+    has_experiment_running: bool
+    long_running_operation: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        draft_id: int = ...,
+        base_campaign: str = ...,
+        name: str = ...,
+        draft_campaign: str = ...,
+        status: CampaignDraftStatusEnum.CampaignDraftStatus = ...,
+        has_experiment_running: bool = ...,
+        long_running_operation: str = ...
+    ) -> None: ...

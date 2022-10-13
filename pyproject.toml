@@ -32,6 +32,7 @@ isort = "^5.10.1"
 profile = "black"
 known_first_party = "google.ads.googleads"
 combine_as_imports = true
+float_to_top = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

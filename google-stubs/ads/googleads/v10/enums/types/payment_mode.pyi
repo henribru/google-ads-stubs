@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class PaymentModeEnum(proto.Message):
     class PaymentMode(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CLICKS: int
-        CONVERSION_VALUE: int
-        CONVERSIONS: int
-        GUEST_STAY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CLICKS = 4
+        CONVERSION_VALUE = 5
+        CONVERSIONS = 6
+        GUEST_STAY = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

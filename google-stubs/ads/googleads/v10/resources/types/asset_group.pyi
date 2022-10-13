@@ -1,19 +1,31 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.enums.types import (
-    asset_group_status as asset_group_status,
-)
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.enums.types.asset_group_status import AssetGroupStatusEnum
 
 class AssetGroup(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    campaign: Incomplete
-    name: Incomplete
-    final_urls: Incomplete
-    final_mobile_urls: Incomplete
-    status: Incomplete
-    path1: Incomplete
-    path2: Incomplete
+    resource_name: str
+    id: int
+    campaign: str
+    name: str
+    final_urls: list[str]
+    final_mobile_urls: list[str]
+    status: AssetGroupStatusEnum.AssetGroupStatus
+    path1: str
+    path2: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        campaign: str = ...,
+        name: str = ...,
+        final_urls: list[str] = ...,
+        final_mobile_urls: list[str] = ...,
+        status: AssetGroupStatusEnum.AssetGroupStatus = ...,
+        path1: str = ...,
+        path2: str = ...
+    ) -> None: ...

@@ -1,17 +1,22 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class SimulationTypeEnum(proto.Message):
     class SimulationType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CPC_BID: int
-        CPV_BID: int
-        TARGET_CPA: int
-        BID_MODIFIER: int
-        TARGET_ROAS: int
-        PERCENT_CPC_BID: int
-        TARGET_IMPRESSION_SHARE: int
-        BUDGET: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CPC_BID = 2
+        CPV_BID = 3
+        TARGET_CPA = 4
+        BID_MODIFIER = 5
+        TARGET_ROAS = 6
+        PERCENT_CPC_BID = 7
+        TARGET_IMPRESSION_SHARE = 8
+        BUDGET = 9
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

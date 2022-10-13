@@ -1,14 +1,19 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ServedAssetFieldTypeEnum(proto.Message):
     class ServedAssetFieldType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        HEADLINE_1: int
-        HEADLINE_2: int
-        HEADLINE_3: int
-        DESCRIPTION_1: int
-        DESCRIPTION_2: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        HEADLINE_1 = 2
+        HEADLINE_2 = 3
+        HEADLINE_3 = 4
+        DESCRIPTION_1 = 5
+        DESCRIPTION_2 = 6
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

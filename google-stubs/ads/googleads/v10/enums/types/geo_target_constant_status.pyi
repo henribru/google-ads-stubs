@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class GeoTargetConstantStatusEnum(proto.Message):
     class GeoTargetConstantStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ENABLED: int
-        REMOVAL_PLANNED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ENABLED = 2
+        REMOVAL_PLANNED = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

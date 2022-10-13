@@ -1,14 +1,25 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.resources.types import (
-    payments_account as payments_account,
-)
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.resources.types.payments_account import PaymentsAccount
 
 class ListPaymentsAccountsRequest(proto.Message):
-    customer_id: Incomplete
+    customer_id: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...
+    ) -> None: ...
 
 class ListPaymentsAccountsResponse(proto.Message):
-    payments_accounts: Incomplete
+    payments_accounts: list[PaymentsAccount]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        payments_accounts: list[PaymentsAccount] = ...
+    ) -> None: ...

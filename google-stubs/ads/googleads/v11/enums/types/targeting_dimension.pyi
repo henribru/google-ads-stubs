@@ -1,17 +1,22 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class TargetingDimensionEnum(proto.Message):
     class TargetingDimension(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        KEYWORD: int
-        AUDIENCE: int
-        TOPIC: int
-        GENDER: int
-        AGE_RANGE: int
-        PLACEMENT: int
-        PARENTAL_STATUS: int
-        INCOME_RANGE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        KEYWORD = 2
+        AUDIENCE = 3
+        TOPIC = 4
+        GENDER = 5
+        AGE_RANGE = 6
+        PLACEMENT = 7
+        PARENTAL_STATUS = 8
+        INCOME_RANGE = 9
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

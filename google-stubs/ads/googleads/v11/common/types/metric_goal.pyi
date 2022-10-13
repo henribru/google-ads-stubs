@@ -1,13 +1,20 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    experiment_metric as experiment_metric,
-    experiment_metric_direction as experiment_metric_direction,
+import proto
+
+from google.ads.googleads.v11.enums.types.experiment_metric import ExperimentMetricEnum
+from google.ads.googleads.v11.enums.types.experiment_metric_direction import (
+    ExperimentMetricDirectionEnum,
 )
 
-__protobuf__: Incomplete
-
 class MetricGoal(proto.Message):
-    metric: Incomplete
-    direction: Incomplete
+    metric: ExperimentMetricEnum.ExperimentMetric
+    direction: ExperimentMetricDirectionEnum.ExperimentMetricDirection
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        metric: ExperimentMetricEnum.ExperimentMetric = ...,
+        direction: ExperimentMetricDirectionEnum.ExperimentMetricDirection = ...
+    ) -> None: ...

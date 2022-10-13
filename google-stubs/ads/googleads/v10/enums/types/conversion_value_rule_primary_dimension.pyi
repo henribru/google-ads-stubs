@@ -1,16 +1,21 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ConversionValueRulePrimaryDimensionEnum(proto.Message):
     class ConversionValueRulePrimaryDimension(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NO_RULE_APPLIED: int
-        ORIGINAL: int
-        NEW_VS_RETURNING_USER: int
-        GEO_LOCATION: int
-        DEVICE: int
-        AUDIENCE: int
-        MULTIPLE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NO_RULE_APPLIED = 2
+        ORIGINAL = 3
+        NEW_VS_RETURNING_USER = 4
+        GEO_LOCATION = 5
+        DEVICE = 6
+        AUDIENCE = 7
+        MULTIPLE = 8
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

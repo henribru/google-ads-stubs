@@ -1,19 +1,41 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v11.common.types import criteria as criteria
-from google.ads.googleads.v11.enums.types import criterion_type as criterion_type
-
-__protobuf__: Incomplete
+from google.ads.googleads.v11.common.types.criteria import (
+    KeywordInfo,
+    MobileAppCategoryInfo,
+    MobileApplicationInfo,
+    PlacementInfo,
+    YouTubeChannelInfo,
+    YouTubeVideoInfo,
+)
+from google.ads.googleads.v11.enums.types.criterion_type import CriterionTypeEnum
 
 class SharedCriterion(proto.Message):
-    resource_name: Incomplete
-    shared_set: Incomplete
-    criterion_id: Incomplete
-    type_: Incomplete
-    keyword: Incomplete
-    youtube_video: Incomplete
-    youtube_channel: Incomplete
-    placement: Incomplete
-    mobile_app_category: Incomplete
-    mobile_application: Incomplete
+    resource_name: str
+    shared_set: str
+    criterion_id: int
+    type_: CriterionTypeEnum.CriterionType
+    keyword: KeywordInfo
+    youtube_video: YouTubeVideoInfo
+    youtube_channel: YouTubeChannelInfo
+    placement: PlacementInfo
+    mobile_app_category: MobileAppCategoryInfo
+    mobile_application: MobileApplicationInfo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        shared_set: str = ...,
+        criterion_id: int = ...,
+        type_: CriterionTypeEnum.CriterionType = ...,
+        keyword: KeywordInfo = ...,
+        youtube_video: YouTubeVideoInfo = ...,
+        youtube_channel: YouTubeChannelInfo = ...,
+        placement: PlacementInfo = ...,
+        mobile_app_category: MobileAppCategoryInfo = ...,
+        mobile_application: MobileApplicationInfo = ...
+    ) -> None: ...

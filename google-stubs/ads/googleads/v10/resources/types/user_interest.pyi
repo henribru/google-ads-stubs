@@ -1,20 +1,32 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import (
-    criterion_category_availability as criterion_category_availability,
+from google.ads.googleads.v10.common.types.criterion_category_availability import (
+    CriterionCategoryAvailability,
 )
-from google.ads.googleads.v10.enums.types import (
-    user_interest_taxonomy_type as user_interest_taxonomy_type,
+from google.ads.googleads.v10.enums.types.user_interest_taxonomy_type import (
+    UserInterestTaxonomyTypeEnum,
 )
-
-__protobuf__: Incomplete
 
 class UserInterest(proto.Message):
-    resource_name: Incomplete
-    taxonomy_type: Incomplete
-    user_interest_id: Incomplete
-    name: Incomplete
-    user_interest_parent: Incomplete
-    launched_to_all: Incomplete
-    availabilities: Incomplete
+    resource_name: str
+    taxonomy_type: UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType
+    user_interest_id: int
+    name: str
+    user_interest_parent: str
+    launched_to_all: bool
+    availabilities: list[CriterionCategoryAvailability]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        taxonomy_type: UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType = ...,
+        user_interest_id: int = ...,
+        name: str = ...,
+        user_interest_parent: str = ...,
+        launched_to_all: bool = ...,
+        availabilities: list[CriterionCategoryAvailability] = ...
+    ) -> None: ...

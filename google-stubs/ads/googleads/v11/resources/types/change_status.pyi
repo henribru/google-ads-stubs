@@ -1,31 +1,58 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    change_status_operation as change_status_operation,
-    change_status_resource_type as change_status_resource_type,
+import proto
+
+from google.ads.googleads.v11.enums.types.change_status_operation import (
+    ChangeStatusOperationEnum,
+)
+from google.ads.googleads.v11.enums.types.change_status_resource_type import (
+    ChangeStatusResourceTypeEnum,
 )
 
-__protobuf__: Incomplete
-
 class ChangeStatus(proto.Message):
-    resource_name: Incomplete
-    last_change_date_time: Incomplete
-    resource_type: Incomplete
-    campaign: Incomplete
-    ad_group: Incomplete
-    resource_status: Incomplete
-    ad_group_ad: Incomplete
-    ad_group_criterion: Incomplete
-    campaign_criterion: Incomplete
-    feed: Incomplete
-    feed_item: Incomplete
-    ad_group_feed: Incomplete
-    campaign_feed: Incomplete
-    ad_group_bid_modifier: Incomplete
-    shared_set: Incomplete
-    campaign_shared_set: Incomplete
-    asset: Incomplete
-    customer_asset: Incomplete
-    campaign_asset: Incomplete
-    ad_group_asset: Incomplete
+    resource_name: str
+    last_change_date_time: str
+    resource_type: ChangeStatusResourceTypeEnum.ChangeStatusResourceType
+    campaign: str
+    ad_group: str
+    resource_status: ChangeStatusOperationEnum.ChangeStatusOperation
+    ad_group_ad: str
+    ad_group_criterion: str
+    campaign_criterion: str
+    feed: str
+    feed_item: str
+    ad_group_feed: str
+    campaign_feed: str
+    ad_group_bid_modifier: str
+    shared_set: str
+    campaign_shared_set: str
+    asset: str
+    customer_asset: str
+    campaign_asset: str
+    ad_group_asset: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        last_change_date_time: str = ...,
+        resource_type: ChangeStatusResourceTypeEnum.ChangeStatusResourceType = ...,
+        campaign: str = ...,
+        ad_group: str = ...,
+        resource_status: ChangeStatusOperationEnum.ChangeStatusOperation = ...,
+        ad_group_ad: str = ...,
+        ad_group_criterion: str = ...,
+        campaign_criterion: str = ...,
+        feed: str = ...,
+        feed_item: str = ...,
+        ad_group_feed: str = ...,
+        campaign_feed: str = ...,
+        ad_group_bid_modifier: str = ...,
+        shared_set: str = ...,
+        campaign_shared_set: str = ...,
+        asset: str = ...,
+        customer_asset: str = ...,
+        campaign_asset: str = ...,
+        ad_group_asset: str = ...
+    ) -> None: ...

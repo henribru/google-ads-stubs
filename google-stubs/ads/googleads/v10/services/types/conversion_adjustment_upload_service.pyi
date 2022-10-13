@@ -1,45 +1,103 @@
-import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2 as status_pb2
+from typing import Any
 
-from google.ads.googleads.v10.common.types import offline_user_data as offline_user_data
-from google.ads.googleads.v10.enums.types import (
-    conversion_adjustment_type as conversion_adjustment_type,
+import proto
+from google.rpc.status_pb2 import Status
+
+from google.ads.googleads.v10.common.types.offline_user_data import UserIdentifier
+from google.ads.googleads.v10.enums.types.conversion_adjustment_type import (
+    ConversionAdjustmentTypeEnum,
 )
 
-__protobuf__: Incomplete
-
-class UploadConversionAdjustmentsRequest(proto.Message):
-    customer_id: Incomplete
-    conversion_adjustments: Incomplete
-    partial_failure: Incomplete
-    validate_only: Incomplete
-
-class UploadConversionAdjustmentsResponse(proto.Message):
-    partial_failure_error: Incomplete
-    results: Incomplete
-
 class ConversionAdjustment(proto.Message):
-    gclid_date_time_pair: Incomplete
-    order_id: Incomplete
-    conversion_action: Incomplete
-    adjustment_date_time: Incomplete
-    adjustment_type: Incomplete
-    restatement_value: Incomplete
-    user_identifiers: Incomplete
-    user_agent: Incomplete
-
-class RestatementValue(proto.Message):
-    adjusted_value: Incomplete
-    currency_code: Incomplete
-
-class GclidDateTimePair(proto.Message):
-    gclid: Incomplete
-    conversion_date_time: Incomplete
+    gclid_date_time_pair: GclidDateTimePair
+    order_id: str
+    conversion_action: str
+    adjustment_date_time: str
+    adjustment_type: ConversionAdjustmentTypeEnum.ConversionAdjustmentType
+    restatement_value: RestatementValue
+    user_identifiers: list[UserIdentifier]
+    user_agent: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        gclid_date_time_pair: GclidDateTimePair = ...,
+        order_id: str = ...,
+        conversion_action: str = ...,
+        adjustment_date_time: str = ...,
+        adjustment_type: ConversionAdjustmentTypeEnum.ConversionAdjustmentType = ...,
+        restatement_value: RestatementValue = ...,
+        user_identifiers: list[UserIdentifier] = ...,
+        user_agent: str = ...
+    ) -> None: ...
 
 class ConversionAdjustmentResult(proto.Message):
-    gclid_date_time_pair: Incomplete
-    order_id: Incomplete
-    conversion_action: Incomplete
-    adjustment_date_time: Incomplete
-    adjustment_type: Incomplete
+    gclid_date_time_pair: GclidDateTimePair
+    order_id: str
+    conversion_action: str
+    adjustment_date_time: str
+    adjustment_type: ConversionAdjustmentTypeEnum.ConversionAdjustmentType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        gclid_date_time_pair: GclidDateTimePair = ...,
+        order_id: str = ...,
+        conversion_action: str = ...,
+        adjustment_date_time: str = ...,
+        adjustment_type: ConversionAdjustmentTypeEnum.ConversionAdjustmentType = ...
+    ) -> None: ...
+
+class GclidDateTimePair(proto.Message):
+    gclid: str
+    conversion_date_time: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        gclid: str = ...,
+        conversion_date_time: str = ...
+    ) -> None: ...
+
+class RestatementValue(proto.Message):
+    adjusted_value: float
+    currency_code: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        adjusted_value: float = ...,
+        currency_code: str = ...
+    ) -> None: ...
+
+class UploadConversionAdjustmentsRequest(proto.Message):
+    customer_id: str
+    conversion_adjustments: list[ConversionAdjustment]
+    partial_failure: bool
+    validate_only: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        conversion_adjustments: list[ConversionAdjustment] = ...,
+        partial_failure: bool = ...,
+        validate_only: bool = ...
+    ) -> None: ...
+
+class UploadConversionAdjustmentsResponse(proto.Message):
+    partial_failure_error: Status
+    results: list[ConversionAdjustmentResult]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        partial_failure_error: Status = ...,
+        results: list[ConversionAdjustmentResult] = ...
+    ) -> None: ...

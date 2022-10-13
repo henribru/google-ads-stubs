@@ -1,18 +1,23 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CampaignExperimentStatusEnum(proto.Message):
     class CampaignExperimentStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INITIALIZING: int
-        INITIALIZATION_FAILED: int
-        ENABLED: int
-        GRADUATED: int
-        REMOVED: int
-        PROMOTING: int
-        PROMOTION_FAILED: int
-        PROMOTED: int
-        ENDED_MANUALLY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INITIALIZING = 2
+        INITIALIZATION_FAILED = 8
+        ENABLED = 3
+        GRADUATED = 4
+        REMOVED = 5
+        PROMOTING = 6
+        PROMOTION_FAILED = 9
+        PROMOTED = 7
+        ENDED_MANUALLY = 10
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,25 +1,30 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class FunctionErrorEnum(proto.Message):
     class FunctionError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_FUNCTION_FORMAT: int
-        DATA_TYPE_MISMATCH: int
-        INVALID_CONJUNCTION_OPERANDS: int
-        INVALID_NUMBER_OF_OPERANDS: int
-        INVALID_OPERAND_TYPE: int
-        INVALID_OPERATOR: int
-        INVALID_REQUEST_CONTEXT_TYPE: int
-        INVALID_FUNCTION_FOR_CALL_PLACEHOLDER: int
-        INVALID_FUNCTION_FOR_PLACEHOLDER: int
-        INVALID_OPERAND: int
-        MISSING_CONSTANT_OPERAND_VALUE: int
-        INVALID_CONSTANT_OPERAND_VALUE: int
-        INVALID_NESTING: int
-        MULTIPLE_FEED_IDS_NOT_SUPPORTED: int
-        INVALID_FUNCTION_FOR_FEED_WITH_FIXED_SCHEMA: int
-        INVALID_ATTRIBUTE_NAME: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_FUNCTION_FORMAT = 2
+        DATA_TYPE_MISMATCH = 3
+        INVALID_CONJUNCTION_OPERANDS = 4
+        INVALID_NUMBER_OF_OPERANDS = 5
+        INVALID_OPERAND_TYPE = 6
+        INVALID_OPERATOR = 7
+        INVALID_REQUEST_CONTEXT_TYPE = 8
+        INVALID_FUNCTION_FOR_CALL_PLACEHOLDER = 9
+        INVALID_FUNCTION_FOR_PLACEHOLDER = 10
+        INVALID_OPERAND = 11
+        MISSING_CONSTANT_OPERAND_VALUE = 12
+        INVALID_CONSTANT_OPERAND_VALUE = 13
+        INVALID_NESTING = 14
+        MULTIPLE_FEED_IDS_NOT_SUPPORTED = 15
+        INVALID_FUNCTION_FOR_FEED_WITH_FIXED_SCHEMA = 16
+        INVALID_ATTRIBUTE_NAME = 17
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

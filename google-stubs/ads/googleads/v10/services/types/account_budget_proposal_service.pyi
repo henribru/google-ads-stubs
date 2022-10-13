@@ -1,25 +1,56 @@
-import proto
-from _typeshed import Incomplete
-from google.protobuf import field_mask_pb2 as field_mask_pb2
+from typing import Any
 
-from google.ads.googleads.v10.resources.types import (
-    account_budget_proposal as account_budget_proposal,
+import proto
+from google.protobuf.field_mask_pb2 import FieldMask
+
+from google.ads.googleads.v10.resources.types.account_budget_proposal import (
+    AccountBudgetProposal,
 )
 
-__protobuf__: Incomplete
+class AccountBudgetProposalOperation(proto.Message):
+    update_mask: FieldMask
+    create: AccountBudgetProposal
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        update_mask: FieldMask = ...,
+        create: AccountBudgetProposal = ...,
+        remove: str = ...
+    ) -> None: ...
 
 class MutateAccountBudgetProposalRequest(proto.Message):
-    customer_id: Incomplete
-    operation: Incomplete
-    validate_only: Incomplete
-
-class AccountBudgetProposalOperation(proto.Message):
-    update_mask: Incomplete
-    create: Incomplete
-    remove: Incomplete
+    customer_id: str
+    operation: AccountBudgetProposalOperation
+    validate_only: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operation: AccountBudgetProposalOperation = ...,
+        validate_only: bool = ...
+    ) -> None: ...
 
 class MutateAccountBudgetProposalResponse(proto.Message):
-    result: Incomplete
+    result: MutateAccountBudgetProposalResult
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        result: MutateAccountBudgetProposalResult = ...
+    ) -> None: ...
 
 class MutateAccountBudgetProposalResult(proto.Message):
-    resource_name: Incomplete
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...

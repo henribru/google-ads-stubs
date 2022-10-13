@@ -1,15 +1,25 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v10.enums.types import (
-    combined_audience_status as combined_audience_status,
+import proto
+
+from google.ads.googleads.v10.enums.types.combined_audience_status import (
+    CombinedAudienceStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class CombinedAudience(proto.Message):
-    resource_name: Incomplete
-    id: Incomplete
-    status: Incomplete
-    name: Incomplete
-    description: Incomplete
+    resource_name: str
+    id: int
+    status: CombinedAudienceStatusEnum.CombinedAudienceStatus
+    name: str
+    description: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        id: int = ...,
+        status: CombinedAudienceStatusEnum.CombinedAudienceStatus = ...,
+        name: str = ...,
+        description: str = ...
+    ) -> None: ...

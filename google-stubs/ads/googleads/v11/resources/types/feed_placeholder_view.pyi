@@ -1,8 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
+
+from google.ads.googleads.v11.enums.types.placeholder_type import PlaceholderTypeEnum
 
 class FeedPlaceholderView(proto.Message):
-    resource_name: Incomplete
-    placeholder_type: Incomplete
+    resource_name: str
+    placeholder_type: PlaceholderTypeEnum.PlaceholderType
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        placeholder_type: PlaceholderTypeEnum.PlaceholderType = ...
+    ) -> None: ...

@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class MatchingFunctionContextTypeEnum(proto.Message):
     class MatchingFunctionContextType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        FEED_ITEM_ID: int
-        DEVICE_NAME: int
-        FEED_ITEM_SET_ID: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        FEED_ITEM_ID = 2
+        DEVICE_NAME = 3
+        FEED_ITEM_SET_ID = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

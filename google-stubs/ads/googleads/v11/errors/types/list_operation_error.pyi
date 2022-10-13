@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ListOperationErrorEnum(proto.Message):
     class ListOperationError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        REQUIRED_FIELD_MISSING: int
-        DUPLICATE_VALUES: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        REQUIRED_FIELD_MISSING = 7
+        DUPLICATE_VALUES = 8
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

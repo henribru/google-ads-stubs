@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ProximityRadiusUnitsEnum(proto.Message):
     class ProximityRadiusUnits(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        MILES: int
-        KILOMETERS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        MILES = 2
+        KILOMETERS = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

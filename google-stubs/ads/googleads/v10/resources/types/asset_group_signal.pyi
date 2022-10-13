@@ -1,11 +1,19 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import criteria as criteria
-
-__protobuf__: Incomplete
+from google.ads.googleads.v10.common.types.criteria import AudienceInfo
 
 class AssetGroupSignal(proto.Message):
-    resource_name: Incomplete
-    asset_group: Incomplete
-    audience: Incomplete
+    resource_name: str
+    asset_group: str
+    audience: AudienceInfo
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        asset_group: str = ...,
+        audience: AudienceInfo = ...
+    ) -> None: ...

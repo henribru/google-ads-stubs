@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CustomerMatchUploadKeyTypeEnum(proto.Message):
     class CustomerMatchUploadKeyType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CONTACT_INFO: int
-        CRM_ID: int
-        MOBILE_ADVERTISING_ID: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CONTACT_INFO = 2
+        CRM_ID = 3
+        MOBILE_ADVERTISING_ID = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,15 +1,20 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AdNetworkTypeEnum(proto.Message):
     class AdNetworkType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        SEARCH: int
-        SEARCH_PARTNERS: int
-        CONTENT: int
-        YOUTUBE_SEARCH: int
-        YOUTUBE_WATCH: int
-        MIXED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        SEARCH = 2
+        SEARCH_PARTNERS = 3
+        CONTENT = 4
+        YOUTUBE_SEARCH = 5
+        YOUTUBE_WATCH = 6
+        MIXED = 7
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

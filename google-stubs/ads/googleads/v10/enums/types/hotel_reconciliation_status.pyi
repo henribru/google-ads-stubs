@@ -1,13 +1,18 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class HotelReconciliationStatusEnum(proto.Message):
     class HotelReconciliationStatus(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        RESERVATION_ENABLED: int
-        RECONCILIATION_NEEDED: int
-        RECONCILED: int
-        CANCELED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        RESERVATION_ENABLED = 2
+        RECONCILIATION_NEEDED = 3
+        RECONCILED = 4
+        CANCELED = 5
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

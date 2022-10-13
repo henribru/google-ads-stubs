@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class DatabaseErrorEnum(proto.Message):
     class DatabaseError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CONCURRENT_MODIFICATION: int
-        DATA_CONSTRAINT_VIOLATION: int
-        REQUEST_TOO_LARGE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CONCURRENT_MODIFICATION = 2
+        DATA_CONSTRAINT_VIOLATION = 3
+        REQUEST_TOO_LARGE = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

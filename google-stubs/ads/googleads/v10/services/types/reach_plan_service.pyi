@@ -1,136 +1,365 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.common.types import criteria as criteria, dates as dates
-from google.ads.googleads.v10.enums.types import (
-    frequency_cap_time_unit as frequency_cap_time_unit,
-    reach_plan_ad_length as reach_plan_ad_length,
-    reach_plan_age_range as reach_plan_age_range,
-    reach_plan_network as reach_plan_network,
+from google.ads.googleads.v10.common.types.criteria import DeviceInfo, GenderInfo
+from google.ads.googleads.v10.common.types.dates import DateRange
+from google.ads.googleads.v10.enums.types.frequency_cap_time_unit import (
+    FrequencyCapTimeUnitEnum,
 )
-
-__protobuf__: Incomplete
-
-class ListPlannableLocationsRequest(proto.Message): ...
-
-class ListPlannableLocationsResponse(proto.Message):
-    plannable_locations: Incomplete
-
-class PlannableLocation(proto.Message):
-    id: Incomplete
-    name: Incomplete
-    parent_country_id: Incomplete
-    country_code: Incomplete
-    location_type: Incomplete
-
-class ListPlannableProductsRequest(proto.Message):
-    plannable_location_id: Incomplete
-
-class ListPlannableProductsResponse(proto.Message):
-    product_metadata: Incomplete
-
-class ProductMetadata(proto.Message):
-    plannable_product_code: Incomplete
-    plannable_product_name: Incomplete
-    plannable_targeting: Incomplete
-
-class PlannableTargeting(proto.Message):
-    age_ranges: Incomplete
-    genders: Incomplete
-    devices: Incomplete
-    networks: Incomplete
-
-class GenerateProductMixIdeasRequest(proto.Message):
-    customer_id: Incomplete
-    plannable_location_id: Incomplete
-    currency_code: Incomplete
-    budget_micros: Incomplete
-    preferences: Incomplete
-
-class Preferences(proto.Message):
-    is_skippable: Incomplete
-    starts_with_sound: Incomplete
-    ad_length: Incomplete
-    top_content_only: Incomplete
-    has_guaranteed_price: Incomplete
-
-class GenerateProductMixIdeasResponse(proto.Message):
-    product_allocation: Incomplete
-
-class ProductAllocation(proto.Message):
-    plannable_product_code: Incomplete
-    budget_micros: Incomplete
-
-class GenerateReachForecastRequest(proto.Message):
-    customer_id: Incomplete
-    currency_code: Incomplete
-    campaign_duration: Incomplete
-    cookie_frequency_cap: Incomplete
-    cookie_frequency_cap_setting: Incomplete
-    min_effective_frequency: Incomplete
-    effective_frequency_limit: Incomplete
-    targeting: Incomplete
-    planned_products: Incomplete
-
-class EffectiveFrequencyLimit(proto.Message):
-    effective_frequency_breakdown_limit: Incomplete
-
-class FrequencyCap(proto.Message):
-    impressions: Incomplete
-    time_unit: Incomplete
-
-class Targeting(proto.Message):
-    plannable_location_id: Incomplete
-    age_range: Incomplete
-    genders: Incomplete
-    devices: Incomplete
-    network: Incomplete
+from google.ads.googleads.v10.enums.types.reach_plan_ad_length import (
+    ReachPlanAdLengthEnum,
+)
+from google.ads.googleads.v10.enums.types.reach_plan_age_range import (
+    ReachPlanAgeRangeEnum,
+)
+from google.ads.googleads.v10.enums.types.reach_plan_network import ReachPlanNetworkEnum
 
 class CampaignDuration(proto.Message):
-    duration_in_days: Incomplete
-    date_range: Incomplete
-
-class PlannedProduct(proto.Message):
-    plannable_product_code: Incomplete
-    budget_micros: Incomplete
-
-class GenerateReachForecastResponse(proto.Message):
-    on_target_audience_metrics: Incomplete
-    reach_curve: Incomplete
-
-class ReachCurve(proto.Message):
-    reach_forecasts: Incomplete
-
-class ReachForecast(proto.Message):
-    cost_micros: Incomplete
-    forecast: Incomplete
-    planned_product_reach_forecasts: Incomplete
-
-class Forecast(proto.Message):
-    on_target_reach: Incomplete
-    total_reach: Incomplete
-    on_target_impressions: Incomplete
-    total_impressions: Incomplete
-    viewable_impressions: Incomplete
-    effective_frequency_breakdowns: Incomplete
-
-class PlannedProductReachForecast(proto.Message):
-    plannable_product_code: Incomplete
-    cost_micros: Incomplete
-    planned_product_forecast: Incomplete
-
-class PlannedProductForecast(proto.Message):
-    on_target_reach: Incomplete
-    total_reach: Incomplete
-    on_target_impressions: Incomplete
-    total_impressions: Incomplete
-    viewable_impressions: Incomplete
-
-class OnTargetAudienceMetrics(proto.Message):
-    youtube_audience_size: Incomplete
-    census_audience_size: Incomplete
+    duration_in_days: int
+    date_range: DateRange
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        duration_in_days: int = ...,
+        date_range: DateRange = ...,
+    ) -> None: ...
 
 class EffectiveFrequencyBreakdown(proto.Message):
-    effective_frequency: Incomplete
-    on_target_reach: Incomplete
-    total_reach: Incomplete
+    effective_frequency: int
+    on_target_reach: int
+    total_reach: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        effective_frequency: int = ...,
+        on_target_reach: int = ...,
+        total_reach: int = ...,
+    ) -> None: ...
+
+class EffectiveFrequencyLimit(proto.Message):
+    effective_frequency_breakdown_limit: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        effective_frequency_breakdown_limit: int = ...,
+    ) -> None: ...
+
+class Forecast(proto.Message):
+    on_target_reach: int
+    total_reach: int
+    on_target_impressions: int
+    total_impressions: int
+    viewable_impressions: int
+    effective_frequency_breakdowns: list[EffectiveFrequencyBreakdown]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        on_target_reach: int = ...,
+        total_reach: int = ...,
+        on_target_impressions: int = ...,
+        total_impressions: int = ...,
+        viewable_impressions: int = ...,
+        effective_frequency_breakdowns: list[EffectiveFrequencyBreakdown] = ...,
+    ) -> None: ...
+
+class FrequencyCap(proto.Message):
+    impressions: int
+    time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        impressions: int = ...,
+        time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit = ...,
+    ) -> None: ...
+
+class GenerateProductMixIdeasRequest(proto.Message):
+    customer_id: str
+    plannable_location_id: str
+    currency_code: str
+    budget_micros: int
+    preferences: Preferences
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        plannable_location_id: str = ...,
+        currency_code: str = ...,
+        budget_micros: int = ...,
+        preferences: Preferences = ...,
+    ) -> None: ...
+
+class GenerateProductMixIdeasResponse(proto.Message):
+    product_allocation: list[ProductAllocation]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        product_allocation: list[ProductAllocation] = ...,
+    ) -> None: ...
+
+class GenerateReachForecastRequest(proto.Message):
+    customer_id: str
+    currency_code: str
+    campaign_duration: CampaignDuration
+    cookie_frequency_cap: int
+    cookie_frequency_cap_setting: FrequencyCap
+    min_effective_frequency: int
+    effective_frequency_limit: EffectiveFrequencyLimit
+    targeting: Targeting
+    planned_products: list[PlannedProduct]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        currency_code: str = ...,
+        campaign_duration: CampaignDuration = ...,
+        cookie_frequency_cap: int = ...,
+        cookie_frequency_cap_setting: FrequencyCap = ...,
+        min_effective_frequency: int = ...,
+        effective_frequency_limit: EffectiveFrequencyLimit = ...,
+        targeting: Targeting = ...,
+        planned_products: list[PlannedProduct] = ...,
+    ) -> None: ...
+
+class GenerateReachForecastResponse(proto.Message):
+    on_target_audience_metrics: OnTargetAudienceMetrics
+    reach_curve: ReachCurve
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        on_target_audience_metrics: OnTargetAudienceMetrics = ...,
+        reach_curve: ReachCurve = ...,
+    ) -> None: ...
+
+class ListPlannableLocationsRequest(proto.Message):
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...
+    ...
+
+class ListPlannableLocationsResponse(proto.Message):
+    plannable_locations: list[PlannableLocation]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        plannable_locations: list[PlannableLocation] = ...,
+    ) -> None: ...
+
+class ListPlannableProductsRequest(proto.Message):
+    plannable_location_id: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        plannable_location_id: str = ...,
+    ) -> None: ...
+
+class ListPlannableProductsResponse(proto.Message):
+    product_metadata: list[ProductMetadata]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        product_metadata: list[ProductMetadata] = ...,
+    ) -> None: ...
+
+class OnTargetAudienceMetrics(proto.Message):
+    youtube_audience_size: int
+    census_audience_size: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        youtube_audience_size: int = ...,
+        census_audience_size: int = ...,
+    ) -> None: ...
+
+class PlannableLocation(proto.Message):
+    id: str
+    name: str
+    parent_country_id: int
+    country_code: str
+    location_type: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        id: str = ...,
+        name: str = ...,
+        parent_country_id: int = ...,
+        country_code: str = ...,
+        location_type: str = ...,
+    ) -> None: ...
+
+class PlannableTargeting(proto.Message):
+    age_ranges: list[ReachPlanAgeRangeEnum.ReachPlanAgeRange]
+    genders: list[GenderInfo]
+    devices: list[DeviceInfo]
+    networks: list[ReachPlanNetworkEnum.ReachPlanNetwork]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        age_ranges: list[ReachPlanAgeRangeEnum.ReachPlanAgeRange] = ...,
+        genders: list[GenderInfo] = ...,
+        devices: list[DeviceInfo] = ...,
+        networks: list[ReachPlanNetworkEnum.ReachPlanNetwork] = ...,
+    ) -> None: ...
+
+class PlannedProduct(proto.Message):
+    plannable_product_code: str
+    budget_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        plannable_product_code: str = ...,
+        budget_micros: int = ...,
+    ) -> None: ...
+
+class PlannedProductForecast(proto.Message):
+    on_target_reach: int
+    total_reach: int
+    on_target_impressions: int
+    total_impressions: int
+    viewable_impressions: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        on_target_reach: int = ...,
+        total_reach: int = ...,
+        on_target_impressions: int = ...,
+        total_impressions: int = ...,
+        viewable_impressions: int = ...,
+    ) -> None: ...
+
+class PlannedProductReachForecast(proto.Message):
+    plannable_product_code: str
+    cost_micros: int
+    planned_product_forecast: PlannedProductForecast
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        plannable_product_code: str = ...,
+        cost_micros: int = ...,
+        planned_product_forecast: PlannedProductForecast = ...,
+    ) -> None: ...
+
+class Preferences(proto.Message):
+    is_skippable: bool
+    starts_with_sound: bool
+    ad_length: ReachPlanAdLengthEnum.ReachPlanAdLength
+    top_content_only: bool
+    has_guaranteed_price: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        is_skippable: bool = ...,
+        starts_with_sound: bool = ...,
+        ad_length: ReachPlanAdLengthEnum.ReachPlanAdLength = ...,
+        top_content_only: bool = ...,
+        has_guaranteed_price: bool = ...,
+    ) -> None: ...
+
+class ProductAllocation(proto.Message):
+    plannable_product_code: str
+    budget_micros: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        plannable_product_code: str = ...,
+        budget_micros: int = ...,
+    ) -> None: ...
+
+class ProductMetadata(proto.Message):
+    plannable_product_code: str
+    plannable_product_name: str
+    plannable_targeting: PlannableTargeting
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        plannable_product_code: str = ...,
+        plannable_product_name: str = ...,
+        plannable_targeting: PlannableTargeting = ...,
+    ) -> None: ...
+
+class ReachCurve(proto.Message):
+    reach_forecasts: list[ReachForecast]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        reach_forecasts: list[ReachForecast] = ...,
+    ) -> None: ...
+
+class ReachForecast(proto.Message):
+    cost_micros: int
+    forecast: Forecast
+    planned_product_reach_forecasts: list[PlannedProductReachForecast]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        cost_micros: int = ...,
+        forecast: Forecast = ...,
+        planned_product_reach_forecasts: list[PlannedProductReachForecast] = ...,
+    ) -> None: ...
+
+class Targeting(proto.Message):
+    plannable_location_id: str
+    age_range: ReachPlanAgeRangeEnum.ReachPlanAgeRange
+    genders: list[GenderInfo]
+    devices: list[DeviceInfo]
+    network: ReachPlanNetworkEnum.ReachPlanNetwork
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        plannable_location_id: str = ...,
+        age_range: ReachPlanAgeRangeEnum.ReachPlanAgeRange = ...,
+        genders: list[GenderInfo] = ...,
+        devices: list[DeviceInfo] = ...,
+        network: ReachPlanNetworkEnum.ReachPlanNetwork = ...,
+    ) -> None: ...

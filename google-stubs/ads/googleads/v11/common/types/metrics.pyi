@@ -1,142 +1,282 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    interaction_event_type as interaction_event_type,
-    quality_score_bucket as quality_score_bucket,
+import proto
+
+from google.ads.googleads.v11.enums.types.interaction_event_type import (
+    InteractionEventTypeEnum,
+)
+from google.ads.googleads.v11.enums.types.quality_score_bucket import (
+    QualityScoreBucketEnum,
 )
 
-__protobuf__: Incomplete
-
 class Metrics(proto.Message):
-    absolute_top_impression_percentage: Incomplete
-    active_view_cpm: Incomplete
-    active_view_ctr: Incomplete
-    active_view_impressions: Incomplete
-    active_view_measurability: Incomplete
-    active_view_measurable_cost_micros: Incomplete
-    active_view_measurable_impressions: Incomplete
-    active_view_viewability: Incomplete
-    all_conversions_from_interactions_rate: Incomplete
-    all_conversions_value: Incomplete
-    all_conversions_value_by_conversion_date: Incomplete
-    all_conversions: Incomplete
-    all_conversions_by_conversion_date: Incomplete
-    all_conversions_value_per_cost: Incomplete
-    all_conversions_from_click_to_call: Incomplete
-    all_conversions_from_directions: Incomplete
-    all_conversions_from_interactions_value_per_interaction: Incomplete
-    all_conversions_from_menu: Incomplete
-    all_conversions_from_order: Incomplete
-    all_conversions_from_other_engagement: Incomplete
-    all_conversions_from_store_visit: Incomplete
-    all_conversions_from_store_website: Incomplete
-    auction_insight_search_absolute_top_impression_percentage: Incomplete
-    auction_insight_search_impression_share: Incomplete
-    auction_insight_search_outranking_share: Incomplete
-    auction_insight_search_overlap_rate: Incomplete
-    auction_insight_search_position_above_rate: Incomplete
-    auction_insight_search_top_impression_percentage: Incomplete
-    average_cost: Incomplete
-    average_cpc: Incomplete
-    average_cpe: Incomplete
-    average_cpm: Incomplete
-    average_cpv: Incomplete
-    average_page_views: Incomplete
-    average_time_on_site: Incomplete
-    benchmark_average_max_cpc: Incomplete
-    biddable_app_install_conversions: Incomplete
-    biddable_app_post_install_conversions: Incomplete
-    benchmark_ctr: Incomplete
-    bounce_rate: Incomplete
-    clicks: Incomplete
-    combined_clicks: Incomplete
-    combined_clicks_per_query: Incomplete
-    combined_queries: Incomplete
-    content_budget_lost_impression_share: Incomplete
-    content_impression_share: Incomplete
-    conversion_last_received_request_date_time: Incomplete
-    conversion_last_conversion_date: Incomplete
-    content_rank_lost_impression_share: Incomplete
-    conversions_from_interactions_rate: Incomplete
-    conversions_value: Incomplete
-    conversions_value_by_conversion_date: Incomplete
-    conversions_value_per_cost: Incomplete
-    conversions_from_interactions_value_per_interaction: Incomplete
-    conversions: Incomplete
-    conversions_by_conversion_date: Incomplete
-    cost_micros: Incomplete
-    cost_per_all_conversions: Incomplete
-    cost_per_conversion: Incomplete
-    cost_per_current_model_attributed_conversion: Incomplete
-    cross_device_conversions: Incomplete
-    ctr: Incomplete
-    current_model_attributed_conversions: Incomplete
-    current_model_attributed_conversions_from_interactions_rate: Incomplete
-    current_model_attributed_conversions_from_interactions_value_per_interaction: Incomplete
-    current_model_attributed_conversions_value: Incomplete
-    current_model_attributed_conversions_value_per_cost: Incomplete
-    engagement_rate: Incomplete
-    engagements: Incomplete
-    hotel_average_lead_value_micros: Incomplete
-    hotel_commission_rate_micros: Incomplete
-    hotel_expected_commission_cost: Incomplete
-    hotel_price_difference_percentage: Incomplete
-    hotel_eligible_impressions: Incomplete
-    historical_creative_quality_score: Incomplete
-    historical_landing_page_quality_score: Incomplete
-    historical_quality_score: Incomplete
-    historical_search_predicted_ctr: Incomplete
-    gmail_forwards: Incomplete
-    gmail_saves: Incomplete
-    gmail_secondary_clicks: Incomplete
-    impressions_from_store_reach: Incomplete
-    impressions: Incomplete
-    interaction_rate: Incomplete
-    interactions: Incomplete
-    interaction_event_types: Incomplete
-    invalid_click_rate: Incomplete
-    invalid_clicks: Incomplete
-    message_chats: Incomplete
-    message_impressions: Incomplete
-    message_chat_rate: Incomplete
-    mobile_friendly_clicks_percentage: Incomplete
-    optimization_score_uplift: Incomplete
-    optimization_score_url: Incomplete
-    organic_clicks: Incomplete
-    organic_clicks_per_query: Incomplete
-    organic_impressions: Incomplete
-    organic_impressions_per_query: Incomplete
-    organic_queries: Incomplete
-    percent_new_visitors: Incomplete
-    phone_calls: Incomplete
-    phone_impressions: Incomplete
-    phone_through_rate: Incomplete
-    relative_ctr: Incomplete
-    search_absolute_top_impression_share: Incomplete
-    search_budget_lost_absolute_top_impression_share: Incomplete
-    search_budget_lost_impression_share: Incomplete
-    search_budget_lost_top_impression_share: Incomplete
-    search_click_share: Incomplete
-    search_exact_match_impression_share: Incomplete
-    search_impression_share: Incomplete
-    search_rank_lost_absolute_top_impression_share: Incomplete
-    search_rank_lost_impression_share: Incomplete
-    search_rank_lost_top_impression_share: Incomplete
-    search_top_impression_share: Incomplete
-    speed_score: Incomplete
-    top_impression_percentage: Incomplete
-    valid_accelerated_mobile_pages_clicks_percentage: Incomplete
-    value_per_all_conversions: Incomplete
-    value_per_all_conversions_by_conversion_date: Incomplete
-    value_per_conversion: Incomplete
-    value_per_conversions_by_conversion_date: Incomplete
-    value_per_current_model_attributed_conversion: Incomplete
-    video_quartile_p100_rate: Incomplete
-    video_quartile_p25_rate: Incomplete
-    video_quartile_p50_rate: Incomplete
-    video_quartile_p75_rate: Incomplete
-    video_view_rate: Incomplete
-    video_views: Incomplete
-    view_through_conversions: Incomplete
-    sk_ad_network_conversions: Incomplete
+    absolute_top_impression_percentage: float
+    active_view_cpm: float
+    active_view_ctr: float
+    active_view_impressions: int
+    active_view_measurability: float
+    active_view_measurable_cost_micros: int
+    active_view_measurable_impressions: int
+    active_view_viewability: float
+    all_conversions_from_interactions_rate: float
+    all_conversions_value: float
+    all_conversions_value_by_conversion_date: float
+    all_conversions: float
+    all_conversions_by_conversion_date: float
+    all_conversions_value_per_cost: float
+    all_conversions_from_click_to_call: float
+    all_conversions_from_directions: float
+    all_conversions_from_interactions_value_per_interaction: float
+    all_conversions_from_menu: float
+    all_conversions_from_order: float
+    all_conversions_from_other_engagement: float
+    all_conversions_from_store_visit: float
+    all_conversions_from_store_website: float
+    auction_insight_search_absolute_top_impression_percentage: float
+    auction_insight_search_impression_share: float
+    auction_insight_search_outranking_share: float
+    auction_insight_search_overlap_rate: float
+    auction_insight_search_position_above_rate: float
+    auction_insight_search_top_impression_percentage: float
+    average_cost: float
+    average_cpc: float
+    average_cpe: float
+    average_cpm: float
+    average_cpv: float
+    average_page_views: float
+    average_time_on_site: float
+    benchmark_average_max_cpc: float
+    biddable_app_install_conversions: float
+    biddable_app_post_install_conversions: float
+    benchmark_ctr: float
+    bounce_rate: float
+    clicks: int
+    combined_clicks: int
+    combined_clicks_per_query: float
+    combined_queries: int
+    content_budget_lost_impression_share: float
+    content_impression_share: float
+    conversion_last_received_request_date_time: str
+    conversion_last_conversion_date: str
+    content_rank_lost_impression_share: float
+    conversions_from_interactions_rate: float
+    conversions_value: float
+    conversions_value_by_conversion_date: float
+    conversions_value_per_cost: float
+    conversions_from_interactions_value_per_interaction: float
+    conversions: float
+    conversions_by_conversion_date: float
+    cost_micros: int
+    cost_per_all_conversions: float
+    cost_per_conversion: float
+    cost_per_current_model_attributed_conversion: float
+    cross_device_conversions: float
+    ctr: float
+    current_model_attributed_conversions: float
+    current_model_attributed_conversions_from_interactions_rate: float
+    current_model_attributed_conversions_from_interactions_value_per_interaction: float
+    current_model_attributed_conversions_value: float
+    current_model_attributed_conversions_value_per_cost: float
+    engagement_rate: float
+    engagements: int
+    hotel_average_lead_value_micros: float
+    hotel_commission_rate_micros: int
+    hotel_expected_commission_cost: float
+    hotel_price_difference_percentage: float
+    hotel_eligible_impressions: int
+    historical_creative_quality_score: QualityScoreBucketEnum.QualityScoreBucket
+    historical_landing_page_quality_score: QualityScoreBucketEnum.QualityScoreBucket
+    historical_quality_score: int
+    historical_search_predicted_ctr: QualityScoreBucketEnum.QualityScoreBucket
+    gmail_forwards: int
+    gmail_saves: int
+    gmail_secondary_clicks: int
+    impressions_from_store_reach: int
+    impressions: int
+    interaction_rate: float
+    interactions: int
+    interaction_event_types: list[InteractionEventTypeEnum.InteractionEventType]
+    invalid_click_rate: float
+    invalid_clicks: int
+    message_chats: int
+    message_impressions: int
+    message_chat_rate: float
+    mobile_friendly_clicks_percentage: float
+    optimization_score_uplift: float
+    optimization_score_url: str
+    organic_clicks: int
+    organic_clicks_per_query: float
+    organic_impressions: int
+    organic_impressions_per_query: float
+    organic_queries: int
+    percent_new_visitors: float
+    phone_calls: int
+    phone_impressions: int
+    phone_through_rate: float
+    relative_ctr: float
+    search_absolute_top_impression_share: float
+    search_budget_lost_absolute_top_impression_share: float
+    search_budget_lost_impression_share: float
+    search_budget_lost_top_impression_share: float
+    search_click_share: float
+    search_exact_match_impression_share: float
+    search_impression_share: float
+    search_rank_lost_absolute_top_impression_share: float
+    search_rank_lost_impression_share: float
+    search_rank_lost_top_impression_share: float
+    search_top_impression_share: float
+    speed_score: int
+    top_impression_percentage: float
+    valid_accelerated_mobile_pages_clicks_percentage: float
+    value_per_all_conversions: float
+    value_per_all_conversions_by_conversion_date: float
+    value_per_conversion: float
+    value_per_conversions_by_conversion_date: float
+    value_per_current_model_attributed_conversion: float
+    video_quartile_p100_rate: float
+    video_quartile_p25_rate: float
+    video_quartile_p50_rate: float
+    video_quartile_p75_rate: float
+    video_view_rate: float
+    video_views: int
+    view_through_conversions: int
+    sk_ad_network_conversions: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        absolute_top_impression_percentage: float = ...,
+        active_view_cpm: float = ...,
+        active_view_ctr: float = ...,
+        active_view_impressions: int = ...,
+        active_view_measurability: float = ...,
+        active_view_measurable_cost_micros: int = ...,
+        active_view_measurable_impressions: int = ...,
+        active_view_viewability: float = ...,
+        all_conversions_from_interactions_rate: float = ...,
+        all_conversions_value: float = ...,
+        all_conversions_value_by_conversion_date: float = ...,
+        all_conversions: float = ...,
+        all_conversions_by_conversion_date: float = ...,
+        all_conversions_value_per_cost: float = ...,
+        all_conversions_from_click_to_call: float = ...,
+        all_conversions_from_directions: float = ...,
+        all_conversions_from_interactions_value_per_interaction: float = ...,
+        all_conversions_from_menu: float = ...,
+        all_conversions_from_order: float = ...,
+        all_conversions_from_other_engagement: float = ...,
+        all_conversions_from_store_visit: float = ...,
+        all_conversions_from_store_website: float = ...,
+        auction_insight_search_absolute_top_impression_percentage: float = ...,
+        auction_insight_search_impression_share: float = ...,
+        auction_insight_search_outranking_share: float = ...,
+        auction_insight_search_overlap_rate: float = ...,
+        auction_insight_search_position_above_rate: float = ...,
+        auction_insight_search_top_impression_percentage: float = ...,
+        average_cost: float = ...,
+        average_cpc: float = ...,
+        average_cpe: float = ...,
+        average_cpm: float = ...,
+        average_cpv: float = ...,
+        average_page_views: float = ...,
+        average_time_on_site: float = ...,
+        benchmark_average_max_cpc: float = ...,
+        biddable_app_install_conversions: float = ...,
+        biddable_app_post_install_conversions: float = ...,
+        benchmark_ctr: float = ...,
+        bounce_rate: float = ...,
+        clicks: int = ...,
+        combined_clicks: int = ...,
+        combined_clicks_per_query: float = ...,
+        combined_queries: int = ...,
+        content_budget_lost_impression_share: float = ...,
+        content_impression_share: float = ...,
+        conversion_last_received_request_date_time: str = ...,
+        conversion_last_conversion_date: str = ...,
+        content_rank_lost_impression_share: float = ...,
+        conversions_from_interactions_rate: float = ...,
+        conversions_value: float = ...,
+        conversions_value_by_conversion_date: float = ...,
+        conversions_value_per_cost: float = ...,
+        conversions_from_interactions_value_per_interaction: float = ...,
+        conversions: float = ...,
+        conversions_by_conversion_date: float = ...,
+        cost_micros: int = ...,
+        cost_per_all_conversions: float = ...,
+        cost_per_conversion: float = ...,
+        cost_per_current_model_attributed_conversion: float = ...,
+        cross_device_conversions: float = ...,
+        ctr: float = ...,
+        current_model_attributed_conversions: float = ...,
+        current_model_attributed_conversions_from_interactions_rate: float = ...,
+        current_model_attributed_conversions_from_interactions_value_per_interaction: float = ...,
+        current_model_attributed_conversions_value: float = ...,
+        current_model_attributed_conversions_value_per_cost: float = ...,
+        engagement_rate: float = ...,
+        engagements: int = ...,
+        hotel_average_lead_value_micros: float = ...,
+        hotel_commission_rate_micros: int = ...,
+        hotel_expected_commission_cost: float = ...,
+        hotel_price_difference_percentage: float = ...,
+        hotel_eligible_impressions: int = ...,
+        historical_creative_quality_score: QualityScoreBucketEnum.QualityScoreBucket = ...,
+        historical_landing_page_quality_score: QualityScoreBucketEnum.QualityScoreBucket = ...,
+        historical_quality_score: int = ...,
+        historical_search_predicted_ctr: QualityScoreBucketEnum.QualityScoreBucket = ...,
+        gmail_forwards: int = ...,
+        gmail_saves: int = ...,
+        gmail_secondary_clicks: int = ...,
+        impressions_from_store_reach: int = ...,
+        impressions: int = ...,
+        interaction_rate: float = ...,
+        interactions: int = ...,
+        interaction_event_types: list[
+            InteractionEventTypeEnum.InteractionEventType
+        ] = ...,
+        invalid_click_rate: float = ...,
+        invalid_clicks: int = ...,
+        message_chats: int = ...,
+        message_impressions: int = ...,
+        message_chat_rate: float = ...,
+        mobile_friendly_clicks_percentage: float = ...,
+        optimization_score_uplift: float = ...,
+        optimization_score_url: str = ...,
+        organic_clicks: int = ...,
+        organic_clicks_per_query: float = ...,
+        organic_impressions: int = ...,
+        organic_impressions_per_query: float = ...,
+        organic_queries: int = ...,
+        percent_new_visitors: float = ...,
+        phone_calls: int = ...,
+        phone_impressions: int = ...,
+        phone_through_rate: float = ...,
+        relative_ctr: float = ...,
+        search_absolute_top_impression_share: float = ...,
+        search_budget_lost_absolute_top_impression_share: float = ...,
+        search_budget_lost_impression_share: float = ...,
+        search_budget_lost_top_impression_share: float = ...,
+        search_click_share: float = ...,
+        search_exact_match_impression_share: float = ...,
+        search_impression_share: float = ...,
+        search_rank_lost_absolute_top_impression_share: float = ...,
+        search_rank_lost_impression_share: float = ...,
+        search_rank_lost_top_impression_share: float = ...,
+        search_top_impression_share: float = ...,
+        speed_score: int = ...,
+        top_impression_percentage: float = ...,
+        valid_accelerated_mobile_pages_clicks_percentage: float = ...,
+        value_per_all_conversions: float = ...,
+        value_per_all_conversions_by_conversion_date: float = ...,
+        value_per_conversion: float = ...,
+        value_per_conversions_by_conversion_date: float = ...,
+        value_per_current_model_attributed_conversion: float = ...,
+        video_quartile_p100_rate: float = ...,
+        video_quartile_p25_rate: float = ...,
+        video_quartile_p50_rate: float = ...,
+        video_quartile_p75_rate: float = ...,
+        video_view_rate: float = ...,
+        video_views: int = ...,
+        view_through_conversions: int = ...,
+        sk_ad_network_conversions: int = ...
+    ) -> None: ...

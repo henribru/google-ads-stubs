@@ -1,11 +1,16 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class AdGroupAdRotationModeEnum(proto.Message):
     class AdGroupAdRotationMode(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        OPTIMIZE: int
-        ROTATE_FOREVER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        OPTIMIZE = 2
+        ROTATE_FOREVER = 3
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

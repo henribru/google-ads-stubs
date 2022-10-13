@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class SummaryRowSettingEnum(proto.Message):
     class SummaryRowSetting(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NO_SUMMARY_ROW: int
-        SUMMARY_ROW_WITH_RESULTS: int
-        SUMMARY_ROW_ONLY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NO_SUMMARY_ROW = 2
+        SUMMARY_ROW_WITH_RESULTS = 3
+        SUMMARY_ROW_ONLY = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

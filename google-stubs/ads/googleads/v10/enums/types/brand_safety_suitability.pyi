@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class BrandSafetySuitabilityEnum(proto.Message):
     class BrandSafetySuitability(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        EXPANDED_INVENTORY: int
-        STANDARD_INVENTORY: int
-        LIMITED_INVENTORY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        EXPANDED_INVENTORY = 2
+        STANDARD_INVENTORY = 3
+        LIMITED_INVENTORY = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

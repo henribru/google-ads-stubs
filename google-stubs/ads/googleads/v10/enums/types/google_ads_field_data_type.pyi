@@ -1,20 +1,25 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class GoogleAdsFieldDataTypeEnum(proto.Message):
     class GoogleAdsFieldDataType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        BOOLEAN: int
-        DATE: int
-        DOUBLE: int
-        ENUM: int
-        FLOAT: int
-        INT32: int
-        INT64: int
-        MESSAGE: int
-        RESOURCE_NAME: int
-        STRING: int
-        UINT64: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        BOOLEAN = 2
+        DATE = 3
+        DOUBLE = 4
+        ENUM = 5
+        FLOAT = 6
+        INT32 = 7
+        INT64 = 8
+        MESSAGE = 9
+        RESOURCE_NAME = 10
+        STRING = 11
+        UINT64 = 12
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -1,20 +1,37 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-from google.ads.googleads.v11.enums.types import (
-    call_type as call_type,
-    google_voice_call_status as google_voice_call_status,
+import proto
+
+from google.ads.googleads.v11.enums.types.call_tracking_display_location import (
+    CallTrackingDisplayLocationEnum,
+)
+from google.ads.googleads.v11.enums.types.call_type import CallTypeEnum
+from google.ads.googleads.v11.enums.types.google_voice_call_status import (
+    GoogleVoiceCallStatusEnum,
 )
 
-__protobuf__: Incomplete
-
 class CallView(proto.Message):
-    resource_name: Incomplete
-    caller_country_code: Incomplete
-    caller_area_code: Incomplete
-    call_duration_seconds: Incomplete
-    start_call_date_time: Incomplete
-    end_call_date_time: Incomplete
-    call_tracking_display_location: Incomplete
-    type_: Incomplete
-    call_status: Incomplete
+    resource_name: str
+    caller_country_code: str
+    caller_area_code: str
+    call_duration_seconds: int
+    start_call_date_time: str
+    end_call_date_time: str
+    call_tracking_display_location: CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation
+    type_: CallTypeEnum.CallType
+    call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        caller_country_code: str = ...,
+        caller_area_code: str = ...,
+        call_duration_seconds: int = ...,
+        start_call_date_time: str = ...,
+        end_call_date_time: str = ...,
+        call_tracking_display_location: CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation = ...,
+        type_: CallTypeEnum.CallType = ...,
+        call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus = ...
+    ) -> None: ...

@@ -1,20 +1,49 @@
+from typing import Any
+
 import proto
-from _typeshed import Incomplete
 
-from google.ads.googleads.v10.resources.types import billing_setup as billing_setup
-
-__protobuf__: Incomplete
-
-class MutateBillingSetupRequest(proto.Message):
-    customer_id: Incomplete
-    operation: Incomplete
+from google.ads.googleads.v10.resources.types.billing_setup import BillingSetup
 
 class BillingSetupOperation(proto.Message):
-    create: Incomplete
-    remove: Incomplete
+    create: BillingSetup
+    remove: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        create: BillingSetup = ...,
+        remove: str = ...
+    ) -> None: ...
+
+class MutateBillingSetupRequest(proto.Message):
+    customer_id: str
+    operation: BillingSetupOperation
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        customer_id: str = ...,
+        operation: BillingSetupOperation = ...
+    ) -> None: ...
 
 class MutateBillingSetupResponse(proto.Message):
-    result: Incomplete
+    result: MutateBillingSetupResult
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        result: MutateBillingSetupResult = ...
+    ) -> None: ...
 
 class MutateBillingSetupResult(proto.Message):
-    resource_name: Incomplete
+    resource_name: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...
+    ) -> None: ...

@@ -1,12 +1,17 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class CallConversionReportingStateEnum(proto.Message):
     class CallConversionReportingState(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DISABLED: int
-        USE_ACCOUNT_LEVEL_CALL_CONVERSION_ACTION: int
-        USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DISABLED = 2
+        USE_ACCOUNT_LEVEL_CALL_CONVERSION_ACTION = 3
+        USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION = 4
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

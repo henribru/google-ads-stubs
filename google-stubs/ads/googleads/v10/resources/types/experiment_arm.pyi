@@ -1,13 +1,25 @@
-import proto
-from _typeshed import Incomplete
+from typing import Any
 
-__protobuf__: Incomplete
+import proto
 
 class ExperimentArm(proto.Message):
-    resource_name: Incomplete
-    trial: Incomplete
-    name: Incomplete
-    control: Incomplete
-    traffic_split: Incomplete
-    campaigns: Incomplete
-    in_design_campaigns: Incomplete
+    resource_name: str
+    trial: str
+    name: str
+    control: bool
+    traffic_split: int
+    campaigns: list[str]
+    in_design_campaigns: list[str]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        resource_name: str = ...,
+        trial: str = ...,
+        name: str = ...,
+        control: bool = ...,
+        traffic_split: int = ...,
+        campaigns: list[str] = ...,
+        in_design_campaigns: list[str] = ...
+    ) -> None: ...
