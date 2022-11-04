@@ -15,13 +15,13 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-typing-extensions = "^3.10.0"
-googleapis-common-protos-stubs = "^2.0.0"
-google-ads = "^19.0.0"
-grpc-stubs = "^1.24.7"
-types-protobuf = "^3.18.0"
-proto-plus-stubs = "^0.1.0"
-google-auth-stubs = "^0.1.0"
+typing-extensions = ">=3.10.0"
+googleapis-common-protos-stubs = ">=2.0.0"
+google-ads = ">=19.0.0"
+grpc-stubs = ">=1.24.7"
+types-protobuf = ">=3.18.0"
+proto-plus-stubs = ">=0.1.0"
+google-auth-stubs = ">=0.1.0"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.950"
