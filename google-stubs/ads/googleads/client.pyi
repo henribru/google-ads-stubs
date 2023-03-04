@@ -5,13 +5,13 @@ from google.oauth2.credentials import Credentials
 from google.protobuf.message import Message
 from typing_extensions import Literal
 
-from google.ads.googleads import v10, v11
+from google.ads.googleads import v11, v12, v13
 from google.ads.googleads.config import _ConfigDataUnparsed
 
-_V10 = Literal["v10"]
 _V11 = Literal["v11"]
 _V12 = Literal["v12"]
-_V = Union[_V10, _V11, _V12]
+_V13 = Literal["v13"]
+_V = Union[_V11, _V12, _V13]
 
 class GoogleAdsClient:
     credentials: Credentials
@@ -58,15 +58,19 @@ class GoogleAdsClient:
     def get_type(cls, name: str, version: _V = ...) -> Any: ...
     @overload
     def get_service(
-        self, name: Literal["GoogleAdsService"], version: _V10
-    ) -> v10.GoogleAdsServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["GoogleAdsService"], version: _V11
     ) -> v11.GoogleAdsServiceClient: ...
     @overload
     def get_service(
+        self, name: Literal["GoogleAdsService"], version: _V12
+    ) -> v12.GoogleAdsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsService"], version: _V13
+    ) -> v13.GoogleAdsServiceClient: ...
+    @overload
+    def get_service(
         self, name: Literal["GoogleAdsService"]
-    ) -> v11.GoogleAdsServiceClient: ...
+    ) -> v13.GoogleAdsServiceClient: ...
     @overload
     def get_service(self, name: str, version: _V = ...) -> Any: ...

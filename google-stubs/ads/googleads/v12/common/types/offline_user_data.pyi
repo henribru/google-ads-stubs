@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -19,7 +20,7 @@ class CustomerMatchUserListMetadata(proto.Message):
 class EventAttribute(proto.Message):
     event: str
     event_date_time: str
-    item_attribute: list[EventItemAttribute]
+    item_attribute: MutableSequence[EventItemAttribute]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -27,7 +28,7 @@ class EventAttribute(proto.Message):
         ignore_unknown_fields: bool = ...,
         event: str = ...,
         event_date_time: str = ...,
-        item_attribute: list[EventItemAttribute] = ...
+        item_attribute: MutableSequence[EventItemAttribute] = ...
     ) -> None: ...
 
 class EventItemAttribute(proto.Message):
@@ -170,7 +171,7 @@ class UserAttribute(proto.Message):
     shopping_loyalty: ShoppingLoyalty
     lifecycle_stage: str
     first_purchase_date_time: str
-    event_attribute: list[EventAttribute]
+    event_attribute: MutableSequence[EventAttribute]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -185,11 +186,11 @@ class UserAttribute(proto.Message):
         shopping_loyalty: ShoppingLoyalty = ...,
         lifecycle_stage: str = ...,
         first_purchase_date_time: str = ...,
-        event_attribute: list[EventAttribute] = ...
+        event_attribute: MutableSequence[EventAttribute] = ...
     ) -> None: ...
 
 class UserData(proto.Message):
-    user_identifiers: list[UserIdentifier]
+    user_identifiers: MutableSequence[UserIdentifier]
     transaction_attribute: TransactionAttribute
     user_attribute: UserAttribute
     def __init__(
@@ -197,7 +198,7 @@ class UserData(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        user_identifiers: list[UserIdentifier] = ...,
+        user_identifiers: MutableSequence[UserIdentifier] = ...,
         transaction_attribute: TransactionAttribute = ...,
         user_attribute: UserAttribute = ...
     ) -> None: ...

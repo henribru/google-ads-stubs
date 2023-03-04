@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -39,17 +40,17 @@ from google.ads.googleads.v12.enums.types.system_managed_entity_source import (
 class Ad(proto.Message):
     resource_name: str
     id: int
-    final_urls: list[str]
-    final_app_urls: list[FinalAppUrl]
-    final_mobile_urls: list[str]
+    final_urls: MutableSequence[str]
+    final_app_urls: MutableSequence[FinalAppUrl]
+    final_mobile_urls: MutableSequence[str]
     tracking_url_template: str
     final_url_suffix: str
-    url_custom_parameters: list[CustomParameter]
+    url_custom_parameters: MutableSequence[CustomParameter]
     display_url: str
     type_: AdTypeEnum.AdType
     added_by_google_ads: bool
     device_preference: DeviceEnum.Device
-    url_collections: list[UrlCollection]
+    url_collections: MutableSequence[UrlCollection]
     name: str
     system_managed_resource_source: SystemManagedResourceSourceEnum.SystemManagedResourceSource
     text_ad: TextAdInfo
@@ -82,17 +83,17 @@ class Ad(proto.Message):
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
         id: int = ...,
-        final_urls: list[str] = ...,
-        final_app_urls: list[FinalAppUrl] = ...,
-        final_mobile_urls: list[str] = ...,
+        final_urls: MutableSequence[str] = ...,
+        final_app_urls: MutableSequence[FinalAppUrl] = ...,
+        final_mobile_urls: MutableSequence[str] = ...,
         tracking_url_template: str = ...,
         final_url_suffix: str = ...,
-        url_custom_parameters: list[CustomParameter] = ...,
+        url_custom_parameters: MutableSequence[CustomParameter] = ...,
         display_url: str = ...,
         type_: AdTypeEnum.AdType = ...,
         added_by_google_ads: bool = ...,
         device_preference: DeviceEnum.Device = ...,
-        url_collections: list[UrlCollection] = ...,
+        url_collections: MutableSequence[UrlCollection] = ...,
         name: str = ...,
         system_managed_resource_source: SystemManagedResourceSourceEnum.SystemManagedResourceSource = ...,
         text_ad: TextAdInfo = ...,

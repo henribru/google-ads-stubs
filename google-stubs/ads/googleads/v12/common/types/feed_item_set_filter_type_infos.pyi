@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -19,23 +20,23 @@ class BusinessNameFilter(proto.Message):
     ) -> None: ...
 
 class DynamicAffiliateLocationSetFilter(proto.Message):
-    chain_ids: list[int]
+    chain_ids: MutableSequence[int]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        chain_ids: list[int] = ...
+        chain_ids: MutableSequence[int] = ...
     ) -> None: ...
 
 class DynamicLocationSetFilter(proto.Message):
-    labels: list[str]
+    labels: MutableSequence[str]
     business_name_filter: BusinessNameFilter
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        labels: list[str] = ...,
+        labels: MutableSequence[str] = ...,
         business_name_filter: BusinessNameFilter = ...
     ) -> None: ...

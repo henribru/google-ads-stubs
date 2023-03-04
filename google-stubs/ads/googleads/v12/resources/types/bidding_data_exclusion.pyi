@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -22,9 +23,11 @@ class BiddingDataExclusion(proto.Message):
     end_date_time: str
     name: str
     description: str
-    devices: list[DeviceEnum.Device]
-    campaigns: list[str]
-    advertising_channel_types: list[AdvertisingChannelTypeEnum.AdvertisingChannelType]
+    devices: MutableSequence[DeviceEnum.Device]
+    campaigns: MutableSequence[str]
+    advertising_channel_types: MutableSequence[
+        AdvertisingChannelTypeEnum.AdvertisingChannelType
+    ]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -38,9 +41,9 @@ class BiddingDataExclusion(proto.Message):
         end_date_time: str = ...,
         name: str = ...,
         description: str = ...,
-        devices: list[DeviceEnum.Device] = ...,
-        campaigns: list[str] = ...,
-        advertising_channel_types: list[
+        devices: MutableSequence[DeviceEnum.Device] = ...,
+        campaigns: MutableSequence[str] = ...,
+        advertising_channel_types: MutableSequence[
             AdvertisingChannelTypeEnum.AdvertisingChannelType
         ] = ...
     ) -> None: ...

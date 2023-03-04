@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -34,7 +35,7 @@ class MutateAssetGroupAssetResult(proto.Message):
 
 class MutateAssetGroupAssetsRequest(proto.Message):
     customer_id: str
-    operations: list[AssetGroupAssetOperation]
+    operations: MutableSequence[AssetGroupAssetOperation]
     partial_failure: bool
     validate_only: bool
     def __init__(
@@ -43,19 +44,19 @@ class MutateAssetGroupAssetsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[AssetGroupAssetOperation] = ...,
+        operations: MutableSequence[AssetGroupAssetOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateAssetGroupAssetsResponse(proto.Message):
-    results: list[MutateAssetGroupAssetResult]
+    results: MutableSequence[MutateAssetGroupAssetResult]
     partial_failure_error: Status
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[MutateAssetGroupAssetResult] = ...,
+        results: MutableSequence[MutateAssetGroupAssetResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...

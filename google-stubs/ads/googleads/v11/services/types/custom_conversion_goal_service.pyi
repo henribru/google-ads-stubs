@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -40,7 +41,7 @@ class MutateCustomConversionGoalResult(proto.Message):
 
 class MutateCustomConversionGoalsRequest(proto.Message):
     customer_id: str
-    operations: list[CustomConversionGoalOperation]
+    operations: MutableSequence[CustomConversionGoalOperation]
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
@@ -49,17 +50,17 @@ class MutateCustomConversionGoalsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[CustomConversionGoalOperation] = ...,
+        operations: MutableSequence[CustomConversionGoalOperation] = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
 
 class MutateCustomConversionGoalsResponse(proto.Message):
-    results: list[MutateCustomConversionGoalResult]
+    results: MutableSequence[MutateCustomConversionGoalResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[MutateCustomConversionGoalResult] = ...
+        results: MutableSequence[MutateCustomConversionGoalResult] = ...
     ) -> None: ...

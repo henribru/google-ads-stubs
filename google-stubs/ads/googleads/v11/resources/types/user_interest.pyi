@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -16,7 +17,7 @@ class UserInterest(proto.Message):
     name: str
     user_interest_parent: str
     launched_to_all: bool
-    availabilities: list[CriterionCategoryAvailability]
+    availabilities: MutableSequence[CriterionCategoryAvailability]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -28,5 +29,5 @@ class UserInterest(proto.Message):
         name: str = ...,
         user_interest_parent: str = ...,
         launched_to_all: bool = ...,
-        availabilities: list[CriterionCategoryAvailability] = ...
+        availabilities: MutableSequence[CriterionCategoryAvailability] = ...
     ) -> None: ...

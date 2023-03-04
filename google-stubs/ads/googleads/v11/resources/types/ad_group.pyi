@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -36,7 +37,7 @@ class AdGroup(proto.Message):
     ad_rotation_mode: AdGroupAdRotationModeEnum.AdGroupAdRotationMode
     base_ad_group: str
     tracking_url_template: str
-    url_custom_parameters: list[CustomParameter]
+    url_custom_parameters: MutableSequence[CustomParameter]
     campaign: str
     cpc_bid_micros: int
     effective_cpc_bid_micros: int
@@ -55,8 +56,10 @@ class AdGroup(proto.Message):
     effective_target_cpa_source: BiddingSourceEnum.BiddingSource
     effective_target_roas: float
     effective_target_roas_source: BiddingSourceEnum.BiddingSource
-    labels: list[str]
-    excluded_parent_asset_field_types: list[AssetFieldTypeEnum.AssetFieldType]
+    labels: MutableSequence[str]
+    excluded_parent_asset_field_types: MutableSequence[
+        AssetFieldTypeEnum.AssetFieldType
+    ]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -70,7 +73,7 @@ class AdGroup(proto.Message):
         ad_rotation_mode: AdGroupAdRotationModeEnum.AdGroupAdRotationMode = ...,
         base_ad_group: str = ...,
         tracking_url_template: str = ...,
-        url_custom_parameters: list[CustomParameter] = ...,
+        url_custom_parameters: MutableSequence[CustomParameter] = ...,
         campaign: str = ...,
         cpc_bid_micros: int = ...,
         effective_cpc_bid_micros: int = ...,
@@ -89,6 +92,8 @@ class AdGroup(proto.Message):
         effective_target_cpa_source: BiddingSourceEnum.BiddingSource = ...,
         effective_target_roas: float = ...,
         effective_target_roas_source: BiddingSourceEnum.BiddingSource = ...,
-        labels: list[str] = ...,
-        excluded_parent_asset_field_types: list[AssetFieldTypeEnum.AssetFieldType] = ...
+        labels: MutableSequence[str] = ...,
+        excluded_parent_asset_field_types: MutableSequence[
+            AssetFieldTypeEnum.AssetFieldType
+        ] = ...
     ) -> None: ...

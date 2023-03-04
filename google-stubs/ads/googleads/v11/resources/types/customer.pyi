@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -59,7 +60,7 @@ class Customer(proto.Message):
     call_reporting_setting: CallReportingSetting
     conversion_tracking_setting: ConversionTrackingSetting
     remarketing_setting: RemarketingSetting
-    pay_per_conversion_eligibility_failure_reasons: list[
+    pay_per_conversion_eligibility_failure_reasons: MutableSequence[
         CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason
     ]
     optimization_score: float
@@ -84,7 +85,7 @@ class Customer(proto.Message):
         call_reporting_setting: CallReportingSetting = ...,
         conversion_tracking_setting: ConversionTrackingSetting = ...,
         remarketing_setting: RemarketingSetting = ...,
-        pay_per_conversion_eligibility_failure_reasons: list[
+        pay_per_conversion_eligibility_failure_reasons: MutableSequence[
             CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason
         ] = ...,
         optimization_score: float = ...,

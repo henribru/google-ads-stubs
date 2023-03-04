@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -23,7 +24,7 @@ class MutateSharedSetResult(proto.Message):
 
 class MutateSharedSetsRequest(proto.Message):
     customer_id: str
-    operations: list[SharedSetOperation]
+    operations: MutableSequence[SharedSetOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -33,7 +34,7 @@ class MutateSharedSetsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[SharedSetOperation] = ...,
+        operations: MutableSequence[SharedSetOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -41,14 +42,14 @@ class MutateSharedSetsRequest(proto.Message):
 
 class MutateSharedSetsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateSharedSetResult]
+    results: MutableSequence[MutateSharedSetResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateSharedSetResult] = ...
+        results: MutableSequence[MutateSharedSetResult] = ...
     ) -> None: ...
 
 class SharedSetOperation(proto.Message):

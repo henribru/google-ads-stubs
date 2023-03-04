@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -19,23 +20,23 @@ from google.ads.googleads.v11.resources.types.ad import Ad
 
 class Recommendation(proto.Message):
     class CallExtensionRecommendation(proto.Message):
-        recommended_extensions: list[CallFeedItem]
+        recommended_extensions: MutableSequence[CallFeedItem]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            recommended_extensions: list[CallFeedItem] = ...,
+            recommended_extensions: MutableSequence[CallFeedItem] = ...,
         ) -> None: ...
 
     class CalloutExtensionRecommendation(proto.Message):
-        recommended_extensions: list[CalloutFeedItem]
+        recommended_extensions: MutableSequence[CalloutFeedItem]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            recommended_extensions: list[CalloutFeedItem] = ...,
+            recommended_extensions: MutableSequence[CalloutFeedItem] = ...,
         ) -> None: ...
 
     class CampaignBudgetRecommendation(proto.Message):
@@ -52,7 +53,7 @@ class Recommendation(proto.Message):
             ) -> None: ...
         current_budget_amount_micros: int
         recommended_budget_amount_micros: int
-        budget_options: list[
+        budget_options: MutableSequence[
             Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption
         ]
         def __init__(
@@ -62,7 +63,7 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = ...,
             current_budget_amount_micros: int = ...,
             recommended_budget_amount_micros: int = ...,
-            budget_options: list[
+            budget_options: MutableSequence[
                 Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption
             ] = ...,
         ) -> None: ...
@@ -224,13 +225,13 @@ class Recommendation(proto.Message):
         ...
 
     class SitelinkExtensionRecommendation(proto.Message):
-        recommended_extensions: list[SitelinkFeedItem]
+        recommended_extensions: MutableSequence[SitelinkFeedItem]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            recommended_extensions: list[SitelinkFeedItem] = ...,
+            recommended_extensions: MutableSequence[SitelinkFeedItem] = ...,
         ) -> None: ...
 
     class TargetCpaOptInRecommendation(proto.Message):
@@ -249,7 +250,7 @@ class Recommendation(proto.Message):
                 required_campaign_budget_amount_micros: int = ...,
                 impact: Recommendation.RecommendationImpact = ...,
             ) -> None: ...
-        options: list[
+        options: MutableSequence[
             Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption
         ]
         recommended_target_cpa_micros: int
@@ -258,7 +259,7 @@ class Recommendation(proto.Message):
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            options: list[
+            options: MutableSequence[
                 Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption
             ] = ...,
             recommended_target_cpa_micros: int = ...,
@@ -312,7 +313,7 @@ class Recommendation(proto.Message):
         ) -> None: ...
 
     class UseBroadMatchKeywordRecommendation(proto.Message):
-        keyword: list[KeywordInfo]
+        keyword: MutableSequence[KeywordInfo]
         suggested_keywords_count: int
         campaign_keywords_count: int
         campaign_uses_shared_budget: bool
@@ -322,7 +323,7 @@ class Recommendation(proto.Message):
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            keyword: list[KeywordInfo] = ...,
+            keyword: MutableSequence[KeywordInfo] = ...,
             suggested_keywords_count: int = ...,
             campaign_keywords_count: int = ...,
             campaign_uses_shared_budget: bool = ...,

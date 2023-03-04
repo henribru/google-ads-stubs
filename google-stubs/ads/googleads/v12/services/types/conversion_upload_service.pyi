@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -15,7 +16,7 @@ class CallConversion(proto.Message):
     conversion_date_time: str
     conversion_value: float
     currency_code: str
-    custom_variables: list[CustomVariable]
+    custom_variables: MutableSequence[CustomVariable]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -27,7 +28,7 @@ class CallConversion(proto.Message):
         conversion_date_time: str = ...,
         conversion_value: float = ...,
         currency_code: str = ...,
-        custom_variables: list[CustomVariable] = ...
+        custom_variables: MutableSequence[CustomVariable] = ...
     ) -> None: ...
 
 class CallConversionResult(proto.Message):
@@ -64,7 +65,7 @@ class CartData(proto.Message):
     feed_country_code: str
     feed_language_code: str
     local_transaction_cost: float
-    items: list[CartData.Item]
+    items: MutableSequence[CartData.Item]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -74,7 +75,7 @@ class CartData(proto.Message):
         feed_country_code: str = ...,
         feed_language_code: str = ...,
         local_transaction_cost: float = ...,
-        items: list[CartData.Item] = ...
+        items: MutableSequence[CartData.Item] = ...
     ) -> None: ...
 
 class ClickConversion(proto.Message):
@@ -87,9 +88,9 @@ class ClickConversion(proto.Message):
     currency_code: str
     order_id: str
     external_attribution_data: ExternalAttributionData
-    custom_variables: list[CustomVariable]
+    custom_variables: MutableSequence[CustomVariable]
     cart_data: CartData
-    user_identifiers: list[UserIdentifier]
+    user_identifiers: MutableSequence[UserIdentifier]
     conversion_environment: ConversionEnvironmentEnum.ConversionEnvironment
     def __init__(
         self,
@@ -105,9 +106,9 @@ class ClickConversion(proto.Message):
         currency_code: str = ...,
         order_id: str = ...,
         external_attribution_data: ExternalAttributionData = ...,
-        custom_variables: list[CustomVariable] = ...,
+        custom_variables: MutableSequence[CustomVariable] = ...,
         cart_data: CartData = ...,
-        user_identifiers: list[UserIdentifier] = ...,
+        user_identifiers: MutableSequence[UserIdentifier] = ...,
         conversion_environment: ConversionEnvironmentEnum.ConversionEnvironment = ...
     ) -> None: ...
 
@@ -117,7 +118,7 @@ class ClickConversionResult(proto.Message):
     wbraid: str
     conversion_action: str
     conversion_date_time: str
-    user_identifiers: list[UserIdentifier]
+    user_identifiers: MutableSequence[UserIdentifier]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -128,7 +129,7 @@ class ClickConversionResult(proto.Message):
         wbraid: str = ...,
         conversion_action: str = ...,
         conversion_date_time: str = ...,
-        user_identifiers: list[UserIdentifier] = ...
+        user_identifiers: MutableSequence[UserIdentifier] = ...
     ) -> None: ...
 
 class CustomVariable(proto.Message):
@@ -157,7 +158,7 @@ class ExternalAttributionData(proto.Message):
 
 class UploadCallConversionsRequest(proto.Message):
     customer_id: str
-    conversions: list[CallConversion]
+    conversions: MutableSequence[CallConversion]
     partial_failure: bool
     validate_only: bool
     def __init__(
@@ -166,26 +167,26 @@ class UploadCallConversionsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        conversions: list[CallConversion] = ...,
+        conversions: MutableSequence[CallConversion] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class UploadCallConversionsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[CallConversionResult]
+    results: MutableSequence[CallConversionResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[CallConversionResult] = ...
+        results: MutableSequence[CallConversionResult] = ...
     ) -> None: ...
 
 class UploadClickConversionsRequest(proto.Message):
     customer_id: str
-    conversions: list[ClickConversion]
+    conversions: MutableSequence[ClickConversion]
     partial_failure: bool
     validate_only: bool
     debug_enabled: bool
@@ -195,7 +196,7 @@ class UploadClickConversionsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        conversions: list[ClickConversion] = ...,
+        conversions: MutableSequence[ClickConversion] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         debug_enabled: bool = ...
@@ -203,12 +204,12 @@ class UploadClickConversionsRequest(proto.Message):
 
 class UploadClickConversionsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[ClickConversionResult]
+    results: MutableSequence[ClickConversionResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[ClickConversionResult] = ...
+        results: MutableSequence[ClickConversionResult] = ...
     ) -> None: ...

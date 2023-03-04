@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -28,13 +29,13 @@ class ListMerchantCenterLinksRequest(proto.Message):
     ) -> None: ...
 
 class ListMerchantCenterLinksResponse(proto.Message):
-    merchant_center_links: list[MerchantCenterLink]
+    merchant_center_links: MutableSequence[MerchantCenterLink]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        merchant_center_links: list[MerchantCenterLink] = ...
+        merchant_center_links: MutableSequence[MerchantCenterLink] = ...
     ) -> None: ...
 
 class MerchantCenterLinkOperation(proto.Message):

@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -22,10 +23,12 @@ class BiddingSeasonalityAdjustment(proto.Message):
     end_date_time: str
     name: str
     description: str
-    devices: list[DeviceEnum.Device]
+    devices: MutableSequence[DeviceEnum.Device]
     conversion_rate_modifier: float
-    campaigns: list[str]
-    advertising_channel_types: list[AdvertisingChannelTypeEnum.AdvertisingChannelType]
+    campaigns: MutableSequence[str]
+    advertising_channel_types: MutableSequence[
+        AdvertisingChannelTypeEnum.AdvertisingChannelType
+    ]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -39,10 +42,10 @@ class BiddingSeasonalityAdjustment(proto.Message):
         end_date_time: str = ...,
         name: str = ...,
         description: str = ...,
-        devices: list[DeviceEnum.Device] = ...,
+        devices: MutableSequence[DeviceEnum.Device] = ...,
         conversion_rate_modifier: float = ...,
-        campaigns: list[str] = ...,
-        advertising_channel_types: list[
+        campaigns: MutableSequence[str] = ...,
+        advertising_channel_types: MutableSequence[
             AdvertisingChannelTypeEnum.AdvertisingChannelType
         ] = ...
     ) -> None: ...

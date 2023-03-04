@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -21,11 +22,11 @@ class SuggestKeywordThemeConstantsRequest(proto.Message):
     ) -> None: ...
 
 class SuggestKeywordThemeConstantsResponse(proto.Message):
-    keyword_theme_constants: list[KeywordThemeConstant]
+    keyword_theme_constants: MutableSequence[KeywordThemeConstant]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        keyword_theme_constants: list[KeywordThemeConstant] = ...
+        keyword_theme_constants: MutableSequence[KeywordThemeConstant] = ...
     ) -> None: ...

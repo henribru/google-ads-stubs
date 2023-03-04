@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -16,11 +17,11 @@ class GoogleAdsField(proto.Message):
     selectable: bool
     filterable: bool
     sortable: bool
-    selectable_with: list[str]
-    attribute_resources: list[str]
-    metrics: list[str]
-    segments: list[str]
-    enum_values: list[str]
+    selectable_with: MutableSequence[str]
+    attribute_resources: MutableSequence[str]
+    metrics: MutableSequence[str]
+    segments: MutableSequence[str]
+    enum_values: MutableSequence[str]
     data_type: GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
     type_url: str
     is_repeated: bool
@@ -35,11 +36,11 @@ class GoogleAdsField(proto.Message):
         selectable: bool = ...,
         filterable: bool = ...,
         sortable: bool = ...,
-        selectable_with: list[str] = ...,
-        attribute_resources: list[str] = ...,
-        metrics: list[str] = ...,
-        segments: list[str] = ...,
-        enum_values: list[str] = ...,
+        selectable_with: MutableSequence[str] = ...,
+        attribute_resources: MutableSequence[str] = ...,
+        metrics: MutableSequence[str] = ...,
+        segments: MutableSequence[str] = ...,
+        enum_values: MutableSequence[str] = ...,
         data_type: GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType = ...,
         type_url: str = ...,
         is_repeated: bool = ...

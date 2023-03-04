@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -19,7 +20,7 @@ class CustomAudience(proto.Message):
     name: str
     type_: CustomAudienceTypeEnum.CustomAudienceType
     description: str
-    members: list[CustomAudienceMember]
+    members: MutableSequence[CustomAudienceMember]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -31,7 +32,7 @@ class CustomAudience(proto.Message):
         name: str = ...,
         type_: CustomAudienceTypeEnum.CustomAudienceType = ...,
         description: str = ...,
-        members: list[CustomAudienceMember] = ...
+        members: MutableSequence[CustomAudienceMember] = ...
     ) -> None: ...
 
 class CustomAudienceMember(proto.Message):

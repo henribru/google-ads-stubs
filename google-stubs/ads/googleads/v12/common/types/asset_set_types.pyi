@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -38,8 +39,8 @@ class BusinessProfileLocationSet(proto.Message):
     http_authorization_token: str
     email_address: str
     business_name_filter: str
-    label_filters: list[str]
-    listing_id_filters: list[int]
+    label_filters: MutableSequence[str]
+    listing_id_filters: MutableSequence[int]
     business_account_id: str
     def __init__(
         self,
@@ -49,57 +50,57 @@ class BusinessProfileLocationSet(proto.Message):
         http_authorization_token: str = ...,
         email_address: str = ...,
         business_name_filter: str = ...,
-        label_filters: list[str] = ...,
-        listing_id_filters: list[int] = ...,
+        label_filters: MutableSequence[str] = ...,
+        listing_id_filters: MutableSequence[int] = ...,
         business_account_id: str = ...
     ) -> None: ...
 
 class ChainFilter(proto.Message):
     chain_id: int
-    location_attributes: list[str]
+    location_attributes: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         chain_id: int = ...,
-        location_attributes: list[str] = ...
+        location_attributes: MutableSequence[str] = ...
     ) -> None: ...
 
 class ChainLocationGroup(proto.Message):
-    dynamic_chain_location_group_filters: list[ChainFilter]
+    dynamic_chain_location_group_filters: MutableSequence[ChainFilter]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        dynamic_chain_location_group_filters: list[ChainFilter] = ...
+        dynamic_chain_location_group_filters: MutableSequence[ChainFilter] = ...
     ) -> None: ...
 
 class ChainSet(proto.Message):
     relationship_type: ChainRelationshipTypeEnum.ChainRelationshipType
-    chains: list[ChainFilter]
+    chains: MutableSequence[ChainFilter]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         relationship_type: ChainRelationshipTypeEnum.ChainRelationshipType = ...,
-        chains: list[ChainFilter] = ...
+        chains: MutableSequence[ChainFilter] = ...
     ) -> None: ...
 
 class DynamicBusinessProfileLocationGroupFilter(proto.Message):
-    label_filters: list[str]
+    label_filters: MutableSequence[str]
     business_name_filter: BusinessProfileBusinessNameFilter
-    listing_id_filters: list[int]
+    listing_id_filters: MutableSequence[int]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        label_filters: list[str] = ...,
+        label_filters: MutableSequence[str] = ...,
         business_name_filter: BusinessProfileBusinessNameFilter = ...,
-        listing_id_filters: list[int] = ...
+        listing_id_filters: MutableSequence[int] = ...
     ) -> None: ...
 
 class LocationSet(proto.Message):
@@ -129,11 +130,11 @@ class MapsLocationInfo(proto.Message):
     ) -> None: ...
 
 class MapsLocationSet(proto.Message):
-    maps_locations: list[MapsLocationInfo]
+    maps_locations: MutableSequence[MapsLocationInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        maps_locations: list[MapsLocationInfo] = ...
+        maps_locations: MutableSequence[MapsLocationInfo] = ...
     ) -> None: ...

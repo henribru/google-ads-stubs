@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -45,10 +46,10 @@ class Asset(proto.Message):
     id: int
     name: str
     type_: AssetTypeEnum.AssetType
-    final_urls: list[str]
-    final_mobile_urls: list[str]
+    final_urls: MutableSequence[str]
+    final_mobile_urls: MutableSequence[str]
     tracking_url_template: str
-    url_custom_parameters: list[CustomParameter]
+    url_custom_parameters: MutableSequence[CustomParameter]
     final_url_suffix: str
     source: AssetSourceEnum.AssetSource
     policy_summary: AssetPolicySummary
@@ -86,10 +87,10 @@ class Asset(proto.Message):
         id: int = ...,
         name: str = ...,
         type_: AssetTypeEnum.AssetType = ...,
-        final_urls: list[str] = ...,
-        final_mobile_urls: list[str] = ...,
+        final_urls: MutableSequence[str] = ...,
+        final_mobile_urls: MutableSequence[str] = ...,
         tracking_url_template: str = ...,
-        url_custom_parameters: list[CustomParameter] = ...,
+        url_custom_parameters: MutableSequence[CustomParameter] = ...,
         final_url_suffix: str = ...,
         source: AssetSourceEnum.AssetSource = ...,
         policy_summary: AssetPolicySummary = ...,
@@ -121,7 +122,7 @@ class Asset(proto.Message):
     ) -> None: ...
 
 class AssetPolicySummary(proto.Message):
-    policy_topic_entries: list[PolicyTopicEntry]
+    policy_topic_entries: MutableSequence[PolicyTopicEntry]
     review_status: PolicyReviewStatusEnum.PolicyReviewStatus
     approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
     def __init__(
@@ -129,7 +130,7 @@ class AssetPolicySummary(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        policy_topic_entries: list[PolicyTopicEntry] = ...,
+        policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
     ) -> None: ...

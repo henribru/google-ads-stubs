@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -8,7 +9,7 @@ class RemarketingAction(proto.Message):
     resource_name: str
     id: int
     name: str
-    tag_snippets: list[TagSnippet]
+    tag_snippets: MutableSequence[TagSnippet]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -17,5 +18,5 @@ class RemarketingAction(proto.Message):
         resource_name: str = ...,
         id: int = ...,
         name: str = ...,
-        tag_snippets: list[TagSnippet] = ...
+        tag_snippets: MutableSequence[TagSnippet] = ...
     ) -> None: ...

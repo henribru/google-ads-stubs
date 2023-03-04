@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -440,31 +441,31 @@ class ListingGroupInfo(proto.Message):
     ) -> None: ...
 
 class ListingScopeInfo(proto.Message):
-    dimensions: list[ListingDimensionInfo]
+    dimensions: MutableSequence[ListingDimensionInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        dimensions: list[ListingDimensionInfo] = ...,
+        dimensions: MutableSequence[ListingDimensionInfo] = ...,
     ) -> None: ...
 
 class LocationGroupInfo(proto.Message):
     feed: str
-    geo_target_constants: list[str]
+    geo_target_constants: MutableSequence[str]
     radius: int
     radius_units: LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits
-    feed_item_sets: list[str]
+    feed_item_sets: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         feed: str = ...,
-        geo_target_constants: list[str] = ...,
+        geo_target_constants: MutableSequence[str] = ...,
         radius: int = ...,
         radius_units: LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits = ...,
-        feed_item_sets: list[str] = ...,
+        feed_item_sets: MutableSequence[str] = ...,
     ) -> None: ...
 
 class LocationInfo(proto.Message):
@@ -695,14 +696,14 @@ class ProximityInfo(proto.Message):
 
 class TopicInfo(proto.Message):
     topic_constant: str
-    path: list[str]
+    path: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         topic_constant: str = ...,
-        path: list[str] = ...,
+        path: MutableSequence[str] = ...,
     ) -> None: ...
 
 class UnknownListingDimensionInfo(proto.Message):
@@ -750,7 +751,7 @@ class WebpageConditionInfo(proto.Message):
 
 class WebpageInfo(proto.Message):
     criterion_name: str
-    conditions: list[WebpageConditionInfo]
+    conditions: MutableSequence[WebpageConditionInfo]
     coverage_percentage: float
     sample: WebpageSampleInfo
     def __init__(
@@ -759,19 +760,19 @@ class WebpageInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         criterion_name: str = ...,
-        conditions: list[WebpageConditionInfo] = ...,
+        conditions: MutableSequence[WebpageConditionInfo] = ...,
         coverage_percentage: float = ...,
         sample: WebpageSampleInfo = ...,
     ) -> None: ...
 
 class WebpageSampleInfo(proto.Message):
-    sample_urls: list[str]
+    sample_urls: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        sample_urls: list[str] = ...,
+        sample_urls: MutableSequence[str] = ...,
     ) -> None: ...
 
 class YouTubeChannelInfo(proto.Message):

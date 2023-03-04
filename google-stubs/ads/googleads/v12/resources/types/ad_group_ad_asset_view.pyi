@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -18,7 +19,7 @@ from google.ads.googleads.v12.enums.types.served_asset_field_type import (
 )
 
 class AdGroupAdAssetPolicySummary(proto.Message):
-    policy_topic_entries: list[PolicyTopicEntry]
+    policy_topic_entries: MutableSequence[PolicyTopicEntry]
     review_status: PolicyReviewStatusEnum.PolicyReviewStatus
     approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
     def __init__(
@@ -26,7 +27,7 @@ class AdGroupAdAssetPolicySummary(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        policy_topic_entries: list[PolicyTopicEntry] = ...,
+        policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
     ) -> None: ...

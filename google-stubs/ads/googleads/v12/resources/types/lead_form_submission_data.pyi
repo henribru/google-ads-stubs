@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -23,8 +24,8 @@ class LeadFormSubmissionData(proto.Message):
     id: str
     asset: str
     campaign: str
-    lead_form_submission_fields: list[LeadFormSubmissionField]
-    custom_lead_form_submission_fields: list[CustomLeadFormSubmissionField]
+    lead_form_submission_fields: MutableSequence[LeadFormSubmissionField]
+    custom_lead_form_submission_fields: MutableSequence[CustomLeadFormSubmissionField]
     ad_group: str
     ad_group_ad: str
     gclid: str
@@ -38,8 +39,10 @@ class LeadFormSubmissionData(proto.Message):
         id: str = ...,
         asset: str = ...,
         campaign: str = ...,
-        lead_form_submission_fields: list[LeadFormSubmissionField] = ...,
-        custom_lead_form_submission_fields: list[CustomLeadFormSubmissionField] = ...,
+        lead_form_submission_fields: MutableSequence[LeadFormSubmissionField] = ...,
+        custom_lead_form_submission_fields: MutableSequence[
+            CustomLeadFormSubmissionField
+        ] = ...,
         ad_group: str = ...,
         ad_group_ad: str = ...,
         gclid: str = ...,

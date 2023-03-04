@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -85,8 +86,8 @@ class AdGroupCriterion(proto.Message):
     negative: bool
     system_serving_status: CriterionSystemServingStatusEnum.CriterionSystemServingStatus
     approval_status: AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus
-    disapproval_reasons: list[str]
-    labels: list[str]
+    disapproval_reasons: MutableSequence[str]
+    labels: MutableSequence[str]
     bid_modifier: float
     cpc_bid_micros: int
     cpm_bid_micros: int
@@ -101,11 +102,11 @@ class AdGroupCriterion(proto.Message):
     effective_cpv_bid_source: BiddingSourceEnum.BiddingSource
     effective_percent_cpc_bid_source: BiddingSourceEnum.BiddingSource
     position_estimates: AdGroupCriterion.PositionEstimates
-    final_urls: list[str]
-    final_mobile_urls: list[str]
+    final_urls: MutableSequence[str]
+    final_mobile_urls: MutableSequence[str]
     final_url_suffix: str
     tracking_url_template: str
-    url_custom_parameters: list[CustomParameter]
+    url_custom_parameters: MutableSequence[CustomParameter]
     keyword: KeywordInfo
     placement: PlacementInfo
     mobile_app_category: MobileAppCategoryInfo
@@ -142,8 +143,8 @@ class AdGroupCriterion(proto.Message):
         negative: bool = ...,
         system_serving_status: CriterionSystemServingStatusEnum.CriterionSystemServingStatus = ...,
         approval_status: AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus = ...,
-        disapproval_reasons: list[str] = ...,
-        labels: list[str] = ...,
+        disapproval_reasons: MutableSequence[str] = ...,
+        labels: MutableSequence[str] = ...,
         bid_modifier: float = ...,
         cpc_bid_micros: int = ...,
         cpm_bid_micros: int = ...,
@@ -158,11 +159,11 @@ class AdGroupCriterion(proto.Message):
         effective_cpv_bid_source: BiddingSourceEnum.BiddingSource = ...,
         effective_percent_cpc_bid_source: BiddingSourceEnum.BiddingSource = ...,
         position_estimates: AdGroupCriterion.PositionEstimates = ...,
-        final_urls: list[str] = ...,
-        final_mobile_urls: list[str] = ...,
+        final_urls: MutableSequence[str] = ...,
+        final_mobile_urls: MutableSequence[str] = ...,
         final_url_suffix: str = ...,
         tracking_url_template: str = ...,
-        url_custom_parameters: list[CustomParameter] = ...,
+        url_custom_parameters: MutableSequence[CustomParameter] = ...,
         keyword: KeywordInfo = ...,
         placement: PlacementInfo = ...,
         mobile_app_category: MobileAppCategoryInfo = ...,

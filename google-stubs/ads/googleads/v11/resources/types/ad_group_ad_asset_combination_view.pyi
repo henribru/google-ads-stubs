@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -6,7 +7,7 @@ from google.ads.googleads.v11.common.types.asset_usage import AssetUsage
 
 class AdGroupAdAssetCombinationView(proto.Message):
     resource_name: str
-    served_assets: list[AssetUsage]
+    served_assets: MutableSequence[AssetUsage]
     enabled: bool
     def __init__(
         self,
@@ -14,6 +15,6 @@ class AdGroupAdAssetCombinationView(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
-        served_assets: list[AssetUsage] = ...,
+        served_assets: MutableSequence[AssetUsage] = ...,
         enabled: bool = ...
     ) -> None: ...

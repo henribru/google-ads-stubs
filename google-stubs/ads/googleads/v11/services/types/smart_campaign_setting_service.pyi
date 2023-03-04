@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -25,7 +26,7 @@ class MutateSmartCampaignSettingResult(proto.Message):
 
 class MutateSmartCampaignSettingsRequest(proto.Message):
     customer_id: str
-    operations: list[SmartCampaignSettingOperation]
+    operations: MutableSequence[SmartCampaignSettingOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -35,7 +36,7 @@ class MutateSmartCampaignSettingsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[SmartCampaignSettingOperation] = ...,
+        operations: MutableSequence[SmartCampaignSettingOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -43,14 +44,14 @@ class MutateSmartCampaignSettingsRequest(proto.Message):
 
 class MutateSmartCampaignSettingsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateSmartCampaignSettingResult]
+    results: MutableSequence[MutateSmartCampaignSettingResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateSmartCampaignSettingResult] = ...
+        results: MutableSequence[MutateSmartCampaignSettingResult] = ...
     ) -> None: ...
 
 class SmartCampaignSettingOperation(proto.Message):

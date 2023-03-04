@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -36,7 +37,7 @@ class MutateCustomerCustomizerResult(proto.Message):
 
 class MutateCustomerCustomizersRequest(proto.Message):
     customer_id: str
-    operations: list[CustomerCustomizerOperation]
+    operations: MutableSequence[CustomerCustomizerOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -46,20 +47,20 @@ class MutateCustomerCustomizersRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[CustomerCustomizerOperation] = ...,
+        operations: MutableSequence[CustomerCustomizerOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
 
 class MutateCustomerCustomizersResponse(proto.Message):
-    results: list[MutateCustomerCustomizerResult]
+    results: MutableSequence[MutateCustomerCustomizerResult]
     partial_failure_error: Status
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[MutateCustomerCustomizerResult] = ...,
+        results: MutableSequence[MutateCustomerCustomizerResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...

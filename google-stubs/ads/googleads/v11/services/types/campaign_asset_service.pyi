@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -39,7 +40,7 @@ class MutateCampaignAssetResult(proto.Message):
 
 class MutateCampaignAssetsRequest(proto.Message):
     customer_id: str
-    operations: list[CampaignAssetOperation]
+    operations: MutableSequence[CampaignAssetOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -49,7 +50,7 @@ class MutateCampaignAssetsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[CampaignAssetOperation] = ...,
+        operations: MutableSequence[CampaignAssetOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -57,12 +58,12 @@ class MutateCampaignAssetsRequest(proto.Message):
 
 class MutateCampaignAssetsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateCampaignAssetResult]
+    results: MutableSequence[MutateCampaignAssetResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateCampaignAssetResult] = ...
+        results: MutableSequence[MutateCampaignAssetResult] = ...
     ) -> None: ...

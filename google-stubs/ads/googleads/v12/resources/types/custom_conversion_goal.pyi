@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -10,7 +11,7 @@ class CustomConversionGoal(proto.Message):
     resource_name: str
     id: int
     name: str
-    conversion_actions: list[str]
+    conversion_actions: MutableSequence[str]
     status: CustomConversionGoalStatusEnum.CustomConversionGoalStatus
     def __init__(
         self,
@@ -20,6 +21,6 @@ class CustomConversionGoal(proto.Message):
         resource_name: str = ...,
         id: int = ...,
         name: str = ...,
-        conversion_actions: list[str] = ...,
+        conversion_actions: MutableSequence[str] = ...,
         status: CustomConversionGoalStatusEnum.CustomConversionGoalStatus = ...
     ) -> None: ...

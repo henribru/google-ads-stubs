@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -29,40 +30,42 @@ class ConversionValueRule(proto.Message):
         ) -> None: ...
 
     class ValueRuleAudienceCondition(proto.Message):
-        user_lists: list[str]
-        user_interests: list[str]
+        user_lists: MutableSequence[str]
+        user_interests: MutableSequence[str]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            user_lists: list[str] = ...,
-            user_interests: list[str] = ...
+            user_lists: MutableSequence[str] = ...,
+            user_interests: MutableSequence[str] = ...
         ) -> None: ...
 
     class ValueRuleDeviceCondition(proto.Message):
-        device_types: list[ValueRuleDeviceTypeEnum.ValueRuleDeviceType]
+        device_types: MutableSequence[ValueRuleDeviceTypeEnum.ValueRuleDeviceType]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            device_types: list[ValueRuleDeviceTypeEnum.ValueRuleDeviceType] = ...
+            device_types: MutableSequence[
+                ValueRuleDeviceTypeEnum.ValueRuleDeviceType
+            ] = ...
         ) -> None: ...
 
     class ValueRuleGeoLocationCondition(proto.Message):
-        excluded_geo_target_constants: list[str]
+        excluded_geo_target_constants: MutableSequence[str]
         excluded_geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
-        geo_target_constants: list[str]
+        geo_target_constants: MutableSequence[str]
         geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            excluded_geo_target_constants: list[str] = ...,
+            excluded_geo_target_constants: MutableSequence[str] = ...,
             excluded_geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType = ...,
-            geo_target_constants: list[str] = ...,
+            geo_target_constants: MutableSequence[str] = ...,
             geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType = ...
         ) -> None: ...
     resource_name: str

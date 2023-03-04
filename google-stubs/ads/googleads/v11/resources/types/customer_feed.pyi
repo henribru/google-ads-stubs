@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -9,7 +10,7 @@ from google.ads.googleads.v11.enums.types.placeholder_type import PlaceholderTyp
 class CustomerFeed(proto.Message):
     resource_name: str
     feed: str
-    placeholder_types: list[PlaceholderTypeEnum.PlaceholderType]
+    placeholder_types: MutableSequence[PlaceholderTypeEnum.PlaceholderType]
     matching_function: MatchingFunction
     status: FeedLinkStatusEnum.FeedLinkStatus
     def __init__(
@@ -19,7 +20,7 @@ class CustomerFeed(proto.Message):
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
         feed: str = ...,
-        placeholder_types: list[PlaceholderTypeEnum.PlaceholderType] = ...,
+        placeholder_types: MutableSequence[PlaceholderTypeEnum.PlaceholderType] = ...,
         matching_function: MatchingFunction = ...,
         status: FeedLinkStatusEnum.FeedLinkStatus = ...
     ) -> None: ...

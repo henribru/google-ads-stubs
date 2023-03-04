@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -27,7 +28,7 @@ class BiddingStrategyOperation(proto.Message):
 
 class MutateBiddingStrategiesRequest(proto.Message):
     customer_id: str
-    operations: list[BiddingStrategyOperation]
+    operations: MutableSequence[BiddingStrategyOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -37,7 +38,7 @@ class MutateBiddingStrategiesRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[BiddingStrategyOperation] = ...,
+        operations: MutableSequence[BiddingStrategyOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -45,14 +46,14 @@ class MutateBiddingStrategiesRequest(proto.Message):
 
 class MutateBiddingStrategiesResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateBiddingStrategyResult]
+    results: MutableSequence[MutateBiddingStrategyResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateBiddingStrategyResult] = ...
+        results: MutableSequence[MutateBiddingStrategyResult] = ...
     ) -> None: ...
 
 class MutateBiddingStrategyResult(proto.Message):

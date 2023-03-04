@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -39,7 +40,7 @@ class MutateExperimentArmResult(proto.Message):
 
 class MutateExperimentArmsRequest(proto.Message):
     customer_id: str
-    operations: list[ExperimentArmOperation]
+    operations: MutableSequence[ExperimentArmOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -49,7 +50,7 @@ class MutateExperimentArmsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[ExperimentArmOperation] = ...,
+        operations: MutableSequence[ExperimentArmOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -57,12 +58,12 @@ class MutateExperimentArmsRequest(proto.Message):
 
 class MutateExperimentArmsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateExperimentArmResult]
+    results: MutableSequence[MutateExperimentArmResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateExperimentArmResult] = ...
+        results: MutableSequence[MutateExperimentArmResult] = ...
     ) -> None: ...

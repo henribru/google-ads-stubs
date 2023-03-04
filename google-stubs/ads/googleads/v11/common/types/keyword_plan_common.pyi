@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -40,13 +41,13 @@ class HistoricalMetricsOptions(proto.Message):
     ) -> None: ...
 
 class KeywordAnnotations(proto.Message):
-    concepts: list[KeywordConcept]
+    concepts: MutableSequence[KeywordConcept]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        concepts: list[KeywordConcept] = ...
+        concepts: MutableSequence[KeywordConcept] = ...
     ) -> None: ...
 
 class KeywordConcept(proto.Message):
@@ -62,17 +63,17 @@ class KeywordConcept(proto.Message):
     ) -> None: ...
 
 class KeywordPlanAggregateMetricResults(proto.Message):
-    device_searches: list[KeywordPlanDeviceSearches]
+    device_searches: MutableSequence[KeywordPlanDeviceSearches]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        device_searches: list[KeywordPlanDeviceSearches] = ...
+        device_searches: MutableSequence[KeywordPlanDeviceSearches] = ...
     ) -> None: ...
 
 class KeywordPlanAggregateMetrics(proto.Message):
-    aggregate_metric_types: list[
+    aggregate_metric_types: MutableSequence[
         KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType
     ]
     def __init__(
@@ -80,7 +81,7 @@ class KeywordPlanAggregateMetrics(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        aggregate_metric_types: list[
+        aggregate_metric_types: MutableSequence[
             KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType
         ] = ...
     ) -> None: ...
@@ -99,7 +100,7 @@ class KeywordPlanDeviceSearches(proto.Message):
 
 class KeywordPlanHistoricalMetrics(proto.Message):
     avg_monthly_searches: int
-    monthly_search_volumes: list[MonthlySearchVolume]
+    monthly_search_volumes: MutableSequence[MonthlySearchVolume]
     competition: KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel
     competition_index: int
     low_top_of_page_bid_micros: int
@@ -111,7 +112,7 @@ class KeywordPlanHistoricalMetrics(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         avg_monthly_searches: int = ...,
-        monthly_search_volumes: list[MonthlySearchVolume] = ...,
+        monthly_search_volumes: MutableSequence[MonthlySearchVolume] = ...,
         competition: KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel = ...,
         competition_index: int = ...,
         low_top_of_page_bid_micros: int = ...,

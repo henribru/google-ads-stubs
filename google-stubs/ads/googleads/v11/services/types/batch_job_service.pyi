@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -15,7 +16,7 @@ from google.ads.googleads.v11.services.types.google_ads_service import (
 class AddBatchJobOperationsRequest(proto.Message):
     resource_name: str
     sequence_token: str
-    mutate_operations: list[MutateOperation]
+    mutate_operations: MutableSequence[MutateOperation]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -23,7 +24,7 @@ class AddBatchJobOperationsRequest(proto.Message):
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
         sequence_token: str = ...,
-        mutate_operations: list[MutateOperation] = ...
+        mutate_operations: MutableSequence[MutateOperation] = ...
     ) -> None: ...
 
 class AddBatchJobOperationsResponse(proto.Message):
@@ -81,14 +82,14 @@ class ListBatchJobResultsRequest(proto.Message):
     ) -> None: ...
 
 class ListBatchJobResultsResponse(proto.Message):
-    results: list[BatchJobResult]
+    results: MutableSequence[BatchJobResult]
     next_page_token: str
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[BatchJobResult] = ...,
+        results: MutableSequence[BatchJobResult] = ...,
         next_page_token: str = ...
     ) -> None: ...
 

@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -12,7 +13,7 @@ class AddOfflineUserDataJobOperationsRequest(proto.Message):
     resource_name: str
     enable_partial_failure: bool
     enable_warnings: bool
-    operations: list[OfflineUserDataJobOperation]
+    operations: MutableSequence[OfflineUserDataJobOperation]
     validate_only: bool
     def __init__(
         self,
@@ -22,7 +23,7 @@ class AddOfflineUserDataJobOperationsRequest(proto.Message):
         resource_name: str = ...,
         enable_partial_failure: bool = ...,
         enable_warnings: bool = ...,
-        operations: list[OfflineUserDataJobOperation] = ...,
+        operations: MutableSequence[OfflineUserDataJobOperation] = ...,
         validate_only: bool = ...
     ) -> None: ...
 

@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -39,13 +40,13 @@ class BidModifierSimulationPoint(proto.Message):
     ) -> None: ...
 
 class BidModifierSimulationPointList(proto.Message):
-    points: list[BidModifierSimulationPoint]
+    points: MutableSequence[BidModifierSimulationPoint]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        points: list[BidModifierSimulationPoint] = ...
+        points: MutableSequence[BidModifierSimulationPoint] = ...
     ) -> None: ...
 
 class BudgetSimulationPoint(proto.Message):
@@ -73,13 +74,13 @@ class BudgetSimulationPoint(proto.Message):
     ) -> None: ...
 
 class BudgetSimulationPointList(proto.Message):
-    points: list[BudgetSimulationPoint]
+    points: MutableSequence[BudgetSimulationPoint]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        points: list[BudgetSimulationPoint] = ...
+        points: MutableSequence[BudgetSimulationPoint] = ...
     ) -> None: ...
 
 class CpcBidSimulationPoint(proto.Message):
@@ -109,13 +110,13 @@ class CpcBidSimulationPoint(proto.Message):
     ) -> None: ...
 
 class CpcBidSimulationPointList(proto.Message):
-    points: list[CpcBidSimulationPoint]
+    points: MutableSequence[CpcBidSimulationPoint]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        points: list[CpcBidSimulationPoint] = ...
+        points: MutableSequence[CpcBidSimulationPoint] = ...
     ) -> None: ...
 
 class CpvBidSimulationPoint(proto.Message):
@@ -135,13 +136,13 @@ class CpvBidSimulationPoint(proto.Message):
     ) -> None: ...
 
 class CpvBidSimulationPointList(proto.Message):
-    points: list[CpvBidSimulationPoint]
+    points: MutableSequence[CpvBidSimulationPoint]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        points: list[CpvBidSimulationPoint] = ...
+        points: MutableSequence[CpvBidSimulationPoint] = ...
     ) -> None: ...
 
 class PercentCpcBidSimulationPoint(proto.Message):
@@ -167,13 +168,13 @@ class PercentCpcBidSimulationPoint(proto.Message):
     ) -> None: ...
 
 class PercentCpcBidSimulationPointList(proto.Message):
-    points: list[PercentCpcBidSimulationPoint]
+    points: MutableSequence[PercentCpcBidSimulationPoint]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        points: list[PercentCpcBidSimulationPoint] = ...
+        points: MutableSequence[PercentCpcBidSimulationPoint] = ...
     ) -> None: ...
 
 class TargetCpaSimulationPoint(proto.Message):
@@ -207,13 +208,13 @@ class TargetCpaSimulationPoint(proto.Message):
     ) -> None: ...
 
 class TargetCpaSimulationPointList(proto.Message):
-    points: list[TargetCpaSimulationPoint]
+    points: MutableSequence[TargetCpaSimulationPoint]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        points: list[TargetCpaSimulationPoint] = ...
+        points: MutableSequence[TargetCpaSimulationPoint] = ...
     ) -> None: ...
 
 class TargetImpressionShareSimulationPoint(proto.Message):
@@ -245,13 +246,13 @@ class TargetImpressionShareSimulationPoint(proto.Message):
     ) -> None: ...
 
 class TargetImpressionShareSimulationPointList(proto.Message):
-    points: list[TargetImpressionShareSimulationPoint]
+    points: MutableSequence[TargetImpressionShareSimulationPoint]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        points: list[TargetImpressionShareSimulationPoint] = ...
+        points: MutableSequence[TargetImpressionShareSimulationPoint] = ...
     ) -> None: ...
 
 class TargetRoasSimulationPoint(proto.Message):
@@ -279,11 +280,11 @@ class TargetRoasSimulationPoint(proto.Message):
     ) -> None: ...
 
 class TargetRoasSimulationPointList(proto.Message):
-    points: list[TargetRoasSimulationPoint]
+    points: MutableSequence[TargetRoasSimulationPoint]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        points: list[TargetRoasSimulationPoint] = ...
+        points: MutableSequence[TargetRoasSimulationPoint] = ...
     ) -> None: ...

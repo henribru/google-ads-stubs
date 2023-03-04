@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -34,7 +35,7 @@ class MutateFeedMappingResult(proto.Message):
 
 class MutateFeedMappingsRequest(proto.Message):
     customer_id: str
-    operations: list[FeedMappingOperation]
+    operations: MutableSequence[FeedMappingOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -44,7 +45,7 @@ class MutateFeedMappingsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[FeedMappingOperation] = ...,
+        operations: MutableSequence[FeedMappingOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -52,12 +53,12 @@ class MutateFeedMappingsRequest(proto.Message):
 
 class MutateFeedMappingsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateFeedMappingResult]
+    results: MutableSequence[MutateFeedMappingResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateFeedMappingResult] = ...
+        results: MutableSequence[MutateFeedMappingResult] = ...
     ) -> None: ...

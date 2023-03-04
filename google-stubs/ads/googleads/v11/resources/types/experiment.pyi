@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -19,7 +20,7 @@ class Experiment(proto.Message):
     status: ExperimentStatusEnum.ExperimentStatus
     start_date: str
     end_date: str
-    goals: list[MetricGoal]
+    goals: MutableSequence[MetricGoal]
     long_running_operation: str
     promote_status: AsyncActionStatusEnum.AsyncActionStatus
     def __init__(
@@ -36,7 +37,7 @@ class Experiment(proto.Message):
         status: ExperimentStatusEnum.ExperimentStatus = ...,
         start_date: str = ...,
         end_date: str = ...,
-        goals: list[MetricGoal] = ...,
+        goals: MutableSequence[MetricGoal] = ...,
         long_running_operation: str = ...,
         promote_status: AsyncActionStatusEnum.AsyncActionStatus = ...
     ) -> None: ...

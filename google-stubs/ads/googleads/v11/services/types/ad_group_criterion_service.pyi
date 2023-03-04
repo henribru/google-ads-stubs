@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -12,7 +13,7 @@ from google.ads.googleads.v11.resources.types.ad_group_criterion import AdGroupC
 
 class AdGroupCriterionOperation(proto.Message):
     update_mask: FieldMask
-    exempt_policy_violation_keys: list[PolicyViolationKey]
+    exempt_policy_violation_keys: MutableSequence[PolicyViolationKey]
     create: AdGroupCriterion
     update: AdGroupCriterion
     remove: str
@@ -22,7 +23,7 @@ class AdGroupCriterionOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
-        exempt_policy_violation_keys: list[PolicyViolationKey] = ...,
+        exempt_policy_violation_keys: MutableSequence[PolicyViolationKey] = ...,
         create: AdGroupCriterion = ...,
         update: AdGroupCriterion = ...,
         remove: str = ...
@@ -30,7 +31,7 @@ class AdGroupCriterionOperation(proto.Message):
 
 class MutateAdGroupCriteriaRequest(proto.Message):
     customer_id: str
-    operations: list[AdGroupCriterionOperation]
+    operations: MutableSequence[AdGroupCriterionOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -40,7 +41,7 @@ class MutateAdGroupCriteriaRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[AdGroupCriterionOperation] = ...,
+        operations: MutableSequence[AdGroupCriterionOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -48,14 +49,14 @@ class MutateAdGroupCriteriaRequest(proto.Message):
 
 class MutateAdGroupCriteriaResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateAdGroupCriterionResult]
+    results: MutableSequence[MutateAdGroupCriterionResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateAdGroupCriterionResult] = ...
+        results: MutableSequence[MutateAdGroupCriterionResult] = ...
     ) -> None: ...
 
 class MutateAdGroupCriterionResult(proto.Message):

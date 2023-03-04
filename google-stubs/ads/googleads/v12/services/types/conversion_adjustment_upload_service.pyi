@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -15,7 +16,7 @@ class ConversionAdjustment(proto.Message):
     adjustment_date_time: str
     adjustment_type: ConversionAdjustmentTypeEnum.ConversionAdjustmentType
     restatement_value: RestatementValue
-    user_identifiers: list[UserIdentifier]
+    user_identifiers: MutableSequence[UserIdentifier]
     user_agent: str
     def __init__(
         self,
@@ -28,7 +29,7 @@ class ConversionAdjustment(proto.Message):
         adjustment_date_time: str = ...,
         adjustment_type: ConversionAdjustmentTypeEnum.ConversionAdjustmentType = ...,
         restatement_value: RestatementValue = ...,
-        user_identifiers: list[UserIdentifier] = ...,
+        user_identifiers: MutableSequence[UserIdentifier] = ...,
         user_agent: str = ...
     ) -> None: ...
 
@@ -76,7 +77,7 @@ class RestatementValue(proto.Message):
 
 class UploadConversionAdjustmentsRequest(proto.Message):
     customer_id: str
-    conversion_adjustments: list[ConversionAdjustment]
+    conversion_adjustments: MutableSequence[ConversionAdjustment]
     partial_failure: bool
     validate_only: bool
     def __init__(
@@ -85,19 +86,19 @@ class UploadConversionAdjustmentsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        conversion_adjustments: list[ConversionAdjustment] = ...,
+        conversion_adjustments: MutableSequence[ConversionAdjustment] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class UploadConversionAdjustmentsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[ConversionAdjustmentResult]
+    results: MutableSequence[ConversionAdjustmentResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[ConversionAdjustmentResult] = ...
+        results: MutableSequence[ConversionAdjustmentResult] = ...
     ) -> None: ...

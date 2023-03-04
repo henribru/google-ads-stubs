@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -135,7 +136,7 @@ class AttributeFieldMapping(proto.Message):
 class FeedMapping(proto.Message):
     resource_name: str
     feed: str
-    attribute_field_mappings: list[AttributeFieldMapping]
+    attribute_field_mappings: MutableSequence[AttributeFieldMapping]
     status: FeedMappingStatusEnum.FeedMappingStatus
     placeholder_type: PlaceholderTypeEnum.PlaceholderType
     criterion_type: FeedMappingCriterionTypeEnum.FeedMappingCriterionType
@@ -146,7 +147,7 @@ class FeedMapping(proto.Message):
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
         feed: str = ...,
-        attribute_field_mappings: list[AttributeFieldMapping] = ...,
+        attribute_field_mappings: MutableSequence[AttributeFieldMapping] = ...,
         status: FeedMappingStatusEnum.FeedMappingStatus = ...,
         placeholder_type: PlaceholderTypeEnum.PlaceholderType = ...,
         criterion_type: FeedMappingCriterionTypeEnum.FeedMappingCriterionType = ...

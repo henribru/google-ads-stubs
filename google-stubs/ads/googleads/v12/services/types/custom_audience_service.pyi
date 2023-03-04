@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -33,7 +34,7 @@ class MutateCustomAudienceResult(proto.Message):
 
 class MutateCustomAudiencesRequest(proto.Message):
     customer_id: str
-    operations: list[CustomAudienceOperation]
+    operations: MutableSequence[CustomAudienceOperation]
     validate_only: bool
     def __init__(
         self,
@@ -41,16 +42,16 @@ class MutateCustomAudiencesRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[CustomAudienceOperation] = ...,
+        operations: MutableSequence[CustomAudienceOperation] = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateCustomAudiencesResponse(proto.Message):
-    results: list[MutateCustomAudienceResult]
+    results: MutableSequence[MutateCustomAudienceResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[MutateCustomAudienceResult] = ...
+        results: MutableSequence[MutateCustomAudienceResult] = ...
     ) -> None: ...

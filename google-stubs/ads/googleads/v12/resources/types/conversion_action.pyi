@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -91,7 +92,7 @@ class ConversionAction(proto.Message):
     value_settings: ConversionAction.ValueSettings
     counting_type: ConversionActionCountingTypeEnum.ConversionActionCountingType
     attribution_model_settings: ConversionAction.AttributionModelSettings
-    tag_snippets: list[TagSnippet]
+    tag_snippets: MutableSequence[TagSnippet]
     phone_call_duration_seconds: int
     app_id: str
     mobile_app_vendor: MobileAppVendorEnum.MobileAppVendor
@@ -117,7 +118,7 @@ class ConversionAction(proto.Message):
         value_settings: ConversionAction.ValueSettings = ...,
         counting_type: ConversionActionCountingTypeEnum.ConversionActionCountingType = ...,
         attribution_model_settings: ConversionAction.AttributionModelSettings = ...,
-        tag_snippets: list[TagSnippet] = ...,
+        tag_snippets: MutableSequence[TagSnippet] = ...,
         phone_call_duration_seconds: int = ...,
         app_id: str = ...,
         mobile_app_vendor: MobileAppVendorEnum.MobileAppVendor = ...,

@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -61,13 +62,13 @@ class ListAccessibleCustomersRequest(proto.Message):
     ...
 
 class ListAccessibleCustomersResponse(proto.Message):
-    resource_names: list[str]
+    resource_names: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        resource_names: list[str] = ...,
+        resource_names: MutableSequence[str] = ...,
     ) -> None: ...
 
 class MutateCustomerRequest(proto.Message):

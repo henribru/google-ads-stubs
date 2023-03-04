@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -30,7 +31,7 @@ class AudienceCompositionAttribute(proto.Message):
 class AudienceCompositionAttributeCluster(proto.Message):
     cluster_display_name: str
     cluster_metrics: AudienceCompositionMetrics
-    attributes: list[AudienceCompositionAttribute]
+    attributes: MutableSequence[AudienceCompositionAttribute]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -38,7 +39,7 @@ class AudienceCompositionAttributeCluster(proto.Message):
         ignore_unknown_fields: bool = ...,
         cluster_display_name: str = ...,
         cluster_metrics: AudienceCompositionMetrics = ...,
-        attributes: list[AudienceCompositionAttribute] = ...,
+        attributes: MutableSequence[AudienceCompositionAttribute] = ...,
     ) -> None: ...
 
 class AudienceCompositionMetrics(proto.Message):
@@ -59,16 +60,18 @@ class AudienceCompositionMetrics(proto.Message):
 
 class AudienceCompositionSection(proto.Message):
     dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension
-    top_attributes: list[AudienceCompositionAttribute]
-    clustered_attributes: list[AudienceCompositionAttributeCluster]
+    top_attributes: MutableSequence[AudienceCompositionAttribute]
+    clustered_attributes: MutableSequence[AudienceCompositionAttributeCluster]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension = ...,
-        top_attributes: list[AudienceCompositionAttribute] = ...,
-        clustered_attributes: list[AudienceCompositionAttributeCluster] = ...,
+        top_attributes: MutableSequence[AudienceCompositionAttribute] = ...,
+        clustered_attributes: MutableSequence[
+            AudienceCompositionAttributeCluster
+        ] = ...,
     ) -> None: ...
 
 class AudienceInsightsAttribute(proto.Message):
@@ -166,23 +169,23 @@ class AudienceInsightsTopic(proto.Message):
     ) -> None: ...
 
 class BasicInsightsAudience(proto.Message):
-    country_location: list[LocationInfo]
-    sub_country_locations: list[LocationInfo]
+    country_location: MutableSequence[LocationInfo]
+    sub_country_locations: MutableSequence[LocationInfo]
     gender: GenderInfo
-    age_ranges: list[AgeRangeInfo]
-    user_interests: list[UserInterestInfo]
-    topics: list[AudienceInsightsTopic]
+    age_ranges: MutableSequence[AgeRangeInfo]
+    user_interests: MutableSequence[UserInterestInfo]
+    topics: MutableSequence[AudienceInsightsTopic]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        country_location: list[LocationInfo] = ...,
-        sub_country_locations: list[LocationInfo] = ...,
+        country_location: MutableSequence[LocationInfo] = ...,
+        sub_country_locations: MutableSequence[LocationInfo] = ...,
         gender: GenderInfo = ...,
-        age_ranges: list[AgeRangeInfo] = ...,
-        user_interests: list[UserInterestInfo] = ...,
-        topics: list[AudienceInsightsTopic] = ...,
+        age_ranges: MutableSequence[AgeRangeInfo] = ...,
+        user_interests: MutableSequence[UserInterestInfo] = ...,
+        topics: MutableSequence[AudienceInsightsTopic] = ...,
     ) -> None: ...
 
 class DynamicLineupAttributeMetadata(proto.Message):
@@ -205,7 +208,7 @@ class GenerateAudienceCompositionInsightsRequest(proto.Message):
     customer_id: str
     audience: InsightsAudience
     data_month: str
-    dimensions: list[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
+    dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
     customer_insights_group: str
     def __init__(
         self,
@@ -215,18 +218,20 @@ class GenerateAudienceCompositionInsightsRequest(proto.Message):
         customer_id: str = ...,
         audience: InsightsAudience = ...,
         data_month: str = ...,
-        dimensions: list[AudienceInsightsDimensionEnum.AudienceInsightsDimension] = ...,
+        dimensions: MutableSequence[
+            AudienceInsightsDimensionEnum.AudienceInsightsDimension
+        ] = ...,
         customer_insights_group: str = ...,
     ) -> None: ...
 
 class GenerateAudienceCompositionInsightsResponse(proto.Message):
-    sections: list[AudienceCompositionSection]
+    sections: MutableSequence[AudienceCompositionSection]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        sections: list[AudienceCompositionSection] = ...,
+        sections: MutableSequence[AudienceCompositionSection] = ...,
     ) -> None: ...
 
 class GenerateInsightsFinderReportRequest(proto.Message):
@@ -256,65 +261,69 @@ class GenerateInsightsFinderReportResponse(proto.Message):
     ) -> None: ...
 
 class InsightsAudience(proto.Message):
-    country_locations: list[LocationInfo]
-    sub_country_locations: list[LocationInfo]
+    country_locations: MutableSequence[LocationInfo]
+    sub_country_locations: MutableSequence[LocationInfo]
     gender: GenderInfo
-    age_ranges: list[AgeRangeInfo]
+    age_ranges: MutableSequence[AgeRangeInfo]
     parental_status: ParentalStatusInfo
-    income_ranges: list[IncomeRangeInfo]
-    dynamic_lineups: list[AudienceInsightsDynamicLineup]
-    topic_audience_combinations: list[InsightsAudienceAttributeGroup]
+    income_ranges: MutableSequence[IncomeRangeInfo]
+    dynamic_lineups: MutableSequence[AudienceInsightsDynamicLineup]
+    topic_audience_combinations: MutableSequence[InsightsAudienceAttributeGroup]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        country_locations: list[LocationInfo] = ...,
-        sub_country_locations: list[LocationInfo] = ...,
+        country_locations: MutableSequence[LocationInfo] = ...,
+        sub_country_locations: MutableSequence[LocationInfo] = ...,
         gender: GenderInfo = ...,
-        age_ranges: list[AgeRangeInfo] = ...,
+        age_ranges: MutableSequence[AgeRangeInfo] = ...,
         parental_status: ParentalStatusInfo = ...,
-        income_ranges: list[IncomeRangeInfo] = ...,
-        dynamic_lineups: list[AudienceInsightsDynamicLineup] = ...,
-        topic_audience_combinations: list[InsightsAudienceAttributeGroup] = ...,
+        income_ranges: MutableSequence[IncomeRangeInfo] = ...,
+        dynamic_lineups: MutableSequence[AudienceInsightsDynamicLineup] = ...,
+        topic_audience_combinations: MutableSequence[
+            InsightsAudienceAttributeGroup
+        ] = ...,
     ) -> None: ...
 
 class InsightsAudienceAttributeGroup(proto.Message):
-    attributes: list[AudienceInsightsAttribute]
+    attributes: MutableSequence[AudienceInsightsAttribute]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        attributes: list[AudienceInsightsAttribute] = ...,
+        attributes: MutableSequence[AudienceInsightsAttribute] = ...,
     ) -> None: ...
 
 class ListAudienceInsightsAttributesRequest(proto.Message):
     customer_id: str
-    dimensions: list[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
+    dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
     query_text: str
     customer_insights_group: str
-    location_country_filters: list[LocationInfo]
+    location_country_filters: MutableSequence[LocationInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        dimensions: list[AudienceInsightsDimensionEnum.AudienceInsightsDimension] = ...,
+        dimensions: MutableSequence[
+            AudienceInsightsDimensionEnum.AudienceInsightsDimension
+        ] = ...,
         query_text: str = ...,
         customer_insights_group: str = ...,
-        location_country_filters: list[LocationInfo] = ...,
+        location_country_filters: MutableSequence[LocationInfo] = ...,
     ) -> None: ...
 
 class ListAudienceInsightsAttributesResponse(proto.Message):
-    attributes: list[AudienceInsightsAttributeMetadata]
+    attributes: MutableSequence[AudienceInsightsAttributeMetadata]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        attributes: list[AudienceInsightsAttributeMetadata] = ...,
+        attributes: MutableSequence[AudienceInsightsAttributeMetadata] = ...,
     ) -> None: ...
 
 class ListInsightsEligibleDatesRequest(proto.Message):
@@ -327,13 +336,13 @@ class ListInsightsEligibleDatesRequest(proto.Message):
     ...
 
 class ListInsightsEligibleDatesResponse(proto.Message):
-    data_months: list[str]
+    data_months: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        data_months: list[str] = ...,
+        data_months: MutableSequence[str] = ...,
     ) -> None: ...
 
 class LocationAttributeMetadata(proto.Message):

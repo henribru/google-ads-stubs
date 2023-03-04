@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -25,18 +26,18 @@ class SmartCampaignSuggestionInfo(proto.Message):
         ) -> None: ...
 
     class LocationList(proto.Message):
-        locations: list[LocationInfo]
+        locations: MutableSequence[LocationInfo]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            locations: list[LocationInfo] = ...
+            locations: MutableSequence[LocationInfo] = ...
         ) -> None: ...
     final_url: str
     language_code: str
-    ad_schedules: list[AdScheduleInfo]
-    keyword_themes: list[KeywordThemeInfo]
+    ad_schedules: MutableSequence[AdScheduleInfo]
+    keyword_themes: MutableSequence[KeywordThemeInfo]
     business_context: SmartCampaignSuggestionInfo.BusinessContext
     business_profile_location: str
     location_list: SmartCampaignSuggestionInfo.LocationList
@@ -48,8 +49,8 @@ class SmartCampaignSuggestionInfo(proto.Message):
         ignore_unknown_fields: bool = ...,
         final_url: str = ...,
         language_code: str = ...,
-        ad_schedules: list[AdScheduleInfo] = ...,
-        keyword_themes: list[KeywordThemeInfo] = ...,
+        ad_schedules: MutableSequence[AdScheduleInfo] = ...,
+        keyword_themes: MutableSequence[KeywordThemeInfo] = ...,
         business_context: SmartCampaignSuggestionInfo.BusinessContext = ...,
         business_profile_location: str = ...,
         location_list: SmartCampaignSuggestionInfo.LocationList = ...,
@@ -80,13 +81,13 @@ class SuggestKeywordThemesResponse(proto.Message):
             keyword_theme_constant: KeywordThemeConstant = ...,
             free_form_keyword_theme: str = ...
         ) -> None: ...
-    keyword_themes: list[SuggestKeywordThemesResponse.KeywordTheme]
+    keyword_themes: MutableSequence[SuggestKeywordThemesResponse.KeywordTheme]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        keyword_themes: list[SuggestKeywordThemesResponse.KeywordTheme] = ...
+        keyword_themes: MutableSequence[SuggestKeywordThemesResponse.KeywordTheme] = ...
     ) -> None: ...
 
 class SuggestSmartCampaignAdRequest(proto.Message):

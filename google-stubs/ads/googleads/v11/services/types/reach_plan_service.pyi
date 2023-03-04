@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -30,13 +31,13 @@ class AdvancedProductTargeting(proto.Message):
     ) -> None: ...
 
 class AudienceTargeting(proto.Message):
-    user_interest: list[UserInterestInfo]
+    user_interest: MutableSequence[UserInterestInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        user_interest: list[UserInterestInfo] = ...,
+        user_interest: MutableSequence[UserInterestInfo] = ...,
     ) -> None: ...
 
 class CampaignDuration(proto.Message):
@@ -85,7 +86,7 @@ class Forecast(proto.Message):
     on_target_impressions: int
     total_impressions: int
     viewable_impressions: int
-    effective_frequency_breakdowns: list[EffectiveFrequencyBreakdown]
+    effective_frequency_breakdowns: MutableSequence[EffectiveFrequencyBreakdown]
     on_target_coview_reach: int
     total_coview_reach: int
     on_target_coview_impressions: int
@@ -100,7 +101,9 @@ class Forecast(proto.Message):
         on_target_impressions: int = ...,
         total_impressions: int = ...,
         viewable_impressions: int = ...,
-        effective_frequency_breakdowns: list[EffectiveFrequencyBreakdown] = ...,
+        effective_frequency_breakdowns: MutableSequence[
+            EffectiveFrequencyBreakdown
+        ] = ...,
         on_target_coview_reach: int = ...,
         total_coview_reach: int = ...,
         on_target_coview_impressions: int = ...,
@@ -148,13 +151,13 @@ class GenerateProductMixIdeasRequest(proto.Message):
     ) -> None: ...
 
 class GenerateProductMixIdeasResponse(proto.Message):
-    product_allocation: list[ProductAllocation]
+    product_allocation: MutableSequence[ProductAllocation]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        product_allocation: list[ProductAllocation] = ...,
+        product_allocation: MutableSequence[ProductAllocation] = ...,
     ) -> None: ...
 
 class GenerateReachForecastRequest(proto.Message):
@@ -166,7 +169,7 @@ class GenerateReachForecastRequest(proto.Message):
     min_effective_frequency: int
     effective_frequency_limit: EffectiveFrequencyLimit
     targeting: Targeting
-    planned_products: list[PlannedProduct]
+    planned_products: MutableSequence[PlannedProduct]
     forecast_metric_options: ForecastMetricOptions
     customer_reach_group: str
     def __init__(
@@ -182,7 +185,7 @@ class GenerateReachForecastRequest(proto.Message):
         min_effective_frequency: int = ...,
         effective_frequency_limit: EffectiveFrequencyLimit = ...,
         targeting: Targeting = ...,
-        planned_products: list[PlannedProduct] = ...,
+        planned_products: MutableSequence[PlannedProduct] = ...,
         forecast_metric_options: ForecastMetricOptions = ...,
         customer_reach_group: str = ...,
     ) -> None: ...
@@ -209,13 +212,13 @@ class ListPlannableLocationsRequest(proto.Message):
     ...
 
 class ListPlannableLocationsResponse(proto.Message):
-    plannable_locations: list[PlannableLocation]
+    plannable_locations: MutableSequence[PlannableLocation]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        plannable_locations: list[PlannableLocation] = ...,
+        plannable_locations: MutableSequence[PlannableLocation] = ...,
     ) -> None: ...
 
 class ListPlannableProductsRequest(proto.Message):
@@ -229,13 +232,13 @@ class ListPlannableProductsRequest(proto.Message):
     ) -> None: ...
 
 class ListPlannableProductsResponse(proto.Message):
-    product_metadata: list[ProductMetadata]
+    product_metadata: MutableSequence[ProductMetadata]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        product_metadata: list[ProductMetadata] = ...,
+        product_metadata: MutableSequence[ProductMetadata] = ...,
     ) -> None: ...
 
 class OnTargetAudienceMetrics(proto.Message):
@@ -269,21 +272,21 @@ class PlannableLocation(proto.Message):
     ) -> None: ...
 
 class PlannableTargeting(proto.Message):
-    age_ranges: list[ReachPlanAgeRangeEnum.ReachPlanAgeRange]
-    genders: list[GenderInfo]
-    devices: list[DeviceInfo]
-    networks: list[ReachPlanNetworkEnum.ReachPlanNetwork]
-    youtube_select_lineups: list[YouTubeSelectLineUp]
+    age_ranges: MutableSequence[ReachPlanAgeRangeEnum.ReachPlanAgeRange]
+    genders: MutableSequence[GenderInfo]
+    devices: MutableSequence[DeviceInfo]
+    networks: MutableSequence[ReachPlanNetworkEnum.ReachPlanNetwork]
+    youtube_select_lineups: MutableSequence[YouTubeSelectLineUp]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        age_ranges: list[ReachPlanAgeRangeEnum.ReachPlanAgeRange] = ...,
-        genders: list[GenderInfo] = ...,
-        devices: list[DeviceInfo] = ...,
-        networks: list[ReachPlanNetworkEnum.ReachPlanNetwork] = ...,
-        youtube_select_lineups: list[YouTubeSelectLineUp] = ...,
+        age_ranges: MutableSequence[ReachPlanAgeRangeEnum.ReachPlanAgeRange] = ...,
+        genders: MutableSequence[GenderInfo] = ...,
+        devices: MutableSequence[DeviceInfo] = ...,
+        networks: MutableSequence[ReachPlanNetworkEnum.ReachPlanNetwork] = ...,
+        youtube_select_lineups: MutableSequence[YouTubeSelectLineUp] = ...,
     ) -> None: ...
 
 class PlannedProduct(proto.Message):
@@ -385,19 +388,19 @@ class ProductMetadata(proto.Message):
     ) -> None: ...
 
 class ReachCurve(proto.Message):
-    reach_forecasts: list[ReachForecast]
+    reach_forecasts: MutableSequence[ReachForecast]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        reach_forecasts: list[ReachForecast] = ...,
+        reach_forecasts: MutableSequence[ReachForecast] = ...,
     ) -> None: ...
 
 class ReachForecast(proto.Message):
     cost_micros: int
     forecast: Forecast
-    planned_product_reach_forecasts: list[PlannedProductReachForecast]
+    planned_product_reach_forecasts: MutableSequence[PlannedProductReachForecast]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -405,14 +408,16 @@ class ReachForecast(proto.Message):
         ignore_unknown_fields: bool = ...,
         cost_micros: int = ...,
         forecast: Forecast = ...,
-        planned_product_reach_forecasts: list[PlannedProductReachForecast] = ...,
+        planned_product_reach_forecasts: MutableSequence[
+            PlannedProductReachForecast
+        ] = ...,
     ) -> None: ...
 
 class Targeting(proto.Message):
     plannable_location_id: str
     age_range: ReachPlanAgeRangeEnum.ReachPlanAgeRange
-    genders: list[GenderInfo]
-    devices: list[DeviceInfo]
+    genders: MutableSequence[GenderInfo]
+    devices: MutableSequence[DeviceInfo]
     network: ReachPlanNetworkEnum.ReachPlanNetwork
     audience_targeting: AudienceTargeting
     def __init__(
@@ -422,8 +427,8 @@ class Targeting(proto.Message):
         ignore_unknown_fields: bool = ...,
         plannable_location_id: str = ...,
         age_range: ReachPlanAgeRangeEnum.ReachPlanAgeRange = ...,
-        genders: list[GenderInfo] = ...,
-        devices: list[DeviceInfo] = ...,
+        genders: MutableSequence[GenderInfo] = ...,
+        devices: MutableSequence[DeviceInfo] = ...,
         network: ReachPlanNetworkEnum.ReachPlanNetwork = ...,
         audience_targeting: AudienceTargeting = ...,
     ) -> None: ...
