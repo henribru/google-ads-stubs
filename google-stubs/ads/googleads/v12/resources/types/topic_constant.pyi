@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -6,7 +7,7 @@ class TopicConstant(proto.Message):
     resource_name: str
     id: int
     topic_constant_parent: str
-    path: list[str]
+    path: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -15,5 +16,5 @@ class TopicConstant(proto.Message):
         resource_name: str = ...,
         id: int = ...,
         topic_constant_parent: str = ...,
-        path: list[str] = ...
+        path: MutableSequence[str] = ...
     ) -> None: ...

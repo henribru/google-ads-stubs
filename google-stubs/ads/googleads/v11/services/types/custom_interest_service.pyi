@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -31,7 +32,7 @@ class MutateCustomInterestResult(proto.Message):
 
 class MutateCustomInterestsRequest(proto.Message):
     customer_id: str
-    operations: list[CustomInterestOperation]
+    operations: MutableSequence[CustomInterestOperation]
     validate_only: bool
     def __init__(
         self,
@@ -39,16 +40,16 @@ class MutateCustomInterestsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[CustomInterestOperation] = ...,
+        operations: MutableSequence[CustomInterestOperation] = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateCustomInterestsResponse(proto.Message):
-    results: list[MutateCustomInterestResult]
+    results: MutableSequence[MutateCustomInterestResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[MutateCustomInterestResult] = ...
+        results: MutableSequence[MutateCustomInterestResult] = ...
     ) -> None: ...

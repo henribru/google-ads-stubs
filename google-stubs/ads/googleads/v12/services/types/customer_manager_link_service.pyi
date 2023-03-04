@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -47,7 +48,7 @@ class MoveManagerLinkResponse(proto.Message):
 
 class MutateCustomerManagerLinkRequest(proto.Message):
     customer_id: str
-    operations: list[CustomerManagerLinkOperation]
+    operations: MutableSequence[CustomerManagerLinkOperation]
     validate_only: bool
     def __init__(
         self,
@@ -55,18 +56,18 @@ class MutateCustomerManagerLinkRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[CustomerManagerLinkOperation] = ...,
+        operations: MutableSequence[CustomerManagerLinkOperation] = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateCustomerManagerLinkResponse(proto.Message):
-    results: list[MutateCustomerManagerLinkResult]
+    results: MutableSequence[MutateCustomerManagerLinkResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[MutateCustomerManagerLinkResult] = ...
+        results: MutableSequence[MutateCustomerManagerLinkResult] = ...
     ) -> None: ...
 
 class MutateCustomerManagerLinkResult(proto.Message):

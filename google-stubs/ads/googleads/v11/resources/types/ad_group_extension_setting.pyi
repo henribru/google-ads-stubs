@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -11,7 +12,7 @@ class AdGroupExtensionSetting(proto.Message):
     resource_name: str
     extension_type: ExtensionTypeEnum.ExtensionType
     ad_group: str
-    extension_feed_items: list[str]
+    extension_feed_items: MutableSequence[str]
     device: ExtensionSettingDeviceEnum.ExtensionSettingDevice
     def __init__(
         self,
@@ -21,6 +22,6 @@ class AdGroupExtensionSetting(proto.Message):
         resource_name: str = ...,
         extension_type: ExtensionTypeEnum.ExtensionType = ...,
         ad_group: str = ...,
-        extension_feed_items: list[str] = ...,
+        extension_feed_items: MutableSequence[str] = ...,
         device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...
     ) -> None: ...

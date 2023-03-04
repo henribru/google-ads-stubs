@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -99,10 +100,10 @@ class Invoice(proto.Message):
     tax_amount_micros: int
     total_amount_micros: int
     corrected_invoice: str
-    replaced_invoices: list[str]
+    replaced_invoices: MutableSequence[str]
     pdf_url: str
-    account_budget_summaries: list[Invoice.AccountBudgetSummary]
-    account_summaries: list[Invoice.AccountSummary]
+    account_budget_summaries: MutableSequence[Invoice.AccountBudgetSummary]
+    account_summaries: MutableSequence[Invoice.AccountSummary]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -128,8 +129,8 @@ class Invoice(proto.Message):
         tax_amount_micros: int = ...,
         total_amount_micros: int = ...,
         corrected_invoice: str = ...,
-        replaced_invoices: list[str] = ...,
+        replaced_invoices: MutableSequence[str] = ...,
         pdf_url: str = ...,
-        account_budget_summaries: list[Invoice.AccountBudgetSummary] = ...,
-        account_summaries: list[Invoice.AccountSummary] = ...
+        account_budget_summaries: MutableSequence[Invoice.AccountBudgetSummary] = ...,
+        account_summaries: MutableSequence[Invoice.AccountSummary] = ...
     ) -> None: ...

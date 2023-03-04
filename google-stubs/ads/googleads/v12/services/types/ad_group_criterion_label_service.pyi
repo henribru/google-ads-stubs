@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -31,7 +32,7 @@ class MutateAdGroupCriterionLabelResult(proto.Message):
 
 class MutateAdGroupCriterionLabelsRequest(proto.Message):
     customer_id: str
-    operations: list[AdGroupCriterionLabelOperation]
+    operations: MutableSequence[AdGroupCriterionLabelOperation]
     partial_failure: bool
     validate_only: bool
     def __init__(
@@ -40,19 +41,19 @@ class MutateAdGroupCriterionLabelsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[AdGroupCriterionLabelOperation] = ...,
+        operations: MutableSequence[AdGroupCriterionLabelOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateAdGroupCriterionLabelsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateAdGroupCriterionLabelResult]
+    results: MutableSequence[MutateAdGroupCriterionLabelResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateAdGroupCriterionLabelResult] = ...
+        results: MutableSequence[MutateAdGroupCriterionLabelResult] = ...
     ) -> None: ...

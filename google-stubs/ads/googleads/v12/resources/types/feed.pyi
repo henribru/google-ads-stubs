@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -13,14 +14,14 @@ from google.ads.googleads.v12.enums.types.feed_status import FeedStatusEnum
 
 class Feed(proto.Message):
     class AffiliateLocationFeedData(proto.Message):
-        chain_ids: list[int]
+        chain_ids: MutableSequence[int]
         relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            chain_ids: list[int] = ...,
+            chain_ids: MutableSequence[int] = ...,
             relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType = ...
         ) -> None: ...
 
@@ -42,8 +43,8 @@ class Feed(proto.Message):
         email_address: str
         business_account_id: str
         business_name_filter: str
-        category_filters: list[str]
-        label_filters: list[str]
+        category_filters: MutableSequence[str]
+        label_filters: MutableSequence[str]
         def __init__(
             self,
             mapping: Any | None = ...,
@@ -53,14 +54,14 @@ class Feed(proto.Message):
             email_address: str = ...,
             business_account_id: str = ...,
             business_name_filter: str = ...,
-            category_filters: list[str] = ...,
-            label_filters: list[str] = ...
+            category_filters: MutableSequence[str] = ...,
+            label_filters: MutableSequence[str] = ...
         ) -> None: ...
     resource_name: str
     id: int
     name: str
-    attributes: list[FeedAttribute]
-    attribute_operations: list[FeedAttributeOperation]
+    attributes: MutableSequence[FeedAttribute]
+    attribute_operations: MutableSequence[FeedAttributeOperation]
     origin: FeedOriginEnum.FeedOrigin
     status: FeedStatusEnum.FeedStatus
     places_location_feed_data: Feed.PlacesLocationFeedData
@@ -73,8 +74,8 @@ class Feed(proto.Message):
         resource_name: str = ...,
         id: int = ...,
         name: str = ...,
-        attributes: list[FeedAttribute] = ...,
-        attribute_operations: list[FeedAttributeOperation] = ...,
+        attributes: MutableSequence[FeedAttribute] = ...,
+        attribute_operations: MutableSequence[FeedAttributeOperation] = ...,
         origin: FeedOriginEnum.FeedOrigin = ...,
         status: FeedStatusEnum.FeedStatus = ...,
         places_location_feed_data: Feed.PlacesLocationFeedData = ...,

@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -15,11 +16,11 @@ class ListPaymentsAccountsRequest(proto.Message):
     ) -> None: ...
 
 class ListPaymentsAccountsResponse(proto.Message):
-    payments_accounts: list[PaymentsAccount]
+    payments_accounts: MutableSequence[PaymentsAccount]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        payments_accounts: list[PaymentsAccount] = ...
+        payments_accounts: MutableSequence[PaymentsAccount] = ...
     ) -> None: ...

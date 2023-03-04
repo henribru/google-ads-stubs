@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -11,10 +12,10 @@ class KeywordPlanCampaign(proto.Message):
     keyword_plan: str
     id: int
     name: str
-    language_constants: list[str]
+    language_constants: MutableSequence[str]
     keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork
     cpc_bid_micros: int
-    geo_targets: list[KeywordPlanGeoTarget]
+    geo_targets: MutableSequence[KeywordPlanGeoTarget]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -24,10 +25,10 @@ class KeywordPlanCampaign(proto.Message):
         keyword_plan: str = ...,
         id: int = ...,
         name: str = ...,
-        language_constants: list[str] = ...,
+        language_constants: MutableSequence[str] = ...,
         keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork = ...,
         cpc_bid_micros: int = ...,
-        geo_targets: list[KeywordPlanGeoTarget] = ...
+        geo_targets: MutableSequence[KeywordPlanGeoTarget] = ...
     ) -> None: ...
 
 class KeywordPlanGeoTarget(proto.Message):

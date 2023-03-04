@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -10,7 +11,7 @@ class CampaignFeed(proto.Message):
     resource_name: str
     feed: str
     campaign: str
-    placeholder_types: list[PlaceholderTypeEnum.PlaceholderType]
+    placeholder_types: MutableSequence[PlaceholderTypeEnum.PlaceholderType]
     matching_function: MatchingFunction
     status: FeedLinkStatusEnum.FeedLinkStatus
     def __init__(
@@ -21,7 +22,7 @@ class CampaignFeed(proto.Message):
         resource_name: str = ...,
         feed: str = ...,
         campaign: str = ...,
-        placeholder_types: list[PlaceholderTypeEnum.PlaceholderType] = ...,
+        placeholder_types: MutableSequence[PlaceholderTypeEnum.PlaceholderType] = ...,
         matching_function: MatchingFunction = ...,
         status: FeedLinkStatusEnum.FeedLinkStatus = ...
     ) -> None: ...

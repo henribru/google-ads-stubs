@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -29,7 +30,7 @@ class ExtensionFeedItem(proto.Message):
     extension_type: ExtensionTypeEnum.ExtensionType
     start_date_time: str
     end_date_time: str
-    ad_schedules: list[AdScheduleInfo]
+    ad_schedules: MutableSequence[AdScheduleInfo]
     device: FeedItemTargetDeviceEnum.FeedItemTargetDevice
     targeted_geo_target_constant: str
     targeted_keyword: KeywordInfo
@@ -58,7 +59,7 @@ class ExtensionFeedItem(proto.Message):
         extension_type: ExtensionTypeEnum.ExtensionType = ...,
         start_date_time: str = ...,
         end_date_time: str = ...,
-        ad_schedules: list[AdScheduleInfo] = ...,
+        ad_schedules: MutableSequence[AdScheduleInfo] = ...,
         device: FeedItemTargetDeviceEnum.FeedItemTargetDevice = ...,
         targeted_geo_target_constant: str = ...,
         targeted_keyword: KeywordInfo = ...,

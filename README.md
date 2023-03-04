@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/google-ads-stubs.svg)](https://badge.fury.io/py/google-ads-stubs)
 
 This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). 
-It's currently compatible with v18.1.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
+It's currently compatible with v20.0.0 of this library. It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
 
 **This is in no way affiliated with Google.**
 
@@ -26,16 +26,16 @@ methods of `Client`. The only exception is `get_service("GoogleAdsService")`, wh
 # Replace this:
 campaign_operation = client.get_type('CampaignOperation')
 # With this:
-from google.ads.googleads.v10 import CampaignOperation
+from google.ads.googleads.v13 import CampaignOperation
 campaign_operation: CampaignOperation = client.get_type('CampaignOperation')
 # Or this:
-from google.ads.googleads.v10 import CampaignOperation
+from google.ads.googleads.v13 import CampaignOperation
 campaign_operation = CampaignOperation()
 
 # Replace this:
 campaign_service = client.get_service('CampaignService')
 # With this:
-from google.ads.googleads.v10 import CampaignServiceClient
+from google.ads.googleads.v13 import CampaignServiceClient
 campaign_service: CampaignServiceClient = client.get_service('CampaignService')
 # But you can keep this:
 google_ads_service = client.get_service('GoogleAdsService')
@@ -52,7 +52,7 @@ On the other hand certain types are more strict than what's allowed at runtime. 
 # Replace this:
 AdGroupAd({"status": "ENABLED", ad={"type": 2}})
 # With this:
-from google.ads.googleads.v10 import AdGroupAdStatusEnum, AdTypeEnum, Ad
+from google.ads.googleads.v13 import AdGroupAdStatusEnum, AdTypeEnum, Ad
 AdGroupAd(status=AdGroupAdStatusEnum.AdGroupAdStatus.ENABLED, ad=Ad(type=AdTypeEnum.AdType.TEXT_AD))
 ```
 

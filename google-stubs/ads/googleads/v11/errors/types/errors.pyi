@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -646,13 +647,13 @@ class ErrorLocation(proto.Message):
             field_name: str = ...,
             index: int = ...
         ) -> None: ...
-    field_path_elements: list[ErrorLocation.FieldPathElement]
+    field_path_elements: MutableSequence[ErrorLocation.FieldPathElement]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        field_path_elements: list[ErrorLocation.FieldPathElement] = ...
+        field_path_elements: MutableSequence[ErrorLocation.FieldPathElement] = ...
     ) -> None: ...
 
 class GoogleAdsError(proto.Message):
@@ -674,25 +675,25 @@ class GoogleAdsError(proto.Message):
     ) -> None: ...
 
 class GoogleAdsFailure(proto.Message):
-    errors: list[GoogleAdsError]
+    errors: MutableSequence[GoogleAdsError]
     request_id: str
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        errors: list[GoogleAdsError] = ...,
+        errors: MutableSequence[GoogleAdsError] = ...,
         request_id: str = ...
     ) -> None: ...
 
 class PolicyFindingDetails(proto.Message):
-    policy_topic_entries: list[PolicyTopicEntry]
+    policy_topic_entries: MutableSequence[PolicyTopicEntry]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        policy_topic_entries: list[PolicyTopicEntry] = ...
+        policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...
     ) -> None: ...
 
 class PolicyViolationDetails(proto.Message):

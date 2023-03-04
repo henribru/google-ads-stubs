@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -22,11 +23,11 @@ class ListInvoicesRequest(proto.Message):
     ) -> None: ...
 
 class ListInvoicesResponse(proto.Message):
-    invoices: list[Invoice]
+    invoices: MutableSequence[Invoice]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        invoices: list[Invoice] = ...
+        invoices: MutableSequence[Invoice] = ...
     ) -> None: ...

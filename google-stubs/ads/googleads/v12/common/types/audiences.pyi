@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -9,14 +10,14 @@ from google.ads.googleads.v12.enums.types.parental_status_type import (
 )
 
 class AgeDimension(proto.Message):
-    age_ranges: list[AgeSegment]
+    age_ranges: MutableSequence[AgeSegment]
     include_undetermined: bool
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        age_ranges: list[AgeSegment] = ...,
+        age_ranges: MutableSequence[AgeSegment] = ...,
         include_undetermined: bool = ...
     ) -> None: ...
 
@@ -51,13 +52,13 @@ class AudienceDimension(proto.Message):
     ) -> None: ...
 
 class AudienceExclusionDimension(proto.Message):
-    exclusions: list[ExclusionSegment]
+    exclusions: MutableSequence[ExclusionSegment]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        exclusions: list[ExclusionSegment] = ...
+        exclusions: MutableSequence[ExclusionSegment] = ...
     ) -> None: ...
 
 class AudienceSegment(proto.Message):
@@ -79,13 +80,13 @@ class AudienceSegment(proto.Message):
     ) -> None: ...
 
 class AudienceSegmentDimension(proto.Message):
-    segments: list[AudienceSegment]
+    segments: MutableSequence[AudienceSegment]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        segments: list[AudienceSegment] = ...
+        segments: MutableSequence[AudienceSegment] = ...
     ) -> None: ...
 
 class CustomAudienceSegment(proto.Message):
@@ -119,26 +120,26 @@ class ExclusionSegment(proto.Message):
     ) -> None: ...
 
 class GenderDimension(proto.Message):
-    genders: list[GenderTypeEnum.GenderType]
+    genders: MutableSequence[GenderTypeEnum.GenderType]
     include_undetermined: bool
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        genders: list[GenderTypeEnum.GenderType] = ...,
+        genders: MutableSequence[GenderTypeEnum.GenderType] = ...,
         include_undetermined: bool = ...
     ) -> None: ...
 
 class HouseholdIncomeDimension(proto.Message):
-    income_ranges: list[IncomeRangeTypeEnum.IncomeRangeType]
+    income_ranges: MutableSequence[IncomeRangeTypeEnum.IncomeRangeType]
     include_undetermined: bool
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        income_ranges: list[IncomeRangeTypeEnum.IncomeRangeType] = ...,
+        income_ranges: MutableSequence[IncomeRangeTypeEnum.IncomeRangeType] = ...,
         include_undetermined: bool = ...
     ) -> None: ...
 
@@ -153,14 +154,16 @@ class LifeEventSegment(proto.Message):
     ) -> None: ...
 
 class ParentalStatusDimension(proto.Message):
-    parental_statuses: list[ParentalStatusTypeEnum.ParentalStatusType]
+    parental_statuses: MutableSequence[ParentalStatusTypeEnum.ParentalStatusType]
     include_undetermined: bool
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        parental_statuses: list[ParentalStatusTypeEnum.ParentalStatusType] = ...,
+        parental_statuses: MutableSequence[
+            ParentalStatusTypeEnum.ParentalStatusType
+        ] = ...,
         include_undetermined: bool = ...
     ) -> None: ...
 

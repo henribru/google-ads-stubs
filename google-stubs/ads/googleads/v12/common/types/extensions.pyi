@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -56,10 +57,10 @@ class AppFeedItem(proto.Message):
     link_text: str
     app_id: str
     app_store: AppStoreEnum.AppStore
-    final_urls: list[str]
-    final_mobile_urls: list[str]
+    final_urls: MutableSequence[str]
+    final_mobile_urls: MutableSequence[str]
     tracking_url_template: str
-    url_custom_parameters: list[CustomParameter]
+    url_custom_parameters: MutableSequence[CustomParameter]
     final_url_suffix: str
     def __init__(
         self,
@@ -69,10 +70,10 @@ class AppFeedItem(proto.Message):
         link_text: str = ...,
         app_id: str = ...,
         app_store: AppStoreEnum.AppStore = ...,
-        final_urls: list[str] = ...,
-        final_mobile_urls: list[str] = ...,
+        final_urls: MutableSequence[str] = ...,
+        final_mobile_urls: MutableSequence[str] = ...,
         tracking_url_template: str = ...,
-        url_custom_parameters: list[CustomParameter] = ...,
+        url_custom_parameters: MutableSequence[CustomParameter] = ...,
         final_url_suffix: str = ...
     ) -> None: ...
 
@@ -157,7 +158,7 @@ class PriceFeedItem(proto.Message):
     price_qualifier: PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier
     tracking_url_template: str
     language_code: str
-    price_offerings: list[PriceOffer]
+    price_offerings: MutableSequence[PriceOffer]
     final_url_suffix: str
     def __init__(
         self,
@@ -168,7 +169,7 @@ class PriceFeedItem(proto.Message):
         price_qualifier: PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier = ...,
         tracking_url_template: str = ...,
         language_code: str = ...,
-        price_offerings: list[PriceOffer] = ...,
+        price_offerings: MutableSequence[PriceOffer] = ...,
         final_url_suffix: str = ...
     ) -> None: ...
 
@@ -177,8 +178,8 @@ class PriceOffer(proto.Message):
     description: str
     price: Money
     unit: PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit
-    final_urls: list[str]
-    final_mobile_urls: list[str]
+    final_urls: MutableSequence[str]
+    final_mobile_urls: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -188,8 +189,8 @@ class PriceOffer(proto.Message):
         description: str = ...,
         price: Money = ...,
         unit: PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit = ...,
-        final_urls: list[str] = ...,
-        final_mobile_urls: list[str] = ...
+        final_urls: MutableSequence[str] = ...,
+        final_mobile_urls: MutableSequence[str] = ...
     ) -> None: ...
 
 class PromotionFeedItem(proto.Message):
@@ -198,10 +199,10 @@ class PromotionFeedItem(proto.Message):
     promotion_start_date: str
     promotion_end_date: str
     occasion: PromotionExtensionOccasionEnum.PromotionExtensionOccasion
-    final_urls: list[str]
-    final_mobile_urls: list[str]
+    final_urls: MutableSequence[str]
+    final_mobile_urls: MutableSequence[str]
     tracking_url_template: str
-    url_custom_parameters: list[CustomParameter]
+    url_custom_parameters: MutableSequence[CustomParameter]
     final_url_suffix: str
     language_code: str
     percent_off: int
@@ -218,10 +219,10 @@ class PromotionFeedItem(proto.Message):
         promotion_start_date: str = ...,
         promotion_end_date: str = ...,
         occasion: PromotionExtensionOccasionEnum.PromotionExtensionOccasion = ...,
-        final_urls: list[str] = ...,
-        final_mobile_urls: list[str] = ...,
+        final_urls: MutableSequence[str] = ...,
+        final_mobile_urls: MutableSequence[str] = ...,
         tracking_url_template: str = ...,
-        url_custom_parameters: list[CustomParameter] = ...,
+        url_custom_parameters: MutableSequence[CustomParameter] = ...,
         final_url_suffix: str = ...,
         language_code: str = ...,
         percent_off: int = ...,
@@ -234,10 +235,10 @@ class SitelinkFeedItem(proto.Message):
     link_text: str
     line1: str
     line2: str
-    final_urls: list[str]
-    final_mobile_urls: list[str]
+    final_urls: MutableSequence[str]
+    final_mobile_urls: MutableSequence[str]
     tracking_url_template: str
-    url_custom_parameters: list[CustomParameter]
+    url_custom_parameters: MutableSequence[CustomParameter]
     final_url_suffix: str
     def __init__(
         self,
@@ -247,23 +248,23 @@ class SitelinkFeedItem(proto.Message):
         link_text: str = ...,
         line1: str = ...,
         line2: str = ...,
-        final_urls: list[str] = ...,
-        final_mobile_urls: list[str] = ...,
+        final_urls: MutableSequence[str] = ...,
+        final_mobile_urls: MutableSequence[str] = ...,
         tracking_url_template: str = ...,
-        url_custom_parameters: list[CustomParameter] = ...,
+        url_custom_parameters: MutableSequence[CustomParameter] = ...,
         final_url_suffix: str = ...
     ) -> None: ...
 
 class StructuredSnippetFeedItem(proto.Message):
     header: str
-    values: list[str]
+    values: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         header: str = ...,
-        values: list[str] = ...
+        values: MutableSequence[str] = ...
     ) -> None: ...
 
 class TextMessageFeedItem(proto.Message):

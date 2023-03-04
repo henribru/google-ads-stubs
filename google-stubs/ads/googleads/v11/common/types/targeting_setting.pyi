@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -36,13 +37,13 @@ class TargetRestrictionOperation(proto.Message):
     ) -> None: ...
 
 class TargetingSetting(proto.Message):
-    target_restrictions: list[TargetRestriction]
-    target_restriction_operations: list[TargetRestrictionOperation]
+    target_restrictions: MutableSequence[TargetRestriction]
+    target_restriction_operations: MutableSequence[TargetRestrictionOperation]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        target_restrictions: list[TargetRestriction] = ...,
-        target_restriction_operations: list[TargetRestrictionOperation] = ...
+        target_restrictions: MutableSequence[TargetRestriction] = ...,
+        target_restriction_operations: MutableSequence[TargetRestrictionOperation] = ...
     ) -> None: ...

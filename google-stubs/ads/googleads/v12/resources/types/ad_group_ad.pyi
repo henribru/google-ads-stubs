@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -20,8 +21,8 @@ class AdGroupAd(proto.Message):
     ad: Ad
     policy_summary: AdGroupAdPolicySummary
     ad_strength: AdStrengthEnum.AdStrength
-    action_items: list[str]
-    labels: list[str]
+    action_items: MutableSequence[str]
+    labels: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -33,12 +34,12 @@ class AdGroupAd(proto.Message):
         ad: Ad = ...,
         policy_summary: AdGroupAdPolicySummary = ...,
         ad_strength: AdStrengthEnum.AdStrength = ...,
-        action_items: list[str] = ...,
-        labels: list[str] = ...
+        action_items: MutableSequence[str] = ...,
+        labels: MutableSequence[str] = ...
     ) -> None: ...
 
 class AdGroupAdPolicySummary(proto.Message):
-    policy_topic_entries: list[PolicyTopicEntry]
+    policy_topic_entries: MutableSequence[PolicyTopicEntry]
     review_status: PolicyReviewStatusEnum.PolicyReviewStatus
     approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
     def __init__(
@@ -46,7 +47,7 @@ class AdGroupAdPolicySummary(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        policy_topic_entries: list[PolicyTopicEntry] = ...,
+        policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
     ) -> None: ...

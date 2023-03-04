@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -14,7 +15,7 @@ class Audience(proto.Message):
     status: AudienceStatusEnum.AudienceStatus
     name: str
     description: str
-    dimensions: list[AudienceDimension]
+    dimensions: MutableSequence[AudienceDimension]
     exclusion_dimension: AudienceExclusionDimension
     def __init__(
         self,
@@ -26,6 +27,6 @@ class Audience(proto.Message):
         status: AudienceStatusEnum.AudienceStatus = ...,
         name: str = ...,
         description: str = ...,
-        dimensions: list[AudienceDimension] = ...,
+        dimensions: MutableSequence[AudienceDimension] = ...,
         exclusion_dimension: AudienceExclusionDimension = ...
     ) -> None: ...

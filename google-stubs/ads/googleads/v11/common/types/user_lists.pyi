@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -34,13 +35,13 @@ from google.ads.googleads.v11.enums.types.user_list_string_rule_item_operator im
 )
 
 class BasicUserListInfo(proto.Message):
-    actions: list[UserListActionInfo]
+    actions: MutableSequence[UserListActionInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        actions: list[UserListActionInfo] = ...
+        actions: MutableSequence[UserListActionInfo] = ...
     ) -> None: ...
 
 class CombinedRuleUserListInfo(proto.Message):
@@ -95,26 +96,26 @@ class FlexibleRuleOperandInfo(proto.Message):
 
 class FlexibleRuleUserListInfo(proto.Message):
     inclusive_rule_operator: UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator
-    inclusive_operands: list[FlexibleRuleOperandInfo]
-    exclusive_operands: list[FlexibleRuleOperandInfo]
+    inclusive_operands: MutableSequence[FlexibleRuleOperandInfo]
+    exclusive_operands: MutableSequence[FlexibleRuleOperandInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         inclusive_rule_operator: UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator = ...,
-        inclusive_operands: list[FlexibleRuleOperandInfo] = ...,
-        exclusive_operands: list[FlexibleRuleOperandInfo] = ...
+        inclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...,
+        exclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...
     ) -> None: ...
 
 class LogicalUserListInfo(proto.Message):
-    rules: list[UserListLogicalRuleInfo]
+    rules: MutableSequence[UserListLogicalRuleInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        rules: list[UserListLogicalRuleInfo] = ...
+        rules: MutableSequence[UserListLogicalRuleInfo] = ...
     ) -> None: ...
 
 class LogicalUserListOperandInfo(proto.Message):
@@ -181,14 +182,14 @@ class UserListDateRuleItemInfo(proto.Message):
 
 class UserListLogicalRuleInfo(proto.Message):
     operator: UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator
-    rule_operands: list[LogicalUserListOperandInfo]
+    rule_operands: MutableSequence[LogicalUserListOperandInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         operator: UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator = ...,
-        rule_operands: list[LogicalUserListOperandInfo] = ...
+        rule_operands: MutableSequence[LogicalUserListOperandInfo] = ...
     ) -> None: ...
 
 class UserListNumberRuleItemInfo(proto.Message):
@@ -205,24 +206,24 @@ class UserListNumberRuleItemInfo(proto.Message):
 
 class UserListRuleInfo(proto.Message):
     rule_type: UserListRuleTypeEnum.UserListRuleType
-    rule_item_groups: list[UserListRuleItemGroupInfo]
+    rule_item_groups: MutableSequence[UserListRuleItemGroupInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         rule_type: UserListRuleTypeEnum.UserListRuleType = ...,
-        rule_item_groups: list[UserListRuleItemGroupInfo] = ...
+        rule_item_groups: MutableSequence[UserListRuleItemGroupInfo] = ...
     ) -> None: ...
 
 class UserListRuleItemGroupInfo(proto.Message):
-    rule_items: list[UserListRuleItemInfo]
+    rule_items: MutableSequence[UserListRuleItemInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        rule_items: list[UserListRuleItemInfo] = ...
+        rule_items: MutableSequence[UserListRuleItemInfo] = ...
     ) -> None: ...
 
 class UserListRuleItemInfo(proto.Message):

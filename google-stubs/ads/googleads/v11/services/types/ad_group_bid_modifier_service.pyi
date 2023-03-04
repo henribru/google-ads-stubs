@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -41,7 +42,7 @@ class MutateAdGroupBidModifierResult(proto.Message):
 
 class MutateAdGroupBidModifiersRequest(proto.Message):
     customer_id: str
-    operations: list[AdGroupBidModifierOperation]
+    operations: MutableSequence[AdGroupBidModifierOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -51,7 +52,7 @@ class MutateAdGroupBidModifiersRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[AdGroupBidModifierOperation] = ...,
+        operations: MutableSequence[AdGroupBidModifierOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -59,12 +60,12 @@ class MutateAdGroupBidModifiersRequest(proto.Message):
 
 class MutateAdGroupBidModifiersResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateAdGroupBidModifierResult]
+    results: MutableSequence[MutateAdGroupBidModifierResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateAdGroupBidModifierResult] = ...
+        results: MutableSequence[MutateAdGroupBidModifierResult] = ...
     ) -> None: ...

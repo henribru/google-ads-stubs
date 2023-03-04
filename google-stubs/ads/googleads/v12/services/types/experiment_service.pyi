@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -48,7 +49,7 @@ class ExperimentOperation(proto.Message):
 
 class GraduateExperimentRequest(proto.Message):
     experiment: str
-    campaign_budget_mappings: list[CampaignBudgetMapping]
+    campaign_budget_mappings: MutableSequence[CampaignBudgetMapping]
     validate_only: bool
     def __init__(
         self,
@@ -56,7 +57,7 @@ class GraduateExperimentRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         experiment: str = ...,
-        campaign_budget_mappings: list[CampaignBudgetMapping] = ...,
+        campaign_budget_mappings: MutableSequence[CampaignBudgetMapping] = ...,
         validate_only: bool = ...
     ) -> None: ...
 
@@ -75,14 +76,14 @@ class ListExperimentAsyncErrorsRequest(proto.Message):
     ) -> None: ...
 
 class ListExperimentAsyncErrorsResponse(proto.Message):
-    errors: list[Status]
+    errors: MutableSequence[Status]
     next_page_token: str
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        errors: list[Status] = ...,
+        errors: MutableSequence[Status] = ...,
         next_page_token: str = ...
     ) -> None: ...
 
@@ -98,7 +99,7 @@ class MutateExperimentResult(proto.Message):
 
 class MutateExperimentsRequest(proto.Message):
     customer_id: str
-    operations: list[ExperimentOperation]
+    operations: MutableSequence[ExperimentOperation]
     partial_failure: bool
     validate_only: bool
     def __init__(
@@ -107,21 +108,21 @@ class MutateExperimentsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[ExperimentOperation] = ...,
+        operations: MutableSequence[ExperimentOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateExperimentsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateExperimentResult]
+    results: MutableSequence[MutateExperimentResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateExperimentResult] = ...
+        results: MutableSequence[MutateExperimentResult] = ...
     ) -> None: ...
 
 class PromoteExperimentMetadata(proto.Message):

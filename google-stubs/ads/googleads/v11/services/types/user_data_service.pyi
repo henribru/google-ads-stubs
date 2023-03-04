@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -9,7 +10,7 @@ from google.ads.googleads.v11.common.types.offline_user_data import (
 
 class UploadUserDataRequest(proto.Message):
     customer_id: str
-    operations: list[UserDataOperation]
+    operations: MutableSequence[UserDataOperation]
     customer_match_user_list_metadata: CustomerMatchUserListMetadata
     def __init__(
         self,
@@ -17,7 +18,7 @@ class UploadUserDataRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[UserDataOperation] = ...,
+        operations: MutableSequence[UserDataOperation] = ...,
         customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...
     ) -> None: ...
 

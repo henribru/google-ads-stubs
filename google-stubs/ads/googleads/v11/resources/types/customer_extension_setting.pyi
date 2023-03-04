@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -10,7 +11,7 @@ from google.ads.googleads.v11.enums.types.extension_type import ExtensionTypeEnu
 class CustomerExtensionSetting(proto.Message):
     resource_name: str
     extension_type: ExtensionTypeEnum.ExtensionType
-    extension_feed_items: list[str]
+    extension_feed_items: MutableSequence[str]
     device: ExtensionSettingDeviceEnum.ExtensionSettingDevice
     def __init__(
         self,
@@ -19,6 +20,6 @@ class CustomerExtensionSetting(proto.Message):
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
         extension_type: ExtensionTypeEnum.ExtensionType = ...,
-        extension_feed_items: list[str] = ...,
+        extension_feed_items: MutableSequence[str] = ...,
         device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...
     ) -> None: ...

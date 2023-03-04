@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -28,14 +29,14 @@ class PolicyTopicConstraint(proto.Message):
 
     class CountryConstraintList(proto.Message):
         total_targeted_countries: int
-        countries: list[PolicyTopicConstraint.CountryConstraint]
+        countries: MutableSequence[PolicyTopicConstraint.CountryConstraint]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             total_targeted_countries: int = ...,
-            countries: list[PolicyTopicConstraint.CountryConstraint] = ...,
+            countries: MutableSequence[PolicyTopicConstraint.CountryConstraint] = ...,
         ) -> None: ...
 
     class ResellerConstraint(proto.Message):
@@ -64,8 +65,8 @@ class PolicyTopicConstraint(proto.Message):
 class PolicyTopicEntry(proto.Message):
     topic: str
     type_: PolicyTopicEntryTypeEnum.PolicyTopicEntryType
-    evidences: list[PolicyTopicEvidence]
-    constraints: list[PolicyTopicConstraint]
+    evidences: MutableSequence[PolicyTopicEvidence]
+    constraints: MutableSequence[PolicyTopicConstraint]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -73,13 +74,13 @@ class PolicyTopicEntry(proto.Message):
         ignore_unknown_fields: bool = ...,
         topic: str = ...,
         type_: PolicyTopicEntryTypeEnum.PolicyTopicEntryType = ...,
-        evidences: list[PolicyTopicEvidence] = ...,
-        constraints: list[PolicyTopicConstraint] = ...,
+        evidences: MutableSequence[PolicyTopicEvidence] = ...,
+        constraints: MutableSequence[PolicyTopicConstraint] = ...,
     ) -> None: ...
 
 class PolicyTopicEvidence(proto.Message):
     class DestinationMismatch(proto.Message):
-        url_types: list[
+        url_types: MutableSequence[
             PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType
         ]
         def __init__(
@@ -87,7 +88,7 @@ class PolicyTopicEvidence(proto.Message):
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            url_types: list[
+            url_types: MutableSequence[
                 PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType
             ] = ...,
         ) -> None: ...
@@ -111,33 +112,33 @@ class PolicyTopicEvidence(proto.Message):
         ) -> None: ...
 
     class DestinationTextList(proto.Message):
-        destination_texts: list[str]
+        destination_texts: MutableSequence[str]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            destination_texts: list[str] = ...,
+            destination_texts: MutableSequence[str] = ...,
         ) -> None: ...
 
     class TextList(proto.Message):
-        texts: list[str]
+        texts: MutableSequence[str]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            texts: list[str] = ...,
+            texts: MutableSequence[str] = ...,
         ) -> None: ...
 
     class WebsiteList(proto.Message):
-        websites: list[str]
+        websites: MutableSequence[str]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            websites: list[str] = ...,
+            websites: MutableSequence[str] = ...,
         ) -> None: ...
     website_list: PolicyTopicEvidence.WebsiteList
     text_list: PolicyTopicEvidence.TextList
@@ -159,15 +160,15 @@ class PolicyTopicEvidence(proto.Message):
     ) -> None: ...
 
 class PolicyValidationParameter(proto.Message):
-    ignorable_policy_topics: list[str]
-    exempt_policy_violation_keys: list[PolicyViolationKey]
+    ignorable_policy_topics: MutableSequence[str]
+    exempt_policy_violation_keys: MutableSequence[PolicyViolationKey]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        ignorable_policy_topics: list[str] = ...,
-        exempt_policy_violation_keys: list[PolicyViolationKey] = ...,
+        ignorable_policy_topics: MutableSequence[str] = ...,
+        exempt_policy_violation_keys: MutableSequence[PolicyViolationKey] = ...,
     ) -> None: ...
 
 class PolicyViolationKey(proto.Message):

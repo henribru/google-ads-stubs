@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -29,7 +30,7 @@ class BiddingSeasonalityAdjustmentOperation(proto.Message):
 
 class MutateBiddingSeasonalityAdjustmentsRequest(proto.Message):
     customer_id: str
-    operations: list[BiddingSeasonalityAdjustmentOperation]
+    operations: MutableSequence[BiddingSeasonalityAdjustmentOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -39,7 +40,7 @@ class MutateBiddingSeasonalityAdjustmentsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[BiddingSeasonalityAdjustmentOperation] = ...,
+        operations: MutableSequence[BiddingSeasonalityAdjustmentOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -47,14 +48,14 @@ class MutateBiddingSeasonalityAdjustmentsRequest(proto.Message):
 
 class MutateBiddingSeasonalityAdjustmentsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateBiddingSeasonalityAdjustmentsResult]
+    results: MutableSequence[MutateBiddingSeasonalityAdjustmentsResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateBiddingSeasonalityAdjustmentsResult] = ...
+        results: MutableSequence[MutateBiddingSeasonalityAdjustmentsResult] = ...
     ) -> None: ...
 
 class MutateBiddingSeasonalityAdjustmentsResult(proto.Message):

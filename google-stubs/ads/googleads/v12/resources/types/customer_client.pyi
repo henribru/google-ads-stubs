@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -15,7 +16,7 @@ class CustomerClient(proto.Message):
     descriptive_name: str
     currency_code: str
     id: int
-    applied_labels: list[str]
+    applied_labels: MutableSequence[str]
     status: CustomerStatusEnum.CustomerStatus
     def __init__(
         self,
@@ -32,6 +33,6 @@ class CustomerClient(proto.Message):
         descriptive_name: str = ...,
         currency_code: str = ...,
         id: int = ...,
-        applied_labels: list[str] = ...,
+        applied_labels: MutableSequence[str] = ...,
         status: CustomerStatusEnum.CustomerStatus = ...
     ) -> None: ...

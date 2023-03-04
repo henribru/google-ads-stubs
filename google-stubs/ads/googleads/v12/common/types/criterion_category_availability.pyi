@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -17,20 +18,20 @@ from google.ads.googleads.v12.enums.types.criterion_category_locale_availability
 
 class CriterionCategoryAvailability(proto.Message):
     channel: CriterionCategoryChannelAvailability
-    locale: list[CriterionCategoryLocaleAvailability]
+    locale: MutableSequence[CriterionCategoryLocaleAvailability]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         channel: CriterionCategoryChannelAvailability = ...,
-        locale: list[CriterionCategoryLocaleAvailability] = ...
+        locale: MutableSequence[CriterionCategoryLocaleAvailability] = ...
     ) -> None: ...
 
 class CriterionCategoryChannelAvailability(proto.Message):
     availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
     advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType
-    advertising_channel_sub_type: list[
+    advertising_channel_sub_type: MutableSequence[
         AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
     ]
     include_default_channel_sub_type: bool
@@ -41,7 +42,7 @@ class CriterionCategoryChannelAvailability(proto.Message):
         ignore_unknown_fields: bool = ...,
         availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode = ...,
         advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType = ...,
-        advertising_channel_sub_type: list[
+        advertising_channel_sub_type: MutableSequence[
             AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
         ] = ...,
         include_default_channel_sub_type: bool = ...

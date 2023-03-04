@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -933,7 +934,7 @@ class GoogleAdsRow(proto.Message):
 
 class MutateGoogleAdsRequest(proto.Message):
     customer_id: str
-    mutate_operations: list[MutateOperation]
+    mutate_operations: MutableSequence[MutateOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -943,7 +944,7 @@ class MutateGoogleAdsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        mutate_operations: list[MutateOperation] = ...,
+        mutate_operations: MutableSequence[MutateOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -951,14 +952,14 @@ class MutateGoogleAdsRequest(proto.Message):
 
 class MutateGoogleAdsResponse(proto.Message):
     partial_failure_error: Status
-    mutate_operation_responses: list[MutateOperationResponse]
+    mutate_operation_responses: MutableSequence[MutateOperationResponse]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        mutate_operation_responses: list[MutateOperationResponse] = ...
+        mutate_operation_responses: MutableSequence[MutateOperationResponse] = ...
     ) -> None: ...
 
 class MutateOperation(proto.Message):
@@ -1300,7 +1301,7 @@ class SearchGoogleAdsRequest(proto.Message):
     ) -> None: ...
 
 class SearchGoogleAdsResponse(proto.Message):
-    results: list[GoogleAdsRow]
+    results: MutableSequence[GoogleAdsRow]
     next_page_token: str
     total_results_count: int
     field_mask: FieldMask
@@ -1310,7 +1311,7 @@ class SearchGoogleAdsResponse(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[GoogleAdsRow] = ...,
+        results: MutableSequence[GoogleAdsRow] = ...,
         next_page_token: str = ...,
         total_results_count: int = ...,
         field_mask: FieldMask = ...,
@@ -1332,7 +1333,7 @@ class SearchGoogleAdsStreamRequest(proto.Message):
     ) -> None: ...
 
 class SearchGoogleAdsStreamResponse(proto.Message):
-    results: list[GoogleAdsRow]
+    results: MutableSequence[GoogleAdsRow]
     field_mask: FieldMask
     summary_row: GoogleAdsRow
     request_id: str
@@ -1341,7 +1342,7 @@ class SearchGoogleAdsStreamResponse(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[GoogleAdsRow] = ...,
+        results: MutableSequence[GoogleAdsRow] = ...,
         field_mask: FieldMask = ...,
         summary_row: GoogleAdsRow = ...,
         request_id: str = ...

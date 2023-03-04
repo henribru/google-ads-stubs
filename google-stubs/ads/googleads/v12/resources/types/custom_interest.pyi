@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -19,7 +20,7 @@ class CustomInterest(proto.Message):
     name: str
     type_: CustomInterestTypeEnum.CustomInterestType
     description: str
-    members: list[CustomInterestMember]
+    members: MutableSequence[CustomInterestMember]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -31,7 +32,7 @@ class CustomInterest(proto.Message):
         name: str = ...,
         type_: CustomInterestTypeEnum.CustomInterestType = ...,
         description: str = ...,
-        members: list[CustomInterestMember] = ...
+        members: MutableSequence[CustomInterestMember] = ...
     ) -> None: ...
 
 class CustomInterestMember(proto.Message):

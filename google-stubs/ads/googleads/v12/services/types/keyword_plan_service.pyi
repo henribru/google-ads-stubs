@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -41,13 +42,15 @@ class GenerateForecastCurveRequest(proto.Message):
     ) -> None: ...
 
 class GenerateForecastCurveResponse(proto.Message):
-    campaign_forecast_curves: list[KeywordPlanCampaignForecastCurve]
+    campaign_forecast_curves: MutableSequence[KeywordPlanCampaignForecastCurve]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        campaign_forecast_curves: list[KeywordPlanCampaignForecastCurve] = ...
+        campaign_forecast_curves: MutableSequence[
+            KeywordPlanCampaignForecastCurve
+        ] = ...
     ) -> None: ...
 
 class GenerateForecastMetricsRequest(proto.Message):
@@ -61,17 +64,17 @@ class GenerateForecastMetricsRequest(proto.Message):
     ) -> None: ...
 
 class GenerateForecastMetricsResponse(proto.Message):
-    campaign_forecasts: list[KeywordPlanCampaignForecast]
-    ad_group_forecasts: list[KeywordPlanAdGroupForecast]
-    keyword_forecasts: list[KeywordPlanKeywordForecast]
+    campaign_forecasts: MutableSequence[KeywordPlanCampaignForecast]
+    ad_group_forecasts: MutableSequence[KeywordPlanAdGroupForecast]
+    keyword_forecasts: MutableSequence[KeywordPlanKeywordForecast]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        campaign_forecasts: list[KeywordPlanCampaignForecast] = ...,
-        ad_group_forecasts: list[KeywordPlanAdGroupForecast] = ...,
-        keyword_forecasts: list[KeywordPlanKeywordForecast] = ...
+        campaign_forecasts: MutableSequence[KeywordPlanCampaignForecast] = ...,
+        ad_group_forecasts: MutableSequence[KeywordPlanAdGroupForecast] = ...,
+        keyword_forecasts: MutableSequence[KeywordPlanKeywordForecast] = ...
     ) -> None: ...
 
 class GenerateForecastTimeSeriesRequest(proto.Message):
@@ -85,13 +88,15 @@ class GenerateForecastTimeSeriesRequest(proto.Message):
     ) -> None: ...
 
 class GenerateForecastTimeSeriesResponse(proto.Message):
-    weekly_time_series_forecasts: list[KeywordPlanWeeklyTimeSeriesForecast]
+    weekly_time_series_forecasts: MutableSequence[KeywordPlanWeeklyTimeSeriesForecast]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        weekly_time_series_forecasts: list[KeywordPlanWeeklyTimeSeriesForecast] = ...
+        weekly_time_series_forecasts: MutableSequence[
+            KeywordPlanWeeklyTimeSeriesForecast
+        ] = ...
     ) -> None: ...
 
 class GenerateHistoricalMetricsRequest(proto.Message):
@@ -109,14 +114,14 @@ class GenerateHistoricalMetricsRequest(proto.Message):
     ) -> None: ...
 
 class GenerateHistoricalMetricsResponse(proto.Message):
-    metrics: list[KeywordPlanKeywordHistoricalMetrics]
+    metrics: MutableSequence[KeywordPlanKeywordHistoricalMetrics]
     aggregate_metric_results: KeywordPlanAggregateMetricResults
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        metrics: list[KeywordPlanKeywordHistoricalMetrics] = ...,
+        metrics: MutableSequence[KeywordPlanKeywordHistoricalMetrics] = ...,
         aggregate_metric_results: KeywordPlanAggregateMetricResults = ...
     ) -> None: ...
 
@@ -170,7 +175,7 @@ class KeywordPlanKeywordForecast(proto.Message):
 
 class KeywordPlanKeywordHistoricalMetrics(proto.Message):
     search_query: str
-    close_variants: list[str]
+    close_variants: MutableSequence[str]
     keyword_metrics: KeywordPlanHistoricalMetrics
     def __init__(
         self,
@@ -178,7 +183,7 @@ class KeywordPlanKeywordHistoricalMetrics(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         search_query: str = ...,
-        close_variants: list[str] = ...,
+        close_variants: MutableSequence[str] = ...,
         keyword_metrics: KeywordPlanHistoricalMetrics = ...
     ) -> None: ...
 
@@ -195,13 +200,13 @@ class KeywordPlanMaxCpcBidForecast(proto.Message):
     ) -> None: ...
 
 class KeywordPlanMaxCpcBidForecastCurve(proto.Message):
-    max_cpc_bid_forecasts: list[KeywordPlanMaxCpcBidForecast]
+    max_cpc_bid_forecasts: MutableSequence[KeywordPlanMaxCpcBidForecast]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        max_cpc_bid_forecasts: list[KeywordPlanMaxCpcBidForecast] = ...
+        max_cpc_bid_forecasts: MutableSequence[KeywordPlanMaxCpcBidForecast] = ...
     ) -> None: ...
 
 class KeywordPlanOperation(proto.Message):
@@ -234,19 +239,19 @@ class KeywordPlanWeeklyForecast(proto.Message):
 
 class KeywordPlanWeeklyTimeSeriesForecast(proto.Message):
     keyword_plan_campaign: str
-    weekly_forecasts: list[KeywordPlanWeeklyForecast]
+    weekly_forecasts: MutableSequence[KeywordPlanWeeklyForecast]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan_campaign: str = ...,
-        weekly_forecasts: list[KeywordPlanWeeklyForecast] = ...
+        weekly_forecasts: MutableSequence[KeywordPlanWeeklyForecast] = ...
     ) -> None: ...
 
 class MutateKeywordPlansRequest(proto.Message):
     customer_id: str
-    operations: list[KeywordPlanOperation]
+    operations: MutableSequence[KeywordPlanOperation]
     partial_failure: bool
     validate_only: bool
     def __init__(
@@ -255,21 +260,21 @@ class MutateKeywordPlansRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[KeywordPlanOperation] = ...,
+        operations: MutableSequence[KeywordPlanOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateKeywordPlansResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateKeywordPlansResult]
+    results: MutableSequence[MutateKeywordPlansResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateKeywordPlansResult] = ...
+        results: MutableSequence[MutateKeywordPlansResult] = ...
     ) -> None: ...
 
 class MutateKeywordPlansResult(proto.Message):

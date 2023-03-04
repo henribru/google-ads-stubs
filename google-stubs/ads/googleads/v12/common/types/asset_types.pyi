@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -53,7 +54,7 @@ class BookOnGoogleAsset(proto.Message):
     ...
 
 class BusinessProfileLocation(proto.Message):
-    labels: list[str]
+    labels: MutableSequence[str]
     store_code: str
     listing_id: int
     def __init__(
@@ -61,7 +62,7 @@ class BusinessProfileLocation(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        labels: list[str] = ...,
+        labels: MutableSequence[str] = ...,
         store_code: str = ...,
         listing_id: int = ...,
     ) -> None: ...
@@ -71,7 +72,7 @@ class CallAsset(proto.Message):
     phone_number: str
     call_conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState
     call_conversion_action: str
-    ad_schedule_targets: list[AdScheduleInfo]
+    ad_schedule_targets: MutableSequence[AdScheduleInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -81,7 +82,7 @@ class CallAsset(proto.Message):
         phone_number: str = ...,
         call_conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState = ...,
         call_conversion_action: str = ...,
-        ad_schedule_targets: list[AdScheduleInfo] = ...,
+        ad_schedule_targets: MutableSequence[AdScheduleInfo] = ...,
     ) -> None: ...
 
 class CallToActionAsset(proto.Message):
@@ -98,7 +99,7 @@ class CalloutAsset(proto.Message):
     callout_text: str
     start_date: str
     end_date: str
-    ad_schedule_targets: list[AdScheduleInfo]
+    ad_schedule_targets: MutableSequence[AdScheduleInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -107,7 +108,7 @@ class CalloutAsset(proto.Message):
         callout_text: str = ...,
         start_date: str = ...,
         end_date: str = ...,
-        ad_schedule_targets: list[AdScheduleInfo] = ...,
+        ad_schedule_targets: MutableSequence[AdScheduleInfo] = ...,
     ) -> None: ...
 
 class DiscoveryCarouselCardAsset(proto.Message):
@@ -141,11 +142,11 @@ class DynamicCustomAsset(proto.Message):
     formatted_price: str
     formatted_sale_price: str
     image_url: str
-    contextual_keywords: list[str]
+    contextual_keywords: MutableSequence[str]
     android_app_link: str
     ios_app_link: str
     ios_app_store_id: int
-    similar_ids: list[str]
+    similar_ids: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -163,11 +164,11 @@ class DynamicCustomAsset(proto.Message):
         formatted_price: str = ...,
         formatted_sale_price: str = ...,
         image_url: str = ...,
-        contextual_keywords: list[str] = ...,
+        contextual_keywords: MutableSequence[str] = ...,
         android_app_link: str = ...,
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
-        similar_ids: list[str] = ...,
+        similar_ids: MutableSequence[str] = ...,
     ) -> None: ...
 
 class DynamicEducationAsset(proto.Message):
@@ -178,9 +179,9 @@ class DynamicEducationAsset(proto.Message):
     program_description: str
     school_name: str
     address: str
-    contextual_keywords: list[str]
+    contextual_keywords: MutableSequence[str]
     android_app_link: str
-    similar_program_ids: list[str]
+    similar_program_ids: MutableSequence[str]
     ios_app_link: str
     ios_app_store_id: int
     thumbnail_image_url: str
@@ -197,9 +198,9 @@ class DynamicEducationAsset(proto.Message):
         program_description: str = ...,
         school_name: str = ...,
         address: str = ...,
-        contextual_keywords: list[str] = ...,
+        contextual_keywords: MutableSequence[str] = ...,
         android_app_link: str = ...,
-        similar_program_ids: list[str] = ...,
+        similar_program_ids: MutableSequence[str] = ...,
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
         thumbnail_image_url: str = ...,
@@ -220,7 +221,7 @@ class DynamicFlightsAsset(proto.Message):
     android_app_link: str
     ios_app_link: str
     ios_app_store_id: int
-    similar_destination_ids: list[str]
+    similar_destination_ids: MutableSequence[str]
     custom_mapping: str
     def __init__(
         self,
@@ -240,7 +241,7 @@ class DynamicFlightsAsset(proto.Message):
         android_app_link: str = ...,
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
-        similar_destination_ids: list[str] = ...,
+        similar_destination_ids: MutableSequence[str] = ...,
         custom_mapping: str = ...,
     ) -> None: ...
 
@@ -254,14 +255,14 @@ class DynamicHotelsAndRentalsAsset(proto.Message):
     sale_price: str
     star_rating: int
     category: str
-    contextual_keywords: list[str]
+    contextual_keywords: MutableSequence[str]
     address: str
     android_app_link: str
     ios_app_link: str
     ios_app_store_id: int
     formatted_price: str
     formatted_sale_price: str
-    similar_property_ids: list[str]
+    similar_property_ids: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -276,14 +277,14 @@ class DynamicHotelsAndRentalsAsset(proto.Message):
         sale_price: str = ...,
         star_rating: int = ...,
         category: str = ...,
-        contextual_keywords: list[str] = ...,
+        contextual_keywords: MutableSequence[str] = ...,
         address: str = ...,
         android_app_link: str = ...,
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
         formatted_price: str = ...,
         formatted_sale_price: str = ...,
-        similar_property_ids: list[str] = ...,
+        similar_property_ids: MutableSequence[str] = ...,
     ) -> None: ...
 
 class DynamicJobsAsset(proto.Message):
@@ -294,11 +295,11 @@ class DynamicJobsAsset(proto.Message):
     description: str
     image_url: str
     job_category: str
-    contextual_keywords: list[str]
+    contextual_keywords: MutableSequence[str]
     address: str
     salary: str
     android_app_link: str
-    similar_job_ids: list[str]
+    similar_job_ids: MutableSequence[str]
     ios_app_link: str
     ios_app_store_id: int
     def __init__(
@@ -313,11 +314,11 @@ class DynamicJobsAsset(proto.Message):
         description: str = ...,
         image_url: str = ...,
         job_category: str = ...,
-        contextual_keywords: list[str] = ...,
+        contextual_keywords: MutableSequence[str] = ...,
         address: str = ...,
         salary: str = ...,
         android_app_link: str = ...,
-        similar_job_ids: list[str] = ...,
+        similar_job_ids: MutableSequence[str] = ...,
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
     ) -> None: ...
@@ -332,11 +333,11 @@ class DynamicLocalAsset(proto.Message):
     image_url: str
     address: str
     category: str
-    contextual_keywords: list[str]
+    contextual_keywords: MutableSequence[str]
     formatted_price: str
     formatted_sale_price: str
     android_app_link: str
-    similar_deal_ids: list[str]
+    similar_deal_ids: MutableSequence[str]
     ios_app_link: str
     ios_app_store_id: int
     def __init__(
@@ -353,11 +354,11 @@ class DynamicLocalAsset(proto.Message):
         image_url: str = ...,
         address: str = ...,
         category: str = ...,
-        contextual_keywords: list[str] = ...,
+        contextual_keywords: MutableSequence[str] = ...,
         formatted_price: str = ...,
         formatted_sale_price: str = ...,
         android_app_link: str = ...,
-        similar_deal_ids: list[str] = ...,
+        similar_deal_ids: MutableSequence[str] = ...,
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
     ) -> None: ...
@@ -372,12 +373,12 @@ class DynamicRealEstateAsset(proto.Message):
     image_url: str
     property_type: str
     listing_type: str
-    contextual_keywords: list[str]
+    contextual_keywords: MutableSequence[str]
     formatted_price: str
     android_app_link: str
     ios_app_link: str
     ios_app_store_id: int
-    similar_listing_ids: list[str]
+    similar_listing_ids: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -392,12 +393,12 @@ class DynamicRealEstateAsset(proto.Message):
         image_url: str = ...,
         property_type: str = ...,
         listing_type: str = ...,
-        contextual_keywords: list[str] = ...,
+        contextual_keywords: MutableSequence[str] = ...,
         formatted_price: str = ...,
         android_app_link: str = ...,
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
-        similar_listing_ids: list[str] = ...,
+        similar_listing_ids: MutableSequence[str] = ...,
     ) -> None: ...
 
 class DynamicTravelAsset(proto.Message):
@@ -412,8 +413,8 @@ class DynamicTravelAsset(proto.Message):
     formatted_price: str
     formatted_sale_price: str
     category: str
-    contextual_keywords: list[str]
-    similar_destination_ids: list[str]
+    contextual_keywords: MutableSequence[str]
+    similar_destination_ids: MutableSequence[str]
     image_url: str
     android_app_link: str
     ios_app_link: str
@@ -434,8 +435,8 @@ class DynamicTravelAsset(proto.Message):
         formatted_price: str = ...,
         formatted_sale_price: str = ...,
         category: str = ...,
-        contextual_keywords: list[str] = ...,
-        similar_destination_ids: list[str] = ...,
+        contextual_keywords: MutableSequence[str] = ...,
+        similar_destination_ids: MutableSequence[str] = ...,
         image_url: str = ...,
         android_app_link: str = ...,
         ios_app_link: str = ...,
@@ -493,9 +494,9 @@ class LeadFormAsset(proto.Message):
     privacy_policy_url: str
     post_submit_headline: str
     post_submit_description: str
-    fields: list[LeadFormField]
-    custom_question_fields: list[LeadFormCustomQuestionField]
-    delivery_methods: list[LeadFormDeliveryMethod]
+    fields: MutableSequence[LeadFormField]
+    custom_question_fields: MutableSequence[LeadFormCustomQuestionField]
+    delivery_methods: MutableSequence[LeadFormDeliveryMethod]
     post_submit_call_to_action_type: LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType
     background_image_asset: str
     desired_intent: LeadFormDesiredIntentEnum.LeadFormDesiredIntent
@@ -513,9 +514,9 @@ class LeadFormAsset(proto.Message):
         privacy_policy_url: str = ...,
         post_submit_headline: str = ...,
         post_submit_description: str = ...,
-        fields: list[LeadFormField] = ...,
-        custom_question_fields: list[LeadFormCustomQuestionField] = ...,
-        delivery_methods: list[LeadFormDeliveryMethod] = ...,
+        fields: MutableSequence[LeadFormField] = ...,
+        custom_question_fields: MutableSequence[LeadFormCustomQuestionField] = ...,
+        delivery_methods: MutableSequence[LeadFormDeliveryMethod] = ...,
         post_submit_call_to_action_type: LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType = ...,
         background_image_asset: str = ...,
         desired_intent: LeadFormDesiredIntentEnum.LeadFormDesiredIntent = ...,
@@ -557,18 +558,18 @@ class LeadFormField(proto.Message):
     ) -> None: ...
 
 class LeadFormSingleChoiceAnswers(proto.Message):
-    answers: list[str]
+    answers: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        answers: list[str] = ...,
+        answers: MutableSequence[str] = ...,
     ) -> None: ...
 
 class LocationAsset(proto.Message):
     place_id: str
-    business_profile_locations: list[BusinessProfileLocation]
+    business_profile_locations: MutableSequence[BusinessProfileLocation]
     location_ownership_type: LocationOwnershipTypeEnum.LocationOwnershipType
     def __init__(
         self,
@@ -576,7 +577,7 @@ class LocationAsset(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         place_id: str = ...,
-        business_profile_locations: list[BusinessProfileLocation] = ...,
+        business_profile_locations: MutableSequence[BusinessProfileLocation] = ...,
         location_ownership_type: LocationOwnershipTypeEnum.LocationOwnershipType = ...,
     ) -> None: ...
 
@@ -610,21 +611,21 @@ class MobileAppAsset(proto.Message):
 
 class PageFeedAsset(proto.Message):
     page_url: str
-    labels: list[str]
+    labels: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         page_url: str = ...,
-        labels: list[str] = ...,
+        labels: MutableSequence[str] = ...,
     ) -> None: ...
 
 class PriceAsset(proto.Message):
     type_: PriceExtensionTypeEnum.PriceExtensionType
     price_qualifier: PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier
     language_code: str
-    price_offerings: list[PriceOffering]
+    price_offerings: MutableSequence[PriceOffering]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -633,7 +634,7 @@ class PriceAsset(proto.Message):
         type_: PriceExtensionTypeEnum.PriceExtensionType = ...,
         price_qualifier: PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier = ...,
         language_code: str = ...,
-        price_offerings: list[PriceOffering] = ...,
+        price_offerings: MutableSequence[PriceOffering] = ...,
     ) -> None: ...
 
 class PriceOffering(proto.Message):
@@ -665,7 +666,7 @@ class PromotionAsset(proto.Message):
     language_code: str
     start_date: str
     end_date: str
-    ad_schedule_targets: list[AdScheduleInfo]
+    ad_schedule_targets: MutableSequence[AdScheduleInfo]
     percent_off: int
     money_amount_off: Money
     promotion_code: str
@@ -683,7 +684,7 @@ class PromotionAsset(proto.Message):
         language_code: str = ...,
         start_date: str = ...,
         end_date: str = ...,
-        ad_schedule_targets: list[AdScheduleInfo] = ...,
+        ad_schedule_targets: MutableSequence[AdScheduleInfo] = ...,
         percent_off: int = ...,
         money_amount_off: Money = ...,
         promotion_code: str = ...,
@@ -696,7 +697,7 @@ class SitelinkAsset(proto.Message):
     description2: str
     start_date: str
     end_date: str
-    ad_schedule_targets: list[AdScheduleInfo]
+    ad_schedule_targets: MutableSequence[AdScheduleInfo]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -707,19 +708,19 @@ class SitelinkAsset(proto.Message):
         description2: str = ...,
         start_date: str = ...,
         end_date: str = ...,
-        ad_schedule_targets: list[AdScheduleInfo] = ...,
+        ad_schedule_targets: MutableSequence[AdScheduleInfo] = ...,
     ) -> None: ...
 
 class StructuredSnippetAsset(proto.Message):
     header: str
-    values: list[str]
+    values: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         header: str = ...,
-        values: list[str] = ...,
+        values: MutableSequence[str] = ...,
     ) -> None: ...
 
 class TextAsset(proto.Message):

@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -40,7 +41,7 @@ class MutateAssetGroupListingGroupFilterResult(proto.Message):
 
 class MutateAssetGroupListingGroupFiltersRequest(proto.Message):
     customer_id: str
-    operations: list[AssetGroupListingGroupFilterOperation]
+    operations: MutableSequence[AssetGroupListingGroupFilterOperation]
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
@@ -49,17 +50,17 @@ class MutateAssetGroupListingGroupFiltersRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[AssetGroupListingGroupFilterOperation] = ...,
+        operations: MutableSequence[AssetGroupListingGroupFilterOperation] = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
 
 class MutateAssetGroupListingGroupFiltersResponse(proto.Message):
-    results: list[MutateAssetGroupListingGroupFilterResult]
+    results: MutableSequence[MutateAssetGroupListingGroupFilterResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[MutateAssetGroupListingGroupFilterResult] = ...
+        results: MutableSequence[MutateAssetGroupListingGroupFilterResult] = ...
     ) -> None: ...

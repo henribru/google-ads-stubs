@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -36,7 +37,7 @@ class MutateKeywordPlanCampaignResult(proto.Message):
 
 class MutateKeywordPlanCampaignsRequest(proto.Message):
     customer_id: str
-    operations: list[KeywordPlanCampaignOperation]
+    operations: MutableSequence[KeywordPlanCampaignOperation]
     partial_failure: bool
     validate_only: bool
     def __init__(
@@ -45,19 +46,19 @@ class MutateKeywordPlanCampaignsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[KeywordPlanCampaignOperation] = ...,
+        operations: MutableSequence[KeywordPlanCampaignOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateKeywordPlanCampaignsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateKeywordPlanCampaignResult]
+    results: MutableSequence[MutateKeywordPlanCampaignResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateKeywordPlanCampaignResult] = ...
+        results: MutableSequence[MutateKeywordPlanCampaignResult] = ...
     ) -> None: ...

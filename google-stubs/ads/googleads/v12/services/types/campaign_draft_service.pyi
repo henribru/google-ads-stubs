@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -40,14 +41,14 @@ class ListCampaignDraftAsyncErrorsRequest(proto.Message):
     ) -> None: ...
 
 class ListCampaignDraftAsyncErrorsResponse(proto.Message):
-    errors: list[Status]
+    errors: MutableSequence[Status]
     next_page_token: str
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        errors: list[Status] = ...,
+        errors: MutableSequence[Status] = ...,
         next_page_token: str = ...
     ) -> None: ...
 
@@ -65,7 +66,7 @@ class MutateCampaignDraftResult(proto.Message):
 
 class MutateCampaignDraftsRequest(proto.Message):
     customer_id: str
-    operations: list[CampaignDraftOperation]
+    operations: MutableSequence[CampaignDraftOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -75,7 +76,7 @@ class MutateCampaignDraftsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[CampaignDraftOperation] = ...,
+        operations: MutableSequence[CampaignDraftOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
@@ -83,14 +84,14 @@ class MutateCampaignDraftsRequest(proto.Message):
 
 class MutateCampaignDraftsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateCampaignDraftResult]
+    results: MutableSequence[MutateCampaignDraftResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateCampaignDraftResult] = ...
+        results: MutableSequence[MutateCampaignDraftResult] = ...
     ) -> None: ...
 
 class PromoteCampaignDraftRequest(proto.Message):

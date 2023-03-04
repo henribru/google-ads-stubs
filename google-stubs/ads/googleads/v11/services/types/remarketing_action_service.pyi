@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -20,7 +21,7 @@ class MutateRemarketingActionResult(proto.Message):
 
 class MutateRemarketingActionsRequest(proto.Message):
     customer_id: str
-    operations: list[RemarketingActionOperation]
+    operations: MutableSequence[RemarketingActionOperation]
     partial_failure: bool
     validate_only: bool
     def __init__(
@@ -29,21 +30,21 @@ class MutateRemarketingActionsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[RemarketingActionOperation] = ...,
+        operations: MutableSequence[RemarketingActionOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
 
 class MutateRemarketingActionsResponse(proto.Message):
     partial_failure_error: Status
-    results: list[MutateRemarketingActionResult]
+    results: MutableSequence[MutateRemarketingActionResult]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
-        results: list[MutateRemarketingActionResult] = ...
+        results: MutableSequence[MutateRemarketingActionResult] = ...
     ) -> None: ...
 
 class RemarketingActionOperation(proto.Message):

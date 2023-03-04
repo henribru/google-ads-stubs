@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -13,23 +14,23 @@ from google.ads.googleads.v11.resources.types.ad import Ad
 
 class ApplyRecommendationOperation(proto.Message):
     class CallExtensionParameters(proto.Message):
-        call_extensions: list[CallFeedItem]
+        call_extensions: MutableSequence[CallFeedItem]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            call_extensions: list[CallFeedItem] = ...
+            call_extensions: MutableSequence[CallFeedItem] = ...
         ) -> None: ...
 
     class CalloutExtensionParameters(proto.Message):
-        callout_extensions: list[CalloutFeedItem]
+        callout_extensions: MutableSequence[CalloutFeedItem]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            callout_extensions: list[CalloutFeedItem] = ...
+            callout_extensions: MutableSequence[CalloutFeedItem] = ...
         ) -> None: ...
 
     class CampaignBudgetParameters(proto.Message):
@@ -97,13 +98,13 @@ class ApplyRecommendationOperation(proto.Message):
         ) -> None: ...
 
     class SitelinkExtensionParameters(proto.Message):
-        sitelink_extensions: list[SitelinkFeedItem]
+        sitelink_extensions: MutableSequence[SitelinkFeedItem]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            sitelink_extensions: list[SitelinkFeedItem] = ...
+            sitelink_extensions: MutableSequence[SitelinkFeedItem] = ...
         ) -> None: ...
 
     class TargetCpaOptInParameters(proto.Message):
@@ -186,7 +187,7 @@ class ApplyRecommendationOperation(proto.Message):
 
 class ApplyRecommendationRequest(proto.Message):
     customer_id: str
-    operations: list[ApplyRecommendationOperation]
+    operations: MutableSequence[ApplyRecommendationOperation]
     partial_failure: bool
     def __init__(
         self,
@@ -194,19 +195,19 @@ class ApplyRecommendationRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[ApplyRecommendationOperation] = ...,
+        operations: MutableSequence[ApplyRecommendationOperation] = ...,
         partial_failure: bool = ...
     ) -> None: ...
 
 class ApplyRecommendationResponse(proto.Message):
-    results: list[ApplyRecommendationResult]
+    results: MutableSequence[ApplyRecommendationResult]
     partial_failure_error: Status
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[ApplyRecommendationResult] = ...,
+        results: MutableSequence[ApplyRecommendationResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...
 
@@ -231,7 +232,9 @@ class DismissRecommendationRequest(proto.Message):
             resource_name: str = ...
         ) -> None: ...
     customer_id: str
-    operations: list[DismissRecommendationRequest.DismissRecommendationOperation]
+    operations: MutableSequence[
+        DismissRecommendationRequest.DismissRecommendationOperation
+    ]
     partial_failure: bool
     def __init__(
         self,
@@ -239,7 +242,7 @@ class DismissRecommendationRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[
+        operations: MutableSequence[
             DismissRecommendationRequest.DismissRecommendationOperation
         ] = ...,
         partial_failure: bool = ...
@@ -255,13 +258,15 @@ class DismissRecommendationResponse(proto.Message):
             ignore_unknown_fields: bool = ...,
             resource_name: str = ...
         ) -> None: ...
-    results: list[DismissRecommendationResponse.DismissRecommendationResult]
+    results: MutableSequence[DismissRecommendationResponse.DismissRecommendationResult]
     partial_failure_error: Status
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[DismissRecommendationResponse.DismissRecommendationResult] = ...,
+        results: MutableSequence[
+            DismissRecommendationResponse.DismissRecommendationResult
+        ] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...

@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -12,8 +13,8 @@ from google.ads.googleads.v11.enums.types.matching_function_operator import (
 class MatchingFunction(proto.Message):
     function_string: str
     operator: MatchingFunctionOperatorEnum.MatchingFunctionOperator
-    left_operands: list[Operand]
-    right_operands: list[Operand]
+    left_operands: MutableSequence[Operand]
+    right_operands: MutableSequence[Operand]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -21,8 +22,8 @@ class MatchingFunction(proto.Message):
         ignore_unknown_fields: bool = ...,
         function_string: str = ...,
         operator: MatchingFunctionOperatorEnum.MatchingFunctionOperator = ...,
-        left_operands: list[Operand] = ...,
-        right_operands: list[Operand] = ...
+        left_operands: MutableSequence[Operand] = ...,
+        right_operands: MutableSequence[Operand] = ...
     ) -> None: ...
 
 class Operand(proto.Message):

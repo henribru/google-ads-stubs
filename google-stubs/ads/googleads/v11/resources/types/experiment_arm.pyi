@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -8,8 +9,8 @@ class ExperimentArm(proto.Message):
     name: str
     control: bool
     traffic_split: int
-    campaigns: list[str]
-    in_design_campaigns: list[str]
+    campaigns: MutableSequence[str]
+    in_design_campaigns: MutableSequence[str]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -20,6 +21,6 @@ class ExperimentArm(proto.Message):
         name: str = ...,
         control: bool = ...,
         traffic_split: int = ...,
-        campaigns: list[str] = ...,
-        in_design_campaigns: list[str] = ...
+        campaigns: MutableSequence[str] = ...,
+        in_design_campaigns: MutableSequence[str] = ...
     ) -> None: ...

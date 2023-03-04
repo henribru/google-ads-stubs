@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -95,7 +96,9 @@ class Metrics(proto.Message):
     impressions: int
     interaction_rate: float
     interactions: int
-    interaction_event_types: list[InteractionEventTypeEnum.InteractionEventType]
+    interaction_event_types: MutableSequence[
+        InteractionEventTypeEnum.InteractionEventType
+    ]
     invalid_click_rate: float
     invalid_clicks: int
     message_chats: int
@@ -249,7 +252,7 @@ class Metrics(proto.Message):
         impressions: int = ...,
         interaction_rate: float = ...,
         interactions: int = ...,
-        interaction_event_types: list[
+        interaction_event_types: MutableSequence[
             InteractionEventTypeEnum.InteractionEventType
         ] = ...,
         invalid_click_rate: float = ...,

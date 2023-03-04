@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -29,7 +30,7 @@ class SearchGoogleAdsFieldsRequest(proto.Message):
     ) -> None: ...
 
 class SearchGoogleAdsFieldsResponse(proto.Message):
-    results: list[GoogleAdsField]
+    results: MutableSequence[GoogleAdsField]
     next_page_token: str
     total_results_count: int
     def __init__(
@@ -37,7 +38,7 @@ class SearchGoogleAdsFieldsResponse(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[GoogleAdsField] = ...,
+        results: MutableSequence[GoogleAdsField] = ...,
         next_page_token: str = ...,
         total_results_count: int = ...
     ) -> None: ...

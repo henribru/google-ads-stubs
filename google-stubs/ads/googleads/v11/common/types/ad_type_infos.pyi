@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -26,54 +27,54 @@ from google.ads.googleads.v11.enums.types.video_thumbnail import VideoThumbnailE
 
 class AppAdInfo(proto.Message):
     mandatory_ad_text: AdTextAsset
-    headlines: list[AdTextAsset]
-    descriptions: list[AdTextAsset]
-    images: list[AdImageAsset]
-    youtube_videos: list[AdVideoAsset]
-    html5_media_bundles: list[AdMediaBundleAsset]
+    headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
+    images: MutableSequence[AdImageAsset]
+    youtube_videos: MutableSequence[AdVideoAsset]
+    html5_media_bundles: MutableSequence[AdMediaBundleAsset]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         mandatory_ad_text: AdTextAsset = ...,
-        headlines: list[AdTextAsset] = ...,
-        descriptions: list[AdTextAsset] = ...,
-        images: list[AdImageAsset] = ...,
-        youtube_videos: list[AdVideoAsset] = ...,
-        html5_media_bundles: list[AdMediaBundleAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
+        images: MutableSequence[AdImageAsset] = ...,
+        youtube_videos: MutableSequence[AdVideoAsset] = ...,
+        html5_media_bundles: MutableSequence[AdMediaBundleAsset] = ...,
     ) -> None: ...
 
 class AppEngagementAdInfo(proto.Message):
-    headlines: list[AdTextAsset]
-    descriptions: list[AdTextAsset]
-    images: list[AdImageAsset]
-    videos: list[AdVideoAsset]
+    headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
+    images: MutableSequence[AdImageAsset]
+    videos: MutableSequence[AdVideoAsset]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        headlines: list[AdTextAsset] = ...,
-        descriptions: list[AdTextAsset] = ...,
-        images: list[AdImageAsset] = ...,
-        videos: list[AdVideoAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
+        images: MutableSequence[AdImageAsset] = ...,
+        videos: MutableSequence[AdVideoAsset] = ...,
     ) -> None: ...
 
 class AppPreRegistrationAdInfo(proto.Message):
-    headlines: list[AdTextAsset]
-    descriptions: list[AdTextAsset]
-    images: list[AdImageAsset]
-    youtube_videos: list[AdVideoAsset]
+    headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
+    images: MutableSequence[AdImageAsset]
+    youtube_videos: MutableSequence[AdVideoAsset]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        headlines: list[AdTextAsset] = ...,
-        descriptions: list[AdTextAsset] = ...,
-        images: list[AdImageAsset] = ...,
-        youtube_videos: list[AdVideoAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
+        images: MutableSequence[AdImageAsset] = ...,
+        youtube_videos: MutableSequence[AdVideoAsset] = ...,
     ) -> None: ...
 
 class CallAdInfo(proto.Message):
@@ -118,7 +119,7 @@ class DiscoveryCarouselAdInfo(proto.Message):
     headline: AdTextAsset
     description: AdTextAsset
     call_to_action_text: str
-    carousel_cards: list[AdDiscoveryCarouselCardAsset]
+    carousel_cards: MutableSequence[AdDiscoveryCarouselCardAsset]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -129,16 +130,16 @@ class DiscoveryCarouselAdInfo(proto.Message):
         headline: AdTextAsset = ...,
         description: AdTextAsset = ...,
         call_to_action_text: str = ...,
-        carousel_cards: list[AdDiscoveryCarouselCardAsset] = ...,
+        carousel_cards: MutableSequence[AdDiscoveryCarouselCardAsset] = ...,
     ) -> None: ...
 
 class DiscoveryMultiAssetAdInfo(proto.Message):
-    marketing_images: list[AdImageAsset]
-    square_marketing_images: list[AdImageAsset]
-    portrait_marketing_images: list[AdImageAsset]
-    logo_images: list[AdImageAsset]
-    headlines: list[AdTextAsset]
-    descriptions: list[AdTextAsset]
+    marketing_images: MutableSequence[AdImageAsset]
+    square_marketing_images: MutableSequence[AdImageAsset]
+    portrait_marketing_images: MutableSequence[AdImageAsset]
+    logo_images: MutableSequence[AdImageAsset]
+    headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
     business_name: str
     call_to_action_text: str
     lead_form_only: bool
@@ -147,12 +148,12 @@ class DiscoveryMultiAssetAdInfo(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        marketing_images: list[AdImageAsset] = ...,
-        square_marketing_images: list[AdImageAsset] = ...,
-        portrait_marketing_images: list[AdImageAsset] = ...,
-        logo_images: list[AdImageAsset] = ...,
-        headlines: list[AdTextAsset] = ...,
-        descriptions: list[AdTextAsset] = ...,
+        marketing_images: MutableSequence[AdImageAsset] = ...,
+        square_marketing_images: MutableSequence[AdImageAsset] = ...,
+        portrait_marketing_images: MutableSequence[AdImageAsset] = ...,
+        logo_images: MutableSequence[AdImageAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
         business_name: str = ...,
         call_to_action_text: str = ...,
         lead_form_only: bool = ...,
@@ -225,8 +226,8 @@ class GmailAdInfo(proto.Message):
     marketing_image_headline: str
     marketing_image_description: str
     marketing_image_display_call_to_action: DisplayCallToAction
-    product_images: list[ProductImage]
-    product_videos: list[ProductVideo]
+    product_images: MutableSequence[ProductImage]
+    product_videos: MutableSequence[ProductVideo]
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -238,8 +239,8 @@ class GmailAdInfo(proto.Message):
         marketing_image_headline: str = ...,
         marketing_image_description: str = ...,
         marketing_image_display_call_to_action: DisplayCallToAction = ...,
-        product_images: list[ProductImage] = ...,
-        product_videos: list[ProductVideo] = ...,
+        product_images: MutableSequence[ProductImage] = ...,
+        product_videos: MutableSequence[ProductVideo] = ...,
     ) -> None: ...
 
 class GmailTeaser(proto.Message):
@@ -370,12 +371,12 @@ class LegacyResponsiveDisplayAdInfo(proto.Message):
     ) -> None: ...
 
 class LocalAdInfo(proto.Message):
-    headlines: list[AdTextAsset]
-    descriptions: list[AdTextAsset]
-    call_to_actions: list[AdTextAsset]
-    marketing_images: list[AdImageAsset]
-    logo_images: list[AdImageAsset]
-    videos: list[AdVideoAsset]
+    headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
+    call_to_actions: MutableSequence[AdTextAsset]
+    marketing_images: MutableSequence[AdImageAsset]
+    logo_images: MutableSequence[AdImageAsset]
+    videos: MutableSequence[AdVideoAsset]
     path1: str
     path2: str
     def __init__(
@@ -383,12 +384,12 @@ class LocalAdInfo(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        headlines: list[AdTextAsset] = ...,
-        descriptions: list[AdTextAsset] = ...,
-        call_to_actions: list[AdTextAsset] = ...,
-        marketing_images: list[AdImageAsset] = ...,
-        logo_images: list[AdImageAsset] = ...,
-        videos: list[AdVideoAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
+        call_to_actions: MutableSequence[AdTextAsset] = ...,
+        marketing_images: MutableSequence[AdImageAsset] = ...,
+        logo_images: MutableSequence[AdImageAsset] = ...,
+        videos: MutableSequence[AdVideoAsset] = ...,
         path1: str = ...,
         path2: str = ...,
     ) -> None: ...
@@ -430,14 +431,14 @@ class ResponsiveDisplayAdControlSpec(proto.Message):
     ) -> None: ...
 
 class ResponsiveDisplayAdInfo(proto.Message):
-    marketing_images: list[AdImageAsset]
-    square_marketing_images: list[AdImageAsset]
-    logo_images: list[AdImageAsset]
-    square_logo_images: list[AdImageAsset]
-    headlines: list[AdTextAsset]
+    marketing_images: MutableSequence[AdImageAsset]
+    square_marketing_images: MutableSequence[AdImageAsset]
+    logo_images: MutableSequence[AdImageAsset]
+    square_logo_images: MutableSequence[AdImageAsset]
+    headlines: MutableSequence[AdTextAsset]
     long_headline: AdTextAsset
-    descriptions: list[AdTextAsset]
-    youtube_videos: list[AdVideoAsset]
+    descriptions: MutableSequence[AdTextAsset]
+    youtube_videos: MutableSequence[AdVideoAsset]
     business_name: str
     main_color: str
     accent_color: str
@@ -452,14 +453,14 @@ class ResponsiveDisplayAdInfo(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        marketing_images: list[AdImageAsset] = ...,
-        square_marketing_images: list[AdImageAsset] = ...,
-        logo_images: list[AdImageAsset] = ...,
-        square_logo_images: list[AdImageAsset] = ...,
-        headlines: list[AdTextAsset] = ...,
+        marketing_images: MutableSequence[AdImageAsset] = ...,
+        square_marketing_images: MutableSequence[AdImageAsset] = ...,
+        logo_images: MutableSequence[AdImageAsset] = ...,
+        square_logo_images: MutableSequence[AdImageAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
         long_headline: AdTextAsset = ...,
-        descriptions: list[AdTextAsset] = ...,
-        youtube_videos: list[AdVideoAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
+        youtube_videos: MutableSequence[AdVideoAsset] = ...,
         business_name: str = ...,
         main_color: str = ...,
         accent_color: str = ...,
@@ -472,8 +473,8 @@ class ResponsiveDisplayAdInfo(proto.Message):
     ) -> None: ...
 
 class ResponsiveSearchAdInfo(proto.Message):
-    headlines: list[AdTextAsset]
-    descriptions: list[AdTextAsset]
+    headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
     path1: str
     path2: str
     def __init__(
@@ -481,8 +482,8 @@ class ResponsiveSearchAdInfo(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        headlines: list[AdTextAsset] = ...,
-        descriptions: list[AdTextAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
         path1: str = ...,
         path2: str = ...,
     ) -> None: ...
@@ -516,15 +517,15 @@ class ShoppingSmartAdInfo(proto.Message):
     ...
 
 class SmartCampaignAdInfo(proto.Message):
-    headlines: list[AdTextAsset]
-    descriptions: list[AdTextAsset]
+    headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        headlines: list[AdTextAsset] = ...,
-        descriptions: list[AdTextAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
     ) -> None: ...
 
 class TextAdInfo(proto.Message):
@@ -598,12 +599,12 @@ class VideoOutstreamAdInfo(proto.Message):
     ) -> None: ...
 
 class VideoResponsiveAdInfo(proto.Message):
-    headlines: list[AdTextAsset]
-    long_headlines: list[AdTextAsset]
-    descriptions: list[AdTextAsset]
-    call_to_actions: list[AdTextAsset]
-    videos: list[AdVideoAsset]
-    companion_banners: list[AdImageAsset]
+    headlines: MutableSequence[AdTextAsset]
+    long_headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
+    call_to_actions: MutableSequence[AdTextAsset]
+    videos: MutableSequence[AdVideoAsset]
+    companion_banners: MutableSequence[AdImageAsset]
     breadcrumb1: str
     breadcrumb2: str
     def __init__(
@@ -611,12 +612,12 @@ class VideoResponsiveAdInfo(proto.Message):
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        headlines: list[AdTextAsset] = ...,
-        long_headlines: list[AdTextAsset] = ...,
-        descriptions: list[AdTextAsset] = ...,
-        call_to_actions: list[AdTextAsset] = ...,
-        videos: list[AdVideoAsset] = ...,
-        companion_banners: list[AdImageAsset] = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        long_headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
+        call_to_actions: MutableSequence[AdTextAsset] = ...,
+        videos: MutableSequence[AdVideoAsset] = ...,
+        companion_banners: MutableSequence[AdImageAsset] = ...,
         breadcrumb1: str = ...,
         breadcrumb2: str = ...,
     ) -> None: ...

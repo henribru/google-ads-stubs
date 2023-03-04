@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -117,7 +118,7 @@ class Campaign(proto.Message):
         domain_name: str
         language_code: str
         use_supplied_urls_only: bool
-        feeds: list[str]
+        feeds: MutableSequence[str]
         def __init__(
             self,
             mapping: Any | None = ...,
@@ -126,7 +127,7 @@ class Campaign(proto.Message):
             domain_name: str = ...,
             language_code: str = ...,
             use_supplied_urls_only: bool = ...,
-            feeds: list[str] = ...
+            feeds: MutableSequence[str] = ...
         ) -> None: ...
 
     class GeoTargetTypeSetting(proto.Message):
@@ -162,13 +163,13 @@ class Campaign(proto.Message):
         ) -> None: ...
 
     class LocalServicesCampaignSettings(proto.Message):
-        category_bids: list[Campaign.CategoryBid]
+        category_bids: MutableSequence[Campaign.CategoryBid]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            category_bids: list[Campaign.CategoryBid] = ...
+            category_bids: MutableSequence[Campaign.CategoryBid] = ...
         ) -> None: ...
 
     class NetworkSettings(proto.Message):
@@ -188,13 +189,15 @@ class Campaign(proto.Message):
         ) -> None: ...
 
     class OptimizationGoalSetting(proto.Message):
-        optimization_goal_types: list[OptimizationGoalTypeEnum.OptimizationGoalType]
+        optimization_goal_types: MutableSequence[
+            OptimizationGoalTypeEnum.OptimizationGoalType
+        ]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            optimization_goal_types: list[
+            optimization_goal_types: MutableSequence[
                 OptimizationGoalTypeEnum.OptimizationGoalType
             ] = ...
         ) -> None: ...
@@ -214,13 +217,13 @@ class Campaign(proto.Message):
         ) -> None: ...
 
     class SelectiveOptimization(proto.Message):
-        conversion_actions: list[str]
+        conversion_actions: MutableSequence[str]
         def __init__(
             self,
             mapping: Any | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
-            conversion_actions: list[str] = ...
+            conversion_actions: MutableSequence[str] = ...
         ) -> None: ...
 
     class ShoppingSetting(proto.Message):
@@ -274,7 +277,7 @@ class Campaign(proto.Message):
     advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType
     advertising_channel_sub_type: AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
     tracking_url_template: str
-    url_custom_parameters: list[CustomParameter]
+    url_custom_parameters: MutableSequence[CustomParameter]
     local_services_campaign_settings: Campaign.LocalServicesCampaignSettings
     real_time_bidding_setting: RealTimeBiddingSetting
     network_settings: Campaign.NetworkSettings
@@ -286,7 +289,7 @@ class Campaign(proto.Message):
     geo_target_type_setting: Campaign.GeoTargetTypeSetting
     local_campaign_setting: Campaign.LocalCampaignSetting
     app_campaign_setting: Campaign.AppCampaignSetting
-    labels: list[str]
+    labels: MutableSequence[str]
     experiment_type: CampaignExperimentTypeEnum.CampaignExperimentType
     base_campaign: str
     campaign_budget: str
@@ -296,7 +299,7 @@ class Campaign(proto.Message):
     campaign_group: str
     end_date: str
     final_url_suffix: str
-    frequency_caps: list[FrequencyCapEntry]
+    frequency_caps: MutableSequence[FrequencyCapEntry]
     video_brand_safety_suitability: BrandSafetySuitabilityEnum.BrandSafetySuitability
     vanity_pharma: Campaign.VanityPharma
     selective_optimization: Campaign.SelectiveOptimization
@@ -304,7 +307,9 @@ class Campaign(proto.Message):
     tracking_setting: Campaign.TrackingSetting
     payment_mode: PaymentModeEnum.PaymentMode
     optimization_score: float
-    excluded_parent_asset_field_types: list[AssetFieldTypeEnum.AssetFieldType]
+    excluded_parent_asset_field_types: MutableSequence[
+        AssetFieldTypeEnum.AssetFieldType
+    ]
     url_expansion_opt_out: bool
     performance_max_upgrade: Campaign.PerformanceMaxUpgrade
     bidding_strategy: str
@@ -336,7 +341,7 @@ class Campaign(proto.Message):
         advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType = ...,
         advertising_channel_sub_type: AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType = ...,
         tracking_url_template: str = ...,
-        url_custom_parameters: list[CustomParameter] = ...,
+        url_custom_parameters: MutableSequence[CustomParameter] = ...,
         local_services_campaign_settings: Campaign.LocalServicesCampaignSettings = ...,
         real_time_bidding_setting: RealTimeBiddingSetting = ...,
         network_settings: Campaign.NetworkSettings = ...,
@@ -348,7 +353,7 @@ class Campaign(proto.Message):
         geo_target_type_setting: Campaign.GeoTargetTypeSetting = ...,
         local_campaign_setting: Campaign.LocalCampaignSetting = ...,
         app_campaign_setting: Campaign.AppCampaignSetting = ...,
-        labels: list[str] = ...,
+        labels: MutableSequence[str] = ...,
         experiment_type: CampaignExperimentTypeEnum.CampaignExperimentType = ...,
         base_campaign: str = ...,
         campaign_budget: str = ...,
@@ -358,7 +363,7 @@ class Campaign(proto.Message):
         campaign_group: str = ...,
         end_date: str = ...,
         final_url_suffix: str = ...,
-        frequency_caps: list[FrequencyCapEntry] = ...,
+        frequency_caps: MutableSequence[FrequencyCapEntry] = ...,
         video_brand_safety_suitability: BrandSafetySuitabilityEnum.BrandSafetySuitability = ...,
         vanity_pharma: Campaign.VanityPharma = ...,
         selective_optimization: Campaign.SelectiveOptimization = ...,
@@ -366,7 +371,7 @@ class Campaign(proto.Message):
         tracking_setting: Campaign.TrackingSetting = ...,
         payment_mode: PaymentModeEnum.PaymentMode = ...,
         optimization_score: float = ...,
-        excluded_parent_asset_field_types: list[
+        excluded_parent_asset_field_types: MutableSequence[
             AssetFieldTypeEnum.AssetFieldType
         ] = ...,
         url_expansion_opt_out: bool = ...,

@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -41,7 +42,7 @@ class MutateConversionValueRuleResult(proto.Message):
 
 class MutateConversionValueRulesRequest(proto.Message):
     customer_id: str
-    operations: list[ConversionValueRuleOperation]
+    operations: MutableSequence[ConversionValueRuleOperation]
     partial_failure: bool
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
@@ -51,20 +52,20 @@ class MutateConversionValueRulesRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
-        operations: list[ConversionValueRuleOperation] = ...,
+        operations: MutableSequence[ConversionValueRuleOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
 
 class MutateConversionValueRulesResponse(proto.Message):
-    results: list[MutateConversionValueRuleResult]
+    results: MutableSequence[MutateConversionValueRuleResult]
     partial_failure_error: Status
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
-        results: list[MutateConversionValueRuleResult] = ...,
+        results: MutableSequence[MutateConversionValueRuleResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...
