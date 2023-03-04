@@ -23,10 +23,10 @@ types-protobuf = ">=3.18.0"
 proto-plus-stubs = ">=0.1.0"
 google-auth-stubs = ">=0.1.0"
 
-[tool.poetry.dev-dependencies]
-mypy = "^0.982"
-black = "^22.10.0"
-isort = "^5.10.1"
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.0.1"
+black = "^23.1.0"
+isort = {version = "^5.12.0", python = "^3.8"}
 
 [tool.isort]
 profile = "black"
