@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "google-ads-stubs"
-version = "12.0.0"
+version = "13.0.0"
 license = "Apache-2.0"
 description = "Type stubs for google-ads"
 authors = ["Henrik Bruåsdal <henrik.bruasdal@gmail.com>"]
