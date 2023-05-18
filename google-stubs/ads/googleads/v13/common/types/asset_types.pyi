@@ -540,6 +540,7 @@ class LeadFormAsset(proto.Message):
 class LeadFormCustomQuestionField(proto.Message):
     custom_question_text: str
     single_choice_answers: LeadFormSingleChoiceAnswers
+    has_location_answer: bool
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -547,6 +548,7 @@ class LeadFormCustomQuestionField(proto.Message):
         ignore_unknown_fields: bool = ...,
         custom_question_text: str = ...,
         single_choice_answers: LeadFormSingleChoiceAnswers = ...,
+        has_location_answer: bool = ...,
     ) -> None: ...
 
 class LeadFormDeliveryMethod(proto.Message):
@@ -562,6 +564,7 @@ class LeadFormDeliveryMethod(proto.Message):
 class LeadFormField(proto.Message):
     input_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType
     single_choice_answers: LeadFormSingleChoiceAnswers
+    has_location_answer: bool
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -569,6 +572,7 @@ class LeadFormField(proto.Message):
         ignore_unknown_fields: bool = ...,
         input_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType = ...,
         single_choice_answers: LeadFormSingleChoiceAnswers = ...,
+        has_location_answer: bool = ...,
     ) -> None: ...
 
 class LeadFormSingleChoiceAnswers(proto.Message):

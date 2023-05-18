@@ -40,6 +40,7 @@ class AssetErrorEnum(proto.Message):
         NAME_CONFLICT_FOR_ASSET_TYPE = 34
         CANNOT_MODIFY_ASSET_SOURCE = 35
         CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET = 36
+        LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED = 37
     def __init__(
         self,
         mapping: Any | None = ...,

@@ -29,6 +29,7 @@ class RequestErrorEnum(proto.Message):
         INCONSISTENT_RETURN_SUMMARY_ROW_VALUE = 31
         TOTAL_RESULTS_COUNT_NOT_ORIGINALLY_REQUESTED = 32
         RPC_DEADLINE_TOO_SHORT = 33
+        UNSUPPORTED_VERSION = 38
     def __init__(
         self,
         mapping: Any | None = ...,
