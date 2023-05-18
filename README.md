@@ -17,7 +17,8 @@ If you find incorrect annotations, please create an issue. Contributions for fix
 $ pip install google-ads-stubs
 ```
 
-The stubs should be automatically picked up by your editor or typechecker.
+The stubs should be automatically picked up by your editor or typechecker, but note that if you're using Mypy you need to use the `--namespace-packages` option as `google` and `google.ads` are namespace packages.
+
 
 ## Caveats
 
@@ -48,5 +49,3 @@ AdGroupAd({"status": "ENABLED", ad={"type": 2}})
 from google.ads.googleads.v13 import AdGroupAdStatusEnum, AdTypeEnum, Ad
 AdGroupAd(status=AdGroupAdStatusEnum.AdGroupAdStatus.ENABLED, ad=Ad(type=AdTypeEnum.AdType.TEXT_AD))
 ```
-
-Note that if you're using Mypy you need to use the `--namespace-packages` option as `google` and `google.ads` are namespace packages.
