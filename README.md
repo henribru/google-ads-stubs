@@ -17,10 +17,12 @@ If you find incorrect annotations, please create an issue. Contributions for fix
 $ pip install google-ads-stubs
 ```
 
+The stubs should be automatically picked up by your editor or typechecker.
+
 ## Caveats
 
 There are some caveats. The primary one is that type inference does _not_ work for the `get_type`
-method of `Client`.The workaround is to explicitly state the type. You can also instantiate the object directly to get inference. 
+method of `GoogleAdsClient`.The workaround is to explicitly state the type. You can also instantiate the object directly to get inference. 
 
 ```python
 # Replace this:
