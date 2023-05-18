@@ -192,6 +192,7 @@
 #   ListingGroupFilterTypeEnum
 #   ListingGroupFilterVerticalEnum
 #   ListingGroupTypeEnum
+#   ListingTypeEnum
 #   LocalPlaceholderFieldEnum
 #   LocationExtensionTargetingCriterionFieldEnum
 #   LocationGroupRadiusUnitsEnum
@@ -260,6 +261,7 @@
 #   ServedAssetFieldTypeEnum
 #   SharedSetStatusEnum
 #   SharedSetTypeEnum
+#   ShoppingAddProductsToCampaignRecommendationEnum
 #   SimulationModificationMethodEnum
 #   SimulationTypeEnum
 #   SitelinkPlaceholderFieldEnum

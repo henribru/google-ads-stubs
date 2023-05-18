@@ -8,6 +8,9 @@ from google.ads.googleads.v13.enums.types.keyword_match_type import KeywordMatch
 from google.ads.googleads.v13.enums.types.recommendation_type import (
     RecommendationTypeEnum,
 )
+from google.ads.googleads.v13.enums.types.shopping_add_products_to_campaign_recommendation_enum import (
+    ShoppingAddProductsToCampaignRecommendationEnum,
+)
 from google.ads.googleads.v13.enums.types.target_cpa_opt_in_recommendation_goal import (
     TargetCpaOptInRecommendationGoalEnum,
 )
@@ -153,6 +156,20 @@ class Recommendation(proto.Message):
             recommended_budget_amount_micros: int = ...,
         ) -> None: ...
 
+    class MerchantInfo(proto.Message):
+        id: int
+        name: str
+        multi_client: bool
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            id: int = ...,
+            name: str = ...,
+            multi_client: bool = ...,
+        ) -> None: ...
+
     class MoveUnusedBudgetRecommendation(proto.Message):
         excess_campaign_budget: str
         budget_recommendation: Recommendation.CampaignBudgetRecommendation
@@ -256,6 +273,92 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = ...,
         ) -> None: ...
         ...
+
+    class ShoppingAddProductsToCampaignRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        reason: ShoppingAddProductsToCampaignRecommendationEnum.Reason
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            merchant: Recommendation.MerchantInfo = ...,
+            feed_label: str = ...,
+            reason: ShoppingAddProductsToCampaignRecommendationEnum.Reason = ...,
+        ) -> None: ...
+
+    class ShoppingFixDisapprovedProductsRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        products_count: int
+        disapproved_products_count: int
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            merchant: Recommendation.MerchantInfo = ...,
+            feed_label: str = ...,
+            products_count: int = ...,
+            disapproved_products_count: int = ...,
+        ) -> None: ...
+
+    class ShoppingMerchantCenterAccountSuspensionRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            merchant: Recommendation.MerchantInfo = ...,
+            feed_label: str = ...,
+        ) -> None: ...
+
+    class ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(
+        proto.Message
+    ):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            merchant: Recommendation.MerchantInfo = ...,
+            feed_label: str = ...,
+        ) -> None: ...
+
+    class ShoppingOfferAttributeRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        offers_count: int
+        demoted_offers_count: int
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            merchant: Recommendation.MerchantInfo = ...,
+            feed_label: str = ...,
+            offers_count: int = ...,
+            demoted_offers_count: int = ...,
+        ) -> None: ...
+
+    class ShoppingTargetAllOffersRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        untargeted_offers_count: int
+        feed_label: str
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            merchant: Recommendation.MerchantInfo = ...,
+            untargeted_offers_count: int = ...,
+            feed_label: str = ...,
+        ) -> None: ...
 
     class SitelinkAssetRecommendation(proto.Message):
         recommended_campaign_sitelink_assets: MutableSequence[Asset]
@@ -398,6 +501,18 @@ class Recommendation(proto.Message):
     callout_asset_recommendation: Recommendation.CalloutAssetRecommendation
     sitelink_asset_recommendation: Recommendation.SitelinkAssetRecommendation
     call_asset_recommendation: Recommendation.CallAssetRecommendation
+    shopping_add_age_group_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_color_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_gender_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_gtin_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_more_identifiers_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_size_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_products_to_campaign_recommendation: Recommendation.ShoppingAddProductsToCampaignRecommendation
+    shopping_fix_disapproved_products_recommendation: Recommendation.ShoppingFixDisapprovedProductsRecommendation
+    shopping_target_all_offers_recommendation: Recommendation.ShoppingTargetAllOffersRecommendation
+    shopping_fix_suspended_merchant_center_account_recommendation: Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation
+    shopping_fix_merchant_center_account_suspension_warning_recommendation: Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation
+    shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation: Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -437,4 +552,16 @@ class Recommendation(proto.Message):
         callout_asset_recommendation: Recommendation.CalloutAssetRecommendation = ...,
         sitelink_asset_recommendation: Recommendation.SitelinkAssetRecommendation = ...,
         call_asset_recommendation: Recommendation.CallAssetRecommendation = ...,
+        shopping_add_age_group_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ...,
+        shopping_add_color_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ...,
+        shopping_add_gender_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ...,
+        shopping_add_gtin_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ...,
+        shopping_add_more_identifiers_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ...,
+        shopping_add_size_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ...,
+        shopping_add_products_to_campaign_recommendation: Recommendation.ShoppingAddProductsToCampaignRecommendation = ...,
+        shopping_fix_disapproved_products_recommendation: Recommendation.ShoppingFixDisapprovedProductsRecommendation = ...,
+        shopping_target_all_offers_recommendation: Recommendation.ShoppingTargetAllOffersRecommendation = ...,
+        shopping_fix_suspended_merchant_center_account_recommendation: Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation = ...,
+        shopping_fix_merchant_center_account_suspension_warning_recommendation: Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation = ...,
+        shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation: Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation = ...,
     ) -> None: ...

@@ -129,6 +129,8 @@ class Metrics(proto.Message):
     search_rank_lost_top_impression_share: float
     search_top_impression_share: float
     speed_score: int
+    average_target_cpa_micros: int
+    average_target_roas: float
     top_impression_percentage: float
     valid_accelerated_mobile_pages_clicks_percentage: float
     value_per_all_conversions: float
@@ -285,6 +287,8 @@ class Metrics(proto.Message):
         search_rank_lost_top_impression_share: float = ...,
         search_top_impression_share: float = ...,
         speed_score: int = ...,
+        average_target_cpa_micros: int = ...,
+        average_target_roas: float = ...,
         top_impression_percentage: float = ...,
         valid_accelerated_mobile_pages_clicks_percentage: float = ...,
         value_per_all_conversions: float = ...,

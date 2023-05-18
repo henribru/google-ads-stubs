@@ -12,6 +12,7 @@ from google.ads.googleads.v13.common.types.criteria import (
     UserInterestInfo,
     YouTubeChannelInfo,
 )
+from google.ads.googleads.v13.common.types.dates import DateRange
 from google.ads.googleads.v13.enums.types.audience_insights_dimension import (
     AudienceInsightsDimensionEnum,
 )
@@ -207,6 +208,7 @@ class DynamicLineupAttributeMetadata(proto.Message):
 class GenerateAudienceCompositionInsightsRequest(proto.Message):
     customer_id: str
     audience: InsightsAudience
+    baseline_audience: InsightsAudience
     data_month: str
     dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
     customer_insights_group: str
@@ -217,6 +219,7 @@ class GenerateAudienceCompositionInsightsRequest(proto.Message):
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
         audience: InsightsAudience = ...,
+        baseline_audience: InsightsAudience = ...,
         data_month: str = ...,
         dimensions: MutableSequence[
             AudienceInsightsDimensionEnum.AudienceInsightsDimension
@@ -337,12 +340,14 @@ class ListInsightsEligibleDatesRequest(proto.Message):
 
 class ListInsightsEligibleDatesResponse(proto.Message):
     data_months: MutableSequence[str]
+    last_thirty_days: DateRange
     def __init__(
         self,
         mapping: Any | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         data_months: MutableSequence[str] = ...,
+        last_thirty_days: DateRange = ...,
     ) -> None: ...
 
 class LocationAttributeMetadata(proto.Message):

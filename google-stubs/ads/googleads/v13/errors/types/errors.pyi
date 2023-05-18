@@ -167,6 +167,9 @@ from google.ads.googleads.v13.errors.types.customer_feed_error import (
 from google.ads.googleads.v13.errors.types.customer_manager_link_error import (
     CustomerManagerLinkErrorEnum,
 )
+from google.ads.googleads.v13.errors.types.customer_sk_ad_network_conversion_value_schema_error import (
+    CustomerSkAdNetworkConversionValueSchemaErrorEnum,
+)
 from google.ads.googleads.v13.errors.types.customer_user_access_error import (
     CustomerUserAccessErrorEnum,
 )
@@ -475,6 +478,7 @@ class ErrorCode(proto.Message):
     smart_campaign_error: SmartCampaignErrorEnum.SmartCampaignError
     experiment_arm_error: ExperimentArmErrorEnum.ExperimentArmError
     audience_insights_error: AudienceInsightsErrorEnum.AudienceInsightsError
+    customer_sk_ad_network_conversion_value_schema_error: CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError
     currency_error: CurrencyErrorEnum.CurrencyError
     def __init__(
         self,
@@ -622,6 +626,7 @@ class ErrorCode(proto.Message):
         smart_campaign_error: SmartCampaignErrorEnum.SmartCampaignError = ...,
         experiment_arm_error: ExperimentArmErrorEnum.ExperimentArmError = ...,
         audience_insights_error: AudienceInsightsErrorEnum.AudienceInsightsError = ...,
+        customer_sk_ad_network_conversion_value_schema_error: CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError = ...,
         currency_error: CurrencyErrorEnum.CurrencyError = ...
     ) -> None: ...
 

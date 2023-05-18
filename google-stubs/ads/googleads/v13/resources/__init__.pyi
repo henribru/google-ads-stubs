@@ -97,6 +97,7 @@
 #   CustomerLabel
 #   CustomerManagerLink
 #   CustomerNegativeCriterion
+#   CustomerSkAdNetworkConversionValueSchema
 #   CustomerUserAccess
 #   CustomerUserAccessInvitation
 #   CustomizerAttribute

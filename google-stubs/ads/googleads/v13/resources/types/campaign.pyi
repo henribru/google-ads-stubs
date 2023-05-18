@@ -63,6 +63,7 @@ from google.ads.googleads.v13.enums.types.campaign_serving_status import (
     CampaignServingStatusEnum,
 )
 from google.ads.googleads.v13.enums.types.campaign_status import CampaignStatusEnum
+from google.ads.googleads.v13.enums.types.listing_type import ListingTypeEnum
 from google.ads.googleads.v13.enums.types.location_source_type import (
     LocationSourceTypeEnum,
 )
@@ -336,6 +337,7 @@ class Campaign(proto.Message):
     url_expansion_opt_out: bool
     performance_max_upgrade: Campaign.PerformanceMaxUpgrade
     hotel_property_asset_set: str
+    listing_type: ListingTypeEnum.ListingType
     bidding_strategy: str
     commission: Commission
     manual_cpa: ManualCpa
@@ -409,6 +411,7 @@ class Campaign(proto.Message):
         url_expansion_opt_out: bool = ...,
         performance_max_upgrade: Campaign.PerformanceMaxUpgrade = ...,
         hotel_property_asset_set: str = ...,
+        listing_type: ListingTypeEnum.ListingType = ...,
         bidding_strategy: str = ...,
         commission: Commission = ...,
         manual_cpa: ManualCpa = ...,

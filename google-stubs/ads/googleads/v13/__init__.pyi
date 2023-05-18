@@ -912,6 +912,9 @@ from google.ads.googleads.v13.enums.types.listing_group_filter_vertical import (
 from google.ads.googleads.v13.enums.types.listing_group_type import (
     ListingGroupTypeEnum as ListingGroupTypeEnum,
 )
+from google.ads.googleads.v13.enums.types.listing_type import (
+    ListingTypeEnum as ListingTypeEnum,
+)
 from google.ads.googleads.v13.enums.types.local_placeholder_field import (
     LocalPlaceholderFieldEnum as LocalPlaceholderFieldEnum,
 )
@@ -1113,6 +1116,9 @@ from google.ads.googleads.v13.enums.types.shared_set_status import (
 )
 from google.ads.googleads.v13.enums.types.shared_set_type import (
     SharedSetTypeEnum as SharedSetTypeEnum,
+)
+from google.ads.googleads.v13.enums.types.shopping_add_products_to_campaign_recommendation_enum import (
+    ShoppingAddProductsToCampaignRecommendationEnum as ShoppingAddProductsToCampaignRecommendationEnum,
 )
 from google.ads.googleads.v13.enums.types.simulation_modification_method import (
     SimulationModificationMethodEnum as SimulationModificationMethodEnum,
@@ -1432,6 +1438,9 @@ from google.ads.googleads.v13.errors.types.customer_feed_error import (
 )
 from google.ads.googleads.v13.errors.types.customer_manager_link_error import (
     CustomerManagerLinkErrorEnum as CustomerManagerLinkErrorEnum,
+)
+from google.ads.googleads.v13.errors.types.customer_sk_ad_network_conversion_value_schema_error import (
+    CustomerSkAdNetworkConversionValueSchemaErrorEnum as CustomerSkAdNetworkConversionValueSchemaErrorEnum,
 )
 from google.ads.googleads.v13.errors.types.customer_user_access_error import (
     CustomerUserAccessErrorEnum as CustomerUserAccessErrorEnum,
@@ -1938,6 +1947,9 @@ from google.ads.googleads.v13.resources.types.customer_manager_link import (
 )
 from google.ads.googleads.v13.resources.types.customer_negative_criterion import (
     CustomerNegativeCriterion as CustomerNegativeCriterion,
+)
+from google.ads.googleads.v13.resources.types.customer_sk_ad_network_conversion_value_schema import (
+    CustomerSkAdNetworkConversionValueSchema as CustomerSkAdNetworkConversionValueSchema,
 )
 from google.ads.googleads.v13.resources.types.customer_user_access import (
     CustomerUserAccess as CustomerUserAccess,
@@ -2629,6 +2641,13 @@ from google.ads.googleads.v13.services.services.customer_service import (
 from google.ads.googleads.v13.services.services.customer_service.transports import (
     CustomerServiceGrpcTransport as CustomerServiceGrpcTransport,
     CustomerServiceTransport as CustomerServiceTransport,
+)
+from google.ads.googleads.v13.services.services.customer_sk_ad_network_conversion_value_schema_service import (
+    CustomerSkAdNetworkConversionValueSchemaServiceClient as CustomerSkAdNetworkConversionValueSchemaServiceClient,
+)
+from google.ads.googleads.v13.services.services.customer_sk_ad_network_conversion_value_schema_service.transports import (
+    CustomerSkAdNetworkConversionValueSchemaServiceGrpcTransport as CustomerSkAdNetworkConversionValueSchemaServiceGrpcTransport,
+    CustomerSkAdNetworkConversionValueSchemaServiceTransport as CustomerSkAdNetworkConversionValueSchemaServiceTransport,
 )
 from google.ads.googleads.v13.services.services.customer_user_access_invitation_service import (
     CustomerUserAccessInvitationServiceClient as CustomerUserAccessInvitationServiceClient,
@@ -3352,6 +3371,12 @@ from google.ads.googleads.v13.services.types.customer_service import (
     MutateCustomerRequest as MutateCustomerRequest,
     MutateCustomerResponse as MutateCustomerResponse,
     MutateCustomerResult as MutateCustomerResult,
+)
+from google.ads.googleads.v13.services.types.customer_sk_ad_network_conversion_value_schema_service import (
+    CustomerSkAdNetworkConversionValueSchemaOperation as CustomerSkAdNetworkConversionValueSchemaOperation,
+    MutateCustomerSkAdNetworkConversionValueSchemaRequest as MutateCustomerSkAdNetworkConversionValueSchemaRequest,
+    MutateCustomerSkAdNetworkConversionValueSchemaResponse as MutateCustomerSkAdNetworkConversionValueSchemaResponse,
+    MutateCustomerSkAdNetworkConversionValueSchemaResult as MutateCustomerSkAdNetworkConversionValueSchemaResult,
 )
 from google.ads.googleads.v13.services.types.customer_user_access_invitation_service import (
     CustomerUserAccessInvitationOperation as CustomerUserAccessInvitationOperation,

@@ -62,6 +62,7 @@
 #   CustomerErrorEnum
 #   CustomerFeedErrorEnum
 #   CustomerManagerLinkErrorEnum
+#   CustomerSkAdNetworkConversionValueSchemaErrorEnum
 #   CustomerUserAccessErrorEnum
 #   CustomizerAttributeErrorEnum
 #   DatabaseErrorEnum

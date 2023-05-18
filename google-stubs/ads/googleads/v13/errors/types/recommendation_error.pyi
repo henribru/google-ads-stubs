@@ -20,6 +20,7 @@ class RecommendationErrorEnum(proto.Message):
         DUPLICATE_RESOURCE_NAME = 13
         RECOMMENDATION_ALREADY_DISMISSED = 14
         INVALID_APPLY_REQUEST = 15
+        RECOMMENDATION_TYPE_APPLY_NOT_SUPPORTED = 17
     def __init__(
         self,
         mapping: Any | None = ...,
