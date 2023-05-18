@@ -19,8 +19,8 @@ $ pip install google-ads-stubs
 
 ## Caveats
 
-There are some caveats. The primary one is that type inference does _not_ work for the `get_type` and `get_service`
-methods of `Client`. The only exception is `get_service("GoogleAdsService")`, which is supported since it's so common. The workaround in other cases is to explicitly state the type. For `get_type` you can also instantiate the object directly to get inference. 
+There are some caveats. The primary one is that type inference does _not_ work for the `get_type`
+method of `Client`.The workaround is to explicitly state the type. You can also instantiate the object directly to get inference. 
 
 ```python
 # Replace this:
@@ -31,19 +31,10 @@ campaign_operation: CampaignOperation = client.get_type('CampaignOperation')
 # Or this:
 from google.ads.googleads.v13 import CampaignOperation
 campaign_operation = CampaignOperation()
-
-# Replace this:
-campaign_service = client.get_service('CampaignService')
-# With this:
-from google.ads.googleads.v13 import CampaignServiceClient
-campaign_service: CampaignServiceClient = client.get_service('CampaignService')
-# But you can keep this:
-google_ads_service = client.get_service('GoogleAdsService')
 ```
 
-While it is technically possible to type these methods using a combination of overloading and literal types,
+While it is technically possible to type this method using a combination of overloading and literal types,
 this is not included in these stubs. The reason is that it requires about 10,000 overloads, which makes most typecheckers fairly slow.
-The only overloads included are those necessary to make it work for GoogleAdsService.
 
 Certain types are too lenient compared to what's allowed at runtime. `GoogleAdsClient.enums` is typed as `Any` and so is the `mapping` argument to protobuf message constructors. 
 On the other hand certain types are more strict than what's allowed at runtime. You can't substitute a protobuf message for an equivalent dict or an enum with it's equivalent name or value. This might improve in the future, but for now:
