@@ -4,8 +4,9 @@ import grpc
 
 from google.ads.googleads.v12 import GoogleAdsFailure as GoogleAdsFailureV12
 from google.ads.googleads.v13 import GoogleAdsFailure as GoogleAdsFailureV13
+from google.ads.googleads.v14 import GoogleAdsFailure as GoogleAdsFailureV14
 
-GoogleAdsFailure = Union[GoogleAdsFailureV12, GoogleAdsFailureV13]
+GoogleAdsFailure = Union[GoogleAdsFailureV12, GoogleAdsFailureV13, GoogleAdsFailureV14]
 
 class GoogleAdsException(Exception):
     error: grpc.RpcError = ...
