@@ -2,7 +2,7 @@ from typing import Callable, TypeVar
 
 import grpc
 
-from google.ads.googleads import v12, v13
+from google.ads.googleads import v12, v13, v14
 
 from .interceptor import Interceptor
 
@@ -12,6 +12,8 @@ _Request = TypeVar(
     v12.SearchGoogleAdsStreamRequest,
     v13.SearchGoogleAdsRequest,
     v13.SearchGoogleAdsStreamRequest,
+    v14.SearchGoogleAdsRequest,
+    v14.SearchGoogleAdsStreamRequest,
 )
 _Response = TypeVar("_Response")
 

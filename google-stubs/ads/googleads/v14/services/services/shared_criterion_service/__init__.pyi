@@ -1,0 +1,1 @@
+from .client import SharedCriterionServiceClient as SharedCriterionServiceClient
