@@ -27,6 +27,8 @@ class AssetLinkErrorEnum(proto.Message):
         CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET = 20
         CANNOT_MODIFY_ASSET_LINK_SOURCE = 21
         CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET = 22
+        CUSTOMER_NOT_VERIFIED = 23
+        UNSUPPORTED_CALL_TO_ACTION = 24
     def __init__(
         self,
         mapping: Any | None = ...,

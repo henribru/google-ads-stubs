@@ -22,6 +22,7 @@ class Metrics(proto.Message):
     all_conversions_from_interactions_rate: float
     all_conversions_value: float
     all_conversions_value_by_conversion_date: float
+    all_new_customer_lifetime_value: float
     all_conversions: float
     all_conversions_by_conversion_date: float
     all_conversions_value_per_cost: float
@@ -63,6 +64,7 @@ class Metrics(proto.Message):
     conversions_from_interactions_rate: float
     conversions_value: float
     conversions_value_by_conversion_date: float
+    new_customer_lifetime_value: float
     conversions_value_per_cost: float
     conversions_from_interactions_value_per_interaction: float
     conversions: float
@@ -128,6 +130,7 @@ class Metrics(proto.Message):
     search_rank_lost_impression_share: float
     search_rank_lost_top_impression_share: float
     search_top_impression_share: float
+    search_volume: SearchVolumeRange
     speed_score: int
     average_target_cpa_micros: int
     average_target_roas: float
@@ -180,6 +183,7 @@ class Metrics(proto.Message):
         all_conversions_from_interactions_rate: float = ...,
         all_conversions_value: float = ...,
         all_conversions_value_by_conversion_date: float = ...,
+        all_new_customer_lifetime_value: float = ...,
         all_conversions: float = ...,
         all_conversions_by_conversion_date: float = ...,
         all_conversions_value_per_cost: float = ...,
@@ -221,6 +225,7 @@ class Metrics(proto.Message):
         conversions_from_interactions_rate: float = ...,
         conversions_value: float = ...,
         conversions_value_by_conversion_date: float = ...,
+        new_customer_lifetime_value: float = ...,
         conversions_value_per_cost: float = ...,
         conversions_from_interactions_value_per_interaction: float = ...,
         conversions: float = ...,
@@ -286,6 +291,7 @@ class Metrics(proto.Message):
         search_rank_lost_impression_share: float = ...,
         search_rank_lost_top_impression_share: float = ...,
         search_top_impression_share: float = ...,
+        search_volume: SearchVolumeRange = ...,
         speed_score: int = ...,
         average_target_cpa_micros: int = ...,
         average_target_roas: float = ...,
@@ -322,4 +328,16 @@ class Metrics(proto.Message):
         view_through_conversions_from_location_asset_other_engagement: float = ...,
         view_through_conversions_from_location_asset_store_visits: float = ...,
         view_through_conversions_from_location_asset_website: float = ...
+    ) -> None: ...
+
+class SearchVolumeRange(proto.Message):
+    min_: int
+    max_: int
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        min_: int = ...,
+        max_: int = ...
     ) -> None: ...

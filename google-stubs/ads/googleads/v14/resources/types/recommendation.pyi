@@ -122,6 +122,16 @@ class Recommendation(proto.Message):
             campaign_budget: Recommendation.CampaignBudget = ...,
         ) -> None: ...
 
+    class ImprovePerformanceMaxAdStrengthRecommendation(proto.Message):
+        asset_group: str
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            asset_group: str = ...,
+        ) -> None: ...
+
     class KeywordMatchTypeRecommendation(proto.Message):
         keyword: KeywordInfo
         recommended_match_type: KeywordMatchTypeEnum.KeywordMatchType
@@ -135,7 +145,19 @@ class Recommendation(proto.Message):
         ) -> None: ...
 
     class KeywordRecommendation(proto.Message):
+        class SearchTerm(proto.Message):
+            text: str
+            estimated_weekly_search_count: int
+            def __init__(
+                self,
+                mapping: Any | None = ...,
+                *,
+                ignore_unknown_fields: bool = ...,
+                text: str = ...,
+                estimated_weekly_search_count: int = ...,
+            ) -> None: ...
         keyword: KeywordInfo
+        search_terms: MutableSequence[Recommendation.KeywordRecommendation.SearchTerm]
         recommended_cpc_bid_micros: int
         def __init__(
             self,
@@ -143,6 +165,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = ...,
             keyword: KeywordInfo = ...,
+            search_terms: MutableSequence[
+                Recommendation.KeywordRecommendation.SearchTerm
+            ] = ...,
             recommended_cpc_bid_micros: int = ...,
         ) -> None: ...
 
@@ -190,6 +215,16 @@ class Recommendation(proto.Message):
             multi_client: bool = ...,
         ) -> None: ...
 
+    class MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation(proto.Message):
+        apply_link: str
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            apply_link: str = ...,
+        ) -> None: ...
+
     class MoveUnusedBudgetRecommendation(proto.Message):
         excess_campaign_budget: str
         budget_recommendation: Recommendation.CampaignBudgetRecommendation
@@ -203,6 +238,15 @@ class Recommendation(proto.Message):
         ) -> None: ...
 
     class OptimizeAdRotationRecommendation(proto.Message):
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+        ) -> None: ...
+        ...
+
+    class PerformanceMaxOptInRecommendation(proto.Message):
         def __init__(
             self,
             mapping: Any | None = ...,
@@ -564,6 +608,9 @@ class Recommendation(proto.Message):
     dynamic_image_extension_opt_in_recommendation: Recommendation.DynamicImageExtensionOptInRecommendation
     raise_target_cpa_recommendation: Recommendation.RaiseTargetCpaRecommendation
     lower_target_roas_recommendation: Recommendation.LowerTargetRoasRecommendation
+    performance_max_opt_in_recommendation: Recommendation.PerformanceMaxOptInRecommendation
+    improve_performance_max_ad_strength_recommendation: Recommendation.ImprovePerformanceMaxAdStrengthRecommendation
+    migrate_dynamic_search_ads_campaign_to_performance_max_recommendation: Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -618,4 +665,7 @@ class Recommendation(proto.Message):
         dynamic_image_extension_opt_in_recommendation: Recommendation.DynamicImageExtensionOptInRecommendation = ...,
         raise_target_cpa_recommendation: Recommendation.RaiseTargetCpaRecommendation = ...,
         lower_target_roas_recommendation: Recommendation.LowerTargetRoasRecommendation = ...,
+        performance_max_opt_in_recommendation: Recommendation.PerformanceMaxOptInRecommendation = ...,
+        improve_performance_max_ad_strength_recommendation: Recommendation.ImprovePerformanceMaxAdStrengthRecommendation = ...,
+        migrate_dynamic_search_ads_campaign_to_performance_max_recommendation: Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation = ...,
     ) -> None: ...

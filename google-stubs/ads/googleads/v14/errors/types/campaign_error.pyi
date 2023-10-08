@@ -76,6 +76,8 @@ class CampaignErrorEnum(proto.Message):
         NOT_COMPATIBLE_WITH_BIDDING_STRATEGY_TYPE = 80
         NOT_COMPATIBLE_WITH_GOOGLE_ATTRIBUTION_CONVERSIONS = 81
         CONVERSION_LAG_TOO_HIGH = 82
+        NOT_LINKED_ADVERTISING_PARTNER = 83
+        INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS = 84
     def __init__(
         self,
         mapping: Any | None = ...,

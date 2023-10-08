@@ -99,6 +99,7 @@ class Customer(proto.Message):
     location_asset_auto_migration_done_date_time: str
     image_asset_auto_migration_done_date_time: str
     offline_conversion_client_summaries: MutableSequence[OfflineConversionClientSummary]
+    customer_agreement_setting: CustomerAgreementSetting
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -130,7 +131,18 @@ class Customer(proto.Message):
         image_asset_auto_migration_done_date_time: str = ...,
         offline_conversion_client_summaries: MutableSequence[
             OfflineConversionClientSummary
-        ] = ...
+        ] = ...,
+        customer_agreement_setting: CustomerAgreementSetting = ...
+    ) -> None: ...
+
+class CustomerAgreementSetting(proto.Message):
+    accepted_lead_form_terms: bool
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        accepted_lead_form_terms: bool = ...
     ) -> None: ...
 
 class OfflineConversionClientSummary(proto.Message):

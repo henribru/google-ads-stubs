@@ -20,6 +20,7 @@ class AuthorizationErrorEnum(proto.Message):
         SERVICE_ACCESS_DENIED = 12
         ACCESS_DENIED_FOR_ACCOUNT_TYPE = 25
         METRIC_ACCESS_DENIED = 26
+        CLOUD_PROJECT_NOT_UNDER_ORGANIZATION = 27
     def __init__(
         self,
         mapping: Any | None = ...,

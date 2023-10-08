@@ -10,6 +10,16 @@ from google.ads.googleads.v14.enums.types.served_asset_field_type import (
     ServedAssetFieldTypeEnum,
 )
 
+class AdCallToActionAsset(proto.Message):
+    asset: str
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        asset: str = ...
+    ) -> None: ...
+
 class AdDiscoveryCarouselCardAsset(proto.Message):
     asset: str
     def __init__(

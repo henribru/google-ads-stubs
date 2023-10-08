@@ -1,4 +1,5 @@
 from google.ads.googleads.v14.common.types.ad_asset import (
+    AdCallToActionAsset as AdCallToActionAsset,
     AdDiscoveryCarouselCardAsset as AdDiscoveryCarouselCardAsset,
     AdImageAsset as AdImageAsset,
     AdMediaBundleAsset as AdMediaBundleAsset,
@@ -12,6 +13,7 @@ from google.ads.googleads.v14.common.types.ad_type_infos import (
     CallAdInfo as CallAdInfo,
     DiscoveryCarouselAdInfo as DiscoveryCarouselAdInfo,
     DiscoveryMultiAssetAdInfo as DiscoveryMultiAssetAdInfo,
+    DiscoveryVideoResponsiveAdInfo as DiscoveryVideoResponsiveAdInfo,
     DisplayUploadAdInfo as DisplayUploadAdInfo,
     ExpandedDynamicSearchAdInfo as ExpandedDynamicSearchAdInfo,
     ExpandedTextAdInfo as ExpandedTextAdInfo,
@@ -164,6 +166,7 @@ from google.ads.googleads.v14.common.types.criteria import (
     KeywordThemeInfo as KeywordThemeInfo,
     LanguageInfo as LanguageInfo,
     ListingDimensionInfo as ListingDimensionInfo,
+    ListingDimensionPath as ListingDimensionPath,
     ListingGroupInfo as ListingGroupInfo,
     ListingScopeInfo as ListingScopeInfo,
     LocalServiceIdInfo as LocalServiceIdInfo,
@@ -259,7 +262,10 @@ from google.ads.googleads.v14.common.types.matching_function import (
     Operand as Operand,
 )
 from google.ads.googleads.v14.common.types.metric_goal import MetricGoal as MetricGoal
-from google.ads.googleads.v14.common.types.metrics import Metrics as Metrics
+from google.ads.googleads.v14.common.types.metrics import (
+    Metrics as Metrics,
+    SearchVolumeRange as SearchVolumeRange,
+)
 from google.ads.googleads.v14.common.types.offline_user_data import (
     CustomerMatchUserListMetadata as CustomerMatchUserListMetadata,
     EventAttribute as EventAttribute,
@@ -431,6 +437,12 @@ from google.ads.googleads.v14.enums.types.app_url_operating_system_type import (
 )
 from google.ads.googleads.v14.enums.types.asset_field_type import (
     AssetFieldTypeEnum as AssetFieldTypeEnum,
+)
+from google.ads.googleads.v14.enums.types.asset_group_primary_status import (
+    AssetGroupPrimaryStatusEnum as AssetGroupPrimaryStatusEnum,
+)
+from google.ads.googleads.v14.enums.types.asset_group_primary_status_reason import (
+    AssetGroupPrimaryStatusReasonEnum as AssetGroupPrimaryStatusReasonEnum,
 )
 from google.ads.googleads.v14.enums.types.asset_group_status import (
     AssetGroupStatusEnum as AssetGroupStatusEnum,
@@ -630,6 +642,9 @@ from google.ads.googleads.v14.enums.types.conversion_value_rule_set_status impor
 )
 from google.ads.googleads.v14.enums.types.conversion_value_rule_status import (
     ConversionValueRuleStatusEnum as ConversionValueRuleStatusEnum,
+)
+from google.ads.googleads.v14.enums.types.converting_user_prior_engagement_type_and_ltv_bucket import (
+    ConvertingUserPriorEngagementTypeAndLtvBucketEnum as ConvertingUserPriorEngagementTypeAndLtvBucketEnum,
 )
 from google.ads.googleads.v14.enums.types.criterion_category_channel_availability_mode import (
     CriterionCategoryChannelAvailabilityModeEnum as CriterionCategoryChannelAvailabilityModeEnum,
@@ -1657,6 +1672,9 @@ from google.ads.googleads.v14.errors.types.resource_access_denied_error import (
 from google.ads.googleads.v14.errors.types.resource_count_limit_exceeded_error import (
     ResourceCountLimitExceededErrorEnum as ResourceCountLimitExceededErrorEnum,
 )
+from google.ads.googleads.v14.errors.types.search_term_insight_error import (
+    SearchTermInsightErrorEnum as SearchTermInsightErrorEnum,
+)
 from google.ads.googleads.v14.errors.types.setting_error import (
     SettingErrorEnum as SettingErrorEnum,
 )
@@ -1794,6 +1812,7 @@ from google.ads.googleads.v14.resources.types.asset_group_asset import (
 from google.ads.googleads.v14.resources.types.asset_group_listing_group_filter import (
     AssetGroupListingGroupFilter as AssetGroupListingGroupFilter,
     ListingGroupFilterDimension as ListingGroupFilterDimension,
+    ListingGroupFilterDimensionPath as ListingGroupFilterDimensionPath,
 )
 from google.ads.googleads.v14.resources.types.asset_group_product_group_view import (
     AssetGroupProductGroupView as AssetGroupProductGroupView,
@@ -1866,6 +1885,9 @@ from google.ads.googleads.v14.resources.types.campaign_group import (
 from google.ads.googleads.v14.resources.types.campaign_label import (
     CampaignLabel as CampaignLabel,
 )
+from google.ads.googleads.v14.resources.types.campaign_search_term_insight import (
+    CampaignSearchTermInsight as CampaignSearchTermInsight,
+)
 from google.ads.googleads.v14.resources.types.campaign_shared_set import (
     CampaignSharedSet as CampaignSharedSet,
 )
@@ -1918,6 +1940,7 @@ from google.ads.googleads.v14.resources.types.customer import (
     CallReportingSetting as CallReportingSetting,
     ConversionTrackingSetting as ConversionTrackingSetting,
     Customer as Customer,
+    CustomerAgreementSetting as CustomerAgreementSetting,
     OfflineConversionClientSummary as OfflineConversionClientSummary,
     OfflineConversionUploadAlert as OfflineConversionUploadAlert,
     OfflineConversionUploadError as OfflineConversionUploadError,
@@ -1956,6 +1979,9 @@ from google.ads.googleads.v14.resources.types.customer_manager_link import (
 )
 from google.ads.googleads.v14.resources.types.customer_negative_criterion import (
     CustomerNegativeCriterion as CustomerNegativeCriterion,
+)
+from google.ads.googleads.v14.resources.types.customer_search_term_insight import (
+    CustomerSearchTermInsight as CustomerSearchTermInsight,
 )
 from google.ads.googleads.v14.resources.types.customer_sk_ad_network_conversion_value_schema import (
     CustomerSkAdNetworkConversionValueSchema as CustomerSkAdNetworkConversionValueSchema,

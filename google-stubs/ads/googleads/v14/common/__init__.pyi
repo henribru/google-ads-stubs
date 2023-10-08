@@ -3,6 +3,7 @@
 #   ActivityIdInfo
 #   ActivityRatingInfo
 #   AdAssetPolicySummary
+#   AdCallToActionAsset
 #   AdDiscoveryCarouselCardAsset
 #   AdImageAsset
 #   AdMediaBundleAsset
@@ -74,6 +75,7 @@
 #   DiscoveryCarouselAdInfo
 #   DiscoveryCarouselCardAsset
 #   DiscoveryMultiAssetAdInfo
+#   DiscoveryVideoResponsiveAdInfo
 #   DisplayUploadAdInfo
 #   DynamicAffiliateLocationSetFilter
 #   DynamicBusinessProfileLocationGroupFilter
@@ -144,6 +146,7 @@
 #   LegacyResponsiveDisplayAdInfo
 #   LifeEventSegment
 #   ListingDimensionInfo
+#   ListingDimensionPath
 #   ListingGroupInfo
 #   ListingScopeInfo
 #   LocalAdInfo
@@ -214,6 +217,7 @@
 #   ResponsiveDisplayAdInfo
 #   ResponsiveSearchAdInfo
 #   RuleBasedUserListInfo
+#   SearchVolumeRange
 #   Segments
 #   ShoppingComparisonListingAdInfo
 #   ShoppingLoyalty

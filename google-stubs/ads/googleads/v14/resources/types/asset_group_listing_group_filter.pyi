@@ -1,3 +1,4 @@
+from collections.abc import MutableSequence
 from typing import Any
 
 import proto
@@ -32,6 +33,7 @@ class AssetGroupListingGroupFilter(proto.Message):
     vertical: ListingGroupFilterVerticalEnum.ListingGroupFilterVertical
     case_value: ListingGroupFilterDimension
     parent_listing_group_filter: str
+    path: ListingGroupFilterDimensionPath
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -43,7 +45,8 @@ class AssetGroupListingGroupFilter(proto.Message):
         type_: ListingGroupFilterTypeEnum.ListingGroupFilterType = ...,
         vertical: ListingGroupFilterVerticalEnum.ListingGroupFilterVertical = ...,
         case_value: ListingGroupFilterDimension = ...,
-        parent_listing_group_filter: str = ...
+        parent_listing_group_filter: str = ...,
+        path: ListingGroupFilterDimensionPath = ...
     ) -> None: ...
 
 class ListingGroupFilterDimension(proto.Message):
@@ -141,4 +144,14 @@ class ListingGroupFilterDimension(proto.Message):
         product_custom_attribute: ListingGroupFilterDimension.ProductCustomAttribute = ...,
         product_item_id: ListingGroupFilterDimension.ProductItemId = ...,
         product_type: ListingGroupFilterDimension.ProductType = ...
+    ) -> None: ...
+
+class ListingGroupFilterDimensionPath(proto.Message):
+    dimensions: MutableSequence[ListingGroupFilterDimension]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        dimensions: MutableSequence[ListingGroupFilterDimension] = ...
     ) -> None: ...
