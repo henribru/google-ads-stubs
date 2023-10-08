@@ -310,6 +310,9 @@ from google.ads.googleads.v14.errors.types.resource_access_denied_error import (
 from google.ads.googleads.v14.errors.types.resource_count_limit_exceeded_error import (
     ResourceCountLimitExceededErrorEnum,
 )
+from google.ads.googleads.v14.errors.types.search_term_insight_error import (
+    SearchTermInsightErrorEnum,
+)
 from google.ads.googleads.v14.errors.types.setting_error import SettingErrorEnum
 from google.ads.googleads.v14.errors.types.shared_criterion_error import (
     SharedCriterionErrorEnum,
@@ -475,6 +478,7 @@ class ErrorCode(proto.Message):
     customer_user_access_error: CustomerUserAccessErrorEnum.CustomerUserAccessError
     custom_audience_error: CustomAudienceErrorEnum.CustomAudienceError
     audience_error: AudienceErrorEnum.AudienceError
+    search_term_insight_error: SearchTermInsightErrorEnum.SearchTermInsightError
     smart_campaign_error: SmartCampaignErrorEnum.SmartCampaignError
     experiment_arm_error: ExperimentArmErrorEnum.ExperimentArmError
     audience_insights_error: AudienceInsightsErrorEnum.AudienceInsightsError
@@ -623,6 +627,7 @@ class ErrorCode(proto.Message):
         customer_user_access_error: CustomerUserAccessErrorEnum.CustomerUserAccessError = ...,
         custom_audience_error: CustomAudienceErrorEnum.CustomAudienceError = ...,
         audience_error: AudienceErrorEnum.AudienceError = ...,
+        search_term_insight_error: SearchTermInsightErrorEnum.SearchTermInsightError = ...,
         smart_campaign_error: SmartCampaignErrorEnum.SmartCampaignError = ...,
         experiment_arm_error: ExperimentArmErrorEnum.ExperimentArmError = ...,
         audience_insights_error: AudienceInsightsErrorEnum.AudienceInsightsError = ...,

@@ -10,6 +10,7 @@ from google.ads.googleads.v14.common.types.ad_type_infos import (
     CallAdInfo,
     DiscoveryCarouselAdInfo,
     DiscoveryMultiAssetAdInfo,
+    DiscoveryVideoResponsiveAdInfo,
     DisplayUploadAdInfo,
     ExpandedDynamicSearchAdInfo,
     ExpandedTextAdInfo,
@@ -77,6 +78,7 @@ class Ad(proto.Message):
     app_pre_registration_ad: AppPreRegistrationAdInfo
     discovery_multi_asset_ad: DiscoveryMultiAssetAdInfo
     discovery_carousel_ad: DiscoveryCarouselAdInfo
+    discovery_video_responsive_ad: DiscoveryVideoResponsiveAdInfo
     travel_ad: TravelAdInfo
     def __init__(
         self,
@@ -121,5 +123,6 @@ class Ad(proto.Message):
         app_pre_registration_ad: AppPreRegistrationAdInfo = ...,
         discovery_multi_asset_ad: DiscoveryMultiAssetAdInfo = ...,
         discovery_carousel_ad: DiscoveryCarouselAdInfo = ...,
+        discovery_video_responsive_ad: DiscoveryVideoResponsiveAdInfo = ...,
         travel_ad: TravelAdInfo = ...
     ) -> None: ...

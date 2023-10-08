@@ -14,7 +14,9 @@ from google.ads.googleads.v14.common.types.criteria import (
     GenderInfo,
     IncomeRangeInfo,
     KeywordInfo,
+    LanguageInfo,
     ListingGroupInfo,
+    LocationInfo,
     MobileAppCategoryInfo,
     MobileApplicationInfo,
     ParentalStatusInfo,
@@ -128,6 +130,8 @@ class AdGroupCriterion(proto.Message):
     custom_audience: CustomAudienceInfo
     combined_audience: CombinedAudienceInfo
     audience: AudienceInfo
+    location: LocationInfo
+    language: LanguageInfo
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -184,5 +188,7 @@ class AdGroupCriterion(proto.Message):
         custom_intent: CustomIntentInfo = ...,
         custom_audience: CustomAudienceInfo = ...,
         combined_audience: CombinedAudienceInfo = ...,
-        audience: AudienceInfo = ...
+        audience: AudienceInfo = ...,
+        location: LocationInfo = ...,
+        language: LanguageInfo = ...
     ) -> None: ...

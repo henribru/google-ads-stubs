@@ -31,6 +31,8 @@
 #   AppStoreEnum
 #   AppUrlOperatingSystemTypeEnum
 #   AssetFieldTypeEnum
+#   AssetGroupPrimaryStatusEnum
+#   AssetGroupPrimaryStatusReasonEnum
 #   AssetGroupStatusEnum
 #   AssetLinkPrimaryStatusEnum
 #   AssetLinkPrimaryStatusReasonEnum
@@ -98,6 +100,7 @@
 #   ConversionValueRulePrimaryDimensionEnum
 #   ConversionValueRuleSetStatusEnum
 #   ConversionValueRuleStatusEnum
+#   ConvertingUserPriorEngagementTypeAndLtvBucketEnum
 #   CriterionCategoryChannelAvailabilityModeEnum
 #   CriterionCategoryLocaleAvailabilityModeEnum
 #   CriterionSystemServingStatusEnum

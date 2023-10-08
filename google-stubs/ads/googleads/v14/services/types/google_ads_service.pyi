@@ -120,6 +120,9 @@ from google.ads.googleads.v14.resources.types.campaign_extension_setting import 
 from google.ads.googleads.v14.resources.types.campaign_feed import CampaignFeed
 from google.ads.googleads.v14.resources.types.campaign_group import CampaignGroup
 from google.ads.googleads.v14.resources.types.campaign_label import CampaignLabel
+from google.ads.googleads.v14.resources.types.campaign_search_term_insight import (
+    CampaignSearchTermInsight,
+)
 from google.ads.googleads.v14.resources.types.campaign_shared_set import (
     CampaignSharedSet,
 )
@@ -173,6 +176,9 @@ from google.ads.googleads.v14.resources.types.customer_manager_link import (
 )
 from google.ads.googleads.v14.resources.types.customer_negative_criterion import (
     CustomerNegativeCriterion,
+)
+from google.ads.googleads.v14.resources.types.customer_search_term_insight import (
+    CustomerSearchTermInsight,
 )
 from google.ads.googleads.v14.resources.types.customer_user_access import (
     CustomerUserAccess,
@@ -676,6 +682,7 @@ class GoogleAdsRow(proto.Message):
     campaign_feed: CampaignFeed
     campaign_group: CampaignGroup
     campaign_label: CampaignLabel
+    campaign_search_term_insight: CampaignSearchTermInsight
     campaign_shared_set: CampaignSharedSet
     campaign_simulation: CampaignSimulation
     carrier_constant: CarrierConstant
@@ -706,6 +713,7 @@ class GoogleAdsRow(proto.Message):
     customer_feed: CustomerFeed
     customer_label: CustomerLabel
     customer_negative_criterion: CustomerNegativeCriterion
+    customer_search_term_insight: CustomerSearchTermInsight
     customer_user_access: CustomerUserAccess
     customer_user_access_invitation: CustomerUserAccessInvitation
     customizer_attribute: CustomizerAttribute
@@ -840,6 +848,7 @@ class GoogleAdsRow(proto.Message):
         campaign_feed: CampaignFeed = ...,
         campaign_group: CampaignGroup = ...,
         campaign_label: CampaignLabel = ...,
+        campaign_search_term_insight: CampaignSearchTermInsight = ...,
         campaign_shared_set: CampaignSharedSet = ...,
         campaign_simulation: CampaignSimulation = ...,
         carrier_constant: CarrierConstant = ...,
@@ -870,6 +879,7 @@ class GoogleAdsRow(proto.Message):
         customer_feed: CustomerFeed = ...,
         customer_label: CustomerLabel = ...,
         customer_negative_criterion: CustomerNegativeCriterion = ...,
+        customer_search_term_insight: CustomerSearchTermInsight = ...,
         customer_user_access: CustomerUserAccess = ...,
         customer_user_access_invitation: CustomerUserAccessInvitation = ...,
         customizer_attribute: CustomizerAttribute = ...,

@@ -15,6 +15,14 @@ class CallToActionTypeEnum(proto.Message):
         DOWNLOAD = 8
         BOOK_NOW = 9
         SHOP_NOW = 10
+        BUY_NOW = 11
+        DONATE_NOW = 12
+        ORDER_NOW = 13
+        PLAY_NOW = 14
+        SEE_MORE = 15
+        START_NOW = 16
+        VISIT_SITE = 17
+        WATCH_NOW = 18
     def __init__(
         self,
         mapping: Any | None = ...,

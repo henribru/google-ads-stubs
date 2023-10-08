@@ -122,6 +122,16 @@ class Campaign(proto.Message):
             manual_cpa_bid_micros: int = ...
         ) -> None: ...
 
+    class DiscoveryCampaignSettings(proto.Message):
+        upgraded_targeting: bool
+        def __init__(
+            self,
+            mapping: Any | None = ...,
+            *,
+            ignore_unknown_fields: bool = ...,
+            upgraded_targeting: bool = ...
+        ) -> None: ...
+
     class DynamicSearchAdsSetting(proto.Message):
         domain_name: str
         language_code: str
@@ -241,6 +251,7 @@ class Campaign(proto.Message):
         campaign_priority: int
         enable_local: bool
         use_vehicle_inventory: bool
+        advertising_partner_ids: MutableSequence[int]
         def __init__(
             self,
             mapping: Any | None = ...,
@@ -251,7 +262,8 @@ class Campaign(proto.Message):
             feed_label: str = ...,
             campaign_priority: int = ...,
             enable_local: bool = ...,
-            use_vehicle_inventory: bool = ...
+            use_vehicle_inventory: bool = ...,
+            advertising_partner_ids: MutableSequence[int] = ...
         ) -> None: ...
 
     class TrackingSetting(proto.Message):
@@ -302,6 +314,7 @@ class Campaign(proto.Message):
     url_custom_parameters: MutableSequence[CustomParameter]
     local_services_campaign_settings: Campaign.LocalServicesCampaignSettings
     travel_campaign_settings: Campaign.TravelCampaignSettings
+    discovery_campaign_settings: Campaign.DiscoveryCampaignSettings
     real_time_bidding_setting: RealTimeBiddingSetting
     network_settings: Campaign.NetworkSettings
     hotel_setting: Campaign.HotelSettingInfo
@@ -374,6 +387,7 @@ class Campaign(proto.Message):
         url_custom_parameters: MutableSequence[CustomParameter] = ...,
         local_services_campaign_settings: Campaign.LocalServicesCampaignSettings = ...,
         travel_campaign_settings: Campaign.TravelCampaignSettings = ...,
+        discovery_campaign_settings: Campaign.DiscoveryCampaignSettings = ...,
         real_time_bidding_setting: RealTimeBiddingSetting = ...,
         network_settings: Campaign.NetworkSettings = ...,
         hotel_setting: Campaign.HotelSettingInfo = ...,

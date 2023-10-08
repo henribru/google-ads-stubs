@@ -459,10 +459,21 @@ class ListingDimensionInfo(proto.Message):
         unknown_listing_dimension: UnknownListingDimensionInfo = ...,
     ) -> None: ...
 
+class ListingDimensionPath(proto.Message):
+    dimensions: MutableSequence[ListingDimensionInfo]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        dimensions: MutableSequence[ListingDimensionInfo] = ...,
+    ) -> None: ...
+
 class ListingGroupInfo(proto.Message):
     type_: ListingGroupTypeEnum.ListingGroupType
     case_value: ListingDimensionInfo
     parent_ad_group_criterion: str
+    path: ListingDimensionPath
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -471,6 +482,7 @@ class ListingGroupInfo(proto.Message):
         type_: ListingGroupTypeEnum.ListingGroupType = ...,
         case_value: ListingDimensionInfo = ...,
         parent_ad_group_criterion: str = ...,
+        path: ListingDimensionPath = ...,
     ) -> None: ...
 
 class ListingScopeInfo(proto.Message):

@@ -38,6 +38,9 @@ class CampaignPrimaryStatusReasonEnum(proto.Message):
         CAMPAIGN_GROUP_ALL_GROUP_BUDGETS_ENDED = 31
         APP_NOT_RELEASED = 32
         APP_PARTIALLY_RELEASED = 33
+        HAS_ASSET_GROUPS_DISAPPROVED = 34
+        HAS_ASSET_GROUPS_LIMITED_BY_POLICY = 35
+        MOST_ASSET_GROUPS_UNDER_REVIEW = 36
     def __init__(
         self,
         mapping: Any | None = ...,

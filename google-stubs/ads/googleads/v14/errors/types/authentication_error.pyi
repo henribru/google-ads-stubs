@@ -24,6 +24,9 @@ class AuthenticationErrorEnum(proto.Message):
         USER_ID_INVALID = 22
         TWO_STEP_VERIFICATION_NOT_ENROLLED = 23
         ADVANCED_PROTECTION_NOT_ENROLLED = 24
+        ORGANIZATION_NOT_RECOGNIZED = 26
+        ORGANIZATION_NOT_APPROVED = 27
+        ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28
     def __init__(
         self,
         mapping: Any | None = ...,

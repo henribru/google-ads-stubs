@@ -26,6 +26,9 @@ from google.ads.googleads.v14.enums.types.conversion_or_adjustment_lag_bucket im
 from google.ads.googleads.v14.enums.types.conversion_value_rule_primary_dimension import (
     ConversionValueRulePrimaryDimensionEnum,
 )
+from google.ads.googleads.v14.enums.types.converting_user_prior_engagement_type_and_ltv_bucket import (
+    ConvertingUserPriorEngagementTypeAndLtvBucketEnum,
+)
 from google.ads.googleads.v14.enums.types.day_of_week import DayOfWeekEnum
 from google.ads.googleads.v14.enums.types.device import DeviceEnum
 from google.ads.googleads.v14.enums.types.external_conversion_source import (
@@ -105,8 +108,11 @@ class Segments(proto.Message):
     external_activity_id: str
     ad_destination_type: AdDestinationTypeEnum.AdDestinationType
     ad_network_type: AdNetworkTypeEnum.AdNetworkType
+    ad_group: str
+    asset_group: str
     auction_insight_domain: str
     budget_campaign_association_status: BudgetCampaignAssociationStatus
+    campaign: str
     click_type: ClickTypeEnum.ClickType
     conversion_action: str
     conversion_action_category: ConversionActionCategoryEnum.ConversionActionCategory
@@ -181,6 +187,8 @@ class Segments(proto.Message):
     quarter: str
     recommendation_type: RecommendationTypeEnum.RecommendationType
     search_engine_results_page_type: SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType
+    search_subcategory: str
+    search_term: str
     search_term_match_type: SearchTermMatchTypeEnum.SearchTermMatchType
     slot: SlotEnum.Slot
     conversion_value_rule_primary_dimension: ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension
@@ -193,6 +201,7 @@ class Segments(proto.Message):
     sk_ad_network_source_app: SkAdNetworkSourceApp
     sk_ad_network_attribution_credit: SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit
     asset_interaction_target: AssetInteractionTarget
+    new_versus_returning_customers: ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket
     def __init__(
         self,
         mapping: Any | None = ...,
@@ -203,8 +212,11 @@ class Segments(proto.Message):
         external_activity_id: str = ...,
         ad_destination_type: AdDestinationTypeEnum.AdDestinationType = ...,
         ad_network_type: AdNetworkTypeEnum.AdNetworkType = ...,
+        ad_group: str = ...,
+        asset_group: str = ...,
         auction_insight_domain: str = ...,
         budget_campaign_association_status: BudgetCampaignAssociationStatus = ...,
+        campaign: str = ...,
         click_type: ClickTypeEnum.ClickType = ...,
         conversion_action: str = ...,
         conversion_action_category: ConversionActionCategoryEnum.ConversionActionCategory = ...,
@@ -279,6 +291,8 @@ class Segments(proto.Message):
         quarter: str = ...,
         recommendation_type: RecommendationTypeEnum.RecommendationType = ...,
         search_engine_results_page_type: SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType = ...,
+        search_subcategory: str = ...,
+        search_term: str = ...,
         search_term_match_type: SearchTermMatchTypeEnum.SearchTermMatchType = ...,
         slot: SlotEnum.Slot = ...,
         conversion_value_rule_primary_dimension: ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension = ...,
@@ -290,7 +304,8 @@ class Segments(proto.Message):
         sk_ad_network_ad_event_type: SkAdNetworkAdEventTypeEnum.SkAdNetworkAdEventType = ...,
         sk_ad_network_source_app: SkAdNetworkSourceApp = ...,
         sk_ad_network_attribution_credit: SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit = ...,
-        asset_interaction_target: AssetInteractionTarget = ...
+        asset_interaction_target: AssetInteractionTarget = ...,
+        new_versus_returning_customers: ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket = ...
     ) -> None: ...
 
 class SkAdNetworkSourceApp(proto.Message):

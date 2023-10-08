@@ -47,6 +47,9 @@ class RecommendationTypeEnum(proto.Message):
         DYNAMIC_IMAGE_EXTENSION_OPT_IN = 43
         RAISE_TARGET_CPA = 44
         LOWER_TARGET_ROAS = 45
+        PERFORMANCE_MAX_OPT_IN = 46
+        IMPROVE_PERFORMANCE_MAX_AD_STRENGTH = 47
+        MIGRATE_DYNAMIC_SEARCH_ADS_CAMPAIGN_TO_PERFORMANCE_MAX = 48
     def __init__(
         self,
         mapping: Any | None = ...,

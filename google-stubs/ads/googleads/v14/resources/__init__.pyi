@@ -64,6 +64,7 @@
 #   CampaignFeed
 #   CampaignGroup
 #   CampaignLabel
+#   CampaignSearchTermInsight
 #   CampaignSharedSet
 #   CampaignSimulation
 #   CarrierConstant
@@ -85,6 +86,7 @@
 #   CustomInterestMember
 #   CustomLeadFormSubmissionField
 #   Customer
+#   CustomerAgreementSetting
 #   CustomerAsset
 #   CustomerAssetSet
 #   CustomerClient
@@ -96,6 +98,7 @@
 #   CustomerLabel
 #   CustomerManagerLink
 #   CustomerNegativeCriterion
+#   CustomerSearchTermInsight
 #   CustomerSkAdNetworkConversionValueSchema
 #   CustomerUserAccess
 #   CustomerUserAccessInvitation
@@ -153,6 +156,7 @@
 #   LeadFormSubmissionField
 #   LifeEvent
 #   ListingGroupFilterDimension
+#   ListingGroupFilterDimensionPath
 #   LocationView
 #   ManagedPlacementView
 #   MediaAudio

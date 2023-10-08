@@ -138,6 +138,7 @@
 #   ResourceAccessDeniedErrorEnum
 #   ResourceCountDetails
 #   ResourceCountLimitExceededErrorEnum
+#   SearchTermInsightErrorEnum
 #   SettingErrorEnum
 #   SharedCriterionErrorEnum
 #   SharedSetErrorEnum

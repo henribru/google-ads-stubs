@@ -60,6 +60,9 @@ class Invoice(proto.Message):
         regulatory_costs_subtotal_amount_micros: int
         regulatory_costs_tax_amount_micros: int
         regulatory_costs_total_amount_micros: int
+        export_charge_subtotal_amount_micros: int
+        export_charge_tax_amount_micros: int
+        export_charge_total_amount_micros: int
         subtotal_amount_micros: int
         tax_amount_micros: int
         total_amount_micros: int
@@ -81,6 +84,9 @@ class Invoice(proto.Message):
             regulatory_costs_subtotal_amount_micros: int = ...,
             regulatory_costs_tax_amount_micros: int = ...,
             regulatory_costs_total_amount_micros: int = ...,
+            export_charge_subtotal_amount_micros: int = ...,
+            export_charge_tax_amount_micros: int = ...,
+            export_charge_total_amount_micros: int = ...,
             subtotal_amount_micros: int = ...,
             tax_amount_micros: int = ...,
             total_amount_micros: int = ...
@@ -121,6 +127,9 @@ class Invoice(proto.Message):
     regulatory_costs_subtotal_amount_micros: int
     regulatory_costs_tax_amount_micros: int
     regulatory_costs_total_amount_micros: int
+    export_charge_subtotal_amount_micros: int
+    export_charge_tax_amount_micros: int
+    export_charge_total_amount_micros: int
     subtotal_amount_micros: int
     tax_amount_micros: int
     total_amount_micros: int
@@ -150,6 +159,9 @@ class Invoice(proto.Message):
         regulatory_costs_subtotal_amount_micros: int = ...,
         regulatory_costs_tax_amount_micros: int = ...,
         regulatory_costs_total_amount_micros: int = ...,
+        export_charge_subtotal_amount_micros: int = ...,
+        export_charge_tax_amount_micros: int = ...,
+        export_charge_total_amount_micros: int = ...,
         subtotal_amount_micros: int = ...,
         tax_amount_micros: int = ...,
         total_amount_micros: int = ...,

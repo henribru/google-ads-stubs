@@ -1,1 +1,0 @@
-from .client import CustomerLabelServiceClient as CustomerLabelServiceClient

@@ -4,6 +4,7 @@ from typing import Any
 import proto
 
 from google.ads.googleads.v14.common.types.ad_asset import (
+    AdCallToActionAsset,
     AdDiscoveryCarouselCardAsset,
     AdImageAsset,
     AdMediaBundleAsset,
@@ -157,6 +158,32 @@ class DiscoveryMultiAssetAdInfo(proto.Message):
         business_name: str = ...,
         call_to_action_text: str = ...,
         lead_form_only: bool = ...,
+    ) -> None: ...
+
+class DiscoveryVideoResponsiveAdInfo(proto.Message):
+    headlines: MutableSequence[AdTextAsset]
+    long_headlines: MutableSequence[AdTextAsset]
+    descriptions: MutableSequence[AdTextAsset]
+    videos: MutableSequence[AdVideoAsset]
+    logo_images: MutableSequence[AdImageAsset]
+    breadcrumb1: str
+    breadcrumb2: str
+    business_name: AdTextAsset
+    call_to_actions: MutableSequence[AdCallToActionAsset]
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+        headlines: MutableSequence[AdTextAsset] = ...,
+        long_headlines: MutableSequence[AdTextAsset] = ...,
+        descriptions: MutableSequence[AdTextAsset] = ...,
+        videos: MutableSequence[AdVideoAsset] = ...,
+        logo_images: MutableSequence[AdImageAsset] = ...,
+        breadcrumb1: str = ...,
+        breadcrumb2: str = ...,
+        business_name: AdTextAsset = ...,
+        call_to_actions: MutableSequence[AdCallToActionAsset] = ...,
     ) -> None: ...
 
 class DisplayUploadAdInfo(proto.Message):

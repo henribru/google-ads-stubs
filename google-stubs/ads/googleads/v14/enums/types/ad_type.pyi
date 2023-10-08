@@ -36,6 +36,7 @@ class AdTypeEnum(proto.Message):
         DISCOVERY_MULTI_ASSET_AD = 35
         DISCOVERY_CAROUSEL_AD = 36
         TRAVEL_AD = 37
+        DISCOVERY_VIDEO_RESPONSIVE_AD = 38
     def __init__(
         self,
         mapping: Any | None = ...,
