@@ -1,17 +1,20 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
 
 from google.ads.googleads.v13.resources.types.user_list import UserList
 
+_M = TypeVar("_M")
+
 class MutateUserListResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -23,8 +26,8 @@ class MutateUserListsRequest(proto.Message):
     partial_failure: bool
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -37,8 +40,8 @@ class MutateUserListsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateUserListResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
@@ -51,8 +54,8 @@ class UserListOperation(proto.Message):
     update: UserList
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,

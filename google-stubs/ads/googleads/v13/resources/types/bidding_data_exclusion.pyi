@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.advertising_channel_type import (
@@ -13,6 +14,8 @@ from google.ads.googleads.v13.enums.types.seasonality_event_scope import (
 from google.ads.googleads.v13.enums.types.seasonality_event_status import (
     SeasonalityEventStatusEnum,
 )
+
+_M = TypeVar("_M")
 
 class BiddingDataExclusion(proto.Message):
     resource_name: str
@@ -29,8 +32,8 @@ class BiddingDataExclusion(proto.Message):
         AdvertisingChannelTypeEnum.AdvertisingChannelType
     ]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

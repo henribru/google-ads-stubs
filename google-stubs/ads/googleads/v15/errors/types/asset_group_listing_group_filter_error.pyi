@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AssetGroupListingGroupFilterErrorEnum(proto.Message):
     class AssetGroupListingGroupFilterError(proto.Enum):
@@ -21,8 +25,8 @@ class AssetGroupListingGroupFilterErrorEnum(proto.Message):
         CANNOT_REFINE_HIERARCHICAL_EVERYTHING_ELSE = 14
         MULTIPLE_OPERATIONS_ON_ONE_NODE = 23
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

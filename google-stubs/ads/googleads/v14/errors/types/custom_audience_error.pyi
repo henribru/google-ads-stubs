@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CustomAudienceErrorEnum(proto.Message):
     class CustomAudienceError(proto.Enum):
@@ -15,8 +19,8 @@ class CustomAudienceErrorEnum(proto.Message):
         POLICY_VIOLATION = 8
         INVALID_TYPE_CHANGE = 9
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

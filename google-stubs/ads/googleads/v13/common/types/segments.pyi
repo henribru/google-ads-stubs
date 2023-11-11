@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.criteria import KeywordInfo
@@ -63,12 +65,14 @@ from google.ads.googleads.v13.enums.types.sk_ad_network_user_type import (
 )
 from google.ads.googleads.v13.enums.types.slot import SlotEnum
 
+_M = TypeVar("_M")
+
 class AssetInteractionTarget(proto.Message):
     asset: str
     interaction_on_this_asset: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         asset: str = ...,
@@ -79,8 +83,8 @@ class BudgetCampaignAssociationStatus(proto.Message):
     campaign: str
     status: BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         campaign: str = ...,
@@ -91,8 +95,8 @@ class Keyword(proto.Message):
     ad_group_criterion: str
     info: KeywordInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ad_group_criterion: str = ...,
@@ -194,8 +198,8 @@ class Segments(proto.Message):
     sk_ad_network_attribution_credit: SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit
     asset_interaction_target: AssetInteractionTarget
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         activity_account_id: int = ...,
@@ -296,8 +300,8 @@ class Segments(proto.Message):
 class SkAdNetworkSourceApp(proto.Message):
     sk_ad_network_source_app_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         sk_ad_network_source_app_id: str = ...

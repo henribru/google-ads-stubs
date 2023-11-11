@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class HotelPlaceholderFieldEnum(proto.Message):
     class HotelPlaceholderField(proto.Enum):
@@ -27,8 +31,8 @@ class HotelPlaceholderFieldEnum(proto.Message):
         IOS_APP_LINK = 20
         IOS_APP_STORE_ID = 21
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

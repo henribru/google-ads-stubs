@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.criteria import (
@@ -17,12 +18,14 @@ from google.ads.googleads.v13.enums.types.audience_insights_dimension import (
     AudienceInsightsDimensionEnum,
 )
 
+_M = TypeVar("_M")
+
 class AudienceCompositionAttribute(proto.Message):
     attribute_metadata: AudienceInsightsAttributeMetadata
     metrics: AudienceCompositionMetrics
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         attribute_metadata: AudienceInsightsAttributeMetadata = ...,
@@ -34,8 +37,8 @@ class AudienceCompositionAttributeCluster(proto.Message):
     cluster_metrics: AudienceCompositionMetrics
     attributes: MutableSequence[AudienceCompositionAttribute]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         cluster_display_name: str = ...,
@@ -49,8 +52,8 @@ class AudienceCompositionMetrics(proto.Message):
     index: float
     score: float
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         baseline_audience_share: float = ...,
@@ -64,8 +67,8 @@ class AudienceCompositionSection(proto.Message):
     top_attributes: MutableSequence[AudienceCompositionAttribute]
     clustered_attributes: MutableSequence[AudienceCompositionAttributeCluster]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension = ...,
@@ -87,8 +90,8 @@ class AudienceInsightsAttribute(proto.Message):
     income_range: IncomeRangeInfo
     youtube_channel: YouTubeChannelInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         age_range: AgeRangeInfo = ...,
@@ -113,8 +116,8 @@ class AudienceInsightsAttributeMetadata(proto.Message):
     dynamic_attribute_metadata: DynamicLineupAttributeMetadata
     location_attribute_metadata: LocationAttributeMetadata
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension = ...,
@@ -130,8 +133,8 @@ class AudienceInsightsAttributeMetadata(proto.Message):
 class AudienceInsightsCategory(proto.Message):
     category_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         category_id: str = ...,
@@ -140,8 +143,8 @@ class AudienceInsightsCategory(proto.Message):
 class AudienceInsightsDynamicLineup(proto.Message):
     dynamic_lineup_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         dynamic_lineup_id: str = ...,
@@ -150,8 +153,8 @@ class AudienceInsightsDynamicLineup(proto.Message):
 class AudienceInsightsEntity(proto.Message):
     knowledge_graph_machine_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         knowledge_graph_machine_id: str = ...,
@@ -161,8 +164,8 @@ class AudienceInsightsTopic(proto.Message):
     entity: AudienceInsightsEntity
     category: AudienceInsightsCategory
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         entity: AudienceInsightsEntity = ...,
@@ -177,8 +180,8 @@ class BasicInsightsAudience(proto.Message):
     user_interests: MutableSequence[UserInterestInfo]
     topics: MutableSequence[AudienceInsightsTopic]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         country_location: MutableSequence[LocationInfo] = ...,
@@ -195,8 +198,8 @@ class DynamicLineupAttributeMetadata(proto.Message):
     channel_count_lower_bound: int
     channel_count_upper_bound: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         inventory_country: LocationInfo = ...,
@@ -213,8 +216,8 @@ class GenerateAudienceCompositionInsightsRequest(proto.Message):
     dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
     customer_insights_group: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -230,8 +233,8 @@ class GenerateAudienceCompositionInsightsRequest(proto.Message):
 class GenerateAudienceCompositionInsightsResponse(proto.Message):
     sections: MutableSequence[AudienceCompositionSection]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         sections: MutableSequence[AudienceCompositionSection] = ...,
@@ -243,8 +246,8 @@ class GenerateInsightsFinderReportRequest(proto.Message):
     specific_audience: BasicInsightsAudience
     customer_insights_group: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -256,8 +259,8 @@ class GenerateInsightsFinderReportRequest(proto.Message):
 class GenerateInsightsFinderReportResponse(proto.Message):
     saved_report_url: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         saved_report_url: str = ...,
@@ -273,8 +276,8 @@ class InsightsAudience(proto.Message):
     dynamic_lineups: MutableSequence[AudienceInsightsDynamicLineup]
     topic_audience_combinations: MutableSequence[InsightsAudienceAttributeGroup]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         country_locations: MutableSequence[LocationInfo] = ...,
@@ -292,8 +295,8 @@ class InsightsAudience(proto.Message):
 class InsightsAudienceAttributeGroup(proto.Message):
     attributes: MutableSequence[AudienceInsightsAttribute]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         attributes: MutableSequence[AudienceInsightsAttribute] = ...,
@@ -306,8 +309,8 @@ class ListAudienceInsightsAttributesRequest(proto.Message):
     customer_insights_group: str
     location_country_filters: MutableSequence[LocationInfo]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -322,8 +325,8 @@ class ListAudienceInsightsAttributesRequest(proto.Message):
 class ListAudienceInsightsAttributesResponse(proto.Message):
     attributes: MutableSequence[AudienceInsightsAttributeMetadata]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         attributes: MutableSequence[AudienceInsightsAttributeMetadata] = ...,
@@ -331,8 +334,8 @@ class ListAudienceInsightsAttributesResponse(proto.Message):
 
 class ListInsightsEligibleDatesRequest(proto.Message):
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...
@@ -342,8 +345,8 @@ class ListInsightsEligibleDatesResponse(proto.Message):
     data_months: MutableSequence[str]
     last_thirty_days: DateRange
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         data_months: MutableSequence[str] = ...,
@@ -353,8 +356,8 @@ class ListInsightsEligibleDatesResponse(proto.Message):
 class LocationAttributeMetadata(proto.Message):
     country_location: LocationInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         country_location: LocationInfo = ...,
@@ -363,8 +366,8 @@ class LocationAttributeMetadata(proto.Message):
 class YouTubeChannelAttributeMetadata(proto.Message):
     subscriber_count: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         subscriber_count: int = ...,

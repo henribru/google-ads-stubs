@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.custom_parameter import CustomParameter
@@ -25,6 +26,8 @@ from google.ads.googleads.v13.enums.types.promotion_extension_occasion import (
     PromotionExtensionOccasionEnum,
 )
 
+_M = TypeVar("_M")
+
 class AffiliateLocationFeedItem(proto.Message):
     business_name: str
     address_line_1: str
@@ -37,8 +40,8 @@ class AffiliateLocationFeedItem(proto.Message):
     chain_id: int
     chain_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         business_name: str = ...,
@@ -63,8 +66,8 @@ class AppFeedItem(proto.Message):
     url_custom_parameters: MutableSequence[CustomParameter]
     final_url_suffix: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         link_text: str = ...,
@@ -85,8 +88,8 @@ class CallFeedItem(proto.Message):
     call_conversion_tracking_disabled: bool
     call_conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         phone_number: str = ...,
@@ -100,8 +103,8 @@ class CallFeedItem(proto.Message):
 class CalloutFeedItem(proto.Message):
     callout_text: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         callout_text: str = ...
@@ -111,8 +114,8 @@ class HotelCalloutFeedItem(proto.Message):
     text: str
     language_code: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         text: str = ...,
@@ -122,8 +125,8 @@ class HotelCalloutFeedItem(proto.Message):
 class ImageFeedItem(proto.Message):
     image_asset: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         image_asset: str = ...
@@ -139,8 +142,8 @@ class LocationFeedItem(proto.Message):
     country_code: str
     phone_number: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         business_name: str = ...,
@@ -161,8 +164,8 @@ class PriceFeedItem(proto.Message):
     price_offerings: MutableSequence[PriceOffer]
     final_url_suffix: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: PriceExtensionTypeEnum.PriceExtensionType = ...,
@@ -181,8 +184,8 @@ class PriceOffer(proto.Message):
     final_urls: MutableSequence[str]
     final_mobile_urls: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         header: str = ...,
@@ -210,8 +213,8 @@ class PromotionFeedItem(proto.Message):
     promotion_code: str
     orders_over_amount: Money
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         promotion_target: str = ...,
@@ -241,8 +244,8 @@ class SitelinkFeedItem(proto.Message):
     url_custom_parameters: MutableSequence[CustomParameter]
     final_url_suffix: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         link_text: str = ...,
@@ -259,8 +262,8 @@ class StructuredSnippetFeedItem(proto.Message):
     header: str
     values: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         header: str = ...,
@@ -274,8 +277,8 @@ class TextMessageFeedItem(proto.Message):
     text: str
     extension_text: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         business_name: str = ...,

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CustomInterestErrorEnum(proto.Message):
     class CustomInterestError(proto.Enum):
@@ -14,8 +18,8 @@ class CustomInterestErrorEnum(proto.Message):
         CANNOT_REMOVE_WHILE_IN_USE = 7
         CANNOT_CHANGE_TYPE = 8
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

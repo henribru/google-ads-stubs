@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.policy_summary import PolicySummary
@@ -8,6 +10,8 @@ from google.ads.googleads.v13.enums.types.asset_link_status import AssetLinkStat
 from google.ads.googleads.v13.enums.types.asset_performance_label import (
     AssetPerformanceLabelEnum,
 )
+
+_M = TypeVar("_M")
 
 class AssetGroupAsset(proto.Message):
     resource_name: str
@@ -18,8 +22,8 @@ class AssetGroupAsset(proto.Message):
     performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel
     policy_summary: PolicySummary
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

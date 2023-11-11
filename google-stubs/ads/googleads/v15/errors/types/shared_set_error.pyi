@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class SharedSetErrorEnum(proto.Message):
     class SharedSetError(proto.Enum):
@@ -11,8 +15,8 @@ class SharedSetErrorEnum(proto.Message):
         SHARED_SET_REMOVED = 4
         SHARED_SET_IN_USE = 5
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

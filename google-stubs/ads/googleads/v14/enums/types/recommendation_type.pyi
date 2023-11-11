@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class RecommendationTypeEnum(proto.Message):
     class RecommendationType(proto.Enum):
@@ -51,8 +55,8 @@ class RecommendationTypeEnum(proto.Message):
         IMPROVE_PERFORMANCE_MAX_AD_STRENGTH = 47
         MIGRATE_DYNAMIC_SEARCH_ADS_CAMPAIGN_TO_PERFORMANCE_MAX = 48
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.common.types.criteria import (
@@ -44,6 +45,8 @@ from google.ads.googleads.v14.enums.types.quality_score_bucket import (
     QualityScoreBucketEnum,
 )
 
+_M = TypeVar("_M")
+
 class AdGroupCriterion(proto.Message):
     class PositionEstimates(proto.Message):
         first_page_cpc_micros: int
@@ -52,8 +55,8 @@ class AdGroupCriterion(proto.Message):
         estimated_add_clicks_at_first_position_cpc: int
         estimated_add_cost_at_first_position_cpc: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             first_page_cpc_micros: int = ...,
@@ -69,8 +72,8 @@ class AdGroupCriterion(proto.Message):
         post_click_quality_score: QualityScoreBucketEnum.QualityScoreBucket
         search_predicted_ctr: QualityScoreBucketEnum.QualityScoreBucket
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             quality_score: int = ...,
@@ -133,8 +136,8 @@ class AdGroupCriterion(proto.Message):
     location: LocationInfo
     language: LanguageInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

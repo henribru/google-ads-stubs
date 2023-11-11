@@ -1,11 +1,15 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.access_invitation_status import (
     AccessInvitationStatusEnum,
 )
 from google.ads.googleads.v13.enums.types.access_role import AccessRoleEnum
+
+_M = TypeVar("_M")
 
 class CustomerUserAccessInvitation(proto.Message):
     resource_name: str
@@ -15,8 +19,8 @@ class CustomerUserAccessInvitation(proto.Message):
     creation_date_time: str
     invitation_status: AccessInvitationStatusEnum.AccessInvitationStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

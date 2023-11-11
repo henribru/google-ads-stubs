@@ -1,8 +1,12 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.criteria import InteractionTypeInfo
+
+_M = TypeVar("_M")
 
 class CampaignBidModifier(proto.Message):
     resource_name: str
@@ -11,8 +15,8 @@ class CampaignBidModifier(proto.Message):
     bid_modifier: float
     interaction_type: InteractionTypeInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

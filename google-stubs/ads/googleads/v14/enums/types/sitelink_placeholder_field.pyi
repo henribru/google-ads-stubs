@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class SitelinkPlaceholderFieldEnum(proto.Message):
     class SitelinkPlaceholderField(proto.Enum):
@@ -14,8 +18,8 @@ class SitelinkPlaceholderFieldEnum(proto.Message):
         TRACKING_URL = 7
         FINAL_URL_SUFFIX = 8
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

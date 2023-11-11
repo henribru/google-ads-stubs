@@ -1,11 +1,14 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.keyword_plan_network import (
     KeywordPlanNetworkEnum,
 )
+
+_M = TypeVar("_M")
 
 class KeywordPlanCampaign(proto.Message):
     resource_name: str
@@ -17,8 +20,8 @@ class KeywordPlanCampaign(proto.Message):
     cpc_bid_micros: int
     geo_targets: MutableSequence[KeywordPlanGeoTarget]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -34,8 +37,8 @@ class KeywordPlanCampaign(proto.Message):
 class KeywordPlanGeoTarget(proto.Message):
     geo_target_constant: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         geo_target_constant: str = ...

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class LocalServicesLeadStatusEnum(proto.Message):
     class LeadStatus(proto.Enum):
@@ -15,8 +19,8 @@ class LocalServicesLeadStatusEnum(proto.Message):
         CONSUMER_DECLINED = 8
         WIPED_OUT = 9
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

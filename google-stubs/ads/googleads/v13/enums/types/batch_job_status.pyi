@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class BatchJobStatusEnum(proto.Message):
     class BatchJobStatus(proto.Enum):
@@ -10,8 +14,8 @@ class BatchJobStatusEnum(proto.Message):
         RUNNING = 3
         DONE = 4
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

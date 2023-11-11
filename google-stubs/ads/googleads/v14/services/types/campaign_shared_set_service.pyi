@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
 
@@ -11,12 +12,14 @@ from google.ads.googleads.v14.resources.types.campaign_shared_set import (
     CampaignSharedSet,
 )
 
+_M = TypeVar("_M")
+
 class CampaignSharedSetOperation(proto.Message):
     create: CampaignSharedSet
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: CampaignSharedSet = ...,
@@ -27,8 +30,8 @@ class MutateCampaignSharedSetResult(proto.Message):
     resource_name: str
     campaign_shared_set: CampaignSharedSet
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -42,8 +45,8 @@ class MutateCampaignSharedSetsRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -57,8 +60,8 @@ class MutateCampaignSharedSetsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateCampaignSharedSetResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,

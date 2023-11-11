@@ -1,8 +1,12 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.placement_type import PlacementTypeEnum
+
+_M = TypeVar("_M")
 
 class DetailPlacementView(proto.Message):
     resource_name: str
@@ -12,8 +16,8 @@ class DetailPlacementView(proto.Message):
     target_url: str
     placement_type: PlacementTypeEnum.PlacementType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

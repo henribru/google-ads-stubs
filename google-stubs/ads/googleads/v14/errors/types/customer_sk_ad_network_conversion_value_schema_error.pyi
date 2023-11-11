@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CustomerSkAdNetworkConversionValueSchemaErrorEnum(proto.Message):
     class CustomerSkAdNetworkConversionValueSchemaError(proto.Enum):
@@ -11,8 +15,8 @@ class CustomerSkAdNetworkConversionValueSchemaErrorEnum(proto.Message):
         INVALID_SCHEMA = 4
         LINK_CODE_NOT_FOUND = 5
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

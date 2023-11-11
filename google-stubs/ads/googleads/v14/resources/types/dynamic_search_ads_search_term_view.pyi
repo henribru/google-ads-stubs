@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class DynamicSearchAdsSearchTermView(proto.Message):
     resource_name: str
@@ -12,8 +16,8 @@ class DynamicSearchAdsSearchTermView(proto.Message):
     has_matching_keyword: bool
     has_negative_url: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

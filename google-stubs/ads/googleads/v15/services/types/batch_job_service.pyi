@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
 
@@ -13,13 +14,15 @@ from google.ads.googleads.v15.services.types.google_ads_service import (
     MutateOperationResponse,
 )
 
+_M = TypeVar("_M")
+
 class AddBatchJobOperationsRequest(proto.Message):
     resource_name: str
     sequence_token: str
     mutate_operations: MutableSequence[MutateOperation]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -31,8 +34,8 @@ class AddBatchJobOperationsResponse(proto.Message):
     total_operations: int
     next_sequence_token: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         total_operations: int = ...,
@@ -43,8 +46,8 @@ class BatchJobOperation(proto.Message):
     create: BatchJob
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: BatchJob = ...,
@@ -56,8 +59,8 @@ class BatchJobResult(proto.Message):
     mutate_operation_response: MutateOperationResponse
     status: Status
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         operation_index: int = ...,
@@ -71,8 +74,8 @@ class ListBatchJobResultsRequest(proto.Message):
     page_size: int
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -85,8 +88,8 @@ class ListBatchJobResultsResponse(proto.Message):
     results: MutableSequence[BatchJobResult]
     next_page_token: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[BatchJobResult] = ...,
@@ -97,8 +100,8 @@ class MutateBatchJobRequest(proto.Message):
     customer_id: str
     operation: BatchJobOperation
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -108,8 +111,8 @@ class MutateBatchJobRequest(proto.Message):
 class MutateBatchJobResponse(proto.Message):
     result: MutateBatchJobResult
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         result: MutateBatchJobResult = ...
@@ -118,8 +121,8 @@ class MutateBatchJobResponse(proto.Message):
 class MutateBatchJobResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -128,8 +131,8 @@ class MutateBatchJobResult(proto.Message):
 class RunBatchJobRequest(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

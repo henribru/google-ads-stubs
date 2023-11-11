@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.criterion_category_availability import (
@@ -9,6 +10,8 @@ from google.ads.googleads.v13.common.types.criterion_category_availability impor
 from google.ads.googleads.v13.enums.types.user_interest_taxonomy_type import (
     UserInterestTaxonomyTypeEnum,
 )
+
+_M = TypeVar("_M")
 
 class UserInterest(proto.Message):
     resource_name: str
@@ -19,8 +22,8 @@ class UserInterest(proto.Message):
     launched_to_all: bool
     availabilities: MutableSequence[CriterionCategoryAvailability]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

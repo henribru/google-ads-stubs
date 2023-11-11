@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.conversion_tracking_status_enum import (
@@ -14,13 +15,15 @@ from google.ads.googleads.v15.enums.types.local_services_verification_status imp
     LocalServicesVerificationStatusEnum,
 )
 
+_M = TypeVar("_M")
+
 class CallReportingSetting(proto.Message):
     call_reporting_enabled: bool
     call_conversion_reporting_enabled: bool
     call_conversion_action: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         call_reporting_enabled: bool = ...,
@@ -36,8 +39,8 @@ class ConversionTrackingSetting(proto.Message):
     enhanced_conversions_for_leads_enabled: bool
     google_ads_conversion_customer: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         conversion_tracking_id: int = ...,
@@ -76,8 +79,8 @@ class Customer(proto.Message):
     customer_agreement_setting: CustomerAgreementSetting
     local_services_settings: LocalServicesSettings
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -111,8 +114,8 @@ class Customer(proto.Message):
 class CustomerAgreementSetting(proto.Message):
     accepted_lead_form_terms: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         accepted_lead_form_terms: bool = ...
@@ -123,8 +126,8 @@ class GranularInsuranceStatus(proto.Message):
     category_id: str
     verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         geo_criterion_id: int = ...,
@@ -137,8 +140,8 @@ class GranularLicenseStatus(proto.Message):
     category_id: str
     verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         geo_criterion_id: int = ...,
@@ -150,8 +153,8 @@ class LocalServicesSettings(proto.Message):
     granular_license_statuses: MutableSequence[GranularLicenseStatus]
     granular_insurance_statuses: MutableSequence[GranularInsuranceStatus]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         granular_license_statuses: MutableSequence[GranularLicenseStatus] = ...,
@@ -161,8 +164,8 @@ class LocalServicesSettings(proto.Message):
 class RemarketingSetting(proto.Message):
     google_global_site_tag: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         google_global_site_tag: str = ...

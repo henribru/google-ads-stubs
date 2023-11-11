@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.frequency_cap_event_type import (
@@ -12,12 +14,14 @@ from google.ads.googleads.v15.enums.types.frequency_cap_time_unit import (
     FrequencyCapTimeUnitEnum,
 )
 
+_M = TypeVar("_M")
+
 class FrequencyCapEntry(proto.Message):
     key: FrequencyCapKey
     cap: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         key: FrequencyCapKey = ...,
@@ -30,8 +34,8 @@ class FrequencyCapKey(proto.Message):
     time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
     time_length: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         level: FrequencyCapLevelEnum.FrequencyCapLevel = ...,

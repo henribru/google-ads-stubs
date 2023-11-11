@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.offline_user_data import (
@@ -19,6 +21,8 @@ from google.ads.googleads.v15.enums.types.offline_user_data_job_type import (
     OfflineUserDataJobTypeEnum,
 )
 
+_M = TypeVar("_M")
+
 class OfflineUserDataJob(proto.Message):
     resource_name: str
     id: int
@@ -30,8 +34,8 @@ class OfflineUserDataJob(proto.Message):
     customer_match_user_list_metadata: CustomerMatchUserListMetadata
     store_sales_metadata: StoreSalesMetadata
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -48,8 +52,8 @@ class OfflineUserDataJob(proto.Message):
 class OfflineUserDataJobMetadata(proto.Message):
     match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange = ...

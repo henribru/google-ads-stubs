@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
 
@@ -9,11 +10,13 @@ from google.ads.googleads.v14.enums.types.response_content_type import (
 )
 from google.ads.googleads.v14.resources.types.media_file import MediaFile
 
+_M = TypeVar("_M")
+
 class MediaFileOperation(proto.Message):
     create: MediaFile
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: MediaFile = ...
@@ -23,8 +26,8 @@ class MutateMediaFileResult(proto.Message):
     resource_name: str
     media_file: MediaFile
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -38,8 +41,8 @@ class MutateMediaFilesRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -53,8 +56,8 @@ class MutateMediaFilesResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateMediaFileResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,

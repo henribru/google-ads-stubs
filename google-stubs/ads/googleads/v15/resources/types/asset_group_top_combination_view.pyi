@@ -1,15 +1,18 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.asset_usage import AssetUsage
 
+_M = TypeVar("_M")
+
 class AssetGroupAssetCombinationData(proto.Message):
     asset_combination_served_assets: MutableSequence[AssetUsage]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         asset_combination_served_assets: MutableSequence[AssetUsage] = ...
@@ -19,8 +22,8 @@ class AssetGroupTopCombinationView(proto.Message):
     resource_name: str
     asset_group_top_combinations: MutableSequence[AssetGroupAssetCombinationData]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

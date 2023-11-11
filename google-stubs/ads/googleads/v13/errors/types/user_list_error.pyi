@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class UserListErrorEnum(proto.Message):
     class UserListError(proto.Enum):
@@ -36,8 +40,8 @@ class UserListErrorEnum(proto.Message):
         CANNOT_MUTATE_SYSTEM_LIST = 40
         MOBILE_APP_IS_SENSITIVE = 41
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

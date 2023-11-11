@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ExtensionSettingErrorEnum(proto.Message):
     class ExtensionSettingError(proto.Enum):
@@ -72,8 +76,8 @@ class ExtensionSettingErrorEnum(proto.Message):
         EXTENSION_SETTING_UPDATE_IS_A_NOOP = 67
         DISALLOWED_TEXT = 68
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.account_budget_proposal_type import (
@@ -12,6 +14,8 @@ from google.ads.googleads.v13.enums.types.spending_limit_type import (
     SpendingLimitTypeEnum,
 )
 from google.ads.googleads.v13.enums.types.time_type import TimeTypeEnum
+
+_M = TypeVar("_M")
 
 class AccountBudget(proto.Message):
     class PendingAccountBudgetProposal(proto.Message):
@@ -27,8 +31,8 @@ class AccountBudget(proto.Message):
         spending_limit_micros: int
         spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             account_budget_proposal: str = ...,
@@ -66,8 +70,8 @@ class AccountBudget(proto.Message):
     adjusted_spending_limit_micros: int
     adjusted_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

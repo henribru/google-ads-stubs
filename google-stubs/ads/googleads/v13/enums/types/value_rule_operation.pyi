@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ValueRuleOperationEnum(proto.Message):
     class ValueRuleOperation(proto.Enum):
@@ -10,8 +14,8 @@ class ValueRuleOperationEnum(proto.Message):
         MULTIPLY = 3
         SET = 4
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

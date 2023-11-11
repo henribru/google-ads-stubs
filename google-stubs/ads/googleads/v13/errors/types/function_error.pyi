@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class FunctionErrorEnum(proto.Message):
     class FunctionError(proto.Enum):
@@ -23,8 +27,8 @@ class FunctionErrorEnum(proto.Message):
         INVALID_FUNCTION_FOR_FEED_WITH_FIXED_SCHEMA = 16
         INVALID_ATTRIBUTE_NAME = 17
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

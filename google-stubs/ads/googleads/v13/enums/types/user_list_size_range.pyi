@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class UserListSizeRangeEnum(proto.Message):
     class UserListSizeRange(proto.Enum):
@@ -23,8 +27,8 @@ class UserListSizeRangeEnum(proto.Message):
         THIRTY_MILLION_TO_FIFTY_MILLION = 16
         OVER_FIFTY_MILLION = 17
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AdDestinationTypeEnum(proto.Message):
     class AdDestinationType(proto.Enum):
@@ -18,8 +22,8 @@ class AdDestinationTypeEnum(proto.Message):
         YOUTUBE = 11
         UNMODELED_FOR_CONVERSIONS = 12
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CampaignBudgetErrorEnum(proto.Message):
     class CampaignBudgetError(proto.Enum):
@@ -26,8 +30,8 @@ class CampaignBudgetErrorEnum(proto.Message):
         CANNOT_USE_ACCELERATED_DELIVERY_MODE = 20
         BUDGET_AMOUNT_MUST_BE_UNSET_FOR_CUSTOM_BUDGET_PERIOD = 21
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

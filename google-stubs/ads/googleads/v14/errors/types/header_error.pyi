@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class HeaderErrorEnum(proto.Message):
     class HeaderError(proto.Enum):
@@ -9,8 +13,8 @@ class HeaderErrorEnum(proto.Message):
         INVALID_LOGIN_CUSTOMER_ID = 3
         INVALID_LINKED_CUSTOMER_ID = 7
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

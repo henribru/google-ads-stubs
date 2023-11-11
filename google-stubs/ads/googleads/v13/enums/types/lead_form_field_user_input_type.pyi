@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class LeadFormFieldUserInputTypeEnum(proto.Message):
     class LeadFormFieldUserInputType(proto.Enum):
@@ -123,8 +127,8 @@ class LeadFormFieldUserInputTypeEnum(proto.Message):
         TRAVEL_BUDGET = 1046
         TRAVEL_ACCOMMODATION = 1047
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

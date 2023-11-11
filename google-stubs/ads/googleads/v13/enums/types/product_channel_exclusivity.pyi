@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ProductChannelExclusivityEnum(proto.Message):
     class ProductChannelExclusivity(proto.Enum):
@@ -9,8 +13,8 @@ class ProductChannelExclusivityEnum(proto.Message):
         SINGLE_CHANNEL = 2
         MULTI_CHANNEL = 3
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

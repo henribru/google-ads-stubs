@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AccountBudgetProposalTypeEnum(proto.Message):
     class AccountBudgetProposalType(proto.Enum):
@@ -11,8 +15,8 @@ class AccountBudgetProposalTypeEnum(proto.Message):
         END = 4
         REMOVE = 5
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

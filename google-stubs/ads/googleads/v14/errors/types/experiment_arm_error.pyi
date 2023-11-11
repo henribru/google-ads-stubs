@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ExperimentArmErrorEnum(proto.Message):
     class ExperimentArmError(proto.Enum):
@@ -21,8 +25,8 @@ class ExperimentArmErrorEnum(proto.Message):
         BIDDING_STRATEGY_NOT_SUPPORTED_IN_EXPERIMENTS = 14
         TRAFFIC_SPLIT_NOT_SUPPORTED_FOR_CHANNEL_TYPE = 15
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

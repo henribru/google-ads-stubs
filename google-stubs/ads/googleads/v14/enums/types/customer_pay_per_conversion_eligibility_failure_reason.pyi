@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CustomerPayPerConversionEligibilityFailureReasonEnum(proto.Message):
     class CustomerPayPerConversionEligibilityFailureReason(proto.Enum):
@@ -14,8 +18,8 @@ class CustomerPayPerConversionEligibilityFailureReasonEnum(proto.Message):
         ANALYSIS_NOT_COMPLETE = 7
         OTHER = 8
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

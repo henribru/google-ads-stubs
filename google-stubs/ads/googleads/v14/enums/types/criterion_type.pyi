@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CriterionTypeEnum(proto.Message):
     class CriterionType(proto.Enum):
@@ -43,8 +47,8 @@ class CriterionTypeEnum(proto.Message):
         NEGATIVE_KEYWORD_LIST = 36
         LOCAL_SERVICE_ID = 37
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.common.types.criteria import (
@@ -13,6 +15,8 @@ from google.ads.googleads.v14.common.types.criteria import (
 )
 from google.ads.googleads.v14.enums.types.criterion_type import CriterionTypeEnum
 
+_M = TypeVar("_M")
+
 class CustomerNegativeCriterion(proto.Message):
     resource_name: str
     id: int
@@ -25,8 +29,8 @@ class CustomerNegativeCriterion(proto.Message):
     youtube_channel: YouTubeChannelInfo
     negative_keyword_list: NegativeKeywordListInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.policy import PolicyTopicEntry
@@ -14,6 +15,8 @@ from google.ads.googleads.v15.enums.types.policy_review_status import (
 )
 from google.ads.googleads.v15.resources.types.ad import Ad
 
+_M = TypeVar("_M")
+
 class AdGroupAd(proto.Message):
     resource_name: str
     status: AdGroupAdStatusEnum.AdGroupAdStatus
@@ -24,8 +27,8 @@ class AdGroupAd(proto.Message):
     action_items: MutableSequence[str]
     labels: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -43,8 +46,8 @@ class AdGroupAdPolicySummary(proto.Message):
     review_status: PolicyReviewStatusEnum.PolicyReviewStatus
     approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,

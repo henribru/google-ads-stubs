@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.common.types.metric_goal import MetricGoal
@@ -9,6 +10,8 @@ from google.ads.googleads.v14.enums.types.async_action_status import (
 )
 from google.ads.googleads.v14.enums.types.experiment_status import ExperimentStatusEnum
 from google.ads.googleads.v14.enums.types.experiment_type import ExperimentTypeEnum
+
+_M = TypeVar("_M")
 
 class Experiment(proto.Message):
     resource_name: str
@@ -24,8 +27,8 @@ class Experiment(proto.Message):
     long_running_operation: str
     promote_status: AsyncActionStatusEnum.AsyncActionStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

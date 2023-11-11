@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class OfflineUserDataJobMatchRateRangeEnum(proto.Message):
     class OfflineUserDataJobMatchRateRange(proto.Enum):
@@ -16,8 +20,8 @@ class OfflineUserDataJobMatchRateRangeEnum(proto.Message):
         MATCH_RANGE_81_TO_90 = 9
         MATCH_RANGE_91_TO_100 = 10
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

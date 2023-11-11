@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CustomerUserAccessErrorEnum(proto.Message):
     class CustomerUserAccessError(proto.Enum):
@@ -12,8 +16,8 @@ class CustomerUserAccessErrorEnum(proto.Message):
         LAST_ADMIN_USER_OF_SERVING_CUSTOMER = 5
         LAST_ADMIN_USER_OF_MANAGER = 6
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

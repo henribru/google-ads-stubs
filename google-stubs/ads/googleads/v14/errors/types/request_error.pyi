@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class RequestErrorEnum(proto.Message):
     class RequestError(proto.Enum):
@@ -32,8 +36,8 @@ class RequestErrorEnum(proto.Message):
         UNSUPPORTED_VERSION = 38
         CLOUD_PROJECT_NOT_FOUND = 39
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

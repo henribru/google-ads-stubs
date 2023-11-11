@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.keyword_plan_common import (
@@ -18,6 +19,8 @@ from google.ads.googleads.v13.enums.types.keyword_plan_network import (
     KeywordPlanNetworkEnum,
 )
 
+_M = TypeVar("_M")
+
 class AdGroupKeywordSuggestion(proto.Message):
     keyword_text: str
     suggested_keyword_text: str
@@ -25,8 +28,8 @@ class AdGroupKeywordSuggestion(proto.Message):
     suggested_ad_group: str
     suggested_campaign: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_text: str = ...,
@@ -41,8 +44,8 @@ class GenerateAdGroupThemesRequest(proto.Message):
     keywords: MutableSequence[str]
     ad_groups: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -54,8 +57,8 @@ class GenerateAdGroupThemesResponse(proto.Message):
     ad_group_keyword_suggestions: MutableSequence[AdGroupKeywordSuggestion]
     unusable_ad_groups: MutableSequence[UnusableAdGroup]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ad_group_keyword_suggestions: MutableSequence[AdGroupKeywordSuggestion] = ...,
@@ -72,8 +75,8 @@ class GenerateKeywordHistoricalMetricsRequest(proto.Message):
     aggregate_metrics: KeywordPlanAggregateMetrics
     historical_metrics_options: HistoricalMetricsOptions
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -90,8 +93,8 @@ class GenerateKeywordHistoricalMetricsResponse(proto.Message):
     results: MutableSequence[GenerateKeywordHistoricalMetricsResult]
     aggregate_metric_results: KeywordPlanAggregateMetricResults
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[GenerateKeywordHistoricalMetricsResult] = ...,
@@ -103,8 +106,8 @@ class GenerateKeywordHistoricalMetricsResult(proto.Message):
     close_variants: MutableSequence[str]
     keyword_metrics: KeywordPlanHistoricalMetrics
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         text: str = ...,
@@ -118,8 +121,8 @@ class GenerateKeywordIdeaResponse(proto.Message):
     next_page_token: str
     total_size: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[GenerateKeywordIdeaResult] = ...,
@@ -134,8 +137,8 @@ class GenerateKeywordIdeaResult(proto.Message):
     keyword_annotations: KeywordAnnotations
     close_variants: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         text: str = ...,
@@ -162,8 +165,8 @@ class GenerateKeywordIdeasRequest(proto.Message):
     url_seed: UrlSeed
     site_seed: SiteSeed
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -188,8 +191,8 @@ class KeywordAndUrlSeed(proto.Message):
     url: str
     keywords: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         url: str = ...,
@@ -199,8 +202,8 @@ class KeywordAndUrlSeed(proto.Message):
 class KeywordSeed(proto.Message):
     keywords: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keywords: MutableSequence[str] = ...
@@ -209,8 +212,8 @@ class KeywordSeed(proto.Message):
 class SiteSeed(proto.Message):
     site: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         site: str = ...
@@ -220,8 +223,8 @@ class UnusableAdGroup(proto.Message):
     ad_group: str
     campaign: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ad_group: str = ...,
@@ -231,8 +234,8 @@ class UnusableAdGroup(proto.Message):
 class UrlSeed(proto.Message):
     url: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         url: str = ...

@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.dates import YearMonthRange
@@ -16,12 +17,14 @@ from google.ads.googleads.v13.enums.types.keyword_plan_concept_group_type import
 )
 from google.ads.googleads.v13.enums.types.month_of_year import MonthOfYearEnum
 
+_M = TypeVar("_M")
+
 class ConceptGroup(proto.Message):
     name: str
     type_: KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         name: str = ...,
@@ -32,8 +35,8 @@ class HistoricalMetricsOptions(proto.Message):
     year_month_range: YearMonthRange
     include_average_cpc: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         year_month_range: YearMonthRange = ...,
@@ -43,8 +46,8 @@ class HistoricalMetricsOptions(proto.Message):
 class KeywordAnnotations(proto.Message):
     concepts: MutableSequence[KeywordConcept]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         concepts: MutableSequence[KeywordConcept] = ...
@@ -54,8 +57,8 @@ class KeywordConcept(proto.Message):
     name: str
     concept_group: ConceptGroup
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         name: str = ...,
@@ -65,8 +68,8 @@ class KeywordConcept(proto.Message):
 class KeywordPlanAggregateMetricResults(proto.Message):
     device_searches: MutableSequence[KeywordPlanDeviceSearches]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         device_searches: MutableSequence[KeywordPlanDeviceSearches] = ...
@@ -77,8 +80,8 @@ class KeywordPlanAggregateMetrics(proto.Message):
         KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType
     ]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         aggregate_metric_types: MutableSequence[
@@ -90,8 +93,8 @@ class KeywordPlanDeviceSearches(proto.Message):
     device: DeviceEnum.Device
     search_count: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         device: DeviceEnum.Device = ...,
@@ -107,8 +110,8 @@ class KeywordPlanHistoricalMetrics(proto.Message):
     high_top_of_page_bid_micros: int
     average_cpc_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         avg_monthly_searches: int = ...,
@@ -125,8 +128,8 @@ class MonthlySearchVolume(proto.Message):
     month: MonthOfYearEnum.MonthOfYear
     monthly_searches: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         year: int = ...,

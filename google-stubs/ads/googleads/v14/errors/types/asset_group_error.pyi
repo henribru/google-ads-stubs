@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AssetGroupErrorEnum(proto.Message):
     class AssetGroupError(proto.Enum):
@@ -23,8 +27,8 @@ class AssetGroupErrorEnum(proto.Message):
         AD_CUSTOMIZER_NOT_SUPPORTED = 16
         CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN = 17
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

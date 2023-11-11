@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CallPlaceholderFieldEnum(proto.Message):
     class CallPlaceholderField(proto.Enum):
@@ -12,8 +16,8 @@ class CallPlaceholderFieldEnum(proto.Message):
         CONVERSION_TYPE_ID = 5
         CONVERSION_REPORTING_STATE = 6
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

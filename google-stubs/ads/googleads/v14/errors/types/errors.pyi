@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.duration_pb2 import Duration
 
@@ -339,6 +340,8 @@ from google.ads.googleads.v14.errors.types.youtube_video_registration_error impo
     YoutubeVideoRegistrationErrorEnum,
 )
 
+_M = TypeVar("_M")
+
 class ErrorCode(proto.Message):
     request_error: RequestErrorEnum.RequestError
     bidding_strategy_error: BiddingStrategyErrorEnum.BiddingStrategyError
@@ -485,8 +488,8 @@ class ErrorCode(proto.Message):
     customer_sk_ad_network_conversion_value_schema_error: CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError
     currency_error: CurrencyErrorEnum.CurrencyError
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         request_error: RequestErrorEnum.RequestError = ...,
@@ -642,8 +645,8 @@ class ErrorDetails(proto.Message):
     quota_error_details: QuotaErrorDetails
     resource_count_details: ResourceCountDetails
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         unpublished_error_code: str = ...,
@@ -658,8 +661,8 @@ class ErrorLocation(proto.Message):
         field_name: str
         index: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             field_name: str = ...,
@@ -667,8 +670,8 @@ class ErrorLocation(proto.Message):
         ) -> None: ...
     field_path_elements: MutableSequence[ErrorLocation.FieldPathElement]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         field_path_elements: MutableSequence[ErrorLocation.FieldPathElement] = ...
@@ -681,8 +684,8 @@ class GoogleAdsError(proto.Message):
     location: ErrorLocation
     details: ErrorDetails
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         error_code: ErrorCode = ...,
@@ -696,8 +699,8 @@ class GoogleAdsFailure(proto.Message):
     errors: MutableSequence[GoogleAdsError]
     request_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         errors: MutableSequence[GoogleAdsError] = ...,
@@ -707,8 +710,8 @@ class GoogleAdsFailure(proto.Message):
 class PolicyFindingDetails(proto.Message):
     policy_topic_entries: MutableSequence[PolicyTopicEntry]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...
@@ -720,8 +723,8 @@ class PolicyViolationDetails(proto.Message):
     external_policy_name: str
     is_exemptible: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         external_policy_description: str = ...,
@@ -740,8 +743,8 @@ class QuotaErrorDetails(proto.Message):
     rate_name: str
     retry_delay: Duration
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         rate_scope: QuotaErrorDetails.QuotaRateScope = ...,
@@ -756,8 +759,8 @@ class ResourceCountDetails(proto.Message):
     limit_type: ResourceLimitTypeEnum.ResourceLimitType
     existing_count: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         enclosing_id: str = ...,

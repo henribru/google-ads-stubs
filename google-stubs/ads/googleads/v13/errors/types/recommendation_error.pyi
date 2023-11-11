@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class RecommendationErrorEnum(proto.Message):
     class RecommendationError(proto.Enum):
@@ -22,8 +26,8 @@ class RecommendationErrorEnum(proto.Message):
         INVALID_APPLY_REQUEST = 15
         RECOMMENDATION_TYPE_APPLY_NOT_SUPPORTED = 17
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

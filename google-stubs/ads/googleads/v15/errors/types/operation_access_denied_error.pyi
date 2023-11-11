@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class OperationAccessDeniedErrorEnum(proto.Message):
     class OperationAccessDeniedError(proto.Enum):
@@ -17,8 +21,8 @@ class OperationAccessDeniedErrorEnum(proto.Message):
         OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE = 10
         MUTATE_NOT_PERMITTED_FOR_CUSTOMER = 11
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

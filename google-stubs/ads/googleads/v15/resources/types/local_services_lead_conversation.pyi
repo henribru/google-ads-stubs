@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.local_services_conversation_type import (
@@ -8,6 +10,8 @@ from google.ads.googleads.v15.enums.types.local_services_conversation_type impor
 from google.ads.googleads.v15.enums.types.local_services_participant_type import (
     LocalServicesParticipantTypeEnum,
 )
+
+_M = TypeVar("_M")
 
 class LocalServicesLeadConversation(proto.Message):
     resource_name: str
@@ -19,8 +23,8 @@ class LocalServicesLeadConversation(proto.Message):
     phone_call_details: PhoneCallDetails
     message_details: MessageDetails
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -36,8 +40,8 @@ class LocalServicesLeadConversation(proto.Message):
 class MessageDetails(proto.Message):
     text: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         text: str = ...
@@ -47,8 +51,8 @@ class PhoneCallDetails(proto.Message):
     call_duration_millis: int
     call_recording_url: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         call_duration_millis: int = ...,

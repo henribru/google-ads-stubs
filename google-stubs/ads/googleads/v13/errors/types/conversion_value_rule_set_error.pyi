@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ConversionValueRuleSetErrorEnum(proto.Message):
     class ConversionValueRuleSetError(proto.Enum):
@@ -20,8 +24,8 @@ class ConversionValueRuleSetErrorEnum(proto.Message):
         DIMENSION_NO_CONDITION_NOT_ALLOWED = 13
         UNSUPPORTED_CONVERSION_ACTION_CATEGORIES = 14
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class DateErrorEnum(proto.Message):
     class DateError(proto.Enum):
@@ -17,8 +21,8 @@ class DateErrorEnum(proto.Message):
         DATE_RANGE_MINIMUM_DATE_LATER_THAN_MAXIMUM_DATE = 9
         DATE_RANGE_MINIMUM_AND_MAXIMUM_DATES_BOTH_NULL = 10
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

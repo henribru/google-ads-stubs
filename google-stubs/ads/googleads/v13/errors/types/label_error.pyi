@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class LabelErrorEnum(proto.Message):
     class LabelError(proto.Enum):
@@ -16,8 +20,8 @@ class LabelErrorEnum(proto.Message):
         CANNOT_ATTACH_LABEL_TO_DRAFT = 9
         CANNOT_ATTACH_NON_MANAGER_LABEL_TO_CUSTOMER = 10
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

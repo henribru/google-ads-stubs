@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.custom_audience_member_type import (
@@ -13,6 +14,8 @@ from google.ads.googleads.v15.enums.types.custom_audience_type import (
     CustomAudienceTypeEnum,
 )
 
+_M = TypeVar("_M")
+
 class CustomAudience(proto.Message):
     resource_name: str
     id: int
@@ -22,8 +25,8 @@ class CustomAudience(proto.Message):
     description: str
     members: MutableSequence[CustomAudienceMember]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -42,8 +45,8 @@ class CustomAudienceMember(proto.Message):
     place_category: int
     app: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         member_type: CustomAudienceMemberTypeEnum.CustomAudienceMemberType = ...,

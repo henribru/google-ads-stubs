@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ChangeClientTypeEnum(proto.Message):
     class ChangeClientType(proto.Enum):
@@ -19,8 +23,8 @@ class ChangeClientTypeEnum(proto.Message):
         INTERNAL_TOOL = 12
         OTHER = 13
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

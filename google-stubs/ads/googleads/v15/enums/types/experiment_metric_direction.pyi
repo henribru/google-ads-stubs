@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ExperimentMetricDirectionEnum(proto.Message):
     class ExperimentMetricDirection(proto.Enum):
@@ -12,8 +16,8 @@ class ExperimentMetricDirectionEnum(proto.Message):
         NO_CHANGE_OR_INCREASE = 5
         NO_CHANGE_OR_DECREASE = 6
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

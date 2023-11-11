@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ChangeEventErrorEnum(proto.Message):
     class ChangeEventError(proto.Enum):
@@ -12,8 +16,8 @@ class ChangeEventErrorEnum(proto.Message):
         LIMIT_NOT_SPECIFIED = 5
         INVALID_LIMIT_CLAUSE = 6
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

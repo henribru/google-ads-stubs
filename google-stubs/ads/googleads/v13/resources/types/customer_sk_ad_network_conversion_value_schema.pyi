@@ -1,7 +1,10 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CustomerSkAdNetworkConversionValueSchema(proto.Message):
     class SkAdNetworkConversionValueSchema(proto.Message):
@@ -12,8 +15,8 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                 CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event
             ]
             def __init__(
-                self,
-                mapping: Any | None = ...,
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
                 *,
                 ignore_unknown_fields: bool = ...,
                 min_time_post_install_hours: int = ...,
@@ -28,8 +31,11 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                 min_event_count: int
                 max_event_count: int
                 def __init__(
-                    self,
-                    mapping: Any | None = ...,
+                    self: _M,
+                    mapping: _M
+                    | Mapping
+                    | google.protobuf.message.Message
+                    | None = ...,
                     *,
                     ignore_unknown_fields: bool = ...,
                     min_event_count: int = ...,
@@ -40,8 +46,11 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                 min_event_revenue: float
                 max_event_revenue: float
                 def __init__(
-                    self,
-                    mapping: Any | None = ...,
+                    self: _M,
+                    mapping: _M
+                    | Mapping
+                    | google.protobuf.message.Message
+                    | None = ...,
                     *,
                     ignore_unknown_fields: bool = ...,
                     min_event_revenue: float = ...,
@@ -54,8 +63,8 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
             event_occurrence_range: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.EventOccurrenceRange
             event_counter: int
             def __init__(
-                self,
-                mapping: Any | None = ...,
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
                 *,
                 ignore_unknown_fields: bool = ...,
                 mapped_event_name: str = ...,
@@ -70,8 +79,8 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
             fine_grained_conversion_value: int
             conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping
             def __init__(
-                self,
-                mapping: Any | None = ...,
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
                 *,
                 ignore_unknown_fields: bool = ...,
                 fine_grained_conversion_value: int = ...,
@@ -83,8 +92,8 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
             CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.FineGrainedConversionValueMappings
         ]
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             app_id: str = ...,
@@ -96,8 +105,8 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
     resource_name: str
     schema: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.chain_relationship_type import (
@@ -13,12 +14,14 @@ from google.ads.googleads.v13.enums.types.location_string_filter_type import (
     LocationStringFilterTypeEnum,
 )
 
+_M = TypeVar("_M")
+
 class BusinessProfileBusinessNameFilter(proto.Message):
     business_name: str
     filter_type: LocationStringFilterTypeEnum.LocationStringFilterType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         business_name: str = ...,
@@ -28,8 +31,8 @@ class BusinessProfileBusinessNameFilter(proto.Message):
 class BusinessProfileLocationGroup(proto.Message):
     dynamic_business_profile_location_group_filter: DynamicBusinessProfileLocationGroupFilter
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         dynamic_business_profile_location_group_filter: DynamicBusinessProfileLocationGroupFilter = ...
@@ -43,8 +46,8 @@ class BusinessProfileLocationSet(proto.Message):
     listing_id_filters: MutableSequence[int]
     business_account_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         http_authorization_token: str = ...,
@@ -59,8 +62,8 @@ class ChainFilter(proto.Message):
     chain_id: int
     location_attributes: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         chain_id: int = ...,
@@ -70,8 +73,8 @@ class ChainFilter(proto.Message):
 class ChainLocationGroup(proto.Message):
     dynamic_chain_location_group_filters: MutableSequence[ChainFilter]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         dynamic_chain_location_group_filters: MutableSequence[ChainFilter] = ...
@@ -81,8 +84,8 @@ class ChainSet(proto.Message):
     relationship_type: ChainRelationshipTypeEnum.ChainRelationshipType
     chains: MutableSequence[ChainFilter]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         relationship_type: ChainRelationshipTypeEnum.ChainRelationshipType = ...,
@@ -94,8 +97,8 @@ class DynamicBusinessProfileLocationGroupFilter(proto.Message):
     business_name_filter: BusinessProfileBusinessNameFilter
     listing_id_filters: MutableSequence[int]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         label_filters: MutableSequence[str] = ...,
@@ -109,8 +112,8 @@ class LocationSet(proto.Message):
     chain_location_set: ChainSet
     maps_location_set: MapsLocationSet
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         location_ownership_type: LocationOwnershipTypeEnum.LocationOwnershipType = ...,
@@ -122,8 +125,8 @@ class LocationSet(proto.Message):
 class MapsLocationInfo(proto.Message):
     place_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         place_id: str = ...
@@ -132,8 +135,8 @@ class MapsLocationInfo(proto.Message):
 class MapsLocationSet(proto.Message):
     maps_locations: MutableSequence[MapsLocationInfo]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         maps_locations: MutableSequence[MapsLocationInfo] = ...

@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.custom_parameter import CustomParameter
@@ -30,6 +31,8 @@ from google.ads.googleads.v13.errors.types.feed_item_validation_error import (
     FeedItemValidationErrorEnum,
 )
 
+_M = TypeVar("_M")
+
 class FeedItem(proto.Message):
     resource_name: str
     feed: str
@@ -42,8 +45,8 @@ class FeedItem(proto.Message):
     status: FeedItemStatusEnum.FeedItemStatus
     policy_infos: MutableSequence[FeedItemPlaceholderPolicyInfo]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -70,8 +73,8 @@ class FeedItemAttributeValue(proto.Message):
     string_values: MutableSequence[str]
     double_values: MutableSequence[float]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         feed_attribute_id: int = ...,
@@ -99,8 +102,8 @@ class FeedItemPlaceholderPolicyInfo(proto.Message):
         FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason
     ]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         placeholder_type_enum: PlaceholderTypeEnum.PlaceholderType = ...,
@@ -122,8 +125,8 @@ class FeedItemValidationError(proto.Message):
     feed_attribute_ids: MutableSequence[int]
     extra_info: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         validation_error: FeedItemValidationErrorEnum.FeedItemValidationError = ...,

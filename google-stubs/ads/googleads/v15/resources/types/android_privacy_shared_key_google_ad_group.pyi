@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.android_privacy_interaction_type import (
@@ -8,6 +10,8 @@ from google.ads.googleads.v15.enums.types.android_privacy_interaction_type impor
 from google.ads.googleads.v15.enums.types.android_privacy_network_type import (
     AndroidPrivacyNetworkTypeEnum,
 )
+
+_M = TypeVar("_M")
 
 class AndroidPrivacySharedKeyGoogleAdGroup(proto.Message):
     resource_name: str
@@ -18,8 +22,8 @@ class AndroidPrivacySharedKeyGoogleAdGroup(proto.Message):
     ad_group_id: int
     shared_ad_group_key: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

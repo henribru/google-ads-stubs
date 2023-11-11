@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class HotelAssetSuggestionStatusEnum(proto.Message):
     class HotelAssetSuggestionStatus(proto.Enum):
@@ -10,8 +14,8 @@ class HotelAssetSuggestionStatusEnum(proto.Message):
         HOTEL_NOT_FOUND = 3
         INVALID_PLACE_ID = 4
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,15 +1,19 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.resources.types.product_link import ProductLink
+
+_M = TypeVar("_M")
 
 class CreateProductLinkRequest(proto.Message):
     customer_id: str
     product_link: ProductLink
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -19,8 +23,8 @@ class CreateProductLinkRequest(proto.Message):
 class CreateProductLinkResponse(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -31,8 +35,8 @@ class RemoveProductLinkRequest(proto.Message):
     resource_name: str
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -43,8 +47,8 @@ class RemoveProductLinkRequest(proto.Message):
 class RemoveProductLinkResponse(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

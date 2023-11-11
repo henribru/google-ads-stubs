@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AdErrorEnum(proto.Message):
     class AdError(proto.Enum):
@@ -159,8 +163,8 @@ class AdErrorEnum(proto.Message):
         MISMATCHED_ASPECT_RATIOS = 155
         DUPLICATE_IMAGE_ACROSS_CAROUSEL_CARDS = 156
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

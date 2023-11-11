@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class FeedItemErrorEnum(proto.Message):
     class FeedItemError(proto.Enum):
@@ -17,8 +21,8 @@ class FeedItemErrorEnum(proto.Message):
         SIZE_TOO_LARGE_FOR_MULTI_VALUE_ATTRIBUTE = 10
         LEGACY_FEED_TYPE_READ_ONLY = 11
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

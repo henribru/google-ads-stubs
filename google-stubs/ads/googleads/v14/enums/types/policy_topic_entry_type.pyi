@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class PolicyTopicEntryTypeEnum(proto.Message):
     class PolicyTopicEntryType(proto.Enum):
@@ -13,8 +17,8 @@ class PolicyTopicEntryTypeEnum(proto.Message):
         BROADENING = 6
         AREA_OF_INTEREST_ONLY = 7
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

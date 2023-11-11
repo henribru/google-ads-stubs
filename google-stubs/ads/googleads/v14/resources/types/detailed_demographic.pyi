@@ -1,11 +1,14 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.common.types.criterion_category_availability import (
     CriterionCategoryAvailability,
 )
+
+_M = TypeVar("_M")
 
 class DetailedDemographic(proto.Message):
     resource_name: str
@@ -15,8 +18,8 @@ class DetailedDemographic(proto.Message):
     launched_to_all: bool
     availabilities: MutableSequence[CriterionCategoryAvailability]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

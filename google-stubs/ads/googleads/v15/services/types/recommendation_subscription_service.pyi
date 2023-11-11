@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -12,6 +13,8 @@ from google.ads.googleads.v15.resources.types.recommendation_subscription import
     RecommendationSubscription,
 )
 
+_M = TypeVar("_M")
+
 class MutateRecommendationSubscriptionRequest(proto.Message):
     customer_id: str
     operations: MutableSequence[RecommendationSubscriptionOperation]
@@ -19,8 +22,8 @@ class MutateRecommendationSubscriptionRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -34,8 +37,8 @@ class MutateRecommendationSubscriptionResponse(proto.Message):
     results: MutableSequence[MutateRecommendationSubscriptionResult]
     partial_failure_error: Status
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[MutateRecommendationSubscriptionResult] = ...,
@@ -46,8 +49,8 @@ class MutateRecommendationSubscriptionResult(proto.Message):
     resource_name: str
     recommendation_subscription: RecommendationSubscription
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -59,8 +62,8 @@ class RecommendationSubscriptionOperation(proto.Message):
     create: RecommendationSubscription
     update: RecommendationSubscription
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,

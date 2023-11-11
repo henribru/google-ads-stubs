@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CampaignCriterionErrorEnum(proto.Message):
     class CampaignCriterionError(proto.Enum):
@@ -34,8 +38,8 @@ class CampaignCriterionErrorEnum(proto.Message):
         LOCAL_SERVICE_ID_NOT_FOUND_FOR_CATEGORY = 25
         CANNOT_ATTACH_BRAND_LIST_TO_NON_QUALIFIED_SEARCH_CAMPAIGN = 26
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

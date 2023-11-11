@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CampaignPrimaryStatusReasonEnum(proto.Message):
     class CampaignPrimaryStatusReason(proto.Enum):
@@ -42,8 +46,8 @@ class CampaignPrimaryStatusReasonEnum(proto.Message):
         HAS_ASSET_GROUPS_LIMITED_BY_POLICY = 35
         MOST_ASSET_GROUPS_UNDER_REVIEW = 36
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

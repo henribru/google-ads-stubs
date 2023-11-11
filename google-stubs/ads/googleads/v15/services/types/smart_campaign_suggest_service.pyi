@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.ad_type_infos import SmartCampaignAdInfo
@@ -14,12 +15,14 @@ from google.ads.googleads.v15.resources.types.keyword_theme_constant import (
     KeywordThemeConstant,
 )
 
+_M = TypeVar("_M")
+
 class SmartCampaignSuggestionInfo(proto.Message):
     class BusinessContext(proto.Message):
         business_name: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             business_name: str = ...
@@ -28,8 +31,8 @@ class SmartCampaignSuggestionInfo(proto.Message):
     class LocationList(proto.Message):
         locations: MutableSequence[LocationInfo]
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             locations: MutableSequence[LocationInfo] = ...
@@ -43,8 +46,8 @@ class SmartCampaignSuggestionInfo(proto.Message):
     location_list: SmartCampaignSuggestionInfo.LocationList
     proximity: ProximityInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         final_url: str = ...,
@@ -61,8 +64,8 @@ class SuggestKeywordThemesRequest(proto.Message):
     customer_id: str
     suggestion_info: SmartCampaignSuggestionInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -74,8 +77,8 @@ class SuggestKeywordThemesResponse(proto.Message):
         keyword_theme_constant: KeywordThemeConstant
         free_form_keyword_theme: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             keyword_theme_constant: KeywordThemeConstant = ...,
@@ -83,8 +86,8 @@ class SuggestKeywordThemesResponse(proto.Message):
         ) -> None: ...
     keyword_themes: MutableSequence[SuggestKeywordThemesResponse.KeywordTheme]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_themes: MutableSequence[SuggestKeywordThemesResponse.KeywordTheme] = ...
@@ -94,8 +97,8 @@ class SuggestSmartCampaignAdRequest(proto.Message):
     customer_id: str
     suggestion_info: SmartCampaignSuggestionInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -105,8 +108,8 @@ class SuggestSmartCampaignAdRequest(proto.Message):
 class SuggestSmartCampaignAdResponse(proto.Message):
     ad_info: SmartCampaignAdInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ad_info: SmartCampaignAdInfo = ...
@@ -117,8 +120,8 @@ class SuggestSmartCampaignBudgetOptionsRequest(proto.Message):
     campaign: str
     suggestion_info: SmartCampaignSuggestionInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -131,8 +134,8 @@ class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
         daily_amount_micros: int
         metrics: SuggestSmartCampaignBudgetOptionsResponse.Metrics
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             daily_amount_micros: int = ...,
@@ -143,8 +146,8 @@ class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
         min_daily_clicks: int
         max_daily_clicks: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             min_daily_clicks: int = ...,
@@ -154,8 +157,8 @@ class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
     recommended: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption
     high: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         low: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption = ...,

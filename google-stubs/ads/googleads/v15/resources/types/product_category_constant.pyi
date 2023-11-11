@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.product_category_level import (
@@ -10,14 +11,16 @@ from google.ads.googleads.v15.enums.types.product_category_state import (
     ProductCategoryStateEnum,
 )
 
+_M = TypeVar("_M")
+
 class ProductCategoryConstant(proto.Message):
     class ProductCategoryLocalization(proto.Message):
         region_code: str
         language_code: str
         value: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             region_code: str = ...,
@@ -31,8 +34,8 @@ class ProductCategoryConstant(proto.Message):
     state: ProductCategoryStateEnum.ProductCategoryState
     localizations: MutableSequence[ProductCategoryConstant.ProductCategoryLocalization]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

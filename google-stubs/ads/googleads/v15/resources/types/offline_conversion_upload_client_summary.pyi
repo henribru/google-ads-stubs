@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.offline_conversion_diagnostic_status_enum import (
@@ -32,12 +33,14 @@ from google.ads.googleads.v15.errors.types.string_length_error import (
     StringLengthErrorEnum,
 )
 
+_M = TypeVar("_M")
+
 class OfflineConversionAlert(proto.Message):
     error: OfflineConversionError
     error_percentage: float
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         error: OfflineConversionError = ...,
@@ -56,8 +59,8 @@ class OfflineConversionError(proto.Message):
     string_format_error: StringFormatErrorEnum.StringFormatError
     string_length_error: StringLengthErrorEnum.StringLengthError
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         collection_size_error: CollectionSizeErrorEnum.CollectionSizeError = ...,
@@ -78,8 +81,8 @@ class OfflineConversionSummary(proto.Message):
     job_id: int
     upload_date: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         successful_count: int = ...,
@@ -100,8 +103,8 @@ class OfflineConversionUploadClientSummary(proto.Message):
     job_summaries: MutableSequence[OfflineConversionSummary]
     alerts: MutableSequence[OfflineConversionAlert]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

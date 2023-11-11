@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class MutateErrorEnum(proto.Message):
     class MutateError(proto.Enum):
@@ -16,8 +20,8 @@ class MutateErrorEnum(proto.Message):
         OPERATION_DOES_NOT_SUPPORT_PARTIAL_FAILURE = 16
         RESOURCE_READ_ONLY = 13
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

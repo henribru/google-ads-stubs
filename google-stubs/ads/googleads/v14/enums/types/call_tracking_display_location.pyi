@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CallTrackingDisplayLocationEnum(proto.Message):
     class CallTrackingDisplayLocation(proto.Enum):
@@ -9,8 +13,8 @@ class CallTrackingDisplayLocationEnum(proto.Message):
         AD = 2
         LANDING_PAGE = 3
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

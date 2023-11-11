@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ConversionAdjustmentUploadErrorEnum(proto.Message):
     class ConversionAdjustmentUploadError(proto.Enum):
@@ -32,8 +36,8 @@ class ConversionAdjustmentUploadErrorEnum(proto.Message):
         NO_CONVERSION_ACTION_FOUND = 27
         INVALID_CONVERSION_ACTION_TYPE = 28
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

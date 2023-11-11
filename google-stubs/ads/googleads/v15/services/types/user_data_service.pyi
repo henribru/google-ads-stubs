@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.offline_user_data import (
@@ -8,13 +9,15 @@ from google.ads.googleads.v15.common.types.offline_user_data import (
     UserData,
 )
 
+_M = TypeVar("_M")
+
 class UploadUserDataRequest(proto.Message):
     customer_id: str
     operations: MutableSequence[UserDataOperation]
     customer_match_user_list_metadata: CustomerMatchUserListMetadata
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -26,8 +29,8 @@ class UploadUserDataResponse(proto.Message):
     upload_date_time: str
     received_operations_count: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         upload_date_time: str = ...,
@@ -38,8 +41,8 @@ class UserDataOperation(proto.Message):
     create: UserData
     remove: UserData
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: UserData = ...,

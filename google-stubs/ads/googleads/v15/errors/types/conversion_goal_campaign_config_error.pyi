@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ConversionGoalCampaignConfigErrorEnum(proto.Message):
     class ConversionGoalCampaignConfigError(proto.Enum):
@@ -13,8 +17,8 @@ class ConversionGoalCampaignConfigErrorEnum(proto.Message):
         STORE_SALE_STORE_VISIT_CANNOT_BE_BOTH_INCLUDED = 6
         PERFORMANCE_MAX_CAMPAIGN_CANNOT_USE_CUSTOM_GOAL_WITH_STORE_SALES = 7
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

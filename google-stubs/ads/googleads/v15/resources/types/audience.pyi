@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.audiences import (
@@ -9,6 +10,8 @@ from google.ads.googleads.v15.common.types.audiences import (
 )
 from google.ads.googleads.v15.enums.types.audience_scope import AudienceScopeEnum
 from google.ads.googleads.v15.enums.types.audience_status import AudienceStatusEnum
+
+_M = TypeVar("_M")
 
 class Audience(proto.Message):
     resource_name: str
@@ -21,8 +24,8 @@ class Audience(proto.Message):
     scope: AudienceScopeEnum.AudienceScope
     asset_group: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

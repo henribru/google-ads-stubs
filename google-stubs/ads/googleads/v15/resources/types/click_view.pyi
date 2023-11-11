@@ -1,9 +1,13 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.click_location import ClickLocation
 from google.ads.googleads.v15.common.types.criteria import KeywordInfo
+
+_M = TypeVar("_M")
 
 class ClickView(proto.Message):
     resource_name: str
@@ -17,8 +21,8 @@ class ClickView(proto.Message):
     keyword: str
     keyword_info: KeywordInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

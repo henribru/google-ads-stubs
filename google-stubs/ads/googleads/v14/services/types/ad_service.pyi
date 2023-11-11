@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -11,13 +12,15 @@ from google.ads.googleads.v14.enums.types.response_content_type import (
 )
 from google.ads.googleads.v14.resources.types.ad import Ad
 
+_M = TypeVar("_M")
+
 class AdOperation(proto.Message):
     update_mask: FieldMask
     policy_validation_parameter: PolicyValidationParameter
     update: Ad
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -28,8 +31,8 @@ class AdOperation(proto.Message):
 class GetAdRequest(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -39,8 +42,8 @@ class MutateAdResult(proto.Message):
     resource_name: str
     ad: Ad
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -54,8 +57,8 @@ class MutateAdsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -69,8 +72,8 @@ class MutateAdsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateAdResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,

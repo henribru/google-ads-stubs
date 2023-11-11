@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class IncomeRangeTypeEnum(proto.Message):
     class IncomeRangeType(proto.Enum):
@@ -14,8 +18,8 @@ class IncomeRangeTypeEnum(proto.Message):
         INCOME_RANGE_90_UP = 510006
         INCOME_RANGE_UNDETERMINED = 510000
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

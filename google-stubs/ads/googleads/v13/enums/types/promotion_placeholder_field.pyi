@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class PromotionPlaceholderFieldEnum(proto.Message):
     class PromotionPlaceholderField(proto.Enum):
@@ -21,8 +25,8 @@ class PromotionPlaceholderFieldEnum(proto.Message):
         LANGUAGE = 14
         FINAL_URL_SUFFIX = 15
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

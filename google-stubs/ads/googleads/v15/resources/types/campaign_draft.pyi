@@ -1,10 +1,14 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.campaign_draft_status import (
     CampaignDraftStatusEnum,
 )
+
+_M = TypeVar("_M")
 
 class CampaignDraft(proto.Message):
     resource_name: str
@@ -16,8 +20,8 @@ class CampaignDraft(proto.Message):
     has_experiment_running: bool
     long_running_operation: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

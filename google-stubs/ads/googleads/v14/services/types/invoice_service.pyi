@@ -1,10 +1,13 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.month_of_year import MonthOfYearEnum
 from google.ads.googleads.v14.resources.types.invoice import Invoice
+
+_M = TypeVar("_M")
 
 class ListInvoicesRequest(proto.Message):
     customer_id: str
@@ -12,8 +15,8 @@ class ListInvoicesRequest(proto.Message):
     issue_year: str
     issue_month: MonthOfYearEnum.MonthOfYear
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -25,8 +28,8 @@ class ListInvoicesRequest(proto.Message):
 class ListInvoicesResponse(proto.Message):
     invoices: MutableSequence[Invoice]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         invoices: MutableSequence[Invoice] = ...

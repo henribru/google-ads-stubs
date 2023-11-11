@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.consent import Consent
@@ -8,12 +9,14 @@ from google.ads.googleads.v15.enums.types.user_identifier_source import (
     UserIdentifierSourceEnum,
 )
 
+_M = TypeVar("_M")
+
 class CustomerMatchUserListMetadata(proto.Message):
     user_list: str
     consent: Consent
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_list: str = ...,
@@ -25,8 +28,8 @@ class EventAttribute(proto.Message):
     event_date_time: str
     item_attribute: MutableSequence[EventItemAttribute]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         event: str = ...,
@@ -37,8 +40,8 @@ class EventAttribute(proto.Message):
 class EventItemAttribute(proto.Message):
     item_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         item_id: str = ...
@@ -51,8 +54,8 @@ class ItemAttribute(proto.Message):
     language_code: str
     quantity: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         item_id: str = ...,
@@ -71,8 +74,8 @@ class OfflineUserAddressInfo(proto.Message):
     postal_code: str
     hashed_street_address: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         hashed_first_name: str = ...,
@@ -87,8 +90,8 @@ class OfflineUserAddressInfo(proto.Message):
 class ShoppingLoyalty(proto.Message):
     loyalty_tier: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         loyalty_tier: str = ...
@@ -97,8 +100,8 @@ class ShoppingLoyalty(proto.Message):
 class StoreAttribute(proto.Message):
     store_code: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         store_code: str = ...
@@ -110,8 +113,8 @@ class StoreSalesMetadata(proto.Message):
     custom_key: str
     third_party_metadata: StoreSalesThirdPartyMetadata
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         loyalty_fraction: float = ...,
@@ -128,8 +131,8 @@ class StoreSalesThirdPartyMetadata(proto.Message):
     bridge_map_version_id: str
     partner_id: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         advertiser_upload_date_time: str = ...,
@@ -150,8 +153,8 @@ class TransactionAttribute(proto.Message):
     custom_value: str
     item_attribute: ItemAttribute
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         transaction_date_time: str = ...,
@@ -176,8 +179,8 @@ class UserAttribute(proto.Message):
     first_purchase_date_time: str
     event_attribute: MutableSequence[EventAttribute]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         lifetime_value_micros: int = ...,
@@ -198,8 +201,8 @@ class UserData(proto.Message):
     user_attribute: UserAttribute
     consent: Consent
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_identifiers: MutableSequence[UserIdentifier] = ...,
@@ -216,8 +219,8 @@ class UserIdentifier(proto.Message):
     third_party_user_id: str
     address_info: OfflineUserAddressInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_identifier_source: UserIdentifierSourceEnum.UserIdentifierSource = ...,

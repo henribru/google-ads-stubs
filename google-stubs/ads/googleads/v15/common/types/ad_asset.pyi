@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.asset_policy import AdAssetPolicySummary
@@ -10,11 +12,13 @@ from google.ads.googleads.v15.enums.types.served_asset_field_type import (
     ServedAssetFieldTypeEnum,
 )
 
+_M = TypeVar("_M")
+
 class AdCallToActionAsset(proto.Message):
     asset: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         asset: str = ...
@@ -23,8 +27,8 @@ class AdCallToActionAsset(proto.Message):
 class AdDiscoveryCarouselCardAsset(proto.Message):
     asset: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         asset: str = ...
@@ -33,8 +37,8 @@ class AdDiscoveryCarouselCardAsset(proto.Message):
 class AdImageAsset(proto.Message):
     asset: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         asset: str = ...
@@ -43,8 +47,8 @@ class AdImageAsset(proto.Message):
 class AdMediaBundleAsset(proto.Message):
     asset: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         asset: str = ...
@@ -56,8 +60,8 @@ class AdTextAsset(proto.Message):
     asset_performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel
     policy_summary_info: AdAssetPolicySummary
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         text: str = ...,
@@ -69,8 +73,8 @@ class AdTextAsset(proto.Message):
 class AdVideoAsset(proto.Message):
     asset: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         asset: str = ...

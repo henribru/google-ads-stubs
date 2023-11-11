@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class SettingErrorEnum(proto.Message):
     class SettingError(proto.Enum):
@@ -23,8 +27,8 @@ class SettingErrorEnum(proto.Message):
         SETTING_VALUE_NOT_COMPATIBLE_WITH_CAMPAIGN = 20
         BID_ONLY_IS_NOT_ALLOWED_TO_BE_MODIFIED_WITH_CUSTOMER_MATCH_TARGETING = 21
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

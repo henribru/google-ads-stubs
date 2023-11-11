@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.conversion_value_rule_status import (
@@ -16,13 +17,15 @@ from google.ads.googleads.v13.enums.types.value_rule_operation import (
     ValueRuleOperationEnum,
 )
 
+_M = TypeVar("_M")
+
 class ConversionValueRule(proto.Message):
     class ValueRuleAction(proto.Message):
         operation: ValueRuleOperationEnum.ValueRuleOperation
         value: float
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             operation: ValueRuleOperationEnum.ValueRuleOperation = ...,
@@ -33,8 +36,8 @@ class ConversionValueRule(proto.Message):
         user_lists: MutableSequence[str]
         user_interests: MutableSequence[str]
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             user_lists: MutableSequence[str] = ...,
@@ -44,8 +47,8 @@ class ConversionValueRule(proto.Message):
     class ValueRuleDeviceCondition(proto.Message):
         device_types: MutableSequence[ValueRuleDeviceTypeEnum.ValueRuleDeviceType]
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             device_types: MutableSequence[
@@ -59,8 +62,8 @@ class ConversionValueRule(proto.Message):
         geo_target_constants: MutableSequence[str]
         geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             excluded_geo_target_constants: MutableSequence[str] = ...,
@@ -77,8 +80,8 @@ class ConversionValueRule(proto.Message):
     owner_customer: str
     status: ConversionValueRuleStatusEnum.ConversionValueRuleStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

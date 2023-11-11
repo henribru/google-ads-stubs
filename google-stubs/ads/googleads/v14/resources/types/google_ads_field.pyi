@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.google_ads_field_category import (
@@ -9,6 +10,8 @@ from google.ads.googleads.v14.enums.types.google_ads_field_category import (
 from google.ads.googleads.v14.enums.types.google_ads_field_data_type import (
     GoogleAdsFieldDataTypeEnum,
 )
+
+_M = TypeVar("_M")
 
 class GoogleAdsField(proto.Message):
     resource_name: str
@@ -26,8 +29,8 @@ class GoogleAdsField(proto.Message):
     type_url: str
     is_repeated: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

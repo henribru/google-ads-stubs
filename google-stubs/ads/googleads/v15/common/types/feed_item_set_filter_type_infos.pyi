@@ -1,18 +1,21 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.feed_item_set_string_filter_type import (
     FeedItemSetStringFilterTypeEnum,
 )
 
+_M = TypeVar("_M")
+
 class BusinessNameFilter(proto.Message):
     business_name: str
     filter_type: FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         business_name: str = ...,
@@ -22,8 +25,8 @@ class BusinessNameFilter(proto.Message):
 class DynamicAffiliateLocationSetFilter(proto.Message):
     chain_ids: MutableSequence[int]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         chain_ids: MutableSequence[int] = ...
@@ -33,8 +36,8 @@ class DynamicLocationSetFilter(proto.Message):
     labels: MutableSequence[str]
     business_name_filter: BusinessNameFilter
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         labels: MutableSequence[str] = ...,

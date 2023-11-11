@@ -1,18 +1,22 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
 
 from google.ads.googleads.v15.resources.types.account_link import AccountLink
 
+_M = TypeVar("_M")
+
 class AccountLinkOperation(proto.Message):
     update_mask: FieldMask
     update: AccountLink
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -24,8 +28,8 @@ class CreateAccountLinkRequest(proto.Message):
     customer_id: str
     account_link: AccountLink
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -35,8 +39,8 @@ class CreateAccountLinkRequest(proto.Message):
 class CreateAccountLinkResponse(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -48,8 +52,8 @@ class MutateAccountLinkRequest(proto.Message):
     partial_failure: bool
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -62,8 +66,8 @@ class MutateAccountLinkResponse(proto.Message):
     result: MutateAccountLinkResult
     partial_failure_error: Status
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         result: MutateAccountLinkResult = ...,
@@ -73,8 +77,8 @@ class MutateAccountLinkResponse(proto.Message):
 class MutateAccountLinkResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

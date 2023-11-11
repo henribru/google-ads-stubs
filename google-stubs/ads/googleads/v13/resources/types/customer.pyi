@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.conversion_tracking_status_enum import (
@@ -11,13 +12,15 @@ from google.ads.googleads.v13.enums.types.customer_pay_per_conversion_eligibilit
 )
 from google.ads.googleads.v13.enums.types.customer_status import CustomerStatusEnum
 
+_M = TypeVar("_M")
+
 class CallReportingSetting(proto.Message):
     call_reporting_enabled: bool
     call_conversion_reporting_enabled: bool
     call_conversion_action: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         call_reporting_enabled: bool = ...,
@@ -33,8 +36,8 @@ class ConversionTrackingSetting(proto.Message):
     enhanced_conversions_for_leads_enabled: bool
     google_ads_conversion_customer: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         conversion_tracking_id: int = ...,
@@ -71,8 +74,8 @@ class Customer(proto.Message):
     location_asset_auto_migration_done_date_time: str
     image_asset_auto_migration_done_date_time: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -104,8 +107,8 @@ class Customer(proto.Message):
 class RemarketingSetting(proto.Message):
     google_global_site_tag: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         google_global_site_tag: str = ...

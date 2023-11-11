@@ -1,11 +1,14 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.dates import DateRange
 from google.ads.googleads.v15.enums.types.invoice_type import InvoiceTypeEnum
 from google.ads.googleads.v15.enums.types.month_of_year import MonthOfYearEnum
+
+_M = TypeVar("_M")
 
 class Invoice(proto.Message):
     class AccountBudgetSummary(proto.Message):
@@ -24,8 +27,8 @@ class Invoice(proto.Message):
         invalid_activity_amount_micros: int
         invalid_activity_summaries: MutableSequence[Invoice.InvalidActivitySummary]
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             customer: str = ...,
@@ -67,8 +70,8 @@ class Invoice(proto.Message):
         tax_amount_micros: int
         total_amount_micros: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             customer: str = ...,
@@ -100,8 +103,8 @@ class Invoice(proto.Message):
         original_purchase_order_number: str
         amount_micros: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             original_month_of_service: MonthOfYearEnum.MonthOfYear = ...,
@@ -139,8 +142,8 @@ class Invoice(proto.Message):
     account_budget_summaries: MutableSequence[Invoice.AccountBudgetSummary]
     account_summaries: MutableSequence[Invoice.AccountSummary]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
