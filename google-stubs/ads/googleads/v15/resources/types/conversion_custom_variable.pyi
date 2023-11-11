@@ -1,10 +1,14 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.conversion_custom_variable_status import (
     ConversionCustomVariableStatusEnum,
 )
+
+_M = TypeVar("_M")
 
 class ConversionCustomVariable(proto.Message):
     resource_name: str
@@ -14,8 +18,8 @@ class ConversionCustomVariable(proto.Message):
     status: ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus
     owner_customer: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

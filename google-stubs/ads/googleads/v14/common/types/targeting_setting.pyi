@@ -1,18 +1,21 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.targeting_dimension import (
     TargetingDimensionEnum,
 )
 
+_M = TypeVar("_M")
+
 class TargetRestriction(proto.Message):
     targeting_dimension: TargetingDimensionEnum.TargetingDimension
     bid_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         targeting_dimension: TargetingDimensionEnum.TargetingDimension = ...,
@@ -28,8 +31,8 @@ class TargetRestrictionOperation(proto.Message):
     operator: TargetRestrictionOperation.Operator
     value: TargetRestriction
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         operator: TargetRestrictionOperation.Operator = ...,
@@ -40,8 +43,8 @@ class TargetingSetting(proto.Message):
     target_restrictions: MutableSequence[TargetRestriction]
     target_restriction_operations: MutableSequence[TargetRestrictionOperation]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_restrictions: MutableSequence[TargetRestriction] = ...,

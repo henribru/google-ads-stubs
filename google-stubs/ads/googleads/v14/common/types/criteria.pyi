@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.age_range_type import AgeRangeTypeEnum
@@ -47,11 +48,13 @@ from google.ads.googleads.v14.enums.types.webpage_condition_operator import (
     WebpageConditionOperatorEnum,
 )
 
+_M = TypeVar("_M")
+
 class ActivityCountryInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -60,8 +63,8 @@ class ActivityCountryInfo(proto.Message):
 class ActivityIdInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -70,8 +73,8 @@ class ActivityIdInfo(proto.Message):
 class ActivityRatingInfo(proto.Message):
     value: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: int = ...,
@@ -84,8 +87,8 @@ class AdScheduleInfo(proto.Message):
     end_hour: int
     day_of_week: DayOfWeekEnum.DayOfWeek
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         start_minute: MinuteOfHourEnum.MinuteOfHour = ...,
@@ -104,8 +107,8 @@ class AddressInfo(proto.Message):
     street_address2: str
     city_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         postal_code: str = ...,
@@ -120,8 +123,8 @@ class AddressInfo(proto.Message):
 class AgeRangeInfo(proto.Message):
     type_: AgeRangeTypeEnum.AgeRangeType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: AgeRangeTypeEnum.AgeRangeType = ...,
@@ -130,8 +133,8 @@ class AgeRangeInfo(proto.Message):
 class AppPaymentModelInfo(proto.Message):
     type_: AppPaymentModelTypeEnum.AppPaymentModelType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: AppPaymentModelTypeEnum.AppPaymentModelType = ...,
@@ -140,8 +143,8 @@ class AppPaymentModelInfo(proto.Message):
 class AudienceInfo(proto.Message):
     audience: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         audience: str = ...,
@@ -150,8 +153,8 @@ class AudienceInfo(proto.Message):
 class CarrierInfo(proto.Message):
     carrier_constant: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         carrier_constant: str = ...,
@@ -160,8 +163,8 @@ class CarrierInfo(proto.Message):
 class CombinedAudienceInfo(proto.Message):
     combined_audience: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         combined_audience: str = ...,
@@ -170,8 +173,8 @@ class CombinedAudienceInfo(proto.Message):
 class ContentLabelInfo(proto.Message):
     type_: ContentLabelTypeEnum.ContentLabelType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: ContentLabelTypeEnum.ContentLabelType = ...,
@@ -180,8 +183,8 @@ class ContentLabelInfo(proto.Message):
 class CustomAffinityInfo(proto.Message):
     custom_affinity: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         custom_affinity: str = ...,
@@ -190,8 +193,8 @@ class CustomAffinityInfo(proto.Message):
 class CustomAudienceInfo(proto.Message):
     custom_audience: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         custom_audience: str = ...,
@@ -200,8 +203,8 @@ class CustomAudienceInfo(proto.Message):
 class CustomIntentInfo(proto.Message):
     custom_intent: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         custom_intent: str = ...,
@@ -210,8 +213,8 @@ class CustomIntentInfo(proto.Message):
 class DeviceInfo(proto.Message):
     type_: DeviceEnum.Device
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: DeviceEnum.Device = ...,
@@ -220,8 +223,8 @@ class DeviceInfo(proto.Message):
 class GenderInfo(proto.Message):
     type_: GenderTypeEnum.GenderType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: GenderTypeEnum.GenderType = ...,
@@ -231,8 +234,8 @@ class GeoPointInfo(proto.Message):
     longitude_in_micro_degrees: int
     latitude_in_micro_degrees: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         longitude_in_micro_degrees: int = ...,
@@ -243,8 +246,8 @@ class HotelAdvanceBookingWindowInfo(proto.Message):
     min_days: int
     max_days: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         min_days: int = ...,
@@ -255,8 +258,8 @@ class HotelCheckInDateRangeInfo(proto.Message):
     start_date: str
     end_date: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         start_date: str = ...,
@@ -266,8 +269,8 @@ class HotelCheckInDateRangeInfo(proto.Message):
 class HotelCheckInDayInfo(proto.Message):
     day_of_week: DayOfWeekEnum.DayOfWeek
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         day_of_week: DayOfWeekEnum.DayOfWeek = ...,
@@ -276,8 +279,8 @@ class HotelCheckInDayInfo(proto.Message):
 class HotelCityInfo(proto.Message):
     city_criterion: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         city_criterion: str = ...,
@@ -286,8 +289,8 @@ class HotelCityInfo(proto.Message):
 class HotelClassInfo(proto.Message):
     value: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: int = ...,
@@ -296,8 +299,8 @@ class HotelClassInfo(proto.Message):
 class HotelCountryRegionInfo(proto.Message):
     country_region_criterion: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         country_region_criterion: str = ...,
@@ -306,8 +309,8 @@ class HotelCountryRegionInfo(proto.Message):
 class HotelDateSelectionTypeInfo(proto.Message):
     type_: HotelDateSelectionTypeEnum.HotelDateSelectionType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: HotelDateSelectionTypeEnum.HotelDateSelectionType = ...,
@@ -316,8 +319,8 @@ class HotelDateSelectionTypeInfo(proto.Message):
 class HotelIdInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -327,8 +330,8 @@ class HotelLengthOfStayInfo(proto.Message):
     min_nights: int
     max_nights: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         min_nights: int = ...,
@@ -338,8 +341,8 @@ class HotelLengthOfStayInfo(proto.Message):
 class HotelStateInfo(proto.Message):
     state_criterion: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         state_criterion: str = ...,
@@ -348,8 +351,8 @@ class HotelStateInfo(proto.Message):
 class IncomeRangeInfo(proto.Message):
     type_: IncomeRangeTypeEnum.IncomeRangeType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: IncomeRangeTypeEnum.IncomeRangeType = ...,
@@ -358,8 +361,8 @@ class IncomeRangeInfo(proto.Message):
 class InteractionTypeInfo(proto.Message):
     type_: InteractionTypeEnum.InteractionType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: InteractionTypeEnum.InteractionType = ...,
@@ -368,8 +371,8 @@ class InteractionTypeInfo(proto.Message):
 class IpBlockInfo(proto.Message):
     ip_address: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ip_address: str = ...,
@@ -379,8 +382,8 @@ class KeywordInfo(proto.Message):
     text: str
     match_type: KeywordMatchTypeEnum.KeywordMatchType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         text: str = ...,
@@ -391,8 +394,8 @@ class KeywordThemeInfo(proto.Message):
     keyword_theme_constant: str
     free_form_keyword_theme: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_theme_constant: str = ...,
@@ -402,8 +405,8 @@ class KeywordThemeInfo(proto.Message):
 class LanguageInfo(proto.Message):
     language_constant: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         language_constant: str = ...,
@@ -432,8 +435,8 @@ class ListingDimensionInfo(proto.Message):
     activity_country: ActivityCountryInfo
     unknown_listing_dimension: UnknownListingDimensionInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         hotel_id: HotelIdInfo = ...,
@@ -462,8 +465,8 @@ class ListingDimensionInfo(proto.Message):
 class ListingDimensionPath(proto.Message):
     dimensions: MutableSequence[ListingDimensionInfo]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         dimensions: MutableSequence[ListingDimensionInfo] = ...,
@@ -475,8 +478,8 @@ class ListingGroupInfo(proto.Message):
     parent_ad_group_criterion: str
     path: ListingDimensionPath
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: ListingGroupTypeEnum.ListingGroupType = ...,
@@ -488,8 +491,8 @@ class ListingGroupInfo(proto.Message):
 class ListingScopeInfo(proto.Message):
     dimensions: MutableSequence[ListingDimensionInfo]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         dimensions: MutableSequence[ListingDimensionInfo] = ...,
@@ -498,8 +501,8 @@ class ListingScopeInfo(proto.Message):
 class LocalServiceIdInfo(proto.Message):
     service_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         service_id: str = ...,
@@ -514,8 +517,8 @@ class LocationGroupInfo(proto.Message):
     enable_customer_level_location_asset_set: bool
     location_group_asset_sets: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         feed: str = ...,
@@ -530,8 +533,8 @@ class LocationGroupInfo(proto.Message):
 class LocationInfo(proto.Message):
     geo_target_constant: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         geo_target_constant: str = ...,
@@ -540,8 +543,8 @@ class LocationInfo(proto.Message):
 class MobileAppCategoryInfo(proto.Message):
     mobile_app_category_constant: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         mobile_app_category_constant: str = ...,
@@ -551,8 +554,8 @@ class MobileApplicationInfo(proto.Message):
     app_id: str
     name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         app_id: str = ...,
@@ -562,8 +565,8 @@ class MobileApplicationInfo(proto.Message):
 class MobileDeviceInfo(proto.Message):
     mobile_device_constant: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         mobile_device_constant: str = ...,
@@ -572,8 +575,8 @@ class MobileDeviceInfo(proto.Message):
 class NegativeKeywordListInfo(proto.Message):
     shared_set: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         shared_set: str = ...,
@@ -582,8 +585,8 @@ class NegativeKeywordListInfo(proto.Message):
 class OperatingSystemVersionInfo(proto.Message):
     operating_system_version_constant: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         operating_system_version_constant: str = ...,
@@ -592,8 +595,8 @@ class OperatingSystemVersionInfo(proto.Message):
 class ParentalStatusInfo(proto.Message):
     type_: ParentalStatusTypeEnum.ParentalStatusType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: ParentalStatusTypeEnum.ParentalStatusType = ...,
@@ -602,8 +605,8 @@ class ParentalStatusInfo(proto.Message):
 class PlacementInfo(proto.Message):
     url: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         url: str = ...,
@@ -613,8 +616,8 @@ class ProductBiddingCategoryInfo(proto.Message):
     id: int
     level: ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         id: int = ...,
@@ -624,8 +627,8 @@ class ProductBiddingCategoryInfo(proto.Message):
 class ProductBrandInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -634,8 +637,8 @@ class ProductBrandInfo(proto.Message):
 class ProductChannelExclusivityInfo(proto.Message):
     channel_exclusivity: ProductChannelExclusivityEnum.ProductChannelExclusivity
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         channel_exclusivity: ProductChannelExclusivityEnum.ProductChannelExclusivity = ...,
@@ -644,8 +647,8 @@ class ProductChannelExclusivityInfo(proto.Message):
 class ProductChannelInfo(proto.Message):
     channel: ProductChannelEnum.ProductChannel
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         channel: ProductChannelEnum.ProductChannel = ...,
@@ -654,8 +657,8 @@ class ProductChannelInfo(proto.Message):
 class ProductConditionInfo(proto.Message):
     condition: ProductConditionEnum.ProductCondition
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         condition: ProductConditionEnum.ProductCondition = ...,
@@ -665,8 +668,8 @@ class ProductCustomAttributeInfo(proto.Message):
     value: str
     index: ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -676,8 +679,8 @@ class ProductCustomAttributeInfo(proto.Message):
 class ProductGroupingInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -686,8 +689,8 @@ class ProductGroupingInfo(proto.Message):
 class ProductItemIdInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -696,8 +699,8 @@ class ProductItemIdInfo(proto.Message):
 class ProductLabelsInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -706,8 +709,8 @@ class ProductLabelsInfo(proto.Message):
 class ProductLegacyConditionInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -716,8 +719,8 @@ class ProductLegacyConditionInfo(proto.Message):
 class ProductTypeFullInfo(proto.Message):
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -727,8 +730,8 @@ class ProductTypeInfo(proto.Message):
     value: str
     level: ProductTypeLevelEnum.ProductTypeLevel
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         value: str = ...,
@@ -741,8 +744,8 @@ class ProximityInfo(proto.Message):
     radius_units: ProximityRadiusUnitsEnum.ProximityRadiusUnits
     address: AddressInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         geo_point: GeoPointInfo = ...,
@@ -755,8 +758,8 @@ class TopicInfo(proto.Message):
     topic_constant: str
     path: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         topic_constant: str = ...,
@@ -765,8 +768,8 @@ class TopicInfo(proto.Message):
 
 class UnknownListingDimensionInfo(proto.Message):
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...
@@ -775,8 +778,8 @@ class UnknownListingDimensionInfo(proto.Message):
 class UserInterestInfo(proto.Message):
     user_interest_category: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_interest_category: str = ...,
@@ -785,8 +788,8 @@ class UserInterestInfo(proto.Message):
 class UserListInfo(proto.Message):
     user_list: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_list: str = ...,
@@ -797,8 +800,8 @@ class WebpageConditionInfo(proto.Message):
     operator: WebpageConditionOperatorEnum.WebpageConditionOperator
     argument: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         operand: WebpageConditionOperandEnum.WebpageConditionOperand = ...,
@@ -812,8 +815,8 @@ class WebpageInfo(proto.Message):
     coverage_percentage: float
     sample: WebpageSampleInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         criterion_name: str = ...,
@@ -825,8 +828,8 @@ class WebpageInfo(proto.Message):
 class WebpageSampleInfo(proto.Message):
     sample_urls: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         sample_urls: MutableSequence[str] = ...,
@@ -835,8 +838,8 @@ class WebpageSampleInfo(proto.Message):
 class YouTubeChannelInfo(proto.Message):
     channel_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         channel_id: str = ...,
@@ -845,8 +848,8 @@ class YouTubeChannelInfo(proto.Message):
 class YouTubeVideoInfo(proto.Message):
     video_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         video_id: str = ...,

@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.tracking_code_page_format import (
@@ -7,14 +9,16 @@ from google.ads.googleads.v13.enums.types.tracking_code_page_format import (
 )
 from google.ads.googleads.v13.enums.types.tracking_code_type import TrackingCodeTypeEnum
 
+_M = TypeVar("_M")
+
 class TagSnippet(proto.Message):
     type_: TrackingCodeTypeEnum.TrackingCodeType
     page_format: TrackingCodePageFormatEnum.TrackingCodePageFormat
     global_site_tag: str
     event_snippet: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         type_: TrackingCodeTypeEnum.TrackingCodeType = ...,

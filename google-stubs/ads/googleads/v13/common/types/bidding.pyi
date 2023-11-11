@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.target_frequency_time_unit import (
@@ -9,11 +11,13 @@ from google.ads.googleads.v13.enums.types.target_impression_share_location impor
     TargetImpressionShareLocationEnum,
 )
 
+_M = TypeVar("_M")
+
 class Commission(proto.Message):
     commission_rate_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         commission_rate_micros: int = ...,
@@ -21,8 +25,8 @@ class Commission(proto.Message):
 
 class EnhancedCpc(proto.Message):
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...
@@ -30,8 +34,8 @@ class EnhancedCpc(proto.Message):
 
 class ManualCpa(proto.Message):
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...
@@ -40,8 +44,8 @@ class ManualCpa(proto.Message):
 class ManualCpc(proto.Message):
     enhanced_cpc_enabled: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         enhanced_cpc_enabled: bool = ...,
@@ -49,8 +53,8 @@ class ManualCpc(proto.Message):
 
 class ManualCpm(proto.Message):
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...
@@ -58,8 +62,8 @@ class ManualCpm(proto.Message):
 
 class ManualCpv(proto.Message):
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...
@@ -70,8 +74,8 @@ class MaximizeConversionValue(proto.Message):
     cpc_bid_ceiling_micros: int
     cpc_bid_floor_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_roas: float = ...,
@@ -84,8 +88,8 @@ class MaximizeConversions(proto.Message):
     cpc_bid_floor_micros: int
     target_cpa_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         cpc_bid_ceiling_micros: int = ...,
@@ -97,8 +101,8 @@ class PercentCpc(proto.Message):
     cpc_bid_ceiling_micros: int
     enhanced_cpc_enabled: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         cpc_bid_ceiling_micros: int = ...,
@@ -110,8 +114,8 @@ class TargetCpa(proto.Message):
     cpc_bid_ceiling_micros: int
     cpc_bid_floor_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_cpa_micros: int = ...,
@@ -122,8 +126,8 @@ class TargetCpa(proto.Message):
 class TargetCpm(proto.Message):
     target_frequency_goal: TargetCpmTargetFrequencyGoal
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_frequency_goal: TargetCpmTargetFrequencyGoal = ...,
@@ -133,8 +137,8 @@ class TargetCpmTargetFrequencyGoal(proto.Message):
     target_count: int
     time_unit: TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_count: int = ...,
@@ -146,8 +150,8 @@ class TargetImpressionShare(proto.Message):
     location_fraction_micros: int
     cpc_bid_ceiling_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation = ...,
@@ -160,8 +164,8 @@ class TargetRoas(proto.Message):
     cpc_bid_ceiling_micros: int
     cpc_bid_floor_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_roas: float = ...,
@@ -173,8 +177,8 @@ class TargetSpend(proto.Message):
     target_spend_micros: int
     cpc_bid_ceiling_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_spend_micros: int = ...,

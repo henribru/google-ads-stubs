@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.common.types.criteria import (
@@ -11,6 +13,8 @@ from google.ads.googleads.v14.common.types.criteria import (
     YouTubeVideoInfo,
 )
 from google.ads.googleads.v14.enums.types.criterion_type import CriterionTypeEnum
+
+_M = TypeVar("_M")
 
 class SharedCriterion(proto.Message):
     resource_name: str
@@ -24,8 +28,8 @@ class SharedCriterion(proto.Message):
     mobile_app_category: MobileAppCategoryInfo
     mobile_application: MobileApplicationInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

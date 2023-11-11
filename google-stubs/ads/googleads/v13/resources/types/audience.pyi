@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.audiences import (
@@ -8,6 +9,8 @@ from google.ads.googleads.v13.common.types.audiences import (
     AudienceExclusionDimension,
 )
 from google.ads.googleads.v13.enums.types.audience_status import AudienceStatusEnum
+
+_M = TypeVar("_M")
 
 class Audience(proto.Message):
     resource_name: str
@@ -18,8 +21,8 @@ class Audience(proto.Message):
     dimensions: MutableSequence[AudienceDimension]
     exclusion_dimension: AudienceExclusionDimension
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AssetSetErrorEnum(proto.Message):
     class AssetSetError(proto.Enum):
@@ -18,8 +22,8 @@ class AssetSetErrorEnum(proto.Message):
         OAUTH_INFO_MISSING = 12
         CANNOT_DELETE_AS_ENABLED_LINKAGES_EXIST = 10
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

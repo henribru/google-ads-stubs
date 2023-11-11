@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.interaction_event_type import (
@@ -9,6 +10,8 @@ from google.ads.googleads.v15.enums.types.interaction_event_type import (
 from google.ads.googleads.v15.enums.types.quality_score_bucket import (
     QualityScoreBucketEnum,
 )
+
+_M = TypeVar("_M")
 
 class Metrics(proto.Message):
     absolute_top_impression_percentage: float
@@ -188,8 +191,8 @@ class Metrics(proto.Message):
     unique_users: int
     average_impression_frequency_per_user: float
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         absolute_top_impression_percentage: float = ...,
@@ -374,8 +377,8 @@ class SearchVolumeRange(proto.Message):
     min_: int
     max_: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         min_: int = ...,

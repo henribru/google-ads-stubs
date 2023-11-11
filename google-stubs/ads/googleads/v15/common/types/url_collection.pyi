@@ -1,7 +1,10 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class UrlCollection(proto.Message):
     url_collection_id: str
@@ -9,8 +12,8 @@ class UrlCollection(proto.Message):
     final_mobile_urls: MutableSequence[str]
     tracking_url_template: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         url_collection_id: str = ...,

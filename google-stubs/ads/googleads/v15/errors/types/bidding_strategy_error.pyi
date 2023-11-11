@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class BiddingStrategyErrorEnum(proto.Message):
     class BiddingStrategyError(proto.Enum):
@@ -12,8 +16,8 @@ class BiddingStrategyErrorEnum(proto.Message):
         BIDDING_STRATEGY_NOT_SUPPORTED = 5
         INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE = 6
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

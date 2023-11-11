@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ServedAssetFieldTypeEnum(proto.Message):
     class ServedAssetFieldType(proto.Enum):
@@ -22,8 +26,8 @@ class ServedAssetFieldTypeEnum(proto.Message):
         LEAD_FORM = 30
         BUSINESS_LOGO = 31
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

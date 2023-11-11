@@ -1,15 +1,19 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.month_of_year import MonthOfYearEnum
+
+_M = TypeVar("_M")
 
 class DateRange(proto.Message):
     start_date: str
     end_date: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         start_date: str = ...,
@@ -20,8 +24,8 @@ class YearMonth(proto.Message):
     year: int
     month: MonthOfYearEnum.MonthOfYear
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         year: int = ...,
@@ -32,8 +36,8 @@ class YearMonthRange(proto.Message):
     start: YearMonth
     end: YearMonth
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         start: YearMonth = ...,

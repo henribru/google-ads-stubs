@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AuthenticationErrorEnum(proto.Message):
     class AuthenticationError(proto.Enum):
@@ -25,8 +29,8 @@ class AuthenticationErrorEnum(proto.Message):
         TWO_STEP_VERIFICATION_NOT_ENROLLED = 23
         ADVANCED_PROTECTION_NOT_ENROLLED = 24
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

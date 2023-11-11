@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ExternalConversionSourceEnum(proto.Message):
     class ExternalConversionSource(proto.Enum):
@@ -35,8 +39,8 @@ class ExternalConversionSourceEnum(proto.Message):
         FIREBASE_SEARCH_ADS_360 = 33
         DISPLAY_AND_VIDEO_360_FLOODLIGHT = 34
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -18,11 +19,13 @@ from google.ads.googleads.v15.resources.types.smart_campaign_setting import (
     SmartCampaignSetting,
 )
 
+_M = TypeVar("_M")
+
 class GetSmartCampaignStatusRequest(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -36,8 +39,8 @@ class GetSmartCampaignStatusResponse(proto.Message):
     removed_details: SmartCampaignRemovedDetails
     ended_details: SmartCampaignEndedDetails
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         smart_campaign_status: SmartCampaignStatusEnum.SmartCampaignStatus = ...,
@@ -52,8 +55,8 @@ class MutateSmartCampaignSettingResult(proto.Message):
     resource_name: str
     smart_campaign_setting: SmartCampaignSetting
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -67,8 +70,8 @@ class MutateSmartCampaignSettingsRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -82,8 +85,8 @@ class MutateSmartCampaignSettingsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateSmartCampaignSettingResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
@@ -94,8 +97,8 @@ class SmartCampaignEligibleDetails(proto.Message):
     last_impression_date_time: str
     end_date_time: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         last_impression_date_time: str = ...,
@@ -105,8 +108,8 @@ class SmartCampaignEligibleDetails(proto.Message):
 class SmartCampaignEndedDetails(proto.Message):
     end_date_time: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         end_date_time: str = ...
@@ -115,8 +118,8 @@ class SmartCampaignEndedDetails(proto.Message):
 class SmartCampaignNotEligibleDetails(proto.Message):
     not_eligible_reason: SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         not_eligible_reason: SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason = ...
@@ -125,8 +128,8 @@ class SmartCampaignNotEligibleDetails(proto.Message):
 class SmartCampaignPausedDetails(proto.Message):
     paused_date_time: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         paused_date_time: str = ...
@@ -135,8 +138,8 @@ class SmartCampaignPausedDetails(proto.Message):
 class SmartCampaignRemovedDetails(proto.Message):
     removed_date_time: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         removed_date_time: str = ...
@@ -146,8 +149,8 @@ class SmartCampaignSettingOperation(proto.Message):
     update: SmartCampaignSetting
     update_mask: FieldMask
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update: SmartCampaignSetting = ...,

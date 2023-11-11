@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.ad_type_infos import (
@@ -38,6 +39,8 @@ from google.ads.googleads.v15.enums.types.device import DeviceEnum
 from google.ads.googleads.v15.enums.types.system_managed_entity_source import (
     SystemManagedResourceSourceEnum,
 )
+
+_M = TypeVar("_M")
 
 class Ad(proto.Message):
     resource_name: str
@@ -81,8 +84,8 @@ class Ad(proto.Message):
     discovery_video_responsive_ad: DiscoveryVideoResponsiveAdInfo
     travel_ad: TravelAdInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.local_services import (
@@ -18,12 +20,14 @@ from google.ads.googleads.v15.enums.types.local_services_verification_artifact_t
     LocalServicesVerificationArtifactTypeEnum,
 )
 
+_M = TypeVar("_M")
+
 class BackgroundCheckVerificationArtifact(proto.Message):
     case_url: str
     final_adjudication_date_time: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         case_url: str = ...,
@@ -35,8 +39,8 @@ class InsuranceVerificationArtifact(proto.Message):
     rejection_reason: LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason
     insurance_document_readonly: LocalServicesDocumentReadOnly
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         amount_micros: int = ...,
@@ -52,8 +56,8 @@ class LicenseVerificationArtifact(proto.Message):
     rejection_reason: LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason
     license_document_readonly: LocalServicesDocumentReadOnly
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         license_type: str = ...,
@@ -74,8 +78,8 @@ class LocalServicesVerificationArtifact(proto.Message):
     insurance_verification_artifact: InsuranceVerificationArtifact
     license_verification_artifact: LicenseVerificationArtifact
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

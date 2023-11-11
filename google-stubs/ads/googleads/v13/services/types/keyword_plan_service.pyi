@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -13,6 +14,8 @@ from google.ads.googleads.v13.common.types.keyword_plan_common import (
 )
 from google.ads.googleads.v13.resources.types.keyword_plan import KeywordPlan
 
+_M = TypeVar("_M")
+
 class ForecastMetrics(proto.Message):
     impressions: float
     ctr: float
@@ -20,8 +23,8 @@ class ForecastMetrics(proto.Message):
     clicks: float
     cost_micros: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         impressions: float = ...,
@@ -34,8 +37,8 @@ class ForecastMetrics(proto.Message):
 class GenerateForecastCurveRequest(proto.Message):
     keyword_plan: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan: str = ...
@@ -44,8 +47,8 @@ class GenerateForecastCurveRequest(proto.Message):
 class GenerateForecastCurveResponse(proto.Message):
     campaign_forecast_curves: MutableSequence[KeywordPlanCampaignForecastCurve]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         campaign_forecast_curves: MutableSequence[
@@ -56,8 +59,8 @@ class GenerateForecastCurveResponse(proto.Message):
 class GenerateForecastMetricsRequest(proto.Message):
     keyword_plan: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan: str = ...
@@ -68,8 +71,8 @@ class GenerateForecastMetricsResponse(proto.Message):
     ad_group_forecasts: MutableSequence[KeywordPlanAdGroupForecast]
     keyword_forecasts: MutableSequence[KeywordPlanKeywordForecast]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         campaign_forecasts: MutableSequence[KeywordPlanCampaignForecast] = ...,
@@ -80,8 +83,8 @@ class GenerateForecastMetricsResponse(proto.Message):
 class GenerateForecastTimeSeriesRequest(proto.Message):
     keyword_plan: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan: str = ...
@@ -90,8 +93,8 @@ class GenerateForecastTimeSeriesRequest(proto.Message):
 class GenerateForecastTimeSeriesResponse(proto.Message):
     weekly_time_series_forecasts: MutableSequence[KeywordPlanWeeklyTimeSeriesForecast]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         weekly_time_series_forecasts: MutableSequence[
@@ -104,8 +107,8 @@ class GenerateHistoricalMetricsRequest(proto.Message):
     aggregate_metrics: KeywordPlanAggregateMetrics
     historical_metrics_options: HistoricalMetricsOptions
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan: str = ...,
@@ -117,8 +120,8 @@ class GenerateHistoricalMetricsResponse(proto.Message):
     metrics: MutableSequence[KeywordPlanKeywordHistoricalMetrics]
     aggregate_metric_results: KeywordPlanAggregateMetricResults
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         metrics: MutableSequence[KeywordPlanKeywordHistoricalMetrics] = ...,
@@ -129,8 +132,8 @@ class KeywordPlanAdGroupForecast(proto.Message):
     keyword_plan_ad_group: str
     ad_group_forecast: ForecastMetrics
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan_ad_group: str = ...,
@@ -141,8 +144,8 @@ class KeywordPlanCampaignForecast(proto.Message):
     keyword_plan_campaign: str
     campaign_forecast: ForecastMetrics
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan_campaign: str = ...,
@@ -153,8 +156,8 @@ class KeywordPlanCampaignForecastCurve(proto.Message):
     keyword_plan_campaign: str
     max_cpc_bid_forecast_curve: KeywordPlanMaxCpcBidForecastCurve
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan_campaign: str = ...,
@@ -165,8 +168,8 @@ class KeywordPlanKeywordForecast(proto.Message):
     keyword_plan_ad_group_keyword: str
     keyword_forecast: ForecastMetrics
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan_ad_group_keyword: str = ...,
@@ -178,8 +181,8 @@ class KeywordPlanKeywordHistoricalMetrics(proto.Message):
     close_variants: MutableSequence[str]
     keyword_metrics: KeywordPlanHistoricalMetrics
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         search_query: str = ...,
@@ -191,8 +194,8 @@ class KeywordPlanMaxCpcBidForecast(proto.Message):
     max_cpc_bid_micros: int
     max_cpc_bid_forecast: ForecastMetrics
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         max_cpc_bid_micros: int = ...,
@@ -202,8 +205,8 @@ class KeywordPlanMaxCpcBidForecast(proto.Message):
 class KeywordPlanMaxCpcBidForecastCurve(proto.Message):
     max_cpc_bid_forecasts: MutableSequence[KeywordPlanMaxCpcBidForecast]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         max_cpc_bid_forecasts: MutableSequence[KeywordPlanMaxCpcBidForecast] = ...
@@ -215,8 +218,8 @@ class KeywordPlanOperation(proto.Message):
     update: KeywordPlan
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -229,8 +232,8 @@ class KeywordPlanWeeklyForecast(proto.Message):
     start_date: str
     forecast: ForecastMetrics
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         start_date: str = ...,
@@ -241,8 +244,8 @@ class KeywordPlanWeeklyTimeSeriesForecast(proto.Message):
     keyword_plan_campaign: str
     weekly_forecasts: MutableSequence[KeywordPlanWeeklyForecast]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         keyword_plan_campaign: str = ...,
@@ -255,8 +258,8 @@ class MutateKeywordPlansRequest(proto.Message):
     partial_failure: bool
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -269,8 +272,8 @@ class MutateKeywordPlansResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateKeywordPlansResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
@@ -280,8 +283,8 @@ class MutateKeywordPlansResponse(proto.Message):
 class MutateKeywordPlansResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

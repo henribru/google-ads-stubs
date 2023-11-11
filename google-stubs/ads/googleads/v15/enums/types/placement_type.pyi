@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class PlacementTypeEnum(proto.Message):
     class PlacementType(proto.Enum):
@@ -13,8 +17,8 @@ class PlacementTypeEnum(proto.Message):
         YOUTUBE_CHANNEL = 6
         GOOGLE_PRODUCTS = 7
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

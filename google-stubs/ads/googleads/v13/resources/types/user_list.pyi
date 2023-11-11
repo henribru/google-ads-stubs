@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.user_lists import (
@@ -23,6 +25,8 @@ from google.ads.googleads.v13.enums.types.user_list_size_range import (
     UserListSizeRangeEnum,
 )
 from google.ads.googleads.v13.enums.types.user_list_type import UserListTypeEnum
+
+_M = TypeVar("_M")
 
 class UserList(proto.Message):
     resource_name: str
@@ -50,8 +54,8 @@ class UserList(proto.Message):
     logical_user_list: LogicalUserListInfo
     basic_user_list: BasicUserListInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

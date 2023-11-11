@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class RecommendationTypeEnum(proto.Message):
     class RecommendationType(proto.Enum):
@@ -54,8 +58,8 @@ class RecommendationTypeEnum(proto.Message):
         SET_TARGET_CPA = 50
         SET_TARGET_ROAS = 51
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

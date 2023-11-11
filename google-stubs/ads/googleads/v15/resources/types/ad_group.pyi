@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.custom_parameter import CustomParameter
@@ -17,12 +18,14 @@ from google.ads.googleads.v15.enums.types.targeting_dimension import (
     TargetingDimensionEnum,
 )
 
+_M = TypeVar("_M")
+
 class AdGroup(proto.Message):
     class AudienceSetting(proto.Message):
         use_audience_grouped: bool
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             use_audience_grouped: bool = ...
@@ -60,8 +63,8 @@ class AdGroup(proto.Message):
     ]
     excluded_parent_asset_set_types: MutableSequence[AssetSetTypeEnum.AssetSetType]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class SearchTermMatchTypeEnum(proto.Message):
     class SearchTermMatchType(proto.Enum):
@@ -12,8 +16,8 @@ class SearchTermMatchTypeEnum(proto.Message):
         NEAR_EXACT = 5
         NEAR_PHRASE = 6
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

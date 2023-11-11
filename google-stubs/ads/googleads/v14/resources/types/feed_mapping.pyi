@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.ad_customizer_placeholder_field import (
@@ -77,6 +78,8 @@ from google.ads.googleads.v14.enums.types.travel_placeholder_field import (
     TravelPlaceholderFieldEnum,
 )
 
+_M = TypeVar("_M")
+
 class AttributeFieldMapping(proto.Message):
     feed_attribute_id: int
     field_id: int
@@ -103,8 +106,8 @@ class AttributeFieldMapping(proto.Message):
     job_field: JobPlaceholderFieldEnum.JobPlaceholderField
     image_field: ImagePlaceholderFieldEnum.ImagePlaceholderField
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         feed_attribute_id: int = ...,
@@ -141,8 +144,8 @@ class FeedMapping(proto.Message):
     placeholder_type: PlaceholderTypeEnum.PlaceholderType
     criterion_type: FeedMappingCriterionTypeEnum.FeedMappingCriterionType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

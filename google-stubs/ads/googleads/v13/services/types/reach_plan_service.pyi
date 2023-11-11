@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.criteria import (
@@ -17,11 +18,13 @@ from google.ads.googleads.v13.enums.types.reach_plan_age_range import (
 )
 from google.ads.googleads.v13.enums.types.reach_plan_network import ReachPlanNetworkEnum
 
+_M = TypeVar("_M")
+
 class AdvancedProductTargeting(proto.Message):
     youtube_select_settings: YouTubeSelectSettings
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         youtube_select_settings: YouTubeSelectSettings = ...,
@@ -30,8 +33,8 @@ class AdvancedProductTargeting(proto.Message):
 class AudienceTargeting(proto.Message):
     user_interest: MutableSequence[UserInterestInfo]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_interest: MutableSequence[UserInterestInfo] = ...,
@@ -41,8 +44,8 @@ class CampaignDuration(proto.Message):
     duration_in_days: int
     date_range: DateRange
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         duration_in_days: int = ...,
@@ -56,8 +59,8 @@ class EffectiveFrequencyBreakdown(proto.Message):
     effective_coview_reach: int
     on_target_effective_coview_reach: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         effective_frequency: int = ...,
@@ -70,8 +73,8 @@ class EffectiveFrequencyBreakdown(proto.Message):
 class EffectiveFrequencyLimit(proto.Message):
     effective_frequency_breakdown_limit: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         effective_frequency_breakdown_limit: int = ...,
@@ -89,8 +92,8 @@ class Forecast(proto.Message):
     on_target_coview_impressions: int
     total_coview_impressions: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         on_target_reach: int = ...,
@@ -110,8 +113,8 @@ class Forecast(proto.Message):
 class ForecastMetricOptions(proto.Message):
     include_coview: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         include_coview: bool = ...,
@@ -121,8 +124,8 @@ class FrequencyCap(proto.Message):
     impressions: int
     time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         impressions: int = ...,
@@ -142,8 +145,8 @@ class GenerateReachForecastRequest(proto.Message):
     forecast_metric_options: ForecastMetricOptions
     customer_reach_group: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -163,8 +166,8 @@ class GenerateReachForecastResponse(proto.Message):
     on_target_audience_metrics: OnTargetAudienceMetrics
     reach_curve: ReachCurve
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         on_target_audience_metrics: OnTargetAudienceMetrics = ...,
@@ -173,8 +176,8 @@ class GenerateReachForecastResponse(proto.Message):
 
 class ListPlannableLocationsRequest(proto.Message):
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...
@@ -183,8 +186,8 @@ class ListPlannableLocationsRequest(proto.Message):
 class ListPlannableLocationsResponse(proto.Message):
     plannable_locations: MutableSequence[PlannableLocation]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         plannable_locations: MutableSequence[PlannableLocation] = ...,
@@ -193,8 +196,8 @@ class ListPlannableLocationsResponse(proto.Message):
 class ListPlannableProductsRequest(proto.Message):
     plannable_location_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         plannable_location_id: str = ...,
@@ -203,8 +206,8 @@ class ListPlannableProductsRequest(proto.Message):
 class ListPlannableProductsResponse(proto.Message):
     product_metadata: MutableSequence[ProductMetadata]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         product_metadata: MutableSequence[ProductMetadata] = ...,
@@ -214,8 +217,8 @@ class OnTargetAudienceMetrics(proto.Message):
     youtube_audience_size: int
     census_audience_size: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         youtube_audience_size: int = ...,
@@ -229,8 +232,8 @@ class PlannableLocation(proto.Message):
     country_code: str
     location_type: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         id: str = ...,
@@ -247,8 +250,8 @@ class PlannableTargeting(proto.Message):
     networks: MutableSequence[ReachPlanNetworkEnum.ReachPlanNetwork]
     youtube_select_lineups: MutableSequence[YouTubeSelectLineUp]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         age_ranges: MutableSequence[ReachPlanAgeRangeEnum.ReachPlanAgeRange] = ...,
@@ -263,8 +266,8 @@ class PlannedProduct(proto.Message):
     budget_micros: int
     advanced_product_targeting: AdvancedProductTargeting
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         plannable_product_code: str = ...,
@@ -283,8 +286,8 @@ class PlannedProductForecast(proto.Message):
     on_target_coview_impressions: int
     total_coview_impressions: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         on_target_reach: int = ...,
@@ -303,8 +306,8 @@ class PlannedProductReachForecast(proto.Message):
     cost_micros: int
     planned_product_forecast: PlannedProductForecast
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         plannable_product_code: str = ...,
@@ -317,8 +320,8 @@ class ProductMetadata(proto.Message):
     plannable_product_name: str
     plannable_targeting: PlannableTargeting
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         plannable_product_code: str = ...,
@@ -329,8 +332,8 @@ class ProductMetadata(proto.Message):
 class ReachCurve(proto.Message):
     reach_forecasts: MutableSequence[ReachForecast]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         reach_forecasts: MutableSequence[ReachForecast] = ...,
@@ -341,8 +344,8 @@ class ReachForecast(proto.Message):
     forecast: Forecast
     planned_product_reach_forecasts: MutableSequence[PlannedProductReachForecast]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         cost_micros: int = ...,
@@ -361,8 +364,8 @@ class Targeting(proto.Message):
     network: ReachPlanNetworkEnum.ReachPlanNetwork
     audience_targeting: AudienceTargeting
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         plannable_location_id: str = ...,
@@ -378,8 +381,8 @@ class YouTubeSelectLineUp(proto.Message):
     lineup_id: int
     lineup_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         lineup_id: int = ...,
@@ -389,8 +392,8 @@ class YouTubeSelectLineUp(proto.Message):
 class YouTubeSelectSettings(proto.Message):
     lineup_id: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         lineup_id: int = ...,

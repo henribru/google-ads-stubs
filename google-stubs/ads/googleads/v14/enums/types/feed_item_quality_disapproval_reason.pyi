@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class FeedItemQualityDisapprovalReasonEnum(proto.Message):
     class FeedItemQualityDisapprovalReason(proto.Enum):
@@ -25,8 +29,8 @@ class FeedItemQualityDisapprovalReasonEnum(proto.Message):
         STRUCTURED_SNIPPETS_EDITORIAL_GUIDELINES = 18
         STRUCTURED_SNIPPETS_HAS_PROMOTIONAL_TEXT = 19
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

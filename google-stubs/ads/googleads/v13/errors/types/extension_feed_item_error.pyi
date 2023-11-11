@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ExtensionFeedItemErrorEnum(proto.Message):
     class ExtensionFeedItemError(proto.Enum):
@@ -52,8 +56,8 @@ class ExtensionFeedItemErrorEnum(proto.Message):
         CONCRETE_EXTENSION_TYPE_REQUIRED = 45
         SCHEDULE_END_NOT_AFTER_START = 46
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

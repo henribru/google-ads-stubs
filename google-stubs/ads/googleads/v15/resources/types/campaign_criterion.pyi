@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.criteria import (
@@ -40,6 +42,8 @@ from google.ads.googleads.v15.enums.types.campaign_criterion_status import (
     CampaignCriterionStatusEnum,
 )
 from google.ads.googleads.v15.enums.types.criterion_type import CriterionTypeEnum
+
+_M = TypeVar("_M")
 
 class CampaignCriterion(proto.Message):
     resource_name: str
@@ -83,8 +87,8 @@ class CampaignCriterion(proto.Message):
     local_service_id: LocalServiceIdInfo
     brand_list: BrandListInfo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

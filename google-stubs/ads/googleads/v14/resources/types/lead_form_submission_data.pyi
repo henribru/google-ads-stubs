@@ -1,18 +1,21 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.lead_form_field_user_input_type import (
     LeadFormFieldUserInputTypeEnum,
 )
 
+_M = TypeVar("_M")
+
 class CustomLeadFormSubmissionField(proto.Message):
     question_text: str
     field_value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         question_text: str = ...,
@@ -31,8 +34,8 @@ class LeadFormSubmissionData(proto.Message):
     gclid: str
     submission_date_time: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -53,8 +56,8 @@ class LeadFormSubmissionField(proto.Message):
     field_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType
     field_value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         field_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType = ...,

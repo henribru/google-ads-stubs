@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.bidding_strategy_type import (
@@ -9,12 +11,14 @@ from google.ads.googleads.v15.enums.types.target_impression_share_location impor
     TargetImpressionShareLocationEnum,
 )
 
+_M = TypeVar("_M")
+
 class AccessibleBiddingStrategy(proto.Message):
     class MaximizeConversionValue(proto.Message):
         target_roas: float
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             target_roas: float = ...
@@ -23,8 +27,8 @@ class AccessibleBiddingStrategy(proto.Message):
     class MaximizeConversions(proto.Message):
         target_cpa_micros: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             target_cpa_micros: int = ...
@@ -33,8 +37,8 @@ class AccessibleBiddingStrategy(proto.Message):
     class TargetCpa(proto.Message):
         target_cpa_micros: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             target_cpa_micros: int = ...
@@ -45,8 +49,8 @@ class AccessibleBiddingStrategy(proto.Message):
         location_fraction_micros: int
         cpc_bid_ceiling_micros: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation = ...,
@@ -57,8 +61,8 @@ class AccessibleBiddingStrategy(proto.Message):
     class TargetRoas(proto.Message):
         target_roas: float
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             target_roas: float = ...
@@ -68,8 +72,8 @@ class AccessibleBiddingStrategy(proto.Message):
         target_spend_micros: int
         cpc_bid_ceiling_micros: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             target_spend_micros: int = ...,
@@ -88,8 +92,8 @@ class AccessibleBiddingStrategy(proto.Message):
     target_roas: AccessibleBiddingStrategy.TargetRoas
     target_spend: AccessibleBiddingStrategy.TargetSpend
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

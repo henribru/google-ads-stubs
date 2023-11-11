@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
 
@@ -9,12 +10,14 @@ from google.ads.googleads.v13.enums.types.response_content_type import (
 )
 from google.ads.googleads.v13.resources.types.feed_item_target import FeedItemTarget
 
+_M = TypeVar("_M")
+
 class FeedItemTargetOperation(proto.Message):
     create: FeedItemTarget
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: FeedItemTarget = ...,
@@ -25,8 +28,8 @@ class MutateFeedItemTargetResult(proto.Message):
     resource_name: str
     feed_item_target: FeedItemTarget
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -40,8 +43,8 @@ class MutateFeedItemTargetsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -55,8 +58,8 @@ class MutateFeedItemTargetsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateFeedItemTargetResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,

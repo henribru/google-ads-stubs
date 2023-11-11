@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -12,14 +13,16 @@ from google.ads.googleads.v13.resources.types.campaign_extension_setting import 
     CampaignExtensionSetting,
 )
 
+_M = TypeVar("_M")
+
 class CampaignExtensionSettingOperation(proto.Message):
     update_mask: FieldMask
     create: CampaignExtensionSetting
     update: CampaignExtensionSetting
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -32,8 +35,8 @@ class MutateCampaignExtensionSettingResult(proto.Message):
     resource_name: str
     campaign_extension_setting: CampaignExtensionSetting
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -47,8 +50,8 @@ class MutateCampaignExtensionSettingsRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -62,8 +65,8 @@ class MutateCampaignExtensionSettingsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateCampaignExtensionSettingResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,

@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -10,13 +11,15 @@ from google.ads.googleads.v13.enums.types.response_content_type import (
 )
 from google.ads.googleads.v13.resources.types.audience import Audience
 
+_M = TypeVar("_M")
+
 class AudienceOperation(proto.Message):
     update_mask: FieldMask
     create: Audience
     update: Audience
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -28,8 +31,8 @@ class MutateAudienceResult(proto.Message):
     resource_name: str
     audience: Audience
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -43,8 +46,8 @@ class MutateAudiencesRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -58,8 +61,8 @@ class MutateAudiencesResponse(proto.Message):
     results: MutableSequence[MutateAudienceResult]
     partial_failure_error: Status
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[MutateAudienceResult] = ...,

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AdGroupAdErrorEnum(proto.Message):
     class AdGroupAdError(proto.Enum):
@@ -18,8 +22,8 @@ class AdGroupAdErrorEnum(proto.Message):
         AD_TYPE_CANNOT_BE_REMOVED = 11
         CANNOT_UPDATE_DEPRECATED_ADS = 12
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

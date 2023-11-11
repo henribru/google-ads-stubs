@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class NewResourceCreationErrorEnum(proto.Message):
     class NewResourceCreationError(proto.Enum):
@@ -10,8 +14,8 @@ class NewResourceCreationErrorEnum(proto.Message):
         DUPLICATE_TEMP_IDS = 3
         TEMP_ID_RESOURCE_HAD_ERRORS = 4
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

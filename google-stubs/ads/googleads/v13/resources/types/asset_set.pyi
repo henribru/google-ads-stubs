@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.asset_set_types import (
@@ -10,13 +12,15 @@ from google.ads.googleads.v13.common.types.asset_set_types import (
 from google.ads.googleads.v13.enums.types.asset_set_status import AssetSetStatusEnum
 from google.ads.googleads.v13.enums.types.asset_set_type import AssetSetTypeEnum
 
+_M = TypeVar("_M")
+
 class AssetSet(proto.Message):
     class HotelPropertyData(proto.Message):
         hotel_center_id: int
         partner_name: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             hotel_center_id: int = ...,
@@ -27,8 +31,8 @@ class AssetSet(proto.Message):
         merchant_id: int
         feed_label: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             merchant_id: int = ...,
@@ -46,8 +50,8 @@ class AssetSet(proto.Message):
     business_profile_location_group: BusinessProfileLocationGroup
     chain_location_group: ChainLocationGroup
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         id: int = ...,

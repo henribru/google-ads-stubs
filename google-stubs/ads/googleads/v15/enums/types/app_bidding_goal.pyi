@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AppBiddingGoalEnum(proto.Message):
     class AppBiddingGoal(proto.Enum):
@@ -14,8 +18,8 @@ class AppBiddingGoalEnum(proto.Message):
         OPTIMIZE_FOR_INSTALL_CONVERSION_VOLUME_WITHOUT_TARGET_CPI = 7
         OPTIMIZE_FOR_PRE_REGISTRATION_CONVERSION_VOLUME = 8
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,11 +1,14 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
 
 from google.ads.googleads.v13.resources.types.asset_group import AssetGroup
+
+_M = TypeVar("_M")
 
 class AssetGroupOperation(proto.Message):
     update_mask: FieldMask
@@ -13,8 +16,8 @@ class AssetGroupOperation(proto.Message):
     update: AssetGroup
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -26,8 +29,8 @@ class AssetGroupOperation(proto.Message):
 class MutateAssetGroupResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -38,8 +41,8 @@ class MutateAssetGroupsRequest(proto.Message):
     operations: MutableSequence[AssetGroupOperation]
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -51,8 +54,8 @@ class MutateAssetGroupsResponse(proto.Message):
     results: MutableSequence[MutateAssetGroupResult]
     partial_failure_error: Status
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[MutateAssetGroupResult] = ...,

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class FeedItemValidationErrorEnum(proto.Message):
     class FeedItemValidationError(proto.Enum):
@@ -112,8 +116,8 @@ class FeedItemValidationErrorEnum(proto.Message):
         IMAGE_ERROR_CONSTRAINTS_VIOLATED = 106
         IMAGE_ERROR_SERVER_ERROR = 107
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

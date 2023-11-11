@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CriterionErrorEnum(proto.Message):
     class CriterionError(proto.Enum):
@@ -151,8 +155,8 @@ class CriterionErrorEnum(proto.Message):
         ONE_AUDIENCE_ALLOWED_PER_AD_GROUP = 153
         INVALID_DETAILED_DEMOGRAPHIC = 154
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

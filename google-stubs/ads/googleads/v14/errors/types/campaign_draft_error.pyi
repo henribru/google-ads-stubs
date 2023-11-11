@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CampaignDraftErrorEnum(proto.Message):
     class CampaignDraftError(proto.Enum):
@@ -17,8 +21,8 @@ class CampaignDraftErrorEnum(proto.Message):
         MAX_NUMBER_OF_DRAFTS_PER_CAMPAIGN_REACHED = 10
         LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY = 11
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

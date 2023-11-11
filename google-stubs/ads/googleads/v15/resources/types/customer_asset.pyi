@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.asset_policy import (
@@ -16,6 +17,8 @@ from google.ads.googleads.v15.enums.types.asset_link_primary_status_reason impor
 from google.ads.googleads.v15.enums.types.asset_link_status import AssetLinkStatusEnum
 from google.ads.googleads.v15.enums.types.asset_source import AssetSourceEnum
 
+_M = TypeVar("_M")
+
 class CustomerAsset(proto.Message):
     resource_name: str
     asset: str
@@ -28,8 +31,8 @@ class CustomerAsset(proto.Message):
         AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason
     ]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ImageErrorEnum(proto.Message):
     class ImageError(proto.Enum):
@@ -46,8 +50,8 @@ class ImageErrorEnum(proto.Message):
         IMAGE_CONSTRAINTS_VIOLATED = 39
         FORMAT_NOT_ALLOWED = 40
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ConversionActionTypeEnum(proto.Message):
     class ConversionActionType(proto.Enum):
@@ -47,8 +51,8 @@ class ConversionActionTypeEnum(proto.Message):
         GOOGLE_ANALYTICS_4_CUSTOM = 40
         GOOGLE_ANALYTICS_4_PURCHASE = 41
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

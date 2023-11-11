@@ -1,9 +1,12 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.brand_state import BrandStateEnum
+
+_M = TypeVar("_M")
 
 class BrandSuggestion(proto.Message):
     id: str
@@ -11,8 +14,8 @@ class BrandSuggestion(proto.Message):
     urls: MutableSequence[str]
     state: BrandStateEnum.BrandState
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         id: str = ...,
@@ -26,8 +29,8 @@ class SuggestBrandsRequest(proto.Message):
     brand_prefix: str
     selected_brands: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -38,8 +41,8 @@ class SuggestBrandsRequest(proto.Message):
 class SuggestBrandsResponse(proto.Message):
     brands: MutableSequence[BrandSuggestion]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         brands: MutableSequence[BrandSuggestion] = ...

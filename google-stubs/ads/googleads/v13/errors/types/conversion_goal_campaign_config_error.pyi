@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ConversionGoalCampaignConfigErrorEnum(proto.Message):
     class ConversionGoalCampaignConfigError(proto.Enum):
@@ -10,8 +14,8 @@ class ConversionGoalCampaignConfigErrorEnum(proto.Message):
         CUSTOM_GOAL_DOES_NOT_BELONG_TO_GOOGLE_ADS_CONVERSION_CUSTOMER = 3
         CAMPAIGN_CANNOT_USE_UNIFIED_GOALS = 4
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

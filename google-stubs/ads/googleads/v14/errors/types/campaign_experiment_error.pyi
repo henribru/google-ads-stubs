@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CampaignExperimentErrorEnum(proto.Message):
     class CampaignExperimentError(proto.Enum):
@@ -17,8 +21,8 @@ class CampaignExperimentErrorEnum(proto.Message):
         EXPERIMENT_DURATION_MUST_BE_WITHIN_CAMPAIGN_DURATION = 10
         CANNOT_MUTATE_EXPERIMENT_DUE_TO_STATUS = 11
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

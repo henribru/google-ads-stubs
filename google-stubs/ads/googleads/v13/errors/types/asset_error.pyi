@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AssetErrorEnum(proto.Message):
     class AssetError(proto.Enum):
@@ -42,8 +46,8 @@ class AssetErrorEnum(proto.Message):
         CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET = 36
         LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED = 37
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

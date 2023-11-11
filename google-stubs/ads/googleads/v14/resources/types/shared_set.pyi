@@ -1,9 +1,13 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.shared_set_status import SharedSetStatusEnum
 from google.ads.googleads.v14.enums.types.shared_set_type import SharedSetTypeEnum
+
+_M = TypeVar("_M")
 
 class SharedSet(proto.Message):
     resource_name: str
@@ -14,8 +18,8 @@ class SharedSet(proto.Message):
     member_count: int
     reference_count: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

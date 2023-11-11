@@ -1,7 +1,10 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class BudgetSimulationPoint(proto.Message):
     budget_amount_micros: int
@@ -14,8 +17,8 @@ class BudgetSimulationPoint(proto.Message):
     top_slot_impressions: int
     interactions: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         budget_amount_micros: int = ...,
@@ -32,8 +35,8 @@ class BudgetSimulationPoint(proto.Message):
 class BudgetSimulationPointList(proto.Message):
     points: MutableSequence[BudgetSimulationPoint]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         points: MutableSequence[BudgetSimulationPoint] = ...
@@ -50,8 +53,8 @@ class CpcBidSimulationPoint(proto.Message):
     cpc_bid_micros: int
     cpc_bid_scaling_modifier: float
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         required_budget_amount_micros: int = ...,
@@ -68,8 +71,8 @@ class CpcBidSimulationPoint(proto.Message):
 class CpcBidSimulationPointList(proto.Message):
     points: MutableSequence[CpcBidSimulationPoint]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         points: MutableSequence[CpcBidSimulationPoint] = ...
@@ -81,8 +84,8 @@ class CpvBidSimulationPoint(proto.Message):
     impressions: int
     views: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         cpv_bid_micros: int = ...,
@@ -94,8 +97,8 @@ class CpvBidSimulationPoint(proto.Message):
 class CpvBidSimulationPointList(proto.Message):
     points: MutableSequence[CpvBidSimulationPoint]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         points: MutableSequence[CpvBidSimulationPoint] = ...
@@ -110,8 +113,8 @@ class PercentCpcBidSimulationPoint(proto.Message):
     impressions: int
     top_slot_impressions: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         percent_cpc_bid_micros: int = ...,
@@ -126,8 +129,8 @@ class PercentCpcBidSimulationPoint(proto.Message):
 class PercentCpcBidSimulationPointList(proto.Message):
     points: MutableSequence[PercentCpcBidSimulationPoint]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         points: MutableSequence[PercentCpcBidSimulationPoint] = ...
@@ -147,8 +150,8 @@ class TargetCpaSimulationPoint(proto.Message):
     target_cpa_micros: int
     target_cpa_scaling_modifier: float
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         required_budget_amount_micros: int = ...,
@@ -168,8 +171,8 @@ class TargetCpaSimulationPoint(proto.Message):
 class TargetCpaSimulationPointList(proto.Message):
     points: MutableSequence[TargetCpaSimulationPoint]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         points: MutableSequence[TargetCpaSimulationPoint] = ...
@@ -187,8 +190,8 @@ class TargetImpressionShareSimulationPoint(proto.Message):
     top_slot_impressions: int
     absolute_top_impressions: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_impression_share_micros: int = ...,
@@ -206,8 +209,8 @@ class TargetImpressionShareSimulationPoint(proto.Message):
 class TargetImpressionShareSimulationPointList(proto.Message):
     points: MutableSequence[TargetImpressionShareSimulationPoint]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         points: MutableSequence[TargetImpressionShareSimulationPoint] = ...
@@ -223,8 +226,8 @@ class TargetRoasSimulationPoint(proto.Message):
     impressions: int
     top_slot_impressions: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         target_roas: float = ...,
@@ -240,8 +243,8 @@ class TargetRoasSimulationPoint(proto.Message):
 class TargetRoasSimulationPointList(proto.Message):
     points: MutableSequence[TargetRoasSimulationPoint]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         points: MutableSequence[TargetRoasSimulationPoint] = ...

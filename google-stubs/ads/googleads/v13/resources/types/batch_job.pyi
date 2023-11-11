@@ -1,8 +1,12 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.batch_job_status import BatchJobStatusEnum
+
+_M = TypeVar("_M")
 
 class BatchJob(proto.Message):
     class BatchJobMetadata(proto.Message):
@@ -14,8 +18,8 @@ class BatchJob(proto.Message):
         executed_operation_count: int
         execution_limit_seconds: int
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             creation_date_time: str = ...,
@@ -33,8 +37,8 @@ class BatchJob(proto.Message):
     status: BatchJobStatusEnum.BatchJobStatus
     long_running_operation: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

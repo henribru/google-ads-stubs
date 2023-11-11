@@ -1,13 +1,17 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class SmartCampaignSetting(proto.Message):
     class AdOptimizedBusinessProfileSetting(proto.Message):
         include_lead_form: bool
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             include_lead_form: bool = ...
@@ -17,8 +21,8 @@ class SmartCampaignSetting(proto.Message):
         phone_number: str
         country_code: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             phone_number: str = ...,
@@ -33,8 +37,8 @@ class SmartCampaignSetting(proto.Message):
     business_name: str
     business_profile_location: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CriterionCategoryChannelAvailabilityModeEnum(proto.Message):
     class CriterionCategoryChannelAvailabilityMode(proto.Enum):
@@ -10,8 +14,8 @@ class CriterionCategoryChannelAvailabilityModeEnum(proto.Message):
         CHANNEL_TYPE_AND_ALL_SUBTYPES = 3
         CHANNEL_TYPE_AND_SUBSET_SUBTYPES = 4
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

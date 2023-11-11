@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class MediaFileErrorEnum(proto.Message):
     class MediaFileError(proto.Enum):
@@ -30,8 +34,8 @@ class MediaFileErrorEnum(proto.Message):
         YOU_TUBE_VIDEO_HAS_NON_POSITIVE_DURATION = 23
         YOU_TUBE_VIDEO_NOT_FOUND = 24
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

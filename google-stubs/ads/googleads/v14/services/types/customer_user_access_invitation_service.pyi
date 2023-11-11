@@ -1,17 +1,21 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.resources.types.customer_user_access_invitation import (
     CustomerUserAccessInvitation,
 )
 
+_M = TypeVar("_M")
+
 class CustomerUserAccessInvitationOperation(proto.Message):
     create: CustomerUserAccessInvitation
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: CustomerUserAccessInvitation = ...,
@@ -22,8 +26,8 @@ class MutateCustomerUserAccessInvitationRequest(proto.Message):
     customer_id: str
     operation: CustomerUserAccessInvitationOperation
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -33,8 +37,8 @@ class MutateCustomerUserAccessInvitationRequest(proto.Message):
 class MutateCustomerUserAccessInvitationResponse(proto.Message):
     result: MutateCustomerUserAccessInvitationResult
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         result: MutateCustomerUserAccessInvitationResult = ...
@@ -43,8 +47,8 @@ class MutateCustomerUserAccessInvitationResponse(proto.Message):
 class MutateCustomerUserAccessInvitationResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

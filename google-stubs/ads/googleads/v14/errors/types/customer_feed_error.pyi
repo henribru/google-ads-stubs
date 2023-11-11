@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CustomerFeedErrorEnum(proto.Message):
     class CustomerFeedError(proto.Enum):
@@ -14,8 +18,8 @@ class CustomerFeedErrorEnum(proto.Message):
         MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE = 7
         PLACEHOLDER_TYPE_NOT_ALLOWED_ON_CUSTOMER_FEED = 8
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

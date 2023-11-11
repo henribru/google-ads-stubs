@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class FieldErrorEnum(proto.Message):
     class FieldError(proto.Enum):
@@ -15,8 +19,8 @@ class FieldErrorEnum(proto.Message):
         BLOCKED_VALUE = 9
         FIELD_CAN_ONLY_BE_CLEARED = 10
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

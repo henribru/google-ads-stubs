@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AgeRangeTypeEnum(proto.Message):
     class AgeRangeType(proto.Enum):
@@ -14,8 +18,8 @@ class AgeRangeTypeEnum(proto.Message):
         AGE_RANGE_65_UP = 503006
         AGE_RANGE_UNDETERMINED = 503999
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CustomerManagerLinkErrorEnum(proto.Message):
     class CustomerManagerLinkError(proto.Enum):
@@ -16,8 +20,8 @@ class CustomerManagerLinkErrorEnum(proto.Message):
         DUPLICATE_CHILD_FOUND = 9
         TEST_ACCOUNT_LINKS_TOO_MANY_CHILD_ACCOUNTS = 10
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

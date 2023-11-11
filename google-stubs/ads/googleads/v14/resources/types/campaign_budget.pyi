@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.budget_delivery_method import (
@@ -8,6 +10,8 @@ from google.ads.googleads.v14.enums.types.budget_delivery_method import (
 from google.ads.googleads.v14.enums.types.budget_period import BudgetPeriodEnum
 from google.ads.googleads.v14.enums.types.budget_status import BudgetStatusEnum
 from google.ads.googleads.v14.enums.types.budget_type import BudgetTypeEnum
+
+_M = TypeVar("_M")
 
 class CampaignBudget(proto.Message):
     resource_name: str
@@ -29,8 +33,8 @@ class CampaignBudget(proto.Message):
     type_: BudgetTypeEnum.BudgetType
     aligned_bidding_strategy_id: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

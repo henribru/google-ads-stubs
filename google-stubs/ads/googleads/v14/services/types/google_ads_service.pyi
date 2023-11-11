@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -625,6 +626,8 @@ from google.ads.googleads.v14.services.types.user_list_service import (
     UserListOperation,
 )
 
+_M = TypeVar("_M")
+
 class GoogleAdsRow(proto.Message):
     account_budget: AccountBudget
     account_budget_proposal: AccountBudgetProposal
@@ -788,8 +791,8 @@ class GoogleAdsRow(proto.Message):
     metrics: Metrics
     segments: Segments
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         account_budget: AccountBudget = ...,
@@ -962,8 +965,8 @@ class MutateGoogleAdsRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -977,8 +980,8 @@ class MutateGoogleAdsResponse(proto.Message):
     partial_failure_error: Status
     mutate_operation_responses: MutableSequence[MutateOperationResponse]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
@@ -1062,8 +1065,8 @@ class MutateOperation(proto.Message):
     smart_campaign_setting_operation: SmartCampaignSettingOperation
     user_list_operation: UserListOperation
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ad_group_ad_label_operation: AdGroupAdLabelOperation = ...,
@@ -1220,8 +1223,8 @@ class MutateOperationResponse(proto.Message):
     smart_campaign_setting_result: MutateSmartCampaignSettingResult
     user_list_result: MutateUserListResult
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ad_group_ad_label_result: MutateAdGroupAdLabelResult = ...,
@@ -1310,8 +1313,8 @@ class SearchGoogleAdsRequest(proto.Message):
     return_total_results_count: bool
     summary_row_setting: SummaryRowSettingEnum.SummaryRowSetting
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -1330,8 +1333,8 @@ class SearchGoogleAdsResponse(proto.Message):
     field_mask: FieldMask
     summary_row: GoogleAdsRow
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[GoogleAdsRow] = ...,
@@ -1346,8 +1349,8 @@ class SearchGoogleAdsStreamRequest(proto.Message):
     query: str
     summary_row_setting: SummaryRowSettingEnum.SummaryRowSetting
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -1361,8 +1364,8 @@ class SearchGoogleAdsStreamResponse(proto.Message):
     summary_row: GoogleAdsRow
     request_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[GoogleAdsRow] = ...,

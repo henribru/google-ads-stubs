@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.common.types.tag_snippet import TagSnippet
@@ -23,13 +24,15 @@ from google.ads.googleads.v13.enums.types.data_driven_model_status import (
 )
 from google.ads.googleads.v13.enums.types.mobile_app_vendor import MobileAppVendorEnum
 
+_M = TypeVar("_M")
+
 class ConversionAction(proto.Message):
     class AttributionModelSettings(proto.Message):
         attribution_model: AttributionModelEnum.AttributionModel
         data_driven_model_status: DataDrivenModelStatusEnum.DataDrivenModelStatus
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             attribution_model: AttributionModelEnum.AttributionModel = ...,
@@ -42,8 +45,8 @@ class ConversionAction(proto.Message):
         property_id: int
         property_name: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             event_name: str = ...,
@@ -56,8 +59,8 @@ class ConversionAction(proto.Message):
         event_name: str
         provider_name: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             event_name: str = ...,
@@ -69,8 +72,8 @@ class ConversionAction(proto.Message):
         default_currency_code: str
         always_use_default_value: bool
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             default_value: float = ...,
@@ -99,8 +102,8 @@ class ConversionAction(proto.Message):
     firebase_settings: ConversionAction.FirebaseSettings
     third_party_app_analytics_settings: ConversionAction.ThirdPartyAppAnalyticsSettings
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

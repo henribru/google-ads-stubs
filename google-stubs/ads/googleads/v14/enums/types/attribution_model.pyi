@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AttributionModelEnum(proto.Message):
     class AttributionModel(proto.Enum):
@@ -14,8 +18,8 @@ class AttributionModelEnum(proto.Message):
         GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED = 105
         GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN = 106
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

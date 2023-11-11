@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -9,14 +10,16 @@ from google.ads.googleads.v14.resources.types.keyword_plan_campaign import (
     KeywordPlanCampaign,
 )
 
+_M = TypeVar("_M")
+
 class KeywordPlanCampaignOperation(proto.Message):
     update_mask: FieldMask
     create: KeywordPlanCampaign
     update: KeywordPlanCampaign
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -28,8 +31,8 @@ class KeywordPlanCampaignOperation(proto.Message):
 class MutateKeywordPlanCampaignResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -41,8 +44,8 @@ class MutateKeywordPlanCampaignsRequest(proto.Message):
     partial_failure: bool
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -55,8 +58,8 @@ class MutateKeywordPlanCampaignsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateKeywordPlanCampaignResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,

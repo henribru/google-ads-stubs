@@ -1,11 +1,15 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.billing_setup_status import (
     BillingSetupStatusEnum,
 )
 from google.ads.googleads.v13.enums.types.time_type import TimeTypeEnum
+
+_M = TypeVar("_M")
 
 class BillingSetup(proto.Message):
     class PaymentsAccountInfo(proto.Message):
@@ -15,8 +19,8 @@ class BillingSetup(proto.Message):
         payments_profile_name: str
         secondary_payments_profile_id: str
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             payments_account_id: str = ...,
@@ -35,8 +39,8 @@ class BillingSetup(proto.Message):
     end_date_time: str
     end_time_type: TimeTypeEnum.TimeType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

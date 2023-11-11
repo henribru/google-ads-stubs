@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.gender_type import GenderTypeEnum
@@ -9,12 +10,14 @@ from google.ads.googleads.v14.enums.types.parental_status_type import (
     ParentalStatusTypeEnum,
 )
 
+_M = TypeVar("_M")
+
 class AgeDimension(proto.Message):
     age_ranges: MutableSequence[AgeSegment]
     include_undetermined: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         age_ranges: MutableSequence[AgeSegment] = ...,
@@ -25,8 +28,8 @@ class AgeSegment(proto.Message):
     min_age: int
     max_age: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         min_age: int = ...,
@@ -40,8 +43,8 @@ class AudienceDimension(proto.Message):
     parental_status: ParentalStatusDimension
     audience_segments: AudienceSegmentDimension
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         age: AgeDimension = ...,
@@ -54,8 +57,8 @@ class AudienceDimension(proto.Message):
 class AudienceExclusionDimension(proto.Message):
     exclusions: MutableSequence[ExclusionSegment]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         exclusions: MutableSequence[ExclusionSegment] = ...
@@ -68,8 +71,8 @@ class AudienceSegment(proto.Message):
     detailed_demographic: DetailedDemographicSegment
     custom_audience: CustomAudienceSegment
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_list: UserListSegment = ...,
@@ -82,8 +85,8 @@ class AudienceSegment(proto.Message):
 class AudienceSegmentDimension(proto.Message):
     segments: MutableSequence[AudienceSegment]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         segments: MutableSequence[AudienceSegment] = ...
@@ -92,8 +95,8 @@ class AudienceSegmentDimension(proto.Message):
 class CustomAudienceSegment(proto.Message):
     custom_audience: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         custom_audience: str = ...
@@ -102,8 +105,8 @@ class CustomAudienceSegment(proto.Message):
 class DetailedDemographicSegment(proto.Message):
     detailed_demographic: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         detailed_demographic: str = ...
@@ -112,8 +115,8 @@ class DetailedDemographicSegment(proto.Message):
 class ExclusionSegment(proto.Message):
     user_list: UserListSegment
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_list: UserListSegment = ...
@@ -123,8 +126,8 @@ class GenderDimension(proto.Message):
     genders: MutableSequence[GenderTypeEnum.GenderType]
     include_undetermined: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         genders: MutableSequence[GenderTypeEnum.GenderType] = ...,
@@ -135,8 +138,8 @@ class HouseholdIncomeDimension(proto.Message):
     income_ranges: MutableSequence[IncomeRangeTypeEnum.IncomeRangeType]
     include_undetermined: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         income_ranges: MutableSequence[IncomeRangeTypeEnum.IncomeRangeType] = ...,
@@ -146,8 +149,8 @@ class HouseholdIncomeDimension(proto.Message):
 class LifeEventSegment(proto.Message):
     life_event: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         life_event: str = ...
@@ -157,8 +160,8 @@ class ParentalStatusDimension(proto.Message):
     parental_statuses: MutableSequence[ParentalStatusTypeEnum.ParentalStatusType]
     include_undetermined: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         parental_statuses: MutableSequence[
@@ -170,8 +173,8 @@ class ParentalStatusDimension(proto.Message):
 class UserInterestSegment(proto.Message):
     user_interest_category: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_interest_category: str = ...
@@ -180,8 +183,8 @@ class UserInterestSegment(proto.Message):
 class UserListSegment(proto.Message):
     user_list: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         user_list: str = ...

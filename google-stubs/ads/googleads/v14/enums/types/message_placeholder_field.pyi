@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class MessagePlaceholderFieldEnum(proto.Message):
     class MessagePlaceholderField(proto.Enum):
@@ -12,8 +16,8 @@ class MessagePlaceholderFieldEnum(proto.Message):
         MESSAGE_EXTENSION_TEXT = 5
         MESSAGE_TEXT = 6
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

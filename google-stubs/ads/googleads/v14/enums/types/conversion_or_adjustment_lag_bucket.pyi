@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ConversionOrAdjustmentLagBucketEnum(proto.Message):
     class ConversionOrAdjustmentLagBucket(proto.Enum):
@@ -48,8 +52,8 @@ class ConversionOrAdjustmentLagBucketEnum(proto.Message):
         CONVERSION_UNKNOWN = 41
         ADJUSTMENT_UNKNOWN = 42
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

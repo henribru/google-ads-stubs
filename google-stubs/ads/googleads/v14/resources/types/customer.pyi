@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.conversion_tracking_status_enum import (
@@ -39,13 +40,15 @@ from google.ads.googleads.v14.errors.types.string_length_error import (
     StringLengthErrorEnum,
 )
 
+_M = TypeVar("_M")
+
 class CallReportingSetting(proto.Message):
     call_reporting_enabled: bool
     call_conversion_reporting_enabled: bool
     call_conversion_action: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         call_reporting_enabled: bool = ...,
@@ -61,8 +64,8 @@ class ConversionTrackingSetting(proto.Message):
     enhanced_conversions_for_leads_enabled: bool
     google_ads_conversion_customer: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         conversion_tracking_id: int = ...,
@@ -101,8 +104,8 @@ class Customer(proto.Message):
     offline_conversion_client_summaries: MutableSequence[OfflineConversionClientSummary]
     customer_agreement_setting: CustomerAgreementSetting
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -138,8 +141,8 @@ class Customer(proto.Message):
 class CustomerAgreementSetting(proto.Message):
     accepted_lead_form_terms: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         accepted_lead_form_terms: bool = ...
@@ -156,8 +159,8 @@ class OfflineConversionClientSummary(proto.Message):
     job_summaries: MutableSequence[OfflineConversionUploadSummary]
     alerts: MutableSequence[OfflineConversionUploadAlert]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         client: OfflineEventUploadClientEnum.OfflineEventUploadClient = ...,
@@ -175,8 +178,8 @@ class OfflineConversionUploadAlert(proto.Message):
     error: OfflineConversionUploadError
     error_percentage: float
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         error: OfflineConversionUploadError = ...,
@@ -195,8 +198,8 @@ class OfflineConversionUploadError(proto.Message):
     string_format_error: StringFormatErrorEnum.StringFormatError
     string_length_error: StringLengthErrorEnum.StringLengthError
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         collection_size_error: CollectionSizeErrorEnum.CollectionSizeError = ...,
@@ -217,8 +220,8 @@ class OfflineConversionUploadSummary(proto.Message):
     job_id: int
     upload_date: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         successful_count: int = ...,
@@ -230,8 +233,8 @@ class OfflineConversionUploadSummary(proto.Message):
 class RemarketingSetting(proto.Message):
     google_global_site_tag: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         google_global_site_tag: str = ...

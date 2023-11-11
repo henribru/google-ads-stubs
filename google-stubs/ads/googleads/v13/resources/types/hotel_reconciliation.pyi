@@ -1,10 +1,14 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v13.enums.types.hotel_reconciliation_status import (
     HotelReconciliationStatusEnum,
 )
+
+_M = TypeVar("_M")
 
 class HotelReconciliation(proto.Message):
     resource_name: str
@@ -19,8 +23,8 @@ class HotelReconciliation(proto.Message):
     billed: bool
     status: HotelReconciliationStatusEnum.HotelReconciliationStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

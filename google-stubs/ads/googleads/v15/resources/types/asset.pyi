@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.asset_types import (
@@ -44,6 +45,8 @@ from google.ads.googleads.v15.enums.types.policy_review_status import (
     PolicyReviewStatusEnum,
 )
 
+_M = TypeVar("_M")
+
 class Asset(proto.Message):
     resource_name: str
     id: int
@@ -85,8 +88,8 @@ class Asset(proto.Message):
     location_asset: LocationAsset
     hotel_property_asset: HotelPropertyAsset
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -135,8 +138,8 @@ class AssetFieldTypePolicySummary(proto.Message):
     asset_source: AssetSourceEnum.AssetSource
     policy_summary_info: AssetPolicySummary
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...,
@@ -149,8 +152,8 @@ class AssetPolicySummary(proto.Message):
     review_status: PolicyReviewStatusEnum.PolicyReviewStatus
     approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,

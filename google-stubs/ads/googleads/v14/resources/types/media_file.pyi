@@ -1,15 +1,19 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.media_type import MediaTypeEnum
 from google.ads.googleads.v14.enums.types.mime_type import MimeTypeEnum
 
+_M = TypeVar("_M")
+
 class MediaAudio(proto.Message):
     ad_duration_millis: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ad_duration_millis: int = ...
@@ -19,8 +23,8 @@ class MediaBundle(proto.Message):
     data: bytes
     url: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         data: bytes = ...,
@@ -40,8 +44,8 @@ class MediaFile(proto.Message):
     audio: MediaAudio
     video: MediaVideo
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -62,8 +66,8 @@ class MediaImage(proto.Message):
     full_size_image_url: str
     preview_size_image_url: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         data: bytes = ...,
@@ -77,8 +81,8 @@ class MediaVideo(proto.Message):
     advertising_id_code: str
     isci_code: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         ad_duration_millis: int = ...,

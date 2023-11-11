@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class PromotionExtensionOccasionEnum(proto.Message):
     class PromotionExtensionOccasion(proto.Enum):
@@ -44,8 +48,8 @@ class PromotionExtensionOccasionEnum(proto.Message):
         SONGKRAN = 37
         YEAR_END_GIFT = 38
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

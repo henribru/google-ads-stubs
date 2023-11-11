@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AdGroupTypeEnum(proto.Message):
     class AdGroupType(proto.Enum):
@@ -24,8 +28,8 @@ class AdGroupTypeEnum(proto.Message):
         SMART_CAMPAIGN_ADS = 18
         TRAVEL_ADS = 19
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

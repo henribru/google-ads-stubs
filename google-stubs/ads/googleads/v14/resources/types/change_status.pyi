@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.change_status_operation import (
@@ -8,6 +10,8 @@ from google.ads.googleads.v14.enums.types.change_status_operation import (
 from google.ads.googleads.v14.enums.types.change_status_resource_type import (
     ChangeStatusResourceTypeEnum,
 )
+
+_M = TypeVar("_M")
 
 class ChangeStatus(proto.Message):
     resource_name: str
@@ -32,8 +36,8 @@ class ChangeStatus(proto.Message):
     ad_group_asset: str
     combined_audience: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

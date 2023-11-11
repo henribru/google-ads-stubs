@@ -1,17 +1,20 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
 
 from google.ads.googleads.v13.resources.types.customer_label import CustomerLabel
 
+_M = TypeVar("_M")
+
 class CustomerLabelOperation(proto.Message):
     create: CustomerLabel
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: CustomerLabel = ...,
@@ -21,8 +24,8 @@ class CustomerLabelOperation(proto.Message):
 class MutateCustomerLabelResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -34,8 +37,8 @@ class MutateCustomerLabelsRequest(proto.Message):
     partial_failure: bool
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -48,8 +51,8 @@ class MutateCustomerLabelsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[MutateCustomerLabelResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,

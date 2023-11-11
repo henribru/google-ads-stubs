@@ -1,18 +1,22 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.product_link_invitation_status import (
     ProductLinkInvitationStatusEnum,
 )
 
+_M = TypeVar("_M")
+
 class UpdateProductLinkInvitationRequest(proto.Message):
     customer_id: str
     product_link_invitation_status: ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -23,8 +27,8 @@ class UpdateProductLinkInvitationRequest(proto.Message):
 class UpdateProductLinkInvitationResponse(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

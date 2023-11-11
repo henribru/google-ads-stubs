@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ListingTypeEnum(proto.Message):
     class ListingType(proto.Enum):
@@ -8,8 +12,8 @@ class ListingTypeEnum(proto.Message):
         UNKNOWN = 1
         VEHICLES = 2
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

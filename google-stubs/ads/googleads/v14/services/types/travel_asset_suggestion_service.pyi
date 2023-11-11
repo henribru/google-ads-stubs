@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.enums.types.asset_field_type import AssetFieldTypeEnum
@@ -11,6 +12,8 @@ from google.ads.googleads.v14.enums.types.hotel_asset_suggestion_status import (
     HotelAssetSuggestionStatusEnum,
 )
 
+_M = TypeVar("_M")
+
 class HotelAssetSuggestion(proto.Message):
     place_id: str
     final_url: str
@@ -20,8 +23,8 @@ class HotelAssetSuggestion(proto.Message):
     image_assets: MutableSequence[HotelImageAsset]
     status: HotelAssetSuggestionStatusEnum.HotelAssetSuggestionStatus
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         place_id: str = ...,
@@ -37,8 +40,8 @@ class HotelImageAsset(proto.Message):
     uri: str
     asset_field_type: AssetFieldTypeEnum.AssetFieldType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         uri: str = ...,
@@ -49,8 +52,8 @@ class HotelTextAsset(proto.Message):
     text: str
     asset_field_type: AssetFieldTypeEnum.AssetFieldType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         text: str = ...,
@@ -62,8 +65,8 @@ class SuggestTravelAssetsRequest(proto.Message):
     language_option: str
     place_ids: MutableSequence[str]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -74,8 +77,8 @@ class SuggestTravelAssetsRequest(proto.Message):
 class SuggestTravelAssetsResponse(proto.Message):
     hotel_asset_suggestions: MutableSequence[HotelAssetSuggestion]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         hotel_asset_suggestions: MutableSequence[HotelAssetSuggestion] = ...

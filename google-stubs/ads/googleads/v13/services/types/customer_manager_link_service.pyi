@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 
@@ -8,12 +9,14 @@ from google.ads.googleads.v13.resources.types.customer_manager_link import (
     CustomerManagerLink,
 )
 
+_M = TypeVar("_M")
+
 class CustomerManagerLinkOperation(proto.Message):
     update_mask: FieldMask
     update: CustomerManagerLink
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -26,8 +29,8 @@ class MoveManagerLinkRequest(proto.Message):
     new_manager: str
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -39,8 +42,8 @@ class MoveManagerLinkRequest(proto.Message):
 class MoveManagerLinkResponse(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -51,8 +54,8 @@ class MutateCustomerManagerLinkRequest(proto.Message):
     operations: MutableSequence[CustomerManagerLinkOperation]
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -63,8 +66,8 @@ class MutateCustomerManagerLinkRequest(proto.Message):
 class MutateCustomerManagerLinkResponse(proto.Message):
     results: MutableSequence[MutateCustomerManagerLinkResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[MutateCustomerManagerLinkResult] = ...
@@ -73,8 +76,8 @@ class MutateCustomerManagerLinkResponse(proto.Message):
 class MutateCustomerManagerLinkResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

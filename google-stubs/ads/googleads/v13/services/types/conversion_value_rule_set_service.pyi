@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
@@ -12,14 +13,16 @@ from google.ads.googleads.v13.resources.types.conversion_value_rule_set import (
     ConversionValueRuleSet,
 )
 
+_M = TypeVar("_M")
+
 class ConversionValueRuleSetOperation(proto.Message):
     update_mask: FieldMask
     create: ConversionValueRuleSet
     update: ConversionValueRuleSet
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -32,8 +35,8 @@ class MutateConversionValueRuleSetResult(proto.Message):
     resource_name: str
     conversion_value_rule_set: ConversionValueRuleSet
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -47,8 +50,8 @@ class MutateConversionValueRuleSetsRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -62,8 +65,8 @@ class MutateConversionValueRuleSetsResponse(proto.Message):
     results: MutableSequence[MutateConversionValueRuleSetResult]
     partial_failure_error: Status
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[MutateConversionValueRuleSetResult] = ...,

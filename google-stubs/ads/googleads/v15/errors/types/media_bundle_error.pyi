@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class MediaBundleErrorEnum(proto.Message):
     class MediaBundleError(proto.Enum):
@@ -29,8 +33,8 @@ class MediaBundleErrorEnum(proto.Message):
         URL_IN_MEDIA_BUNDLE_NOT_SSL_COMPLIANT = 23
         CUSTOM_EXIT_NOT_ALLOWED = 24
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

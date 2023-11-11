@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.enums.types.advertising_channel_sub_type import (
@@ -16,12 +17,14 @@ from google.ads.googleads.v15.enums.types.criterion_category_locale_availability
     CriterionCategoryLocaleAvailabilityModeEnum,
 )
 
+_M = TypeVar("_M")
+
 class CriterionCategoryAvailability(proto.Message):
     channel: CriterionCategoryChannelAvailability
     locale: MutableSequence[CriterionCategoryLocaleAvailability]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         channel: CriterionCategoryChannelAvailability = ...,
@@ -36,8 +39,8 @@ class CriterionCategoryChannelAvailability(proto.Message):
     ]
     include_default_channel_sub_type: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode = ...,
@@ -53,8 +56,8 @@ class CriterionCategoryLocaleAvailability(proto.Message):
     country_code: str
     language_code: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         availability_mode: CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode = ...,

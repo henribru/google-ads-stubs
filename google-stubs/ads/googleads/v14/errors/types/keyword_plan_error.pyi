@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class KeywordPlanErrorEnum(proto.Message):
     class KeywordPlanError(proto.Enum):
@@ -21,8 +25,8 @@ class KeywordPlanErrorEnum(proto.Message):
         INVALID_FORECAST_DATE_RANGE = 15
         INVALID_NAME = 16
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

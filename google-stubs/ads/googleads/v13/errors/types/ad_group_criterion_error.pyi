@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AdGroupCriterionErrorEnum(proto.Message):
     class AdGroupCriterionError(proto.Enum):
@@ -35,8 +39,8 @@ class AdGroupCriterionErrorEnum(proto.Message):
         FINAL_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE = 37
         FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE = 38
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

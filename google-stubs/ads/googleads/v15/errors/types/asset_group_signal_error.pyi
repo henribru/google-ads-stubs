@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AssetGroupSignalErrorEnum(proto.Message):
     class AssetGroupSignalError(proto.Enum):
@@ -10,8 +14,8 @@ class AssetGroupSignalErrorEnum(proto.Message):
         SEARCH_THEME_POLICY_VIOLATION = 3
         AUDIENCE_WITH_WRONG_ASSET_GROUP_ID = 4
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

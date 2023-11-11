@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class TrackingCodePageFormatEnum(proto.Message):
     class TrackingCodePageFormat(proto.Enum):
@@ -9,8 +13,8 @@ class TrackingCodePageFormatEnum(proto.Message):
         HTML = 2
         AMP = 3
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

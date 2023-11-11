@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
 
@@ -9,6 +10,8 @@ from google.ads.googleads.v15.common.types.offline_user_data import UserIdentifi
 from google.ads.googleads.v15.enums.types.conversion_environment_enum import (
     ConversionEnvironmentEnum,
 )
+
+_M = TypeVar("_M")
 
 class CallConversion(proto.Message):
     caller_id: str
@@ -20,8 +23,8 @@ class CallConversion(proto.Message):
     custom_variables: MutableSequence[CustomVariable]
     consent: Consent
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         caller_id: str = ...,
@@ -40,8 +43,8 @@ class CallConversionResult(proto.Message):
     conversion_action: str
     conversion_date_time: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         caller_id: str = ...,
@@ -56,8 +59,8 @@ class CartData(proto.Message):
         quantity: int
         unit_price: float
         def __init__(
-            self,
-            mapping: Any | None = ...,
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
             *,
             ignore_unknown_fields: bool = ...,
             product_id: str = ...,
@@ -70,8 +73,8 @@ class CartData(proto.Message):
     local_transaction_cost: float
     items: MutableSequence[CartData.Item]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         merchant_id: int = ...,
@@ -97,8 +100,8 @@ class ClickConversion(proto.Message):
     conversion_environment: ConversionEnvironmentEnum.ConversionEnvironment
     consent: Consent
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         gclid: str = ...,
@@ -125,8 +128,8 @@ class ClickConversionResult(proto.Message):
     conversion_date_time: str
     user_identifiers: MutableSequence[UserIdentifier]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         gclid: str = ...,
@@ -141,8 +144,8 @@ class CustomVariable(proto.Message):
     conversion_custom_variable: str
     value: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         conversion_custom_variable: str = ...,
@@ -153,8 +156,8 @@ class ExternalAttributionData(proto.Message):
     external_attribution_credit: float
     external_attribution_model: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         external_attribution_credit: float = ...,
@@ -167,8 +170,8 @@ class UploadCallConversionsRequest(proto.Message):
     partial_failure: bool
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -181,8 +184,8 @@ class UploadCallConversionsResponse(proto.Message):
     partial_failure_error: Status
     results: MutableSequence[CallConversionResult]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,
@@ -197,8 +200,8 @@ class UploadClickConversionsRequest(proto.Message):
     debug_enabled: bool
     job_id: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -214,8 +217,8 @@ class UploadClickConversionsResponse(proto.Message):
     results: MutableSequence[ClickConversionResult]
     job_id: int
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         partial_failure_error: Status = ...,

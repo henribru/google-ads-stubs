@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class CampaignErrorEnum(proto.Message):
     class CampaignError(proto.Enum):
@@ -79,8 +83,8 @@ class CampaignErrorEnum(proto.Message):
         NOT_LINKED_ADVERTISING_PARTNER = 83
         INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS = 84
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

@@ -1,5 +1,7 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v15.common.types.simulation import (
@@ -11,6 +13,8 @@ from google.ads.googleads.v15.enums.types.simulation_modification_method import 
 )
 from google.ads.googleads.v15.enums.types.simulation_type import SimulationTypeEnum
 
+_M = TypeVar("_M")
+
 class BiddingStrategySimulation(proto.Message):
     resource_name: str
     bidding_strategy_id: int
@@ -21,8 +25,8 @@ class BiddingStrategySimulation(proto.Message):
     target_cpa_point_list: TargetCpaSimulationPointList
     target_roas_point_list: TargetRoasSimulationPointList
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,

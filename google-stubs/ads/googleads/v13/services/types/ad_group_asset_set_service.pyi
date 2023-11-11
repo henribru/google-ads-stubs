@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
 
@@ -9,12 +10,14 @@ from google.ads.googleads.v13.enums.types.response_content_type import (
 )
 from google.ads.googleads.v13.resources.types.ad_group_asset_set import AdGroupAssetSet
 
+_M = TypeVar("_M")
+
 class AdGroupAssetSetOperation(proto.Message):
     create: AdGroupAssetSet
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: AdGroupAssetSet = ...,
@@ -25,8 +28,8 @@ class MutateAdGroupAssetSetResult(proto.Message):
     resource_name: str
     ad_group_asset_set: AdGroupAssetSet
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -40,8 +43,8 @@ class MutateAdGroupAssetSetsRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -55,8 +58,8 @@ class MutateAdGroupAssetSetsResponse(proto.Message):
     results: MutableSequence[MutateAdGroupAssetSetResult]
     partial_failure_error: Status
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[MutateAdGroupAssetSetResult] = ...,

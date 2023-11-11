@@ -1,15 +1,19 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 
 from google.ads.googleads.v14.resources.types.billing_setup import BillingSetup
+
+_M = TypeVar("_M")
 
 class BillingSetupOperation(proto.Message):
     create: BillingSetup
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: BillingSetup = ...,
@@ -20,8 +24,8 @@ class MutateBillingSetupRequest(proto.Message):
     customer_id: str
     operation: BillingSetupOperation
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -31,8 +35,8 @@ class MutateBillingSetupRequest(proto.Message):
 class MutateBillingSetupResponse(proto.Message):
     result: MutateBillingSetupResult
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         result: MutateBillingSetupResult = ...
@@ -41,8 +45,8 @@ class MutateBillingSetupResponse(proto.Message):
 class MutateBillingSetupResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

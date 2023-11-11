@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
 
@@ -9,12 +10,14 @@ from google.ads.googleads.v15.enums.types.response_content_type import (
 )
 from google.ads.googleads.v15.resources.types.campaign_asset_set import CampaignAssetSet
 
+_M = TypeVar("_M")
+
 class CampaignAssetSetOperation(proto.Message):
     create: CampaignAssetSet
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         create: CampaignAssetSet = ...,
@@ -25,8 +28,8 @@ class MutateCampaignAssetSetResult(proto.Message):
     resource_name: str
     campaign_asset_set: CampaignAssetSet
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...,
@@ -40,8 +43,8 @@ class MutateCampaignAssetSetsRequest(proto.Message):
     validate_only: bool
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -55,8 +58,8 @@ class MutateCampaignAssetSetsResponse(proto.Message):
     results: MutableSequence[MutateCampaignAssetSetResult]
     partial_failure_error: Status
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         results: MutableSequence[MutateCampaignAssetSetResult] = ...,

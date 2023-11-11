@@ -1,6 +1,7 @@
-from collections.abc import MutableSequence
-from typing import Any
+from collections.abc import Mapping, MutableSequence
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 
@@ -8,11 +9,13 @@ from google.ads.googleads.v14.resources.types.merchant_center_link import (
     MerchantCenterLink,
 )
 
+_M = TypeVar("_M")
+
 class GetMerchantCenterLinkRequest(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...
@@ -21,8 +24,8 @@ class GetMerchantCenterLinkRequest(proto.Message):
 class ListMerchantCenterLinksRequest(proto.Message):
     customer_id: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...
@@ -31,8 +34,8 @@ class ListMerchantCenterLinksRequest(proto.Message):
 class ListMerchantCenterLinksResponse(proto.Message):
     merchant_center_links: MutableSequence[MerchantCenterLink]
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         merchant_center_links: MutableSequence[MerchantCenterLink] = ...
@@ -43,8 +46,8 @@ class MerchantCenterLinkOperation(proto.Message):
     update: MerchantCenterLink
     remove: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         update_mask: FieldMask = ...,
@@ -57,8 +60,8 @@ class MutateMerchantCenterLinkRequest(proto.Message):
     operation: MerchantCenterLinkOperation
     validate_only: bool
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         customer_id: str = ...,
@@ -69,8 +72,8 @@ class MutateMerchantCenterLinkRequest(proto.Message):
 class MutateMerchantCenterLinkResponse(proto.Message):
     result: MutateMerchantCenterLinkResult
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         result: MutateMerchantCenterLinkResult = ...
@@ -79,8 +82,8 @@ class MutateMerchantCenterLinkResponse(proto.Message):
 class MutateMerchantCenterLinkResult(proto.Message):
     resource_name: str
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
         resource_name: str = ...

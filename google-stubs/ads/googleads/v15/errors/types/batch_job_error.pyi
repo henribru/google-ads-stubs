@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class BatchJobErrorEnum(proto.Message):
     class BatchJobError(proto.Enum):
@@ -14,8 +18,8 @@ class BatchJobErrorEnum(proto.Message):
         CAN_ONLY_REMOVE_PENDING_JOB = 7
         CANNOT_LIST_RESULTS = 8
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

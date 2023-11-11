@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class AssetLinkErrorEnum(proto.Message):
     class AssetLinkError(proto.Enum):
@@ -28,8 +32,8 @@ class AssetLinkErrorEnum(proto.Message):
         CANNOT_MODIFY_ASSET_LINK_SOURCE = 21
         CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET = 22
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...

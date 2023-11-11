@@ -1,6 +1,10 @@
-from typing import Any
+from collections.abc import Mapping
+from typing import Any, TypeVar
 
+import google.protobuf.message
 import proto
+
+_M = TypeVar("_M")
 
 class ResourceLimitTypeEnum(proto.Message):
     class ResourceLimitType(proto.Enum):
@@ -148,8 +152,8 @@ class ResourceLimitTypeEnum(proto.Message):
         ENABLED_BRAND_LIST_CRITERIA_PER_CAMPAIGN = 184
         SHARED_SETS_PER_ACCOUNT_FOR_BRAND = 185
     def __init__(
-        self,
-        mapping: Any | None = ...,
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
         *,
         ignore_unknown_fields: bool = ...,
     ) -> None: ...
