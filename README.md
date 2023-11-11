@@ -39,13 +39,21 @@ campaign_operation = CampaignOperation()
 While it is technically possible to type this method using a combination of overloading and literal types,
 this is not included in these stubs. The reason is that it requires about 10,000 overloads, which makes most typecheckers fairly slow.
 
-Certain types are too lenient compared to what's allowed at runtime. `GoogleAdsClient.enums` is typed as `Any` and so is the `mapping` argument to protobuf message constructors. 
-On the other hand certain types are more strict than what's allowed at runtime. You can't substitute a protobuf message for an equivalent dict or an enum with it's equivalent name or value. This might improve in the future, but for now:
+Certain types are too lenient compared to what's allowed at runtime. `GoogleAdsClient.enums` is typed as `Any` and the first argument to protobuf message constructors accepts any mapping. 
+On the other hand certain types are more strict than what's allowed at runtime. You can't substitute a protobuf message for an equivalent dict or an enum with it's equivalent name or value.
 
 ```python
 # Replace this:
-AdGroupAd({"status": "ENABLED", ad={"type": 2}})
+AdGroupAd({
+    "status": "ENABLED", 
+    "ad_strength": client.enums.AdStrengtEnum.GOOD, 
+    "ad": {"type": 2},
+})
 # With this:
-from google.ads.googleads.v15 import AdGroupAdStatusEnum, AdTypeEnum, Ad
-AdGroupAd(status=AdGroupAdStatusEnum.AdGroupAdStatus.ENABLED, ad=Ad(type=AdTypeEnum.AdType.TEXT_AD))
+from google.ads.googleads.v15 import AdGroupAdStatusEnum, AdStrengtEnum, AdTypeEnum, Ad
+AdGroupAd(
+    status=AdGroupAdStatusEnum.AdGroupAdStatus.ENABLED, 
+    ad_strength=AdStrengtEnum.AdStrengt.GOOD, 
+    ad=Ad(type=AdTypeEnum.AdType.TEXT_AD),
+)
 ```
