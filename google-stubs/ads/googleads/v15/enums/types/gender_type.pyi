@@ -1,0 +1,17 @@
+from typing import Any
+
+import proto
+
+class GenderTypeEnum(proto.Message):
+    class GenderType(proto.Enum):
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        MALE = 10
+        FEMALE = 11
+        UNDETERMINED = 20
+    def __init__(
+        self,
+        mapping: Any | None = ...,
+        *,
+        ignore_unknown_fields: bool = ...,
+    ) -> None: ...

@@ -8,6 +8,7 @@ class _ConfigDataRequired(TypedDict):
 class _ConfigDataOptional(TypedDict, total=False):
     endpoint: str
     http_proxy: str
+    use_cloud_org_for_api_access: bool
 
 class _ConfigDataParsedOptional(_ConfigDataOptional, total=False):
     login_customer_id: str
@@ -30,9 +31,11 @@ class _InstalledAppConfigDataRequired(TypedDict):
     client_secret: str
     refresh_token: str
 
+class _ServiceAccountConfigDataOptional(TypedDict, total=False):
+    impersonated_email: str
+
 class _ServiceAccountConfigDataRequired(TypedDict):
     json_key_file_path: str
-    impersonated_email: str
 
 class _InstalledAppConfigData(
     _ConfigDataParsedRequired,
@@ -51,6 +54,7 @@ class _InstalledAppConfigDataUnparsed(
 class _ServiceAccountConfigData(
     _ConfigDataParsedRequired,
     _ConfigDataParsedOptional,
+    _ServiceAccountConfigDataOptional,
     _ServiceAccountConfigDataRequired,
 ):
     pass
@@ -58,6 +62,7 @@ class _ServiceAccountConfigData(
 class _ServiceAccountConfigDataUnparsed(
     _ConfigDataUnparsedRequired,
     _ConfigDataUnparsedOptional,
+    _ServiceAccountConfigDataOptional,
     _ServiceAccountConfigDataRequired,
 ):
     pass
