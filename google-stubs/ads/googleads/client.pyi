@@ -13,6 +13,672 @@ _V14 = Literal["v14"]
 _V15 = Literal["v15"]
 _V = Union[_V13, _V14, _V15]
 
+class _EnumGetter:
+    AccessInvitationStatusEnum: type[
+        v15.AccessInvitationStatusEnum.AccessInvitationStatus
+    ]
+    AccessReasonEnum: type[v15.AccessReasonEnum.AccessReason]
+    AccessRoleEnum: type[v15.AccessRoleEnum.AccessRole]
+    AccountBudgetProposalStatusEnum: type[
+        v15.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus
+    ]
+    AccountBudgetProposalTypeEnum: type[
+        v15.AccountBudgetProposalTypeEnum.AccountBudgetProposalType
+    ]
+    AccountBudgetStatusEnum: type[v15.AccountBudgetStatusEnum.AccountBudgetStatus]
+    AccountLinkStatusEnum: type[v15.AccountLinkStatusEnum.AccountLinkStatus]
+    AdCustomizerPlaceholderFieldEnum: type[
+        v15.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
+    ]
+    AdDestinationTypeEnum: type[v15.AdDestinationTypeEnum.AdDestinationType]
+    AdGroupAdRotationModeEnum: type[v15.AdGroupAdRotationModeEnum.AdGroupAdRotationMode]
+    AdGroupAdStatusEnum: type[v15.AdGroupAdStatusEnum.AdGroupAdStatus]
+    AdGroupCriterionApprovalStatusEnum: type[
+        v15.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus
+    ]
+    AdGroupCriterionStatusEnum: type[
+        v15.AdGroupCriterionStatusEnum.AdGroupCriterionStatus
+    ]
+    AdGroupStatusEnum: type[v15.AdGroupStatusEnum.AdGroupStatus]
+    AdGroupTypeEnum: type[v15.AdGroupTypeEnum.AdGroupType]
+    AdNetworkTypeEnum: type[v15.AdNetworkTypeEnum.AdNetworkType]
+    AdServingOptimizationStatusEnum: type[
+        v15.AdServingOptimizationStatusEnum.AdServingOptimizationStatus
+    ]
+    AdStrengthEnum: type[v15.AdStrengthEnum.AdStrength]
+    AdTypeEnum: type[v15.AdTypeEnum.AdType]
+    AdvertisingChannelSubTypeEnum: type[
+        v15.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
+    ]
+    AdvertisingChannelTypeEnum: type[
+        v15.AdvertisingChannelTypeEnum.AdvertisingChannelType
+    ]
+    AffiliateLocationFeedRelationshipTypeEnum: type[
+        v15.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
+    ]
+    AffiliateLocationPlaceholderFieldEnum: type[
+        v15.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField
+    ]
+    AgeRangeTypeEnum: type[v15.AgeRangeTypeEnum.AgeRangeType]
+    AndroidPrivacyInteractionTypeEnum: type[
+        v15.AndroidPrivacyInteractionTypeEnum.AndroidPrivacyInteractionType
+    ]
+    AndroidPrivacyNetworkTypeEnum: type[
+        v15.AndroidPrivacyNetworkTypeEnum.AndroidPrivacyNetworkType
+    ]
+    AppBiddingGoalEnum: type[v15.AppBiddingGoalEnum.AppBiddingGoal]
+    AppCampaignAppStoreEnum: type[v15.AppCampaignAppStoreEnum.AppCampaignAppStore]
+    AppCampaignBiddingStrategyGoalTypeEnum: type[
+        v15.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
+    ]
+    AppPaymentModelTypeEnum: type[v15.AppPaymentModelTypeEnum.AppPaymentModelType]
+    AppPlaceholderFieldEnum: type[v15.AppPlaceholderFieldEnum.AppPlaceholderField]
+    AppStoreEnum: type[v15.AppStoreEnum.AppStore]
+    AppUrlOperatingSystemTypeEnum: type[
+        v15.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType
+    ]
+    AssetAutomationStatusEnum: type[v15.AssetAutomationStatusEnum.AssetAutomationStatus]
+    AssetAutomationTypeEnum: type[v15.AssetAutomationTypeEnum.AssetAutomationType]
+    AssetFieldTypeEnum: type[v15.AssetFieldTypeEnum.AssetFieldType]
+    AssetGroupPrimaryStatusEnum: type[
+        v15.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus
+    ]
+    AssetGroupPrimaryStatusReasonEnum: type[
+        v15.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason
+    ]
+    AssetGroupSignalApprovalStatusEnum: type[
+        v15.AssetGroupSignalApprovalStatusEnum.AssetGroupSignalApprovalStatus
+    ]
+    AssetGroupStatusEnum: type[v15.AssetGroupStatusEnum.AssetGroupStatus]
+    AssetLinkPrimaryStatusEnum: type[
+        v15.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus
+    ]
+    AssetLinkPrimaryStatusReasonEnum: type[
+        v15.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason
+    ]
+    AssetLinkStatusEnum: type[v15.AssetLinkStatusEnum.AssetLinkStatus]
+    AssetOfflineEvaluationErrorReasonsEnum: type[
+        v15.AssetOfflineEvaluationErrorReasonsEnum.AssetOfflineEvaluationErrorReasons
+    ]
+    AssetPerformanceLabelEnum: type[v15.AssetPerformanceLabelEnum.AssetPerformanceLabel]
+    AssetSetAssetStatusEnum: type[v15.AssetSetAssetStatusEnum.AssetSetAssetStatus]
+    AssetSetLinkStatusEnum: type[v15.AssetSetLinkStatusEnum.AssetSetLinkStatus]
+    AssetSetStatusEnum: type[v15.AssetSetStatusEnum.AssetSetStatus]
+    AssetSetTypeEnum: type[v15.AssetSetTypeEnum.AssetSetType]
+    AssetSourceEnum: type[v15.AssetSourceEnum.AssetSource]
+    AssetTypeEnum: type[v15.AssetTypeEnum.AssetType]
+    AsyncActionStatusEnum: type[v15.AsyncActionStatusEnum.AsyncActionStatus]
+    AttributionModelEnum: type[v15.AttributionModelEnum.AttributionModel]
+    AudienceInsightsDimensionEnum: type[
+        v15.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+    ]
+    AudienceScopeEnum: type[v15.AudienceScopeEnum.AudienceScope]
+    AudienceStatusEnum: type[v15.AudienceStatusEnum.AudienceStatus]
+    BatchJobStatusEnum: type[v15.BatchJobStatusEnum.BatchJobStatus]
+    BidModifierSourceEnum: type[v15.BidModifierSourceEnum.BidModifierSource]
+    BiddingSourceEnum: type[v15.BiddingSourceEnum.BiddingSource]
+    BiddingStrategyStatusEnum: type[v15.BiddingStrategyStatusEnum.BiddingStrategyStatus]
+    BiddingStrategySystemStatusEnum: type[
+        v15.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus
+    ]
+    BiddingStrategyTypeEnum: type[v15.BiddingStrategyTypeEnum.BiddingStrategyType]
+    BillingSetupStatusEnum: type[v15.BillingSetupStatusEnum.BillingSetupStatus]
+    BrandSafetySuitabilityEnum: type[
+        v15.BrandSafetySuitabilityEnum.BrandSafetySuitability
+    ]
+    BrandStateEnum: type[v15.BrandStateEnum.BrandState]
+    BudgetCampaignAssociationStatusEnum: type[
+        v15.BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus
+    ]
+    BudgetDeliveryMethodEnum: type[v15.BudgetDeliveryMethodEnum.BudgetDeliveryMethod]
+    BudgetPeriodEnum: type[v15.BudgetPeriodEnum.BudgetPeriod]
+    BudgetStatusEnum: type[v15.BudgetStatusEnum.BudgetStatus]
+    BudgetTypeEnum: type[v15.BudgetTypeEnum.BudgetType]
+    CallConversionReportingStateEnum: type[
+        v15.CallConversionReportingStateEnum.CallConversionReportingState
+    ]
+    CallPlaceholderFieldEnum: type[v15.CallPlaceholderFieldEnum.CallPlaceholderField]
+    CallToActionTypeEnum: type[v15.CallToActionTypeEnum.CallToActionType]
+    CallTrackingDisplayLocationEnum: type[
+        v15.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation
+    ]
+    CallTypeEnum: type[v15.CallTypeEnum.CallType]
+    CalloutPlaceholderFieldEnum: type[
+        v15.CalloutPlaceholderFieldEnum.CalloutPlaceholderField
+    ]
+    CampaignCriterionStatusEnum: type[
+        v15.CampaignCriterionStatusEnum.CampaignCriterionStatus
+    ]
+    CampaignDraftStatusEnum: type[v15.CampaignDraftStatusEnum.CampaignDraftStatus]
+    CampaignExperimentTypeEnum: type[
+        v15.CampaignExperimentTypeEnum.CampaignExperimentType
+    ]
+    CampaignGroupStatusEnum: type[v15.CampaignGroupStatusEnum.CampaignGroupStatus]
+    CampaignPrimaryStatusEnum: type[v15.CampaignPrimaryStatusEnum.CampaignPrimaryStatus]
+    CampaignPrimaryStatusReasonEnum: type[
+        v15.CampaignPrimaryStatusReasonEnum.CampaignPrimaryStatusReason
+    ]
+    CampaignServingStatusEnum: type[v15.CampaignServingStatusEnum.CampaignServingStatus]
+    CampaignSharedSetStatusEnum: type[
+        v15.CampaignSharedSetStatusEnum.CampaignSharedSetStatus
+    ]
+    CampaignStatusEnum: type[v15.CampaignStatusEnum.CampaignStatus]
+    ChainRelationshipTypeEnum: type[v15.ChainRelationshipTypeEnum.ChainRelationshipType]
+    ChangeClientTypeEnum: type[v15.ChangeClientTypeEnum.ChangeClientType]
+    ChangeEventResourceTypeEnum: type[
+        v15.ChangeEventResourceTypeEnum.ChangeEventResourceType
+    ]
+    ChangeStatusOperationEnum: type[v15.ChangeStatusOperationEnum.ChangeStatusOperation]
+    ChangeStatusResourceTypeEnum: type[
+        v15.ChangeStatusResourceTypeEnum.ChangeStatusResourceType
+    ]
+    ClickTypeEnum: type[v15.ClickTypeEnum.ClickType]
+    CombinedAudienceStatusEnum: type[
+        v15.CombinedAudienceStatusEnum.CombinedAudienceStatus
+    ]
+    ConsentStatusEnum: type[v15.ConsentStatusEnum.ConsentStatus]
+    ContentLabelTypeEnum: type[v15.ContentLabelTypeEnum.ContentLabelType]
+    ConversionActionCategoryEnum: type[
+        v15.ConversionActionCategoryEnum.ConversionActionCategory
+    ]
+    ConversionActionCountingTypeEnum: type[
+        v15.ConversionActionCountingTypeEnum.ConversionActionCountingType
+    ]
+    ConversionActionStatusEnum: type[
+        v15.ConversionActionStatusEnum.ConversionActionStatus
+    ]
+    ConversionActionTypeEnum: type[v15.ConversionActionTypeEnum.ConversionActionType]
+    ConversionAdjustmentTypeEnum: type[
+        v15.ConversionAdjustmentTypeEnum.ConversionAdjustmentType
+    ]
+    ConversionAttributionEventTypeEnum: type[
+        v15.ConversionAttributionEventTypeEnum.ConversionAttributionEventType
+    ]
+    ConversionCustomVariableStatusEnum: type[
+        v15.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus
+    ]
+    ConversionEnvironmentEnum: type[v15.ConversionEnvironmentEnum.ConversionEnvironment]
+    ConversionLagBucketEnum: type[v15.ConversionLagBucketEnum.ConversionLagBucket]
+    ConversionOrAdjustmentLagBucketEnum: type[
+        v15.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket
+    ]
+    ConversionOriginEnum: type[v15.ConversionOriginEnum.ConversionOrigin]
+    ConversionTrackingStatusEnum: type[
+        v15.ConversionTrackingStatusEnum.ConversionTrackingStatus
+    ]
+    ConversionValueRulePrimaryDimensionEnum: type[
+        v15.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension
+    ]
+    ConversionValueRuleSetStatusEnum: type[
+        v15.ConversionValueRuleSetStatusEnum.ConversionValueRuleSetStatus
+    ]
+    ConversionValueRuleStatusEnum: type[
+        v15.ConversionValueRuleStatusEnum.ConversionValueRuleStatus
+    ]
+    ConvertingUserPriorEngagementTypeAndLtvBucketEnum: type[
+        v15.ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket
+    ]
+    CriterionCategoryChannelAvailabilityModeEnum: type[
+        v15.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
+    ]
+    CriterionCategoryLocaleAvailabilityModeEnum: type[
+        v15.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
+    ]
+    CriterionSystemServingStatusEnum: type[
+        v15.CriterionSystemServingStatusEnum.CriterionSystemServingStatus
+    ]
+    CriterionTypeEnum: type[v15.CriterionTypeEnum.CriterionType]
+    CustomAudienceMemberTypeEnum: type[
+        v15.CustomAudienceMemberTypeEnum.CustomAudienceMemberType
+    ]
+    CustomAudienceStatusEnum: type[v15.CustomAudienceStatusEnum.CustomAudienceStatus]
+    CustomAudienceTypeEnum: type[v15.CustomAudienceTypeEnum.CustomAudienceType]
+    CustomConversionGoalStatusEnum: type[
+        v15.CustomConversionGoalStatusEnum.CustomConversionGoalStatus
+    ]
+    CustomInterestMemberTypeEnum: type[
+        v15.CustomInterestMemberTypeEnum.CustomInterestMemberType
+    ]
+    CustomInterestStatusEnum: type[v15.CustomInterestStatusEnum.CustomInterestStatus]
+    CustomInterestTypeEnum: type[v15.CustomInterestTypeEnum.CustomInterestType]
+    CustomPlaceholderFieldEnum: type[
+        v15.CustomPlaceholderFieldEnum.CustomPlaceholderField
+    ]
+    CustomerAcquisitionOptimizationModeEnum: type[
+        v15.CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode
+    ]
+    CustomerMatchUploadKeyTypeEnum: type[
+        v15.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType
+    ]
+    CustomerPayPerConversionEligibilityFailureReasonEnum: type[
+        v15.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason
+    ]
+    CustomerStatusEnum: type[v15.CustomerStatusEnum.CustomerStatus]
+    CustomizerAttributeStatusEnum: type[
+        v15.CustomizerAttributeStatusEnum.CustomizerAttributeStatus
+    ]
+    CustomizerAttributeTypeEnum: type[
+        v15.CustomizerAttributeTypeEnum.CustomizerAttributeType
+    ]
+    CustomizerValueStatusEnum: type[v15.CustomizerValueStatusEnum.CustomizerValueStatus]
+    DataDrivenModelStatusEnum: type[v15.DataDrivenModelStatusEnum.DataDrivenModelStatus]
+    DayOfWeekEnum: type[v15.DayOfWeekEnum.DayOfWeek]
+    DeviceEnum: type[v15.DeviceEnum.Device]
+    DisplayAdFormatSettingEnum: type[
+        v15.DisplayAdFormatSettingEnum.DisplayAdFormatSetting
+    ]
+    DisplayUploadProductTypeEnum: type[
+        v15.DisplayUploadProductTypeEnum.DisplayUploadProductType
+    ]
+    DistanceBucketEnum: type[v15.DistanceBucketEnum.DistanceBucket]
+    DsaPageFeedCriterionFieldEnum: type[
+        v15.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField
+    ]
+    EducationPlaceholderFieldEnum: type[
+        v15.EducationPlaceholderFieldEnum.EducationPlaceholderField
+    ]
+    ExperimentMetricDirectionEnum: type[
+        v15.ExperimentMetricDirectionEnum.ExperimentMetricDirection
+    ]
+    ExperimentMetricEnum: type[v15.ExperimentMetricEnum.ExperimentMetric]
+    ExperimentStatusEnum: type[v15.ExperimentStatusEnum.ExperimentStatus]
+    ExperimentTypeEnum: type[v15.ExperimentTypeEnum.ExperimentType]
+    ExtensionSettingDeviceEnum: type[
+        v15.ExtensionSettingDeviceEnum.ExtensionSettingDevice
+    ]
+    ExtensionTypeEnum: type[v15.ExtensionTypeEnum.ExtensionType]
+    ExternalConversionSourceEnum: type[
+        v15.ExternalConversionSourceEnum.ExternalConversionSource
+    ]
+    FeedAttributeTypeEnum: type[v15.FeedAttributeTypeEnum.FeedAttributeType]
+    FeedItemQualityApprovalStatusEnum: type[
+        v15.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus
+    ]
+    FeedItemQualityDisapprovalReasonEnum: type[
+        v15.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason
+    ]
+    FeedItemSetStatusEnum: type[v15.FeedItemSetStatusEnum.FeedItemSetStatus]
+    FeedItemSetStringFilterTypeEnum: type[
+        v15.FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType
+    ]
+    FeedItemStatusEnum: type[v15.FeedItemStatusEnum.FeedItemStatus]
+    FeedItemTargetDeviceEnum: type[v15.FeedItemTargetDeviceEnum.FeedItemTargetDevice]
+    FeedItemTargetStatusEnum: type[v15.FeedItemTargetStatusEnum.FeedItemTargetStatus]
+    FeedItemTargetTypeEnum: type[v15.FeedItemTargetTypeEnum.FeedItemTargetType]
+    FeedItemValidationStatusEnum: type[
+        v15.FeedItemValidationStatusEnum.FeedItemValidationStatus
+    ]
+    FeedLinkStatusEnum: type[v15.FeedLinkStatusEnum.FeedLinkStatus]
+    FeedMappingCriterionTypeEnum: type[
+        v15.FeedMappingCriterionTypeEnum.FeedMappingCriterionType
+    ]
+    FeedMappingStatusEnum: type[v15.FeedMappingStatusEnum.FeedMappingStatus]
+    FeedOriginEnum: type[v15.FeedOriginEnum.FeedOrigin]
+    FeedStatusEnum: type[v15.FeedStatusEnum.FeedStatus]
+    FlightPlaceholderFieldEnum: type[
+        v15.FlightPlaceholderFieldEnum.FlightPlaceholderField
+    ]
+    FrequencyCapEventTypeEnum: type[v15.FrequencyCapEventTypeEnum.FrequencyCapEventType]
+    FrequencyCapLevelEnum: type[v15.FrequencyCapLevelEnum.FrequencyCapLevel]
+    FrequencyCapTimeUnitEnum: type[v15.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit]
+    GenderTypeEnum: type[v15.GenderTypeEnum.GenderType]
+    GeoTargetConstantStatusEnum: type[
+        v15.GeoTargetConstantStatusEnum.GeoTargetConstantStatus
+    ]
+    GeoTargetingRestrictionEnum: type[
+        v15.GeoTargetingRestrictionEnum.GeoTargetingRestriction
+    ]
+    GeoTargetingTypeEnum: type[v15.GeoTargetingTypeEnum.GeoTargetingType]
+    GoalConfigLevelEnum: type[v15.GoalConfigLevelEnum.GoalConfigLevel]
+    GoogleAdsFieldCategoryEnum: type[
+        v15.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory
+    ]
+    GoogleAdsFieldDataTypeEnum: type[
+        v15.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
+    ]
+    GoogleVoiceCallStatusEnum: type[v15.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus]
+    HotelAssetSuggestionStatusEnum: type[
+        v15.HotelAssetSuggestionStatusEnum.HotelAssetSuggestionStatus
+    ]
+    HotelDateSelectionTypeEnum: type[
+        v15.HotelDateSelectionTypeEnum.HotelDateSelectionType
+    ]
+    HotelPlaceholderFieldEnum: type[v15.HotelPlaceholderFieldEnum.HotelPlaceholderField]
+    HotelPriceBucketEnum: type[v15.HotelPriceBucketEnum.HotelPriceBucket]
+    HotelRateTypeEnum: type[v15.HotelRateTypeEnum.HotelRateType]
+    HotelReconciliationStatusEnum: type[
+        v15.HotelReconciliationStatusEnum.HotelReconciliationStatus
+    ]
+    ImagePlaceholderFieldEnum: type[v15.ImagePlaceholderFieldEnum.ImagePlaceholderField]
+    IncomeRangeTypeEnum: type[v15.IncomeRangeTypeEnum.IncomeRangeType]
+    InteractionEventTypeEnum: type[v15.InteractionEventTypeEnum.InteractionEventType]
+    InteractionTypeEnum: type[v15.InteractionTypeEnum.InteractionType]
+    InvoiceTypeEnum: type[v15.InvoiceTypeEnum.InvoiceType]
+    JobPlaceholderFieldEnum: type[v15.JobPlaceholderFieldEnum.JobPlaceholderField]
+    KeywordMatchTypeEnum: type[v15.KeywordMatchTypeEnum.KeywordMatchType]
+    KeywordPlanAggregateMetricTypeEnum: type[
+        v15.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType
+    ]
+    KeywordPlanCompetitionLevelEnum: type[
+        v15.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel
+    ]
+    KeywordPlanConceptGroupTypeEnum: type[
+        v15.KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType
+    ]
+    KeywordPlanForecastIntervalEnum: type[
+        v15.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
+    ]
+    KeywordPlanKeywordAnnotationEnum: type[
+        v15.KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation
+    ]
+    KeywordPlanNetworkEnum: type[v15.KeywordPlanNetworkEnum.KeywordPlanNetwork]
+    LabelStatusEnum: type[v15.LabelStatusEnum.LabelStatus]
+    LeadFormCallToActionTypeEnum: type[
+        v15.LeadFormCallToActionTypeEnum.LeadFormCallToActionType
+    ]
+    LeadFormDesiredIntentEnum: type[v15.LeadFormDesiredIntentEnum.LeadFormDesiredIntent]
+    LeadFormFieldUserInputTypeEnum: type[
+        v15.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType
+    ]
+    LeadFormPostSubmitCallToActionTypeEnum: type[
+        v15.LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType
+    ]
+    LegacyAppInstallAdAppStoreEnum: type[
+        v15.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore
+    ]
+    LinkedAccountTypeEnum: type[v15.LinkedAccountTypeEnum.LinkedAccountType]
+    LinkedProductTypeEnum: type[v15.LinkedProductTypeEnum.LinkedProductType]
+    ListingGroupFilterCustomAttributeIndexEnum: type[
+        v15.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex
+    ]
+    ListingGroupFilterListingSourceEnum: type[
+        v15.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource
+    ]
+    ListingGroupFilterProductCategoryLevelEnum: type[
+        v15.ListingGroupFilterProductCategoryLevelEnum.ListingGroupFilterProductCategoryLevel
+    ]
+    ListingGroupFilterProductChannelEnum: type[
+        v15.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel
+    ]
+    ListingGroupFilterProductConditionEnum: type[
+        v15.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition
+    ]
+    ListingGroupFilterProductTypeLevelEnum: type[
+        v15.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel
+    ]
+    ListingGroupFilterTypeEnum: type[
+        v15.ListingGroupFilterTypeEnum.ListingGroupFilterType
+    ]
+    ListingGroupTypeEnum: type[v15.ListingGroupTypeEnum.ListingGroupType]
+    ListingTypeEnum: type[v15.ListingTypeEnum.ListingType]
+    LocalPlaceholderFieldEnum: type[v15.LocalPlaceholderFieldEnum.LocalPlaceholderField]
+    LocalServicesInsuranceRejectionReasonEnum: type[
+        v15.LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason
+    ]
+    LocalServicesLeadConversationTypeEnum: type[
+        v15.LocalServicesLeadConversationTypeEnum.ConversationType
+    ]
+    LocalServicesLeadStatusEnum: type[v15.LocalServicesLeadStatusEnum.LeadStatus]
+    LocalServicesLeadTypeEnum: type[v15.LocalServicesLeadTypeEnum.LeadType]
+    LocalServicesLicenseRejectionReasonEnum: type[
+        v15.LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason
+    ]
+    LocalServicesParticipantTypeEnum: type[
+        v15.LocalServicesParticipantTypeEnum.ParticipantType
+    ]
+    LocalServicesVerificationArtifactStatusEnum: type[
+        v15.LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
+    ]
+    LocalServicesVerificationArtifactTypeEnum: type[
+        v15.LocalServicesVerificationArtifactTypeEnum.LocalServicesVerificationArtifactType
+    ]
+    LocalServicesVerificationStatusEnum: type[
+        v15.LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
+    ]
+    LocationExtensionTargetingCriterionFieldEnum: type[
+        v15.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField
+    ]
+    LocationGroupRadiusUnitsEnum: type[
+        v15.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits
+    ]
+    LocationOwnershipTypeEnum: type[v15.LocationOwnershipTypeEnum.LocationOwnershipType]
+    LocationPlaceholderFieldEnum: type[
+        v15.LocationPlaceholderFieldEnum.LocationPlaceholderField
+    ]
+    LocationSourceTypeEnum: type[v15.LocationSourceTypeEnum.LocationSourceType]
+    LocationStringFilterTypeEnum: type[
+        v15.LocationStringFilterTypeEnum.LocationStringFilterType
+    ]
+    LookalikeExpansionLevelEnum: type[
+        v15.LookalikeExpansionLevelEnum.LookalikeExpansionLevel
+    ]
+    ManagerLinkStatusEnum: type[v15.ManagerLinkStatusEnum.ManagerLinkStatus]
+    MatchingFunctionContextTypeEnum: type[
+        v15.MatchingFunctionContextTypeEnum.MatchingFunctionContextType
+    ]
+    MatchingFunctionOperatorEnum: type[
+        v15.MatchingFunctionOperatorEnum.MatchingFunctionOperator
+    ]
+    MediaTypeEnum: type[v15.MediaTypeEnum.MediaType]
+    MessagePlaceholderFieldEnum: type[
+        v15.MessagePlaceholderFieldEnum.MessagePlaceholderField
+    ]
+    MimeTypeEnum: type[v15.MimeTypeEnum.MimeType]
+    MinuteOfHourEnum: type[v15.MinuteOfHourEnum.MinuteOfHour]
+    MobileAppVendorEnum: type[v15.MobileAppVendorEnum.MobileAppVendor]
+    MobileDeviceTypeEnum: type[v15.MobileDeviceTypeEnum.MobileDeviceType]
+    MonthOfYearEnum: type[v15.MonthOfYearEnum.MonthOfYear]
+    NegativeGeoTargetTypeEnum: type[v15.NegativeGeoTargetTypeEnum.NegativeGeoTargetType]
+    OfflineConversionDiagnosticStatusEnum: type[
+        v15.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus
+    ]
+    OfflineEventUploadClientEnum: type[
+        v15.OfflineEventUploadClientEnum.OfflineEventUploadClient
+    ]
+    OfflineUserDataJobFailureReasonEnum: type[
+        v15.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason
+    ]
+    OfflineUserDataJobMatchRateRangeEnum: type[
+        v15.OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange
+    ]
+    OfflineUserDataJobStatusEnum: type[
+        v15.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus
+    ]
+    OfflineUserDataJobTypeEnum: type[
+        v15.OfflineUserDataJobTypeEnum.OfflineUserDataJobType
+    ]
+    OperatingSystemVersionOperatorTypeEnum: type[
+        v15.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType
+    ]
+    OptimizationGoalTypeEnum: type[v15.OptimizationGoalTypeEnum.OptimizationGoalType]
+    ParentalStatusTypeEnum: type[v15.ParentalStatusTypeEnum.ParentalStatusType]
+    PaymentModeEnum: type[v15.PaymentModeEnum.PaymentMode]
+    PerformanceMaxUpgradeStatusEnum: type[
+        v15.PerformanceMaxUpgradeStatusEnum.PerformanceMaxUpgradeStatus
+    ]
+    PlaceholderTypeEnum: type[v15.PlaceholderTypeEnum.PlaceholderType]
+    PlacementTypeEnum: type[v15.PlacementTypeEnum.PlacementType]
+    PolicyApprovalStatusEnum: type[v15.PolicyApprovalStatusEnum.PolicyApprovalStatus]
+    PolicyReviewStatusEnum: type[v15.PolicyReviewStatusEnum.PolicyReviewStatus]
+    PolicyTopicEntryTypeEnum: type[v15.PolicyTopicEntryTypeEnum.PolicyTopicEntryType]
+    PolicyTopicEvidenceDestinationMismatchUrlTypeEnum: type[
+        v15.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType
+    ]
+    PolicyTopicEvidenceDestinationNotWorkingDeviceEnum: type[
+        v15.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice
+    ]
+    PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum: type[
+        v15.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
+    ]
+    PositiveGeoTargetTypeEnum: type[v15.PositiveGeoTargetTypeEnum.PositiveGeoTargetType]
+    PriceExtensionPriceQualifierEnum: type[
+        v15.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier
+    ]
+    PriceExtensionPriceUnitEnum: type[
+        v15.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit
+    ]
+    PriceExtensionTypeEnum: type[v15.PriceExtensionTypeEnum.PriceExtensionType]
+    PricePlaceholderFieldEnum: type[v15.PricePlaceholderFieldEnum.PricePlaceholderField]
+    ProductCategoryLevelEnum: type[v15.ProductCategoryLevelEnum.ProductCategoryLevel]
+    ProductCategoryStateEnum: type[v15.ProductCategoryStateEnum.ProductCategoryState]
+    ProductChannelEnum: type[v15.ProductChannelEnum.ProductChannel]
+    ProductChannelExclusivityEnum: type[
+        v15.ProductChannelExclusivityEnum.ProductChannelExclusivity
+    ]
+    ProductConditionEnum: type[v15.ProductConditionEnum.ProductCondition]
+    ProductCustomAttributeIndexEnum: type[
+        v15.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex
+    ]
+    ProductLinkInvitationStatusEnum: type[
+        v15.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
+    ]
+    ProductTypeLevelEnum: type[v15.ProductTypeLevelEnum.ProductTypeLevel]
+    PromotionExtensionDiscountModifierEnum: type[
+        v15.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier
+    ]
+    PromotionExtensionOccasionEnum: type[
+        v15.PromotionExtensionOccasionEnum.PromotionExtensionOccasion
+    ]
+    PromotionPlaceholderFieldEnum: type[
+        v15.PromotionPlaceholderFieldEnum.PromotionPlaceholderField
+    ]
+    ProximityRadiusUnitsEnum: type[v15.ProximityRadiusUnitsEnum.ProximityRadiusUnits]
+    QualityScoreBucketEnum: type[v15.QualityScoreBucketEnum.QualityScoreBucket]
+    ReachPlanAgeRangeEnum: type[v15.ReachPlanAgeRangeEnum.ReachPlanAgeRange]
+    ReachPlanNetworkEnum: type[v15.ReachPlanNetworkEnum.ReachPlanNetwork]
+    ReachPlanSurfaceEnum: type[v15.ReachPlanSurfaceEnum.ReachPlanSurface]
+    RealEstatePlaceholderFieldEnum: type[
+        v15.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
+    ]
+    RecommendationSubscriptionStatusEnum: type[
+        v15.RecommendationSubscriptionStatusEnum.RecommendationSubscriptionStatus
+    ]
+    RecommendationTypeEnum: type[v15.RecommendationTypeEnum.RecommendationType]
+    ResourceChangeOperationEnum: type[
+        v15.ResourceChangeOperationEnum.ResourceChangeOperation
+    ]
+    ResourceLimitTypeEnum: type[v15.ResourceLimitTypeEnum.ResourceLimitType]
+    ResponseContentTypeEnum: type[v15.ResponseContentTypeEnum.ResponseContentType]
+    SearchEngineResultsPageTypeEnum: type[
+        v15.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType
+    ]
+    SearchTermMatchTypeEnum: type[v15.SearchTermMatchTypeEnum.SearchTermMatchType]
+    SearchTermTargetingStatusEnum: type[
+        v15.SearchTermTargetingStatusEnum.SearchTermTargetingStatus
+    ]
+    SeasonalityEventScopeEnum: type[v15.SeasonalityEventScopeEnum.SeasonalityEventScope]
+    SeasonalityEventStatusEnum: type[
+        v15.SeasonalityEventStatusEnum.SeasonalityEventStatus
+    ]
+    ServedAssetFieldTypeEnum: type[v15.ServedAssetFieldTypeEnum.ServedAssetFieldType]
+    SharedSetStatusEnum: type[v15.SharedSetStatusEnum.SharedSetStatus]
+    SharedSetTypeEnum: type[v15.SharedSetTypeEnum.SharedSetType]
+    ShoppingAddProductsToCampaignRecommendationEnum: type[
+        v15.ShoppingAddProductsToCampaignRecommendationEnum.Reason
+    ]
+    SimulationModificationMethodEnum: type[
+        v15.SimulationModificationMethodEnum.SimulationModificationMethod
+    ]
+    SimulationTypeEnum: type[v15.SimulationTypeEnum.SimulationType]
+    SitelinkPlaceholderFieldEnum: type[
+        v15.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField
+    ]
+    SkAdNetworkAdEventTypeEnum: type[
+        v15.SkAdNetworkAdEventTypeEnum.SkAdNetworkAdEventType
+    ]
+    SkAdNetworkAttributionCreditEnum: type[
+        v15.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit
+    ]
+    SkAdNetworkCoarseConversionValueEnum: type[
+        v15.SkAdNetworkCoarseConversionValueEnum.SkAdNetworkCoarseConversionValue
+    ]
+    SkAdNetworkSourceTypeEnum: type[v15.SkAdNetworkSourceTypeEnum.SkAdNetworkSourceType]
+    SkAdNetworkUserTypeEnum: type[v15.SkAdNetworkUserTypeEnum.SkAdNetworkUserType]
+    SlotEnum: type[v15.SlotEnum.Slot]
+    SmartCampaignNotEligibleReasonEnum: type[
+        v15.SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason
+    ]
+    SmartCampaignStatusEnum: type[v15.SmartCampaignStatusEnum.SmartCampaignStatus]
+    SpendingLimitTypeEnum: type[v15.SpendingLimitTypeEnum.SpendingLimitType]
+    StructuredSnippetPlaceholderFieldEnum: type[
+        v15.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField
+    ]
+    SummaryRowSettingEnum: type[v15.SummaryRowSettingEnum.SummaryRowSetting]
+    SystemManagedResourceSourceEnum: type[
+        v15.SystemManagedResourceSourceEnum.SystemManagedResourceSource
+    ]
+    TargetCpaOptInRecommendationGoalEnum: type[
+        v15.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
+    ]
+    TargetFrequencyTimeUnitEnum: type[
+        v15.TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit
+    ]
+    TargetImpressionShareLocationEnum: type[
+        v15.TargetImpressionShareLocationEnum.TargetImpressionShareLocation
+    ]
+    TargetingDimensionEnum: type[v15.TargetingDimensionEnum.TargetingDimension]
+    TimeTypeEnum: type[v15.TimeTypeEnum.TimeType]
+    TrackingCodePageFormatEnum: type[
+        v15.TrackingCodePageFormatEnum.TrackingCodePageFormat
+    ]
+    TrackingCodeTypeEnum: type[v15.TrackingCodeTypeEnum.TrackingCodeType]
+    TravelPlaceholderFieldEnum: type[
+        v15.TravelPlaceholderFieldEnum.TravelPlaceholderField
+    ]
+    UserIdentifierSourceEnum: type[v15.UserIdentifierSourceEnum.UserIdentifierSource]
+    UserInterestTaxonomyTypeEnum: type[
+        v15.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType
+    ]
+    UserListAccessStatusEnum: type[v15.UserListAccessStatusEnum.UserListAccessStatus]
+    UserListClosingReasonEnum: type[v15.UserListClosingReasonEnum.UserListClosingReason]
+    UserListCrmDataSourceTypeEnum: type[
+        v15.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType
+    ]
+    UserListDateRuleItemOperatorEnum: type[
+        v15.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator
+    ]
+    UserListFlexibleRuleOperatorEnum: type[
+        v15.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator
+    ]
+    UserListLogicalRuleOperatorEnum: type[
+        v15.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator
+    ]
+    UserListMembershipStatusEnum: type[
+        v15.UserListMembershipStatusEnum.UserListMembershipStatus
+    ]
+    UserListNumberRuleItemOperatorEnum: type[
+        v15.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator
+    ]
+    UserListPrepopulationStatusEnum: type[
+        v15.UserListPrepopulationStatusEnum.UserListPrepopulationStatus
+    ]
+    UserListRuleTypeEnum: type[v15.UserListRuleTypeEnum.UserListRuleType]
+    UserListSizeRangeEnum: type[v15.UserListSizeRangeEnum.UserListSizeRange]
+    UserListStringRuleItemOperatorEnum: type[
+        v15.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator
+    ]
+    UserListTypeEnum: type[v15.UserListTypeEnum.UserListType]
+    ValueRuleDeviceTypeEnum: type[v15.ValueRuleDeviceTypeEnum.ValueRuleDeviceType]
+    ValueRuleGeoLocationMatchTypeEnum: type[
+        v15.ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
+    ]
+    ValueRuleOperationEnum: type[v15.ValueRuleOperationEnum.ValueRuleOperation]
+    ValueRuleSetAttachmentTypeEnum: type[
+        v15.ValueRuleSetAttachmentTypeEnum.ValueRuleSetAttachmentType
+    ]
+    ValueRuleSetDimensionEnum: type[v15.ValueRuleSetDimensionEnum.ValueRuleSetDimension]
+    VanityPharmaDisplayUrlModeEnum: type[
+        v15.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode
+    ]
+    VanityPharmaTextEnum: type[v15.VanityPharmaTextEnum.VanityPharmaText]
+    VideoThumbnailEnum: type[v15.VideoThumbnailEnum.VideoThumbnail]
+    WebpageConditionOperandEnum: type[
+        v15.WebpageConditionOperandEnum.WebpageConditionOperand
+    ]
+    WebpageConditionOperatorEnum: type[
+        v15.WebpageConditionOperatorEnum.WebpageConditionOperator
+    ]
+
 class GoogleAdsClient:
     credentials: Credentials
     developer_token: str
@@ -22,7 +688,7 @@ class GoogleAdsClient:
     version: str | None
     http_proxy: str | None
     use_proto_plus: bool
-    enums: Any  # TODO
+    enums: _EnumGetter
     @classmethod
     def copy_from(
         cls,
