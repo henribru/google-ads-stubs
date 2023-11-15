@@ -1,4 +1,4 @@
-from typing import Any, Dict, Union, overload
+from typing import Any, overload
 
 import proto
 from google.oauth2.credentials import Credentials
@@ -11,7 +11,7 @@ from google.ads.googleads.config import _ConfigDataUnparsed
 _V13 = Literal["v13"]
 _V14 = Literal["v14"]
 _V15 = Literal["v15"]
-_V = Union[_V13, _V14, _V15]
+_V = _V13 | _V14 | _V15
 
 class _EnumGetter:
     AccessInvitationStatusEnum: type[
@@ -692,8 +692,8 @@ class GoogleAdsClient:
     @classmethod
     def copy_from(
         cls,
-        destination: Union[proto.Message, Message],
-        origin: Union[proto.Message, Message],
+        destination: proto.Message | Message,
+        origin: proto.Message | Message,
     ) -> None: ...
     @classmethod
     def load_from_env(cls, version: str | None = None) -> GoogleAdsClient: ...
@@ -715,7 +715,7 @@ class GoogleAdsClient:
         developer_token: str,
         endpoint: str | None = None,
         login_customer_id: str | None = None,
-        logging_config: Dict[Any, Any] | None = None,
+        logging_config: dict[Any, Any] | None = None,
         linked_customer_id: str | None = None,
         version: str | None = None,
         http_proxy: str | None = None,
