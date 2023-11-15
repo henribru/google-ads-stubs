@@ -27,9 +27,9 @@ class BackgroundCheckVerificationArtifact(proto.Message):
     final_adjudication_date_time: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         case_url: str = ...,
         final_adjudication_date_time: str = ...
     ) -> None: ...
@@ -40,9 +40,9 @@ class InsuranceVerificationArtifact(proto.Message):
     insurance_document_readonly: LocalServicesDocumentReadOnly
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         amount_micros: int = ...,
         rejection_reason: LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason = ...,
         insurance_document_readonly: LocalServicesDocumentReadOnly = ...
@@ -57,9 +57,9 @@ class LicenseVerificationArtifact(proto.Message):
     license_document_readonly: LocalServicesDocumentReadOnly
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         license_type: str = ...,
         license_number: str = ...,
         licensee_first_name: str = ...,
@@ -79,9 +79,9 @@ class LocalServicesVerificationArtifact(proto.Message):
     license_verification_artifact: LicenseVerificationArtifact
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         creation_date_time: str = ...,

@@ -16,7 +16,7 @@ from .transports.base import CustomerUserAccessInvitationServiceTransport
 
 class CustomerUserAccessInvitationServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomerUserAccessInvitationServiceTransport]: ...
 
 class CustomerUserAccessInvitationServiceClient(
@@ -62,11 +62,11 @@ class CustomerUserAccessInvitationServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
         transport: Optional[
             Union[str, CustomerUserAccessInvitationServiceTransport]
-        ] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        ] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customer_user_access_invitation(
@@ -76,15 +76,15 @@ class CustomerUserAccessInvitationServiceClient(
                 customer_user_access_invitation_service.MutateCustomerUserAccessInvitationRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operation: Optional[
             customer_user_access_invitation_service.CustomerUserAccessInvitationOperation
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> (
         customer_user_access_invitation_service.MutateCustomerUserAccessInvitationResponse
     ): ...

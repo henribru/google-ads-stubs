@@ -14,7 +14,7 @@ from .transports.base import CustomerCustomizerServiceTransport
 
 class CustomerCustomizerServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomerCustomizerServiceTransport]: ...
 
 class CustomerCustomizerServiceClient(metaclass=CustomerCustomizerServiceClientMeta):
@@ -64,22 +64,22 @@ class CustomerCustomizerServiceClient(metaclass=CustomerCustomizerServiceClientM
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CustomerCustomizerServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CustomerCustomizerServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customer_customizers(
         self,
         request: Optional[
             Union[customer_customizer_service.MutateCustomerCustomizersRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[customer_customizer_service.CustomerCustomizerOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_customizer_service.MutateCustomerCustomizersResponse: ...

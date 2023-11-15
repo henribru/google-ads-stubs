@@ -169,9 +169,9 @@ class Metrics(proto.Message):
     view_through_conversions_from_location_asset_website: float
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         absolute_top_impression_percentage: float = ...,
         active_view_cpm: float = ...,
         active_view_ctr: float = ...,

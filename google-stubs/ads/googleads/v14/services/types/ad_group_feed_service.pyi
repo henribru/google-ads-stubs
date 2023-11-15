@@ -20,9 +20,9 @@ class AdGroupFeedOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: AdGroupFeed = ...,
         update: AdGroupFeed = ...,
@@ -34,9 +34,9 @@ class MutateAdGroupFeedResult(proto.Message):
     ad_group_feed: AdGroupFeed
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         ad_group_feed: AdGroupFeed = ...
     ) -> None: ...
@@ -49,9 +49,9 @@ class MutateAdGroupFeedsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[AdGroupFeedOperation] = ...,
         partial_failure: bool = ...,
@@ -64,9 +64,9 @@ class MutateAdGroupFeedsResponse(proto.Message):
     results: MutableSequence[MutateAdGroupFeedResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdGroupFeedResult] = ...
     ) -> None: ...

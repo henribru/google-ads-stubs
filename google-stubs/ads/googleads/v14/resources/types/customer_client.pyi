@@ -23,9 +23,9 @@ class CustomerClient(proto.Message):
     status: CustomerStatusEnum.CustomerStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         client_customer: str = ...,
         hidden: bool = ...,

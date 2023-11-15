@@ -16,9 +16,9 @@ class MediaFileOperation(proto.Message):
     create: MediaFile
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: MediaFile = ...
     ) -> None: ...
 
@@ -27,9 +27,9 @@ class MutateMediaFileResult(proto.Message):
     media_file: MediaFile
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         media_file: MediaFile = ...
     ) -> None: ...
@@ -42,9 +42,9 @@ class MutateMediaFilesRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[MediaFileOperation] = ...,
         partial_failure: bool = ...,
@@ -57,9 +57,9 @@ class MutateMediaFilesResponse(proto.Message):
     results: MutableSequence[MutateMediaFileResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateMediaFileResult] = ...
     ) -> None: ...

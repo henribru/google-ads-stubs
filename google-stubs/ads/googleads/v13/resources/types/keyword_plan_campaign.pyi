@@ -21,9 +21,9 @@ class KeywordPlanCampaign(proto.Message):
     geo_targets: MutableSequence[KeywordPlanGeoTarget]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         keyword_plan: str = ...,
         id: int = ...,
@@ -38,8 +38,8 @@ class KeywordPlanGeoTarget(proto.Message):
     geo_target_constant: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         geo_target_constant: str = ...
     ) -> None: ...

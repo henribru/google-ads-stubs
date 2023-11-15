@@ -13,7 +13,7 @@ class CalloutPlaceholderFieldEnum(proto.Message):
         CALLOUT_TEXT = 2
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

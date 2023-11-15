@@ -17,7 +17,7 @@ class CustomerUserAccessErrorEnum(proto.Message):
         LAST_ADMIN_USER_OF_MANAGER = 6
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

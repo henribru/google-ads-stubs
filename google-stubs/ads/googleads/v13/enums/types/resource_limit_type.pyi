@@ -148,7 +148,7 @@ class ResourceLimitTypeEnum(proto.Message):
         ENABLED_HOTEL_PROPERTY_ASSET_LINKS_PER_ASSET_GROUP = 182
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

@@ -14,7 +14,7 @@ from .transports.base import CustomAudienceServiceTransport
 
 class CustomAudienceServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomAudienceServiceTransport]: ...
 
 class CustomAudienceServiceClient(metaclass=CustomAudienceServiceClientMeta):
@@ -56,22 +56,22 @@ class CustomAudienceServiceClient(metaclass=CustomAudienceServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CustomAudienceServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CustomAudienceServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_custom_audiences(
         self,
         request: Optional[
             Union[custom_audience_service.MutateCustomAudiencesRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[custom_audience_service.CustomAudienceOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> custom_audience_service.MutateCustomAudiencesResponse: ...

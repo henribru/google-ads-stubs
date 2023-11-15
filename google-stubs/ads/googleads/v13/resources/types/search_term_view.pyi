@@ -17,9 +17,9 @@ class SearchTermView(proto.Message):
     status: SearchTermTargetingStatusEnum.SearchTermTargetingStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         search_term: str = ...,
         ad_group: str = ...,

@@ -14,7 +14,7 @@ from .transports.base import BillingSetupServiceTransport
 
 class BillingSetupServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[BillingSetupServiceTransport]: ...
 
 class BillingSetupServiceClient(metaclass=BillingSetupServiceClientMeta):
@@ -60,20 +60,20 @@ class BillingSetupServiceClient(metaclass=BillingSetupServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, BillingSetupServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, BillingSetupServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_billing_setup(
         self,
         request: Optional[
             Union[billing_setup_service.MutateBillingSetupRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        operation: Optional[billing_setup_service.BillingSetupOperation] = ...,
+        customer_id: Optional[str] = None,
+        operation: Optional[billing_setup_service.BillingSetupOperation] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> billing_setup_service.MutateBillingSetupResponse: ...

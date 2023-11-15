@@ -95,9 +95,9 @@ class Campaign(proto.Message):
         app_store: AppCampaignAppStoreEnum.AppCampaignAppStore
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             bidding_strategy_goal_type: AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType = ...,
             app_id: str = ...,
             app_store: AppCampaignAppStoreEnum.AppCampaignAppStore = ...
@@ -107,9 +107,9 @@ class Campaign(proto.Message):
         use_audience_grouped: bool
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             use_audience_grouped: bool = ...
         ) -> None: ...
 
@@ -118,9 +118,9 @@ class Campaign(proto.Message):
         manual_cpa_bid_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             category_id: str = ...,
             manual_cpa_bid_micros: int = ...
         ) -> None: ...
@@ -129,9 +129,9 @@ class Campaign(proto.Message):
         upgraded_targeting: bool
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             upgraded_targeting: bool = ...
         ) -> None: ...
 
@@ -142,9 +142,9 @@ class Campaign(proto.Message):
         feeds: MutableSequence[str]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             domain_name: str = ...,
             language_code: str = ...,
             use_supplied_urls_only: bool = ...,
@@ -156,9 +156,9 @@ class Campaign(proto.Message):
         negative_geo_target_type: NegativeGeoTargetTypeEnum.NegativeGeoTargetType
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             positive_geo_target_type: PositiveGeoTargetTypeEnum.PositiveGeoTargetType = ...,
             negative_geo_target_type: NegativeGeoTargetTypeEnum.NegativeGeoTargetType = ...
         ) -> None: ...
@@ -167,9 +167,9 @@ class Campaign(proto.Message):
         hotel_center_id: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             hotel_center_id: int = ...
         ) -> None: ...
 
@@ -177,9 +177,9 @@ class Campaign(proto.Message):
         location_source_type: LocationSourceTypeEnum.LocationSourceType
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             location_source_type: LocationSourceTypeEnum.LocationSourceType = ...
         ) -> None: ...
 
@@ -187,9 +187,9 @@ class Campaign(proto.Message):
         category_bids: MutableSequence[Campaign.CategoryBid]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             category_bids: MutableSequence[Campaign.CategoryBid] = ...
         ) -> None: ...
 
@@ -200,9 +200,9 @@ class Campaign(proto.Message):
         target_partner_search_network: bool
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             target_google_search: bool = ...,
             target_search_network: bool = ...,
             target_content_network: bool = ...,
@@ -215,9 +215,9 @@ class Campaign(proto.Message):
         ]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             optimization_goal_types: MutableSequence[
                 OptimizationGoalTypeEnum.OptimizationGoalType
             ] = ...
@@ -229,9 +229,9 @@ class Campaign(proto.Message):
         status: PerformanceMaxUpgradeStatusEnum.PerformanceMaxUpgradeStatus
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             performance_max_campaign: str = ...,
             pre_upgrade_campaign: str = ...,
             status: PerformanceMaxUpgradeStatusEnum.PerformanceMaxUpgradeStatus = ...
@@ -241,9 +241,9 @@ class Campaign(proto.Message):
         conversion_actions: MutableSequence[str]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             conversion_actions: MutableSequence[str] = ...
         ) -> None: ...
 
@@ -257,9 +257,9 @@ class Campaign(proto.Message):
         advertising_partner_ids: MutableSequence[int]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant_id: int = ...,
             sales_country: str = ...,
             feed_label: str = ...,
@@ -273,9 +273,9 @@ class Campaign(proto.Message):
         tracking_url: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             tracking_url: str = ...
         ) -> None: ...
 
@@ -283,9 +283,9 @@ class Campaign(proto.Message):
         travel_account_id: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             travel_account_id: int = ...
         ) -> None: ...
 
@@ -294,9 +294,9 @@ class Campaign(proto.Message):
         vanity_pharma_text: VanityPharmaTextEnum.VanityPharmaText
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             vanity_pharma_display_url_mode: VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode = ...,
             vanity_pharma_text: VanityPharmaTextEnum.VanityPharmaText = ...
         ) -> None: ...
@@ -370,9 +370,9 @@ class Campaign(proto.Message):
     target_cpm: TargetCpm
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         name: str = ...,

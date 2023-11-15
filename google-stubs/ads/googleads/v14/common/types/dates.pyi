@@ -13,9 +13,9 @@ class DateRange(proto.Message):
     end_date: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         start_date: str = ...,
         end_date: str = ...
     ) -> None: ...
@@ -25,9 +25,9 @@ class YearMonth(proto.Message):
     month: MonthOfYearEnum.MonthOfYear
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         year: int = ...,
         month: MonthOfYearEnum.MonthOfYear = ...
     ) -> None: ...
@@ -37,9 +37,9 @@ class YearMonthRange(proto.Message):
     end: YearMonth
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         start: YearMonth = ...,
         end: YearMonth = ...
     ) -> None: ...

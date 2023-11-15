@@ -35,6 +35,6 @@ class Interceptor:
         method: str,
         timeout: float,
         metadata: List[Tuple[str, Any]],
-        credentials: grpc.CallCredentials | None = ...,
+        credentials: grpc.CallCredentials | None = None,
     ) -> _ClientCallDetails: ...
     def __init__(self, api_version: str) -> None: ...

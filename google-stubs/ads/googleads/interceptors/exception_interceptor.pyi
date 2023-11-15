@@ -20,7 +20,7 @@ _Response = TypeVar("_Response")
 class ExceptionInterceptor(
     Interceptor, grpc.UnaryUnaryClientInterceptor, grpc.UnaryStreamClientInterceptor
 ):
-    def __init__(self, api_version: str, use_proto_plus: bool = ...) -> None: ...
+    def __init__(self, api_version: str, use_proto_plus: bool = False) -> None: ...
     def intercept_unary_unary(
         self,
         continuation: Callable[[grpc.ClientCallDetails, _Request], _Response],

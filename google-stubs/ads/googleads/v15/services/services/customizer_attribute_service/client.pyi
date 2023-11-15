@@ -14,7 +14,7 @@ from .transports.base import CustomizerAttributeServiceTransport
 
 class CustomizerAttributeServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomizerAttributeServiceTransport]: ...
 
 class CustomizerAttributeServiceClient(metaclass=CustomizerAttributeServiceClientMeta):
@@ -58,22 +58,22 @@ class CustomizerAttributeServiceClient(metaclass=CustomizerAttributeServiceClien
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CustomizerAttributeServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CustomizerAttributeServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customizer_attributes(
         self,
         request: Optional[
             Union[customizer_attribute_service.MutateCustomizerAttributesRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[customizer_attribute_service.CustomizerAttributeOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customizer_attribute_service.MutateCustomizerAttributesResponse: ...

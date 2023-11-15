@@ -19,7 +19,7 @@ class FeedItemSetErrorEnum(proto.Message):
         DYNAMIC_FILTER_INVALID_CHAIN_IDS = 8
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

@@ -24,9 +24,9 @@ class LocalServicesLeadConversation(proto.Message):
     message_details: MessageDetails
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         conversation_channel: LocalServicesLeadConversationTypeEnum.ConversationType = ...,
@@ -41,9 +41,9 @@ class MessageDetails(proto.Message):
     text: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         text: str = ...
     ) -> None: ...
 
@@ -52,9 +52,9 @@ class PhoneCallDetails(proto.Message):
     call_recording_url: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         call_duration_millis: int = ...,
         call_recording_url: str = ...
     ) -> None: ...

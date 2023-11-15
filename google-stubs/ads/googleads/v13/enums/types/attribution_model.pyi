@@ -19,7 +19,7 @@ class AttributionModelEnum(proto.Message):
         GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN = 106
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

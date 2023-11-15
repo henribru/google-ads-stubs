@@ -15,9 +15,9 @@ class ConversionGoalCampaignConfig(proto.Message):
     custom_conversion_goal: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign: str = ...,
         goal_config_level: GoalConfigLevelEnum.GoalConfigLevel = ...,

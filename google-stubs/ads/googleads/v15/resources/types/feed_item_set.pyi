@@ -24,9 +24,9 @@ class FeedItemSet(proto.Message):
     dynamic_affiliate_location_set_filter: DynamicAffiliateLocationSetFilter
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         feed: str = ...,
         feed_item_set_id: int = ...,

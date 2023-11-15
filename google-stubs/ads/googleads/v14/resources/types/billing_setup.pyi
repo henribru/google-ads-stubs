@@ -20,9 +20,9 @@ class BillingSetup(proto.Message):
         secondary_payments_profile_id: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             payments_account_id: str = ...,
             payments_account_name: str = ...,
             payments_profile_id: str = ...,
@@ -40,9 +40,9 @@ class BillingSetup(proto.Message):
     end_time_type: TimeTypeEnum.TimeType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         status: BillingSetupStatusEnum.BillingSetupStatus = ...,

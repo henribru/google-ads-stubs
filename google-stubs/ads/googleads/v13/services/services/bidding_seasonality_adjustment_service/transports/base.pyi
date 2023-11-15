@@ -15,13 +15,13 @@ class BiddingSeasonalityAdjustmentServiceTransport(abc.ABC):
     def __init__(
         self,
         *,
-        host: str = ...,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        credentials_file: Optional[str] = ...,
-        scopes: Optional[Sequence[str]] = ...,
-        quota_project_id: Optional[str] = ...,
+        host: str = "googleads.googleapis.com",
+        credentials: Optional[ga_credentials.Credentials] = None,
+        credentials_file: Optional[str] = None,
+        scopes: Optional[Sequence[str]] = None,
+        quota_project_id: Optional[str] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = ...,
+        always_use_jwt_access: Optional[bool] = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...

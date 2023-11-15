@@ -14,7 +14,7 @@ from .transports.base import ConversionAdjustmentUploadServiceTransport
 
 class ConversionAdjustmentUploadServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ConversionAdjustmentUploadServiceTransport]: ...
 
 class ConversionAdjustmentUploadServiceClient(
@@ -54,11 +54,11 @@ class ConversionAdjustmentUploadServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
         transport: Optional[
             Union[str, ConversionAdjustmentUploadServiceTransport]
-        ] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        ] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def upload_conversion_adjustments(
@@ -68,14 +68,14 @@ class ConversionAdjustmentUploadServiceClient(
                 conversion_adjustment_upload_service.UploadConversionAdjustmentsRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         conversion_adjustments: Optional[
             MutableSequence[conversion_adjustment_upload_service.ConversionAdjustment]
-        ] = ...,
-        partial_failure: Optional[bool] = ...,
+        ] = None,
+        partial_failure: Optional[bool] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> conversion_adjustment_upload_service.UploadConversionAdjustmentsResponse: ...

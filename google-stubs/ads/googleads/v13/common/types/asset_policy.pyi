@@ -29,9 +29,9 @@ class AdAssetPolicySummary(proto.Message):
     approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
@@ -43,9 +43,9 @@ class AssetDisapproved(proto.Message):
     ]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         offline_evaluation_error_reasons: MutableSequence[
             AssetOfflineEvaluationErrorReasonsEnum.AssetOfflineEvaluationErrorReasons
         ] = ...
@@ -57,9 +57,9 @@ class AssetLinkPrimaryStatusDetails(proto.Message):
     asset_disapproved: AssetDisapproved
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         reason: AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason = ...,
         status: AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus = ...,
         asset_disapproved: AssetDisapproved = ...

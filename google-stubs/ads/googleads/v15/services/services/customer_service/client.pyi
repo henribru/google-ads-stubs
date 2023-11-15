@@ -15,7 +15,7 @@ from .transports.base import CustomerServiceTransport
 
 class CustomerServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomerServiceTransport]: ...
 
 class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
@@ -61,40 +61,40 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CustomerServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CustomerServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customer(
         self,
-        request: Optional[Union[customer_service.MutateCustomerRequest, dict]] = ...,
+        request: Optional[Union[customer_service.MutateCustomerRequest, dict]] = None,
         *,
-        customer_id: Optional[str] = ...,
-        operation: Optional[customer_service.CustomerOperation] = ...,
+        customer_id: Optional[str] = None,
+        operation: Optional[customer_service.CustomerOperation] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_service.MutateCustomerResponse: ...
     def list_accessible_customers(
         self,
         request: Optional[
             Union[customer_service.ListAccessibleCustomersRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_service.ListAccessibleCustomersResponse: ...
     def create_customer_client(
         self,
         request: Optional[
             Union[customer_service.CreateCustomerClientRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        customer_client: Optional[customer.Customer] = ...,
+        customer_id: Optional[str] = None,
+        customer_client: Optional[customer.Customer] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_service.CreateCustomerClientResponse: ...

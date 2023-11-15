@@ -14,7 +14,7 @@ from .transports.base import ConversionUploadServiceTransport
 
 class ConversionUploadServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ConversionUploadServiceTransport]: ...
 
 class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta):
@@ -58,38 +58,38 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, ConversionUploadServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, ConversionUploadServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def upload_click_conversions(
         self,
         request: Optional[
             Union[conversion_upload_service.UploadClickConversionsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         conversions: Optional[
             MutableSequence[conversion_upload_service.ClickConversion]
-        ] = ...,
-        partial_failure: Optional[bool] = ...,
+        ] = None,
+        partial_failure: Optional[bool] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> conversion_upload_service.UploadClickConversionsResponse: ...
     def upload_call_conversions(
         self,
         request: Optional[
             Union[conversion_upload_service.UploadCallConversionsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         conversions: Optional[
             MutableSequence[conversion_upload_service.CallConversion]
-        ] = ...,
-        partial_failure: Optional[bool] = ...,
+        ] = None,
+        partial_failure: Optional[bool] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> conversion_upload_service.UploadCallConversionsResponse: ...

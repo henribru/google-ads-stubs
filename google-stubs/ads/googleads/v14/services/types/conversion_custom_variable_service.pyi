@@ -21,9 +21,9 @@ class ConversionCustomVariableOperation(proto.Message):
     update: ConversionCustomVariable
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: ConversionCustomVariable = ...,
         update: ConversionCustomVariable = ...
@@ -34,9 +34,9 @@ class MutateConversionCustomVariableResult(proto.Message):
     conversion_custom_variable: ConversionCustomVariable
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         conversion_custom_variable: ConversionCustomVariable = ...
     ) -> None: ...
@@ -49,9 +49,9 @@ class MutateConversionCustomVariablesRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[ConversionCustomVariableOperation] = ...,
         partial_failure: bool = ...,
@@ -64,9 +64,9 @@ class MutateConversionCustomVariablesResponse(proto.Message):
     results: MutableSequence[MutateConversionCustomVariableResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateConversionCustomVariableResult] = ...
     ) -> None: ...

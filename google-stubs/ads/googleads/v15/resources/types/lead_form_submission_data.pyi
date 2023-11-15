@@ -15,9 +15,9 @@ class CustomLeadFormSubmissionField(proto.Message):
     field_value: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         question_text: str = ...,
         field_value: str = ...
     ) -> None: ...
@@ -35,9 +35,9 @@ class LeadFormSubmissionData(proto.Message):
     submission_date_time: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: str = ...,
         asset: str = ...,
@@ -57,9 +57,9 @@ class LeadFormSubmissionField(proto.Message):
     field_value: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         field_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType = ...,
         field_value: str = ...
     ) -> None: ...

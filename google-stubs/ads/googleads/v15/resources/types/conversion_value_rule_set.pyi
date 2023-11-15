@@ -33,9 +33,9 @@ class ConversionValueRuleSet(proto.Message):
     ]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         conversion_value_rules: MutableSequence[str] = ...,

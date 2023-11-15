@@ -19,9 +19,9 @@ class CustomerNegativeCriterionOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: CustomerNegativeCriterion = ...,
         remove: str = ...
     ) -> None: ...
@@ -34,9 +34,9 @@ class MutateCustomerNegativeCriteriaRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CustomerNegativeCriterionOperation] = ...,
         partial_failure: bool = ...,
@@ -49,9 +49,9 @@ class MutateCustomerNegativeCriteriaResponse(proto.Message):
     results: MutableSequence[MutateCustomerNegativeCriteriaResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCustomerNegativeCriteriaResult] = ...
     ) -> None: ...
@@ -61,9 +61,9 @@ class MutateCustomerNegativeCriteriaResult(proto.Message):
     customer_negative_criterion: CustomerNegativeCriterion
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         customer_negative_criterion: CustomerNegativeCriterion = ...
     ) -> None: ...

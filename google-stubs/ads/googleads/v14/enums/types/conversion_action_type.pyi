@@ -52,7 +52,7 @@ class ConversionActionTypeEnum(proto.Message):
         GOOGLE_ANALYTICS_4_PURCHASE = 41
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

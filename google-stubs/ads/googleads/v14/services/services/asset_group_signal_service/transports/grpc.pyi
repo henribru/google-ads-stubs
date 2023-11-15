@@ -12,27 +12,27 @@ class AssetGroupSignalServiceGrpcTransport(AssetGroupSignalServiceTransport):
     def __init__(
         self,
         *,
-        host: str = ...,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        credentials_file: Optional[str] = ...,
-        scopes: Optional[Sequence[str]] = ...,
-        channel: Optional[grpc.Channel] = ...,
-        api_mtls_endpoint: Optional[str] = ...,
-        client_cert_source: Optional[Callable[[], Tuple[bytes, bytes]]] = ...,
-        ssl_channel_credentials: Optional[grpc.ChannelCredentials] = ...,
-        client_cert_source_for_mtls: Optional[Callable[[], Tuple[bytes, bytes]]] = ...,
-        quota_project_id: Optional[str] = ...,
+        host: str = "googleads.googleapis.com",
+        credentials: Optional[ga_credentials.Credentials] = None,
+        credentials_file: Optional[str] = None,
+        scopes: Optional[Sequence[str]] = None,
+        channel: Optional[grpc.Channel] = None,
+        api_mtls_endpoint: Optional[str] = None,
+        client_cert_source: Optional[Callable[[], Tuple[bytes, bytes]]] = None,
+        ssl_channel_credentials: Optional[grpc.ChannelCredentials] = None,
+        client_cert_source_for_mtls: Optional[Callable[[], Tuple[bytes, bytes]]] = None,
+        quota_project_id: Optional[str] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = ...
+        always_use_jwt_access: Optional[bool] = False
     ) -> None: ...
     @classmethod
     def create_channel(
         cls,
-        host: str = ...,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        credentials_file: Optional[str] = ...,
-        scopes: Optional[Sequence[str]] = ...,
-        quota_project_id: Optional[str] = ...,
+        host: str = "googleads.googleapis.com",
+        credentials: Optional[ga_credentials.Credentials] = None,
+        credentials_file: Optional[str] = None,
+        scopes: Optional[Sequence[str]] = None,
+        quota_project_id: Optional[str] = None,
         **kwargs
     ) -> grpc.Channel: ...
     @property

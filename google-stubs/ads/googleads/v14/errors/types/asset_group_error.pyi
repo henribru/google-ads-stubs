@@ -28,7 +28,7 @@ class AssetGroupErrorEnum(proto.Message):
         CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN = 17
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

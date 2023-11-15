@@ -14,7 +14,7 @@ from .transports.base import CustomerAssetSetServiceTransport
 
 class CustomerAssetSetServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomerAssetSetServiceTransport]: ...
 
 class CustomerAssetSetServiceClient(metaclass=CustomerAssetSetServiceClientMeta):
@@ -64,22 +64,22 @@ class CustomerAssetSetServiceClient(metaclass=CustomerAssetSetServiceClientMeta)
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CustomerAssetSetServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CustomerAssetSetServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customer_asset_sets(
         self,
         request: Optional[
             Union[customer_asset_set_service.MutateCustomerAssetSetsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[customer_asset_set_service.CustomerAssetSetOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_asset_set_service.MutateCustomerAssetSetsResponse: ...

@@ -16,7 +16,7 @@ from .transports.base import CampaignDraftServiceTransport
 
 class CampaignDraftServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CampaignDraftServiceTransport]: ...
 
 class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
@@ -64,44 +64,44 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CampaignDraftServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CampaignDraftServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_campaign_drafts(
         self,
         request: Optional[
             Union[campaign_draft_service.MutateCampaignDraftsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[campaign_draft_service.CampaignDraftOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> campaign_draft_service.MutateCampaignDraftsResponse: ...
     def promote_campaign_draft(
         self,
         request: Optional[
             Union[campaign_draft_service.PromoteCampaignDraftRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        campaign_draft: Optional[str] = ...,
+        campaign_draft: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> operation.Operation: ...
     def list_campaign_draft_async_errors(
         self,
         request: Optional[
             Union[campaign_draft_service.ListCampaignDraftAsyncErrorsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> pagers.ListCampaignDraftAsyncErrorsPager: ...

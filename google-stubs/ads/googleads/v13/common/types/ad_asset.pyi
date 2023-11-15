@@ -18,9 +18,9 @@ class AdDiscoveryCarouselCardAsset(proto.Message):
     asset: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         asset: str = ...
     ) -> None: ...
 
@@ -28,9 +28,9 @@ class AdImageAsset(proto.Message):
     asset: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         asset: str = ...
     ) -> None: ...
 
@@ -38,9 +38,9 @@ class AdMediaBundleAsset(proto.Message):
     asset: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         asset: str = ...
     ) -> None: ...
 
@@ -51,9 +51,9 @@ class AdTextAsset(proto.Message):
     policy_summary_info: AdAssetPolicySummary
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         text: str = ...,
         pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType = ...,
         asset_performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
@@ -64,8 +64,8 @@ class AdVideoAsset(proto.Message):
     asset: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         asset: str = ...
     ) -> None: ...

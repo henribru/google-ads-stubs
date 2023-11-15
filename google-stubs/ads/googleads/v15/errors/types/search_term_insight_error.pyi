@@ -18,7 +18,7 @@ class SearchTermInsightErrorEnum(proto.Message):
         SUMMARY_ROW_NOT_ALLOWED_WITH_SEGMENTS = 7
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

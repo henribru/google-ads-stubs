@@ -16,9 +16,9 @@ class SuggestKeywordThemeConstantsRequest(proto.Message):
     language_code: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         query_text: str = ...,
         country_code: str = ...,
         language_code: str = ...
@@ -28,8 +28,8 @@ class SuggestKeywordThemeConstantsResponse(proto.Message):
     keyword_theme_constants: MutableSequence[KeywordThemeConstant]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         keyword_theme_constants: MutableSequence[KeywordThemeConstant] = ...
     ) -> None: ...

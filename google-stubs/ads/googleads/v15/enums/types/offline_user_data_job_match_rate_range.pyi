@@ -21,7 +21,7 @@ class OfflineUserDataJobMatchRateRangeEnum(proto.Message):
         MATCH_RANGE_91_TO_100 = 10
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

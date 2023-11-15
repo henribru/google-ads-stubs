@@ -14,7 +14,7 @@ from .transports.base import AdParameterServiceTransport
 
 class AdParameterServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[AdParameterServiceTransport]: ...
 
 class AdParameterServiceClient(metaclass=AdParameterServiceClientMeta):
@@ -64,22 +64,22 @@ class AdParameterServiceClient(metaclass=AdParameterServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, AdParameterServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, AdParameterServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_ad_parameters(
         self,
         request: Optional[
             Union[ad_parameter_service.MutateAdParametersRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[ad_parameter_service.AdParameterOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> ad_parameter_service.MutateAdParametersResponse: ...

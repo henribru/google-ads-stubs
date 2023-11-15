@@ -50,7 +50,7 @@ class OfflineUserDataJobErrorEnum(proto.Message):
         EVENT_ATTRIBUTE_ALL_FIELDS_ARE_REQUIRED = 45
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

@@ -15,7 +15,7 @@ class AssetGroupSignalErrorEnum(proto.Message):
         AUDIENCE_WITH_WRONG_ASSET_GROUP_ID = 4
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

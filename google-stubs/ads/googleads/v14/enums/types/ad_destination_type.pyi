@@ -23,7 +23,7 @@ class AdDestinationTypeEnum(proto.Message):
         UNMODELED_FOR_CONVERSIONS = 12
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

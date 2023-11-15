@@ -14,7 +14,7 @@ from .transports.base import GeoTargetConstantServiceTransport
 
 class GeoTargetConstantServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[GeoTargetConstantServiceTransport]: ...
 
 class GeoTargetConstantServiceClient(metaclass=GeoTargetConstantServiceClientMeta):
@@ -56,18 +56,18 @@ class GeoTargetConstantServiceClient(metaclass=GeoTargetConstantServiceClientMet
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, GeoTargetConstantServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, GeoTargetConstantServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def suggest_geo_target_constants(
         self,
         request: Optional[
             Union[geo_target_constant_service.SuggestGeoTargetConstantsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> geo_target_constant_service.SuggestGeoTargetConstantsResponse: ...

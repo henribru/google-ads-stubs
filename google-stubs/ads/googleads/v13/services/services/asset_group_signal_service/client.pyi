@@ -14,7 +14,7 @@ from .transports.base import AssetGroupSignalServiceTransport
 
 class AssetGroupSignalServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[AssetGroupSignalServiceTransport]: ...
 
 class AssetGroupSignalServiceClient(metaclass=AssetGroupSignalServiceClientMeta):
@@ -62,22 +62,22 @@ class AssetGroupSignalServiceClient(metaclass=AssetGroupSignalServiceClientMeta)
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, AssetGroupSignalServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, AssetGroupSignalServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_asset_group_signals(
         self,
         request: Optional[
             Union[asset_group_signal_service.MutateAssetGroupSignalsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[asset_group_signal_service.AssetGroupSignalOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> asset_group_signal_service.MutateAssetGroupSignalsResponse: ...

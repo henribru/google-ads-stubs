@@ -14,7 +14,7 @@ from .transports.base import UserDataServiceTransport
 
 class UserDataServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[UserDataServiceTransport]: ...
 
 class UserDataServiceClient(metaclass=UserDataServiceClientMeta):
@@ -52,16 +52,16 @@ class UserDataServiceClient(metaclass=UserDataServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, UserDataServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, UserDataServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def upload_user_data(
         self,
-        request: Optional[Union[user_data_service.UploadUserDataRequest, dict]] = ...,
+        request: Optional[Union[user_data_service.UploadUserDataRequest, dict]] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> user_data_service.UploadUserDataResponse: ...

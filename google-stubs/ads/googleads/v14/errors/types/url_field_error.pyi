@@ -65,7 +65,7 @@ class UrlFieldErrorEnum(proto.Message):
         VALUE_TRACK_PARAMETER_NOT_SUPPORTED = 58
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

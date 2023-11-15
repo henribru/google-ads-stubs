@@ -56,9 +56,9 @@ class AdGroupCriterion(proto.Message):
         estimated_add_cost_at_first_position_cpc: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             first_page_cpc_micros: int = ...,
             first_position_cpc_micros: int = ...,
             top_of_page_cpc_micros: int = ...,
@@ -73,9 +73,9 @@ class AdGroupCriterion(proto.Message):
         search_predicted_ctr: QualityScoreBucketEnum.QualityScoreBucket
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             quality_score: int = ...,
             creative_quality_score: QualityScoreBucketEnum.QualityScoreBucket = ...,
             post_click_quality_score: QualityScoreBucketEnum.QualityScoreBucket = ...,
@@ -137,9 +137,9 @@ class AdGroupCriterion(proto.Message):
     language: LanguageInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         criterion_id: int = ...,
         display_name: str = ...,

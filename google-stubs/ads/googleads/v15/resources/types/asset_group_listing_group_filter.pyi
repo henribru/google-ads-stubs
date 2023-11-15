@@ -39,9 +39,9 @@ class AssetGroupListingGroupFilter(proto.Message):
     path: ListingGroupFilterDimensionPath
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         asset_group: str = ...,
         id: int = ...,
@@ -57,9 +57,9 @@ class ListingGroupFilterDimension(proto.Message):
         value: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             value: str = ...
         ) -> None: ...
 
@@ -68,9 +68,9 @@ class ListingGroupFilterDimension(proto.Message):
         level: ListingGroupFilterProductCategoryLevelEnum.ListingGroupFilterProductCategoryLevel
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             category_id: int = ...,
             level: ListingGroupFilterProductCategoryLevelEnum.ListingGroupFilterProductCategoryLevel = ...
         ) -> None: ...
@@ -79,9 +79,9 @@ class ListingGroupFilterDimension(proto.Message):
         channel: ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             channel: ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel = ...
         ) -> None: ...
 
@@ -89,9 +89,9 @@ class ListingGroupFilterDimension(proto.Message):
         condition: ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             condition: ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition = ...
         ) -> None: ...
 
@@ -100,9 +100,9 @@ class ListingGroupFilterDimension(proto.Message):
         index: ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             value: str = ...,
             index: ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex = ...
         ) -> None: ...
@@ -111,9 +111,9 @@ class ListingGroupFilterDimension(proto.Message):
         value: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             value: str = ...
         ) -> None: ...
 
@@ -122,9 +122,9 @@ class ListingGroupFilterDimension(proto.Message):
         level: ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             value: str = ...,
             level: ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel = ...
         ) -> None: ...
@@ -133,9 +133,9 @@ class ListingGroupFilterDimension(proto.Message):
         conditions: MutableSequence[ListingGroupFilterDimension.WebpageCondition]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             conditions: MutableSequence[
                 ListingGroupFilterDimension.WebpageCondition
             ] = ...
@@ -146,9 +146,9 @@ class ListingGroupFilterDimension(proto.Message):
         url_contains: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             custom_label: str = ...,
             url_contains: str = ...
         ) -> None: ...
@@ -162,9 +162,9 @@ class ListingGroupFilterDimension(proto.Message):
     webpage: ListingGroupFilterDimension.Webpage
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         product_category: ListingGroupFilterDimension.ProductCategory = ...,
         product_brand: ListingGroupFilterDimension.ProductBrand = ...,
         product_channel: ListingGroupFilterDimension.ProductChannel = ...,
@@ -179,8 +179,8 @@ class ListingGroupFilterDimensionPath(proto.Message):
     dimensions: MutableSequence[ListingGroupFilterDimension]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         dimensions: MutableSequence[ListingGroupFilterDimension] = ...
     ) -> None: ...

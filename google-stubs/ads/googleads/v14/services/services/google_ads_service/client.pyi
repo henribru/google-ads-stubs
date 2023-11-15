@@ -24,7 +24,7 @@ from .transports.base import GoogleAdsServiceTransport
 
 class GoogleAdsServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[GoogleAdsServiceTransport]: ...
 
 class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
@@ -935,42 +935,46 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, GoogleAdsServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, GoogleAdsServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def search(
         self,
-        request: Optional[Union[google_ads_service.SearchGoogleAdsRequest, dict]] = ...,
+        request: Optional[
+            Union[google_ads_service.SearchGoogleAdsRequest, dict]
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        query: Optional[str] = ...,
+        customer_id: Optional[str] = None,
+        query: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> pagers.SearchPager: ...
     def search_stream(
         self,
         request: Optional[
             Union[google_ads_service.SearchGoogleAdsStreamRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        query: Optional[str] = ...,
+        customer_id: Optional[str] = None,
+        query: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> Iterable[google_ads_service.SearchGoogleAdsStreamResponse]: ...
     def mutate(
         self,
-        request: Optional[Union[google_ads_service.MutateGoogleAdsRequest, dict]] = ...,
+        request: Optional[
+            Union[google_ads_service.MutateGoogleAdsRequest, dict]
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         mutate_operations: Optional[
             MutableSequence[google_ads_service.MutateOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> google_ads_service.MutateGoogleAdsResponse: ...

@@ -14,7 +14,7 @@ from .transports.base import CampaignAssetSetServiceTransport
 
 class CampaignAssetSetServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CampaignAssetSetServiceTransport]: ...
 
 class CampaignAssetSetServiceClient(metaclass=CampaignAssetSetServiceClientMeta):
@@ -66,22 +66,22 @@ class CampaignAssetSetServiceClient(metaclass=CampaignAssetSetServiceClientMeta)
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CampaignAssetSetServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CampaignAssetSetServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_campaign_asset_sets(
         self,
         request: Optional[
             Union[campaign_asset_set_service.MutateCampaignAssetSetsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[campaign_asset_set_service.CampaignAssetSetOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> campaign_asset_set_service.MutateCampaignAssetSetsResponse: ...

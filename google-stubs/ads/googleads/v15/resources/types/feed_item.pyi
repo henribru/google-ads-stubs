@@ -46,9 +46,9 @@ class FeedItem(proto.Message):
     policy_infos: MutableSequence[FeedItemPlaceholderPolicyInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         feed: str = ...,
         id: int = ...,
@@ -74,9 +74,9 @@ class FeedItemAttributeValue(proto.Message):
     double_values: MutableSequence[float]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         feed_attribute_id: int = ...,
         integer_value: int = ...,
         boolean_value: bool = ...,
@@ -103,9 +103,9 @@ class FeedItemPlaceholderPolicyInfo(proto.Message):
     ]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         placeholder_type_enum: PlaceholderTypeEnum.PlaceholderType = ...,
         feed_mapping_resource_name: str = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
@@ -126,9 +126,9 @@ class FeedItemValidationError(proto.Message):
     extra_info: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         validation_error: FeedItemValidationErrorEnum.FeedItemValidationError = ...,
         description: str = ...,
         feed_attribute_ids: MutableSequence[int] = ...,

@@ -15,7 +15,7 @@ from .transports.base import KeywordPlanIdeaServiceTransport
 
 class KeywordPlanIdeaServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[KeywordPlanIdeaServiceTransport]: ...
 
 class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
@@ -53,20 +53,20 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, KeywordPlanIdeaServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, KeywordPlanIdeaServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def generate_keyword_ideas(
         self,
         request: Optional[
             Union[keyword_plan_idea_service.GenerateKeywordIdeasRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> pagers.GenerateKeywordIdeasPager: ...
     def generate_keyword_historical_metrics(
         self,
@@ -74,29 +74,29 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
             Union[
                 keyword_plan_idea_service.GenerateKeywordHistoricalMetricsRequest, dict
             ]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> keyword_plan_idea_service.GenerateKeywordHistoricalMetricsResponse: ...
     def generate_ad_group_themes(
         self,
         request: Optional[
             Union[keyword_plan_idea_service.GenerateAdGroupThemesRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> keyword_plan_idea_service.GenerateAdGroupThemesResponse: ...
     def generate_keyword_forecast_metrics(
         self,
         request: Optional[
             Union[keyword_plan_idea_service.GenerateKeywordForecastMetricsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> keyword_plan_idea_service.GenerateKeywordForecastMetricsResponse: ...

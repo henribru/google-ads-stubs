@@ -25,9 +25,9 @@ class Recommendation(proto.Message):
     class CallAssetRecommendation(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
 
@@ -36,9 +36,9 @@ class Recommendation(proto.Message):
         recommended_customer_callout_assets: MutableSequence[Asset]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             recommended_campaign_callout_assets: MutableSequence[Asset] = ...,
             recommended_customer_callout_assets: MutableSequence[Asset] = ...,
         ) -> None: ...
@@ -49,9 +49,9 @@ class Recommendation(proto.Message):
         new_start_date: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             current_amount_micros: int = ...,
             recommended_new_amount_micros: int = ...,
             new_start_date: str = ...,
@@ -63,9 +63,9 @@ class Recommendation(proto.Message):
             impact: Recommendation.RecommendationImpact
             def __init__(
                 self: _M,
-                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
                 *,
-                ignore_unknown_fields: bool = ...,
+                ignore_unknown_fields: bool = False,
                 budget_amount_micros: int = ...,
                 impact: Recommendation.RecommendationImpact = ...,
             ) -> None: ...
@@ -76,9 +76,9 @@ class Recommendation(proto.Message):
         ]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             current_budget_amount_micros: int = ...,
             recommended_budget_amount_micros: int = ...,
             budget_options: MutableSequence[
@@ -89,27 +89,27 @@ class Recommendation(proto.Message):
     class DisplayExpansionOptInRecommendation(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
 
     class DynamicImageExtensionOptInRecommendation(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
 
     class EnhancedCpcOptInRecommendation(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
 
@@ -118,9 +118,9 @@ class Recommendation(proto.Message):
         campaign_budget: Recommendation.CampaignBudget
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             recommended_target_cpa_micros: int = ...,
             campaign_budget: Recommendation.CampaignBudget = ...,
         ) -> None: ...
@@ -130,9 +130,9 @@ class Recommendation(proto.Message):
         campaign_budget: Recommendation.CampaignBudget
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             recommended_target_roas: float = ...,
             campaign_budget: Recommendation.CampaignBudget = ...,
         ) -> None: ...
@@ -141,9 +141,9 @@ class Recommendation(proto.Message):
         asset_group: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             asset_group: str = ...,
         ) -> None: ...
 
@@ -152,9 +152,9 @@ class Recommendation(proto.Message):
         recommended_match_type: KeywordMatchTypeEnum.KeywordMatchType
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             keyword: KeywordInfo = ...,
             recommended_match_type: KeywordMatchTypeEnum.KeywordMatchType = ...,
         ) -> None: ...
@@ -165,9 +165,9 @@ class Recommendation(proto.Message):
             estimated_weekly_search_count: int
             def __init__(
                 self: _M,
-                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
                 *,
-                ignore_unknown_fields: bool = ...,
+                ignore_unknown_fields: bool = False,
                 text: str = ...,
                 estimated_weekly_search_count: int = ...,
             ) -> None: ...
@@ -176,9 +176,9 @@ class Recommendation(proto.Message):
         recommended_cpc_bid_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             keyword: KeywordInfo = ...,
             search_terms: MutableSequence[
                 Recommendation.KeywordRecommendation.SearchTerm
@@ -190,9 +190,9 @@ class Recommendation(proto.Message):
         target_adjustment: Recommendation.TargetAdjustmentInfo
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             target_adjustment: Recommendation.TargetAdjustmentInfo = ...,
         ) -> None: ...
 
@@ -200,9 +200,9 @@ class Recommendation(proto.Message):
         recommended_budget_amount_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             recommended_budget_amount_micros: int = ...,
         ) -> None: ...
 
@@ -210,9 +210,9 @@ class Recommendation(proto.Message):
         recommended_budget_amount_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             recommended_budget_amount_micros: int = ...,
         ) -> None: ...
 
@@ -222,9 +222,9 @@ class Recommendation(proto.Message):
         multi_client: bool
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             id: int = ...,
             name: str = ...,
             multi_client: bool = ...,
@@ -234,9 +234,9 @@ class Recommendation(proto.Message):
         apply_link: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             apply_link: str = ...,
         ) -> None: ...
 
@@ -245,9 +245,9 @@ class Recommendation(proto.Message):
         budget_recommendation: Recommendation.CampaignBudgetRecommendation
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             excess_campaign_budget: str = ...,
             budget_recommendation: Recommendation.CampaignBudgetRecommendation = ...,
         ) -> None: ...
@@ -255,18 +255,18 @@ class Recommendation(proto.Message):
     class OptimizeAdRotationRecommendation(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
 
     class PerformanceMaxOptInRecommendation(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
 
@@ -275,9 +275,9 @@ class Recommendation(proto.Message):
         average_target_cpa_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             recommended_target_multiplier: float = ...,
             average_target_cpa_micros: int = ...,
         ) -> None: ...
@@ -287,9 +287,9 @@ class Recommendation(proto.Message):
         app_bidding_goal: AppBiddingGoalEnum.AppBiddingGoal
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             target_adjustment: Recommendation.TargetAdjustmentInfo = ...,
             app_bidding_goal: AppBiddingGoalEnum.AppBiddingGoal = ...,
         ) -> None: ...
@@ -299,9 +299,9 @@ class Recommendation(proto.Message):
         potential_metrics: Recommendation.RecommendationMetrics
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             base_metrics: Recommendation.RecommendationMetrics = ...,
             potential_metrics: Recommendation.RecommendationMetrics = ...,
         ) -> None: ...
@@ -314,9 +314,9 @@ class Recommendation(proto.Message):
         video_views: float
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             impressions: float = ...,
             clicks: float = ...,
             cost_micros: int = ...,
@@ -329,9 +329,9 @@ class Recommendation(proto.Message):
         recommended_assets: Ad
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             current_ad: Ad = ...,
             recommended_assets: Ad = ...,
         ) -> None: ...
@@ -341,9 +341,9 @@ class Recommendation(proto.Message):
         recommended_ad: Ad
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             current_ad: Ad = ...,
             recommended_ad: Ad = ...,
         ) -> None: ...
@@ -352,18 +352,18 @@ class Recommendation(proto.Message):
         ad: Ad
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             ad: Ad = ...,
         ) -> None: ...
 
     class SearchPartnersOptInRecommendation(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
 
@@ -373,9 +373,9 @@ class Recommendation(proto.Message):
         reason: ShoppingAddProductsToCampaignRecommendationEnum.Reason
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant: Recommendation.MerchantInfo = ...,
             feed_label: str = ...,
             reason: ShoppingAddProductsToCampaignRecommendationEnum.Reason = ...,
@@ -388,9 +388,9 @@ class Recommendation(proto.Message):
         disapproved_products_count: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant: Recommendation.MerchantInfo = ...,
             feed_label: str = ...,
             products_count: int = ...,
@@ -402,9 +402,9 @@ class Recommendation(proto.Message):
         feed_label: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant: Recommendation.MerchantInfo = ...,
             feed_label: str = ...,
         ) -> None: ...
@@ -416,9 +416,9 @@ class Recommendation(proto.Message):
         feed_label: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant: Recommendation.MerchantInfo = ...,
             feed_label: str = ...,
         ) -> None: ...
@@ -430,9 +430,9 @@ class Recommendation(proto.Message):
         demoted_offers_count: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant: Recommendation.MerchantInfo = ...,
             feed_label: str = ...,
             offers_count: int = ...,
@@ -445,9 +445,9 @@ class Recommendation(proto.Message):
         feed_label: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant: Recommendation.MerchantInfo = ...,
             untargeted_offers_count: int = ...,
             feed_label: str = ...,
@@ -458,9 +458,9 @@ class Recommendation(proto.Message):
         recommended_customer_sitelink_assets: MutableSequence[Asset]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             recommended_campaign_sitelink_assets: MutableSequence[Asset] = ...,
             recommended_customer_sitelink_assets: MutableSequence[Asset] = ...,
         ) -> None: ...
@@ -471,9 +471,9 @@ class Recommendation(proto.Message):
         current_average_target_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             shared_set: str = ...,
             recommended_target_multiplier: float = ...,
             current_average_target_micros: int = ...,
@@ -487,9 +487,9 @@ class Recommendation(proto.Message):
             impact: Recommendation.RecommendationImpact
             def __init__(
                 self: _M,
-                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
                 *,
-                ignore_unknown_fields: bool = ...,
+                ignore_unknown_fields: bool = False,
                 goal: TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal = ...,
                 target_cpa_micros: int = ...,
                 required_campaign_budget_amount_micros: int = ...,
@@ -501,9 +501,9 @@ class Recommendation(proto.Message):
         recommended_target_cpa_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             options: MutableSequence[
                 Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption
             ] = ...,
@@ -515,9 +515,9 @@ class Recommendation(proto.Message):
         required_campaign_budget_amount_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             recommended_target_roas: float = ...,
             required_campaign_budget_amount_micros: int = ...,
         ) -> None: ...
@@ -528,9 +528,9 @@ class Recommendation(proto.Message):
         auto_apply_date: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             ad: Ad = ...,
             creation_date: str = ...,
             auto_apply_date: str = ...,
@@ -539,9 +539,9 @@ class Recommendation(proto.Message):
     class UpgradeLocalCampaignToPerformanceMaxRecommendation(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
 
@@ -550,9 +550,9 @@ class Recommendation(proto.Message):
         sales_country_code: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant_id: int = ...,
             sales_country_code: str = ...,
         ) -> None: ...
@@ -565,9 +565,9 @@ class Recommendation(proto.Message):
         required_campaign_budget_amount_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             keyword: MutableSequence[KeywordInfo] = ...,
             suggested_keywords_count: int = ...,
             campaign_keywords_count: int = ...,
@@ -631,9 +631,9 @@ class Recommendation(proto.Message):
     set_target_roas_recommendation: Recommendation.ForecastingSetTargetRoasRecommendation
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         type_: RecommendationTypeEnum.RecommendationType = ...,
         impact: Recommendation.RecommendationImpact = ...,

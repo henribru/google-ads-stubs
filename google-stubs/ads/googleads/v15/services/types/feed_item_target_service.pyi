@@ -17,9 +17,9 @@ class FeedItemTargetOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: FeedItemTarget = ...,
         remove: str = ...
     ) -> None: ...
@@ -29,9 +29,9 @@ class MutateFeedItemTargetResult(proto.Message):
     feed_item_target: FeedItemTarget
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         feed_item_target: FeedItemTarget = ...
     ) -> None: ...
@@ -44,9 +44,9 @@ class MutateFeedItemTargetsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[FeedItemTargetOperation] = ...,
         partial_failure: bool = ...,
@@ -59,9 +59,9 @@ class MutateFeedItemTargetsResponse(proto.Message):
     results: MutableSequence[MutateFeedItemTargetResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateFeedItemTargetResult] = ...
     ) -> None: ...

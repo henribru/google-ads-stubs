@@ -38,9 +38,9 @@ class BasicUserListInfo(proto.Message):
     actions: MutableSequence[UserListActionInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         actions: MutableSequence[UserListActionInfo] = ...
     ) -> None: ...
 
@@ -50,9 +50,9 @@ class CrmBasedUserListInfo(proto.Message):
     data_source_type: UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         app_id: str = ...,
         upload_key_type: CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType = ...,
         data_source_type: UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType = ...
@@ -63,9 +63,9 @@ class FlexibleRuleOperandInfo(proto.Message):
     lookback_window_days: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         rule: UserListRuleInfo = ...,
         lookback_window_days: int = ...
     ) -> None: ...
@@ -76,9 +76,9 @@ class FlexibleRuleUserListInfo(proto.Message):
     exclusive_operands: MutableSequence[FlexibleRuleOperandInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         inclusive_rule_operator: UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator = ...,
         inclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...,
         exclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...
@@ -88,9 +88,9 @@ class LogicalUserListInfo(proto.Message):
     rules: MutableSequence[UserListLogicalRuleInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         rules: MutableSequence[UserListLogicalRuleInfo] = ...
     ) -> None: ...
 
@@ -98,9 +98,9 @@ class LogicalUserListOperandInfo(proto.Message):
     user_list: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         user_list: str = ...
     ) -> None: ...
 
@@ -109,9 +109,9 @@ class RuleBasedUserListInfo(proto.Message):
     flexible_rule_user_list: FlexibleRuleUserListInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         prepopulation_status: UserListPrepopulationStatusEnum.UserListPrepopulationStatus = ...,
         flexible_rule_user_list: FlexibleRuleUserListInfo = ...
     ) -> None: ...
@@ -120,9 +120,9 @@ class SimilarUserListInfo(proto.Message):
     seed_user_list: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         seed_user_list: str = ...
     ) -> None: ...
 
@@ -131,9 +131,9 @@ class UserListActionInfo(proto.Message):
     remarketing_action: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         conversion_action: str = ...,
         remarketing_action: str = ...
     ) -> None: ...
@@ -144,9 +144,9 @@ class UserListDateRuleItemInfo(proto.Message):
     offset_in_days: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         operator: UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator = ...,
         value: str = ...,
         offset_in_days: int = ...
@@ -157,9 +157,9 @@ class UserListLogicalRuleInfo(proto.Message):
     rule_operands: MutableSequence[LogicalUserListOperandInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         operator: UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator = ...,
         rule_operands: MutableSequence[LogicalUserListOperandInfo] = ...
     ) -> None: ...
@@ -169,9 +169,9 @@ class UserListNumberRuleItemInfo(proto.Message):
     value: float
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         operator: UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator = ...,
         value: float = ...
     ) -> None: ...
@@ -181,9 +181,9 @@ class UserListRuleInfo(proto.Message):
     rule_item_groups: MutableSequence[UserListRuleItemGroupInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         rule_type: UserListRuleTypeEnum.UserListRuleType = ...,
         rule_item_groups: MutableSequence[UserListRuleItemGroupInfo] = ...
     ) -> None: ...
@@ -192,9 +192,9 @@ class UserListRuleItemGroupInfo(proto.Message):
     rule_items: MutableSequence[UserListRuleItemInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         rule_items: MutableSequence[UserListRuleItemInfo] = ...
     ) -> None: ...
 
@@ -205,9 +205,9 @@ class UserListRuleItemInfo(proto.Message):
     date_rule_item: UserListDateRuleItemInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         name: str = ...,
         number_rule_item: UserListNumberRuleItemInfo = ...,
         string_rule_item: UserListStringRuleItemInfo = ...,
@@ -219,9 +219,9 @@ class UserListStringRuleItemInfo(proto.Message):
     value: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         operator: UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator = ...,
         value: str = ...
     ) -> None: ...

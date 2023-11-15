@@ -17,7 +17,7 @@ from .transports.base import ProductLinkInvitationServiceTransport
 
 class ProductLinkInvitationServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ProductLinkInvitationServiceTransport]: ...
 
 class ProductLinkInvitationServiceClient(
@@ -63,9 +63,9 @@ class ProductLinkInvitationServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, ProductLinkInvitationServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, ProductLinkInvitationServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def update_product_link_invitation(
@@ -74,14 +74,14 @@ class ProductLinkInvitationServiceClient(
             Union[
                 product_link_invitation_service.UpdateProductLinkInvitationRequest, dict
             ]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         product_link_invitation_status: Optional[
             gage_product_link_invitation_status.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
-        ] = ...,
-        resource_name: Optional[str] = ...,
+        ] = None,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> product_link_invitation_service.UpdateProductLinkInvitationResponse: ...

@@ -12,9 +12,9 @@ class ListPaymentsAccountsRequest(proto.Message):
     customer_id: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...
     ) -> None: ...
 
@@ -22,8 +22,8 @@ class ListPaymentsAccountsResponse(proto.Message):
     payments_accounts: MutableSequence[PaymentsAccount]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         payments_accounts: MutableSequence[PaymentsAccount] = ...
     ) -> None: ...

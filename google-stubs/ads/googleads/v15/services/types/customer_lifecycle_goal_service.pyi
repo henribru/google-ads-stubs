@@ -17,9 +17,9 @@ class ConfigureCustomerLifecycleGoalsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: CustomerLifecycleGoalOperation = ...,
         validate_only: bool = ...
@@ -29,9 +29,9 @@ class ConfigureCustomerLifecycleGoalsResponse(proto.Message):
     result: ConfigureCustomerLifecycleGoalsResult
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         result: ConfigureCustomerLifecycleGoalsResult = ...
     ) -> None: ...
 
@@ -39,9 +39,9 @@ class ConfigureCustomerLifecycleGoalsResult(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
 
@@ -50,9 +50,9 @@ class CustomerLifecycleGoalOperation(proto.Message):
     create: CustomerLifecycleGoal
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CustomerLifecycleGoal = ...
     ) -> None: ...

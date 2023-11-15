@@ -14,7 +14,7 @@ from .transports.base import SmartCampaignSettingServiceTransport
 
 class SmartCampaignSettingServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[SmartCampaignSettingServiceTransport]: ...
 
 class SmartCampaignSettingServiceClient(
@@ -62,21 +62,21 @@ class SmartCampaignSettingServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, SmartCampaignSettingServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, SmartCampaignSettingServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def get_smart_campaign_status(
         self,
         request: Optional[
             Union[smart_campaign_setting_service.GetSmartCampaignStatusRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> smart_campaign_setting_service.GetSmartCampaignStatusResponse: ...
     def mutate_smart_campaign_settings(
         self,
@@ -84,15 +84,15 @@ class SmartCampaignSettingServiceClient(
             Union[
                 smart_campaign_setting_service.MutateSmartCampaignSettingsRequest, dict
             ]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[
                 smart_campaign_setting_service.SmartCampaignSettingOperation
             ]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> smart_campaign_setting_service.MutateSmartCampaignSettingsResponse: ...

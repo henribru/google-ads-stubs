@@ -61,9 +61,9 @@ class ChangeEvent(proto.Message):
         campaign_asset_set: CampaignAssetSet
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             ad: Ad = ...,
             ad_group: AdGroup = ...,
             ad_group_criterion: AdGroupCriterion = ...,
@@ -101,9 +101,9 @@ class ChangeEvent(proto.Message):
     asset: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         change_date_time: str = ...,
         change_resource_type: ChangeEventResourceTypeEnum.ChangeEventResourceType = ...,

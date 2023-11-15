@@ -13,7 +13,7 @@ class SearchGoogleAdsFieldsPager:
         method: Callable[..., google_ads_field_service.SearchGoogleAdsFieldsResponse],
         request: google_ads_field_service.SearchGoogleAdsFieldsRequest,
         response: google_ads_field_service.SearchGoogleAdsFieldsResponse,
-        metadata: Sequence[Tuple[str, str]] = ...,
+        metadata: Sequence[Tuple[str, str]] = (),
     ) -> None: ...
     def __getattr__(self, name: str) -> Any: ...
     @property

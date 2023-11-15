@@ -14,7 +14,7 @@ from .transports.base import CustomerClientLinkServiceTransport
 
 class CustomerClientLinkServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomerClientLinkServiceTransport]: ...
 
 class CustomerClientLinkServiceClient(metaclass=CustomerClientLinkServiceClientMeta):
@@ -62,22 +62,22 @@ class CustomerClientLinkServiceClient(metaclass=CustomerClientLinkServiceClientM
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CustomerClientLinkServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CustomerClientLinkServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customer_client_link(
         self,
         request: Optional[
             Union[customer_client_link_service.MutateCustomerClientLinkRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operation: Optional[
             customer_client_link_service.CustomerClientLinkOperation
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_client_link_service.MutateCustomerClientLinkResponse: ...

@@ -19,9 +19,9 @@ class CampaignSharedSetOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: CampaignSharedSet = ...,
         remove: str = ...
     ) -> None: ...
@@ -31,9 +31,9 @@ class MutateCampaignSharedSetResult(proto.Message):
     campaign_shared_set: CampaignSharedSet
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign_shared_set: CampaignSharedSet = ...
     ) -> None: ...
@@ -46,9 +46,9 @@ class MutateCampaignSharedSetsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CampaignSharedSetOperation] = ...,
         partial_failure: bool = ...,
@@ -61,9 +61,9 @@ class MutateCampaignSharedSetsResponse(proto.Message):
     results: MutableSequence[MutateCampaignSharedSetResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCampaignSharedSetResult] = ...
     ) -> None: ...

@@ -15,7 +15,7 @@ from .transports.base import MerchantCenterLinkServiceTransport
 
 class MerchantCenterLinkServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[MerchantCenterLinkServiceTransport]: ...
 
 class MerchantCenterLinkServiceClient(metaclass=MerchantCenterLinkServiceClientMeta):
@@ -57,44 +57,44 @@ class MerchantCenterLinkServiceClient(metaclass=MerchantCenterLinkServiceClientM
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, MerchantCenterLinkServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, MerchantCenterLinkServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def list_merchant_center_links(
         self,
         request: Optional[
             Union[merchant_center_link_service.ListMerchantCenterLinksRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> merchant_center_link_service.ListMerchantCenterLinksResponse: ...
     def get_merchant_center_link(
         self,
         request: Optional[
             Union[merchant_center_link_service.GetMerchantCenterLinkRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> merchant_center_link.MerchantCenterLink: ...
     def mutate_merchant_center_link(
         self,
         request: Optional[
             Union[merchant_center_link_service.MutateMerchantCenterLinkRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operation: Optional[
             merchant_center_link_service.MerchantCenterLinkOperation
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> merchant_center_link_service.MutateMerchantCenterLinkResponse: ...

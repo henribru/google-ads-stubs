@@ -24,9 +24,9 @@ class PolicyTopicConstraint(proto.Message):
         country_criterion: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             country_criterion: str = ...,
         ) -> None: ...
 
@@ -35,9 +35,9 @@ class PolicyTopicConstraint(proto.Message):
         countries: MutableSequence[PolicyTopicConstraint.CountryConstraint]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             total_targeted_countries: int = ...,
             countries: MutableSequence[PolicyTopicConstraint.CountryConstraint] = ...,
         ) -> None: ...
@@ -45,9 +45,9 @@ class PolicyTopicConstraint(proto.Message):
     class ResellerConstraint(proto.Message):
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
         ) -> None: ...
         ...
     country_constraint_list: PolicyTopicConstraint.CountryConstraintList
@@ -56,9 +56,9 @@ class PolicyTopicConstraint(proto.Message):
     certificate_domain_mismatch_in_country_list: PolicyTopicConstraint.CountryConstraintList
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         country_constraint_list: PolicyTopicConstraint.CountryConstraintList = ...,
         reseller_constraint: PolicyTopicConstraint.ResellerConstraint = ...,
         certificate_missing_in_country_list: PolicyTopicConstraint.CountryConstraintList = ...,
@@ -72,9 +72,9 @@ class PolicyTopicEntry(proto.Message):
     constraints: MutableSequence[PolicyTopicConstraint]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         topic: str = ...,
         type_: PolicyTopicEntryTypeEnum.PolicyTopicEntryType = ...,
         evidences: MutableSequence[PolicyTopicEvidence] = ...,
@@ -88,9 +88,9 @@ class PolicyTopicEvidence(proto.Message):
         ]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             url_types: MutableSequence[
                 PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType
             ] = ...,
@@ -104,9 +104,9 @@ class PolicyTopicEvidence(proto.Message):
         http_error_code: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             expanded_url: str = ...,
             device: PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice = ...,
             last_checked_date_time: str = ...,
@@ -118,9 +118,9 @@ class PolicyTopicEvidence(proto.Message):
         destination_texts: MutableSequence[str]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             destination_texts: MutableSequence[str] = ...,
         ) -> None: ...
 
@@ -128,9 +128,9 @@ class PolicyTopicEvidence(proto.Message):
         texts: MutableSequence[str]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             texts: MutableSequence[str] = ...,
         ) -> None: ...
 
@@ -138,9 +138,9 @@ class PolicyTopicEvidence(proto.Message):
         websites: MutableSequence[str]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             websites: MutableSequence[str] = ...,
         ) -> None: ...
     website_list: PolicyTopicEvidence.WebsiteList
@@ -151,9 +151,9 @@ class PolicyTopicEvidence(proto.Message):
     destination_not_working: PolicyTopicEvidence.DestinationNotWorking
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         website_list: PolicyTopicEvidence.WebsiteList = ...,
         text_list: PolicyTopicEvidence.TextList = ...,
         language_code: str = ...,
@@ -167,9 +167,9 @@ class PolicyValidationParameter(proto.Message):
     exempt_policy_violation_keys: MutableSequence[PolicyViolationKey]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         ignorable_policy_topics: MutableSequence[str] = ...,
         exempt_policy_violation_keys: MutableSequence[PolicyViolationKey] = ...,
     ) -> None: ...
@@ -179,9 +179,9 @@ class PolicyViolationKey(proto.Message):
     violating_text: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         policy_name: str = ...,
         violating_text: str = ...,
     ) -> None: ...

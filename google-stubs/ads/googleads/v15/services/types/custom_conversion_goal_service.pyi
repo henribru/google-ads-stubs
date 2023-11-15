@@ -21,9 +21,9 @@ class CustomConversionGoalOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CustomConversionGoal = ...,
         update: CustomConversionGoal = ...,
@@ -35,9 +35,9 @@ class MutateCustomConversionGoalResult(proto.Message):
     custom_conversion_goal: CustomConversionGoal
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         custom_conversion_goal: CustomConversionGoal = ...
     ) -> None: ...
@@ -49,9 +49,9 @@ class MutateCustomConversionGoalsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CustomConversionGoalOperation] = ...,
         validate_only: bool = ...,
@@ -62,8 +62,8 @@ class MutateCustomConversionGoalsResponse(proto.Message):
     results: MutableSequence[MutateCustomConversionGoalResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateCustomConversionGoalResult] = ...
     ) -> None: ...

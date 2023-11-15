@@ -23,7 +23,7 @@ class ConversionActionErrorEnum(proto.Message):
         CANNOT_SET_RULE_BASED_ATTRIBUTION_MODELS = 12
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

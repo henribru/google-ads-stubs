@@ -14,9 +14,9 @@ class Value(proto.Message):
     string_value: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         boolean_value: bool = ...,
         int64_value: int = ...,
         float_value: float = ...,

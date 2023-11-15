@@ -15,9 +15,9 @@ class BrandSuggestion(proto.Message):
     state: BrandStateEnum.BrandState
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         id: str = ...,
         name: str = ...,
         urls: MutableSequence[str] = ...,
@@ -30,9 +30,9 @@ class SuggestBrandsRequest(proto.Message):
     selected_brands: MutableSequence[str]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         brand_prefix: str = ...,
         selected_brands: MutableSequence[str] = ...
@@ -42,8 +42,8 @@ class SuggestBrandsResponse(proto.Message):
     brands: MutableSequence[BrandSuggestion]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         brands: MutableSequence[BrandSuggestion] = ...
     ) -> None: ...

@@ -18,7 +18,7 @@ class AppCampaignBiddingStrategyGoalTypeEnum(proto.Message):
         OPTIMIZE_INSTALLS_WITHOUT_TARGET_INSTALL_COST = 7
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

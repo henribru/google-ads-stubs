@@ -13,9 +13,9 @@ class Consent(proto.Message):
     ad_personalization: ConsentStatusEnum.ConsentStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         ad_user_data: ConsentStatusEnum.ConsentStatus = ...,
         ad_personalization: ConsentStatusEnum.ConsentStatus = ...
     ) -> None: ...

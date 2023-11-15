@@ -14,7 +14,7 @@ from .transports.base import CampaignSharedSetServiceTransport
 
 class CampaignSharedSetServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CampaignSharedSetServiceTransport]: ...
 
 class CampaignSharedSetServiceClient(metaclass=CampaignSharedSetServiceClientMeta):
@@ -66,22 +66,22 @@ class CampaignSharedSetServiceClient(metaclass=CampaignSharedSetServiceClientMet
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CampaignSharedSetServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CampaignSharedSetServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_campaign_shared_sets(
         self,
         request: Optional[
             Union[campaign_shared_set_service.MutateCampaignSharedSetsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[campaign_shared_set_service.CampaignSharedSetOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> campaign_shared_set_service.MutateCampaignSharedSetsResponse: ...

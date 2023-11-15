@@ -22,9 +22,9 @@ class AddBatchJobOperationsRequest(proto.Message):
     mutate_operations: MutableSequence[MutateOperation]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         sequence_token: str = ...,
         mutate_operations: MutableSequence[MutateOperation] = ...
@@ -35,9 +35,9 @@ class AddBatchJobOperationsResponse(proto.Message):
     next_sequence_token: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         total_operations: int = ...,
         next_sequence_token: str = ...
     ) -> None: ...
@@ -47,9 +47,9 @@ class BatchJobOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: BatchJob = ...,
         remove: str = ...
     ) -> None: ...
@@ -60,9 +60,9 @@ class BatchJobResult(proto.Message):
     status: Status
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         operation_index: int = ...,
         mutate_operation_response: MutateOperationResponse = ...,
         status: Status = ...
@@ -75,9 +75,9 @@ class ListBatchJobResultsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         page_token: str = ...,
         page_size: int = ...,
@@ -89,9 +89,9 @@ class ListBatchJobResultsResponse(proto.Message):
     next_page_token: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[BatchJobResult] = ...,
         next_page_token: str = ...
     ) -> None: ...
@@ -101,9 +101,9 @@ class MutateBatchJobRequest(proto.Message):
     operation: BatchJobOperation
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: BatchJobOperation = ...
     ) -> None: ...
@@ -112,9 +112,9 @@ class MutateBatchJobResponse(proto.Message):
     result: MutateBatchJobResult
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         result: MutateBatchJobResult = ...
     ) -> None: ...
 
@@ -122,9 +122,9 @@ class MutateBatchJobResult(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
 
@@ -132,8 +132,8 @@ class RunBatchJobRequest(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...

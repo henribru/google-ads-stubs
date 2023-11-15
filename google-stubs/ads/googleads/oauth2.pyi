@@ -13,13 +13,13 @@ def get_installed_app_credentials(
     client_secret: str,
     refresh_token: str,
     http_proxy: str | None,
-    token_uri: str = ...,
+    token_uri: str = "https://accounts.google.com/o/oauth2/token",
 ) -> InstalledAppCredentials: ...
 def get_service_account_credentials(
     json_key_file_path: str,
     subject: str,
     http_proxy: str | None,
-    scopes: List[str] = ...,
+    scopes: List[str] = ["https://www.googleapis.com/auth/adwords"],
 ) -> ServiceAccountCreds: ...
 @overload
 def get_credentials(

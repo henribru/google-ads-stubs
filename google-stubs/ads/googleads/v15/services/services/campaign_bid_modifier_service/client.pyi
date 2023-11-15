@@ -14,7 +14,7 @@ from .transports.base import CampaignBidModifierServiceTransport
 
 class CampaignBidModifierServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CampaignBidModifierServiceTransport]: ...
 
 class CampaignBidModifierServiceClient(metaclass=CampaignBidModifierServiceClientMeta):
@@ -62,22 +62,22 @@ class CampaignBidModifierServiceClient(metaclass=CampaignBidModifierServiceClien
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CampaignBidModifierServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CampaignBidModifierServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_campaign_bid_modifiers(
         self,
         request: Optional[
             Union[campaign_bid_modifier_service.MutateCampaignBidModifiersRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[campaign_bid_modifier_service.CampaignBidModifierOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> campaign_bid_modifier_service.MutateCampaignBidModifiersResponse: ...

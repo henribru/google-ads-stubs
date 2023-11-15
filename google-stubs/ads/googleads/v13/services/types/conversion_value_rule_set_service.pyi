@@ -22,9 +22,9 @@ class ConversionValueRuleSetOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: ConversionValueRuleSet = ...,
         update: ConversionValueRuleSet = ...,
@@ -36,9 +36,9 @@ class MutateConversionValueRuleSetResult(proto.Message):
     conversion_value_rule_set: ConversionValueRuleSet
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         conversion_value_rule_set: ConversionValueRuleSet = ...
     ) -> None: ...
@@ -51,9 +51,9 @@ class MutateConversionValueRuleSetsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[ConversionValueRuleSetOperation] = ...,
         partial_failure: bool = ...,
@@ -66,9 +66,9 @@ class MutateConversionValueRuleSetsResponse(proto.Message):
     partial_failure_error: Status
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateConversionValueRuleSetResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...

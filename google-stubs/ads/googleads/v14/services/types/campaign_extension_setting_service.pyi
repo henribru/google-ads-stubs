@@ -22,9 +22,9 @@ class CampaignExtensionSettingOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CampaignExtensionSetting = ...,
         update: CampaignExtensionSetting = ...,
@@ -36,9 +36,9 @@ class MutateCampaignExtensionSettingResult(proto.Message):
     campaign_extension_setting: CampaignExtensionSetting
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign_extension_setting: CampaignExtensionSetting = ...
     ) -> None: ...
@@ -51,9 +51,9 @@ class MutateCampaignExtensionSettingsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CampaignExtensionSettingOperation] = ...,
         partial_failure: bool = ...,
@@ -66,9 +66,9 @@ class MutateCampaignExtensionSettingsResponse(proto.Message):
     results: MutableSequence[MutateCampaignExtensionSettingResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCampaignExtensionSettingResult] = ...
     ) -> None: ...

@@ -16,9 +16,9 @@ class ListInvoicesRequest(proto.Message):
     issue_month: MonthOfYearEnum.MonthOfYear
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         billing_setup: str = ...,
         issue_year: str = ...,
@@ -29,8 +29,8 @@ class ListInvoicesResponse(proto.Message):
     invoices: MutableSequence[Invoice]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         invoices: MutableSequence[Invoice] = ...
     ) -> None: ...

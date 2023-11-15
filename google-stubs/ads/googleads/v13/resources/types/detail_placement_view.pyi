@@ -17,9 +17,9 @@ class DetailPlacementView(proto.Message):
     placement_type: PlacementTypeEnum.PlacementType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         placement: str = ...,
         display_name: str = ...,

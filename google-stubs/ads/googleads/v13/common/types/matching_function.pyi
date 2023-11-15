@@ -20,9 +20,9 @@ class MatchingFunction(proto.Message):
     right_operands: MutableSequence[Operand]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         function_string: str = ...,
         operator: MatchingFunctionOperatorEnum.MatchingFunctionOperator = ...,
         left_operands: MutableSequence[Operand] = ...,
@@ -37,9 +37,9 @@ class Operand(proto.Message):
         double_value: float
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             string_value: str = ...,
             long_value: int = ...,
             boolean_value: bool = ...,
@@ -51,9 +51,9 @@ class Operand(proto.Message):
         feed_attribute_id: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             feed_id: int = ...,
             feed_attribute_id: int = ...
         ) -> None: ...
@@ -62,9 +62,9 @@ class Operand(proto.Message):
         matching_function: MatchingFunction
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             matching_function: MatchingFunction = ...
         ) -> None: ...
 
@@ -72,9 +72,9 @@ class Operand(proto.Message):
         context_type: MatchingFunctionContextTypeEnum.MatchingFunctionContextType
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             context_type: MatchingFunctionContextTypeEnum.MatchingFunctionContextType = ...
         ) -> None: ...
     constant_operand: Operand.ConstantOperand
@@ -83,9 +83,9 @@ class Operand(proto.Message):
     request_context_operand: Operand.RequestContextOperand
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         constant_operand: Operand.ConstantOperand = ...,
         feed_attribute_operand: Operand.FeedAttributeOperand = ...,
         function_operand: Operand.FunctionOperand = ...,

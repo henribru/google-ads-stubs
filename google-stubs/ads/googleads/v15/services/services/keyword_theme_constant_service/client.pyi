@@ -14,7 +14,7 @@ from .transports.base import KeywordThemeConstantServiceTransport
 
 class KeywordThemeConstantServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[KeywordThemeConstantServiceTransport]: ...
 
 class KeywordThemeConstantServiceClient(
@@ -60,9 +60,9 @@ class KeywordThemeConstantServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, KeywordThemeConstantServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, KeywordThemeConstantServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def suggest_keyword_theme_constants(
@@ -71,9 +71,9 @@ class KeywordThemeConstantServiceClient(
             Union[
                 keyword_theme_constant_service.SuggestKeywordThemeConstantsRequest, dict
             ]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> keyword_theme_constant_service.SuggestKeywordThemeConstantsResponse: ...

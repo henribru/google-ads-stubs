@@ -24,9 +24,9 @@ class CriterionCategoryAvailability(proto.Message):
     locale: MutableSequence[CriterionCategoryLocaleAvailability]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         channel: CriterionCategoryChannelAvailability = ...,
         locale: MutableSequence[CriterionCategoryLocaleAvailability] = ...
     ) -> None: ...
@@ -40,9 +40,9 @@ class CriterionCategoryChannelAvailability(proto.Message):
     include_default_channel_sub_type: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode = ...,
         advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType = ...,
         advertising_channel_sub_type: MutableSequence[
@@ -57,9 +57,9 @@ class CriterionCategoryLocaleAvailability(proto.Message):
     language_code: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         availability_mode: CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode = ...,
         country_code: str = ...,
         language_code: str = ...

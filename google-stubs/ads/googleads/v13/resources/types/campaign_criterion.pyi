@@ -86,9 +86,9 @@ class CampaignCriterion(proto.Message):
     local_service_id: LocalServiceIdInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign: str = ...,
         criterion_id: int = ...,

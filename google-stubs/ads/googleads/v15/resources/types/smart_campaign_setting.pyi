@@ -11,9 +11,9 @@ class SmartCampaignSetting(proto.Message):
         include_lead_form: bool
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             include_lead_form: bool = ...
         ) -> None: ...
 
@@ -22,9 +22,9 @@ class SmartCampaignSetting(proto.Message):
         country_code: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             phone_number: str = ...,
             country_code: str = ...
         ) -> None: ...
@@ -38,9 +38,9 @@ class SmartCampaignSetting(proto.Message):
     business_profile_location: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign: str = ...,
         phone_number: SmartCampaignSetting.PhoneNumber = ...,

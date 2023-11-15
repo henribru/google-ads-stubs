@@ -22,9 +22,9 @@ class CustomerExtensionSettingOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CustomerExtensionSetting = ...,
         update: CustomerExtensionSetting = ...,
@@ -36,9 +36,9 @@ class MutateCustomerExtensionSettingResult(proto.Message):
     customer_extension_setting: CustomerExtensionSetting
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         customer_extension_setting: CustomerExtensionSetting = ...
     ) -> None: ...
@@ -51,9 +51,9 @@ class MutateCustomerExtensionSettingsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CustomerExtensionSettingOperation] = ...,
         partial_failure: bool = ...,
@@ -66,9 +66,9 @@ class MutateCustomerExtensionSettingsResponse(proto.Message):
     results: MutableSequence[MutateCustomerExtensionSettingResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCustomerExtensionSettingResult] = ...
     ) -> None: ...

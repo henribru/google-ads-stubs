@@ -32,9 +32,9 @@ class ConversionAction(proto.Message):
         data_driven_model_status: DataDrivenModelStatusEnum.DataDrivenModelStatus
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             attribution_model: AttributionModelEnum.AttributionModel = ...,
             data_driven_model_status: DataDrivenModelStatusEnum.DataDrivenModelStatus = ...
         ) -> None: ...
@@ -46,9 +46,9 @@ class ConversionAction(proto.Message):
         property_name: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             event_name: str = ...,
             project_id: str = ...,
             property_id: int = ...,
@@ -61,9 +61,9 @@ class ConversionAction(proto.Message):
         property_id: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             event_name: str = ...,
             property_name: str = ...,
             property_id: int = ...
@@ -74,9 +74,9 @@ class ConversionAction(proto.Message):
         provider_name: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             event_name: str = ...,
             provider_name: str = ...
         ) -> None: ...
@@ -87,9 +87,9 @@ class ConversionAction(proto.Message):
         always_use_default_value: bool
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             default_value: float = ...,
             default_currency_code: str = ...,
             always_use_default_value: bool = ...
@@ -118,9 +118,9 @@ class ConversionAction(proto.Message):
     google_analytics_4_settings: ConversionAction.GoogleAnalytics4Settings
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         name: str = ...,
