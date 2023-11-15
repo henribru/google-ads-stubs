@@ -14,12 +14,12 @@ class KeywordPlanServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -28,48 +28,38 @@ class KeywordPlanServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [keyword_plan_service.MutateKeywordPlansRequest],
-        Union[
-            keyword_plan_service.MutateKeywordPlansResponse,
-            Awaitable[keyword_plan_service.MutateKeywordPlansResponse],
-        ],
+        keyword_plan_service.MutateKeywordPlansResponse
+        | Awaitable[keyword_plan_service.MutateKeywordPlansResponse],
     ]: ...
     @property
     def generate_forecast_curve(
         self,
     ) -> Callable[
         [keyword_plan_service.GenerateForecastCurveRequest],
-        Union[
-            keyword_plan_service.GenerateForecastCurveResponse,
-            Awaitable[keyword_plan_service.GenerateForecastCurveResponse],
-        ],
+        keyword_plan_service.GenerateForecastCurveResponse
+        | Awaitable[keyword_plan_service.GenerateForecastCurveResponse],
     ]: ...
     @property
     def generate_forecast_time_series(
         self,
     ) -> Callable[
         [keyword_plan_service.GenerateForecastTimeSeriesRequest],
-        Union[
-            keyword_plan_service.GenerateForecastTimeSeriesResponse,
-            Awaitable[keyword_plan_service.GenerateForecastTimeSeriesResponse],
-        ],
+        keyword_plan_service.GenerateForecastTimeSeriesResponse
+        | Awaitable[keyword_plan_service.GenerateForecastTimeSeriesResponse],
     ]: ...
     @property
     def generate_forecast_metrics(
         self,
     ) -> Callable[
         [keyword_plan_service.GenerateForecastMetricsRequest],
-        Union[
-            keyword_plan_service.GenerateForecastMetricsResponse,
-            Awaitable[keyword_plan_service.GenerateForecastMetricsResponse],
-        ],
+        keyword_plan_service.GenerateForecastMetricsResponse
+        | Awaitable[keyword_plan_service.GenerateForecastMetricsResponse],
     ]: ...
     @property
     def generate_historical_metrics(
         self,
     ) -> Callable[
         [keyword_plan_service.GenerateHistoricalMetricsRequest],
-        Union[
-            keyword_plan_service.GenerateHistoricalMetricsResponse,
-            Awaitable[keyword_plan_service.GenerateHistoricalMetricsResponse],
-        ],
+        keyword_plan_service.GenerateHistoricalMetricsResponse
+        | Awaitable[keyword_plan_service.GenerateHistoricalMetricsResponse],
     ]: ...

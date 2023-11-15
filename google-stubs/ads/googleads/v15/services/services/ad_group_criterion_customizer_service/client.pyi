@@ -16,8 +16,8 @@ from .transports.base import AdGroupCriterionCustomizerServiceTransport
 
 class AdGroupCriterionCustomizerServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[AdGroupCriterionCustomizerServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[AdGroupCriterionCustomizerServiceTransport]: ...
 
 class AdGroupCriterionCustomizerServiceClient(
     metaclass=AdGroupCriterionCustomizerServiceClientMeta
@@ -38,7 +38,7 @@ class AdGroupCriterionCustomizerServiceClient(
         customer_id: str, ad_group_id: str, criterion_id: str
     ) -> str: ...
     @staticmethod
-    def parse_ad_group_criterion_path(path: str) -> Dict[str, str]: ...
+    def parse_ad_group_criterion_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def ad_group_criterion_customizer_path(
         customer_id: str,
@@ -47,61 +47,55 @@ class AdGroupCriterionCustomizerServiceClient(
         customizer_attribute_id: str,
     ) -> str: ...
     @staticmethod
-    def parse_ad_group_criterion_customizer_path(path: str) -> Dict[str, str]: ...
+    def parse_ad_group_criterion_customizer_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def customizer_attribute_path(
         customer_id: str, customizer_attribute_id: str
     ) -> str: ...
     @staticmethod
-    def parse_customizer_attribute_path(path: str) -> Dict[str, str]: ...
+    def parse_customizer_attribute_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[
-            Union[str, AdGroupCriterionCustomizerServiceTransport]
-        ] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | AdGroupCriterionCustomizerServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_ad_group_criterion_customizers(
         self,
-        request: Optional[
-            Union[
-                ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersRequest,
-                dict,
-            ]
-        ] = None,
+        request: ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersRequest
+        | dict
+        | None = None,
         *,
-        customer_id: Optional[str] = None,
-        operations: Optional[
-            MutableSequence[
-                ad_group_criterion_customizer_service.AdGroupCriterionCustomizerOperation
-            ]
-        ] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            ad_group_criterion_customizer_service.AdGroupCriterionCustomizerOperation
+        ]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> (
         ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersResponse
     ): ...

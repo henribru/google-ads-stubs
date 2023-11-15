@@ -15,8 +15,8 @@ from .transports.base import CustomerServiceTransport
 
 class CustomerServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[CustomerServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[CustomerServiceTransport]: ...
 
 class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -33,68 +33,64 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
     @staticmethod
     def conversion_action_path(customer_id: str, conversion_action_id: str) -> str: ...
     @staticmethod
-    def parse_conversion_action_path(path: str) -> Dict[str, str]: ...
+    def parse_conversion_action_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def customer_path(customer_id: str) -> str: ...
     @staticmethod
-    def parse_customer_path(path: str) -> Dict[str, str]: ...
+    def parse_customer_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[Union[str, CustomerServiceTransport]] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | CustomerServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customer(
         self,
-        request: Optional[Union[customer_service.MutateCustomerRequest, dict]] = None,
+        request: customer_service.MutateCustomerRequest | dict | None = None,
         *,
-        customer_id: Optional[str] = None,
-        operation: Optional[customer_service.CustomerOperation] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        operation: customer_service.CustomerOperation | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> customer_service.MutateCustomerResponse: ...
     def list_accessible_customers(
         self,
-        request: Optional[
-            Union[customer_service.ListAccessibleCustomersRequest, dict]
-        ] = None,
+        request: customer_service.ListAccessibleCustomersRequest | dict | None = None,
         *,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> customer_service.ListAccessibleCustomersResponse: ...
     def create_customer_client(
         self,
-        request: Optional[
-            Union[customer_service.CreateCustomerClientRequest, dict]
-        ] = None,
+        request: customer_service.CreateCustomerClientRequest | dict | None = None,
         *,
-        customer_id: Optional[str] = None,
-        customer_client: Optional[customer.Customer] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        customer_client: customer.Customer | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> customer_service.CreateCustomerClientResponse: ...

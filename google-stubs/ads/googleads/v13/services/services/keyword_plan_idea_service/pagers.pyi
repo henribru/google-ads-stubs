@@ -10,7 +10,7 @@ class GenerateKeywordIdeasPager:
         method: Callable[..., keyword_plan_idea_service.GenerateKeywordIdeaResponse],
         request: keyword_plan_idea_service.GenerateKeywordIdeasRequest,
         response: keyword_plan_idea_service.GenerateKeywordIdeaResponse,
-        metadata: Sequence[Tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> None: ...
     def __getattr__(self, name: str) -> Any: ...
     @property

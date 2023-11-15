@@ -28,12 +28,16 @@ mypy = {version = "^1.7.0", python = "^3.8"}
 black =  {version = "^23.11.0", python = "^3.8"}
 isort = {version = "^5.12.0", python = "^3.8"}
 stubdefaulter = "^0.1.0"
+ruff = "^0.1.5"
 
 [tool.isort]
 profile = "black"
 known_first_party = "google.ads.googleads"
 combine_as_imports = true
 float_to_top = true
+
+[tool.ruff.lint]
+select = ["UP"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

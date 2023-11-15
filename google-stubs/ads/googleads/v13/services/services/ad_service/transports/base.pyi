@@ -15,23 +15,23 @@ class AdServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
     @property
     def get_ad(
         self,
-    ) -> Callable[[ad_service.GetAdRequest], Union[ad.Ad, Awaitable[ad.Ad]]]: ...
+    ) -> Callable[[ad_service.GetAdRequest], ad.Ad | Awaitable[ad.Ad]]: ...
     @property
     def mutate_ads(
         self,
     ) -> Callable[
         [ad_service.MutateAdsRequest],
-        Union[ad_service.MutateAdsResponse, Awaitable[ad_service.MutateAdsResponse]],
+        ad_service.MutateAdsResponse | Awaitable[ad_service.MutateAdsResponse],
     ]: ...

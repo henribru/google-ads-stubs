@@ -16,12 +16,12 @@ class ThirdPartyAppAnalyticsLinkServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -30,10 +30,8 @@ class ThirdPartyAppAnalyticsLinkServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [third_party_app_analytics_link_service.RegenerateShareableLinkIdRequest],
-        Union[
-            third_party_app_analytics_link_service.RegenerateShareableLinkIdResponse,
-            Awaitable[
-                third_party_app_analytics_link_service.RegenerateShareableLinkIdResponse
-            ],
+        third_party_app_analytics_link_service.RegenerateShareableLinkIdResponse
+        | Awaitable[
+            third_party_app_analytics_link_service.RegenerateShareableLinkIdResponse
         ],
     ]: ...

@@ -16,8 +16,8 @@ from .transports.base import KeywordPlanCampaignKeywordServiceTransport
 
 class KeywordPlanCampaignKeywordServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[KeywordPlanCampaignKeywordServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[KeywordPlanCampaignKeywordServiceTransport]: ...
 
 class KeywordPlanCampaignKeywordServiceClient(
     metaclass=KeywordPlanCampaignKeywordServiceClientMeta
@@ -38,61 +38,55 @@ class KeywordPlanCampaignKeywordServiceClient(
         customer_id: str, keyword_plan_campaign_id: str
     ) -> str: ...
     @staticmethod
-    def parse_keyword_plan_campaign_path(path: str) -> Dict[str, str]: ...
+    def parse_keyword_plan_campaign_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def keyword_plan_campaign_keyword_path(
         customer_id: str, keyword_plan_campaign_keyword_id: str
     ) -> str: ...
     @staticmethod
-    def parse_keyword_plan_campaign_keyword_path(path: str) -> Dict[str, str]: ...
+    def parse_keyword_plan_campaign_keyword_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[
-            Union[str, KeywordPlanCampaignKeywordServiceTransport]
-        ] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | KeywordPlanCampaignKeywordServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_keyword_plan_campaign_keywords(
         self,
-        request: Optional[
-            Union[
-                keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsRequest,
-                dict,
-            ]
-        ] = None,
+        request: keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsRequest
+        | dict
+        | None = None,
         *,
-        customer_id: Optional[str] = None,
-        operations: Optional[
-            MutableSequence[
-                keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordOperation
-            ]
-        ] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordOperation
+        ]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> (
         keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsResponse
     ): ...

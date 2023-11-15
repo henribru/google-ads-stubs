@@ -16,12 +16,12 @@ class ExperimentServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -32,46 +32,42 @@ class ExperimentServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [experiment_service.MutateExperimentsRequest],
-        Union[
-            experiment_service.MutateExperimentsResponse,
-            Awaitable[experiment_service.MutateExperimentsResponse],
-        ],
+        experiment_service.MutateExperimentsResponse
+        | Awaitable[experiment_service.MutateExperimentsResponse],
     ]: ...
     @property
     def end_experiment(
         self,
     ) -> Callable[
         [experiment_service.EndExperimentRequest],
-        Union[empty_pb2.Empty, Awaitable[empty_pb2.Empty]],
+        empty_pb2.Empty | Awaitable[empty_pb2.Empty],
     ]: ...
     @property
     def list_experiment_async_errors(
         self,
     ) -> Callable[
         [experiment_service.ListExperimentAsyncErrorsRequest],
-        Union[
-            experiment_service.ListExperimentAsyncErrorsResponse,
-            Awaitable[experiment_service.ListExperimentAsyncErrorsResponse],
-        ],
+        experiment_service.ListExperimentAsyncErrorsResponse
+        | Awaitable[experiment_service.ListExperimentAsyncErrorsResponse],
     ]: ...
     @property
     def graduate_experiment(
         self,
     ) -> Callable[
         [experiment_service.GraduateExperimentRequest],
-        Union[empty_pb2.Empty, Awaitable[empty_pb2.Empty]],
+        empty_pb2.Empty | Awaitable[empty_pb2.Empty],
     ]: ...
     @property
     def schedule_experiment(
         self,
     ) -> Callable[
         [experiment_service.ScheduleExperimentRequest],
-        Union[operations_pb2.Operation, Awaitable[operations_pb2.Operation]],
+        operations_pb2.Operation | Awaitable[operations_pb2.Operation],
     ]: ...
     @property
     def promote_experiment(
         self,
     ) -> Callable[
         [experiment_service.PromoteExperimentRequest],
-        Union[operations_pb2.Operation, Awaitable[operations_pb2.Operation]],
+        operations_pb2.Operation | Awaitable[operations_pb2.Operation],
     ]: ...

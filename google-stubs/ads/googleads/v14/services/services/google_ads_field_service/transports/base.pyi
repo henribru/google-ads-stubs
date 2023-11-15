@@ -15,12 +15,12 @@ class GoogleAdsFieldServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -29,17 +29,13 @@ class GoogleAdsFieldServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [google_ads_field_service.GetGoogleAdsFieldRequest],
-        Union[
-            google_ads_field.GoogleAdsField, Awaitable[google_ads_field.GoogleAdsField]
-        ],
+        google_ads_field.GoogleAdsField | Awaitable[google_ads_field.GoogleAdsField],
     ]: ...
     @property
     def search_google_ads_fields(
         self,
     ) -> Callable[
         [google_ads_field_service.SearchGoogleAdsFieldsRequest],
-        Union[
-            google_ads_field_service.SearchGoogleAdsFieldsResponse,
-            Awaitable[google_ads_field_service.SearchGoogleAdsFieldsResponse],
-        ],
+        google_ads_field_service.SearchGoogleAdsFieldsResponse
+        | Awaitable[google_ads_field_service.SearchGoogleAdsFieldsResponse],
     ]: ...

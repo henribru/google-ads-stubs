@@ -14,8 +14,8 @@ from .transports.base import RecommendationServiceTransport
 
 class RecommendationServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[RecommendationServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[RecommendationServiceTransport]: ...
 
 class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -32,74 +32,70 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
     @staticmethod
     def ad_path(customer_id: str, ad_id: str) -> str: ...
     @staticmethod
-    def parse_ad_path(path: str) -> Dict[str, str]: ...
+    def parse_ad_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def asset_path(customer_id: str, asset_id: str) -> str: ...
     @staticmethod
-    def parse_asset_path(path: str) -> Dict[str, str]: ...
+    def parse_asset_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def conversion_action_path(customer_id: str, conversion_action_id: str) -> str: ...
     @staticmethod
-    def parse_conversion_action_path(path: str) -> Dict[str, str]: ...
+    def parse_conversion_action_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def recommendation_path(customer_id: str, recommendation_id: str) -> str: ...
     @staticmethod
-    def parse_recommendation_path(path: str) -> Dict[str, str]: ...
+    def parse_recommendation_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[Union[str, RecommendationServiceTransport]] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | RecommendationServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def apply_recommendation(
         self,
-        request: Optional[
-            Union[recommendation_service.ApplyRecommendationRequest, dict]
-        ] = None,
+        request: recommendation_service.ApplyRecommendationRequest | dict | None = None,
         *,
-        customer_id: Optional[str] = None,
-        operations: Optional[
-            MutableSequence[recommendation_service.ApplyRecommendationOperation]
-        ] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        operations: MutableSequence[recommendation_service.ApplyRecommendationOperation]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> recommendation_service.ApplyRecommendationResponse: ...
     def dismiss_recommendation(
         self,
-        request: Optional[
-            Union[recommendation_service.DismissRecommendationRequest, dict]
-        ] = None,
+        request: recommendation_service.DismissRecommendationRequest
+        | dict
+        | None = None,
         *,
-        customer_id: Optional[str] = None,
-        operations: Optional[
-            MutableSequence[
-                recommendation_service.DismissRecommendationRequest.DismissRecommendationOperation
-            ]
-        ] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            recommendation_service.DismissRecommendationRequest.DismissRecommendationOperation
+        ]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> recommendation_service.DismissRecommendationResponse: ...

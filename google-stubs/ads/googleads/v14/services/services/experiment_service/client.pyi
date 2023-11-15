@@ -16,8 +16,8 @@ from .transports.base import ExperimentServiceTransport
 
 class ExperimentServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[ExperimentServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[ExperimentServiceTransport]: ...
 
 class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -34,110 +34,102 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
     @staticmethod
     def campaign_path(customer_id: str, campaign_id: str) -> str: ...
     @staticmethod
-    def parse_campaign_path(path: str) -> Dict[str, str]: ...
+    def parse_campaign_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def campaign_budget_path(customer_id: str, campaign_budget_id: str) -> str: ...
     @staticmethod
-    def parse_campaign_budget_path(path: str) -> Dict[str, str]: ...
+    def parse_campaign_budget_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def experiment_path(customer_id: str, trial_id: str) -> str: ...
     @staticmethod
-    def parse_experiment_path(path: str) -> Dict[str, str]: ...
+    def parse_experiment_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[Union[str, ExperimentServiceTransport]] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | ExperimentServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_experiments(
         self,
-        request: Optional[
-            Union[experiment_service.MutateExperimentsRequest, dict]
-        ] = None,
+        request: experiment_service.MutateExperimentsRequest | dict | None = None,
         *,
-        customer_id: Optional[str] = None,
-        operations: Optional[
-            MutableSequence[experiment_service.ExperimentOperation]
-        ] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        operations: MutableSequence[experiment_service.ExperimentOperation]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> experiment_service.MutateExperimentsResponse: ...
     def end_experiment(
         self,
-        request: Optional[Union[experiment_service.EndExperimentRequest, dict]] = None,
+        request: experiment_service.EndExperimentRequest | dict | None = None,
         *,
-        experiment: Optional[str] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        experiment: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> None: ...
     def list_experiment_async_errors(
         self,
-        request: Optional[
-            Union[experiment_service.ListExperimentAsyncErrorsRequest, dict]
-        ] = None,
+        request: experiment_service.ListExperimentAsyncErrorsRequest
+        | dict
+        | None = None,
         *,
-        resource_name: Optional[str] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        resource_name: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> pagers.ListExperimentAsyncErrorsPager: ...
     def graduate_experiment(
         self,
-        request: Optional[
-            Union[experiment_service.GraduateExperimentRequest, dict]
-        ] = None,
+        request: experiment_service.GraduateExperimentRequest | dict | None = None,
         *,
-        experiment: Optional[str] = None,
-        campaign_budget_mappings: Optional[
-            MutableSequence[experiment_service.CampaignBudgetMapping]
-        ] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        experiment: str | None = None,
+        campaign_budget_mappings: MutableSequence[
+            experiment_service.CampaignBudgetMapping
+        ]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> None: ...
     def schedule_experiment(
         self,
-        request: Optional[
-            Union[experiment_service.ScheduleExperimentRequest, dict]
-        ] = None,
+        request: experiment_service.ScheduleExperimentRequest | dict | None = None,
         *,
-        resource_name: Optional[str] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        resource_name: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> operation.Operation: ...
     def promote_experiment(
         self,
-        request: Optional[
-            Union[experiment_service.PromoteExperimentRequest, dict]
-        ] = None,
+        request: experiment_service.PromoteExperimentRequest | dict | None = None,
         *,
-        resource_name: Optional[str] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        resource_name: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> operation.Operation: ...

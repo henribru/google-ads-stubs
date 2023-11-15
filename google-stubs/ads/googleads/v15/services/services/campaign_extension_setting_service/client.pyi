@@ -14,8 +14,8 @@ from .transports.base import CampaignExtensionSettingServiceTransport
 
 class CampaignExtensionSettingServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[CampaignExtensionSettingServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[CampaignExtensionSettingServiceTransport]: ...
 
 class CampaignExtensionSettingServiceClient(
     metaclass=CampaignExtensionSettingServiceClientMeta
@@ -34,63 +34,57 @@ class CampaignExtensionSettingServiceClient(
     @staticmethod
     def campaign_path(customer_id: str, campaign_id: str) -> str: ...
     @staticmethod
-    def parse_campaign_path(path: str) -> Dict[str, str]: ...
+    def parse_campaign_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def campaign_extension_setting_path(
         customer_id: str, campaign_id: str, extension_type: str
     ) -> str: ...
     @staticmethod
-    def parse_campaign_extension_setting_path(path: str) -> Dict[str, str]: ...
+    def parse_campaign_extension_setting_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def extension_feed_item_path(customer_id: str, feed_item_id: str) -> str: ...
     @staticmethod
-    def parse_extension_feed_item_path(path: str) -> Dict[str, str]: ...
+    def parse_extension_feed_item_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[
-            Union[str, CampaignExtensionSettingServiceTransport]
-        ] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | CampaignExtensionSettingServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_campaign_extension_settings(
         self,
-        request: Optional[
-            Union[
-                campaign_extension_setting_service.MutateCampaignExtensionSettingsRequest,
-                dict,
-            ]
-        ] = None,
+        request: campaign_extension_setting_service.MutateCampaignExtensionSettingsRequest
+        | dict
+        | None = None,
         *,
-        customer_id: Optional[str] = None,
-        operations: Optional[
-            MutableSequence[
-                campaign_extension_setting_service.CampaignExtensionSettingOperation
-            ]
-        ] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            campaign_extension_setting_service.CampaignExtensionSettingOperation
+        ]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> campaign_extension_setting_service.MutateCampaignExtensionSettingsResponse: ...
