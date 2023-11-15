@@ -1,4 +1,4 @@
-from typing import List, overload
+from typing import overload
 
 from google.oauth2.credentials import Credentials as InstalledAppCredentials
 from google.oauth2.service_account import Credentials as ServiceAccountCreds
@@ -19,7 +19,7 @@ def get_service_account_credentials(
     json_key_file_path: str,
     subject: str,
     http_proxy: str | None,
-    scopes: List[str] = ["https://www.googleapis.com/auth/adwords"],
+    scopes: list[str] = ["https://www.googleapis.com/auth/adwords"],
 ) -> ServiceAccountCreds: ...
 @overload
 def get_credentials(

@@ -1,5 +1,6 @@
 import logging
-from typing import Callable, TypeVar
+from collections.abc import Callable
+from typing import TypeVar
 
 import grpc
 from google.protobuf.message import Message
