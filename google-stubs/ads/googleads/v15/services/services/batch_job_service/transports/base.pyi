@@ -15,12 +15,12 @@ class BatchJobServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -31,35 +31,29 @@ class BatchJobServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [batch_job_service.MutateBatchJobRequest],
-        Union[
-            batch_job_service.MutateBatchJobResponse,
-            Awaitable[batch_job_service.MutateBatchJobResponse],
-        ],
+        batch_job_service.MutateBatchJobResponse
+        | Awaitable[batch_job_service.MutateBatchJobResponse],
     ]: ...
     @property
     def list_batch_job_results(
         self,
     ) -> Callable[
         [batch_job_service.ListBatchJobResultsRequest],
-        Union[
-            batch_job_service.ListBatchJobResultsResponse,
-            Awaitable[batch_job_service.ListBatchJobResultsResponse],
-        ],
+        batch_job_service.ListBatchJobResultsResponse
+        | Awaitable[batch_job_service.ListBatchJobResultsResponse],
     ]: ...
     @property
     def run_batch_job(
         self,
     ) -> Callable[
         [batch_job_service.RunBatchJobRequest],
-        Union[operations_pb2.Operation, Awaitable[operations_pb2.Operation]],
+        operations_pb2.Operation | Awaitable[operations_pb2.Operation],
     ]: ...
     @property
     def add_batch_job_operations(
         self,
     ) -> Callable[
         [batch_job_service.AddBatchJobOperationsRequest],
-        Union[
-            batch_job_service.AddBatchJobOperationsResponse,
-            Awaitable[batch_job_service.AddBatchJobOperationsResponse],
-        ],
+        batch_job_service.AddBatchJobOperationsResponse
+        | Awaitable[batch_job_service.AddBatchJobOperationsResponse],
     ]: ...

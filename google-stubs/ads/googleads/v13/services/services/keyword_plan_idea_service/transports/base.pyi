@@ -14,12 +14,12 @@ class KeywordPlanIdeaServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -28,30 +28,22 @@ class KeywordPlanIdeaServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [keyword_plan_idea_service.GenerateKeywordIdeasRequest],
-        Union[
-            keyword_plan_idea_service.GenerateKeywordIdeaResponse,
-            Awaitable[keyword_plan_idea_service.GenerateKeywordIdeaResponse],
-        ],
+        keyword_plan_idea_service.GenerateKeywordIdeaResponse
+        | Awaitable[keyword_plan_idea_service.GenerateKeywordIdeaResponse],
     ]: ...
     @property
     def generate_keyword_historical_metrics(
         self,
     ) -> Callable[
         [keyword_plan_idea_service.GenerateKeywordHistoricalMetricsRequest],
-        Union[
-            keyword_plan_idea_service.GenerateKeywordHistoricalMetricsResponse,
-            Awaitable[
-                keyword_plan_idea_service.GenerateKeywordHistoricalMetricsResponse
-            ],
-        ],
+        keyword_plan_idea_service.GenerateKeywordHistoricalMetricsResponse
+        | Awaitable[keyword_plan_idea_service.GenerateKeywordHistoricalMetricsResponse],
     ]: ...
     @property
     def generate_ad_group_themes(
         self,
     ) -> Callable[
         [keyword_plan_idea_service.GenerateAdGroupThemesRequest],
-        Union[
-            keyword_plan_idea_service.GenerateAdGroupThemesResponse,
-            Awaitable[keyword_plan_idea_service.GenerateAdGroupThemesResponse],
-        ],
+        keyword_plan_idea_service.GenerateAdGroupThemesResponse
+        | Awaitable[keyword_plan_idea_service.GenerateAdGroupThemesResponse],
     ]: ...

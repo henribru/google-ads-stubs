@@ -14,7 +14,7 @@ class ListCampaignDraftAsyncErrorsPager:
         ],
         request: campaign_draft_service.ListCampaignDraftAsyncErrorsRequest,
         response: campaign_draft_service.ListCampaignDraftAsyncErrorsResponse,
-        metadata: Sequence[Tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> None: ...
     def __getattr__(self, name: str) -> Any: ...
     @property

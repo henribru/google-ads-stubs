@@ -17,8 +17,8 @@ from .transports.base import ProductLinkInvitationServiceTransport
 
 class ProductLinkInvitationServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[ProductLinkInvitationServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[ProductLinkInvitationServiceTransport]: ...
 
 class ProductLinkInvitationServiceClient(
     metaclass=ProductLinkInvitationServiceClientMeta
@@ -39,49 +39,46 @@ class ProductLinkInvitationServiceClient(
         customer_id: str, customer_invitation_id: str
     ) -> str: ...
     @staticmethod
-    def parse_product_link_invitation_path(path: str) -> Dict[str, str]: ...
+    def parse_product_link_invitation_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[Union[str, ProductLinkInvitationServiceTransport]] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | ProductLinkInvitationServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def update_product_link_invitation(
         self,
-        request: Optional[
-            Union[
-                product_link_invitation_service.UpdateProductLinkInvitationRequest, dict
-            ]
-        ] = None,
+        request: product_link_invitation_service.UpdateProductLinkInvitationRequest
+        | dict
+        | None = None,
         *,
-        customer_id: Optional[str] = None,
-        product_link_invitation_status: Optional[
-            gage_product_link_invitation_status.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
-        ] = None,
-        resource_name: Optional[str] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        product_link_invitation_status: gage_product_link_invitation_status.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
+        | None = None,
+        resource_name: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> product_link_invitation_service.UpdateProductLinkInvitationResponse: ...

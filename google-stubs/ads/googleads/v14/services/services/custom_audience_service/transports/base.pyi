@@ -14,12 +14,12 @@ class CustomAudienceServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -28,8 +28,6 @@ class CustomAudienceServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [custom_audience_service.MutateCustomAudiencesRequest],
-        Union[
-            custom_audience_service.MutateCustomAudiencesResponse,
-            Awaitable[custom_audience_service.MutateCustomAudiencesResponse],
-        ],
+        custom_audience_service.MutateCustomAudiencesResponse
+        | Awaitable[custom_audience_service.MutateCustomAudiencesResponse],
     ]: ...

@@ -10,7 +10,7 @@ class ListBatchJobResultsPager:
         method: Callable[..., batch_job_service.ListBatchJobResultsResponse],
         request: batch_job_service.ListBatchJobResultsRequest,
         response: batch_job_service.ListBatchJobResultsResponse,
-        metadata: Sequence[Tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> None: ...
     def __getattr__(self, name: str) -> Any: ...
     @property

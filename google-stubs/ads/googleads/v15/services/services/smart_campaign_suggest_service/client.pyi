@@ -14,8 +14,8 @@ from .transports.base import SmartCampaignSuggestServiceTransport
 
 class SmartCampaignSuggestServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[SmartCampaignSuggestServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[SmartCampaignSuggestServiceTransport]: ...
 
 class SmartCampaignSuggestServiceClient(
     metaclass=SmartCampaignSuggestServiceClientMeta
@@ -34,71 +34,68 @@ class SmartCampaignSuggestServiceClient(
     @staticmethod
     def campaign_path(customer_id: str, campaign_id: str) -> str: ...
     @staticmethod
-    def parse_campaign_path(path: str) -> Dict[str, str]: ...
+    def parse_campaign_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def keyword_theme_constant_path(
         express_category_id: str, express_sub_category_id: str
     ) -> str: ...
     @staticmethod
-    def parse_keyword_theme_constant_path(path: str) -> Dict[str, str]: ...
+    def parse_keyword_theme_constant_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[Union[str, SmartCampaignSuggestServiceTransport]] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | SmartCampaignSuggestServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def suggest_smart_campaign_budget_options(
         self,
-        request: Optional[
-            Union[
-                smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsRequest,
-                dict,
-            ]
-        ] = None,
+        request: smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsRequest
+        | dict
+        | None = None,
         *,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsResponse: ...
     def suggest_smart_campaign_ad(
         self,
-        request: Optional[
-            Union[smart_campaign_suggest_service.SuggestSmartCampaignAdRequest, dict]
-        ] = None,
+        request: smart_campaign_suggest_service.SuggestSmartCampaignAdRequest
+        | dict
+        | None = None,
         *,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignAdResponse: ...
     def suggest_keyword_themes(
         self,
-        request: Optional[
-            Union[smart_campaign_suggest_service.SuggestKeywordThemesRequest, dict]
-        ] = None,
+        request: smart_campaign_suggest_service.SuggestKeywordThemesRequest
+        | dict
+        | None = None,
         *,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> smart_campaign_suggest_service.SuggestKeywordThemesResponse: ...

@@ -14,12 +14,12 @@ class CustomerManagerLinkServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -28,18 +28,14 @@ class CustomerManagerLinkServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [customer_manager_link_service.MutateCustomerManagerLinkRequest],
-        Union[
-            customer_manager_link_service.MutateCustomerManagerLinkResponse,
-            Awaitable[customer_manager_link_service.MutateCustomerManagerLinkResponse],
-        ],
+        customer_manager_link_service.MutateCustomerManagerLinkResponse
+        | Awaitable[customer_manager_link_service.MutateCustomerManagerLinkResponse],
     ]: ...
     @property
     def move_manager_link(
         self,
     ) -> Callable[
         [customer_manager_link_service.MoveManagerLinkRequest],
-        Union[
-            customer_manager_link_service.MoveManagerLinkResponse,
-            Awaitable[customer_manager_link_service.MoveManagerLinkResponse],
-        ],
+        customer_manager_link_service.MoveManagerLinkResponse
+        | Awaitable[customer_manager_link_service.MoveManagerLinkResponse],
     ]: ...

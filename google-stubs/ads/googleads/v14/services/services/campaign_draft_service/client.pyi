@@ -16,8 +16,8 @@ from .transports.base import CampaignDraftServiceTransport
 
 class CampaignDraftServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = None
-    ) -> Type[CampaignDraftServiceTransport]: ...
+        cls, label: str | None = None
+    ) -> type[CampaignDraftServiceTransport]: ...
 
 class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -34,74 +34,73 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
     @staticmethod
     def campaign_path(customer_id: str, campaign_id: str) -> str: ...
     @staticmethod
-    def parse_campaign_path(path: str) -> Dict[str, str]: ...
+    def parse_campaign_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def campaign_draft_path(
         customer_id: str, base_campaign_id: str, draft_id: str
     ) -> str: ...
     @staticmethod
-    def parse_campaign_draft_path(path: str) -> Dict[str, str]: ...
+    def parse_campaign_draft_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
-    def parse_common_billing_account_path(path: str) -> Dict[str, str]: ...
+    def parse_common_billing_account_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_folder_path(folder: str) -> str: ...
     @staticmethod
-    def parse_common_folder_path(path: str) -> Dict[str, str]: ...
+    def parse_common_folder_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_organization_path(organization: str) -> str: ...
     @staticmethod
-    def parse_common_organization_path(path: str) -> Dict[str, str]: ...
+    def parse_common_organization_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_project_path(project: str) -> str: ...
     @staticmethod
-    def parse_common_project_path(path: str) -> Dict[str, str]: ...
+    def parse_common_project_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
-    def parse_common_location_path(path: str) -> Dict[str, str]: ...
+    def parse_common_location_path(path: str) -> dict[str, str]: ...
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Optional[Union[str, CampaignDraftServiceTransport]] = None,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str | CampaignDraftServiceTransport | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_campaign_drafts(
         self,
-        request: Optional[
-            Union[campaign_draft_service.MutateCampaignDraftsRequest, dict]
-        ] = None,
+        request: campaign_draft_service.MutateCampaignDraftsRequest
+        | dict
+        | None = None,
         *,
-        customer_id: Optional[str] = None,
-        operations: Optional[
-            MutableSequence[campaign_draft_service.CampaignDraftOperation]
-        ] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        customer_id: str | None = None,
+        operations: MutableSequence[campaign_draft_service.CampaignDraftOperation]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> campaign_draft_service.MutateCampaignDraftsResponse: ...
     def promote_campaign_draft(
         self,
-        request: Optional[
-            Union[campaign_draft_service.PromoteCampaignDraftRequest, dict]
-        ] = None,
+        request: campaign_draft_service.PromoteCampaignDraftRequest
+        | dict
+        | None = None,
         *,
-        campaign_draft: Optional[str] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        campaign_draft: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> operation.Operation: ...
     def list_campaign_draft_async_errors(
         self,
-        request: Optional[
-            Union[campaign_draft_service.ListCampaignDraftAsyncErrorsRequest, dict]
-        ] = None,
+        request: campaign_draft_service.ListCampaignDraftAsyncErrorsRequest
+        | dict
+        | None = None,
         *,
-        resource_name: Optional[str] = None,
-        retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
-        timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ()
+        resource_name: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str]] = ()
     ) -> pagers.ListCampaignDraftAsyncErrorsPager: ...

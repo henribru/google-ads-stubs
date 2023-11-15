@@ -15,12 +15,12 @@ class MerchantCenterLinkServiceTransport(abc.ABC):
         self,
         *,
         host: str = "googleads.googleapis.com",
-        credentials: Optional[ga_credentials.Credentials] = None,
-        credentials_file: Optional[str] = None,
-        scopes: Optional[Sequence[str]] = None,
-        quota_project_id: Optional[str] = None,
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: Optional[bool] = False,
+        always_use_jwt_access: bool | None = False,
         **kwargs
     ) -> None: ...
     def close(self) -> None: ...
@@ -29,28 +29,22 @@ class MerchantCenterLinkServiceTransport(abc.ABC):
         self,
     ) -> Callable[
         [merchant_center_link_service.ListMerchantCenterLinksRequest],
-        Union[
-            merchant_center_link_service.ListMerchantCenterLinksResponse,
-            Awaitable[merchant_center_link_service.ListMerchantCenterLinksResponse],
-        ],
+        merchant_center_link_service.ListMerchantCenterLinksResponse
+        | Awaitable[merchant_center_link_service.ListMerchantCenterLinksResponse],
     ]: ...
     @property
     def get_merchant_center_link(
         self,
     ) -> Callable[
         [merchant_center_link_service.GetMerchantCenterLinkRequest],
-        Union[
-            merchant_center_link.MerchantCenterLink,
-            Awaitable[merchant_center_link.MerchantCenterLink],
-        ],
+        merchant_center_link.MerchantCenterLink
+        | Awaitable[merchant_center_link.MerchantCenterLink],
     ]: ...
     @property
     def mutate_merchant_center_link(
         self,
     ) -> Callable[
         [merchant_center_link_service.MutateMerchantCenterLinkRequest],
-        Union[
-            merchant_center_link_service.MutateMerchantCenterLinkResponse,
-            Awaitable[merchant_center_link_service.MutateMerchantCenterLinkResponse],
-        ],
+        merchant_center_link_service.MutateMerchantCenterLinkResponse
+        | Awaitable[merchant_center_link_service.MutateMerchantCenterLinkResponse],
     ]: ...
