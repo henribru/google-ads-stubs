@@ -16,9 +16,9 @@ class CustomerConversionGoalOperation(proto.Message):
     update: CustomerConversionGoal
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         update: CustomerConversionGoal = ...
     ) -> None: ...
@@ -27,9 +27,9 @@ class MutateCustomerConversionGoalResult(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
 
@@ -39,9 +39,9 @@ class MutateCustomerConversionGoalsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CustomerConversionGoalOperation] = ...,
         validate_only: bool = ...
@@ -51,8 +51,8 @@ class MutateCustomerConversionGoalsResponse(proto.Message):
     results: MutableSequence[MutateCustomerConversionGoalResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateCustomerConversionGoalResult] = ...
     ) -> None: ...

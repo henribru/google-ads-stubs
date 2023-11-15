@@ -33,7 +33,7 @@ class AssetLinkErrorEnum(proto.Message):
         CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET = 22
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

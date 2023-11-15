@@ -17,9 +17,9 @@ class CustomerAssetSetOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: CustomerAssetSet = ...,
         remove: str = ...
     ) -> None: ...
@@ -29,9 +29,9 @@ class MutateCustomerAssetSetResult(proto.Message):
     customer_asset_set: CustomerAssetSet
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         customer_asset_set: CustomerAssetSet = ...
     ) -> None: ...
@@ -44,9 +44,9 @@ class MutateCustomerAssetSetsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CustomerAssetSetOperation] = ...,
         partial_failure: bool = ...,
@@ -59,9 +59,9 @@ class MutateCustomerAssetSetsResponse(proto.Message):
     partial_failure_error: Status
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateCustomerAssetSetResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...

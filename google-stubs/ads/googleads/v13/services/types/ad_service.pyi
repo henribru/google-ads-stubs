@@ -20,9 +20,9 @@ class AdOperation(proto.Message):
     update: Ad
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         policy_validation_parameter: PolicyValidationParameter = ...,
         update: Ad = ...
@@ -32,9 +32,9 @@ class GetAdRequest(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
 
@@ -43,9 +43,9 @@ class MutateAdResult(proto.Message):
     ad: Ad
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         ad: Ad = ...
     ) -> None: ...
@@ -58,9 +58,9 @@ class MutateAdsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[AdOperation] = ...,
         partial_failure: bool = ...,
@@ -73,9 +73,9 @@ class MutateAdsResponse(proto.Message):
     results: MutableSequence[MutateAdResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdResult] = ...
     ) -> None: ...

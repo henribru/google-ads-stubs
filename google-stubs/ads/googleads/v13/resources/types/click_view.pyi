@@ -22,9 +22,9 @@ class ClickView(proto.Message):
     keyword_info: KeywordInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         gclid: str = ...,
         area_of_interest: ClickLocation = ...,

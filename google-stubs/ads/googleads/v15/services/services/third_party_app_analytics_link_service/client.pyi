@@ -16,7 +16,7 @@ from .transports.base import ThirdPartyAppAnalyticsLinkServiceTransport
 
 class ThirdPartyAppAnalyticsLinkServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ThirdPartyAppAnalyticsLinkServiceTransport]: ...
 
 class ThirdPartyAppAnalyticsLinkServiceClient(
@@ -62,11 +62,11 @@ class ThirdPartyAppAnalyticsLinkServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
         transport: Optional[
             Union[str, ThirdPartyAppAnalyticsLinkServiceTransport]
-        ] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        ] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def regenerate_shareable_link_id(
@@ -76,9 +76,9 @@ class ThirdPartyAppAnalyticsLinkServiceClient(
                 third_party_app_analytics_link_service.RegenerateShareableLinkIdRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> third_party_app_analytics_link_service.RegenerateShareableLinkIdResponse: ...

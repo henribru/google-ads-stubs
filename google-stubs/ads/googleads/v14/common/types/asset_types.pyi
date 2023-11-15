@@ -50,9 +50,9 @@ _M = TypeVar("_M")
 class BookOnGoogleAsset(proto.Message):
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...
     ...
 
@@ -62,9 +62,9 @@ class BusinessProfileLocation(proto.Message):
     listing_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         labels: MutableSequence[str] = ...,
         store_code: str = ...,
         listing_id: int = ...,
@@ -78,9 +78,9 @@ class CallAsset(proto.Message):
     ad_schedule_targets: MutableSequence[AdScheduleInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         country_code: str = ...,
         phone_number: str = ...,
         call_conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState = ...,
@@ -92,9 +92,9 @@ class CallToActionAsset(proto.Message):
     call_to_action: CallToActionTypeEnum.CallToActionType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         call_to_action: CallToActionTypeEnum.CallToActionType = ...,
     ) -> None: ...
 
@@ -105,9 +105,9 @@ class CalloutAsset(proto.Message):
     ad_schedule_targets: MutableSequence[AdScheduleInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         callout_text: str = ...,
         start_date: str = ...,
         end_date: str = ...,
@@ -122,9 +122,9 @@ class DiscoveryCarouselCardAsset(proto.Message):
     call_to_action_text: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         marketing_image_asset: str = ...,
         square_marketing_image_asset: str = ...,
         portrait_marketing_image_asset: str = ...,
@@ -152,9 +152,9 @@ class DynamicCustomAsset(proto.Message):
     similar_ids: MutableSequence[str]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         id: str = ...,
         id2: str = ...,
         item_title: str = ...,
@@ -191,9 +191,9 @@ class DynamicEducationAsset(proto.Message):
     image_url: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         program_id: str = ...,
         location_id: str = ...,
         program_name: str = ...,
@@ -228,9 +228,9 @@ class DynamicFlightsAsset(proto.Message):
     custom_mapping: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         destination_id: str = ...,
         origin_id: str = ...,
         flight_description: str = ...,
@@ -268,9 +268,9 @@ class DynamicHotelsAndRentalsAsset(proto.Message):
     similar_property_ids: MutableSequence[str]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         property_id: str = ...,
         property_name: str = ...,
         image_url: str = ...,
@@ -307,9 +307,9 @@ class DynamicJobsAsset(proto.Message):
     ios_app_store_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         job_id: str = ...,
         location_id: str = ...,
         job_title: str = ...,
@@ -345,9 +345,9 @@ class DynamicLocalAsset(proto.Message):
     ios_app_store_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         deal_id: str = ...,
         deal_name: str = ...,
         subtitle: str = ...,
@@ -384,9 +384,9 @@ class DynamicRealEstateAsset(proto.Message):
     similar_listing_ids: MutableSequence[str]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         listing_id: str = ...,
         listing_name: str = ...,
         city_name: str = ...,
@@ -424,9 +424,9 @@ class DynamicTravelAsset(proto.Message):
     ios_app_store_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         destination_id: str = ...,
         origin_id: str = ...,
         title: str = ...,
@@ -451,9 +451,9 @@ class HotelCalloutAsset(proto.Message):
     language_code: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         text: str = ...,
         language_code: str = ...,
     ) -> None: ...
@@ -464,9 +464,9 @@ class HotelPropertyAsset(proto.Message):
     hotel_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         place_id: str = ...,
         hotel_address: str = ...,
         hotel_name: str = ...,
@@ -479,9 +479,9 @@ class ImageAsset(proto.Message):
     full_size: ImageDimension
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         data: bytes = ...,
         file_size: int = ...,
         mime_type: MimeTypeEnum.MimeType = ...,
@@ -494,9 +494,9 @@ class ImageDimension(proto.Message):
     url: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         height_pixels: int = ...,
         width_pixels: int = ...,
         url: str = ...,
@@ -520,9 +520,9 @@ class LeadFormAsset(proto.Message):
     custom_disclosure: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         business_name: str = ...,
         call_to_action_type: LeadFormCallToActionTypeEnum.LeadFormCallToActionType = ...,
         call_to_action_description: str = ...,
@@ -546,9 +546,9 @@ class LeadFormCustomQuestionField(proto.Message):
     has_location_answer: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         custom_question_text: str = ...,
         single_choice_answers: LeadFormSingleChoiceAnswers = ...,
         has_location_answer: bool = ...,
@@ -558,9 +558,9 @@ class LeadFormDeliveryMethod(proto.Message):
     webhook: WebhookDelivery
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         webhook: WebhookDelivery = ...,
     ) -> None: ...
 
@@ -570,9 +570,9 @@ class LeadFormField(proto.Message):
     has_location_answer: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         input_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType = ...,
         single_choice_answers: LeadFormSingleChoiceAnswers = ...,
         has_location_answer: bool = ...,
@@ -582,9 +582,9 @@ class LeadFormSingleChoiceAnswers(proto.Message):
     answers: MutableSequence[str]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         answers: MutableSequence[str] = ...,
     ) -> None: ...
 
@@ -594,9 +594,9 @@ class LocationAsset(proto.Message):
     location_ownership_type: LocationOwnershipTypeEnum.LocationOwnershipType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         place_id: str = ...,
         business_profile_locations: MutableSequence[BusinessProfileLocation] = ...,
         location_ownership_type: LocationOwnershipTypeEnum.LocationOwnershipType = ...,
@@ -606,9 +606,9 @@ class MediaBundleAsset(proto.Message):
     data: bytes
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         data: bytes = ...,
     ) -> None: ...
 
@@ -620,9 +620,9 @@ class MobileAppAsset(proto.Message):
     end_date: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         app_id: str = ...,
         app_store: MobileAppVendorEnum.MobileAppVendor = ...,
         link_text: str = ...,
@@ -635,9 +635,9 @@ class PageFeedAsset(proto.Message):
     labels: MutableSequence[str]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         page_url: str = ...,
         labels: MutableSequence[str] = ...,
     ) -> None: ...
@@ -649,9 +649,9 @@ class PriceAsset(proto.Message):
     price_offerings: MutableSequence[PriceOffering]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         type_: PriceExtensionTypeEnum.PriceExtensionType = ...,
         price_qualifier: PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier = ...,
         language_code: str = ...,
@@ -667,9 +667,9 @@ class PriceOffering(proto.Message):
     final_mobile_url: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         header: str = ...,
         description: str = ...,
         price: Money = ...,
@@ -694,9 +694,9 @@ class PromotionAsset(proto.Message):
     orders_over_amount: Money
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         promotion_target: str = ...,
         discount_modifier: PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier = ...,
         redemption_start_date: str = ...,
@@ -721,9 +721,9 @@ class SitelinkAsset(proto.Message):
     ad_schedule_targets: MutableSequence[AdScheduleInfo]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         link_text: str = ...,
         description1: str = ...,
         description2: str = ...,
@@ -737,9 +737,9 @@ class StructuredSnippetAsset(proto.Message):
     values: MutableSequence[str]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         header: str = ...,
         values: MutableSequence[str] = ...,
     ) -> None: ...
@@ -748,9 +748,9 @@ class TextAsset(proto.Message):
     text: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         text: str = ...,
     ) -> None: ...
 
@@ -760,9 +760,9 @@ class WebhookDelivery(proto.Message):
     payload_schema_version: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         advertiser_webhook_url: str = ...,
         google_secret: str = ...,
         payload_schema_version: int = ...,
@@ -773,9 +773,9 @@ class YoutubeVideoAsset(proto.Message):
     youtube_video_title: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         youtube_video_id: str = ...,
         youtube_video_title: str = ...,
     ) -> None: ...

@@ -23,9 +23,9 @@ class AdGroupExtensionSettingOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
         create: AdGroupExtensionSetting = ...,
@@ -38,9 +38,9 @@ class MutateAdGroupExtensionSettingResult(proto.Message):
     ad_group_extension_setting: AdGroupExtensionSetting
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         ad_group_extension_setting: AdGroupExtensionSetting = ...
     ) -> None: ...
@@ -52,9 +52,9 @@ class MutateAdGroupExtensionSettingsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[AdGroupExtensionSettingOperation] = ...,
         partial_failure: bool = ...,
@@ -66,9 +66,9 @@ class MutateAdGroupExtensionSettingsResponse(proto.Message):
     results: MutableSequence[MutateAdGroupExtensionSettingResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdGroupExtensionSettingResult] = ...
     ) -> None: ...

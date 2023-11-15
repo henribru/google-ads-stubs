@@ -16,9 +16,9 @@ class AccountLinkOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         update: AccountLink = ...,
         remove: str = ...
@@ -29,9 +29,9 @@ class CreateAccountLinkRequest(proto.Message):
     account_link: AccountLink
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         account_link: AccountLink = ...
     ) -> None: ...
@@ -40,9 +40,9 @@ class CreateAccountLinkResponse(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
 
@@ -53,9 +53,9 @@ class MutateAccountLinkRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: AccountLinkOperation = ...,
         partial_failure: bool = ...,
@@ -67,9 +67,9 @@ class MutateAccountLinkResponse(proto.Message):
     partial_failure_error: Status
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         result: MutateAccountLinkResult = ...,
         partial_failure_error: Status = ...
     ) -> None: ...
@@ -78,8 +78,8 @@ class MutateAccountLinkResult(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...

@@ -15,7 +15,7 @@ from .transports.base import ProductLinkServiceTransport
 
 class ProductLinkServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ProductLinkServiceTransport]: ...
 
 class ProductLinkServiceClient(metaclass=ProductLinkServiceClientMeta):
@@ -61,32 +61,32 @@ class ProductLinkServiceClient(metaclass=ProductLinkServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, ProductLinkServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, ProductLinkServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def create_product_link(
         self,
         request: Optional[
             Union[product_link_service.CreateProductLinkRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        product_link: Optional[gagr_product_link.ProductLink] = ...,
+        customer_id: Optional[str] = None,
+        product_link: Optional[gagr_product_link.ProductLink] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> product_link_service.CreateProductLinkResponse: ...
     def remove_product_link(
         self,
         request: Optional[
             Union[product_link_service.RemoveProductLinkRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        resource_name: Optional[str] = ...,
+        customer_id: Optional[str] = None,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> product_link_service.RemoveProductLinkResponse: ...

@@ -15,7 +15,7 @@ from .transports.base import AudienceInsightsServiceTransport
 
 class AudienceInsightsServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[AudienceInsightsServiceTransport]: ...
 
 class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta):
@@ -53,54 +53,54 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, AudienceInsightsServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, AudienceInsightsServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def generate_insights_finder_report(
         self,
         request: Optional[
             Union[audience_insights_service.GenerateInsightsFinderReportRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         baseline_audience: Optional[
             audience_insights_service.BasicInsightsAudience
-        ] = ...,
+        ] = None,
         specific_audience: Optional[
             audience_insights_service.BasicInsightsAudience
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> audience_insights_service.GenerateInsightsFinderReportResponse: ...
     def list_audience_insights_attributes(
         self,
         request: Optional[
             Union[audience_insights_service.ListAudienceInsightsAttributesRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         dimensions: Optional[
             MutableSequence[
                 audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
             ]
-        ] = ...,
-        query_text: Optional[str] = ...,
+        ] = None,
+        query_text: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> audience_insights_service.ListAudienceInsightsAttributesResponse: ...
     def list_insights_eligible_dates(
         self,
         request: Optional[
             Union[audience_insights_service.ListInsightsEligibleDatesRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> audience_insights_service.ListInsightsEligibleDatesResponse: ...
     def generate_audience_composition_insights(
         self,
@@ -109,16 +109,16 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
                 audience_insights_service.GenerateAudienceCompositionInsightsRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        audience: Optional[audience_insights_service.InsightsAudience] = ...,
+        customer_id: Optional[str] = None,
+        audience: Optional[audience_insights_service.InsightsAudience] = None,
         dimensions: Optional[
             MutableSequence[
                 audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
             ]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> audience_insights_service.GenerateAudienceCompositionInsightsResponse: ...

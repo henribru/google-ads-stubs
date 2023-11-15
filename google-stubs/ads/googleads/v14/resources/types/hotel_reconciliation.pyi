@@ -24,9 +24,9 @@ class HotelReconciliation(proto.Message):
     status: HotelReconciliationStatusEnum.HotelReconciliationStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         commission_id: str = ...,
         order_id: str = ...,

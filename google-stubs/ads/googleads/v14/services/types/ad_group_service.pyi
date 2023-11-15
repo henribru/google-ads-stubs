@@ -20,9 +20,9 @@ class AdGroupOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: AdGroup = ...,
         update: AdGroup = ...,
@@ -34,9 +34,9 @@ class MutateAdGroupResult(proto.Message):
     ad_group: AdGroup
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         ad_group: AdGroup = ...
     ) -> None: ...
@@ -49,9 +49,9 @@ class MutateAdGroupsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[AdGroupOperation] = ...,
         partial_failure: bool = ...,
@@ -64,9 +64,9 @@ class MutateAdGroupsResponse(proto.Message):
     results: MutableSequence[MutateAdGroupResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdGroupResult] = ...
     ) -> None: ...

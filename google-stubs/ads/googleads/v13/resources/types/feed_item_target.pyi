@@ -31,9 +31,9 @@ class FeedItemTarget(proto.Message):
     ad_schedule: AdScheduleInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         feed_item: str = ...,
         feed_item_target_type: FeedItemTargetTypeEnum.FeedItemTargetType = ...,

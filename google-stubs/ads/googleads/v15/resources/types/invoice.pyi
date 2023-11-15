@@ -28,9 +28,9 @@ class Invoice(proto.Message):
         invalid_activity_summaries: MutableSequence[Invoice.InvalidActivitySummary]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             customer: str = ...,
             customer_descriptive_name: str = ...,
             account_budget: str = ...,
@@ -71,9 +71,9 @@ class Invoice(proto.Message):
         total_amount_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             customer: str = ...,
             billing_correction_subtotal_amount_micros: int = ...,
             billing_correction_tax_amount_micros: int = ...,
@@ -104,9 +104,9 @@ class Invoice(proto.Message):
         amount_micros: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             original_month_of_service: MonthOfYearEnum.MonthOfYear = ...,
             original_year_of_service: str = ...,
             original_invoice_id: str = ...,
@@ -143,9 +143,9 @@ class Invoice(proto.Message):
     account_summaries: MutableSequence[Invoice.AccountSummary]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: str = ...,
         type_: InvoiceTypeEnum.InvoiceType = ...,

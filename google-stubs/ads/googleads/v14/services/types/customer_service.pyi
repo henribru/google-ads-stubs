@@ -21,9 +21,9 @@ class CreateCustomerClientRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         customer_client: Customer = ...,
         email_address: str = ...,
@@ -36,9 +36,9 @@ class CreateCustomerClientResponse(proto.Message):
     invitation_link: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         invitation_link: str = ...,
     ) -> None: ...
@@ -48,9 +48,9 @@ class CustomerOperation(proto.Message):
     update_mask: FieldMask
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update: Customer = ...,
         update_mask: FieldMask = ...,
     ) -> None: ...
@@ -58,9 +58,9 @@ class CustomerOperation(proto.Message):
 class ListAccessibleCustomersRequest(proto.Message):
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...
     ...
 
@@ -68,9 +68,9 @@ class ListAccessibleCustomersResponse(proto.Message):
     resource_names: MutableSequence[str]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_names: MutableSequence[str] = ...,
     ) -> None: ...
 
@@ -81,9 +81,9 @@ class MutateCustomerRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: CustomerOperation = ...,
         validate_only: bool = ...,
@@ -94,9 +94,9 @@ class MutateCustomerResponse(proto.Message):
     result: MutateCustomerResult
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         result: MutateCustomerResult = ...,
     ) -> None: ...
 
@@ -105,9 +105,9 @@ class MutateCustomerResult(proto.Message):
     customer: Customer
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         customer: Customer = ...,
     ) -> None: ...

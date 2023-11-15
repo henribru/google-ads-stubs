@@ -14,7 +14,7 @@ from .transports.base import SmartCampaignSuggestServiceTransport
 
 class SmartCampaignSuggestServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[SmartCampaignSuggestServiceTransport]: ...
 
 class SmartCampaignSuggestServiceClient(
@@ -64,9 +64,9 @@ class SmartCampaignSuggestServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, SmartCampaignSuggestServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, SmartCampaignSuggestServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def suggest_smart_campaign_budget_options(
@@ -76,29 +76,29 @@ class SmartCampaignSuggestServiceClient(
                 smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsResponse: ...
     def suggest_smart_campaign_ad(
         self,
         request: Optional[
             Union[smart_campaign_suggest_service.SuggestSmartCampaignAdRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignAdResponse: ...
     def suggest_keyword_themes(
         self,
         request: Optional[
             Union[smart_campaign_suggest_service.SuggestKeywordThemesRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> smart_campaign_suggest_service.SuggestKeywordThemesResponse: ...

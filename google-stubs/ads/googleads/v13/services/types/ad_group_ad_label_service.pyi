@@ -14,9 +14,9 @@ class AdGroupAdLabelOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: AdGroupAdLabel = ...,
         remove: str = ...
     ) -> None: ...
@@ -25,9 +25,9 @@ class MutateAdGroupAdLabelResult(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
 
@@ -38,9 +38,9 @@ class MutateAdGroupAdLabelsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[AdGroupAdLabelOperation] = ...,
         partial_failure: bool = ...,
@@ -52,9 +52,9 @@ class MutateAdGroupAdLabelsResponse(proto.Message):
     results: MutableSequence[MutateAdGroupAdLabelResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdGroupAdLabelResult] = ...
     ) -> None: ...

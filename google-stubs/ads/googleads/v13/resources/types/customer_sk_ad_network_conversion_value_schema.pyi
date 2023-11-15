@@ -16,9 +16,9 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
             ]
             def __init__(
                 self: _M,
-                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
                 *,
-                ignore_unknown_fields: bool = ...,
+                ignore_unknown_fields: bool = False,
                 min_time_post_install_hours: int = ...,
                 max_time_post_install_hours: int = ...,
                 mapped_events: MutableSequence[
@@ -35,9 +35,9 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                     mapping: _M
                     | Mapping
                     | google.protobuf.message.Message
-                    | None = ...,
+                    | None = None,
                     *,
-                    ignore_unknown_fields: bool = ...,
+                    ignore_unknown_fields: bool = False,
                     min_event_count: int = ...,
                     max_event_count: int = ...
                 ) -> None: ...
@@ -50,9 +50,9 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                     mapping: _M
                     | Mapping
                     | google.protobuf.message.Message
-                    | None = ...,
+                    | None = None,
                     *,
-                    ignore_unknown_fields: bool = ...,
+                    ignore_unknown_fields: bool = False,
                     min_event_revenue: float = ...,
                     max_event_revenue: float = ...
                 ) -> None: ...
@@ -64,9 +64,9 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
             event_counter: int
             def __init__(
                 self: _M,
-                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
                 *,
-                ignore_unknown_fields: bool = ...,
+                ignore_unknown_fields: bool = False,
                 mapped_event_name: str = ...,
                 currency_code: str = ...,
                 event_revenue_range: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.RevenueRange = ...,
@@ -80,9 +80,9 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
             conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping
             def __init__(
                 self: _M,
-                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
                 *,
-                ignore_unknown_fields: bool = ...,
+                ignore_unknown_fields: bool = False,
                 fine_grained_conversion_value: int = ...,
                 conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping = ...
             ) -> None: ...
@@ -93,9 +93,9 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
         ]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             app_id: str = ...,
             measurement_window_hours: int = ...,
             fine_grained_conversion_value_mappings: MutableSequence[
@@ -106,9 +106,9 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
     schema: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         schema: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema = ...
     ) -> None: ...

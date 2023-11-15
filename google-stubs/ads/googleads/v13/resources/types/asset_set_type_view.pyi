@@ -13,9 +13,9 @@ class AssetSetTypeView(proto.Message):
     asset_set_type: AssetSetTypeEnum.AssetSetType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         asset_set_type: AssetSetTypeEnum.AssetSetType = ...
     ) -> None: ...

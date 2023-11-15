@@ -10,7 +10,7 @@ class SearchPager:
         method: Callable[..., google_ads_service.SearchGoogleAdsResponse],
         request: google_ads_service.SearchGoogleAdsRequest,
         response: google_ads_service.SearchGoogleAdsResponse,
-        metadata: Sequence[Tuple[str, str]] = ...,
+        metadata: Sequence[Tuple[str, str]] = (),
     ) -> None: ...
     def __getattr__(self, name: str) -> Any: ...
     @property

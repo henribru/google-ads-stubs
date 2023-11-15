@@ -20,7 +20,7 @@ class CustomerClientLinkErrorEnum(proto.Message):
         CLIENT_HAS_TOO_MANY_MANAGERS = 9
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

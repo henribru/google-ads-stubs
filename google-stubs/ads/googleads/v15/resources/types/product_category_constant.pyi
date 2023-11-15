@@ -20,9 +20,9 @@ class ProductCategoryConstant(proto.Message):
         value: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             region_code: str = ...,
             language_code: str = ...,
             value: str = ...
@@ -35,9 +35,9 @@ class ProductCategoryConstant(proto.Message):
     localizations: MutableSequence[ProductCategoryConstant.ProductCategoryLocalization]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         category_id: int = ...,
         product_category_constant_parent: str = ...,

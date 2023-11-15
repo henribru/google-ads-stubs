@@ -107,9 +107,9 @@ class AttributeFieldMapping(proto.Message):
     image_field: ImagePlaceholderFieldEnum.ImagePlaceholderField
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         feed_attribute_id: int = ...,
         field_id: int = ...,
         sitelink_field: SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField = ...,
@@ -145,9 +145,9 @@ class FeedMapping(proto.Message):
     criterion_type: FeedMappingCriterionTypeEnum.FeedMappingCriterionType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         feed: str = ...,
         attribute_field_mappings: MutableSequence[AttributeFieldMapping] = ...,

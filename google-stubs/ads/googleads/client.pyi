@@ -696,33 +696,33 @@ class GoogleAdsClient:
         origin: Union[proto.Message, Message],
     ) -> None: ...
     @classmethod
-    def load_from_env(cls, version: str | None = ...) -> GoogleAdsClient: ...
+    def load_from_env(cls, version: str | None = None) -> GoogleAdsClient: ...
     @classmethod
     def load_from_string(
-        cls, yaml_str: str, version: str | None = ...
+        cls, yaml_str: str, version: str | None = None
     ) -> GoogleAdsClient: ...
     @classmethod
     def load_from_storage(
-        cls, path: str | None = ..., version: str | None = ...
+        cls, path: str | None = None, version: str | None = None
     ) -> GoogleAdsClient: ...
     @classmethod
     def load_from_dict(
-        cls, config_dict: _ConfigDataUnparsed, version: str | None = ...
+        cls, config_dict: _ConfigDataUnparsed, version: str | None = None
     ) -> GoogleAdsClient: ...
     def __init__(
         self,
         credentials: Credentials,
         developer_token: str,
-        endpoint: str | None = ...,
-        login_customer_id: str | None = ...,
-        logging_config: Dict[Any, Any] | None = ...,
-        linked_customer_id: str | None = ...,
-        version: str | None = ...,
-        http_proxy: str | None = ...,
-        use_proto_plus: bool = ...,
-        use_cloud_org_for_api_access: bool = ...,
+        endpoint: str | None = None,
+        login_customer_id: str | None = None,
+        logging_config: Dict[Any, Any] | None = None,
+        linked_customer_id: str | None = None,
+        version: str | None = None,
+        http_proxy: str | None = None,
+        use_proto_plus: bool = False,
+        use_cloud_org_for_api_access: bool | None = None,
     ) -> None: ...
-    def get_type(cls, name: str, version: _V = ...) -> Any: ...
+    def get_type(cls, name: str, version: _V = "v15") -> Any: ...
     @overload
     def get_service(
         self, name: Literal["AccountBudgetProposalService"], version: _V13
@@ -2472,4 +2472,4 @@ class GoogleAdsClient:
         self, name: Literal["UserListService"]
     ) -> v15.UserListServiceClient: ...
     @overload
-    def get_service(self, name: str, version: _V = ...) -> Any: ...
+    def get_service(self, name: str, version: _V = "v15") -> Any: ...

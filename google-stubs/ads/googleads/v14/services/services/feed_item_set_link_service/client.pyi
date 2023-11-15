@@ -14,7 +14,7 @@ from .transports.base import FeedItemSetLinkServiceTransport
 
 class FeedItemSetLinkServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[FeedItemSetLinkServiceTransport]: ...
 
 class FeedItemSetLinkServiceClient(metaclass=FeedItemSetLinkServiceClientMeta):
@@ -68,22 +68,22 @@ class FeedItemSetLinkServiceClient(metaclass=FeedItemSetLinkServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, FeedItemSetLinkServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, FeedItemSetLinkServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_feed_item_set_links(
         self,
         request: Optional[
             Union[feed_item_set_link_service.MutateFeedItemSetLinksRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[feed_item_set_link_service.FeedItemSetLinkOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> feed_item_set_link_service.MutateFeedItemSetLinksResponse: ...

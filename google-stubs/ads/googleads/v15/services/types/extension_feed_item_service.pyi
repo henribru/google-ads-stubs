@@ -22,9 +22,9 @@ class ExtensionFeedItemOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: ExtensionFeedItem = ...,
         update: ExtensionFeedItem = ...,
@@ -36,9 +36,9 @@ class MutateExtensionFeedItemResult(proto.Message):
     extension_feed_item: ExtensionFeedItem
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         extension_feed_item: ExtensionFeedItem = ...
     ) -> None: ...
@@ -51,9 +51,9 @@ class MutateExtensionFeedItemsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[ExtensionFeedItemOperation] = ...,
         partial_failure: bool = ...,
@@ -66,9 +66,9 @@ class MutateExtensionFeedItemsResponse(proto.Message):
     results: MutableSequence[MutateExtensionFeedItemResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateExtensionFeedItemResult] = ...
     ) -> None: ...

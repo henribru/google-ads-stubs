@@ -22,9 +22,9 @@ class AdGroupCriterionOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         exempt_policy_violation_keys: MutableSequence[PolicyViolationKey] = ...,
         create: AdGroupCriterion = ...,
@@ -40,9 +40,9 @@ class MutateAdGroupCriteriaRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[AdGroupCriterionOperation] = ...,
         partial_failure: bool = ...,
@@ -55,9 +55,9 @@ class MutateAdGroupCriteriaResponse(proto.Message):
     results: MutableSequence[MutateAdGroupCriterionResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdGroupCriterionResult] = ...
     ) -> None: ...
@@ -67,9 +67,9 @@ class MutateAdGroupCriterionResult(proto.Message):
     ad_group_criterion: AdGroupCriterion
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         ad_group_criterion: AdGroupCriterion = ...
     ) -> None: ...

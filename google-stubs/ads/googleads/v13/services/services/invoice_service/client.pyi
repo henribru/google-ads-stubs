@@ -15,7 +15,7 @@ from .transports.base import InvoiceServiceTransport
 
 class InvoiceServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[InvoiceServiceTransport]: ...
 
 class InvoiceServiceClient(metaclass=InvoiceServiceClientMeta):
@@ -57,20 +57,20 @@ class InvoiceServiceClient(metaclass=InvoiceServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, InvoiceServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, InvoiceServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def list_invoices(
         self,
-        request: Optional[Union[invoice_service.ListInvoicesRequest, dict]] = ...,
+        request: Optional[Union[invoice_service.ListInvoicesRequest, dict]] = None,
         *,
-        customer_id: Optional[str] = ...,
-        billing_setup: Optional[str] = ...,
-        issue_year: Optional[str] = ...,
-        issue_month: Optional[month_of_year.MonthOfYearEnum.MonthOfYear] = ...,
+        customer_id: Optional[str] = None,
+        billing_setup: Optional[str] = None,
+        issue_year: Optional[str] = None,
+        issue_month: Optional[month_of_year.MonthOfYearEnum.MonthOfYear] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> invoice_service.ListInvoicesResponse: ...

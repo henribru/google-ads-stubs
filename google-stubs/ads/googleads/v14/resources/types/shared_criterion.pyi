@@ -29,9 +29,9 @@ class SharedCriterion(proto.Message):
     mobile_application: MobileApplicationInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         shared_set: str = ...,
         criterion_id: int = ...,

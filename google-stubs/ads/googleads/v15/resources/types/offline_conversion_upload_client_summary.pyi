@@ -40,9 +40,9 @@ class OfflineConversionAlert(proto.Message):
     error_percentage: float
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         error: OfflineConversionError = ...,
         error_percentage: float = ...
     ) -> None: ...
@@ -60,9 +60,9 @@ class OfflineConversionError(proto.Message):
     string_length_error: StringLengthErrorEnum.StringLengthError
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         collection_size_error: CollectionSizeErrorEnum.CollectionSizeError = ...,
         conversion_adjustment_upload_error: ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError = ...,
         conversion_upload_error: ConversionUploadErrorEnum.ConversionUploadError = ...,
@@ -82,9 +82,9 @@ class OfflineConversionSummary(proto.Message):
     upload_date: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         successful_count: int = ...,
         failed_count: int = ...,
         job_id: int = ...,
@@ -104,9 +104,9 @@ class OfflineConversionUploadClientSummary(proto.Message):
     alerts: MutableSequence[OfflineConversionAlert]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         client: OfflineEventUploadClientEnum.OfflineEventUploadClient = ...,
         status: OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus = ...,

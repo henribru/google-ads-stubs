@@ -14,9 +14,9 @@ class CustomerMatchUserListMetadata(proto.Message):
     user_list: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         user_list: str = ...
     ) -> None: ...
 
@@ -26,9 +26,9 @@ class EventAttribute(proto.Message):
     item_attribute: MutableSequence[EventItemAttribute]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         event: str = ...,
         event_date_time: str = ...,
         item_attribute: MutableSequence[EventItemAttribute] = ...
@@ -38,9 +38,9 @@ class EventItemAttribute(proto.Message):
     item_id: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         item_id: str = ...
     ) -> None: ...
 
@@ -52,9 +52,9 @@ class ItemAttribute(proto.Message):
     quantity: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         item_id: str = ...,
         merchant_id: int = ...,
         country_code: str = ...,
@@ -72,9 +72,9 @@ class OfflineUserAddressInfo(proto.Message):
     hashed_street_address: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         hashed_first_name: str = ...,
         hashed_last_name: str = ...,
         city: str = ...,
@@ -88,9 +88,9 @@ class ShoppingLoyalty(proto.Message):
     loyalty_tier: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         loyalty_tier: str = ...
     ) -> None: ...
 
@@ -98,9 +98,9 @@ class StoreAttribute(proto.Message):
     store_code: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         store_code: str = ...
     ) -> None: ...
 
@@ -111,9 +111,9 @@ class StoreSalesMetadata(proto.Message):
     third_party_metadata: StoreSalesThirdPartyMetadata
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         loyalty_fraction: float = ...,
         transaction_upload_fraction: float = ...,
         custom_key: str = ...,
@@ -129,9 +129,9 @@ class StoreSalesThirdPartyMetadata(proto.Message):
     partner_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         advertiser_upload_date_time: str = ...,
         valid_transaction_fraction: float = ...,
         partner_match_fraction: float = ...,
@@ -151,9 +151,9 @@ class TransactionAttribute(proto.Message):
     item_attribute: ItemAttribute
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         transaction_date_time: str = ...,
         transaction_amount_micros: float = ...,
         currency_code: str = ...,
@@ -177,9 +177,9 @@ class UserAttribute(proto.Message):
     event_attribute: MutableSequence[EventAttribute]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         lifetime_value_micros: int = ...,
         lifetime_value_bucket: int = ...,
         last_purchase_date_time: str = ...,
@@ -198,9 +198,9 @@ class UserData(proto.Message):
     user_attribute: UserAttribute
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         user_identifiers: MutableSequence[UserIdentifier] = ...,
         transaction_attribute: TransactionAttribute = ...,
         user_attribute: UserAttribute = ...
@@ -215,9 +215,9 @@ class UserIdentifier(proto.Message):
     address_info: OfflineUserAddressInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         user_identifier_source: UserIdentifierSourceEnum.UserIdentifierSource = ...,
         hashed_email: str = ...,
         hashed_phone_number: str = ...,

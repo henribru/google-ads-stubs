@@ -16,7 +16,7 @@ from .transports.base import KeywordPlanAdGroupKeywordServiceTransport
 
 class KeywordPlanAdGroupKeywordServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[KeywordPlanAdGroupKeywordServiceTransport]: ...
 
 class KeywordPlanAdGroupKeywordServiceClient(
@@ -68,11 +68,11 @@ class KeywordPlanAdGroupKeywordServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
         transport: Optional[
             Union[str, KeywordPlanAdGroupKeywordServiceTransport]
-        ] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        ] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_keyword_plan_ad_group_keywords(
@@ -82,17 +82,17 @@ class KeywordPlanAdGroupKeywordServiceClient(
                 keyword_plan_ad_group_keyword_service.MutateKeywordPlanAdGroupKeywordsRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[
                 keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordOperation
             ]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> (
         keyword_plan_ad_group_keyword_service.MutateKeywordPlanAdGroupKeywordsResponse
     ): ...

@@ -15,7 +15,7 @@ class CallConversionReportingStateEnum(proto.Message):
         USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION = 4
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

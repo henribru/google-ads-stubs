@@ -485,9 +485,9 @@ class ErrorCode(proto.Message):
     currency_error: CurrencyErrorEnum.CurrencyError
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         request_error: RequestErrorEnum.RequestError = ...,
         bidding_strategy_error: BiddingStrategyErrorEnum.BiddingStrategyError = ...,
         url_field_error: UrlFieldErrorEnum.UrlFieldError = ...,
@@ -641,9 +641,9 @@ class ErrorDetails(proto.Message):
     resource_count_details: ResourceCountDetails
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         unpublished_error_code: str = ...,
         policy_violation_details: PolicyViolationDetails = ...,
         policy_finding_details: PolicyFindingDetails = ...,
@@ -657,18 +657,18 @@ class ErrorLocation(proto.Message):
         index: int
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             field_name: str = ...,
             index: int = ...
         ) -> None: ...
     field_path_elements: MutableSequence[ErrorLocation.FieldPathElement]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         field_path_elements: MutableSequence[ErrorLocation.FieldPathElement] = ...
     ) -> None: ...
 
@@ -680,9 +680,9 @@ class GoogleAdsError(proto.Message):
     details: ErrorDetails
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         error_code: ErrorCode = ...,
         message: str = ...,
         trigger: Value = ...,
@@ -695,9 +695,9 @@ class GoogleAdsFailure(proto.Message):
     request_id: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         errors: MutableSequence[GoogleAdsError] = ...,
         request_id: str = ...
     ) -> None: ...
@@ -706,9 +706,9 @@ class PolicyFindingDetails(proto.Message):
     policy_topic_entries: MutableSequence[PolicyTopicEntry]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...
     ) -> None: ...
 
@@ -719,9 +719,9 @@ class PolicyViolationDetails(proto.Message):
     is_exemptible: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         external_policy_description: str = ...,
         key: PolicyViolationKey = ...,
         external_policy_name: str = ...,
@@ -739,9 +739,9 @@ class QuotaErrorDetails(proto.Message):
     retry_delay: Duration
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         rate_scope: QuotaErrorDetails.QuotaRateScope = ...,
         rate_name: str = ...,
         retry_delay: Duration = ...
@@ -755,9 +755,9 @@ class ResourceCountDetails(proto.Message):
     existing_count: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         enclosing_id: str = ...,
         enclosing_resource: str = ...,
         limit: int = ...,

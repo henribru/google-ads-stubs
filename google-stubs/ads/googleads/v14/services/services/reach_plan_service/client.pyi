@@ -14,7 +14,7 @@ from .transports.base import ReachPlanServiceTransport
 
 class ReachPlanServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ReachPlanServiceTransport]: ...
 
 class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
@@ -52,44 +52,44 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, ReachPlanServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, ReachPlanServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def list_plannable_locations(
         self,
         request: Optional[
             Union[reach_plan_service.ListPlannableLocationsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> reach_plan_service.ListPlannableLocationsResponse: ...
     def list_plannable_products(
         self,
         request: Optional[
             Union[reach_plan_service.ListPlannableProductsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        plannable_location_id: Optional[str] = ...,
+        plannable_location_id: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> reach_plan_service.ListPlannableProductsResponse: ...
     def generate_reach_forecast(
         self,
         request: Optional[
             Union[reach_plan_service.GenerateReachForecastRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        campaign_duration: Optional[reach_plan_service.CampaignDuration] = ...,
+        customer_id: Optional[str] = None,
+        campaign_duration: Optional[reach_plan_service.CampaignDuration] = None,
         planned_products: Optional[
             MutableSequence[reach_plan_service.PlannedProduct]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> reach_plan_service.GenerateReachForecastResponse: ...

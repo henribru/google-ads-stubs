@@ -72,9 +72,9 @@ class AssetInteractionTarget(proto.Message):
     interaction_on_this_asset: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         asset: str = ...,
         interaction_on_this_asset: bool = ...
     ) -> None: ...
@@ -84,9 +84,9 @@ class BudgetCampaignAssociationStatus(proto.Message):
     status: BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         campaign: str = ...,
         status: BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus = ...
     ) -> None: ...
@@ -96,9 +96,9 @@ class Keyword(proto.Message):
     info: KeywordInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         ad_group_criterion: str = ...,
         info: KeywordInfo = ...
     ) -> None: ...
@@ -199,9 +199,9 @@ class Segments(proto.Message):
     asset_interaction_target: AssetInteractionTarget
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         activity_account_id: int = ...,
         activity_rating: int = ...,
         external_activity_id: str = ...,
@@ -301,8 +301,8 @@ class SkAdNetworkSourceApp(proto.Message):
     sk_ad_network_source_app_id: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         sk_ad_network_source_app_id: str = ...
     ) -> None: ...

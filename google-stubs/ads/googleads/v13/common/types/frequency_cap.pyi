@@ -21,9 +21,9 @@ class FrequencyCapEntry(proto.Message):
     cap: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         key: FrequencyCapKey = ...,
         cap: int = ...
     ) -> None: ...
@@ -35,9 +35,9 @@ class FrequencyCapKey(proto.Message):
     time_length: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         level: FrequencyCapLevelEnum.FrequencyCapLevel = ...,
         event_type: FrequencyCapEventTypeEnum.FrequencyCapEventType = ...,
         time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit = ...,

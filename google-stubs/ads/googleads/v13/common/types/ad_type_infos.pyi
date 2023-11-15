@@ -37,9 +37,9 @@ class AppAdInfo(proto.Message):
     html5_media_bundles: MutableSequence[AdMediaBundleAsset]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         mandatory_ad_text: AdTextAsset = ...,
         headlines: MutableSequence[AdTextAsset] = ...,
         descriptions: MutableSequence[AdTextAsset] = ...,
@@ -55,9 +55,9 @@ class AppEngagementAdInfo(proto.Message):
     videos: MutableSequence[AdVideoAsset]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headlines: MutableSequence[AdTextAsset] = ...,
         descriptions: MutableSequence[AdTextAsset] = ...,
         images: MutableSequence[AdImageAsset] = ...,
@@ -71,9 +71,9 @@ class AppPreRegistrationAdInfo(proto.Message):
     youtube_videos: MutableSequence[AdVideoAsset]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headlines: MutableSequence[AdTextAsset] = ...,
         descriptions: MutableSequence[AdTextAsset] = ...,
         images: MutableSequence[AdImageAsset] = ...,
@@ -97,9 +97,9 @@ class CallAdInfo(proto.Message):
     path2: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         country_code: str = ...,
         phone_number: str = ...,
         business_name: str = ...,
@@ -125,9 +125,9 @@ class DiscoveryCarouselAdInfo(proto.Message):
     carousel_cards: MutableSequence[AdDiscoveryCarouselCardAsset]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         business_name: str = ...,
         logo_image: AdImageAsset = ...,
         headline: AdTextAsset = ...,
@@ -148,9 +148,9 @@ class DiscoveryMultiAssetAdInfo(proto.Message):
     lead_form_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         marketing_images: MutableSequence[AdImageAsset] = ...,
         square_marketing_images: MutableSequence[AdImageAsset] = ...,
         portrait_marketing_images: MutableSequence[AdImageAsset] = ...,
@@ -167,9 +167,9 @@ class DisplayUploadAdInfo(proto.Message):
     media_bundle: AdMediaBundleAsset
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         display_upload_product_type: DisplayUploadProductTypeEnum.DisplayUploadProductType = ...,
         media_bundle: AdMediaBundleAsset = ...,
     ) -> None: ...
@@ -179,9 +179,9 @@ class ExpandedDynamicSearchAdInfo(proto.Message):
     description2: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         description: str = ...,
         description2: str = ...,
     ) -> None: ...
@@ -196,9 +196,9 @@ class ExpandedTextAdInfo(proto.Message):
     path2: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headline_part1: str = ...,
         headline_part2: str = ...,
         headline_part3: str = ...,
@@ -211,9 +211,9 @@ class ExpandedTextAdInfo(proto.Message):
 class HotelAdInfo(proto.Message):
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...
     ...
 
@@ -231,9 +231,9 @@ class ImageAdInfo(proto.Message):
     ad_id_to_copy_image_from: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         pixel_width: int = ...,
         pixel_height: int = ...,
         image_url: str = ...,
@@ -254,9 +254,9 @@ class InFeedVideoAdInfo(proto.Message):
     thumbnail: VideoThumbnailEnum.VideoThumbnail
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headline: str = ...,
         description1: str = ...,
         description2: str = ...,
@@ -271,9 +271,9 @@ class LegacyAppInstallAdInfo(proto.Message):
     description2: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         app_id: str = ...,
         app_store: LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore = ...,
         headline: str = ...,
@@ -299,9 +299,9 @@ class LegacyResponsiveDisplayAdInfo(proto.Message):
     promo_text: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         short_headline: str = ...,
         long_headline: str = ...,
         description: str = ...,
@@ -330,9 +330,9 @@ class LocalAdInfo(proto.Message):
     path2: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headlines: MutableSequence[AdTextAsset] = ...,
         descriptions: MutableSequence[AdTextAsset] = ...,
         call_to_actions: MutableSequence[AdTextAsset] = ...,
@@ -348,9 +348,9 @@ class ResponsiveDisplayAdControlSpec(proto.Message):
     enable_autogen_video: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         enable_asset_enhancements: bool = ...,
         enable_autogen_video: bool = ...,
     ) -> None: ...
@@ -375,9 +375,9 @@ class ResponsiveDisplayAdInfo(proto.Message):
     control_spec: ResponsiveDisplayAdControlSpec
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         marketing_images: MutableSequence[AdImageAsset] = ...,
         square_marketing_images: MutableSequence[AdImageAsset] = ...,
         logo_images: MutableSequence[AdImageAsset] = ...,
@@ -404,9 +404,9 @@ class ResponsiveSearchAdInfo(proto.Message):
     path2: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headlines: MutableSequence[AdTextAsset] = ...,
         descriptions: MutableSequence[AdTextAsset] = ...,
         path1: str = ...,
@@ -417,27 +417,27 @@ class ShoppingComparisonListingAdInfo(proto.Message):
     headline: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headline: str = ...,
     ) -> None: ...
 
 class ShoppingProductAdInfo(proto.Message):
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...
     ...
 
 class ShoppingSmartAdInfo(proto.Message):
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...
     ...
 
@@ -446,9 +446,9 @@ class SmartCampaignAdInfo(proto.Message):
     descriptions: MutableSequence[AdTextAsset]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headlines: MutableSequence[AdTextAsset] = ...,
         descriptions: MutableSequence[AdTextAsset] = ...,
     ) -> None: ...
@@ -459,9 +459,9 @@ class TextAdInfo(proto.Message):
     description2: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headline: str = ...,
         description1: str = ...,
         description2: str = ...,
@@ -470,9 +470,9 @@ class TextAdInfo(proto.Message):
 class TravelAdInfo(proto.Message):
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...
     ...
 
@@ -485,9 +485,9 @@ class VideoAdInfo(proto.Message):
     in_feed: InFeedVideoAdInfo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         video: AdVideoAsset = ...,
         in_stream: VideoTrueViewInStreamAdInfo = ...,
         bumper: VideoBumperInStreamAdInfo = ...,
@@ -502,9 +502,9 @@ class VideoBumperInStreamAdInfo(proto.Message):
     action_headline: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         companion_banner: AdImageAsset = ...,
         action_button_label: str = ...,
         action_headline: str = ...,
@@ -516,9 +516,9 @@ class VideoNonSkippableInStreamAdInfo(proto.Message):
     action_headline: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         companion_banner: AdImageAsset = ...,
         action_button_label: str = ...,
         action_headline: str = ...,
@@ -529,9 +529,9 @@ class VideoOutstreamAdInfo(proto.Message):
     description: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headline: str = ...,
         description: str = ...,
     ) -> None: ...
@@ -547,9 +547,9 @@ class VideoResponsiveAdInfo(proto.Message):
     breadcrumb2: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         headlines: MutableSequence[AdTextAsset] = ...,
         long_headlines: MutableSequence[AdTextAsset] = ...,
         descriptions: MutableSequence[AdTextAsset] = ...,
@@ -566,9 +566,9 @@ class VideoTrueViewInStreamAdInfo(proto.Message):
     companion_banner: AdImageAsset
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         action_button_label: str = ...,
         action_headline: str = ...,
         companion_banner: AdImageAsset = ...,

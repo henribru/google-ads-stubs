@@ -89,9 +89,9 @@ class Asset(proto.Message):
     hotel_property_asset: HotelPropertyAsset
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         name: str = ...,
@@ -139,9 +139,9 @@ class AssetFieldTypePolicySummary(proto.Message):
     policy_summary_info: AssetPolicySummary
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...,
         asset_source: AssetSourceEnum.AssetSource = ...,
         policy_summary_info: AssetPolicySummary = ...
@@ -153,9 +153,9 @@ class AssetPolicySummary(proto.Message):
     approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...

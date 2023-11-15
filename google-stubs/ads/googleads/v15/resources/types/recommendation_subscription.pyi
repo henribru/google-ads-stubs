@@ -21,9 +21,9 @@ class RecommendationSubscription(proto.Message):
     status: RecommendationSubscriptionStatusEnum.RecommendationSubscriptionStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         type_: RecommendationTypeEnum.RecommendationType = ...,
         create_date_time: str = ...,

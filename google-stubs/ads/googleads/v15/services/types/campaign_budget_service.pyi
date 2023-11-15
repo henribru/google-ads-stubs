@@ -20,9 +20,9 @@ class CampaignBudgetOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CampaignBudget = ...,
         update: CampaignBudget = ...,
@@ -34,9 +34,9 @@ class MutateCampaignBudgetResult(proto.Message):
     campaign_budget: CampaignBudget
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign_budget: CampaignBudget = ...
     ) -> None: ...
@@ -49,9 +49,9 @@ class MutateCampaignBudgetsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CampaignBudgetOperation] = ...,
         partial_failure: bool = ...,
@@ -64,9 +64,9 @@ class MutateCampaignBudgetsResponse(proto.Message):
     results: MutableSequence[MutateCampaignBudgetResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCampaignBudgetResult] = ...
     ) -> None: ...

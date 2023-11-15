@@ -164,7 +164,7 @@ class AdErrorEnum(proto.Message):
         DUPLICATE_IMAGE_ACROSS_CAROUSEL_CARDS = 156
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

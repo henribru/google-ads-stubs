@@ -20,9 +20,9 @@ class CampaignGroupOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CampaignGroup = ...,
         update: CampaignGroup = ...,
@@ -34,9 +34,9 @@ class MutateCampaignGroupResult(proto.Message):
     campaign_group: CampaignGroup
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign_group: CampaignGroup = ...
     ) -> None: ...
@@ -49,9 +49,9 @@ class MutateCampaignGroupsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CampaignGroupOperation] = ...,
         partial_failure: bool = ...,
@@ -64,9 +64,9 @@ class MutateCampaignGroupsResponse(proto.Message):
     partial_failure_error: Status
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateCampaignGroupResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...

@@ -58,7 +58,7 @@ class ConversionUploadErrorEnum(proto.Message):
         CUSTOMER_NOT_ENABLED_ENHANCED_CONVERSIONS_FOR_LEADS = 50
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

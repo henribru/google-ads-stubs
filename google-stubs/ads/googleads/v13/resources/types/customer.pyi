@@ -20,9 +20,9 @@ class CallReportingSetting(proto.Message):
     call_conversion_action: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         call_reporting_enabled: bool = ...,
         call_conversion_reporting_enabled: bool = ...,
         call_conversion_action: str = ...
@@ -37,9 +37,9 @@ class ConversionTrackingSetting(proto.Message):
     google_ads_conversion_customer: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         conversion_tracking_id: int = ...,
         cross_account_conversion_tracking_id: int = ...,
         accepted_customer_data_terms: bool = ...,
@@ -75,9 +75,9 @@ class Customer(proto.Message):
     image_asset_auto_migration_done_date_time: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         descriptive_name: str = ...,
@@ -108,8 +108,8 @@ class RemarketingSetting(proto.Message):
     google_global_site_tag: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         google_global_site_tag: str = ...
     ) -> None: ...

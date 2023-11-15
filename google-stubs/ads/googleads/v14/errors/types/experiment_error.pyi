@@ -39,7 +39,7 @@ class ExperimentErrorEnum(proto.Message):
         CANNOT_ADD_CAMPAIGN_WITH_DEPRECATED_AD_TYPES = 28
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

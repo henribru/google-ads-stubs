@@ -26,9 +26,9 @@ class CallView(proto.Message):
     call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         caller_country_code: str = ...,
         caller_area_code: str = ...,

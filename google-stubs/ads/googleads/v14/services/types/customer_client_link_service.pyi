@@ -17,9 +17,9 @@ class CustomerClientLinkOperation(proto.Message):
     update: CustomerClientLink
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CustomerClientLink = ...,
         update: CustomerClientLink = ...
@@ -31,9 +31,9 @@ class MutateCustomerClientLinkRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: CustomerClientLinkOperation = ...,
         validate_only: bool = ...
@@ -43,9 +43,9 @@ class MutateCustomerClientLinkResponse(proto.Message):
     result: MutateCustomerClientLinkResult
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         result: MutateCustomerClientLinkResult = ...
     ) -> None: ...
 
@@ -53,8 +53,8 @@ class MutateCustomerClientLinkResult(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...

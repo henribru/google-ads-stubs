@@ -13,9 +13,9 @@ class QualifyingQuestion(proto.Message):
     text: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         qualifying_question_id: int = ...,
         locale: str = ...,

@@ -16,7 +16,7 @@ from .transports.base import GoogleAdsFieldServiceTransport
 
 class GoogleAdsFieldServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[GoogleAdsFieldServiceTransport]: ...
 
 class GoogleAdsFieldServiceClient(metaclass=GoogleAdsFieldServiceClientMeta):
@@ -58,30 +58,30 @@ class GoogleAdsFieldServiceClient(metaclass=GoogleAdsFieldServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, GoogleAdsFieldServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, GoogleAdsFieldServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def get_google_ads_field(
         self,
         request: Optional[
             Union[google_ads_field_service.GetGoogleAdsFieldRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> google_ads_field.GoogleAdsField: ...
     def search_google_ads_fields(
         self,
         request: Optional[
             Union[google_ads_field_service.SearchGoogleAdsFieldsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        query: Optional[str] = ...,
+        query: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> pagers.SearchGoogleAdsFieldsPager: ...

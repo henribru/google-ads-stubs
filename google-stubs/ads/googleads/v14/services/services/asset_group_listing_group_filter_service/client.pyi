@@ -16,7 +16,7 @@ from .transports.base import AssetGroupListingGroupFilterServiceTransport
 
 class AssetGroupListingGroupFilterServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[AssetGroupListingGroupFilterServiceTransport]: ...
 
 class AssetGroupListingGroupFilterServiceClient(
@@ -66,11 +66,11 @@ class AssetGroupListingGroupFilterServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
         transport: Optional[
             Union[str, AssetGroupListingGroupFilterServiceTransport]
-        ] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        ] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_asset_group_listing_group_filters(
@@ -80,17 +80,17 @@ class AssetGroupListingGroupFilterServiceClient(
                 asset_group_listing_group_filter_service.MutateAssetGroupListingGroupFiltersRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[
                 asset_group_listing_group_filter_service.AssetGroupListingGroupFilterOperation
             ]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> (
         asset_group_listing_group_filter_service.MutateAssetGroupListingGroupFiltersResponse
     ): ...

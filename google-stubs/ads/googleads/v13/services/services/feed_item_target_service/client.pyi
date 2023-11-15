@@ -14,7 +14,7 @@ from .transports.base import FeedItemTargetServiceTransport
 
 class FeedItemTargetServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[FeedItemTargetServiceTransport]: ...
 
 class FeedItemTargetServiceClient(metaclass=FeedItemTargetServiceClientMeta):
@@ -78,22 +78,22 @@ class FeedItemTargetServiceClient(metaclass=FeedItemTargetServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, FeedItemTargetServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, FeedItemTargetServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_feed_item_targets(
         self,
         request: Optional[
             Union[feed_item_target_service.MutateFeedItemTargetsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[feed_item_target_service.FeedItemTargetOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> feed_item_target_service.MutateFeedItemTargetsResponse: ...

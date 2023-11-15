@@ -21,9 +21,9 @@ class Feed(proto.Message):
         relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             chain_ids: MutableSequence[int] = ...,
             relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType = ...
         ) -> None: ...
@@ -35,9 +35,9 @@ class Feed(proto.Message):
             http_authorization_header: str
             def __init__(
                 self: _M,
-                mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
                 *,
-                ignore_unknown_fields: bool = ...,
+                ignore_unknown_fields: bool = False,
                 http_method: str = ...,
                 http_request_url: str = ...,
                 http_authorization_header: str = ...
@@ -50,9 +50,9 @@ class Feed(proto.Message):
         label_filters: MutableSequence[str]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             oauth_info: Feed.PlacesLocationFeedData.OAuthInfo = ...,
             email_address: str = ...,
             business_account_id: str = ...,
@@ -71,9 +71,9 @@ class Feed(proto.Message):
     affiliate_location_feed_data: Feed.AffiliateLocationFeedData
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         name: str = ...,
@@ -92,9 +92,9 @@ class FeedAttribute(proto.Message):
     is_part_of_key: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         id: int = ...,
         name: str = ...,
         type_: FeedAttributeTypeEnum.FeedAttributeType = ...,
@@ -110,9 +110,9 @@ class FeedAttributeOperation(proto.Message):
     value: FeedAttribute
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         operator: FeedAttributeOperation.Operator = ...,
         value: FeedAttribute = ...
     ) -> None: ...

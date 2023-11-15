@@ -12,9 +12,9 @@ class GetGoogleAdsFieldRequest(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
 
@@ -24,9 +24,9 @@ class SearchGoogleAdsFieldsRequest(proto.Message):
     page_size: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         query: str = ...,
         page_token: str = ...,
         page_size: int = ...
@@ -38,9 +38,9 @@ class SearchGoogleAdsFieldsResponse(proto.Message):
     total_results_count: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[GoogleAdsField] = ...,
         next_page_token: str = ...,
         total_results_count: int = ...

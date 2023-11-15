@@ -20,9 +20,9 @@ class AssetSet(proto.Message):
         partner_name: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             hotel_center_id: int = ...,
             partner_name: str = ...
         ) -> None: ...
@@ -32,9 +32,9 @@ class AssetSet(proto.Message):
         feed_label: str
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             merchant_id: int = ...,
             feed_label: str = ...
         ) -> None: ...
@@ -51,9 +51,9 @@ class AssetSet(proto.Message):
     chain_location_group: ChainLocationGroup
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         id: int = ...,
         resource_name: str = ...,
         name: str = ...,

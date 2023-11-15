@@ -21,9 +21,9 @@ class AssetGroupListingGroupFilterOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: AssetGroupListingGroupFilter = ...,
         update: AssetGroupListingGroupFilter = ...,
@@ -35,9 +35,9 @@ class MutateAssetGroupListingGroupFilterResult(proto.Message):
     asset_group_listing_group_filter: AssetGroupListingGroupFilter
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         asset_group_listing_group_filter: AssetGroupListingGroupFilter = ...
     ) -> None: ...
@@ -49,9 +49,9 @@ class MutateAssetGroupListingGroupFiltersRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[AssetGroupListingGroupFilterOperation] = ...,
         validate_only: bool = ...,
@@ -62,8 +62,8 @@ class MutateAssetGroupListingGroupFiltersResponse(proto.Message):
     results: MutableSequence[MutateAssetGroupListingGroupFilterResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateAssetGroupListingGroupFilterResult] = ...
     ) -> None: ...

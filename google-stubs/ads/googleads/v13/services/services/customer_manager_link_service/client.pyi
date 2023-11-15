@@ -14,7 +14,7 @@ from .transports.base import CustomerManagerLinkServiceTransport
 
 class CustomerManagerLinkServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomerManagerLinkServiceTransport]: ...
 
 class CustomerManagerLinkServiceClient(metaclass=CustomerManagerLinkServiceClientMeta):
@@ -62,35 +62,35 @@ class CustomerManagerLinkServiceClient(metaclass=CustomerManagerLinkServiceClien
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CustomerManagerLinkServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CustomerManagerLinkServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customer_manager_link(
         self,
         request: Optional[
             Union[customer_manager_link_service.MutateCustomerManagerLinkRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[customer_manager_link_service.CustomerManagerLinkOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_manager_link_service.MutateCustomerManagerLinkResponse: ...
     def move_manager_link(
         self,
         request: Optional[
             Union[customer_manager_link_service.MoveManagerLinkRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        previous_customer_manager_link: Optional[str] = ...,
-        new_manager: Optional[str] = ...,
+        customer_id: Optional[str] = None,
+        previous_customer_manager_link: Optional[str] = None,
+        new_manager: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_manager_link_service.MoveManagerLinkResponse: ...

@@ -14,7 +14,7 @@ from .transports.base import CustomerUserAccessServiceTransport
 
 class CustomerUserAccessServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CustomerUserAccessServiceTransport]: ...
 
 class CustomerUserAccessServiceClient(metaclass=CustomerUserAccessServiceClientMeta):
@@ -56,22 +56,22 @@ class CustomerUserAccessServiceClient(metaclass=CustomerUserAccessServiceClientM
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CustomerUserAccessServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CustomerUserAccessServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_customer_user_access(
         self,
         request: Optional[
             Union[customer_user_access_service.MutateCustomerUserAccessRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operation: Optional[
             customer_user_access_service.CustomerUserAccessOperation
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> customer_user_access_service.MutateCustomerUserAccessResponse: ...

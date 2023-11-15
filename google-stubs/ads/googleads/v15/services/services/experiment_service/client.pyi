@@ -16,7 +16,7 @@ from .transports.base import ExperimentServiceTransport
 
 class ExperimentServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ExperimentServiceTransport]: ...
 
 class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
@@ -66,78 +66,78 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, ExperimentServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, ExperimentServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_experiments(
         self,
         request: Optional[
             Union[experiment_service.MutateExperimentsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[experiment_service.ExperimentOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> experiment_service.MutateExperimentsResponse: ...
     def end_experiment(
         self,
-        request: Optional[Union[experiment_service.EndExperimentRequest, dict]] = ...,
+        request: Optional[Union[experiment_service.EndExperimentRequest, dict]] = None,
         *,
-        experiment: Optional[str] = ...,
+        experiment: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> None: ...
     def list_experiment_async_errors(
         self,
         request: Optional[
             Union[experiment_service.ListExperimentAsyncErrorsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> pagers.ListExperimentAsyncErrorsPager: ...
     def graduate_experiment(
         self,
         request: Optional[
             Union[experiment_service.GraduateExperimentRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        experiment: Optional[str] = ...,
+        experiment: Optional[str] = None,
         campaign_budget_mappings: Optional[
             MutableSequence[experiment_service.CampaignBudgetMapping]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> None: ...
     def schedule_experiment(
         self,
         request: Optional[
             Union[experiment_service.ScheduleExperimentRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> operation.Operation: ...
     def promote_experiment(
         self,
         request: Optional[
             Union[experiment_service.PromoteExperimentRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> operation.Operation: ...

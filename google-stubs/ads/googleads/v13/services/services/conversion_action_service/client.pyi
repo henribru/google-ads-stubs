@@ -14,7 +14,7 @@ from .transports.base import ConversionActionServiceTransport
 
 class ConversionActionServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ConversionActionServiceTransport]: ...
 
 class ConversionActionServiceClient(metaclass=ConversionActionServiceClientMeta):
@@ -60,22 +60,22 @@ class ConversionActionServiceClient(metaclass=ConversionActionServiceClientMeta)
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, ConversionActionServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, ConversionActionServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_conversion_actions(
         self,
         request: Optional[
             Union[conversion_action_service.MutateConversionActionsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[conversion_action_service.ConversionActionOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> conversion_action_service.MutateConversionActionsResponse: ...

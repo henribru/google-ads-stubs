@@ -22,9 +22,9 @@ class CampaignBidModifierOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CampaignBidModifier = ...,
         update: CampaignBidModifier = ...,
@@ -36,9 +36,9 @@ class MutateCampaignBidModifierResult(proto.Message):
     campaign_bid_modifier: CampaignBidModifier
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign_bid_modifier: CampaignBidModifier = ...
     ) -> None: ...
@@ -51,9 +51,9 @@ class MutateCampaignBidModifiersRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CampaignBidModifierOperation] = ...,
         partial_failure: bool = ...,
@@ -66,9 +66,9 @@ class MutateCampaignBidModifiersResponse(proto.Message):
     results: MutableSequence[MutateCampaignBidModifierResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCampaignBidModifierResult] = ...
     ) -> None: ...

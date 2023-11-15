@@ -19,7 +19,7 @@ from .transports.base import BatchJobServiceTransport
 
 class BatchJobServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[BatchJobServiceTransport]: ...
 
 class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
@@ -494,53 +494,53 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, BatchJobServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, BatchJobServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_batch_job(
         self,
-        request: Optional[Union[batch_job_service.MutateBatchJobRequest, dict]] = ...,
+        request: Optional[Union[batch_job_service.MutateBatchJobRequest, dict]] = None,
         *,
-        customer_id: Optional[str] = ...,
-        operation: Optional[batch_job_service.BatchJobOperation] = ...,
+        customer_id: Optional[str] = None,
+        operation: Optional[batch_job_service.BatchJobOperation] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> batch_job_service.MutateBatchJobResponse: ...
     def list_batch_job_results(
         self,
         request: Optional[
             Union[batch_job_service.ListBatchJobResultsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> pagers.ListBatchJobResultsPager: ...
     def run_batch_job(
         self,
-        request: Optional[Union[batch_job_service.RunBatchJobRequest, dict]] = ...,
+        request: Optional[Union[batch_job_service.RunBatchJobRequest, dict]] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> operation.Operation: ...
     def add_batch_job_operations(
         self,
         request: Optional[
             Union[batch_job_service.AddBatchJobOperationsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
-        sequence_token: Optional[str] = ...,
+        resource_name: Optional[str] = None,
+        sequence_token: Optional[str] = None,
         mutate_operations: Optional[
             MutableSequence[google_ads_service.MutateOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> batch_job_service.AddBatchJobOperationsResponse: ...

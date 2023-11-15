@@ -23,9 +23,9 @@ class CallReportingSetting(proto.Message):
     call_conversion_action: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         call_reporting_enabled: bool = ...,
         call_conversion_reporting_enabled: bool = ...,
         call_conversion_action: str = ...
@@ -40,9 +40,9 @@ class ConversionTrackingSetting(proto.Message):
     google_ads_conversion_customer: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         conversion_tracking_id: int = ...,
         cross_account_conversion_tracking_id: int = ...,
         accepted_customer_data_terms: bool = ...,
@@ -80,9 +80,9 @@ class Customer(proto.Message):
     local_services_settings: LocalServicesSettings
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         descriptive_name: str = ...,
@@ -115,9 +115,9 @@ class CustomerAgreementSetting(proto.Message):
     accepted_lead_form_terms: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         accepted_lead_form_terms: bool = ...
     ) -> None: ...
 
@@ -127,9 +127,9 @@ class GranularInsuranceStatus(proto.Message):
     verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         geo_criterion_id: int = ...,
         category_id: str = ...,
         verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus = ...
@@ -141,9 +141,9 @@ class GranularLicenseStatus(proto.Message):
     verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         geo_criterion_id: int = ...,
         category_id: str = ...,
         verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus = ...
@@ -154,9 +154,9 @@ class LocalServicesSettings(proto.Message):
     granular_insurance_statuses: MutableSequence[GranularInsuranceStatus]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         granular_license_statuses: MutableSequence[GranularLicenseStatus] = ...,
         granular_insurance_statuses: MutableSequence[GranularInsuranceStatus] = ...
     ) -> None: ...
@@ -165,8 +165,8 @@ class RemarketingSetting(proto.Message):
     google_global_site_tag: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         google_global_site_tag: str = ...
     ) -> None: ...

@@ -13,9 +13,9 @@ class MediaAudio(proto.Message):
     ad_duration_millis: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         ad_duration_millis: int = ...
     ) -> None: ...
 
@@ -24,9 +24,9 @@ class MediaBundle(proto.Message):
     url: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         data: bytes = ...,
         url: str = ...
     ) -> None: ...
@@ -45,9 +45,9 @@ class MediaFile(proto.Message):
     video: MediaVideo
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         type_: MediaTypeEnum.MediaType = ...,
@@ -67,9 +67,9 @@ class MediaImage(proto.Message):
     preview_size_image_url: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         data: bytes = ...,
         full_size_image_url: str = ...,
         preview_size_image_url: str = ...
@@ -82,9 +82,9 @@ class MediaVideo(proto.Message):
     isci_code: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         ad_duration_millis: int = ...,
         youtube_video_id: str = ...,
         advertising_id_code: str = ...,

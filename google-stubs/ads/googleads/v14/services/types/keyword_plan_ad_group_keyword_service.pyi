@@ -19,9 +19,9 @@ class KeywordPlanAdGroupKeywordOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: KeywordPlanAdGroupKeyword = ...,
         update: KeywordPlanAdGroupKeyword = ...,
@@ -32,9 +32,9 @@ class MutateKeywordPlanAdGroupKeywordResult(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
 
@@ -45,9 +45,9 @@ class MutateKeywordPlanAdGroupKeywordsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[KeywordPlanAdGroupKeywordOperation] = ...,
         partial_failure: bool = ...,
@@ -59,9 +59,9 @@ class MutateKeywordPlanAdGroupKeywordsResponse(proto.Message):
     results: MutableSequence[MutateKeywordPlanAdGroupKeywordResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateKeywordPlanAdGroupKeywordResult] = ...
     ) -> None: ...

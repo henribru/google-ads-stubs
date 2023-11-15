@@ -26,9 +26,9 @@ class AccountLink(proto.Message):
     advertising_partner: AdvertisingPartnerLinkIdentifier
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         account_link_id: int = ...,
         status: AccountLinkStatusEnum.AccountLinkStatus = ...,
@@ -44,9 +44,9 @@ class AdvertisingPartnerLinkIdentifier(proto.Message):
     customer: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer: str = ...
     ) -> None: ...
 
@@ -54,9 +54,9 @@ class DataPartnerLinkIdentifier(proto.Message):
     data_partner_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         data_partner_id: int = ...
     ) -> None: ...
 
@@ -64,9 +64,9 @@ class GoogleAdsLinkIdentifier(proto.Message):
     customer: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer: str = ...
     ) -> None: ...
 
@@ -74,9 +74,9 @@ class HotelCenterLinkIdentifier(proto.Message):
     hotel_center_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         hotel_center_id: int = ...
     ) -> None: ...
 
@@ -86,9 +86,9 @@ class ThirdPartyAppAnalyticsLinkIdentifier(proto.Message):
     app_vendor: MobileAppVendorEnum.MobileAppVendor
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         app_analytics_provider_id: int = ...,
         app_id: str = ...,
         app_vendor: MobileAppVendorEnum.MobileAppVendor = ...

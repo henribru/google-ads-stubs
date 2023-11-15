@@ -20,9 +20,9 @@ class CustomerFeedOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CustomerFeed = ...,
         update: CustomerFeed = ...,
@@ -34,9 +34,9 @@ class MutateCustomerFeedResult(proto.Message):
     customer_feed: CustomerFeed
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         customer_feed: CustomerFeed = ...
     ) -> None: ...
@@ -49,9 +49,9 @@ class MutateCustomerFeedsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CustomerFeedOperation] = ...,
         partial_failure: bool = ...,
@@ -64,9 +64,9 @@ class MutateCustomerFeedsResponse(proto.Message):
     results: MutableSequence[MutateCustomerFeedResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCustomerFeedResult] = ...
     ) -> None: ...

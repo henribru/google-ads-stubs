@@ -85,7 +85,7 @@ class CampaignErrorEnum(proto.Message):
         CANNOT_TARGET_DISPLAY_NETWORK_WITHOUT_YOUTUBE = 85
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

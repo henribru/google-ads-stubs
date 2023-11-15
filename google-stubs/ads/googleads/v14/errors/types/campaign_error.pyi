@@ -84,7 +84,7 @@ class CampaignErrorEnum(proto.Message):
         INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS = 84
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

@@ -19,9 +19,9 @@ class CampaignCustomizerOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: CampaignCustomizer = ...,
         remove: str = ...
     ) -> None: ...
@@ -31,9 +31,9 @@ class MutateCampaignCustomizerResult(proto.Message):
     campaign_customizer: CampaignCustomizer
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign_customizer: CampaignCustomizer = ...
     ) -> None: ...
@@ -46,9 +46,9 @@ class MutateCampaignCustomizersRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CampaignCustomizerOperation] = ...,
         partial_failure: bool = ...,
@@ -61,9 +61,9 @@ class MutateCampaignCustomizersResponse(proto.Message):
     partial_failure_error: Status
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateCampaignCustomizerResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...

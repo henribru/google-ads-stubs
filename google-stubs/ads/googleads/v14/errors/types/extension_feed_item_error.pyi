@@ -57,7 +57,7 @@ class ExtensionFeedItemErrorEnum(proto.Message):
         SCHEDULE_END_NOT_AFTER_START = 46
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

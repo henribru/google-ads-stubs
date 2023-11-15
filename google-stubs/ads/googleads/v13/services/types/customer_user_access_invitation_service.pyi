@@ -15,9 +15,9 @@ class CustomerUserAccessInvitationOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: CustomerUserAccessInvitation = ...,
         remove: str = ...
     ) -> None: ...
@@ -27,9 +27,9 @@ class MutateCustomerUserAccessInvitationRequest(proto.Message):
     operation: CustomerUserAccessInvitationOperation
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: CustomerUserAccessInvitationOperation = ...
     ) -> None: ...
@@ -38,9 +38,9 @@ class MutateCustomerUserAccessInvitationResponse(proto.Message):
     result: MutateCustomerUserAccessInvitationResult
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         result: MutateCustomerUserAccessInvitationResult = ...
     ) -> None: ...
 
@@ -48,8 +48,8 @@ class MutateCustomerUserAccessInvitationResult(proto.Message):
     resource_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...

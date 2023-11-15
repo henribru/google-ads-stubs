@@ -19,9 +19,9 @@ class CampaignLifecycleGoal(proto.Message):
     customer_acquisition_goal_settings: CustomerAcquisitionGoalSettings
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign: str = ...,
         customer_acquisition_goal_settings: CustomerAcquisitionGoalSettings = ...
@@ -32,9 +32,9 @@ class CustomerAcquisitionGoalSettings(proto.Message):
     value_settings: LifecycleGoalValueSettings
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         optimization_mode: CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode = ...,
         value_settings: LifecycleGoalValueSettings = ...
     ) -> None: ...

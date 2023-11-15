@@ -23,9 +23,9 @@ class ConversionAdjustment(proto.Message):
     user_agent: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         gclid_date_time_pair: GclidDateTimePair = ...,
         order_id: str = ...,
         conversion_action: str = ...,
@@ -44,9 +44,9 @@ class ConversionAdjustmentResult(proto.Message):
     adjustment_type: ConversionAdjustmentTypeEnum.ConversionAdjustmentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         gclid_date_time_pair: GclidDateTimePair = ...,
         order_id: str = ...,
         conversion_action: str = ...,
@@ -59,9 +59,9 @@ class GclidDateTimePair(proto.Message):
     conversion_date_time: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         gclid: str = ...,
         conversion_date_time: str = ...
     ) -> None: ...
@@ -71,9 +71,9 @@ class RestatementValue(proto.Message):
     currency_code: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         adjusted_value: float = ...,
         currency_code: str = ...
     ) -> None: ...
@@ -85,9 +85,9 @@ class UploadConversionAdjustmentsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         conversion_adjustments: MutableSequence[ConversionAdjustment] = ...,
         partial_failure: bool = ...,
@@ -100,9 +100,9 @@ class UploadConversionAdjustmentsResponse(proto.Message):
     job_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[ConversionAdjustmentResult] = ...,
         job_id: int = ...

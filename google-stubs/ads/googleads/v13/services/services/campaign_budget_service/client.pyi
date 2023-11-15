@@ -14,7 +14,7 @@ from .transports.base import CampaignBudgetServiceTransport
 
 class CampaignBudgetServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CampaignBudgetServiceTransport]: ...
 
 class CampaignBudgetServiceClient(metaclass=CampaignBudgetServiceClientMeta):
@@ -56,22 +56,22 @@ class CampaignBudgetServiceClient(metaclass=CampaignBudgetServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CampaignBudgetServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CampaignBudgetServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_campaign_budgets(
         self,
         request: Optional[
             Union[campaign_budget_service.MutateCampaignBudgetsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[campaign_budget_service.CampaignBudgetOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> campaign_budget_service.MutateCampaignBudgetsResponse: ...

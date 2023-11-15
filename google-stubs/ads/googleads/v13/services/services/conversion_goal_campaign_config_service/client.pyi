@@ -16,7 +16,7 @@ from .transports.base import ConversionGoalCampaignConfigServiceTransport
 
 class ConversionGoalCampaignConfigServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ConversionGoalCampaignConfigServiceTransport]: ...
 
 class ConversionGoalCampaignConfigServiceClient(
@@ -70,11 +70,11 @@ class ConversionGoalCampaignConfigServiceClient(
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
         transport: Optional[
             Union[str, ConversionGoalCampaignConfigServiceTransport]
-        ] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        ] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_conversion_goal_campaign_configs(
@@ -84,17 +84,17 @@ class ConversionGoalCampaignConfigServiceClient(
                 conversion_goal_campaign_config_service.MutateConversionGoalCampaignConfigsRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[
                 conversion_goal_campaign_config_service.ConversionGoalCampaignConfigOperation
             ]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> (
         conversion_goal_campaign_config_service.MutateConversionGoalCampaignConfigsResponse
     ): ...

@@ -19,9 +19,9 @@ class AdGroupCriterionCustomizerOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         create: AdGroupCriterionCustomizer = ...,
         remove: str = ...
     ) -> None: ...
@@ -31,9 +31,9 @@ class MutateAdGroupCriterionCustomizerResult(proto.Message):
     ad_group_criterion_customizer: AdGroupCriterionCustomizer
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         ad_group_criterion_customizer: AdGroupCriterionCustomizer = ...
     ) -> None: ...
@@ -46,9 +46,9 @@ class MutateAdGroupCriterionCustomizersRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[AdGroupCriterionCustomizerOperation] = ...,
         partial_failure: bool = ...,
@@ -61,9 +61,9 @@ class MutateAdGroupCriterionCustomizersResponse(proto.Message):
     partial_failure_error: Status
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateAdGroupCriterionCustomizerResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...

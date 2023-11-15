@@ -22,9 +22,9 @@ class CallConversion(proto.Message):
     custom_variables: MutableSequence[CustomVariable]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         caller_id: str = ...,
         call_start_date_time: str = ...,
         conversion_action: str = ...,
@@ -41,9 +41,9 @@ class CallConversionResult(proto.Message):
     conversion_date_time: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         caller_id: str = ...,
         call_start_date_time: str = ...,
         conversion_action: str = ...,
@@ -57,9 +57,9 @@ class CartData(proto.Message):
         unit_price: float
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             product_id: str = ...,
             quantity: int = ...,
             unit_price: float = ...
@@ -71,9 +71,9 @@ class CartData(proto.Message):
     items: MutableSequence[CartData.Item]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         merchant_id: int = ...,
         feed_country_code: str = ...,
         feed_language_code: str = ...,
@@ -97,9 +97,9 @@ class ClickConversion(proto.Message):
     conversion_environment: ConversionEnvironmentEnum.ConversionEnvironment
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         gclid: str = ...,
         gbraid: str = ...,
         wbraid: str = ...,
@@ -124,9 +124,9 @@ class ClickConversionResult(proto.Message):
     user_identifiers: MutableSequence[UserIdentifier]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         gclid: str = ...,
         gbraid: str = ...,
         wbraid: str = ...,
@@ -140,9 +140,9 @@ class CustomVariable(proto.Message):
     value: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         conversion_custom_variable: str = ...,
         value: str = ...
     ) -> None: ...
@@ -152,9 +152,9 @@ class ExternalAttributionData(proto.Message):
     external_attribution_model: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         external_attribution_credit: float = ...,
         external_attribution_model: str = ...
     ) -> None: ...
@@ -166,9 +166,9 @@ class UploadCallConversionsRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         conversions: MutableSequence[CallConversion] = ...,
         partial_failure: bool = ...,
@@ -180,9 +180,9 @@ class UploadCallConversionsResponse(proto.Message):
     results: MutableSequence[CallConversionResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[CallConversionResult] = ...
     ) -> None: ...
@@ -195,9 +195,9 @@ class UploadClickConversionsRequest(proto.Message):
     debug_enabled: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         conversions: MutableSequence[ClickConversion] = ...,
         partial_failure: bool = ...,
@@ -211,9 +211,9 @@ class UploadClickConversionsResponse(proto.Message):
     job_id: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[ClickConversionResult] = ...,
         job_id: int = ...

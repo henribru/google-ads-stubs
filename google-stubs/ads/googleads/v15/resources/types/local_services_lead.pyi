@@ -19,9 +19,9 @@ class ContactDetails(proto.Message):
     consumer_name: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         phone_number: str = ...,
         email: str = ...,
         consumer_name: str = ...
@@ -41,9 +41,9 @@ class LocalServicesLead(proto.Message):
     lead_charged: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         category_id: str = ...,
@@ -62,9 +62,9 @@ class Note(proto.Message):
     description: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         edit_date_time: str = ...,
         description: str = ...
     ) -> None: ...

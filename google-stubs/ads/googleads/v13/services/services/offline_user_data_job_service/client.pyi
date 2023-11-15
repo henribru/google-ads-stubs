@@ -16,7 +16,7 @@ from .transports.base import OfflineUserDataJobServiceTransport
 
 class OfflineUserDataJobServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[OfflineUserDataJobServiceTransport]: ...
 
 class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientMeta):
@@ -60,22 +60,22 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, OfflineUserDataJobServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, OfflineUserDataJobServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def create_offline_user_data_job(
         self,
         request: Optional[
             Union[offline_user_data_job_service.CreateOfflineUserDataJobRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
-        job: Optional[offline_user_data_job.OfflineUserDataJob] = ...,
+        customer_id: Optional[str] = None,
+        job: Optional[offline_user_data_job.OfflineUserDataJob] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> offline_user_data_job_service.CreateOfflineUserDataJobResponse: ...
     def add_offline_user_data_job_operations(
         self,
@@ -84,24 +84,24 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
                 offline_user_data_job_service.AddOfflineUserDataJobOperationsRequest,
                 dict,
             ]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         operations: Optional[
             MutableSequence[offline_user_data_job_service.OfflineUserDataJobOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> offline_user_data_job_service.AddOfflineUserDataJobOperationsResponse: ...
     def run_offline_user_data_job(
         self,
         request: Optional[
             Union[offline_user_data_job_service.RunOfflineUserDataJobRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> operation.Operation: ...

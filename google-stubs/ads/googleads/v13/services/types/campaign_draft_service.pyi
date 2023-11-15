@@ -20,9 +20,9 @@ class CampaignDraftOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CampaignDraft = ...,
         update: CampaignDraft = ...,
@@ -35,9 +35,9 @@ class ListCampaignDraftAsyncErrorsRequest(proto.Message):
     page_size: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         page_token: str = ...,
         page_size: int = ...
@@ -48,9 +48,9 @@ class ListCampaignDraftAsyncErrorsResponse(proto.Message):
     next_page_token: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         errors: MutableSequence[Status] = ...,
         next_page_token: str = ...
     ) -> None: ...
@@ -60,9 +60,9 @@ class MutateCampaignDraftResult(proto.Message):
     campaign_draft: CampaignDraft
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign_draft: CampaignDraft = ...
     ) -> None: ...
@@ -75,9 +75,9 @@ class MutateCampaignDraftsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CampaignDraftOperation] = ...,
         partial_failure: bool = ...,
@@ -90,9 +90,9 @@ class MutateCampaignDraftsResponse(proto.Message):
     results: MutableSequence[MutateCampaignDraftResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCampaignDraftResult] = ...
     ) -> None: ...
@@ -102,9 +102,9 @@ class PromoteCampaignDraftRequest(proto.Message):
     validate_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         campaign_draft: str = ...,
         validate_only: bool = ...
     ) -> None: ...

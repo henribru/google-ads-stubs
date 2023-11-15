@@ -16,9 +16,9 @@ class CustomerLifecycleGoal(proto.Message):
         high_lifetime_value_user_lists: MutableSequence[str]
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             existing_user_lists: MutableSequence[str] = ...,
             high_lifetime_value_user_lists: MutableSequence[str] = ...
         ) -> None: ...
@@ -27,9 +27,9 @@ class CustomerLifecycleGoal(proto.Message):
     customer_acquisition_goal_value_settings: LifecycleGoalValueSettings
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         lifecycle_goal_customer_definition_settings: CustomerLifecycleGoal.LifecycleGoalCustomerDefinitionSettings = ...,
         customer_acquisition_goal_value_settings: LifecycleGoalValueSettings = ...

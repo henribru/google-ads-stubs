@@ -24,9 +24,9 @@ class ConceptGroup(proto.Message):
     type_: KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         name: str = ...,
         type_: KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType = ...
     ) -> None: ...
@@ -36,9 +36,9 @@ class HistoricalMetricsOptions(proto.Message):
     include_average_cpc: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         year_month_range: YearMonthRange = ...,
         include_average_cpc: bool = ...
     ) -> None: ...
@@ -47,9 +47,9 @@ class KeywordAnnotations(proto.Message):
     concepts: MutableSequence[KeywordConcept]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         concepts: MutableSequence[KeywordConcept] = ...
     ) -> None: ...
 
@@ -58,9 +58,9 @@ class KeywordConcept(proto.Message):
     concept_group: ConceptGroup
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         name: str = ...,
         concept_group: ConceptGroup = ...
     ) -> None: ...
@@ -69,9 +69,9 @@ class KeywordPlanAggregateMetricResults(proto.Message):
     device_searches: MutableSequence[KeywordPlanDeviceSearches]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         device_searches: MutableSequence[KeywordPlanDeviceSearches] = ...
     ) -> None: ...
 
@@ -81,9 +81,9 @@ class KeywordPlanAggregateMetrics(proto.Message):
     ]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         aggregate_metric_types: MutableSequence[
             KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType
         ] = ...
@@ -94,9 +94,9 @@ class KeywordPlanDeviceSearches(proto.Message):
     search_count: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         device: DeviceEnum.Device = ...,
         search_count: int = ...
     ) -> None: ...
@@ -111,9 +111,9 @@ class KeywordPlanHistoricalMetrics(proto.Message):
     average_cpc_micros: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         avg_monthly_searches: int = ...,
         monthly_search_volumes: MutableSequence[MonthlySearchVolume] = ...,
         competition: KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel = ...,
@@ -129,9 +129,9 @@ class MonthlySearchVolume(proto.Message):
     monthly_searches: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         year: int = ...,
         month: MonthOfYearEnum.MonthOfYear = ...,
         monthly_searches: int = ...

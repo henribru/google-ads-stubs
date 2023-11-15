@@ -22,9 +22,9 @@ class BiddingSeasonalityAdjustmentOperation(proto.Message):
     remove: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: BiddingSeasonalityAdjustment = ...,
         update: BiddingSeasonalityAdjustment = ...,
@@ -39,9 +39,9 @@ class MutateBiddingSeasonalityAdjustmentsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[BiddingSeasonalityAdjustmentOperation] = ...,
         partial_failure: bool = ...,
@@ -54,9 +54,9 @@ class MutateBiddingSeasonalityAdjustmentsResponse(proto.Message):
     results: MutableSequence[MutateBiddingSeasonalityAdjustmentsResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateBiddingSeasonalityAdjustmentsResult] = ...
     ) -> None: ...
@@ -66,9 +66,9 @@ class MutateBiddingSeasonalityAdjustmentsResult(proto.Message):
     bidding_seasonality_adjustment: BiddingSeasonalityAdjustment
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         bidding_seasonality_adjustment: BiddingSeasonalityAdjustment = ...
     ) -> None: ...

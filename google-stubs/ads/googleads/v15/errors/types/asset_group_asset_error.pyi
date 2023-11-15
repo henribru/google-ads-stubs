@@ -16,7 +16,7 @@ class AssetGroupAssetErrorEnum(proto.Message):
         HOTEL_PROPERTY_ASSET_NOT_LINKED_TO_CAMPAIGN = 5
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

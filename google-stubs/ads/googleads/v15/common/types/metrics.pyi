@@ -192,9 +192,9 @@ class Metrics(proto.Message):
     average_impression_frequency_per_user: float
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         absolute_top_impression_percentage: float = ...,
         active_view_cpm: float = ...,
         active_view_ctr: float = ...,
@@ -378,9 +378,9 @@ class SearchVolumeRange(proto.Message):
     max_: int
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         min_: int = ...,
         max_: int = ...
     ) -> None: ...

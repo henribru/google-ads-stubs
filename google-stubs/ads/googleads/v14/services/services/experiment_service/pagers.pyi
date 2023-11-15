@@ -12,7 +12,7 @@ class ListExperimentAsyncErrorsPager:
         method: Callable[..., experiment_service.ListExperimentAsyncErrorsResponse],
         request: experiment_service.ListExperimentAsyncErrorsRequest,
         response: experiment_service.ListExperimentAsyncErrorsResponse,
-        metadata: Sequence[Tuple[str, str]] = ...,
+        metadata: Sequence[Tuple[str, str]] = (),
     ) -> None: ...
     def __getattr__(self, name: str) -> Any: ...
     @property

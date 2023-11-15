@@ -36,7 +36,7 @@ class BiddingErrorEnum(proto.Message):
         CPC_BID_FLOOR_MICROS_GREATER_THAN_CPC_BID_CEILING_MICROS = 41
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

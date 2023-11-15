@@ -17,9 +17,9 @@ class DynamicSearchAdsSearchTermView(proto.Message):
     has_negative_url: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         search_term: str = ...,
         headline: str = ...,

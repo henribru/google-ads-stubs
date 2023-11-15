@@ -14,7 +14,7 @@ from .transports.base import ExtensionFeedItemServiceTransport
 
 class ExtensionFeedItemServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[ExtensionFeedItemServiceTransport]: ...
 
 class ExtensionFeedItemServiceClient(metaclass=ExtensionFeedItemServiceClientMeta):
@@ -72,22 +72,22 @@ class ExtensionFeedItemServiceClient(metaclass=ExtensionFeedItemServiceClientMet
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, ExtensionFeedItemServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, ExtensionFeedItemServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_extension_feed_items(
         self,
         request: Optional[
             Union[extension_feed_item_service.MutateExtensionFeedItemsRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[extension_feed_item_service.ExtensionFeedItemOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> extension_feed_item_service.MutateExtensionFeedItemsResponse: ...

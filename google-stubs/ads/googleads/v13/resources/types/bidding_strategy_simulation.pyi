@@ -26,9 +26,9 @@ class BiddingStrategySimulation(proto.Message):
     target_roas_point_list: TargetRoasSimulationPointList
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         bidding_strategy_id: int = ...,
         type_: SimulationTypeEnum.SimulationType = ...,

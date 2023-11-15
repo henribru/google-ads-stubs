@@ -15,9 +15,9 @@ class BusinessNameFilter(proto.Message):
     filter_type: FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         business_name: str = ...,
         filter_type: FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType = ...
     ) -> None: ...
@@ -26,9 +26,9 @@ class DynamicAffiliateLocationSetFilter(proto.Message):
     chain_ids: MutableSequence[int]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         chain_ids: MutableSequence[int] = ...
     ) -> None: ...
 
@@ -37,9 +37,9 @@ class DynamicLocationSetFilter(proto.Message):
     business_name_filter: BusinessNameFilter
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         labels: MutableSequence[str] = ...,
         business_name_filter: BusinessNameFilter = ...
     ) -> None: ...

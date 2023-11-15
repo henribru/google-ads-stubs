@@ -32,9 +32,9 @@ class AccountBudget(proto.Message):
         spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType
         def __init__(
             self: _M,
-            mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
-            ignore_unknown_fields: bool = ...,
+            ignore_unknown_fields: bool = False,
             account_budget_proposal: str = ...,
             proposal_type: AccountBudgetProposalTypeEnum.AccountBudgetProposalType = ...,
             name: str = ...,
@@ -71,9 +71,9 @@ class AccountBudget(proto.Message):
     adjusted_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
         billing_setup: str = ...,

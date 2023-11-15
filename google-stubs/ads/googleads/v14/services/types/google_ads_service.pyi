@@ -792,9 +792,9 @@ class GoogleAdsRow(proto.Message):
     segments: Segments
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         account_budget: AccountBudget = ...,
         account_budget_proposal: AccountBudgetProposal = ...,
         account_link: AccountLink = ...,
@@ -966,9 +966,9 @@ class MutateGoogleAdsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         mutate_operations: MutableSequence[MutateOperation] = ...,
         partial_failure: bool = ...,
@@ -981,9 +981,9 @@ class MutateGoogleAdsResponse(proto.Message):
     mutate_operation_responses: MutableSequence[MutateOperationResponse]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
         mutate_operation_responses: MutableSequence[MutateOperationResponse] = ...
     ) -> None: ...
@@ -1066,9 +1066,9 @@ class MutateOperation(proto.Message):
     user_list_operation: UserListOperation
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         ad_group_ad_label_operation: AdGroupAdLabelOperation = ...,
         ad_group_ad_operation: AdGroupAdOperation = ...,
         ad_group_asset_operation: AdGroupAssetOperation = ...,
@@ -1224,9 +1224,9 @@ class MutateOperationResponse(proto.Message):
     user_list_result: MutateUserListResult
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         ad_group_ad_label_result: MutateAdGroupAdLabelResult = ...,
         ad_group_ad_result: MutateAdGroupAdResult = ...,
         ad_group_asset_result: MutateAdGroupAssetResult = ...,
@@ -1314,9 +1314,9 @@ class SearchGoogleAdsRequest(proto.Message):
     summary_row_setting: SummaryRowSettingEnum.SummaryRowSetting
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         query: str = ...,
         page_token: str = ...,
@@ -1334,9 +1334,9 @@ class SearchGoogleAdsResponse(proto.Message):
     summary_row: GoogleAdsRow
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[GoogleAdsRow] = ...,
         next_page_token: str = ...,
         total_results_count: int = ...,
@@ -1350,9 +1350,9 @@ class SearchGoogleAdsStreamRequest(proto.Message):
     summary_row_setting: SummaryRowSettingEnum.SummaryRowSetting
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         query: str = ...,
         summary_row_setting: SummaryRowSettingEnum.SummaryRowSetting = ...
@@ -1365,9 +1365,9 @@ class SearchGoogleAdsStreamResponse(proto.Message):
     request_id: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[GoogleAdsRow] = ...,
         field_mask: FieldMask = ...,
         summary_row: GoogleAdsRow = ...,

@@ -11,9 +11,9 @@ class LandingPageView(proto.Message):
     unexpanded_final_url: str
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         unexpanded_final_url: str = ...
     ) -> None: ...

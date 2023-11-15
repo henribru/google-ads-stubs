@@ -19,9 +19,9 @@ class ConversionGoalCampaignConfigOperation(proto.Message):
     update: ConversionGoalCampaignConfig
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         update: ConversionGoalCampaignConfig = ...
     ) -> None: ...
@@ -31,9 +31,9 @@ class MutateConversionGoalCampaignConfigResult(proto.Message):
     conversion_goal_campaign_config: ConversionGoalCampaignConfig
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         conversion_goal_campaign_config: ConversionGoalCampaignConfig = ...
     ) -> None: ...
@@ -45,9 +45,9 @@ class MutateConversionGoalCampaignConfigsRequest(proto.Message):
     response_content_type: ResponseContentTypeEnum.ResponseContentType
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[ConversionGoalCampaignConfigOperation] = ...,
         validate_only: bool = ...,
@@ -58,8 +58,8 @@ class MutateConversionGoalCampaignConfigsResponse(proto.Message):
     results: MutableSequence[MutateConversionGoalCampaignConfigResult]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateConversionGoalCampaignConfigResult] = ...
     ) -> None: ...

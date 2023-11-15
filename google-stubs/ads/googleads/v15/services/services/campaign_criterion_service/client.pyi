@@ -14,7 +14,7 @@ from .transports.base import CampaignCriterionServiceTransport
 
 class CampaignCriterionServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[CampaignCriterionServiceTransport]: ...
 
 class CampaignCriterionServiceClient(metaclass=CampaignCriterionServiceClientMeta):
@@ -74,22 +74,22 @@ class CampaignCriterionServiceClient(metaclass=CampaignCriterionServiceClientMet
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, CampaignCriterionServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, CampaignCriterionServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def mutate_campaign_criteria(
         self,
         request: Optional[
             Union[campaign_criterion_service.MutateCampaignCriteriaRequest, dict]
-        ] = ...,
+        ] = None,
         *,
-        customer_id: Optional[str] = ...,
+        customer_id: Optional[str] = None,
         operations: Optional[
             MutableSequence[campaign_criterion_service.CampaignCriterionOperation]
-        ] = ...,
+        ] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> campaign_criterion_service.MutateCampaignCriteriaResponse: ...

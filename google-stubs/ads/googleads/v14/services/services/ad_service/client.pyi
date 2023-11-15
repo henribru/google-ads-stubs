@@ -15,7 +15,7 @@ from .transports.base import AdServiceTransport
 
 class AdServiceClientMeta(type):
     def get_transport_class(
-        cls, label: Optional[str] = ...
+        cls, label: Optional[str] = None
     ) -> Type[AdServiceTransport]: ...
 
 class AdServiceClient(metaclass=AdServiceClientMeta):
@@ -57,27 +57,27 @@ class AdServiceClient(metaclass=AdServiceClientMeta):
     def __init__(
         self,
         *,
-        credentials: Optional[ga_credentials.Credentials] = ...,
-        transport: Optional[Union[str, AdServiceTransport]] = ...,
-        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = ...,
+        credentials: Optional[ga_credentials.Credentials] = None,
+        transport: Optional[Union[str, AdServiceTransport]] = None,
+        client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = ...
     ) -> None: ...
     def get_ad(
         self,
-        request: Optional[Union[ad_service.GetAdRequest, dict]] = ...,
+        request: Optional[Union[ad_service.GetAdRequest, dict]] = None,
         *,
-        resource_name: Optional[str] = ...,
+        resource_name: Optional[str] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> ad.Ad: ...
     def mutate_ads(
         self,
-        request: Optional[Union[ad_service.MutateAdsRequest, dict]] = ...,
+        request: Optional[Union[ad_service.MutateAdsRequest, dict]] = None,
         *,
-        customer_id: Optional[str] = ...,
-        operations: Optional[MutableSequence[ad_service.AdOperation]] = ...,
+        customer_id: Optional[str] = None,
+        operations: Optional[MutableSequence[ad_service.AdOperation]] = None,
         retry: Union[retries.Retry, gapic_v1.method._MethodDefault] = ...,
         timeout: Union[float, object] = ...,
-        metadata: Sequence[Tuple[str, str]] = ...
+        metadata: Sequence[Tuple[str, str]] = ()
     ) -> ad_service.MutateAdsResponse: ...

@@ -24,7 +24,7 @@ class ConversionValueRuleErrorEnum(proto.Message):
         CANNOT_ADD_RULE_WITH_STATUS_REMOVED = 13
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...

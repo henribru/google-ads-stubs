@@ -15,9 +15,9 @@ class TargetRestriction(proto.Message):
     bid_only: bool
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         targeting_dimension: TargetingDimensionEnum.TargetingDimension = ...,
         bid_only: bool = ...
     ) -> None: ...
@@ -32,9 +32,9 @@ class TargetRestrictionOperation(proto.Message):
     value: TargetRestriction
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         operator: TargetRestrictionOperation.Operator = ...,
         value: TargetRestriction = ...
     ) -> None: ...
@@ -44,9 +44,9 @@ class TargetingSetting(proto.Message):
     target_restriction_operations: MutableSequence[TargetRestrictionOperation]
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
         target_restrictions: MutableSequence[TargetRestriction] = ...,
         target_restriction_operations: MutableSequence[TargetRestrictionOperation] = ...
     ) -> None: ...

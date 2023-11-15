@@ -23,7 +23,7 @@ class AssetSetErrorEnum(proto.Message):
         CANNOT_DELETE_AS_ENABLED_LINKAGES_EXIST = 10
     def __init__(
         self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = ...,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
-        ignore_unknown_fields: bool = ...,
+        ignore_unknown_fields: bool = False,
     ) -> None: ...
