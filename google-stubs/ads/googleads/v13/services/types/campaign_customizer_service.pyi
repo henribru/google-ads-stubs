@@ -1,9 +1,10 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.response_content_type import (
     ResponseContentTypeEnum,
@@ -25,6 +26,7 @@ class CampaignCustomizerOperation(proto.Message):
         create: CampaignCustomizer = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignCustomizerResult(proto.Message):
     resource_name: str
@@ -37,6 +39,7 @@ class MutateCampaignCustomizerResult(proto.Message):
         resource_name: str = ...,
         campaign_customizer: CampaignCustomizer = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "campaign_customizer"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignCustomizersRequest(proto.Message):
     customer_id: str
@@ -55,6 +58,7 @@ class MutateCampaignCustomizersRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignCustomizersResponse(proto.Message):
     results: MutableSequence[MutateCampaignCustomizerResult]
@@ -67,3 +71,4 @@ class MutateCampaignCustomizersResponse(proto.Message):
         results: MutableSequence[MutateCampaignCustomizerResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]

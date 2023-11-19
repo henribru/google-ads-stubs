@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.month_of_year import MonthOfYearEnum
 from google.ads.googleads.v15.resources.types.invoice import Invoice
@@ -24,6 +25,7 @@ class ListInvoicesRequest(proto.Message):
         issue_year: str = ...,
         issue_month: MonthOfYearEnum.MonthOfYear = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "billing_setup", "issue_year", "issue_month"]) -> bool: ...  # type: ignore[override]
 
 class ListInvoicesResponse(proto.Message):
     invoices: MutableSequence[Invoice]
@@ -34,3 +36,4 @@ class ListInvoicesResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         invoices: MutableSequence[Invoice] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["invoices"]) -> bool: ...  # type: ignore[override]

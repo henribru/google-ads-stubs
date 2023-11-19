@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.product_bidding_category_level import (
     ProductBiddingCategoryLevelEnum,
@@ -36,3 +37,4 @@ class ProductBiddingCategoryConstant(proto.Message):
         language_code: str = ...,
         localized_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "country_code", "product_bidding_category_constant_parent", "level", "status", "language_code", "localized_name"]) -> bool: ...  # type: ignore[override]

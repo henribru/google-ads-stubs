@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.asset_set_types import (
     BusinessProfileLocationGroup,
@@ -26,6 +27,7 @@ class AssetSet(proto.Message):
             hotel_center_id: int = ...,
             partner_name: str = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["hotel_center_id", "partner_name"]) -> bool: ...  # type: ignore[override]
 
     class MerchantCenterFeed(proto.Message):
         merchant_id: int
@@ -38,6 +40,7 @@ class AssetSet(proto.Message):
             merchant_id: int = ...,
             feed_label: str = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["merchant_id", "feed_label"]) -> bool: ...  # type: ignore[override]
     id: int
     resource_name: str
     name: str
@@ -66,3 +69,4 @@ class AssetSet(proto.Message):
         business_profile_location_group: BusinessProfileLocationGroup = ...,
         chain_location_group: ChainLocationGroup = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["id", "resource_name", "name", "type_", "status", "merchant_center_feed", "location_group_parent_asset_set_id", "hotel_property_data", "location_set", "business_profile_location_group", "chain_location_group"]) -> bool: ...  # type: ignore[override]

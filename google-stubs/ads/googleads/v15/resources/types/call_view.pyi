@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.call_tracking_display_location import (
     CallTrackingDisplayLocationEnum,
@@ -39,3 +40,4 @@ class CallView(proto.Message):
         type_: CallTypeEnum.CallType = ...,
         call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "caller_country_code", "caller_area_code", "call_duration_seconds", "start_call_date_time", "end_call_date_time", "call_tracking_display_location", "type_", "call_status"]) -> bool: ...  # type: ignore[override]

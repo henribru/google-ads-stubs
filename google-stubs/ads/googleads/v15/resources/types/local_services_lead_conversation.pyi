@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.local_services_conversation_type import (
     LocalServicesLeadConversationTypeEnum,
@@ -36,6 +37,7 @@ class LocalServicesLeadConversation(proto.Message):
         phone_call_details: PhoneCallDetails = ...,
         message_details: MessageDetails = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "conversation_channel", "participant_type", "lead", "event_date_time", "phone_call_details", "message_details"]) -> bool: ...  # type: ignore[override]
 
 class MessageDetails(proto.Message):
     text: str
@@ -46,6 +48,7 @@ class MessageDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         text: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["text"]) -> bool: ...  # type: ignore[override]
 
 class PhoneCallDetails(proto.Message):
     call_duration_millis: int
@@ -58,3 +61,4 @@ class PhoneCallDetails(proto.Message):
         call_duration_millis: int = ...,
         call_recording_url: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["call_duration_millis", "call_recording_url"]) -> bool: ...  # type: ignore[override]

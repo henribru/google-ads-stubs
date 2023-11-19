@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.criteria import AdScheduleInfo, KeywordInfo
 from google.ads.googleads.v13.enums.types.feed_item_target_device import (
@@ -46,3 +47,4 @@ class FeedItemTarget(proto.Message):
         device: FeedItemTargetDeviceEnum.FeedItemTargetDevice = ...,
         ad_schedule: AdScheduleInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "feed_item", "feed_item_target_type", "feed_item_target_id", "status", "campaign", "ad_group", "keyword", "geo_target_constant", "device", "ad_schedule"]) -> bool: ...  # type: ignore[override]

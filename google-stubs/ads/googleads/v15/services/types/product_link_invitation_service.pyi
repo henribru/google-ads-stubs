@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.product_link_invitation_status import (
     ProductLinkInvitationStatusEnum,
@@ -23,6 +24,7 @@ class UpdateProductLinkInvitationRequest(proto.Message):
         product_link_invitation_status: ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus = ...,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "product_link_invitation_status", "resource_name"]) -> bool: ...  # type: ignore[override]
 
 class UpdateProductLinkInvitationResponse(proto.Message):
     resource_name: str
@@ -33,3 +35,4 @@ class UpdateProductLinkInvitationResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

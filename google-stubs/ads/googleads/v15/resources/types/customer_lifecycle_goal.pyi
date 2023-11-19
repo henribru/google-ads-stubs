@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.lifecycle_goals import (
     LifecycleGoalValueSettings,
@@ -22,6 +23,7 @@ class CustomerLifecycleGoal(proto.Message):
             existing_user_lists: MutableSequence[str] = ...,
             high_lifetime_value_user_lists: MutableSequence[str] = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["existing_user_lists", "high_lifetime_value_user_lists"]) -> bool: ...  # type: ignore[override]
     resource_name: str
     lifecycle_goal_customer_definition_settings: CustomerLifecycleGoal.LifecycleGoalCustomerDefinitionSettings
     customer_acquisition_goal_value_settings: LifecycleGoalValueSettings
@@ -34,3 +36,4 @@ class CustomerLifecycleGoal(proto.Message):
         lifecycle_goal_customer_definition_settings: CustomerLifecycleGoal.LifecycleGoalCustomerDefinitionSettings = ...,
         customer_acquisition_goal_value_settings: LifecycleGoalValueSettings = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "lifecycle_goal_customer_definition_settings", "customer_acquisition_goal_value_settings"]) -> bool: ...  # type: ignore[override]

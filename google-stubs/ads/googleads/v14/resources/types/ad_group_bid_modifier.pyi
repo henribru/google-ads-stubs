@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.criteria import (
     DeviceInfo,
@@ -49,3 +50,4 @@ class AdGroupBidModifier(proto.Message):
         device: DeviceInfo = ...,
         hotel_check_in_date_range: HotelCheckInDateRangeInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "ad_group", "criterion_id", "bid_modifier", "base_ad_group", "bid_modifier_source", "hotel_date_selection_type", "hotel_advance_booking_window", "hotel_length_of_stay", "hotel_check_in_day", "device", "hotel_check_in_date_range"]) -> bool: ...  # type: ignore[override]

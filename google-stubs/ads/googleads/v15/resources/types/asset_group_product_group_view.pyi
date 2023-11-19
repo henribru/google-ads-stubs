@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -19,3 +20,4 @@ class AssetGroupProductGroupView(proto.Message):
         asset_group: str = ...,
         asset_group_listing_group_filter: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "asset_group", "asset_group_listing_group_filter"]) -> bool: ...  # type: ignore[override]

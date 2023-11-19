@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.custom_conversion_goal_status import (
     CustomConversionGoalStatusEnum,
@@ -27,3 +28,4 @@ class CustomConversionGoal(proto.Message):
         conversion_actions: MutableSequence[str] = ...,
         status: CustomConversionGoalStatusEnum.CustomConversionGoalStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "conversion_actions", "status"]) -> bool: ...  # type: ignore[override]

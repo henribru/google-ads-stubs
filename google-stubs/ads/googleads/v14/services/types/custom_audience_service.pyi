@@ -1,9 +1,10 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.resources.types.custom_audience import CustomAudience
 
@@ -24,6 +25,7 @@ class CustomAudienceOperation(proto.Message):
         update: CustomAudience = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomAudienceResult(proto.Message):
     resource_name: str
@@ -34,6 +36,7 @@ class MutateCustomAudienceResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomAudiencesRequest(proto.Message):
     customer_id: str
@@ -48,6 +51,7 @@ class MutateCustomAudiencesRequest(proto.Message):
         operations: MutableSequence[CustomAudienceOperation] = ...,
         validate_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "validate_only"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomAudiencesResponse(proto.Message):
     results: MutableSequence[MutateCustomAudienceResult]
@@ -58,3 +62,4 @@ class MutateCustomAudiencesResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateCustomAudienceResult] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["results"]) -> bool: ...  # type: ignore[override]

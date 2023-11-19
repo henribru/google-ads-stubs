@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.product_category_level import (
     ProductCategoryLevelEnum,
@@ -27,6 +28,7 @@ class ProductCategoryConstant(proto.Message):
             language_code: str = ...,
             value: str = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["region_code", "language_code", "value"]) -> bool: ...  # type: ignore[override]
     resource_name: str
     category_id: int
     product_category_constant_parent: str
@@ -47,3 +49,4 @@ class ProductCategoryConstant(proto.Message):
             ProductCategoryConstant.ProductCategoryLocalization
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "category_id", "product_category_constant_parent", "level", "state", "localizations"]) -> bool: ...  # type: ignore[override]

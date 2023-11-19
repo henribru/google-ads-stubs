@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.dates import DateRange
 from google.ads.googleads.v14.enums.types.keyword_plan_forecast_interval import (
@@ -26,6 +27,7 @@ class KeywordPlan(proto.Message):
         name: str = ...,
         forecast_period: KeywordPlanForecastPeriod = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "forecast_period"]) -> bool: ...  # type: ignore[override]
 
 class KeywordPlanForecastPeriod(proto.Message):
     date_interval: KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
@@ -38,3 +40,4 @@ class KeywordPlanForecastPeriod(proto.Message):
         date_interval: KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval = ...,
         date_range: DateRange = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["date_interval", "date_range"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.ad_customizer_placeholder_field import (
     AdCustomizerPlaceholderFieldEnum,
@@ -135,6 +136,7 @@ class AttributeFieldMapping(proto.Message):
         job_field: JobPlaceholderFieldEnum.JobPlaceholderField = ...,
         image_field: ImagePlaceholderFieldEnum.ImagePlaceholderField = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["feed_attribute_id", "field_id", "sitelink_field", "call_field", "app_field", "location_field", "affiliate_location_field", "callout_field", "structured_snippet_field", "message_field", "price_field", "promotion_field", "ad_customizer_field", "dsa_page_feed_field", "location_extension_targeting_field", "education_field", "flight_field", "custom_field", "hotel_field", "real_estate_field", "travel_field", "local_field", "job_field", "image_field"]) -> bool: ...  # type: ignore[override]
 
 class FeedMapping(proto.Message):
     resource_name: str
@@ -155,3 +157,4 @@ class FeedMapping(proto.Message):
         placeholder_type: PlaceholderTypeEnum.PlaceholderType = ...,
         criterion_type: FeedMappingCriterionTypeEnum.FeedMappingCriterionType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "feed", "attribute_field_mappings", "status", "placeholder_type", "criterion_type"]) -> bool: ...  # type: ignore[override]

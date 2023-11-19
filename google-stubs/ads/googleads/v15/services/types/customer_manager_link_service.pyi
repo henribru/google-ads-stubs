@@ -1,9 +1,10 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.resources.types.customer_manager_link import (
     CustomerManagerLink,
@@ -22,6 +23,7 @@ class CustomerManagerLinkOperation(proto.Message):
         update_mask: FieldMask = ...,
         update: CustomerManagerLink = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["update_mask", "update"]) -> bool: ...  # type: ignore[override]
 
 class MoveManagerLinkRequest(proto.Message):
     customer_id: str
@@ -38,6 +40,7 @@ class MoveManagerLinkRequest(proto.Message):
         new_manager: str = ...,
         validate_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "previous_customer_manager_link", "new_manager", "validate_only"]) -> bool: ...  # type: ignore[override]
 
 class MoveManagerLinkResponse(proto.Message):
     resource_name: str
@@ -48,6 +51,7 @@ class MoveManagerLinkResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerManagerLinkRequest(proto.Message):
     customer_id: str
@@ -62,6 +66,7 @@ class MutateCustomerManagerLinkRequest(proto.Message):
         operations: MutableSequence[CustomerManagerLinkOperation] = ...,
         validate_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "validate_only"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerManagerLinkResponse(proto.Message):
     results: MutableSequence[MutateCustomerManagerLinkResult]
@@ -72,6 +77,7 @@ class MutateCustomerManagerLinkResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateCustomerManagerLinkResult] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["results"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerManagerLinkResult(proto.Message):
     resource_name: str
@@ -82,3 +88,4 @@ class MutateCustomerManagerLinkResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

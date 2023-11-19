@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.shared_set_status import SharedSetStatusEnum
 from google.ads.googleads.v15.enums.types.shared_set_type import SharedSetTypeEnum
@@ -30,3 +31,4 @@ class SharedSet(proto.Message):
         member_count: int = ...,
         reference_count: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "type_", "name", "status", "member_count", "reference_count"]) -> bool: ...  # type: ignore[override]

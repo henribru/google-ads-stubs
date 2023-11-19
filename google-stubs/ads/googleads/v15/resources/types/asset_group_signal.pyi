@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.criteria import AudienceInfo, SearchThemeInfo
 from google.ads.googleads.v15.enums.types.asset_group_signal_approval_status import (
@@ -30,3 +31,4 @@ class AssetGroupSignal(proto.Message):
         audience: AudienceInfo = ...,
         search_theme: SearchThemeInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "asset_group", "approval_status", "disapproval_reasons", "audience", "search_theme"]) -> bool: ...  # type: ignore[override]

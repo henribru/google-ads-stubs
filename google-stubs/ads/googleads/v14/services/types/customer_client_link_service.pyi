@@ -1,9 +1,10 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.resources.types.customer_client_link import (
     CustomerClientLink,
@@ -24,6 +25,7 @@ class CustomerClientLinkOperation(proto.Message):
         create: CustomerClientLink = ...,
         update: CustomerClientLink = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerClientLinkRequest(proto.Message):
     customer_id: str
@@ -38,6 +40,7 @@ class MutateCustomerClientLinkRequest(proto.Message):
         operation: CustomerClientLinkOperation = ...,
         validate_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerClientLinkResponse(proto.Message):
     result: MutateCustomerClientLinkResult
@@ -48,6 +51,7 @@ class MutateCustomerClientLinkResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateCustomerClientLinkResult = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerClientLinkResult(proto.Message):
     resource_name: str
@@ -58,3 +62,4 @@ class MutateCustomerClientLinkResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

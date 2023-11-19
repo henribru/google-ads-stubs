@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.batch_job_status import BatchJobStatusEnum
 
@@ -30,6 +31,7 @@ class BatchJob(proto.Message):
             executed_operation_count: int = ...,
             execution_limit_seconds: int = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["creation_date_time", "start_date_time", "completion_date_time", "estimated_completion_ratio", "operation_count", "executed_operation_count", "execution_limit_seconds"]) -> bool: ...  # type: ignore[override]
     resource_name: str
     id: int
     next_add_sequence_token: str
@@ -48,3 +50,4 @@ class BatchJob(proto.Message):
         status: BatchJobStatusEnum.BatchJobStatus = ...,
         long_running_operation: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "next_add_sequence_token", "metadata", "status", "long_running_operation"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.month_of_year import MonthOfYearEnum
 
@@ -19,6 +20,7 @@ class DateRange(proto.Message):
         start_date: str = ...,
         end_date: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["start_date", "end_date"]) -> bool: ...  # type: ignore[override]
 
 class YearMonth(proto.Message):
     year: int
@@ -31,6 +33,7 @@ class YearMonth(proto.Message):
         year: int = ...,
         month: MonthOfYearEnum.MonthOfYear = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["year", "month"]) -> bool: ...  # type: ignore[override]
 
 class YearMonthRange(proto.Message):
     start: YearMonth
@@ -43,3 +46,4 @@ class YearMonthRange(proto.Message):
         start: YearMonth = ...,
         end: YearMonth = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["start", "end"]) -> bool: ...  # type: ignore[override]

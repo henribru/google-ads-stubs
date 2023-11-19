@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.campaign_group_status import (
     CampaignGroupStatusEnum,
@@ -25,3 +26,4 @@ class CampaignGroup(proto.Message):
         name: str = ...,
         status: CampaignGroupStatusEnum.CampaignGroupStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "status"]) -> bool: ...  # type: ignore[override]

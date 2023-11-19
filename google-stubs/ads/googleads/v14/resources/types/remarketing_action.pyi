@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.tag_snippet import TagSnippet
 
@@ -23,3 +24,4 @@ class RemarketingAction(proto.Message):
         name: str = ...,
         tag_snippets: MutableSequence[TagSnippet] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "tag_snippets"]) -> bool: ...  # type: ignore[override]

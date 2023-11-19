@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.hotel_reconciliation_status import (
     HotelReconciliationStatusEnum,
@@ -39,3 +40,4 @@ class HotelReconciliation(proto.Message):
         billed: bool = ...,
         status: HotelReconciliationStatusEnum.HotelReconciliationStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "commission_id", "order_id", "campaign", "hotel_center_id", "hotel_id", "check_in_date", "check_out_date", "reconciled_value_micros", "billed", "status"]) -> bool: ...  # type: ignore[override]

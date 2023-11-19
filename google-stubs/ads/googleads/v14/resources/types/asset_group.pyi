@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.ad_strength import AdStrengthEnum
 from google.ads.googleads.v14.enums.types.asset_group_primary_status import (
@@ -50,3 +51,4 @@ class AssetGroup(proto.Message):
         path2: str = ...,
         ad_strength: AdStrengthEnum.AdStrength = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "campaign", "name", "final_urls", "final_mobile_urls", "status", "primary_status", "primary_status_reasons", "path1", "path2", "ad_strength"]) -> bool: ...  # type: ignore[override]

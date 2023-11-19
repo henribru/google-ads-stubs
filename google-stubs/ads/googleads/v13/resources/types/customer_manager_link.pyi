@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.manager_link_status import (
     ManagerLinkStatusEnum,
@@ -25,3 +26,4 @@ class CustomerManagerLink(proto.Message):
         manager_link_id: int = ...,
         status: ManagerLinkStatusEnum.ManagerLinkStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "manager_customer", "manager_link_id", "status"]) -> bool: ...  # type: ignore[override]

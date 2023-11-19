@@ -1,10 +1,11 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.response_content_type import (
     ResponseContentTypeEnum,
@@ -30,6 +31,7 @@ class CustomerExtensionSettingOperation(proto.Message):
         update: CustomerExtensionSetting = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerExtensionSettingResult(proto.Message):
     resource_name: str
@@ -42,6 +44,7 @@ class MutateCustomerExtensionSettingResult(proto.Message):
         resource_name: str = ...,
         customer_extension_setting: CustomerExtensionSetting = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "customer_extension_setting"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerExtensionSettingsRequest(proto.Message):
     customer_id: str
@@ -60,6 +63,7 @@ class MutateCustomerExtensionSettingsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
 class MutateCustomerExtensionSettingsResponse(proto.Message):
     partial_failure_error: Status
@@ -72,3 +76,4 @@ class MutateCustomerExtensionSettingsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCustomerExtensionSettingResult] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

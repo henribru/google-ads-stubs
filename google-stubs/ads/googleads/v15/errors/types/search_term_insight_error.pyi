@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -22,3 +23,4 @@ class SearchTermInsightErrorEnum(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.user_lists import (
     BasicUserListInfo,
@@ -86,3 +87,4 @@ class UserList(proto.Message):
         basic_user_list: BasicUserListInfo = ...,
         lookalike_user_list: LookalikeUserListInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "read_only", "name", "description", "membership_status", "integration_code", "membership_life_span", "size_for_display", "size_range_for_display", "size_for_search", "size_range_for_search", "type_", "closing_reason", "access_reason", "account_user_list_status", "eligible_for_search", "eligible_for_display", "match_rate_percentage", "crm_based_user_list", "similar_user_list", "rule_based_user_list", "logical_user_list", "basic_user_list", "lookalike_user_list"]) -> bool: ...  # type: ignore[override]

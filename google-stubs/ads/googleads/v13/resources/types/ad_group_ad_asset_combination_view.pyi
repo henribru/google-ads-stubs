@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.asset_usage import AssetUsage
 
@@ -21,3 +22,4 @@ class AdGroupAdAssetCombinationView(proto.Message):
         served_assets: MutableSequence[AssetUsage] = ...,
         enabled: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "served_assets", "enabled"]) -> bool: ...  # type: ignore[override]

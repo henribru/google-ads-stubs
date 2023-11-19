@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.conversion_tracking_status_enum import (
     ConversionTrackingStatusEnum,
@@ -30,6 +31,7 @@ class CallReportingSetting(proto.Message):
         call_conversion_reporting_enabled: bool = ...,
         call_conversion_action: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["call_reporting_enabled", "call_conversion_reporting_enabled", "call_conversion_action"]) -> bool: ...  # type: ignore[override]
 
 class ConversionTrackingSetting(proto.Message):
     conversion_tracking_id: int
@@ -50,6 +52,7 @@ class ConversionTrackingSetting(proto.Message):
         enhanced_conversions_for_leads_enabled: bool = ...,
         google_ads_conversion_customer: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["conversion_tracking_id", "cross_account_conversion_tracking_id", "accepted_customer_data_terms", "conversion_tracking_status", "enhanced_conversions_for_leads_enabled", "google_ads_conversion_customer"]) -> bool: ...  # type: ignore[override]
 
 class Customer(proto.Message):
     resource_name: str
@@ -110,6 +113,7 @@ class Customer(proto.Message):
         customer_agreement_setting: CustomerAgreementSetting = ...,
         local_services_settings: LocalServicesSettings = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "descriptive_name", "currency_code", "time_zone", "tracking_url_template", "final_url_suffix", "auto_tagging_enabled", "has_partners_badge", "manager", "test_account", "call_reporting_setting", "conversion_tracking_setting", "remarketing_setting", "pay_per_conversion_eligibility_failure_reasons", "optimization_score", "optimization_score_weight", "status", "location_asset_auto_migration_done", "image_asset_auto_migration_done", "location_asset_auto_migration_done_date_time", "image_asset_auto_migration_done_date_time", "customer_agreement_setting", "local_services_settings"]) -> bool: ...  # type: ignore[override]
 
 class CustomerAgreementSetting(proto.Message):
     accepted_lead_form_terms: bool
@@ -120,6 +124,7 @@ class CustomerAgreementSetting(proto.Message):
         ignore_unknown_fields: bool = False,
         accepted_lead_form_terms: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["accepted_lead_form_terms"]) -> bool: ...  # type: ignore[override]
 
 class GranularInsuranceStatus(proto.Message):
     geo_criterion_id: int
@@ -134,6 +139,7 @@ class GranularInsuranceStatus(proto.Message):
         category_id: str = ...,
         verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["geo_criterion_id", "category_id", "verification_status"]) -> bool: ...  # type: ignore[override]
 
 class GranularLicenseStatus(proto.Message):
     geo_criterion_id: int
@@ -148,6 +154,7 @@ class GranularLicenseStatus(proto.Message):
         category_id: str = ...,
         verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["geo_criterion_id", "category_id", "verification_status"]) -> bool: ...  # type: ignore[override]
 
 class LocalServicesSettings(proto.Message):
     granular_license_statuses: MutableSequence[GranularLicenseStatus]
@@ -160,6 +167,7 @@ class LocalServicesSettings(proto.Message):
         granular_license_statuses: MutableSequence[GranularLicenseStatus] = ...,
         granular_insurance_statuses: MutableSequence[GranularInsuranceStatus] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["granular_license_statuses", "granular_insurance_statuses"]) -> bool: ...  # type: ignore[override]
 
 class RemarketingSetting(proto.Message):
     google_global_site_tag: str
@@ -170,3 +178,4 @@ class RemarketingSetting(proto.Message):
         ignore_unknown_fields: bool = False,
         google_global_site_tag: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["google_global_site_tag"]) -> bool: ...  # type: ignore[override]

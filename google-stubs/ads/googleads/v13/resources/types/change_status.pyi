@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.change_status_operation import (
     ChangeStatusOperationEnum,
@@ -62,3 +63,4 @@ class ChangeStatus(proto.Message):
         ad_group_asset: str = ...,
         combined_audience: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "last_change_date_time", "resource_type", "campaign", "ad_group", "resource_status", "ad_group_ad", "ad_group_criterion", "campaign_criterion", "feed", "feed_item", "ad_group_feed", "campaign_feed", "ad_group_bid_modifier", "shared_set", "campaign_shared_set", "asset", "customer_asset", "campaign_asset", "ad_group_asset", "combined_audience"]) -> bool: ...  # type: ignore[override]

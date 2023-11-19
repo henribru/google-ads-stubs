@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.criteria import (
     AgeRangeInfo,
@@ -31,6 +32,7 @@ class AudienceCompositionAttribute(proto.Message):
         attribute_metadata: AudienceInsightsAttributeMetadata = ...,
         metrics: AudienceCompositionMetrics = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["attribute_metadata", "metrics"]) -> bool: ...  # type: ignore[override]
 
 class AudienceCompositionAttributeCluster(proto.Message):
     cluster_display_name: str
@@ -45,6 +47,7 @@ class AudienceCompositionAttributeCluster(proto.Message):
         cluster_metrics: AudienceCompositionMetrics = ...,
         attributes: MutableSequence[AudienceCompositionAttribute] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["cluster_display_name", "cluster_metrics", "attributes"]) -> bool: ...  # type: ignore[override]
 
 class AudienceCompositionMetrics(proto.Message):
     baseline_audience_share: float
@@ -61,6 +64,7 @@ class AudienceCompositionMetrics(proto.Message):
         index: float = ...,
         score: float = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["baseline_audience_share", "audience_share", "index", "score"]) -> bool: ...  # type: ignore[override]
 
 class AudienceCompositionSection(proto.Message):
     dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension
@@ -77,6 +81,7 @@ class AudienceCompositionSection(proto.Message):
             AudienceCompositionAttributeCluster
         ] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["dimension", "top_attributes", "clustered_attributes"]) -> bool: ...  # type: ignore[override]
 
 class AudienceInsightsAttribute(proto.Message):
     age_range: AgeRangeInfo
@@ -105,6 +110,7 @@ class AudienceInsightsAttribute(proto.Message):
         income_range: IncomeRangeInfo = ...,
         youtube_channel: YouTubeChannelInfo = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["age_range", "gender", "location", "user_interest", "entity", "category", "dynamic_lineup", "parental_status", "income_range", "youtube_channel"]) -> bool: ...  # type: ignore[override]
 
 class AudienceInsightsAttributeMetadata(proto.Message):
     dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension
@@ -129,6 +135,7 @@ class AudienceInsightsAttributeMetadata(proto.Message):
         dynamic_attribute_metadata: DynamicLineupAttributeMetadata = ...,
         location_attribute_metadata: LocationAttributeMetadata = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["dimension", "attribute", "display_name", "score", "display_info", "youtube_channel_metadata", "dynamic_attribute_metadata", "location_attribute_metadata"]) -> bool: ...  # type: ignore[override]
 
 class AudienceInsightsCategory(proto.Message):
     category_id: str
@@ -139,6 +146,7 @@ class AudienceInsightsCategory(proto.Message):
         ignore_unknown_fields: bool = False,
         category_id: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["category_id"]) -> bool: ...  # type: ignore[override]
 
 class AudienceInsightsDynamicLineup(proto.Message):
     dynamic_lineup_id: str
@@ -149,6 +157,7 @@ class AudienceInsightsDynamicLineup(proto.Message):
         ignore_unknown_fields: bool = False,
         dynamic_lineup_id: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["dynamic_lineup_id"]) -> bool: ...  # type: ignore[override]
 
 class AudienceInsightsEntity(proto.Message):
     knowledge_graph_machine_id: str
@@ -159,6 +168,7 @@ class AudienceInsightsEntity(proto.Message):
         ignore_unknown_fields: bool = False,
         knowledge_graph_machine_id: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["knowledge_graph_machine_id"]) -> bool: ...  # type: ignore[override]
 
 class AudienceInsightsTopic(proto.Message):
     entity: AudienceInsightsEntity
@@ -171,6 +181,7 @@ class AudienceInsightsTopic(proto.Message):
         entity: AudienceInsightsEntity = ...,
         category: AudienceInsightsCategory = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["entity", "category"]) -> bool: ...  # type: ignore[override]
 
 class BasicInsightsAudience(proto.Message):
     country_location: MutableSequence[LocationInfo]
@@ -191,6 +202,7 @@ class BasicInsightsAudience(proto.Message):
         user_interests: MutableSequence[UserInterestInfo] = ...,
         topics: MutableSequence[AudienceInsightsTopic] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["country_location", "sub_country_locations", "gender", "age_ranges", "user_interests", "topics"]) -> bool: ...  # type: ignore[override]
 
 class DynamicLineupAttributeMetadata(proto.Message):
     inventory_country: LocationInfo
@@ -207,6 +219,7 @@ class DynamicLineupAttributeMetadata(proto.Message):
         channel_count_lower_bound: int = ...,
         channel_count_upper_bound: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["inventory_country", "median_monthly_inventory", "channel_count_lower_bound", "channel_count_upper_bound"]) -> bool: ...  # type: ignore[override]
 
 class GenerateAudienceCompositionInsightsRequest(proto.Message):
     customer_id: str
@@ -229,6 +242,7 @@ class GenerateAudienceCompositionInsightsRequest(proto.Message):
         ] = ...,
         customer_insights_group: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "audience", "baseline_audience", "data_month", "dimensions", "customer_insights_group"]) -> bool: ...  # type: ignore[override]
 
 class GenerateAudienceCompositionInsightsResponse(proto.Message):
     sections: MutableSequence[AudienceCompositionSection]
@@ -239,6 +253,7 @@ class GenerateAudienceCompositionInsightsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         sections: MutableSequence[AudienceCompositionSection] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["sections"]) -> bool: ...  # type: ignore[override]
 
 class GenerateInsightsFinderReportRequest(proto.Message):
     customer_id: str
@@ -255,6 +270,7 @@ class GenerateInsightsFinderReportRequest(proto.Message):
         specific_audience: BasicInsightsAudience = ...,
         customer_insights_group: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "baseline_audience", "specific_audience", "customer_insights_group"]) -> bool: ...  # type: ignore[override]
 
 class GenerateInsightsFinderReportResponse(proto.Message):
     saved_report_url: str
@@ -265,6 +281,7 @@ class GenerateInsightsFinderReportResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         saved_report_url: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["saved_report_url"]) -> bool: ...  # type: ignore[override]
 
 class InsightsAudience(proto.Message):
     country_locations: MutableSequence[LocationInfo]
@@ -291,6 +308,7 @@ class InsightsAudience(proto.Message):
             InsightsAudienceAttributeGroup
         ] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["country_locations", "sub_country_locations", "gender", "age_ranges", "parental_status", "income_ranges", "dynamic_lineups", "topic_audience_combinations"]) -> bool: ...  # type: ignore[override]
 
 class InsightsAudienceAttributeGroup(proto.Message):
     attributes: MutableSequence[AudienceInsightsAttribute]
@@ -301,6 +319,7 @@ class InsightsAudienceAttributeGroup(proto.Message):
         ignore_unknown_fields: bool = False,
         attributes: MutableSequence[AudienceInsightsAttribute] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["attributes"]) -> bool: ...  # type: ignore[override]
 
 class ListAudienceInsightsAttributesRequest(proto.Message):
     customer_id: str
@@ -321,6 +340,7 @@ class ListAudienceInsightsAttributesRequest(proto.Message):
         customer_insights_group: str = ...,
         location_country_filters: MutableSequence[LocationInfo] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "dimensions", "query_text", "customer_insights_group", "location_country_filters"]) -> bool: ...  # type: ignore[override]
 
 class ListAudienceInsightsAttributesResponse(proto.Message):
     attributes: MutableSequence[AudienceInsightsAttributeMetadata]
@@ -331,6 +351,7 @@ class ListAudienceInsightsAttributesResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         attributes: MutableSequence[AudienceInsightsAttributeMetadata] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["attributes"]) -> bool: ...  # type: ignore[override]
 
 class ListInsightsEligibleDatesRequest(proto.Message):
     def __init__(
@@ -339,6 +360,7 @@ class ListInsightsEligibleDatesRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class ListInsightsEligibleDatesResponse(proto.Message):
     data_months: MutableSequence[str]
@@ -351,6 +373,7 @@ class ListInsightsEligibleDatesResponse(proto.Message):
         data_months: MutableSequence[str] = ...,
         last_thirty_days: DateRange = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["data_months", "last_thirty_days"]) -> bool: ...  # type: ignore[override]
 
 class LocationAttributeMetadata(proto.Message):
     country_location: LocationInfo
@@ -361,6 +384,7 @@ class LocationAttributeMetadata(proto.Message):
         ignore_unknown_fields: bool = False,
         country_location: LocationInfo = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["country_location"]) -> bool: ...  # type: ignore[override]
 
 class YouTubeChannelAttributeMetadata(proto.Message):
     subscriber_count: int
@@ -371,3 +395,4 @@ class YouTubeChannelAttributeMetadata(proto.Message):
         ignore_unknown_fields: bool = False,
         subscriber_count: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["subscriber_count"]) -> bool: ...  # type: ignore[override]

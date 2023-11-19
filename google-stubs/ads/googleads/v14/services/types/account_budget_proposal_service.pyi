@@ -1,9 +1,10 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.resources.types.account_budget_proposal import (
     AccountBudgetProposal,
@@ -24,6 +25,7 @@ class AccountBudgetProposalOperation(proto.Message):
         create: AccountBudgetProposal = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["update_mask", "create", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateAccountBudgetProposalRequest(proto.Message):
     customer_id: str
@@ -38,6 +40,7 @@ class MutateAccountBudgetProposalRequest(proto.Message):
         operation: AccountBudgetProposalOperation = ...,
         validate_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
 
 class MutateAccountBudgetProposalResponse(proto.Message):
     result: MutateAccountBudgetProposalResult
@@ -48,6 +51,7 @@ class MutateAccountBudgetProposalResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateAccountBudgetProposalResult = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
 
 class MutateAccountBudgetProposalResult(proto.Message):
     resource_name: str
@@ -58,3 +62,4 @@ class MutateAccountBudgetProposalResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.offline_user_data import (
     CustomerMatchUserListMetadata,
@@ -48,6 +49,7 @@ class OfflineUserDataJob(proto.Message):
         customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...,
         store_sales_metadata: StoreSalesMetadata = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "external_id", "type_", "status", "failure_reason", "operation_metadata", "customer_match_user_list_metadata", "store_sales_metadata"]) -> bool: ...  # type: ignore[override]
 
 class OfflineUserDataJobMetadata(proto.Message):
     match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange
@@ -58,3 +60,4 @@ class OfflineUserDataJobMetadata(proto.Message):
         ignore_unknown_fields: bool = False,
         match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["match_rate_range"]) -> bool: ...  # type: ignore[override]

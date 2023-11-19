@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.policy_summary import PolicySummary
 from google.ads.googleads.v13.enums.types.asset_field_type import AssetFieldTypeEnum
@@ -34,3 +35,4 @@ class AssetGroupAsset(proto.Message):
         performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
         policy_summary: PolicySummary = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "asset_group", "asset", "field_type", "status", "performance_label", "policy_summary"]) -> bool: ...  # type: ignore[override]

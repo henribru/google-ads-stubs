@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.criteria import (
     ContentLabelInfo,
@@ -44,3 +45,4 @@ class CustomerNegativeCriterion(proto.Message):
         youtube_channel: YouTubeChannelInfo = ...,
         negative_keyword_list: NegativeKeywordListInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "type_", "content_label", "mobile_application", "mobile_app_category", "placement", "youtube_video", "youtube_channel", "negative_keyword_list"]) -> bool: ...  # type: ignore[override]

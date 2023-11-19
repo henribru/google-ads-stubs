@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.custom_interest_member_type import (
     CustomInterestMemberTypeEnum,
@@ -37,6 +38,7 @@ class CustomInterest(proto.Message):
         description: str = ...,
         members: MutableSequence[CustomInterestMember] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "status", "name", "type_", "description", "members"]) -> bool: ...  # type: ignore[override]
 
 class CustomInterestMember(proto.Message):
     member_type: CustomInterestMemberTypeEnum.CustomInterestMemberType
@@ -49,3 +51,4 @@ class CustomInterestMember(proto.Message):
         member_type: CustomInterestMemberTypeEnum.CustomInterestMemberType = ...,
         parameter: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["member_type", "parameter"]) -> bool: ...  # type: ignore[override]

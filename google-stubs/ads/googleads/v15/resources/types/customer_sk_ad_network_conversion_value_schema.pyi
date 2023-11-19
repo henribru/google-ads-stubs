@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -25,6 +26,7 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                     CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event
                 ] = ...
             ) -> None: ...
+            def __contains__(self, key: Literal["min_time_post_install_hours", "max_time_post_install_hours", "mapped_events"]) -> bool: ...  # type: ignore[override]
 
         class Event(proto.Message):
             class EventOccurrenceRange(proto.Message):
@@ -41,6 +43,7 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                     min_event_count: int = ...,
                     max_event_count: int = ...
                 ) -> None: ...
+                def __contains__(self, key: Literal["min_event_count", "max_event_count"]) -> bool: ...  # type: ignore[override]
 
             class RevenueRange(proto.Message):
                 min_event_revenue: float
@@ -56,6 +59,7 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                     min_event_revenue: float = ...,
                     max_event_revenue: float = ...
                 ) -> None: ...
+                def __contains__(self, key: Literal["min_event_revenue", "max_event_revenue"]) -> bool: ...  # type: ignore[override]
             mapped_event_name: str
             currency_code: str
             event_revenue_range: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.RevenueRange
@@ -74,6 +78,7 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                 event_occurrence_range: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.EventOccurrenceRange = ...,
                 event_counter: int = ...
             ) -> None: ...
+            def __contains__(self, key: Literal["mapped_event_name", "currency_code", "event_revenue_range", "event_revenue_value", "event_occurrence_range", "event_counter"]) -> bool: ...  # type: ignore[override]
 
         class FineGrainedConversionValueMappings(proto.Message):
             fine_grained_conversion_value: int
@@ -86,6 +91,7 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                 fine_grained_conversion_value: int = ...,
                 conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping = ...
             ) -> None: ...
+            def __contains__(self, key: Literal["fine_grained_conversion_value", "conversion_value_mapping"]) -> bool: ...  # type: ignore[override]
         app_id: str
         measurement_window_hours: int
         fine_grained_conversion_value_mappings: MutableSequence[
@@ -102,6 +108,7 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                 CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.FineGrainedConversionValueMappings
             ] = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["app_id", "measurement_window_hours", "fine_grained_conversion_value_mappings"]) -> bool: ...  # type: ignore[override]
     resource_name: str
     schema: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema
     def __init__(
@@ -112,3 +119,4 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
         resource_name: str = ...,
         schema: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "schema"]) -> bool: ...  # type: ignore[override]

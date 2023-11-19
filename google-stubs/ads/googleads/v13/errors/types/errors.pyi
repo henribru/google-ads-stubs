@@ -1,9 +1,10 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.duration_pb2 import Duration
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.policy import (
     PolicyTopicEntry,
@@ -632,6 +633,7 @@ class ErrorCode(proto.Message):
         customer_sk_ad_network_conversion_value_schema_error: CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError = ...,
         currency_error: CurrencyErrorEnum.CurrencyError = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["request_error", "bidding_strategy_error", "url_field_error", "list_operation_error", "query_error", "mutate_error", "field_mask_error", "authorization_error", "internal_error", "quota_error", "ad_error", "ad_group_error", "campaign_budget_error", "campaign_error", "authentication_error", "ad_group_criterion_customizer_error", "ad_group_criterion_error", "ad_group_customizer_error", "ad_customizer_error", "ad_group_ad_error", "ad_sharing_error", "adx_error", "asset_error", "asset_group_asset_error", "asset_group_listing_group_filter_error", "asset_group_error", "asset_set_asset_error", "asset_set_link_error", "asset_set_error", "bidding_error", "campaign_criterion_error", "campaign_conversion_goal_error", "campaign_customizer_error", "collection_size_error", "conversion_goal_campaign_config_error", "country_code_error", "criterion_error", "custom_conversion_goal_error", "customer_customizer_error", "customer_error", "customizer_attribute_error", "date_error", "date_range_error", "distinct_error", "feed_attribute_reference_error", "function_error", "function_parsing_error", "id_error", "image_error", "language_code_error", "media_bundle_error", "media_upload_error", "media_file_error", "merchant_center_error", "multiplier_error", "new_resource_creation_error", "not_empty_error", "null_error", "operator_error", "range_error", "recommendation_error", "region_code_error", "setting_error", "string_format_error", "string_length_error", "operation_access_denied_error", "resource_access_denied_error", "resource_count_limit_exceeded_error", "youtube_video_registration_error", "ad_group_bid_modifier_error", "context_error", "field_error", "shared_set_error", "shared_criterion_error", "campaign_shared_set_error", "conversion_action_error", "conversion_adjustment_upload_error", "conversion_custom_variable_error", "conversion_upload_error", "conversion_value_rule_error", "conversion_value_rule_set_error", "header_error", "database_error", "policy_finding_error", "enum_error", "keyword_plan_error", "keyword_plan_campaign_error", "keyword_plan_campaign_keyword_error", "keyword_plan_ad_group_error", "keyword_plan_ad_group_keyword_error", "keyword_plan_idea_error", "account_budget_proposal_error", "user_list_error", "change_event_error", "change_status_error", "feed_error", "geo_target_constant_suggestion_error", "campaign_draft_error", "feed_item_error", "label_error", "billing_setup_error", "customer_client_link_error", "customer_manager_link_error", "feed_mapping_error", "customer_feed_error", "ad_group_feed_error", "campaign_feed_error", "custom_interest_error", "campaign_experiment_error", "extension_feed_item_error", "ad_parameter_error", "feed_item_validation_error", "extension_setting_error", "feed_item_set_error", "feed_item_set_link_error", "feed_item_target_error", "policy_violation_error", "partial_failure_error", "policy_validation_parameter_error", "size_limit_error", "offline_user_data_job_error", "not_allowlisted_error", "manager_link_error", "currency_code_error", "experiment_error", "access_invitation_error", "reach_plan_error", "invoice_error", "payments_account_error", "time_zone_error", "asset_link_error", "user_data_error", "batch_job_error", "account_link_error", "third_party_app_analytics_link_error", "customer_user_access_error", "custom_audience_error", "audience_error", "smart_campaign_error", "experiment_arm_error", "audience_insights_error", "customer_sk_ad_network_conversion_value_schema_error", "currency_error"]) -> bool: ...  # type: ignore[override]
 
 class ErrorDetails(proto.Message):
     unpublished_error_code: str
@@ -650,6 +652,7 @@ class ErrorDetails(proto.Message):
         quota_error_details: QuotaErrorDetails = ...,
         resource_count_details: ResourceCountDetails = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["unpublished_error_code", "policy_violation_details", "policy_finding_details", "quota_error_details", "resource_count_details"]) -> bool: ...  # type: ignore[override]
 
 class ErrorLocation(proto.Message):
     class FieldPathElement(proto.Message):
@@ -663,6 +666,7 @@ class ErrorLocation(proto.Message):
             field_name: str = ...,
             index: int = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["field_name", "index"]) -> bool: ...  # type: ignore[override]
     field_path_elements: MutableSequence[ErrorLocation.FieldPathElement]
     def __init__(
         self: _M,
@@ -671,6 +675,7 @@ class ErrorLocation(proto.Message):
         ignore_unknown_fields: bool = False,
         field_path_elements: MutableSequence[ErrorLocation.FieldPathElement] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["field_path_elements"]) -> bool: ...  # type: ignore[override]
 
 class GoogleAdsError(proto.Message):
     error_code: ErrorCode
@@ -689,6 +694,7 @@ class GoogleAdsError(proto.Message):
         location: ErrorLocation = ...,
         details: ErrorDetails = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["error_code", "message", "trigger", "location", "details"]) -> bool: ...  # type: ignore[override]
 
 class GoogleAdsFailure(proto.Message):
     errors: MutableSequence[GoogleAdsError]
@@ -701,6 +707,7 @@ class GoogleAdsFailure(proto.Message):
         errors: MutableSequence[GoogleAdsError] = ...,
         request_id: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["errors", "request_id"]) -> bool: ...  # type: ignore[override]
 
 class PolicyFindingDetails(proto.Message):
     policy_topic_entries: MutableSequence[PolicyTopicEntry]
@@ -711,6 +718,7 @@ class PolicyFindingDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["policy_topic_entries"]) -> bool: ...  # type: ignore[override]
 
 class PolicyViolationDetails(proto.Message):
     external_policy_description: str
@@ -727,6 +735,7 @@ class PolicyViolationDetails(proto.Message):
         external_policy_name: str = ...,
         is_exemptible: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["external_policy_description", "key", "external_policy_name", "is_exemptible"]) -> bool: ...  # type: ignore[override]
 
 class QuotaErrorDetails(proto.Message):
     class QuotaRateScope(proto.Enum):
@@ -746,6 +755,7 @@ class QuotaErrorDetails(proto.Message):
         rate_name: str = ...,
         retry_delay: Duration = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["rate_scope", "rate_name", "retry_delay"]) -> bool: ...  # type: ignore[override]
 
 class ResourceCountDetails(proto.Message):
     enclosing_id: str
@@ -764,3 +774,4 @@ class ResourceCountDetails(proto.Message):
         limit_type: ResourceLimitTypeEnum.ResourceLimitType = ...,
         existing_count: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["enclosing_id", "enclosing_resource", "limit", "limit_type", "existing_count"]) -> bool: ...  # type: ignore[override]

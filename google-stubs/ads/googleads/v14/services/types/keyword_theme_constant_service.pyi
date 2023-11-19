@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.resources.types.keyword_theme_constant import (
     KeywordThemeConstant,
@@ -23,6 +24,7 @@ class SuggestKeywordThemeConstantsRequest(proto.Message):
         country_code: str = ...,
         language_code: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["query_text", "country_code", "language_code"]) -> bool: ...  # type: ignore[override]
 
 class SuggestKeywordThemeConstantsResponse(proto.Message):
     keyword_theme_constants: MutableSequence[KeywordThemeConstant]
@@ -33,3 +35,4 @@ class SuggestKeywordThemeConstantsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         keyword_theme_constants: MutableSequence[KeywordThemeConstant] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["keyword_theme_constants"]) -> bool: ...  # type: ignore[override]

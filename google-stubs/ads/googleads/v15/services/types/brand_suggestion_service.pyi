@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.brand_state import BrandStateEnum
 
@@ -23,6 +24,7 @@ class BrandSuggestion(proto.Message):
         urls: MutableSequence[str] = ...,
         state: BrandStateEnum.BrandState = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["id", "name", "urls", "state"]) -> bool: ...  # type: ignore[override]
 
 class SuggestBrandsRequest(proto.Message):
     customer_id: str
@@ -37,6 +39,7 @@ class SuggestBrandsRequest(proto.Message):
         brand_prefix: str = ...,
         selected_brands: MutableSequence[str] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "brand_prefix", "selected_brands"]) -> bool: ...  # type: ignore[override]
 
 class SuggestBrandsResponse(proto.Message):
     brands: MutableSequence[BrandSuggestion]
@@ -47,3 +50,4 @@ class SuggestBrandsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         brands: MutableSequence[BrandSuggestion] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["brands"]) -> bool: ...  # type: ignore[override]

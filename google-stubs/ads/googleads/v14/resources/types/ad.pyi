@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.ad_type_infos import (
     AppAdInfo,
@@ -129,3 +130,4 @@ class Ad(proto.Message):
         discovery_video_responsive_ad: DiscoveryVideoResponsiveAdInfo = ...,
         travel_ad: TravelAdInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "final_urls", "final_app_urls", "final_mobile_urls", "tracking_url_template", "final_url_suffix", "url_custom_parameters", "display_url", "type_", "added_by_google_ads", "device_preference", "url_collections", "name", "system_managed_resource_source", "text_ad", "expanded_text_ad", "call_ad", "expanded_dynamic_search_ad", "hotel_ad", "shopping_smart_ad", "shopping_product_ad", "image_ad", "video_ad", "video_responsive_ad", "responsive_search_ad", "legacy_responsive_display_ad", "app_ad", "legacy_app_install_ad", "responsive_display_ad", "local_ad", "display_upload_ad", "app_engagement_ad", "shopping_comparison_listing_ad", "smart_campaign_ad", "app_pre_registration_ad", "discovery_multi_asset_ad", "discovery_carousel_ad", "discovery_video_responsive_ad", "travel_ad"]) -> bool: ...  # type: ignore[override]

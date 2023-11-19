@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.local_services import (
     LocalServicesDocumentReadOnly,
@@ -33,6 +34,7 @@ class BackgroundCheckVerificationArtifact(proto.Message):
         case_url: str = ...,
         final_adjudication_date_time: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["case_url", "final_adjudication_date_time"]) -> bool: ...  # type: ignore[override]
 
 class InsuranceVerificationArtifact(proto.Message):
     amount_micros: int
@@ -47,6 +49,7 @@ class InsuranceVerificationArtifact(proto.Message):
         rejection_reason: LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason = ...,
         insurance_document_readonly: LocalServicesDocumentReadOnly = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["amount_micros", "rejection_reason", "insurance_document_readonly"]) -> bool: ...  # type: ignore[override]
 
 class LicenseVerificationArtifact(proto.Message):
     license_type: str
@@ -67,6 +70,7 @@ class LicenseVerificationArtifact(proto.Message):
         rejection_reason: LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason = ...,
         license_document_readonly: LocalServicesDocumentReadOnly = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["license_type", "license_number", "licensee_first_name", "licensee_last_name", "rejection_reason", "license_document_readonly"]) -> bool: ...  # type: ignore[override]
 
 class LocalServicesVerificationArtifact(proto.Message):
     resource_name: str
@@ -91,3 +95,4 @@ class LocalServicesVerificationArtifact(proto.Message):
         insurance_verification_artifact: InsuranceVerificationArtifact = ...,
         license_verification_artifact: LicenseVerificationArtifact = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "creation_date_time", "status", "artifact_type", "background_check_verification_artifact", "insurance_verification_artifact", "license_verification_artifact"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.campaign_draft_status import (
     CampaignDraftStatusEnum,
@@ -33,3 +34,4 @@ class CampaignDraft(proto.Message):
         has_experiment_running: bool = ...,
         long_running_operation: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "draft_id", "base_campaign", "name", "draft_campaign", "status", "has_experiment_running", "long_running_operation"]) -> bool: ...  # type: ignore[override]

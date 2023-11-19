@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.advertising_channel_type import (
     AdvertisingChannelTypeEnum,
@@ -50,3 +51,4 @@ class BiddingDataExclusion(proto.Message):
             AdvertisingChannelTypeEnum.AdvertisingChannelType
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "data_exclusion_id", "scope", "status", "start_date_time", "end_date_time", "name", "description", "devices", "campaigns", "advertising_channel_types"]) -> bool: ...  # type: ignore[override]

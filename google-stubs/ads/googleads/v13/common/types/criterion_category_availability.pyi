@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.advertising_channel_sub_type import (
     AdvertisingChannelSubTypeEnum,
@@ -30,6 +31,7 @@ class CriterionCategoryAvailability(proto.Message):
         channel: CriterionCategoryChannelAvailability = ...,
         locale: MutableSequence[CriterionCategoryLocaleAvailability] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["channel", "locale"]) -> bool: ...  # type: ignore[override]
 
 class CriterionCategoryChannelAvailability(proto.Message):
     availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
@@ -50,6 +52,7 @@ class CriterionCategoryChannelAvailability(proto.Message):
         ] = ...,
         include_default_channel_sub_type: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["availability_mode", "advertising_channel_type", "advertising_channel_sub_type", "include_default_channel_sub_type"]) -> bool: ...  # type: ignore[override]
 
 class CriterionCategoryLocaleAvailability(proto.Message):
     availability_mode: CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
@@ -64,3 +67,4 @@ class CriterionCategoryLocaleAvailability(proto.Message):
         country_code: str = ...,
         language_code: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["availability_mode", "country_code", "language_code"]) -> bool: ...  # type: ignore[override]

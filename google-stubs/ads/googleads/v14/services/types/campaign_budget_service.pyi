@@ -1,10 +1,11 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.response_content_type import (
     ResponseContentTypeEnum,
@@ -28,6 +29,7 @@ class CampaignBudgetOperation(proto.Message):
         update: CampaignBudget = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignBudgetResult(proto.Message):
     resource_name: str
@@ -40,6 +42,7 @@ class MutateCampaignBudgetResult(proto.Message):
         resource_name: str = ...,
         campaign_budget: CampaignBudget = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "campaign_budget"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignBudgetsRequest(proto.Message):
     customer_id: str
@@ -58,6 +61,7 @@ class MutateCampaignBudgetsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignBudgetsResponse(proto.Message):
     partial_failure_error: Status
@@ -70,3 +74,4 @@ class MutateCampaignBudgetsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCampaignBudgetResult] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

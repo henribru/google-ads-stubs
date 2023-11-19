@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.customizer_attribute_status import (
     CustomizerAttributeStatusEnum,
@@ -30,3 +31,4 @@ class CustomizerAttribute(proto.Message):
         type_: CustomizerAttributeTypeEnum.CustomizerAttributeType = ...,
         status: CustomizerAttributeStatusEnum.CustomizerAttributeStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "type_", "status"]) -> bool: ...  # type: ignore[override]

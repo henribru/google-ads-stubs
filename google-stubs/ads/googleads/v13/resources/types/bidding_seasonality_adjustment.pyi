@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.advertising_channel_type import (
     AdvertisingChannelTypeEnum,
@@ -52,3 +53,4 @@ class BiddingSeasonalityAdjustment(proto.Message):
             AdvertisingChannelTypeEnum.AdvertisingChannelType
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "seasonality_adjustment_id", "scope", "status", "start_date_time", "end_date_time", "name", "description", "devices", "conversion_rate_modifier", "campaigns", "advertising_channel_types"]) -> bool: ...  # type: ignore[override]

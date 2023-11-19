@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.budget_delivery_method import (
     BudgetDeliveryMethodEnum,
@@ -56,3 +57,4 @@ class CampaignBudget(proto.Message):
         type_: BudgetTypeEnum.BudgetType = ...,
         aligned_bidding_strategy_id: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "amount_micros", "total_amount_micros", "status", "delivery_method", "explicitly_shared", "reference_count", "has_recommended_budget", "recommended_budget_amount_micros", "period", "recommended_budget_estimated_change_weekly_clicks", "recommended_budget_estimated_change_weekly_cost_micros", "recommended_budget_estimated_change_weekly_interactions", "recommended_budget_estimated_change_weekly_views", "type_", "aligned_bidding_strategy_id"]) -> bool: ...  # type: ignore[override]

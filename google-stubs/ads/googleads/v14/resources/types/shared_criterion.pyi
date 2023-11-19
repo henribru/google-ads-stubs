@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.criteria import (
     KeywordInfo,
@@ -43,3 +44,4 @@ class SharedCriterion(proto.Message):
         mobile_app_category: MobileAppCategoryInfo = ...,
         mobile_application: MobileApplicationInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "shared_set", "criterion_id", "type_", "keyword", "youtube_video", "youtube_channel", "placement", "mobile_app_category", "mobile_application"]) -> bool: ...  # type: ignore[override]

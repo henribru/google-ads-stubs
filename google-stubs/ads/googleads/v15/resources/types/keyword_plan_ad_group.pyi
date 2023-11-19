@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -23,3 +24,4 @@ class KeywordPlanAdGroup(proto.Message):
         name: str = ...,
         cpc_bid_micros: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "keyword_plan_campaign", "id", "name", "cpc_bid_micros"]) -> bool: ...  # type: ignore[override]

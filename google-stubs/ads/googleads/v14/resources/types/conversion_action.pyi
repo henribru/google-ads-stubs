@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.tag_snippet import TagSnippet
 from google.ads.googleads.v14.enums.types.attribution_model import AttributionModelEnum
@@ -38,6 +39,7 @@ class ConversionAction(proto.Message):
             attribution_model: AttributionModelEnum.AttributionModel = ...,
             data_driven_model_status: DataDrivenModelStatusEnum.DataDrivenModelStatus = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["attribution_model", "data_driven_model_status"]) -> bool: ...  # type: ignore[override]
 
     class FirebaseSettings(proto.Message):
         event_name: str
@@ -54,6 +56,7 @@ class ConversionAction(proto.Message):
             property_id: int = ...,
             property_name: str = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["event_name", "project_id", "property_id", "property_name"]) -> bool: ...  # type: ignore[override]
 
     class GoogleAnalytics4Settings(proto.Message):
         event_name: str
@@ -68,6 +71,7 @@ class ConversionAction(proto.Message):
             property_name: str = ...,
             property_id: int = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["event_name", "property_name", "property_id"]) -> bool: ...  # type: ignore[override]
 
     class ThirdPartyAppAnalyticsSettings(proto.Message):
         event_name: str
@@ -80,6 +84,7 @@ class ConversionAction(proto.Message):
             event_name: str = ...,
             provider_name: str = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["event_name", "provider_name"]) -> bool: ...  # type: ignore[override]
 
     class ValueSettings(proto.Message):
         default_value: float
@@ -94,6 +99,7 @@ class ConversionAction(proto.Message):
             default_currency_code: str = ...,
             always_use_default_value: bool = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["default_value", "default_currency_code", "always_use_default_value"]) -> bool: ...  # type: ignore[override]
     resource_name: str
     id: int
     name: str
@@ -144,3 +150,4 @@ class ConversionAction(proto.Message):
         third_party_app_analytics_settings: ConversionAction.ThirdPartyAppAnalyticsSettings = ...,
         google_analytics_4_settings: ConversionAction.GoogleAnalytics4Settings = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "status", "type_", "origin", "primary_for_goal", "category", "owner_customer", "include_in_conversions_metric", "click_through_lookback_window_days", "view_through_lookback_window_days", "value_settings", "counting_type", "attribution_model_settings", "tag_snippets", "phone_call_duration_seconds", "app_id", "mobile_app_vendor", "firebase_settings", "third_party_app_analytics_settings", "google_analytics_4_settings"]) -> bool: ...  # type: ignore[override]

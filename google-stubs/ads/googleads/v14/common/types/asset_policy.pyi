@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.policy import PolicyTopicEntry
 from google.ads.googleads.v14.enums.types.asset_link_primary_status import (
@@ -36,6 +37,7 @@ class AdAssetPolicySummary(proto.Message):
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]
 
 class AssetDisapproved(proto.Message):
     offline_evaluation_error_reasons: MutableSequence[
@@ -50,6 +52,7 @@ class AssetDisapproved(proto.Message):
             AssetOfflineEvaluationErrorReasonsEnum.AssetOfflineEvaluationErrorReasons
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["offline_evaluation_error_reasons"]) -> bool: ...  # type: ignore[override]
 
 class AssetLinkPrimaryStatusDetails(proto.Message):
     reason: AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason
@@ -64,3 +67,4 @@ class AssetLinkPrimaryStatusDetails(proto.Message):
         status: AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus = ...,
         asset_disapproved: AssetDisapproved = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["reason", "status", "asset_disapproved"]) -> bool: ...  # type: ignore[override]

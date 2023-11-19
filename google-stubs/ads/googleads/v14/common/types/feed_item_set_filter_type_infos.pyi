@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.feed_item_set_string_filter_type import (
     FeedItemSetStringFilterTypeEnum,
@@ -21,6 +22,7 @@ class BusinessNameFilter(proto.Message):
         business_name: str = ...,
         filter_type: FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["business_name", "filter_type"]) -> bool: ...  # type: ignore[override]
 
 class DynamicAffiliateLocationSetFilter(proto.Message):
     chain_ids: MutableSequence[int]
@@ -31,6 +33,7 @@ class DynamicAffiliateLocationSetFilter(proto.Message):
         ignore_unknown_fields: bool = False,
         chain_ids: MutableSequence[int] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["chain_ids"]) -> bool: ...  # type: ignore[override]
 
 class DynamicLocationSetFilter(proto.Message):
     labels: MutableSequence[str]
@@ -43,3 +46,4 @@ class DynamicLocationSetFilter(proto.Message):
         labels: MutableSequence[str] = ...,
         business_name_filter: BusinessNameFilter = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["labels", "business_name_filter"]) -> bool: ...  # type: ignore[override]

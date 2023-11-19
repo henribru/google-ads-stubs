@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -27,3 +28,4 @@ class ExperimentArm(proto.Message):
         campaigns: MutableSequence[str] = ...,
         in_design_campaigns: MutableSequence[str] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "experiment", "name", "control", "traffic_split", "campaigns", "in_design_campaigns"]) -> bool: ...  # type: ignore[override]

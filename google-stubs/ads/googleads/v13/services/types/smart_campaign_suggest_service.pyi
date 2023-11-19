@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.ad_type_infos import SmartCampaignAdInfo
 from google.ads.googleads.v13.common.types.criteria import (
@@ -27,6 +28,7 @@ class SmartCampaignSuggestionInfo(proto.Message):
             ignore_unknown_fields: bool = False,
             business_name: str = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["business_name"]) -> bool: ...  # type: ignore[override]
 
     class LocationList(proto.Message):
         locations: MutableSequence[LocationInfo]
@@ -37,6 +39,7 @@ class SmartCampaignSuggestionInfo(proto.Message):
             ignore_unknown_fields: bool = False,
             locations: MutableSequence[LocationInfo] = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["locations"]) -> bool: ...  # type: ignore[override]
     final_url: str
     language_code: str
     ad_schedules: MutableSequence[AdScheduleInfo]
@@ -59,6 +62,7 @@ class SmartCampaignSuggestionInfo(proto.Message):
         location_list: SmartCampaignSuggestionInfo.LocationList = ...,
         proximity: ProximityInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["final_url", "language_code", "ad_schedules", "keyword_themes", "business_context", "business_profile_location", "location_list", "proximity"]) -> bool: ...  # type: ignore[override]
 
 class SuggestKeywordThemesRequest(proto.Message):
     customer_id: str
@@ -71,6 +75,7 @@ class SuggestKeywordThemesRequest(proto.Message):
         customer_id: str = ...,
         suggestion_info: SmartCampaignSuggestionInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "suggestion_info"]) -> bool: ...  # type: ignore[override]
 
 class SuggestKeywordThemesResponse(proto.Message):
     class KeywordTheme(proto.Message):
@@ -84,6 +89,7 @@ class SuggestKeywordThemesResponse(proto.Message):
             keyword_theme_constant: KeywordThemeConstant = ...,
             free_form_keyword_theme: str = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["keyword_theme_constant", "free_form_keyword_theme"]) -> bool: ...  # type: ignore[override]
     keyword_themes: MutableSequence[SuggestKeywordThemesResponse.KeywordTheme]
     def __init__(
         self: _M,
@@ -92,6 +98,7 @@ class SuggestKeywordThemesResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         keyword_themes: MutableSequence[SuggestKeywordThemesResponse.KeywordTheme] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["keyword_themes"]) -> bool: ...  # type: ignore[override]
 
 class SuggestSmartCampaignAdRequest(proto.Message):
     customer_id: str
@@ -104,6 +111,7 @@ class SuggestSmartCampaignAdRequest(proto.Message):
         customer_id: str = ...,
         suggestion_info: SmartCampaignSuggestionInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "suggestion_info"]) -> bool: ...  # type: ignore[override]
 
 class SuggestSmartCampaignAdResponse(proto.Message):
     ad_info: SmartCampaignAdInfo
@@ -114,6 +122,7 @@ class SuggestSmartCampaignAdResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         ad_info: SmartCampaignAdInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["ad_info"]) -> bool: ...  # type: ignore[override]
 
 class SuggestSmartCampaignBudgetOptionsRequest(proto.Message):
     customer_id: str
@@ -128,6 +137,7 @@ class SuggestSmartCampaignBudgetOptionsRequest(proto.Message):
         campaign: str = ...,
         suggestion_info: SmartCampaignSuggestionInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "campaign", "suggestion_info"]) -> bool: ...  # type: ignore[override]
 
 class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
     class BudgetOption(proto.Message):
@@ -141,6 +151,7 @@ class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
             daily_amount_micros: int = ...,
             metrics: SuggestSmartCampaignBudgetOptionsResponse.Metrics = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["daily_amount_micros", "metrics"]) -> bool: ...  # type: ignore[override]
 
     class Metrics(proto.Message):
         min_daily_clicks: int
@@ -153,6 +164,7 @@ class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
             min_daily_clicks: int = ...,
             max_daily_clicks: int = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["min_daily_clicks", "max_daily_clicks"]) -> bool: ...  # type: ignore[override]
     low: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption
     recommended: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption
     high: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption
@@ -165,3 +177,4 @@ class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
         recommended: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption = ...,
         high: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["low", "recommended", "high"]) -> bool: ...  # type: ignore[override]

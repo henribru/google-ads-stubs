@@ -1,10 +1,11 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.resources.types.keyword_plan_campaign_keyword import (
     KeywordPlanCampaignKeyword,
@@ -27,6 +28,7 @@ class KeywordPlanCampaignKeywordOperation(proto.Message):
         update: KeywordPlanCampaignKeyword = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateKeywordPlanCampaignKeywordResult(proto.Message):
     resource_name: str
@@ -37,6 +39,7 @@ class MutateKeywordPlanCampaignKeywordResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
 class MutateKeywordPlanCampaignKeywordsRequest(proto.Message):
     customer_id: str
@@ -53,6 +56,7 @@ class MutateKeywordPlanCampaignKeywordsRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
 
 class MutateKeywordPlanCampaignKeywordsResponse(proto.Message):
     partial_failure_error: Status
@@ -65,3 +69,4 @@ class MutateKeywordPlanCampaignKeywordsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateKeywordPlanCampaignKeywordResult] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

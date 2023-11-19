@@ -1,9 +1,10 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.resources.types.feed_item_set_link import FeedItemSetLink
 
@@ -20,6 +21,7 @@ class FeedItemSetLinkOperation(proto.Message):
         create: FeedItemSetLink = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateFeedItemSetLinkResult(proto.Message):
     resource_name: str
@@ -30,6 +32,7 @@ class MutateFeedItemSetLinkResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
 class MutateFeedItemSetLinksRequest(proto.Message):
     customer_id: str
@@ -46,6 +49,7 @@ class MutateFeedItemSetLinksRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
 
 class MutateFeedItemSetLinksResponse(proto.Message):
     results: MutableSequence[MutateFeedItemSetLinkResult]
@@ -58,3 +62,4 @@ class MutateFeedItemSetLinksResponse(proto.Message):
         results: MutableSequence[MutateFeedItemSetLinkResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.keyword_match_type import KeywordMatchTypeEnum
 
@@ -27,3 +28,4 @@ class KeywordPlanCampaignKeyword(proto.Message):
         match_type: KeywordMatchTypeEnum.KeywordMatchType = ...,
         negative: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "keyword_plan_campaign", "id", "text", "match_type", "negative"]) -> bool: ...  # type: ignore[override]

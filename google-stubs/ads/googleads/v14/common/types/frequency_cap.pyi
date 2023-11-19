@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.frequency_cap_event_type import (
     FrequencyCapEventTypeEnum,
@@ -27,6 +28,7 @@ class FrequencyCapEntry(proto.Message):
         key: FrequencyCapKey = ...,
         cap: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["key", "cap"]) -> bool: ...  # type: ignore[override]
 
 class FrequencyCapKey(proto.Message):
     level: FrequencyCapLevelEnum.FrequencyCapLevel
@@ -43,3 +45,4 @@ class FrequencyCapKey(proto.Message):
         time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit = ...,
         time_length: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["level", "event_type", "time_unit", "time_length"]) -> bool: ...  # type: ignore[override]

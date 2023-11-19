@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.asset_policy import AdAssetPolicySummary
 from google.ads.googleads.v13.enums.types.asset_performance_label import (
@@ -23,6 +24,7 @@ class AdDiscoveryCarouselCardAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
 
 class AdImageAsset(proto.Message):
     asset: str
@@ -33,6 +35,7 @@ class AdImageAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
 
 class AdMediaBundleAsset(proto.Message):
     asset: str
@@ -43,6 +46,7 @@ class AdMediaBundleAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
 
 class AdTextAsset(proto.Message):
     text: str
@@ -59,6 +63,7 @@ class AdTextAsset(proto.Message):
         asset_performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
         policy_summary_info: AdAssetPolicySummary = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["text", "pinned_field", "asset_performance_label", "policy_summary_info"]) -> bool: ...  # type: ignore[override]
 
 class AdVideoAsset(proto.Message):
     asset: str
@@ -69,3 +74,4 @@ class AdVideoAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
