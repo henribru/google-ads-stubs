@@ -62,7 +62,6 @@ class ListAccessibleCustomersRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class ListAccessibleCustomersResponse(proto.Message):
     resource_names: MutableSequence[str]

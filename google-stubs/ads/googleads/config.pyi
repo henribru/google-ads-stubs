@@ -41,31 +41,24 @@ class _InstalledAppConfigData(
     _ConfigDataParsedRequired,
     _ConfigDataParsedOptional,
     _InstalledAppConfigDataRequired,
-):
-    pass
-
+): ...
 class _InstalledAppConfigDataUnparsed(
     _ConfigDataUnparsedRequired,
     _ConfigDataUnparsedOptional,
     _InstalledAppConfigDataRequired,
-):
-    pass
-
+): ...
 class _ServiceAccountConfigData(
     _ConfigDataParsedRequired,
     _ConfigDataParsedOptional,
     _ServiceAccountConfigDataOptional,
     _ServiceAccountConfigDataRequired,
-):
-    pass
-
+): ...
 class _ServiceAccountConfigDataUnparsed(
     _ConfigDataUnparsedRequired,
     _ConfigDataUnparsedOptional,
     _ServiceAccountConfigDataOptional,
     _ServiceAccountConfigDataRequired,
-):
-    pass
+): ...
 
 _ConfigData = _InstalledAppConfigData | _ServiceAccountConfigData
 _ConfigDataUnparsed = (

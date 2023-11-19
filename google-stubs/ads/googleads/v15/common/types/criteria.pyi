@@ -803,7 +803,6 @@ class UnknownListingDimensionInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class UserInterestInfo(proto.Message):
     user_interest_category: str

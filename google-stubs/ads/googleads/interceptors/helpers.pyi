@@ -9,6 +9,6 @@ from google.ads.googleads.util import (
     set_nested_message_field as set_nested_message_field,
 )
 
-M = TypeVar("M", bound=Message)
+_M = TypeVar("_M", bound=Message)
 
-def mask_message(message: M, mask: str) -> M: ...
+def mask_message(message: _M, mask: str) -> _M: ...

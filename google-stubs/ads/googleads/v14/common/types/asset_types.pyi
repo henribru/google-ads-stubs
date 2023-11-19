@@ -54,7 +54,6 @@ class BookOnGoogleAsset(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class BusinessProfileLocation(proto.Message):
     labels: MutableSequence[str]

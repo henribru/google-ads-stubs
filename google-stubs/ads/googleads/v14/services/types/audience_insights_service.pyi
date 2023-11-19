@@ -356,7 +356,6 @@ class ListInsightsEligibleDatesRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class ListInsightsEligibleDatesResponse(proto.Message):
     data_months: MutableSequence[str]

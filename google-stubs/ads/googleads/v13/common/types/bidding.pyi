@@ -30,7 +30,6 @@ class EnhancedCpc(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class ManualCpa(proto.Message):
     def __init__(
@@ -39,7 +38,6 @@ class ManualCpa(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class ManualCpc(proto.Message):
     enhanced_cpc_enabled: bool
@@ -58,7 +56,6 @@ class ManualCpm(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class ManualCpv(proto.Message):
     def __init__(
@@ -67,7 +64,6 @@ class ManualCpv(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class MaximizeConversionValue(proto.Message):
     target_roas: float
