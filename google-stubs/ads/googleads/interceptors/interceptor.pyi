@@ -13,8 +13,7 @@ class _ClientCallDetails(
         ],
     ),
     grpc.ClientCallDetails,
-):
-    pass
+): ...
 
 class Interceptor:
     @classmethod

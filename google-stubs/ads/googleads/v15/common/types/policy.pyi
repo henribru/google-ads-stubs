@@ -49,7 +49,6 @@ class PolicyTopicConstraint(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        ...
     country_constraint_list: PolicyTopicConstraint.CountryConstraintList
     reseller_constraint: PolicyTopicConstraint.ResellerConstraint
     certificate_missing_in_country_list: PolicyTopicConstraint.CountryConstraintList

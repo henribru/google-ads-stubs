@@ -215,7 +215,6 @@ class HotelAdInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class ImageAdInfo(proto.Message):
     pixel_width: int
@@ -430,7 +429,6 @@ class ShoppingProductAdInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class ShoppingSmartAdInfo(proto.Message):
     def __init__(
@@ -439,7 +437,6 @@ class ShoppingSmartAdInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class SmartCampaignAdInfo(proto.Message):
     headlines: MutableSequence[AdTextAsset]
@@ -474,7 +471,6 @@ class TravelAdInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class VideoAdInfo(proto.Message):
     video: AdVideoAsset

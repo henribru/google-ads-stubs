@@ -28,7 +28,6 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        ...
 
     class CalloutAssetRecommendation(proto.Message):
         recommended_campaign_callout_assets: MutableSequence[Asset]
@@ -92,7 +91,6 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        ...
 
     class EnhancedCpcOptInRecommendation(proto.Message):
         def __init__(
@@ -101,7 +99,6 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        ...
 
     class ForecastingSetTargetRoasRecommendation(proto.Message):
         recommended_target_roas: float
@@ -192,7 +189,6 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        ...
 
     class RaiseTargetCpaBidTooLowRecommendation(proto.Message):
         recommended_target_multiplier: float
@@ -275,7 +271,6 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        ...
 
     class ShoppingAddProductsToCampaignRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
@@ -439,7 +434,6 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        ...
 
     class UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation(proto.Message):
         merchant_id: int

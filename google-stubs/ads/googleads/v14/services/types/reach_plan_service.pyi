@@ -181,7 +181,6 @@ class ListPlannableLocationsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    ...
 
 class ListPlannableLocationsResponse(proto.Message):
     plannable_locations: MutableSequence[PlannableLocation]
