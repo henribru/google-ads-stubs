@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.target_frequency_time_unit import (
     TargetFrequencyTimeUnitEnum,
@@ -22,6 +23,7 @@ class Commission(proto.Message):
         ignore_unknown_fields: bool = False,
         commission_rate_micros: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["commission_rate_micros"]) -> bool: ...  # type: ignore[override]
 
 class EnhancedCpc(proto.Message):
     def __init__(
@@ -30,6 +32,7 @@ class EnhancedCpc(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class ManualCpa(proto.Message):
     def __init__(
@@ -38,6 +41,7 @@ class ManualCpa(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class ManualCpc(proto.Message):
     enhanced_cpc_enabled: bool
@@ -48,6 +52,7 @@ class ManualCpc(proto.Message):
         ignore_unknown_fields: bool = False,
         enhanced_cpc_enabled: bool = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["enhanced_cpc_enabled"]) -> bool: ...  # type: ignore[override]
 
 class ManualCpm(proto.Message):
     def __init__(
@@ -56,6 +61,7 @@ class ManualCpm(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class ManualCpv(proto.Message):
     def __init__(
@@ -64,6 +70,7 @@ class ManualCpv(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class MaximizeConversionValue(proto.Message):
     target_roas: float
@@ -78,6 +85,7 @@ class MaximizeConversionValue(proto.Message):
         cpc_bid_ceiling_micros: int = ...,
         cpc_bid_floor_micros: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["target_roas", "cpc_bid_ceiling_micros", "cpc_bid_floor_micros"]) -> bool: ...  # type: ignore[override]
 
 class MaximizeConversions(proto.Message):
     cpc_bid_ceiling_micros: int
@@ -92,6 +100,7 @@ class MaximizeConversions(proto.Message):
         cpc_bid_floor_micros: int = ...,
         target_cpa_micros: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["cpc_bid_ceiling_micros", "cpc_bid_floor_micros", "target_cpa_micros"]) -> bool: ...  # type: ignore[override]
 
 class PercentCpc(proto.Message):
     cpc_bid_ceiling_micros: int
@@ -104,6 +113,7 @@ class PercentCpc(proto.Message):
         cpc_bid_ceiling_micros: int = ...,
         enhanced_cpc_enabled: bool = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["cpc_bid_ceiling_micros", "enhanced_cpc_enabled"]) -> bool: ...  # type: ignore[override]
 
 class TargetCpa(proto.Message):
     target_cpa_micros: int
@@ -118,6 +128,7 @@ class TargetCpa(proto.Message):
         cpc_bid_ceiling_micros: int = ...,
         cpc_bid_floor_micros: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["target_cpa_micros", "cpc_bid_ceiling_micros", "cpc_bid_floor_micros"]) -> bool: ...  # type: ignore[override]
 
 class TargetCpm(proto.Message):
     target_frequency_goal: TargetCpmTargetFrequencyGoal
@@ -128,6 +139,7 @@ class TargetCpm(proto.Message):
         ignore_unknown_fields: bool = False,
         target_frequency_goal: TargetCpmTargetFrequencyGoal = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["target_frequency_goal"]) -> bool: ...  # type: ignore[override]
 
 class TargetCpmTargetFrequencyGoal(proto.Message):
     target_count: int
@@ -140,6 +152,7 @@ class TargetCpmTargetFrequencyGoal(proto.Message):
         target_count: int = ...,
         time_unit: TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["target_count", "time_unit"]) -> bool: ...  # type: ignore[override]
 
 class TargetImpressionShare(proto.Message):
     location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation
@@ -154,6 +167,7 @@ class TargetImpressionShare(proto.Message):
         location_fraction_micros: int = ...,
         cpc_bid_ceiling_micros: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["location", "location_fraction_micros", "cpc_bid_ceiling_micros"]) -> bool: ...  # type: ignore[override]
 
 class TargetRoas(proto.Message):
     target_roas: float
@@ -168,6 +182,7 @@ class TargetRoas(proto.Message):
         cpc_bid_ceiling_micros: int = ...,
         cpc_bid_floor_micros: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["target_roas", "cpc_bid_ceiling_micros", "cpc_bid_floor_micros"]) -> bool: ...  # type: ignore[override]
 
 class TargetSpend(proto.Message):
     target_spend_micros: int
@@ -180,3 +195,4 @@ class TargetSpend(proto.Message):
         target_spend_micros: int = ...,
         cpc_bid_ceiling_micros: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["target_spend_micros", "cpc_bid_ceiling_micros"]) -> bool: ...  # type: ignore[override]

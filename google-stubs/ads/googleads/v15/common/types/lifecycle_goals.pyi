@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -17,3 +18,4 @@ class LifecycleGoalValueSettings(proto.Message):
         value: float = ...,
         high_lifetime_value: float = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["value", "high_lifetime_value"]) -> bool: ...  # type: ignore[override]

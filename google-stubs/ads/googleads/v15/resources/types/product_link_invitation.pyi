@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.linked_product_type import (
     LinkedProductTypeEnum,
@@ -22,6 +23,7 @@ class HotelCenterLinkInvitationIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         hotel_center_id: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["hotel_center_id"]) -> bool: ...  # type: ignore[override]
 
 class MerchantCenterLinkInvitationIdentifier(proto.Message):
     merchant_center_id: int
@@ -32,6 +34,7 @@ class MerchantCenterLinkInvitationIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         merchant_center_id: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["merchant_center_id"]) -> bool: ...  # type: ignore[override]
 
 class ProductLinkInvitation(proto.Message):
     resource_name: str
@@ -52,3 +55,4 @@ class ProductLinkInvitation(proto.Message):
         hotel_center: HotelCenterLinkInvitationIdentifier = ...,
         merchant_center: MerchantCenterLinkInvitationIdentifier = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "product_link_invitation_id", "status", "type_", "hotel_center", "merchant_center"]) -> bool: ...  # type: ignore[override]

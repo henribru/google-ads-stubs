@@ -1,9 +1,10 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.resources.types.ad_group_label import AdGroupLabel
 
@@ -20,6 +21,7 @@ class AdGroupLabelOperation(proto.Message):
         create: AdGroupLabel = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateAdGroupLabelResult(proto.Message):
     resource_name: str
@@ -30,6 +32,7 @@ class MutateAdGroupLabelResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
 class MutateAdGroupLabelsRequest(proto.Message):
     customer_id: str
@@ -46,6 +49,7 @@ class MutateAdGroupLabelsRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
 
 class MutateAdGroupLabelsResponse(proto.Message):
     partial_failure_error: Status
@@ -58,3 +62,4 @@ class MutateAdGroupLabelsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdGroupLabelResult] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

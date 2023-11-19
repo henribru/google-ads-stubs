@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.extension_setting_device import (
     ExtensionSettingDeviceEnum,
@@ -28,3 +29,4 @@ class AdGroupExtensionSetting(proto.Message):
         extension_feed_items: MutableSequence[str] = ...,
         device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "extension_type", "ad_group", "extension_feed_items", "device"]) -> bool: ...  # type: ignore[override]

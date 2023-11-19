@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -29,3 +30,4 @@ class DynamicSearchAdsSearchTermView(proto.Message):
         has_matching_keyword: bool = ...,
         has_negative_url: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "search_term", "headline", "landing_page", "page_url", "has_negative_keyword", "has_matching_keyword", "has_negative_url"]) -> bool: ...  # type: ignore[override]

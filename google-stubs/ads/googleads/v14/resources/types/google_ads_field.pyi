@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.google_ads_field_category import (
     GoogleAdsFieldCategoryEnum,
@@ -48,3 +49,4 @@ class GoogleAdsField(proto.Message):
         type_url: str = ...,
         is_repeated: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "name", "category", "selectable", "filterable", "sortable", "selectable_with", "attribute_resources", "metrics", "segments", "enum_values", "data_type", "type_url", "is_repeated"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.audiences import (
     AudienceDimension,
@@ -33,3 +34,4 @@ class Audience(proto.Message):
         dimensions: MutableSequence[AudienceDimension] = ...,
         exclusion_dimension: AudienceExclusionDimension = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "status", "name", "description", "dimensions", "exclusion_dimension"]) -> bool: ...  # type: ignore[override]

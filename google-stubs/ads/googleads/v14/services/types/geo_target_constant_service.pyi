@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.resources.types.geo_target_constant import (
     GeoTargetConstant,
@@ -27,6 +28,7 @@ class GeoTargetConstantSuggestion(proto.Message):
         geo_target_constant: GeoTargetConstant = ...,
         geo_target_constant_parents: MutableSequence[GeoTargetConstant] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["locale", "reach", "search_term", "geo_target_constant", "geo_target_constant_parents"]) -> bool: ...  # type: ignore[override]
 
 class SuggestGeoTargetConstantsRequest(proto.Message):
     class GeoTargets(proto.Message):
@@ -38,6 +40,7 @@ class SuggestGeoTargetConstantsRequest(proto.Message):
             ignore_unknown_fields: bool = False,
             geo_target_constants: MutableSequence[str] = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["geo_target_constants"]) -> bool: ...  # type: ignore[override]
 
     class LocationNames(proto.Message):
         names: MutableSequence[str]
@@ -48,6 +51,7 @@ class SuggestGeoTargetConstantsRequest(proto.Message):
             ignore_unknown_fields: bool = False,
             names: MutableSequence[str] = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["names"]) -> bool: ...  # type: ignore[override]
     locale: str
     country_code: str
     location_names: SuggestGeoTargetConstantsRequest.LocationNames
@@ -62,6 +66,7 @@ class SuggestGeoTargetConstantsRequest(proto.Message):
         location_names: SuggestGeoTargetConstantsRequest.LocationNames = ...,
         geo_targets: SuggestGeoTargetConstantsRequest.GeoTargets = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["locale", "country_code", "location_names", "geo_targets"]) -> bool: ...  # type: ignore[override]
 
 class SuggestGeoTargetConstantsResponse(proto.Message):
     geo_target_constant_suggestions: MutableSequence[GeoTargetConstantSuggestion]
@@ -74,3 +79,4 @@ class SuggestGeoTargetConstantsResponse(proto.Message):
             GeoTargetConstantSuggestion
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["geo_target_constant_suggestions"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.matching_function import MatchingFunction
 from google.ads.googleads.v14.enums.types.feed_link_status import FeedLinkStatusEnum
@@ -27,3 +28,4 @@ class CustomerFeed(proto.Message):
         matching_function: MatchingFunction = ...,
         status: FeedLinkStatusEnum.FeedLinkStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "feed", "placeholder_types", "matching_function", "status"]) -> bool: ...  # type: ignore[override]

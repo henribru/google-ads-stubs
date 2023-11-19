@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -21,3 +22,4 @@ class TopicConstant(proto.Message):
         topic_constant_parent: str = ...,
         path: MutableSequence[str] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "topic_constant_parent", "path"]) -> bool: ...  # type: ignore[override]

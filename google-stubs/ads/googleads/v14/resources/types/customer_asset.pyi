@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.asset_policy import (
     AssetLinkPrimaryStatusDetails,
@@ -46,3 +47,4 @@ class CustomerAsset(proto.Message):
             AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "asset", "field_type", "source", "status", "primary_status", "primary_status_details", "primary_status_reasons"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.experiment_metric import ExperimentMetricEnum
 from google.ads.googleads.v15.enums.types.experiment_metric_direction import (
@@ -22,3 +23,4 @@ class MetricGoal(proto.Message):
         metric: ExperimentMetricEnum.ExperimentMetric = ...,
         direction: ExperimentMetricDirectionEnum.ExperimentMetricDirection = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["metric", "direction"]) -> bool: ...  # type: ignore[override]

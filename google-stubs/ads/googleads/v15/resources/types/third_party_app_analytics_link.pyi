@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -17,3 +18,4 @@ class ThirdPartyAppAnalyticsLink(proto.Message):
         resource_name: str = ...,
         shareable_link_id: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "shareable_link_id"]) -> bool: ...  # type: ignore[override]

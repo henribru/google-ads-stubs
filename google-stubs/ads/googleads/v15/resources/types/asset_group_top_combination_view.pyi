@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.asset_usage import AssetUsage
 
@@ -17,6 +18,7 @@ class AssetGroupAssetCombinationData(proto.Message):
         ignore_unknown_fields: bool = False,
         asset_combination_served_assets: MutableSequence[AssetUsage] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["asset_combination_served_assets"]) -> bool: ...  # type: ignore[override]
 
 class AssetGroupTopCombinationView(proto.Message):
     resource_name: str
@@ -31,3 +33,4 @@ class AssetGroupTopCombinationView(proto.Message):
             AssetGroupAssetCombinationData
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "asset_group_top_combinations"]) -> bool: ...  # type: ignore[override]

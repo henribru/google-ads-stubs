@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.account_budget_proposal_type import (
     AccountBudgetProposalTypeEnum,
@@ -47,6 +48,7 @@ class AccountBudget(proto.Message):
             spending_limit_micros: int = ...,
             spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["account_budget_proposal", "proposal_type", "name", "start_date_time", "purchase_order_number", "notes", "creation_date_time", "end_date_time", "end_time_type", "spending_limit_micros", "spending_limit_type"]) -> bool: ...  # type: ignore[override]
     resource_name: str
     id: int
     billing_setup: str
@@ -97,3 +99,4 @@ class AccountBudget(proto.Message):
         adjusted_spending_limit_micros: int = ...,
         adjusted_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "billing_setup", "status", "name", "proposed_start_date_time", "approved_start_date_time", "total_adjustments_micros", "amount_served_micros", "purchase_order_number", "notes", "pending_proposal", "proposed_end_date_time", "proposed_end_time_type", "approved_end_date_time", "approved_end_time_type", "proposed_spending_limit_micros", "proposed_spending_limit_type", "approved_spending_limit_micros", "approved_spending_limit_type", "adjusted_spending_limit_micros", "adjusted_spending_limit_type"]) -> bool: ...  # type: ignore[override]

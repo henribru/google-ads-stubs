@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.geo_target_constant_status import (
     GeoTargetConstantStatusEnum,
@@ -33,3 +34,4 @@ class GeoTargetConstant(proto.Message):
         canonical_name: str = ...,
         parent_geo_target: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "country_code", "target_type", "status", "canonical_name", "parent_geo_target"]) -> bool: ...  # type: ignore[override]

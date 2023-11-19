@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.ad_asset import (
     AdCallToActionAsset,
@@ -48,6 +49,7 @@ class AppAdInfo(proto.Message):
         youtube_videos: MutableSequence[AdVideoAsset] = ...,
         html5_media_bundles: MutableSequence[AdMediaBundleAsset] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["mandatory_ad_text", "headlines", "descriptions", "images", "youtube_videos", "html5_media_bundles"]) -> bool: ...  # type: ignore[override]
 
 class AppEngagementAdInfo(proto.Message):
     headlines: MutableSequence[AdTextAsset]
@@ -64,6 +66,7 @@ class AppEngagementAdInfo(proto.Message):
         images: MutableSequence[AdImageAsset] = ...,
         videos: MutableSequence[AdVideoAsset] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headlines", "descriptions", "images", "videos"]) -> bool: ...  # type: ignore[override]
 
 class AppPreRegistrationAdInfo(proto.Message):
     headlines: MutableSequence[AdTextAsset]
@@ -80,6 +83,7 @@ class AppPreRegistrationAdInfo(proto.Message):
         images: MutableSequence[AdImageAsset] = ...,
         youtube_videos: MutableSequence[AdVideoAsset] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headlines", "descriptions", "images", "youtube_videos"]) -> bool: ...  # type: ignore[override]
 
 class CallAdInfo(proto.Message):
     country_code: str
@@ -116,6 +120,7 @@ class CallAdInfo(proto.Message):
         path1: str = ...,
         path2: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["country_code", "phone_number", "business_name", "headline1", "headline2", "description1", "description2", "call_tracked", "disable_call_conversion", "phone_number_verification_url", "conversion_action", "conversion_reporting_state", "path1", "path2"]) -> bool: ...  # type: ignore[override]
 
 class DiscoveryCarouselAdInfo(proto.Message):
     business_name: str
@@ -136,6 +141,7 @@ class DiscoveryCarouselAdInfo(proto.Message):
         call_to_action_text: str = ...,
         carousel_cards: MutableSequence[AdDiscoveryCarouselCardAsset] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["business_name", "logo_image", "headline", "description", "call_to_action_text", "carousel_cards"]) -> bool: ...  # type: ignore[override]
 
 class DiscoveryMultiAssetAdInfo(proto.Message):
     marketing_images: MutableSequence[AdImageAsset]
@@ -162,6 +168,7 @@ class DiscoveryMultiAssetAdInfo(proto.Message):
         call_to_action_text: str = ...,
         lead_form_only: bool = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["marketing_images", "square_marketing_images", "portrait_marketing_images", "logo_images", "headlines", "descriptions", "business_name", "call_to_action_text", "lead_form_only"]) -> bool: ...  # type: ignore[override]
 
 class DiscoveryVideoResponsiveAdInfo(proto.Message):
     headlines: MutableSequence[AdTextAsset]
@@ -188,6 +195,7 @@ class DiscoveryVideoResponsiveAdInfo(proto.Message):
         business_name: AdTextAsset = ...,
         call_to_actions: MutableSequence[AdCallToActionAsset] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headlines", "long_headlines", "descriptions", "videos", "logo_images", "breadcrumb1", "breadcrumb2", "business_name", "call_to_actions"]) -> bool: ...  # type: ignore[override]
 
 class DisplayUploadAdInfo(proto.Message):
     display_upload_product_type: DisplayUploadProductTypeEnum.DisplayUploadProductType
@@ -200,6 +208,7 @@ class DisplayUploadAdInfo(proto.Message):
         display_upload_product_type: DisplayUploadProductTypeEnum.DisplayUploadProductType = ...,
         media_bundle: AdMediaBundleAsset = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["display_upload_product_type", "media_bundle"]) -> bool: ...  # type: ignore[override]
 
 class ExpandedDynamicSearchAdInfo(proto.Message):
     description: str
@@ -212,6 +221,7 @@ class ExpandedDynamicSearchAdInfo(proto.Message):
         description: str = ...,
         description2: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["description", "description2"]) -> bool: ...  # type: ignore[override]
 
 class ExpandedTextAdInfo(proto.Message):
     headline_part1: str
@@ -234,6 +244,7 @@ class ExpandedTextAdInfo(proto.Message):
         path1: str = ...,
         path2: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headline_part1", "headline_part2", "headline_part3", "description", "description2", "path1", "path2"]) -> bool: ...  # type: ignore[override]
 
 class HotelAdInfo(proto.Message):
     def __init__(
@@ -242,6 +253,7 @@ class HotelAdInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class ImageAdInfo(proto.Message):
     pixel_width: int
@@ -272,6 +284,7 @@ class ImageAdInfo(proto.Message):
         data: bytes = ...,
         ad_id_to_copy_image_from: int = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["pixel_width", "pixel_height", "image_url", "preview_pixel_width", "preview_pixel_height", "preview_image_url", "mime_type", "name", "media_file", "data", "ad_id_to_copy_image_from"]) -> bool: ...  # type: ignore[override]
 
 class InFeedVideoAdInfo(proto.Message):
     headline: str
@@ -288,6 +301,7 @@ class InFeedVideoAdInfo(proto.Message):
         description2: str = ...,
         thumbnail: VideoThumbnailEnum.VideoThumbnail = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headline", "description1", "description2", "thumbnail"]) -> bool: ...  # type: ignore[override]
 
 class LegacyAppInstallAdInfo(proto.Message):
     app_id: str
@@ -306,6 +320,7 @@ class LegacyAppInstallAdInfo(proto.Message):
         description1: str = ...,
         description2: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["app_id", "app_store", "headline", "description1", "description2"]) -> bool: ...  # type: ignore[override]
 
 class LegacyResponsiveDisplayAdInfo(proto.Message):
     short_headline: str
@@ -344,6 +359,7 @@ class LegacyResponsiveDisplayAdInfo(proto.Message):
         price_prefix: str = ...,
         promo_text: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["short_headline", "long_headline", "description", "business_name", "allow_flexible_color", "accent_color", "main_color", "call_to_action_text", "logo_image", "square_logo_image", "marketing_image", "square_marketing_image", "format_setting", "price_prefix", "promo_text"]) -> bool: ...  # type: ignore[override]
 
 class LocalAdInfo(proto.Message):
     headlines: MutableSequence[AdTextAsset]
@@ -368,6 +384,7 @@ class LocalAdInfo(proto.Message):
         path1: str = ...,
         path2: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headlines", "descriptions", "call_to_actions", "marketing_images", "logo_images", "videos", "path1", "path2"]) -> bool: ...  # type: ignore[override]
 
 class ResponsiveDisplayAdControlSpec(proto.Message):
     enable_asset_enhancements: bool
@@ -380,6 +397,7 @@ class ResponsiveDisplayAdControlSpec(proto.Message):
         enable_asset_enhancements: bool = ...,
         enable_autogen_video: bool = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["enable_asset_enhancements", "enable_autogen_video"]) -> bool: ...  # type: ignore[override]
 
 class ResponsiveDisplayAdInfo(proto.Message):
     marketing_images: MutableSequence[AdImageAsset]
@@ -422,6 +440,7 @@ class ResponsiveDisplayAdInfo(proto.Message):
         format_setting: DisplayAdFormatSettingEnum.DisplayAdFormatSetting = ...,
         control_spec: ResponsiveDisplayAdControlSpec = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["marketing_images", "square_marketing_images", "logo_images", "square_logo_images", "headlines", "long_headline", "descriptions", "youtube_videos", "business_name", "main_color", "accent_color", "allow_flexible_color", "call_to_action_text", "price_prefix", "promo_text", "format_setting", "control_spec"]) -> bool: ...  # type: ignore[override]
 
 class ResponsiveSearchAdInfo(proto.Message):
     headlines: MutableSequence[AdTextAsset]
@@ -438,6 +457,7 @@ class ResponsiveSearchAdInfo(proto.Message):
         path1: str = ...,
         path2: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headlines", "descriptions", "path1", "path2"]) -> bool: ...  # type: ignore[override]
 
 class ShoppingComparisonListingAdInfo(proto.Message):
     headline: str
@@ -448,6 +468,7 @@ class ShoppingComparisonListingAdInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         headline: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headline"]) -> bool: ...  # type: ignore[override]
 
 class ShoppingProductAdInfo(proto.Message):
     def __init__(
@@ -456,6 +477,7 @@ class ShoppingProductAdInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class ShoppingSmartAdInfo(proto.Message):
     def __init__(
@@ -464,6 +486,7 @@ class ShoppingSmartAdInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class SmartCampaignAdInfo(proto.Message):
     headlines: MutableSequence[AdTextAsset]
@@ -476,6 +499,7 @@ class SmartCampaignAdInfo(proto.Message):
         headlines: MutableSequence[AdTextAsset] = ...,
         descriptions: MutableSequence[AdTextAsset] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headlines", "descriptions"]) -> bool: ...  # type: ignore[override]
 
 class TextAdInfo(proto.Message):
     headline: str
@@ -490,6 +514,7 @@ class TextAdInfo(proto.Message):
         description1: str = ...,
         description2: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headline", "description1", "description2"]) -> bool: ...  # type: ignore[override]
 
 class TravelAdInfo(proto.Message):
     def __init__(
@@ -498,6 +523,7 @@ class TravelAdInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
+    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
 
 class VideoAdInfo(proto.Message):
     video: AdVideoAsset
@@ -518,6 +544,7 @@ class VideoAdInfo(proto.Message):
         non_skippable: VideoNonSkippableInStreamAdInfo = ...,
         in_feed: InFeedVideoAdInfo = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["video", "in_stream", "bumper", "out_stream", "non_skippable", "in_feed"]) -> bool: ...  # type: ignore[override]
 
 class VideoBumperInStreamAdInfo(proto.Message):
     companion_banner: AdImageAsset
@@ -532,6 +559,7 @@ class VideoBumperInStreamAdInfo(proto.Message):
         action_button_label: str = ...,
         action_headline: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["companion_banner", "action_button_label", "action_headline"]) -> bool: ...  # type: ignore[override]
 
 class VideoNonSkippableInStreamAdInfo(proto.Message):
     companion_banner: AdImageAsset
@@ -546,6 +574,7 @@ class VideoNonSkippableInStreamAdInfo(proto.Message):
         action_button_label: str = ...,
         action_headline: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["companion_banner", "action_button_label", "action_headline"]) -> bool: ...  # type: ignore[override]
 
 class VideoOutstreamAdInfo(proto.Message):
     headline: str
@@ -558,6 +587,7 @@ class VideoOutstreamAdInfo(proto.Message):
         headline: str = ...,
         description: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headline", "description"]) -> bool: ...  # type: ignore[override]
 
 class VideoResponsiveAdInfo(proto.Message):
     headlines: MutableSequence[AdTextAsset]
@@ -582,6 +612,7 @@ class VideoResponsiveAdInfo(proto.Message):
         breadcrumb1: str = ...,
         breadcrumb2: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["headlines", "long_headlines", "descriptions", "call_to_actions", "videos", "companion_banners", "breadcrumb1", "breadcrumb2"]) -> bool: ...  # type: ignore[override]
 
 class VideoTrueViewInStreamAdInfo(proto.Message):
     action_button_label: str
@@ -596,3 +627,4 @@ class VideoTrueViewInStreamAdInfo(proto.Message):
         action_headline: str = ...,
         companion_banner: AdImageAsset = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["action_button_label", "action_headline", "companion_banner"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.asset_set_type import AssetSetTypeEnum
 
@@ -19,3 +20,4 @@ class AssetSetTypeView(proto.Message):
         resource_name: str = ...,
         asset_set_type: AssetSetTypeEnum.AssetSetType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "asset_set_type"]) -> bool: ...  # type: ignore[override]

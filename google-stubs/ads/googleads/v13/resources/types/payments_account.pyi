@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -27,3 +28,4 @@ class PaymentsAccount(proto.Message):
         secondary_payments_profile_id: str = ...,
         paying_manager_customer: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "payments_account_id", "name", "currency_code", "payments_profile_id", "secondary_payments_profile_id", "paying_manager_customer"]) -> bool: ...  # type: ignore[override]

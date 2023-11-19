@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.tracking_code_page_format import (
     TrackingCodePageFormatEnum,
@@ -26,3 +27,4 @@ class TagSnippet(proto.Message):
         global_site_tag: str = ...,
         event_snippet: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["type_", "page_format", "global_site_tag", "event_snippet"]) -> bool: ...  # type: ignore[override]

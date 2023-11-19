@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.criteria import AdScheduleInfo, KeywordInfo
 from google.ads.googleads.v13.common.types.extensions import (
@@ -82,3 +83,4 @@ class ExtensionFeedItem(proto.Message):
         targeted_campaign: str = ...,
         targeted_ad_group: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "extension_type", "start_date_time", "end_date_time", "ad_schedules", "device", "targeted_geo_target_constant", "targeted_keyword", "status", "sitelink_feed_item", "structured_snippet_feed_item", "app_feed_item", "call_feed_item", "callout_feed_item", "text_message_feed_item", "price_feed_item", "promotion_feed_item", "location_feed_item", "affiliate_location_feed_item", "hotel_callout_feed_item", "image_feed_item", "targeted_campaign", "targeted_ad_group"]) -> bool: ...  # type: ignore[override]

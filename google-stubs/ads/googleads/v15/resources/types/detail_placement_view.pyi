@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.placement_type import PlacementTypeEnum
 
@@ -27,3 +28,4 @@ class DetailPlacementView(proto.Message):
         target_url: str = ...,
         placement_type: PlacementTypeEnum.PlacementType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "placement", "display_name", "group_placement_target_url", "target_url", "placement_type"]) -> bool: ...  # type: ignore[override]

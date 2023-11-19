@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.geo_targeting_type import GeoTargetingTypeEnum
 
@@ -21,3 +22,4 @@ class GeographicView(proto.Message):
         location_type: GeoTargetingTypeEnum.GeoTargetingType = ...,
         country_criterion_id: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "location_type", "country_criterion_id"]) -> bool: ...  # type: ignore[override]

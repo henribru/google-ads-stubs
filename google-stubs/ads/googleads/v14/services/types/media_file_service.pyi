@@ -1,9 +1,10 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.response_content_type import (
     ResponseContentTypeEnum,
@@ -21,6 +22,7 @@ class MediaFileOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         create: MediaFile = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["create"]) -> bool: ...  # type: ignore[override]
 
 class MutateMediaFileResult(proto.Message):
     resource_name: str
@@ -33,6 +35,7 @@ class MutateMediaFileResult(proto.Message):
         resource_name: str = ...,
         media_file: MediaFile = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "media_file"]) -> bool: ...  # type: ignore[override]
 
 class MutateMediaFilesRequest(proto.Message):
     customer_id: str
@@ -51,6 +54,7 @@ class MutateMediaFilesRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
 class MutateMediaFilesResponse(proto.Message):
     partial_failure_error: Status
@@ -63,3 +67,4 @@ class MutateMediaFilesResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateMediaFileResult] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.audiences import (
     AudienceDimension,
@@ -38,3 +39,4 @@ class Audience(proto.Message):
         scope: AudienceScopeEnum.AudienceScope = ...,
         asset_group: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "status", "name", "description", "dimensions", "exclusion_dimension", "scope", "asset_group"]) -> bool: ...  # type: ignore[override]

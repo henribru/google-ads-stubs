@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.resources.types.billing_setup import BillingSetup
 
@@ -19,6 +20,7 @@ class BillingSetupOperation(proto.Message):
         create: BillingSetup = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateBillingSetupRequest(proto.Message):
     customer_id: str
@@ -31,6 +33,7 @@ class MutateBillingSetupRequest(proto.Message):
         customer_id: str = ...,
         operation: BillingSetupOperation = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operation"]) -> bool: ...  # type: ignore[override]
 
 class MutateBillingSetupResponse(proto.Message):
     result: MutateBillingSetupResult
@@ -41,6 +44,7 @@ class MutateBillingSetupResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateBillingSetupResult = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
 
 class MutateBillingSetupResult(proto.Message):
     resource_name: str
@@ -51,3 +55,4 @@ class MutateBillingSetupResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

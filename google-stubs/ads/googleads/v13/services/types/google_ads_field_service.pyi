@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.resources.types.google_ads_field import GoogleAdsField
 
@@ -17,6 +18,7 @@ class GetGoogleAdsFieldRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
 class SearchGoogleAdsFieldsRequest(proto.Message):
     query: str
@@ -31,6 +33,7 @@ class SearchGoogleAdsFieldsRequest(proto.Message):
         page_token: str = ...,
         page_size: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["query", "page_token", "page_size"]) -> bool: ...  # type: ignore[override]
 
 class SearchGoogleAdsFieldsResponse(proto.Message):
     results: MutableSequence[GoogleAdsField]
@@ -45,3 +48,4 @@ class SearchGoogleAdsFieldsResponse(proto.Message):
         next_page_token: str = ...,
         total_results_count: int = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["results", "next_page_token", "total_results_count"]) -> bool: ...  # type: ignore[override]

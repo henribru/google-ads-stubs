@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.click_location import ClickLocation
 from google.ads.googleads.v13.common.types.criteria import KeywordInfo
@@ -36,3 +37,4 @@ class ClickView(proto.Message):
         keyword: str = ...,
         keyword_info: KeywordInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "gclid", "area_of_interest", "location_of_presence", "page_number", "ad_group_ad", "campaign_location_target", "user_list", "keyword", "keyword_info"]) -> bool: ...  # type: ignore[override]

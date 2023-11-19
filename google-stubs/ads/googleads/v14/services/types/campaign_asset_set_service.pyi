@@ -1,9 +1,10 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.response_content_type import (
     ResponseContentTypeEnum,
@@ -23,6 +24,7 @@ class CampaignAssetSetOperation(proto.Message):
         create: CampaignAssetSet = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignAssetSetResult(proto.Message):
     resource_name: str
@@ -35,6 +37,7 @@ class MutateCampaignAssetSetResult(proto.Message):
         resource_name: str = ...,
         campaign_asset_set: CampaignAssetSet = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "campaign_asset_set"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignAssetSetsRequest(proto.Message):
     customer_id: str
@@ -53,6 +56,7 @@ class MutateCampaignAssetSetsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
 class MutateCampaignAssetSetsResponse(proto.Message):
     results: MutableSequence[MutateCampaignAssetSetResult]
@@ -65,3 +69,4 @@ class MutateCampaignAssetSetsResponse(proto.Message):
         results: MutableSequence[MutateCampaignAssetSetResult] = ...,
         partial_failure_error: Status = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]

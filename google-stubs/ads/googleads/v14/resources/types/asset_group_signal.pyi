@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.common.types.criteria import AudienceInfo
 
@@ -21,3 +22,4 @@ class AssetGroupSignal(proto.Message):
         asset_group: str = ...,
         audience: AudienceInfo = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "asset_group", "audience"]) -> bool: ...  # type: ignore[override]

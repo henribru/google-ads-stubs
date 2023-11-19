@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.lifecycle_goals import (
     LifecycleGoalValueSettings,
@@ -26,6 +27,7 @@ class CampaignLifecycleGoal(proto.Message):
         campaign: str = ...,
         customer_acquisition_goal_settings: CustomerAcquisitionGoalSettings = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "campaign", "customer_acquisition_goal_settings"]) -> bool: ...  # type: ignore[override]
 
 class CustomerAcquisitionGoalSettings(proto.Message):
     optimization_mode: CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode
@@ -38,3 +40,4 @@ class CustomerAcquisitionGoalSettings(proto.Message):
         optimization_mode: CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode = ...,
         value_settings: LifecycleGoalValueSettings = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["optimization_mode", "value_settings"]) -> bool: ...  # type: ignore[override]

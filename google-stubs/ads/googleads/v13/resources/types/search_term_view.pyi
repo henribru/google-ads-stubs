@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.search_term_targeting_status import (
     SearchTermTargetingStatusEnum,
@@ -25,3 +26,4 @@ class SearchTermView(proto.Message):
         ad_group: str = ...,
         status: SearchTermTargetingStatusEnum.SearchTermTargetingStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "search_term", "ad_group", "status"]) -> bool: ...  # type: ignore[override]

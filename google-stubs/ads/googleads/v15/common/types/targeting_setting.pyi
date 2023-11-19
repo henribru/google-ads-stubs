@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.targeting_dimension import (
     TargetingDimensionEnum,
@@ -21,6 +22,7 @@ class TargetRestriction(proto.Message):
         targeting_dimension: TargetingDimensionEnum.TargetingDimension = ...,
         bid_only: bool = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["targeting_dimension", "bid_only"]) -> bool: ...  # type: ignore[override]
 
 class TargetRestrictionOperation(proto.Message):
     class Operator(proto.Enum):
@@ -38,6 +40,7 @@ class TargetRestrictionOperation(proto.Message):
         operator: TargetRestrictionOperation.Operator = ...,
         value: TargetRestriction = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["operator", "value"]) -> bool: ...  # type: ignore[override]
 
 class TargetingSetting(proto.Message):
     target_restrictions: MutableSequence[TargetRestriction]
@@ -50,3 +53,4 @@ class TargetingSetting(proto.Message):
         target_restrictions: MutableSequence[TargetRestriction] = ...,
         target_restriction_operations: MutableSequence[TargetRestrictionOperation] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["target_restrictions", "target_restriction_operations"]) -> bool: ...  # type: ignore[override]

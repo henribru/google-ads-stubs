@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.simulation import (
     TargetCpaSimulationPointList,
@@ -38,3 +39,4 @@ class BiddingStrategySimulation(proto.Message):
         target_cpa_point_list: TargetCpaSimulationPointList = ...,
         target_roas_point_list: TargetRoasSimulationPointList = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "bidding_strategy_id", "type_", "modification_method", "start_date", "end_date", "target_cpa_point_list", "target_roas_point_list"]) -> bool: ...  # type: ignore[override]

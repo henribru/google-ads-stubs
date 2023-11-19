@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -21,3 +22,4 @@ class UrlCollection(proto.Message):
         final_mobile_urls: MutableSequence[str] = ...,
         tracking_url_template: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["url_collection_id", "final_urls", "final_mobile_urls", "tracking_url_template"]) -> bool: ...  # type: ignore[override]

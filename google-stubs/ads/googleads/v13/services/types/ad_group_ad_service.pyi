@@ -1,10 +1,11 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
 from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.policy import PolicyValidationParameter
 from google.ads.googleads.v13.enums.types.response_content_type import (
@@ -31,6 +32,7 @@ class AdGroupAdOperation(proto.Message):
         update: AdGroupAd = ...,
         remove: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["update_mask", "policy_validation_parameter", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
 class MutateAdGroupAdResult(proto.Message):
     resource_name: str
@@ -43,6 +45,7 @@ class MutateAdGroupAdResult(proto.Message):
         resource_name: str = ...,
         ad_group_ad: AdGroupAd = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "ad_group_ad"]) -> bool: ...  # type: ignore[override]
 
 class MutateAdGroupAdsRequest(proto.Message):
     customer_id: str
@@ -61,6 +64,7 @@ class MutateAdGroupAdsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
 class MutateAdGroupAdsResponse(proto.Message):
     partial_failure_error: Status
@@ -73,3 +77,4 @@ class MutateAdGroupAdsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdGroupAdResult] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

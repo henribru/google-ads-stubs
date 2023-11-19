@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 _M = TypeVar("_M")
 
@@ -23,3 +24,4 @@ class Value(proto.Message):
         double_value: float = ...,
         string_value: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["boolean_value", "int64_value", "float_value", "double_value", "string_value"]) -> bool: ...  # type: ignore[override]

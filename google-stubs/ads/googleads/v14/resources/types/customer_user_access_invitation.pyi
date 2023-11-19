@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.access_invitation_status import (
     AccessInvitationStatusEnum,
@@ -30,3 +31,4 @@ class CustomerUserAccessInvitation(proto.Message):
         creation_date_time: str = ...,
         invitation_status: AccessInvitationStatusEnum.AccessInvitationStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "invitation_id", "access_role", "email_address", "creation_date_time", "invitation_status"]) -> bool: ...  # type: ignore[override]

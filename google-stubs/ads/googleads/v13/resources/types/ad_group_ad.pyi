@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.policy import PolicyTopicEntry
 from google.ads.googleads.v13.enums.types.ad_group_ad_status import AdGroupAdStatusEnum
@@ -40,6 +41,7 @@ class AdGroupAd(proto.Message):
         action_items: MutableSequence[str] = ...,
         labels: MutableSequence[str] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "status", "ad_group", "ad", "policy_summary", "ad_strength", "action_items", "labels"]) -> bool: ...  # type: ignore[override]
 
 class AdGroupAdPolicySummary(proto.Message):
     policy_topic_entries: MutableSequence[PolicyTopicEntry]
@@ -54,3 +56,4 @@ class AdGroupAdPolicySummary(proto.Message):
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]

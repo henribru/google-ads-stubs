@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.conversion_custom_variable_status import (
     ConversionCustomVariableStatusEnum,
@@ -29,3 +30,4 @@ class ConversionCustomVariable(proto.Message):
         status: ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus = ...,
         owner_customer: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "tag", "status", "owner_customer"]) -> bool: ...  # type: ignore[override]

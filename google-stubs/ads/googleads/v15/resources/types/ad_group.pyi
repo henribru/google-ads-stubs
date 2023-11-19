@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.custom_parameter import CustomParameter
 from google.ads.googleads.v15.common.types.targeting_setting import TargetingSetting
@@ -30,6 +31,7 @@ class AdGroup(proto.Message):
             ignore_unknown_fields: bool = False,
             use_audience_grouped: bool = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["use_audience_grouped"]) -> bool: ...  # type: ignore[override]
     resource_name: str
     id: int
     name: str
@@ -102,3 +104,4 @@ class AdGroup(proto.Message):
             AssetSetTypeEnum.AssetSetType
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "status", "type_", "ad_rotation_mode", "base_ad_group", "tracking_url_template", "url_custom_parameters", "campaign", "cpc_bid_micros", "effective_cpc_bid_micros", "cpm_bid_micros", "target_cpa_micros", "cpv_bid_micros", "target_cpm_micros", "target_roas", "percent_cpc_bid_micros", "optimized_targeting_enabled", "display_custom_bid_dimension", "final_url_suffix", "targeting_setting", "audience_setting", "effective_target_cpa_micros", "effective_target_cpa_source", "effective_target_roas", "effective_target_roas_source", "labels", "excluded_parent_asset_field_types", "excluded_parent_asset_set_types"]) -> bool: ...  # type: ignore[override]

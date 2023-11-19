@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.policy_topic_entry_type import (
     PolicyTopicEntryTypeEnum,
@@ -29,6 +30,7 @@ class PolicyTopicConstraint(proto.Message):
             ignore_unknown_fields: bool = False,
             country_criterion: str = ...,
         ) -> None: ...
+        def __contains__(self, key: Literal["country_criterion"]) -> bool: ...  # type: ignore[override]
 
     class CountryConstraintList(proto.Message):
         total_targeted_countries: int
@@ -41,6 +43,7 @@ class PolicyTopicConstraint(proto.Message):
             total_targeted_countries: int = ...,
             countries: MutableSequence[PolicyTopicConstraint.CountryConstraint] = ...,
         ) -> None: ...
+        def __contains__(self, key: Literal["total_targeted_countries", "countries"]) -> bool: ...  # type: ignore[override]
 
     class ResellerConstraint(proto.Message):
         def __init__(
@@ -49,6 +52,7 @@ class PolicyTopicConstraint(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
+        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
     country_constraint_list: PolicyTopicConstraint.CountryConstraintList
     reseller_constraint: PolicyTopicConstraint.ResellerConstraint
     certificate_missing_in_country_list: PolicyTopicConstraint.CountryConstraintList
@@ -63,6 +67,7 @@ class PolicyTopicConstraint(proto.Message):
         certificate_missing_in_country_list: PolicyTopicConstraint.CountryConstraintList = ...,
         certificate_domain_mismatch_in_country_list: PolicyTopicConstraint.CountryConstraintList = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["country_constraint_list", "reseller_constraint", "certificate_missing_in_country_list", "certificate_domain_mismatch_in_country_list"]) -> bool: ...  # type: ignore[override]
 
 class PolicyTopicEntry(proto.Message):
     topic: str
@@ -79,6 +84,7 @@ class PolicyTopicEntry(proto.Message):
         evidences: MutableSequence[PolicyTopicEvidence] = ...,
         constraints: MutableSequence[PolicyTopicConstraint] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["topic", "type_", "evidences", "constraints"]) -> bool: ...  # type: ignore[override]
 
 class PolicyTopicEvidence(proto.Message):
     class DestinationMismatch(proto.Message):
@@ -94,6 +100,7 @@ class PolicyTopicEvidence(proto.Message):
                 PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType
             ] = ...,
         ) -> None: ...
+        def __contains__(self, key: Literal["url_types"]) -> bool: ...  # type: ignore[override]
 
     class DestinationNotWorking(proto.Message):
         expanded_url: str
@@ -112,6 +119,7 @@ class PolicyTopicEvidence(proto.Message):
             dns_error_type: PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType = ...,
             http_error_code: int = ...,
         ) -> None: ...
+        def __contains__(self, key: Literal["expanded_url", "device", "last_checked_date_time", "dns_error_type", "http_error_code"]) -> bool: ...  # type: ignore[override]
 
     class DestinationTextList(proto.Message):
         destination_texts: MutableSequence[str]
@@ -122,6 +130,7 @@ class PolicyTopicEvidence(proto.Message):
             ignore_unknown_fields: bool = False,
             destination_texts: MutableSequence[str] = ...,
         ) -> None: ...
+        def __contains__(self, key: Literal["destination_texts"]) -> bool: ...  # type: ignore[override]
 
     class TextList(proto.Message):
         texts: MutableSequence[str]
@@ -132,6 +141,7 @@ class PolicyTopicEvidence(proto.Message):
             ignore_unknown_fields: bool = False,
             texts: MutableSequence[str] = ...,
         ) -> None: ...
+        def __contains__(self, key: Literal["texts"]) -> bool: ...  # type: ignore[override]
 
     class WebsiteList(proto.Message):
         websites: MutableSequence[str]
@@ -142,6 +152,7 @@ class PolicyTopicEvidence(proto.Message):
             ignore_unknown_fields: bool = False,
             websites: MutableSequence[str] = ...,
         ) -> None: ...
+        def __contains__(self, key: Literal["websites"]) -> bool: ...  # type: ignore[override]
     website_list: PolicyTopicEvidence.WebsiteList
     text_list: PolicyTopicEvidence.TextList
     language_code: str
@@ -160,6 +171,7 @@ class PolicyTopicEvidence(proto.Message):
         destination_mismatch: PolicyTopicEvidence.DestinationMismatch = ...,
         destination_not_working: PolicyTopicEvidence.DestinationNotWorking = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["website_list", "text_list", "language_code", "destination_text_list", "destination_mismatch", "destination_not_working"]) -> bool: ...  # type: ignore[override]
 
 class PolicyValidationParameter(proto.Message):
     ignorable_policy_topics: MutableSequence[str]
@@ -172,6 +184,7 @@ class PolicyValidationParameter(proto.Message):
         ignorable_policy_topics: MutableSequence[str] = ...,
         exempt_policy_violation_keys: MutableSequence[PolicyViolationKey] = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["ignorable_policy_topics", "exempt_policy_violation_keys"]) -> bool: ...  # type: ignore[override]
 
 class PolicyViolationKey(proto.Message):
     policy_name: str
@@ -184,3 +197,4 @@ class PolicyViolationKey(proto.Message):
         policy_name: str = ...,
         violating_text: str = ...,
     ) -> None: ...
+    def __contains__(self, key: Literal["policy_name", "violating_text"]) -> bool: ...  # type: ignore[override]

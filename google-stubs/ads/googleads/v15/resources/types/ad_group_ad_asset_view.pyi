@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.common.types.policy import PolicyTopicEntry
 from google.ads.googleads.v15.enums.types.asset_field_type import AssetFieldTypeEnum
@@ -35,6 +36,7 @@ class AdGroupAdAssetPolicySummary(proto.Message):
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]
 
 class AdGroupAdAssetView(proto.Message):
     resource_name: str
@@ -61,3 +63,4 @@ class AdGroupAdAssetView(proto.Message):
         pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType = ...,
         source: AssetSourceEnum.AssetSource = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "ad_group_ad", "asset", "field_type", "enabled", "policy_summary", "performance_label", "pinned_field", "source"]) -> bool: ...  # type: ignore[override]

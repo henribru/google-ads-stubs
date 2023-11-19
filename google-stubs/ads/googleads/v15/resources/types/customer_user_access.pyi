@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.access_role import AccessRoleEnum
 
@@ -27,3 +28,4 @@ class CustomerUserAccess(proto.Message):
         access_creation_date_time: str = ...,
         inviter_user_email_address: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "user_id", "email_address", "access_role", "access_creation_date_time", "inviter_user_email_address"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.common.types.criterion_category_availability import (
     CriterionCategoryAvailability,
@@ -29,3 +30,4 @@ class DetailedDemographic(proto.Message):
         launched_to_all: bool = ...,
         availabilities: MutableSequence[CriterionCategoryAvailability] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "name", "parent", "launched_to_all", "availabilities"]) -> bool: ...  # type: ignore[override]

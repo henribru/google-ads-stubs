@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.conversion_action_category import (
     ConversionActionCategoryEnum,
@@ -50,3 +51,4 @@ class ConversionValueRuleSet(proto.Message):
             ConversionActionCategoryEnum.ConversionActionCategory
         ] = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "conversion_value_rules", "dimensions", "owner_customer", "attachment_type", "campaign", "status", "conversion_action_categories"]) -> bool: ...  # type: ignore[override]

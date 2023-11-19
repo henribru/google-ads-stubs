@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.goal_config_level import GoalConfigLevelEnum
 
@@ -23,3 +24,4 @@ class ConversionGoalCampaignConfig(proto.Message):
         goal_config_level: GoalConfigLevelEnum.GoalConfigLevel = ...,
         custom_conversion_goal: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "campaign", "goal_config_level", "custom_conversion_goal"]) -> bool: ...  # type: ignore[override]

@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.app_url_operating_system_type import (
     AppUrlOperatingSystemTypeEnum,
@@ -21,3 +22,4 @@ class FinalAppUrl(proto.Message):
         os_type: AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType = ...,
         url: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["os_type", "url"]) -> bool: ...  # type: ignore[override]

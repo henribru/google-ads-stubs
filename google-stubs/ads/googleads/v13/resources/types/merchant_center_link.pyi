@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v13.enums.types.merchant_center_link_status import (
     MerchantCenterLinkStatusEnum,
@@ -25,3 +26,4 @@ class MerchantCenterLink(proto.Message):
         merchant_center_account_name: str = ...,
         status: MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "merchant_center_account_name", "status"]) -> bool: ...  # type: ignore[override]

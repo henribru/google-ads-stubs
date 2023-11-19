@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.android_privacy_interaction_type import (
     AndroidPrivacyInteractionTypeEnum,
@@ -27,3 +28,4 @@ class AndroidPrivacySharedKeyGoogleCampaign(proto.Message):
         android_privacy_interaction_date: str = ...,
         shared_campaign_key: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "campaign_id", "android_privacy_interaction_type", "android_privacy_interaction_date", "shared_campaign_key"]) -> bool: ...  # type: ignore[override]

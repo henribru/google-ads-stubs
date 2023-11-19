@@ -1,8 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.placeholder_type import PlaceholderTypeEnum
 
@@ -19,3 +20,4 @@ class FeedPlaceholderView(proto.Message):
         resource_name: str = ...,
         placeholder_type: PlaceholderTypeEnum.PlaceholderType = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "placeholder_type"]) -> bool: ...  # type: ignore[override]

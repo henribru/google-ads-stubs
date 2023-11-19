@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v15.enums.types.conversion_value_rule_status import (
     ConversionValueRuleStatusEnum,
@@ -31,6 +32,7 @@ class ConversionValueRule(proto.Message):
             operation: ValueRuleOperationEnum.ValueRuleOperation = ...,
             value: float = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["operation", "value"]) -> bool: ...  # type: ignore[override]
 
     class ValueRuleAudienceCondition(proto.Message):
         user_lists: MutableSequence[str]
@@ -43,6 +45,7 @@ class ConversionValueRule(proto.Message):
             user_lists: MutableSequence[str] = ...,
             user_interests: MutableSequence[str] = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["user_lists", "user_interests"]) -> bool: ...  # type: ignore[override]
 
     class ValueRuleDeviceCondition(proto.Message):
         device_types: MutableSequence[ValueRuleDeviceTypeEnum.ValueRuleDeviceType]
@@ -55,6 +58,7 @@ class ConversionValueRule(proto.Message):
                 ValueRuleDeviceTypeEnum.ValueRuleDeviceType
             ] = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["device_types"]) -> bool: ...  # type: ignore[override]
 
     class ValueRuleGeoLocationCondition(proto.Message):
         excluded_geo_target_constants: MutableSequence[str]
@@ -71,6 +75,7 @@ class ConversionValueRule(proto.Message):
             geo_target_constants: MutableSequence[str] = ...,
             geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType = ...
         ) -> None: ...
+        def __contains__(self, key: Literal["excluded_geo_target_constants", "excluded_geo_match_type", "geo_target_constants", "geo_match_type"]) -> bool: ...  # type: ignore[override]
     resource_name: str
     id: int
     action: ConversionValueRule.ValueRuleAction
@@ -93,3 +98,4 @@ class ConversionValueRule(proto.Message):
         owner_customer: str = ...,
         status: ConversionValueRuleStatusEnum.ConversionValueRuleStatus = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "action", "geo_location_condition", "device_condition", "audience_condition", "owner_customer", "status"]) -> bool: ...  # type: ignore[override]

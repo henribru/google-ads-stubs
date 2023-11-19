@@ -1,8 +1,9 @@
 from collections.abc import Mapping, MutableSequence
-from typing import Any, TypeVar
+from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from typing_extensions import Literal
 
 from google.ads.googleads.v14.enums.types.lead_form_field_user_input_type import (
     LeadFormFieldUserInputTypeEnum,
@@ -21,6 +22,7 @@ class CustomLeadFormSubmissionField(proto.Message):
         question_text: str = ...,
         field_value: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["question_text", "field_value"]) -> bool: ...  # type: ignore[override]
 
 class LeadFormSubmissionData(proto.Message):
     resource_name: str
@@ -51,6 +53,7 @@ class LeadFormSubmissionData(proto.Message):
         gclid: str = ...,
         submission_date_time: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["resource_name", "id", "asset", "campaign", "lead_form_submission_fields", "custom_lead_form_submission_fields", "ad_group", "ad_group_ad", "gclid", "submission_date_time"]) -> bool: ...  # type: ignore[override]
 
 class LeadFormSubmissionField(proto.Message):
     field_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType
@@ -63,3 +66,4 @@ class LeadFormSubmissionField(proto.Message):
         field_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType = ...,
         field_value: str = ...
     ) -> None: ...
+    def __contains__(self, key: Literal["field_type", "field_value"]) -> bool: ...  # type: ignore[override]
