@@ -46,6 +46,7 @@ class CampaignPrimaryStatusReasonEnum(proto.Message):
         HAS_ASSET_GROUPS_DISAPPROVED = 34
         HAS_ASSET_GROUPS_LIMITED_BY_POLICY = 35
         MOST_ASSET_GROUPS_UNDER_REVIEW = 36
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

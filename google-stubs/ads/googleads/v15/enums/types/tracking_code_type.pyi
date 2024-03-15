@@ -15,6 +15,7 @@ class TrackingCodeTypeEnum(proto.Message):
         WEBPAGE_ONCLICK = 3
         CLICK_TO_CALL = 4
         WEBSITE_CALL = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

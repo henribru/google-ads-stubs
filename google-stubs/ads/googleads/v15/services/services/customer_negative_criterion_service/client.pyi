@@ -77,15 +77,19 @@ class CustomerNegativeCriterionServiceClient(
     ) -> None: ...
     def mutate_customer_negative_criteria(
         self,
-        request: customer_negative_criterion_service.MutateCustomerNegativeCriteriaRequest
-        | dict
-        | None = None,
+        request: (
+            customer_negative_criterion_service.MutateCustomerNegativeCriteriaRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            customer_negative_criterion_service.CustomerNegativeCriterionOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[
+                customer_negative_criterion_service.CustomerNegativeCriterionOperation
+            ]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

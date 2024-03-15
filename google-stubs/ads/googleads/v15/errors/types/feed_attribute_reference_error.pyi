@@ -14,6 +14,7 @@ class FeedAttributeReferenceErrorEnum(proto.Message):
         CANNOT_REFERENCE_REMOVED_FEED = 2
         INVALID_FEED_NAME = 3
         INVALID_FEED_ATTRIBUTE_NAME = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

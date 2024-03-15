@@ -69,13 +69,14 @@ class CustomInterestServiceClient(metaclass=CustomInterestServiceClientMeta):
     ) -> None: ...
     def mutate_custom_interests(
         self,
-        request: custom_interest_service.MutateCustomInterestsRequest
-        | dict
-        | None = None,
+        request: (
+            custom_interest_service.MutateCustomInterestsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[custom_interest_service.CustomInterestOperation]
-        | None = None,
+        operations: (
+            MutableSequence[custom_interest_service.CustomInterestOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

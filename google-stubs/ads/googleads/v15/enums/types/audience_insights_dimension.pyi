@@ -23,6 +23,7 @@ class AudienceInsightsDimensionEnum(proto.Message):
         INCOME_RANGE = 11
         AGE_RANGE = 12
         GENDER = 13
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -17,6 +17,7 @@ class AssetGroupPrimaryStatusEnum(proto.Message):
         NOT_ELIGIBLE = 5
         LIMITED = 6
         PENDING = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

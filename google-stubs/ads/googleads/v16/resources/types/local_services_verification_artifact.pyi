@@ -43,9 +43,13 @@ class BackgroundCheckVerificationArtifact(proto.Message):
     def __contains__(self, key: Literal["case_url", "final_adjudication_date_time"]) -> bool: ...  # type: ignore[override]
 
 class BusinessRegistrationCheckVerificationArtifact(proto.Message):
-    registration_type: LocalServicesBusinessRegistrationTypeEnum.LocalServicesBusinessRegistrationType
+    registration_type: (
+        LocalServicesBusinessRegistrationTypeEnum.LocalServicesBusinessRegistrationType
+    )
     check_id: str
-    rejection_reason: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    rejection_reason: (
+        LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    )
     registration_number: BusinessRegistrationNumber
     registration_document: BusinessRegistrationDocument
     def __init__(
@@ -85,7 +89,9 @@ class BusinessRegistrationNumber(proto.Message):
 
 class InsuranceVerificationArtifact(proto.Message):
     amount_micros: int
-    rejection_reason: LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason
+    rejection_reason: (
+        LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason
+    )
     insurance_document_readonly: LocalServicesDocumentReadOnly
     def __init__(
         self: _M,
@@ -103,7 +109,9 @@ class LicenseVerificationArtifact(proto.Message):
     license_number: str
     licensee_first_name: str
     licensee_last_name: str
-    rejection_reason: LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason
+    rejection_reason: (
+        LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason
+    )
     license_document_readonly: LocalServicesDocumentReadOnly
     def __init__(
         self: _M,
@@ -123,12 +131,18 @@ class LocalServicesVerificationArtifact(proto.Message):
     resource_name: str
     id: int
     creation_date_time: str
-    status: LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
-    artifact_type: LocalServicesVerificationArtifactTypeEnum.LocalServicesVerificationArtifactType
+    status: (
+        LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
+    )
+    artifact_type: (
+        LocalServicesVerificationArtifactTypeEnum.LocalServicesVerificationArtifactType
+    )
     background_check_verification_artifact: BackgroundCheckVerificationArtifact
     insurance_verification_artifact: InsuranceVerificationArtifact
     license_verification_artifact: LicenseVerificationArtifact
-    business_registration_check_verification_artifact: BusinessRegistrationCheckVerificationArtifact
+    business_registration_check_verification_artifact: (
+        BusinessRegistrationCheckVerificationArtifact
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -22,7 +22,9 @@ class CallView(proto.Message):
     call_duration_seconds: int
     start_call_date_time: str
     end_call_date_time: str
-    call_tracking_display_location: CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation
+    call_tracking_display_location: (
+        CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation
+    )
     type_: CallTypeEnum.CallType
     call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus
     def __init__(

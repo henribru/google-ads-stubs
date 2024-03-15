@@ -21,6 +21,7 @@ class ConversionActionErrorEnum(proto.Message):
         DATA_DRIVEN_MODEL_UNKNOWN = 9
         CREATION_NOT_SUPPORTED = 10
         UPDATE_NOT_SUPPORTED = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

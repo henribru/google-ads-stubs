@@ -81,13 +81,14 @@ class FeedItemSetLinkServiceClient(metaclass=FeedItemSetLinkServiceClientMeta):
     ) -> None: ...
     def mutate_feed_item_set_links(
         self,
-        request: feed_item_set_link_service.MutateFeedItemSetLinksRequest
-        | dict
-        | None = None,
+        request: (
+            feed_item_set_link_service.MutateFeedItemSetLinksRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[feed_item_set_link_service.FeedItemSetLinkOperation]
-        | None = None,
+        operations: (
+            MutableSequence[feed_item_set_link_service.FeedItemSetLinkOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

@@ -16,6 +16,7 @@ class ListingGroupFilterCustomAttributeIndexEnum(proto.Message):
         INDEX2 = 4
         INDEX3 = 5
         INDEX4 = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

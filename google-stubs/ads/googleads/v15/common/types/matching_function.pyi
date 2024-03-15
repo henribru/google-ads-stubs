@@ -83,6 +83,7 @@ class Operand(proto.Message):
             context_type: MatchingFunctionContextTypeEnum.MatchingFunctionContextType = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["context_type"]) -> bool: ...  # type: ignore[override]
+
     constant_operand: Operand.ConstantOperand
     feed_attribute_operand: Operand.FeedAttributeOperand
     function_operand: Operand.FunctionOperand

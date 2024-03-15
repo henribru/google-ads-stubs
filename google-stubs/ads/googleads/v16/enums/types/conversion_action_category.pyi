@@ -32,6 +32,7 @@ class ConversionActionCategoryEnum(proto.Message):
         STORE_SALE = 21
         QUALIFIED_LEAD = 22
         CONVERTED_LEAD = 23
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

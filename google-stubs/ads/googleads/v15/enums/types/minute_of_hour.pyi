@@ -15,6 +15,7 @@ class MinuteOfHourEnum(proto.Message):
         FIFTEEN = 3
         THIRTY = 4
         FORTY_FIVE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -18,6 +18,7 @@ class UserListTypeEnum(proto.Message):
         SIMILAR = 6
         CRM_BASED = 7
         LOOKALIKE = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

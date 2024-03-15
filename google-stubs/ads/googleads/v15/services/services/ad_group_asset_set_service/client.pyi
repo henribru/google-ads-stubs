@@ -79,13 +79,14 @@ class AdGroupAssetSetServiceClient(metaclass=AdGroupAssetSetServiceClientMeta):
     ) -> None: ...
     def mutate_ad_group_asset_sets(
         self,
-        request: ad_group_asset_set_service.MutateAdGroupAssetSetsRequest
-        | dict
-        | None = None,
+        request: (
+            ad_group_asset_set_service.MutateAdGroupAssetSetsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[ad_group_asset_set_service.AdGroupAssetSetOperation]
-        | None = None,
+        operations: (
+            MutableSequence[ad_group_asset_set_service.AdGroupAssetSetOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

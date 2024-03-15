@@ -73,13 +73,14 @@ class ConversionActionServiceClient(metaclass=ConversionActionServiceClientMeta)
     ) -> None: ...
     def mutate_conversion_actions(
         self,
-        request: conversion_action_service.MutateConversionActionsRequest
-        | dict
-        | None = None,
+        request: (
+            conversion_action_service.MutateConversionActionsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[conversion_action_service.ConversionActionOperation]
-        | None = None,
+        operations: (
+            MutableSequence[conversion_action_service.ConversionActionOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

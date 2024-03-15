@@ -31,7 +31,9 @@ class BusinessProfileBusinessNameFilter(proto.Message):
     def __contains__(self, key: Literal["business_name", "filter_type"]) -> bool: ...  # type: ignore[override]
 
 class BusinessProfileLocationGroup(proto.Message):
-    dynamic_business_profile_location_group_filter: DynamicBusinessProfileLocationGroupFilter
+    dynamic_business_profile_location_group_filter: (
+        DynamicBusinessProfileLocationGroupFilter
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

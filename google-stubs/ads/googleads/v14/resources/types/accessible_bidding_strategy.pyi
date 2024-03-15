@@ -86,6 +86,7 @@ class AccessibleBiddingStrategy(proto.Message):
             cpc_bid_ceiling_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_spend_micros", "cpc_bid_ceiling_micros"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     name: str

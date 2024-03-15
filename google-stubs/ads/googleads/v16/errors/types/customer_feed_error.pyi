@@ -18,6 +18,7 @@ class CustomerFeedErrorEnum(proto.Message):
         INVALID_PLACEHOLDER_TYPE = 6
         MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE = 7
         PLACEHOLDER_TYPE_NOT_ALLOWED_ON_CUSTOMER_FEED = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

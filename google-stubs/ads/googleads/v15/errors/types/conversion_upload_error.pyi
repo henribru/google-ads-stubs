@@ -59,6 +59,7 @@ class ConversionUploadErrorEnum(proto.Message):
         INVALID_JOB_ID = 52
         NO_CONVERSION_ACTION_FOUND = 53
         INVALID_CONVERSION_ACTION_TYPE = 54
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

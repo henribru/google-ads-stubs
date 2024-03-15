@@ -17,6 +17,7 @@ class ConversionGoalCampaignConfigErrorEnum(proto.Message):
         EMPTY_CONVERSION_GOALS = 5
         STORE_SALE_STORE_VISIT_CANNOT_BE_BOTH_INCLUDED = 6
         PERFORMANCE_MAX_CAMPAIGN_CANNOT_USE_CUSTOM_GOAL_WITH_STORE_SALES = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

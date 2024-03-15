@@ -15,6 +15,7 @@ class AssetGroupSignalApprovalStatusEnum(proto.Message):
         LIMITED = 3
         DISAPPROVED = 4
         UNDER_REVIEW = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

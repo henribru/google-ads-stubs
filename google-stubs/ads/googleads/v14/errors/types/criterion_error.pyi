@@ -155,6 +155,7 @@ class CriterionErrorEnum(proto.Message):
         CANNOT_ADD_AUDIENCE_SEGMENT_CRITERION_WHEN_AUDIENCE_GROUPED_IS_SET = 152
         ONE_AUDIENCE_ALLOWED_PER_AD_GROUP = 153
         INVALID_DETAILED_DEMOGRAPHIC = 154
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

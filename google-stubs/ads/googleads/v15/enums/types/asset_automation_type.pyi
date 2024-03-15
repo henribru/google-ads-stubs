@@ -12,6 +12,7 @@ class AssetAutomationTypeEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         TEXT_ASSET_AUTOMATION = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

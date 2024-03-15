@@ -21,6 +21,7 @@ class ExperimentTypeEnum(proto.Message):
         SHOPPING_AUTOMATED_BIDDING_STRATEGY = 10
         SMART_MATCHING = 11
         HOTEL_CUSTOM = 12
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

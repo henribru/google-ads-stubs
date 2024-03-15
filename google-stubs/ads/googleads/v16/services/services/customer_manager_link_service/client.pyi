@@ -75,24 +75,24 @@ class CustomerManagerLinkServiceClient(metaclass=CustomerManagerLinkServiceClien
     ) -> None: ...
     def mutate_customer_manager_link(
         self,
-        request: customer_manager_link_service.MutateCustomerManagerLinkRequest
-        | dict
-        | None = None,
+        request: (
+            customer_manager_link_service.MutateCustomerManagerLinkRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            customer_manager_link_service.CustomerManagerLinkOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[customer_manager_link_service.CustomerManagerLinkOperation]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
     ) -> customer_manager_link_service.MutateCustomerManagerLinkResponse: ...
     def move_manager_link(
         self,
-        request: customer_manager_link_service.MoveManagerLinkRequest
-        | dict
-        | None = None,
+        request: (
+            customer_manager_link_service.MoveManagerLinkRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
         previous_customer_manager_link: str | None = None,

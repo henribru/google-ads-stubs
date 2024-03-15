@@ -12,6 +12,7 @@ class AudienceInsightsErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         DIMENSION_INCOMPATIBLE_WITH_TOPIC_AUDIENCE_COMBINATIONS = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

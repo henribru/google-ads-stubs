@@ -64,7 +64,9 @@ class RemoveProductLinkInvitationResponse(proto.Message):
 
 class UpdateProductLinkInvitationRequest(proto.Message):
     customer_id: str
-    product_link_invitation_status: ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
+    product_link_invitation_status: (
+        ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
+    )
     resource_name: str
     def __init__(
         self: _M,

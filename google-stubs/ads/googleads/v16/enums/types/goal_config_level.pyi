@@ -13,6 +13,7 @@ class GoalConfigLevelEnum(proto.Message):
         UNKNOWN = 1
         CUSTOMER = 2
         CAMPAIGN = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

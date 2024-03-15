@@ -13,6 +13,7 @@ class AudienceScopeEnum(proto.Message):
         UNKNOWN = 1
         CUSTOMER = 2
         ASSET_GROUP = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -28,6 +28,7 @@ class AdGroupTypeEnum(proto.Message):
         VIDEO_EFFICIENT_REACH = 17
         SMART_CAMPAIGN_ADS = 18
         TRAVEL_ADS = 19
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -15,6 +15,7 @@ class HotelReconciliationStatusEnum(proto.Message):
         RECONCILIATION_NEEDED = 3
         RECONCILED = 4
         CANCELED = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

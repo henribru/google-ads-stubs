@@ -53,10 +53,13 @@ class PolicyTopicConstraint(proto.Message):
             ignore_unknown_fields: bool = False,
         ) -> None: ...
         def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+
     country_constraint_list: PolicyTopicConstraint.CountryConstraintList
     reseller_constraint: PolicyTopicConstraint.ResellerConstraint
     certificate_missing_in_country_list: PolicyTopicConstraint.CountryConstraintList
-    certificate_domain_mismatch_in_country_list: PolicyTopicConstraint.CountryConstraintList
+    certificate_domain_mismatch_in_country_list: (
+        PolicyTopicConstraint.CountryConstraintList
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -104,9 +107,13 @@ class PolicyTopicEvidence(proto.Message):
 
     class DestinationNotWorking(proto.Message):
         expanded_url: str
-        device: PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice
+        device: (
+            PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice
+        )
         last_checked_date_time: str
-        dns_error_type: PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
+        dns_error_type: (
+            PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
+        )
         http_error_code: int
         def __init__(
             self: _M,
@@ -153,6 +160,7 @@ class PolicyTopicEvidence(proto.Message):
             websites: MutableSequence[str] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["websites"]) -> bool: ...  # type: ignore[override]
+
     website_list: PolicyTopicEvidence.WebsiteList
     text_list: PolicyTopicEvidence.TextList
     language_code: str

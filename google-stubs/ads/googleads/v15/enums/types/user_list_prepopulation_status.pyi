@@ -14,6 +14,7 @@ class UserListPrepopulationStatusEnum(proto.Message):
         REQUESTED = 2
         FINISHED = 3
         FAILED = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

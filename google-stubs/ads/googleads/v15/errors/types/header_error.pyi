@@ -13,6 +13,7 @@ class HeaderErrorEnum(proto.Message):
         UNKNOWN = 1
         INVALID_LOGIN_CUSTOMER_ID = 3
         INVALID_LINKED_CUSTOMER_ID = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -17,7 +17,9 @@ class OperatingSystemVersionConstant(proto.Message):
     name: str
     os_major_version: int
     os_minor_version: int
-    operator_type: OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType
+    operator_type: (
+        OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

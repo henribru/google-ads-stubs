@@ -19,6 +19,7 @@ class FieldErrorEnum(proto.Message):
         FIELD_CANNOT_BE_CLEARED = 7
         BLOCKED_VALUE = 9
         FIELD_CAN_ONLY_BE_CLEARED = 10
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

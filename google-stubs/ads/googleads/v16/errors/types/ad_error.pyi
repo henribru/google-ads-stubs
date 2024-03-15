@@ -163,6 +163,7 @@ class AdErrorEnum(proto.Message):
         MISSING_REQUIRED_IMAGE_ASPECT_RATIO = 153
         MISMATCHED_ASPECT_RATIOS = 155
         DUPLICATE_IMAGE_ACROSS_CAROUSEL_CARDS = 156
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

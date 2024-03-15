@@ -26,6 +26,7 @@ class AssetSetTypeEnum(proto.Message):
         CHAIN_DYNAMIC_LOCATION_GROUP = 14
         STATIC_LOCATION_GROUP = 15
         HOTEL_PROPERTY = 16
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

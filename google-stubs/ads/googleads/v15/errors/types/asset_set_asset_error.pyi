@@ -15,6 +15,7 @@ class AssetSetAssetErrorEnum(proto.Message):
         INVALID_ASSET_SET_TYPE = 3
         DUPLICATE_EXTERNAL_KEY = 4
         PARENT_LINKAGE_DOES_NOT_EXIST = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

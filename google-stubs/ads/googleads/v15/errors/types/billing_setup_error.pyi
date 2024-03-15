@@ -31,6 +31,7 @@ class BillingSetupErrorEnum(proto.Message):
         PAYMENTS_ACCOUNT_INELIGIBLE_CURRENCY_CODE_MISMATCH = 19
         FUTURE_START_TIME_PROHIBITED = 20
         TOO_MANY_BILLING_SETUPS_FOR_PAYMENTS_ACCOUNT = 21
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

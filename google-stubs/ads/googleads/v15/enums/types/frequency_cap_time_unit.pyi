@@ -14,6 +14,7 @@ class FrequencyCapTimeUnitEnum(proto.Message):
         DAY = 2
         WEEK = 3
         MONTH = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

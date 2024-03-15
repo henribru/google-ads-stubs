@@ -13,6 +13,7 @@ class CustomerErrorEnum(proto.Message):
         UNKNOWN = 1
         STATUS_CHANGE_DISALLOWED = 2
         ACCOUNT_NOT_SET_UP = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

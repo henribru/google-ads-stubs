@@ -15,6 +15,7 @@ class OfflineUserDataJobStatusEnum(proto.Message):
         RUNNING = 3
         SUCCESS = 4
         FAILED = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

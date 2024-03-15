@@ -33,6 +33,7 @@ class AssetGroupListingGroupFilterErrorEnum(proto.Message):
         MULTIPLE_WEBPAGE_TYPES_PER_ASSET_GROUP = 21
         PAGE_FEED_FILTER_HAS_PARENT = 22
         MULTIPLE_OPERATIONS_ON_ONE_NODE = 23
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

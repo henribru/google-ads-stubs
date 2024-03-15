@@ -48,6 +48,7 @@ class PromotionExtensionOccasionEnum(proto.Message):
         NAVRATRI = 36
         SONGKRAN = 37
         YEAR_END_GIFT = 38
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

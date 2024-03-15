@@ -19,6 +19,7 @@ class LocalServicesLeadStatusEnum(proto.Message):
         DISABLED = 7
         CONSUMER_DECLINED = 8
         WIPED_OUT = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

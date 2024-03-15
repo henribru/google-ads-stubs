@@ -20,6 +20,7 @@ class AssetGroupPrimaryStatusReasonEnum(proto.Message):
         ASSET_GROUP_LIMITED = 8
         ASSET_GROUP_DISAPPROVED = 9
         ASSET_GROUP_UNDER_REVIEW = 10
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

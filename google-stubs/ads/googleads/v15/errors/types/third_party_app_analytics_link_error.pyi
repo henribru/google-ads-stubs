@@ -15,6 +15,7 @@ class ThirdPartyAppAnalyticsLinkErrorEnum(proto.Message):
         INVALID_MOBILE_APP_ID = 3
         MOBILE_APP_IS_NOT_ENABLED = 4
         CANNOT_REGENERATE_SHAREABLE_LINK_ID_FOR_REMOVED_LINK = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

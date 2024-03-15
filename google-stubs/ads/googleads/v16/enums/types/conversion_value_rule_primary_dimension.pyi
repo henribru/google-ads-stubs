@@ -18,6 +18,7 @@ class ConversionValueRulePrimaryDimensionEnum(proto.Message):
         DEVICE = 6
         AUDIENCE = 7
         MULTIPLE = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

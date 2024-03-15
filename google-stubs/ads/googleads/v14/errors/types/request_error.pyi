@@ -36,6 +36,7 @@ class RequestErrorEnum(proto.Message):
         RPC_DEADLINE_TOO_SHORT = 33
         UNSUPPORTED_VERSION = 38
         CLOUD_PROJECT_NOT_FOUND = 39
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

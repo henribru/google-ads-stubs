@@ -49,6 +49,7 @@ class AccountBudget(proto.Message):
             spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["account_budget_proposal", "proposal_type", "name", "start_date_time", "purchase_order_number", "notes", "creation_date_time", "end_date_time", "end_time_type", "spending_limit_micros", "spending_limit_type"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     billing_setup: str

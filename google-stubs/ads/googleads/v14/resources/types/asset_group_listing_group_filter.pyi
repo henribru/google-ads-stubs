@@ -57,7 +57,9 @@ class AssetGroupListingGroupFilter(proto.Message):
 class ListingGroupFilterDimension(proto.Message):
     class ProductBiddingCategory(proto.Message):
         id: int
-        level: ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel
+        level: (
+            ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel
+        )
         def __init__(
             self: _M,
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -91,7 +93,9 @@ class ListingGroupFilterDimension(proto.Message):
         def __contains__(self, key: Literal["channel"]) -> bool: ...  # type: ignore[override]
 
     class ProductCondition(proto.Message):
-        condition: ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition
+        condition: (
+            ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition
+        )
         def __init__(
             self: _M,
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -103,7 +107,9 @@ class ListingGroupFilterDimension(proto.Message):
 
     class ProductCustomAttribute(proto.Message):
         value: str
-        index: ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex
+        index: (
+            ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex
+        )
         def __init__(
             self: _M,
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -137,6 +143,7 @@ class ListingGroupFilterDimension(proto.Message):
             level: ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["value", "level"]) -> bool: ...  # type: ignore[override]
+
     product_bidding_category: ListingGroupFilterDimension.ProductBiddingCategory
     product_brand: ListingGroupFilterDimension.ProductBrand
     product_channel: ListingGroupFilterDimension.ProductChannel

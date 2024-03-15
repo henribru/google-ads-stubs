@@ -15,6 +15,7 @@ class CustomerStatusEnum(proto.Message):
         CANCELED = 3
         SUSPENDED = 4
         CLOSED = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -16,6 +16,7 @@ class ListingGroupFilterProductTypeLevelEnum(proto.Message):
         LEVEL3 = 4
         LEVEL4 = 5
         LEVEL5 = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

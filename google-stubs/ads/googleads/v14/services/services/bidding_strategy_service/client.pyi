@@ -69,13 +69,14 @@ class BiddingStrategyServiceClient(metaclass=BiddingStrategyServiceClientMeta):
     ) -> None: ...
     def mutate_bidding_strategies(
         self,
-        request: bidding_strategy_service.MutateBiddingStrategiesRequest
-        | dict
-        | None = None,
+        request: (
+            bidding_strategy_service.MutateBiddingStrategiesRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[bidding_strategy_service.BiddingStrategyOperation]
-        | None = None,
+        operations: (
+            MutableSequence[bidding_strategy_service.BiddingStrategyOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

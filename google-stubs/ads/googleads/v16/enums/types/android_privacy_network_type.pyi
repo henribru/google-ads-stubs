@@ -14,6 +14,7 @@ class AndroidPrivacyNetworkTypeEnum(proto.Message):
         SEARCH = 2
         DISPLAY = 3
         YOUTUBE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

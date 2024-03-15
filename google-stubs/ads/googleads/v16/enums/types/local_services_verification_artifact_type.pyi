@@ -15,6 +15,7 @@ class LocalServicesVerificationArtifactTypeEnum(proto.Message):
         INSURANCE = 3
         LICENSE = 4
         BUSINESS_REGISTRATION_CHECK = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

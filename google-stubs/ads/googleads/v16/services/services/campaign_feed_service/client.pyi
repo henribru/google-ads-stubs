@@ -80,8 +80,9 @@ class CampaignFeedServiceClient(metaclass=CampaignFeedServiceClientMeta):
         request: campaign_feed_service.MutateCampaignFeedsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[campaign_feed_service.CampaignFeedOperation]
-        | None = None,
+        operations: (
+            MutableSequence[campaign_feed_service.CampaignFeedOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

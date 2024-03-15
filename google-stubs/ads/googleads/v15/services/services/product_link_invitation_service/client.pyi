@@ -76,13 +76,17 @@ class ProductLinkInvitationServiceClient(
     ) -> None: ...
     def update_product_link_invitation(
         self,
-        request: product_link_invitation_service.UpdateProductLinkInvitationRequest
-        | dict
-        | None = None,
+        request: (
+            product_link_invitation_service.UpdateProductLinkInvitationRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        product_link_invitation_status: gage_product_link_invitation_status.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
-        | None = None,
+        product_link_invitation_status: (
+            gage_product_link_invitation_status.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
+            | None
+        ) = None,
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

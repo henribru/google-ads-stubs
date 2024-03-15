@@ -15,6 +15,7 @@ class CriterionCategoryLocaleAvailabilityModeEnum(proto.Message):
         COUNTRY_AND_ALL_LANGUAGES = 3
         LANGUAGE_AND_ALL_COUNTRIES = 4
         COUNTRY_AND_LANGUAGE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

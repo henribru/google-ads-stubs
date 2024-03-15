@@ -14,6 +14,7 @@ class AssetGroupSignalErrorEnum(proto.Message):
         TOO_MANY_WORDS = 2
         SEARCH_THEME_POLICY_VIOLATION = 3
         AUDIENCE_WITH_WRONG_ASSET_GROUP_ID = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -16,6 +16,7 @@ class DeviceEnum(proto.Message):
         DESKTOP = 4
         CONNECTED_TV = 6
         OTHER = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

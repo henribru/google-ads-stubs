@@ -30,6 +30,7 @@ class ChangeEventResourceTypeEnum(proto.Message):
         ASSET_SET = 18
         ASSET_SET_ASSET = 19
         CAMPAIGN_ASSET_SET = 20
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

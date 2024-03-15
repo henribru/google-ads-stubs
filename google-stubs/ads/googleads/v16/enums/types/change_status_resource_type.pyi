@@ -28,6 +28,7 @@ class ChangeStatusResourceTypeEnum(proto.Message):
         CAMPAIGN_ASSET = 18
         AD_GROUP_ASSET = 19
         COMBINED_AUDIENCE = 20
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

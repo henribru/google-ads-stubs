@@ -35,6 +35,7 @@ class BiddingErrorEnum(proto.Message):
         BIDDING_STRATEGY_AND_BUDGET_MUST_BE_ATTACHED_TO_THE_SAME_CAMPAIGNS_TO_ALIGN = 39
         BIDDING_STRATEGY_AND_BUDGET_MUST_BE_REMOVED_TOGETHER = 40
         CPC_BID_FLOOR_MICROS_GREATER_THAN_CPC_BID_CEILING_MICROS = 41
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

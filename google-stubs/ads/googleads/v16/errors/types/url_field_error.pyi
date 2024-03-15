@@ -64,6 +64,7 @@ class UrlFieldErrorEnum(proto.Message):
         MISSING_HOST = 56
         NULL_CUSTOM_PARAMETER_VALUE = 57
         VALUE_TRACK_PARAMETER_NOT_SUPPORTED = 58
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -16,6 +16,7 @@ class WebpageConditionOperandEnum(proto.Message):
         PAGE_TITLE = 4
         PAGE_CONTENT = 5
         CUSTOM_LABEL = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

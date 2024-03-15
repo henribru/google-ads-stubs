@@ -14,6 +14,7 @@ class CallConversionReportingStateEnum(proto.Message):
         DISABLED = 2
         USE_ACCOUNT_LEVEL_CALL_CONVERSION_ACTION = 3
         USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

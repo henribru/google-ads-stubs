@@ -15,6 +15,7 @@ class CustomAudienceTypeEnum(proto.Message):
         INTEREST = 3
         PURCHASE_INTENT = 4
         SEARCH = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

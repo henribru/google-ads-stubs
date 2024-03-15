@@ -13,6 +13,7 @@ class KeywordPlanAdGroupErrorEnum(proto.Message):
         UNKNOWN = 1
         INVALID_NAME = 2
         DUPLICATE_NAME = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

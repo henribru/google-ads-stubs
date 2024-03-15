@@ -13,6 +13,7 @@ class ValueRuleGeoLocationMatchTypeEnum(proto.Message):
         UNKNOWN = 1
         ANY = 2
         LOCATION_OF_PRESENCE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -36,6 +36,7 @@ class ConversionAdjustmentUploadErrorEnum(proto.Message):
         INVALID_JOB_ID = 26
         NO_CONVERSION_ACTION_FOUND = 27
         INVALID_CONVERSION_ACTION_TYPE = 28
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

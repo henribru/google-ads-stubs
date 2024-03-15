@@ -16,6 +16,7 @@ class MatchingFunctionOperatorEnum(proto.Message):
         EQUALS = 4
         AND = 5
         CONTAINS_ANY = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

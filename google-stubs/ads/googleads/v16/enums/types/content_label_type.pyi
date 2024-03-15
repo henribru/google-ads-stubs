@@ -26,6 +26,7 @@ class ContentLabelTypeEnum(proto.Message):
         EMBEDDED_VIDEO = 15
         LIVE_STREAMING_VIDEO = 16
         SOCIAL_ISSUES = 17
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

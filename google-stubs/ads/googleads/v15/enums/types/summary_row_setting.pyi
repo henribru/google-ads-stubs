@@ -14,6 +14,7 @@ class SummaryRowSettingEnum(proto.Message):
         NO_SUMMARY_ROW = 2
         SUMMARY_ROW_WITH_RESULTS = 3
         SUMMARY_ROW_ONLY = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

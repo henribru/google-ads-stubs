@@ -21,6 +21,7 @@ class FeedItemErrorEnum(proto.Message):
         CANNOT_MODIFY_KEY_ATTRIBUTE_VALUE = 9
         SIZE_TOO_LARGE_FOR_MULTI_VALUE_ATTRIBUTE = 10
         LEGACY_FEED_TYPE_READ_ONLY = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

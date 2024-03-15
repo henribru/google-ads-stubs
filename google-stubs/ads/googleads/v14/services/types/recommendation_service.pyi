@@ -24,6 +24,7 @@ class ApplyRecommendationOperation(proto.Message):
             UNKNOWN = 1
             CUSTOMER = 2
             CAMPAIGN = 3
+
         new_assets: MutableSequence[Asset]
         existing_assets: MutableSequence[str]
         scope: ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope
@@ -267,6 +268,7 @@ class ApplyRecommendationOperation(proto.Message):
             new_budget_amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["new_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     campaign_budget: ApplyRecommendationOperation.CampaignBudgetParameters
     text_ad: ApplyRecommendationOperation.TextAdParameters
@@ -279,10 +281,18 @@ class ApplyRecommendationOperation(proto.Message):
     move_unused_budget: ApplyRecommendationOperation.MoveUnusedBudgetParameters
     responsive_search_ad: ApplyRecommendationOperation.ResponsiveSearchAdParameters
     use_broad_match_keyword: ApplyRecommendationOperation.UseBroadMatchKeywordParameters
-    responsive_search_ad_asset: ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters
-    responsive_search_ad_improve_ad_strength: ApplyRecommendationOperation.ResponsiveSearchAdImproveAdStrengthParameters
-    raise_target_cpa_bid_too_low: ApplyRecommendationOperation.RaiseTargetCpaBidTooLowParameters
-    forecasting_set_target_roas: ApplyRecommendationOperation.ForecastingSetTargetRoasParameters
+    responsive_search_ad_asset: (
+        ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters
+    )
+    responsive_search_ad_improve_ad_strength: (
+        ApplyRecommendationOperation.ResponsiveSearchAdImproveAdStrengthParameters
+    )
+    raise_target_cpa_bid_too_low: (
+        ApplyRecommendationOperation.RaiseTargetCpaBidTooLowParameters
+    )
+    forecasting_set_target_roas: (
+        ApplyRecommendationOperation.ForecastingSetTargetRoasParameters
+    )
     callout_asset: ApplyRecommendationOperation.CalloutAssetParameters
     call_asset: ApplyRecommendationOperation.CallAssetParameters
     sitelink_asset: ApplyRecommendationOperation.SitelinkAssetParameters
@@ -367,6 +377,7 @@ class DismissRecommendationRequest(proto.Message):
             resource_name: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+
     customer_id: str
     operations: MutableSequence[
         DismissRecommendationRequest.DismissRecommendationOperation
@@ -396,6 +407,7 @@ class DismissRecommendationResponse(proto.Message):
             resource_name: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+
     results: MutableSequence[DismissRecommendationResponse.DismissRecommendationResult]
     partial_failure_error: Status
     def __init__(

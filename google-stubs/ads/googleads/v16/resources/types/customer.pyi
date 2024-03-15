@@ -129,7 +129,9 @@ class CustomerAgreementSetting(proto.Message):
 class GranularInsuranceStatus(proto.Message):
     geo_criterion_id: int
     category_id: str
-    verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
+    verification_status: (
+        LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -144,7 +146,9 @@ class GranularInsuranceStatus(proto.Message):
 class GranularLicenseStatus(proto.Message):
     geo_criterion_id: int
     category_id: str
-    verification_status: LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
+    verification_status: (
+        LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

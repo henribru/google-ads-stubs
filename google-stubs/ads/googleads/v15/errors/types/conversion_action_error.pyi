@@ -22,6 +22,7 @@ class ConversionActionErrorEnum(proto.Message):
         CREATION_NOT_SUPPORTED = 10
         UPDATE_NOT_SUPPORTED = 11
         CANNOT_SET_RULE_BASED_ATTRIBUTION_MODELS = 12
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

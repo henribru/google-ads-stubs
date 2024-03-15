@@ -18,6 +18,7 @@ class BatchJobErrorEnum(proto.Message):
         INVALID_PAGE_SIZE = 6
         CAN_ONLY_REMOVE_PENDING_JOB = 7
         CANNOT_LIST_RESULTS = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

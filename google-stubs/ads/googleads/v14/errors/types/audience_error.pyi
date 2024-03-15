@@ -19,6 +19,7 @@ class AudienceErrorEnum(proto.Message):
         TOO_MANY_SEGMENTS = 7
         TOO_MANY_DIMENSIONS_OF_SAME_TYPE = 8
         IN_USE = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

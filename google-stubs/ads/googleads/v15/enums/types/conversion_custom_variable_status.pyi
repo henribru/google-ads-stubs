@@ -14,6 +14,7 @@ class ConversionCustomVariableStatusEnum(proto.Message):
         ACTIVATION_NEEDED = 2
         ENABLED = 3
         PAUSED = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

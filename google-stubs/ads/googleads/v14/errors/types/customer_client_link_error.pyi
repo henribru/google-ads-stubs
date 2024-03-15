@@ -19,6 +19,7 @@ class CustomerClientLinkErrorEnum(proto.Message):
         CANNOT_HIDE_OR_UNHIDE_MANAGER_ACCOUNTS = 7
         CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER = 8
         CLIENT_HAS_TOO_MANY_MANAGERS = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

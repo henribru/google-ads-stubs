@@ -18,6 +18,7 @@ class ExperimentStatusEnum(proto.Message):
         SETUP = 6
         INITIATED = 7
         GRADUATED = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

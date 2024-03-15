@@ -13,6 +13,7 @@ class OperatingSystemVersionOperatorTypeEnum(proto.Message):
         UNKNOWN = 1
         EQUALS_TO = 2
         GREATER_THAN_EQUALS_TO = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

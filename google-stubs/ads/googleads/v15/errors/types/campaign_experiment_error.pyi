@@ -21,6 +21,7 @@ class CampaignExperimentErrorEnum(proto.Message):
         EXPERIMENT_DURATIONS_MUST_NOT_OVERLAP = 9
         EXPERIMENT_DURATION_MUST_BE_WITHIN_CAMPAIGN_DURATION = 10
         CANNOT_MUTATE_EXPERIMENT_DUE_TO_STATUS = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

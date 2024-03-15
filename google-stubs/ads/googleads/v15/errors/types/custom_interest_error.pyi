@@ -18,6 +18,7 @@ class CustomInterestErrorEnum(proto.Message):
         INVALID_CUSTOM_INTEREST_MEMBER_TYPE = 6
         CANNOT_REMOVE_WHILE_IN_USE = 7
         CANNOT_CHANGE_TYPE = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

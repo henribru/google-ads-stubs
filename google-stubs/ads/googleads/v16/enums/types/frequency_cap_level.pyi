@@ -14,6 +14,7 @@ class FrequencyCapLevelEnum(proto.Message):
         AD_GROUP_AD = 2
         AD_GROUP = 3
         CAMPAIGN = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

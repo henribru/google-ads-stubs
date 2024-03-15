@@ -47,6 +47,7 @@ class AssetErrorEnum(proto.Message):
         CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET = 36
         LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED = 37
         PAGE_FEED_INVALID_LABEL_TEXT = 38
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

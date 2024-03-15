@@ -19,6 +19,7 @@ class LocationPlaceholderFieldEnum(proto.Message):
         POSTAL_CODE = 7
         COUNTRY_CODE = 8
         PHONE_NUMBER = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

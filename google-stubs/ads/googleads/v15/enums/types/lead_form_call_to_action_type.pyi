@@ -25,6 +25,7 @@ class LeadFormCallToActionTypeEnum(proto.Message):
         REQUEST_DEMO = 13
         JOIN_NOW = 14
         GET_STARTED = 15
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

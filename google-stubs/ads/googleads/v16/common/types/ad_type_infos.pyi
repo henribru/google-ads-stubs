@@ -97,7 +97,9 @@ class CallAdInfo(proto.Message):
     disable_call_conversion: bool
     phone_number_verification_url: str
     conversion_action: str
-    conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState
+    conversion_reporting_state: (
+        CallConversionReportingStateEnum.CallConversionReportingState
+    )
     path1: str
     path2: str
     def __init__(

@@ -16,6 +16,7 @@ class AssetLinkPrimaryStatusReasonEnum(proto.Message):
         ASSET_DISAPPROVED = 4
         ASSET_UNDER_REVIEW = 5
         ASSET_APPROVED_LABELED = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

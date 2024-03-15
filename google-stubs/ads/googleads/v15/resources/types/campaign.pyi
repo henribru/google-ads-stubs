@@ -97,7 +97,9 @@ _M = TypeVar("_M")
 
 class Campaign(proto.Message):
     class AppCampaignSetting(proto.Message):
-        bidding_strategy_goal_type: AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
+        bidding_strategy_goal_type: (
+            AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
+        )
         app_id: str
         app_store: AppCampaignAppStoreEnum.AppCampaignAppStore
         def __init__(
@@ -328,7 +330,9 @@ class Campaign(proto.Message):
         def __contains__(self, key: Literal["travel_account_id"]) -> bool: ...  # type: ignore[override]
 
     class VanityPharma(proto.Message):
-        vanity_pharma_display_url_mode: VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode
+        vanity_pharma_display_url_mode: (
+            VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode
+        )
         vanity_pharma_text: VanityPharmaTextEnum.VanityPharmaText
         def __init__(
             self: _M,
@@ -339,6 +343,7 @@ class Campaign(proto.Message):
             vanity_pharma_text: VanityPharmaTextEnum.VanityPharmaText = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["vanity_pharma_display_url_mode", "vanity_pharma_text"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     name: str
@@ -348,10 +353,16 @@ class Campaign(proto.Message):
     ]
     status: CampaignStatusEnum.CampaignStatus
     serving_status: CampaignServingStatusEnum.CampaignServingStatus
-    bidding_strategy_system_status: BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus
-    ad_serving_optimization_status: AdServingOptimizationStatusEnum.AdServingOptimizationStatus
+    bidding_strategy_system_status: (
+        BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus
+    )
+    ad_serving_optimization_status: (
+        AdServingOptimizationStatusEnum.AdServingOptimizationStatus
+    )
     advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType
-    advertising_channel_sub_type: AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
+    advertising_channel_sub_type: (
+        AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
+    )
     tracking_url_template: str
     url_custom_parameters: MutableSequence[CustomParameter]
     local_services_campaign_settings: Campaign.LocalServicesCampaignSettings

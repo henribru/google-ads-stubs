@@ -21,6 +21,7 @@ class DisplayUploadProductTypeEnum(proto.Message):
         DYNAMIC_HTML5_CUSTOM_AD = 9
         DYNAMIC_HTML5_TRAVEL_AD = 10
         DYNAMIC_HTML5_HOTEL_AD = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

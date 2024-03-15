@@ -13,6 +13,7 @@ class CallTypeEnum(proto.Message):
         UNKNOWN = 1
         MANUALLY_DIALED = 2
         HIGH_END_MOBILE_SEARCH = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

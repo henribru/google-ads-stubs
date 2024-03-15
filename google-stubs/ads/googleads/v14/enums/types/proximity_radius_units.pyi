@@ -13,6 +13,7 @@ class ProximityRadiusUnitsEnum(proto.Message):
         UNKNOWN = 1
         MILES = 2
         KILOMETERS = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

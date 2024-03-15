@@ -14,6 +14,7 @@ class AndroidPrivacyInteractionTypeEnum(proto.Message):
         CLICK = 2
         ENGAGED_VIEW = 3
         VIEW = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

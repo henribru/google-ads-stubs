@@ -38,6 +38,7 @@ class AssetTypeEnum(proto.Message):
         DYNAMIC_JOBS = 26
         LOCATION = 27
         HOTEL_PROPERTY = 28
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

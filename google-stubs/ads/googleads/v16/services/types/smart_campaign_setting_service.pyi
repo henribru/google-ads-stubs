@@ -124,7 +124,9 @@ class SmartCampaignEndedDetails(proto.Message):
     def __contains__(self, key: Literal["end_date_time"]) -> bool: ...  # type: ignore[override]
 
 class SmartCampaignNotEligibleDetails(proto.Message):
-    not_eligible_reason: SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason
+    not_eligible_reason: (
+        SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

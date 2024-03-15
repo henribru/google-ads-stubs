@@ -105,15 +105,15 @@ class CampaignCriterionServiceClient(metaclass=CampaignCriterionServiceClientMet
     ) -> None: ...
     def mutate_campaign_criteria(
         self,
-        request: campaign_criterion_service.MutateCampaignCriteriaRequest
-        | dict
-        | None = None,
+        request: (
+            campaign_criterion_service.MutateCampaignCriteriaRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            campaign_criterion_service.CampaignCriterionOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[campaign_criterion_service.CampaignCriterionOperation]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

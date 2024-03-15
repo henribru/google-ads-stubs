@@ -14,6 +14,7 @@ class UserListLogicalRuleOperatorEnum(proto.Message):
         ALL = 2
         ANY = 3
         NONE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -18,6 +18,7 @@ class AppBiddingGoalEnum(proto.Message):
         OPTIMIZE_FOR_RETURN_ON_ADVERTISING_SPEND = 6
         OPTIMIZE_FOR_INSTALL_CONVERSION_VOLUME_WITHOUT_TARGET_CPI = 7
         OPTIMIZE_FOR_PRE_REGISTRATION_CONVERSION_VOLUME = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

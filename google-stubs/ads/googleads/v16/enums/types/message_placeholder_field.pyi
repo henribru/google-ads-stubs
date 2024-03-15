@@ -16,6 +16,7 @@ class MessagePlaceholderFieldEnum(proto.Message):
         PHONE_NUMBER = 4
         MESSAGE_EXTENSION_TEXT = 5
         MESSAGE_TEXT = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

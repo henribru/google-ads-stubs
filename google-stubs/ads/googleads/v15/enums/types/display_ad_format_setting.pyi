@@ -14,6 +14,7 @@ class DisplayAdFormatSettingEnum(proto.Message):
         ALL_FORMATS = 2
         NON_NATIVE = 3
         NATIVE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

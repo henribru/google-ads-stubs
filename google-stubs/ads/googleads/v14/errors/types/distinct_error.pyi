@@ -13,6 +13,7 @@ class DistinctErrorEnum(proto.Message):
         UNKNOWN = 1
         DUPLICATE_ELEMENT = 2
         DUPLICATE_TYPE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

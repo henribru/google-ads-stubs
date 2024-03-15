@@ -16,6 +16,7 @@ class ReachPlanSurfaceEnum(proto.Message):
         IN_STREAM_NON_SKIPPABLE = 4
         IN_STREAM_SKIPPABLE = 5
         SHORTS = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -15,6 +15,7 @@ class VideoThumbnailEnum(proto.Message):
         THUMBNAIL_1 = 3
         THUMBNAIL_2 = 4
         THUMBNAIL_3 = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

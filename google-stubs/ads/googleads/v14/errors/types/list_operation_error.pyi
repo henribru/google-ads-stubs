@@ -13,6 +13,7 @@ class ListOperationErrorEnum(proto.Message):
         UNKNOWN = 1
         REQUIRED_FIELD_MISSING = 7
         DUPLICATE_VALUES = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

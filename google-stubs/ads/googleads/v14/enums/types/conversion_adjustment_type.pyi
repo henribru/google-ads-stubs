@@ -14,6 +14,7 @@ class ConversionAdjustmentTypeEnum(proto.Message):
         RETRACTION = 2
         RESTATEMENT = 3
         ENHANCEMENT = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -81,15 +81,19 @@ class AdGroupExtensionSettingServiceClient(
     ) -> None: ...
     def mutate_ad_group_extension_settings(
         self,
-        request: ad_group_extension_setting_service.MutateAdGroupExtensionSettingsRequest
-        | dict
-        | None = None,
+        request: (
+            ad_group_extension_setting_service.MutateAdGroupExtensionSettingsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            ad_group_extension_setting_service.AdGroupExtensionSettingOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[
+                ad_group_extension_setting_service.AdGroupExtensionSettingOperation
+            ]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

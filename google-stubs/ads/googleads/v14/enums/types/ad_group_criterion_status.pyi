@@ -14,6 +14,7 @@ class AdGroupCriterionStatusEnum(proto.Message):
         ENABLED = 2
         PAUSED = 3
         REMOVED = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

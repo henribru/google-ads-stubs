@@ -15,6 +15,7 @@ class ShoppingAddProductsToCampaignRecommendationEnum(proto.Message):
         MERCHANT_CENTER_ACCOUNT_HAS_NO_SUBMITTED_PRODUCTS_IN_FEED = 3
         ADS_ACCOUNT_EXCLUDES_OFFERS_FROM_CAMPAIGN = 4
         ALL_PRODUCTS_ARE_EXCLUDED_FROM_CAMPAIGN = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

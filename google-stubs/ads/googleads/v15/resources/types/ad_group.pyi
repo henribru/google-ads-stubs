@@ -32,6 +32,7 @@ class AdGroup(proto.Message):
             use_audience_grouped: bool = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["use_audience_grouped"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     name: str

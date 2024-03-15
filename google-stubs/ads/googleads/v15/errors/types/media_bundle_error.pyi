@@ -33,6 +33,7 @@ class MediaBundleErrorEnum(proto.Message):
         UNSUPPORTED_HTML5_FEATURE = 22
         URL_IN_MEDIA_BUNDLE_NOT_SSL_COMPLIANT = 23
         CUSTOM_EXIT_NOT_ALLOWED = 24
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -14,6 +14,7 @@ class PolicyTopicEvidenceDestinationNotWorkingDeviceEnum(proto.Message):
         DESKTOP = 2
         ANDROID = 3
         IOS = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

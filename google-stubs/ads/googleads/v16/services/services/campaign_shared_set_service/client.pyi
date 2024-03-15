@@ -79,15 +79,15 @@ class CampaignSharedSetServiceClient(metaclass=CampaignSharedSetServiceClientMet
     ) -> None: ...
     def mutate_campaign_shared_sets(
         self,
-        request: campaign_shared_set_service.MutateCampaignSharedSetsRequest
-        | dict
-        | None = None,
+        request: (
+            campaign_shared_set_service.MutateCampaignSharedSetsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            campaign_shared_set_service.CampaignSharedSetOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[campaign_shared_set_service.CampaignSharedSetOperation]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

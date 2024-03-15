@@ -16,6 +16,7 @@ class ManagerLinkStatusEnum(proto.Message):
         PENDING = 4
         REFUSED = 5
         CANCELED = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

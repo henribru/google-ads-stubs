@@ -18,6 +18,7 @@ class AttributionModelEnum(proto.Message):
         GOOGLE_SEARCH_ATTRIBUTION_TIME_DECAY = 104
         GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED = 105
         GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN = 106
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

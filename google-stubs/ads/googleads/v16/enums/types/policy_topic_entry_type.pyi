@@ -17,6 +17,7 @@ class PolicyTopicEntryTypeEnum(proto.Message):
         DESCRIPTIVE = 5
         BROADENING = 6
         AREA_OF_INTEREST_ONLY = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

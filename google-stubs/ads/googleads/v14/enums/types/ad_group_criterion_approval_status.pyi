@@ -15,6 +15,7 @@ class AdGroupCriterionApprovalStatusEnum(proto.Message):
         DISAPPROVED = 3
         PENDING_REVIEW = 4
         UNDER_REVIEW = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

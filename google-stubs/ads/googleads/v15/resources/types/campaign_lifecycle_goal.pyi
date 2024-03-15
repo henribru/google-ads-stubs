@@ -30,7 +30,9 @@ class CampaignLifecycleGoal(proto.Message):
     def __contains__(self, key: Literal["resource_name", "campaign", "customer_acquisition_goal_settings"]) -> bool: ...  # type: ignore[override]
 
 class CustomerAcquisitionGoalSettings(proto.Message):
-    optimization_mode: CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode
+    optimization_mode: (
+        CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode
+    )
     value_settings: LifecycleGoalValueSettings
     def __init__(
         self: _M,

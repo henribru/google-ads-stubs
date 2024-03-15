@@ -79,13 +79,14 @@ class ExperimentArmServiceClient(metaclass=ExperimentArmServiceClientMeta):
     ) -> None: ...
     def mutate_experiment_arms(
         self,
-        request: experiment_arm_service.MutateExperimentArmsRequest
-        | dict
-        | None = None,
+        request: (
+            experiment_arm_service.MutateExperimentArmsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[experiment_arm_service.ExperimentArmOperation]
-        | None = None,
+        operations: (
+            MutableSequence[experiment_arm_service.ExperimentArmOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

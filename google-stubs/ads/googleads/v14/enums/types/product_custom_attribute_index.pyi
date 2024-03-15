@@ -16,6 +16,7 @@ class ProductCustomAttributeIndexEnum(proto.Message):
         INDEX2 = 9
         INDEX3 = 10
         INDEX4 = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

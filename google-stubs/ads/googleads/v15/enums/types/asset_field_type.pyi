@@ -38,6 +38,7 @@ class AssetFieldTypeEnum(proto.Message):
         AD_IMAGE = 26
         BUSINESS_LOGO = 27
         HOTEL_PROPERTY = 28
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

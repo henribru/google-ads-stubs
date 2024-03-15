@@ -18,6 +18,7 @@ class CustomerLifecycleGoalErrorEnum(proto.Message):
         CUSTOMER_ACQUISITION_HIGH_LIFETIME_VALUE_CANNOT_BE_CLEARED = 6
         INVALID_EXISTING_USER_LIST = 7
         INVALID_HIGH_LIFETIME_VALUE_USER_LIST = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

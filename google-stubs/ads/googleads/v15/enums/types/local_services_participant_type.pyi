@@ -13,6 +13,7 @@ class LocalServicesParticipantTypeEnum(proto.Message):
         UNKNOWN = 1
         ADVERTISER = 2
         CONSUMER = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

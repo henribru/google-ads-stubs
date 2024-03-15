@@ -14,6 +14,7 @@ class KeywordPlanCompetitionLevelEnum(proto.Message):
         LOW = 2
         MEDIUM = 3
         HIGH = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

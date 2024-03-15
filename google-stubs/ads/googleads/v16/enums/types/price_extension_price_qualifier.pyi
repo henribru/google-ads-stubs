@@ -14,6 +14,7 @@ class PriceExtensionPriceQualifierEnum(proto.Message):
         FROM = 2
         UP_TO = 3
         AVERAGE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

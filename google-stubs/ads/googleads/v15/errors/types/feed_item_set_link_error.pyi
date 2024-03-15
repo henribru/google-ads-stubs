@@ -13,6 +13,7 @@ class FeedItemSetLinkErrorEnum(proto.Message):
         UNKNOWN = 1
         FEED_ID_MISMATCH = 2
         NO_MUTATE_ALLOWED_FOR_DYNAMIC_SET = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

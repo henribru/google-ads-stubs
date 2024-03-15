@@ -36,6 +36,7 @@ class BiddingStrategySystemStatusEnum(proto.Message):
         MULTIPLE_LIMITED = 24
         MULTIPLE_MISCONFIGURED = 25
         MULTIPLE = 26
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

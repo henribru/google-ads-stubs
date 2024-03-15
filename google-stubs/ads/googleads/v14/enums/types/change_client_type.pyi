@@ -23,6 +23,7 @@ class ChangeClientTypeEnum(proto.Message):
         SEARCH_ADS_360_POST = 11
         INTERNAL_TOOL = 12
         OTHER = 13
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

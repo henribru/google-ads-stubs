@@ -13,6 +13,7 @@ class CustomInterestTypeEnum(proto.Message):
         UNKNOWN = 1
         CUSTOM_AFFINITY = 2
         CUSTOM_INTENT = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

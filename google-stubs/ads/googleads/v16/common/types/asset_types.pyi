@@ -75,7 +75,9 @@ class BusinessProfileLocation(proto.Message):
 class CallAsset(proto.Message):
     country_code: str
     phone_number: str
-    call_conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState
+    call_conversion_reporting_state: (
+        CallConversionReportingStateEnum.CallConversionReportingState
+    )
     call_conversion_action: str
     ad_schedule_targets: MutableSequence[AdScheduleInfo]
     def __init__(
@@ -532,7 +534,9 @@ class LeadFormAsset(proto.Message):
     fields: MutableSequence[LeadFormField]
     custom_question_fields: MutableSequence[LeadFormCustomQuestionField]
     delivery_methods: MutableSequence[LeadFormDeliveryMethod]
-    post_submit_call_to_action_type: LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType
+    post_submit_call_to_action_type: (
+        LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType
+    )
     background_image_asset: str
     desired_intent: LeadFormDesiredIntentEnum.LeadFormDesiredIntent
     custom_disclosure: str
@@ -709,7 +713,9 @@ class PriceOffering(proto.Message):
 
 class PromotionAsset(proto.Message):
     promotion_target: str
-    discount_modifier: PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier
+    discount_modifier: (
+        PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier
+    )
     redemption_start_date: str
     redemption_end_date: str
     occasion: PromotionExtensionOccasionEnum.PromotionExtensionOccasion

@@ -14,7 +14,9 @@ _M = TypeVar("_M")
 class AndroidPrivacySharedKeyGoogleCampaign(proto.Message):
     resource_name: str
     campaign_id: int
-    android_privacy_interaction_type: AndroidPrivacyInteractionTypeEnum.AndroidPrivacyInteractionType
+    android_privacy_interaction_type: (
+        AndroidPrivacyInteractionTypeEnum.AndroidPrivacyInteractionType
+    )
     android_privacy_interaction_date: str
     shared_campaign_key: str
     def __init__(

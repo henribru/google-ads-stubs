@@ -25,6 +25,7 @@ class AssetGroupListingGroupFilterErrorEnum(proto.Message):
         SUBDIVISION_HAS_CHILDREN = 13
         CANNOT_REFINE_HIERARCHICAL_EVERYTHING_ELSE = 14
         MULTIPLE_OPERATIONS_ON_ONE_NODE = 23
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

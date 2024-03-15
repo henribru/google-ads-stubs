@@ -69,13 +69,14 @@ class CustomAudienceServiceClient(metaclass=CustomAudienceServiceClientMeta):
     ) -> None: ...
     def mutate_custom_audiences(
         self,
-        request: custom_audience_service.MutateCustomAudiencesRequest
-        | dict
-        | None = None,
+        request: (
+            custom_audience_service.MutateCustomAudiencesRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[custom_audience_service.CustomAudienceOperation]
-        | None = None,
+        operations: (
+            MutableSequence[custom_audience_service.CustomAudienceOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

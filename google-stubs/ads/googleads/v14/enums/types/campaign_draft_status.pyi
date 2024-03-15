@@ -16,6 +16,7 @@ class CampaignDraftStatusEnum(proto.Message):
         PROMOTING = 5
         PROMOTED = 4
         PROMOTE_FAILED = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

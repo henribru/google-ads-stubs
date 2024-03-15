@@ -27,6 +27,7 @@ class AssetGroupErrorEnum(proto.Message):
         FINAL_URL_CONTAINS_INVALID_DOMAIN_NAME = 15
         AD_CUSTOMIZER_NOT_SUPPORTED = 16
         CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN = 17
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

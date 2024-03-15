@@ -14,6 +14,7 @@ class YoutubeVideoRegistrationErrorEnum(proto.Message):
         VIDEO_NOT_FOUND = 2
         VIDEO_NOT_ACCESSIBLE = 3
         VIDEO_NOT_ELIGIBLE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

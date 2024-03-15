@@ -17,6 +17,7 @@ class PlacementTypeEnum(proto.Message):
         YOUTUBE_VIDEO = 5
         YOUTUBE_CHANNEL = 6
         GOOGLE_PRODUCTS = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

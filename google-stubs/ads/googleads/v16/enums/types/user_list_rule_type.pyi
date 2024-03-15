@@ -13,6 +13,7 @@ class UserListRuleTypeEnum(proto.Message):
         UNKNOWN = 1
         AND_OF_ORS = 2
         OR_OF_ANDS = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

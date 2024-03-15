@@ -24,6 +24,7 @@ class FeedAttributeTypeEnum(proto.Message):
         URL_LIST = 12
         DATE_TIME_LIST = 13
         PRICE = 14
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -159,6 +159,7 @@ class CriterionErrorEnum(proto.Message):
         BRAND_SHARED_SET_DOES_NOT_EXIST = 156
         CANNOT_ADD_REMOVED_BRAND_SHARED_SET = 157
         ONLY_EXCLUSION_BRAND_LIST_ALLOWED_FOR_CAMPAIGN_TYPE = 158
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

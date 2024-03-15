@@ -14,6 +14,7 @@ class AccessInvitationStatusEnum(proto.Message):
         PENDING = 2
         DECLINED = 3
         EXPIRED = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

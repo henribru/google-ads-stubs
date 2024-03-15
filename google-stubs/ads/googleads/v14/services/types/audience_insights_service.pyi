@@ -219,6 +219,7 @@ class DynamicLineupAttributeMetadata(proto.Message):
             youtube_channel_metadata: YouTubeChannelAttributeMetadata = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["youtube_channel", "display_name", "youtube_channel_metadata"]) -> bool: ...  # type: ignore[override]
+
     inventory_country: LocationInfo
     median_monthly_inventory: int
     channel_count_lower_bound: int

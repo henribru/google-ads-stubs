@@ -75,13 +75,16 @@ class CustomerLifecycleGoalServiceClient(
     ) -> None: ...
     def configure_customer_lifecycle_goals(
         self,
-        request: customer_lifecycle_goal_service.ConfigureCustomerLifecycleGoalsRequest
-        | dict
-        | None = None,
+        request: (
+            customer_lifecycle_goal_service.ConfigureCustomerLifecycleGoalsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operation: customer_lifecycle_goal_service.CustomerLifecycleGoalOperation
-        | None = None,
+        operation: (
+            customer_lifecycle_goal_service.CustomerLifecycleGoalOperation | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

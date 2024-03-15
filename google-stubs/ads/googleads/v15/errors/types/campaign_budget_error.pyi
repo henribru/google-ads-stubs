@@ -30,6 +30,7 @@ class CampaignBudgetErrorEnum(proto.Message):
         INVALID_PERIOD = 19
         CANNOT_USE_ACCELERATED_DELIVERY_MODE = 20
         BUDGET_AMOUNT_MUST_BE_UNSET_FOR_CUSTOM_BUDGET_PERIOD = 21
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

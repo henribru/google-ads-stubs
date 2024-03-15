@@ -78,7 +78,9 @@ class FlexibleRuleOperandInfo(proto.Message):
     def __contains__(self, key: Literal["rule", "lookback_window_days"]) -> bool: ...  # type: ignore[override]
 
 class FlexibleRuleUserListInfo(proto.Message):
-    inclusive_rule_operator: UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator
+    inclusive_rule_operator: (
+        UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator
+    )
     inclusive_operands: MutableSequence[FlexibleRuleOperandInfo]
     exclusive_operands: MutableSequence[FlexibleRuleOperandInfo]
     def __init__(

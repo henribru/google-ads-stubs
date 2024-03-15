@@ -41,6 +41,7 @@ class AssetSet(proto.Message):
             feed_label: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["merchant_id", "feed_label"]) -> bool: ...  # type: ignore[override]
+
     id: int
     resource_name: str
     name: str

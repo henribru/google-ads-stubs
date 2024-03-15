@@ -83,15 +83,17 @@ class KeywordPlanCampaignServiceClient(metaclass=KeywordPlanCampaignServiceClien
     ) -> None: ...
     def mutate_keyword_plan_campaigns(
         self,
-        request: keyword_plan_campaign_service.MutateKeywordPlanCampaignsRequest
-        | dict
-        | None = None,
+        request: (
+            keyword_plan_campaign_service.MutateKeywordPlanCampaignsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            keyword_plan_campaign_service.KeywordPlanCampaignOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[keyword_plan_campaign_service.KeywordPlanCampaignOperation]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

@@ -52,6 +52,7 @@ class SuggestGeoTargetConstantsRequest(proto.Message):
             names: MutableSequence[str] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["names"]) -> bool: ...  # type: ignore[override]
+
     locale: str
     country_code: str
     location_names: SuggestGeoTargetConstantsRequest.LocationNames

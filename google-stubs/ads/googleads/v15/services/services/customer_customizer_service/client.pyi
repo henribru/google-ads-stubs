@@ -77,15 +77,15 @@ class CustomerCustomizerServiceClient(metaclass=CustomerCustomizerServiceClientM
     ) -> None: ...
     def mutate_customer_customizers(
         self,
-        request: customer_customizer_service.MutateCustomerCustomizersRequest
-        | dict
-        | None = None,
+        request: (
+            customer_customizer_service.MutateCustomerCustomizersRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            customer_customizer_service.CustomerCustomizerOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[customer_customizer_service.CustomerCustomizerOperation]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

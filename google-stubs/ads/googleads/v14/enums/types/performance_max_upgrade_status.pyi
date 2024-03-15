@@ -15,6 +15,7 @@ class PerformanceMaxUpgradeStatusEnum(proto.Message):
         UPGRADE_IN_PROGRESS = 3
         UPGRADE_COMPLETE = 4
         UPGRADE_FAILED = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

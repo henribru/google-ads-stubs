@@ -34,6 +34,7 @@ class FeedErrorEnum(proto.Message):
         GMB_ACCESS_ERROR = 22
         CANNOT_HAVE_LOCATION_AND_AFFILIATE_LOCATION_FEEDS = 23
         LEGACY_EXTENSION_TYPE_READ_ONLY = 24
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

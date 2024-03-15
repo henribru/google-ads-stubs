@@ -195,7 +195,9 @@ class OfflineConversionUploadAlert(proto.Message):
 
 class OfflineConversionUploadError(proto.Message):
     collection_size_error: CollectionSizeErrorEnum.CollectionSizeError
-    conversion_adjustment_upload_error: ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError
+    conversion_adjustment_upload_error: (
+        ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError
+    )
     conversion_upload_error: ConversionUploadErrorEnum.ConversionUploadError
     date_error: DateErrorEnum.DateError
     distinct_error: DistinctErrorEnum.DistinctError

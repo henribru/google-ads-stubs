@@ -18,6 +18,7 @@ class AdGroupFeedErrorEnum(proto.Message):
         INVALID_PLACEHOLDER_TYPE = 6
         MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE = 7
         NO_EXISTING_LOCATION_CUSTOMER_FEED = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

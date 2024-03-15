@@ -15,6 +15,7 @@ class TargetCpaOptInRecommendationGoalEnum(proto.Message):
         SAME_CONVERSIONS = 3
         SAME_CPA = 4
         CLOSEST_CPA = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

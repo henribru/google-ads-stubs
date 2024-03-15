@@ -13,6 +13,7 @@ class ProductCategoryStateEnum(proto.Message):
         UNKNOWN = 1
         ENABLED = 2
         OBSOLETE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

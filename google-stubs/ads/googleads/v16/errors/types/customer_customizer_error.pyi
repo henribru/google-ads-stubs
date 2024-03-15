@@ -11,6 +11,7 @@ class CustomerCustomizerErrorEnum(proto.Message):
     class CustomerCustomizerError(proto.Enum):
         UNSPECIFIED = 0
         UNKNOWN = 1
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

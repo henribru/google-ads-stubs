@@ -127,6 +127,7 @@ class LeadFormFieldUserInputTypeEnum(proto.Message):
         NUMBER_OF_TRAVELERS = 1045
         TRAVEL_BUDGET = 1046
         TRAVEL_ACCOMMODATION = 1047
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

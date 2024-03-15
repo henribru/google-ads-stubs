@@ -76,6 +76,7 @@ class ExtensionSettingErrorEnum(proto.Message):
         CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 66
         EXTENSION_SETTING_UPDATE_IS_A_NOOP = 67
         DISALLOWED_TEXT = 68
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -47,6 +47,7 @@ class CriterionTypeEnum(proto.Message):
         AUDIENCE = 35
         NEGATIVE_KEYWORD_LIST = 36
         LOCAL_SERVICE_ID = 37
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

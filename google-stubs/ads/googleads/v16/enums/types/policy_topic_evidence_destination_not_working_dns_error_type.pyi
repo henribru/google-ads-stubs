@@ -13,6 +13,7 @@ class PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum(proto.Message):
         UNKNOWN = 1
         HOSTNAME_NOT_FOUND = 2
         GOOGLE_CRAWLER_DNS_ISSUE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

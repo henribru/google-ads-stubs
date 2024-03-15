@@ -16,6 +16,7 @@ class LinkedProductTypeEnum(proto.Message):
         HOTEL_CENTER = 7
         MERCHANT_CENTER = 8
         ADVERTISING_PARTNER = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

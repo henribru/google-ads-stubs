@@ -19,6 +19,7 @@ class SimulationTypeEnum(proto.Message):
         PERCENT_CPC_BID = 7
         TARGET_IMPRESSION_SHARE = 8
         BUDGET = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

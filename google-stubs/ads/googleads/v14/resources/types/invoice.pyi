@@ -118,6 +118,7 @@ class Invoice(proto.Message):
             amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["original_month_of_service", "original_year_of_service", "original_invoice_id", "original_account_budget_name", "original_purchase_order_number", "amount_micros"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: str
     type_: InvoiceTypeEnum.InvoiceType

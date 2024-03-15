@@ -16,6 +16,7 @@ class CallPlaceholderFieldEnum(proto.Message):
         TRACKED = 4
         CONVERSION_TYPE_ID = 5
         CONVERSION_REPORTING_STATE = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

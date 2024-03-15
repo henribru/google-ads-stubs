@@ -14,6 +14,7 @@ class SimulationModificationMethodEnum(proto.Message):
         UNIFORM = 2
         DEFAULT = 3
         SCALING = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

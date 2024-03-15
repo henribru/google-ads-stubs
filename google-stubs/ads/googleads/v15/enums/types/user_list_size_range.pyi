@@ -27,6 +27,7 @@ class UserListSizeRangeEnum(proto.Message):
         TWENTY_MILLION_TO_THIRTY_MILLION = 15
         THIRTY_MILLION_TO_FIFTY_MILLION = 16
         OVER_FIFTY_MILLION = 17
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

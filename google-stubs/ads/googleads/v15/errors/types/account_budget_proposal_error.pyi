@@ -37,6 +37,7 @@ class AccountBudgetProposalErrorEnum(proto.Message):
         CANNOT_CREATE_BUDGET_THROUGH_API = 25
         INVALID_MASTER_SERVICE_AGREEMENT = 26
         CANCELED_BILLING_SETUP = 27
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

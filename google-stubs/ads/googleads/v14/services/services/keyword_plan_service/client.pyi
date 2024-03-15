@@ -72,8 +72,9 @@ class KeywordPlanServiceClient(metaclass=KeywordPlanServiceClientMeta):
         request: keyword_plan_service.MutateKeywordPlansRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[keyword_plan_service.KeywordPlanOperation]
-        | None = None,
+        operations: (
+            MutableSequence[keyword_plan_service.KeywordPlanOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

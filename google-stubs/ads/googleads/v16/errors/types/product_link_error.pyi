@@ -14,6 +14,7 @@ class ProductLinkErrorEnum(proto.Message):
         INVALID_OPERATION = 2
         CREATION_NOT_PERMITTED = 3
         INVITATION_EXISTS = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

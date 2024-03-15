@@ -19,6 +19,7 @@ class FeedItemTargetErrorEnum(proto.Message):
         CANNOT_HAVE_ENABLED_CAMPAIGN_AND_ENABLED_AD_GROUP_TARGETS = 7
         DUPLICATE_AD_SCHEDULE = 8
         DUPLICATE_KEYWORD = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

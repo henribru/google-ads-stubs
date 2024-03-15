@@ -12,6 +12,7 @@ class SharedCriterionErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         CRITERION_TYPE_NOT_ALLOWED_FOR_SHARED_SET_TYPE = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

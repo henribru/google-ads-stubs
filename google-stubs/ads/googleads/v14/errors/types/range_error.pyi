@@ -13,6 +13,7 @@ class RangeErrorEnum(proto.Message):
         UNKNOWN = 1
         TOO_LOW = 2
         TOO_HIGH = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -14,6 +14,7 @@ class KeywordMatchTypeEnum(proto.Message):
         EXACT = 2
         PHRASE = 3
         BROAD = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

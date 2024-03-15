@@ -15,6 +15,7 @@ class DataDrivenModelStatusEnum(proto.Message):
         STALE = 3
         EXPIRED = 4
         NEVER_GENERATED = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -67,15 +67,17 @@ class ConversionAdjustmentUploadServiceClient(
     ) -> None: ...
     def upload_conversion_adjustments(
         self,
-        request: conversion_adjustment_upload_service.UploadConversionAdjustmentsRequest
-        | dict
-        | None = None,
+        request: (
+            conversion_adjustment_upload_service.UploadConversionAdjustmentsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        conversion_adjustments: MutableSequence[
-            conversion_adjustment_upload_service.ConversionAdjustment
-        ]
-        | None = None,
+        conversion_adjustments: (
+            MutableSequence[conversion_adjustment_upload_service.ConversionAdjustment]
+            | None
+        ) = None,
         partial_failure: bool | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

@@ -12,6 +12,7 @@ class ResponseContentTypeEnum(proto.Message):
         UNSPECIFIED = 0
         RESOURCE_NAME_ONLY = 1
         MUTABLE_RESOURCE = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

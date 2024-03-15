@@ -17,6 +17,7 @@ class AssetLinkPrimaryStatusEnum(proto.Message):
         PENDING = 5
         LIMITED = 6
         NOT_ELIGIBLE = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

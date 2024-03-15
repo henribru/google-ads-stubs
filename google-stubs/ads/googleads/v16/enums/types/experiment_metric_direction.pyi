@@ -16,6 +16,7 @@ class ExperimentMetricDirectionEnum(proto.Message):
         DECREASE = 4
         NO_CHANGE_OR_INCREASE = 5
         NO_CHANGE_OR_DECREASE = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

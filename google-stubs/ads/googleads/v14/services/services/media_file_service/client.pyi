@@ -72,8 +72,9 @@ class MediaFileServiceClient(metaclass=MediaFileServiceClientMeta):
         request: media_file_service.MutateMediaFilesRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[media_file_service.MediaFileOperation]
-        | None = None,
+        operations: (
+            MutableSequence[media_file_service.MediaFileOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

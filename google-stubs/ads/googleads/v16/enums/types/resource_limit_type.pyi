@@ -152,6 +152,7 @@ class ResourceLimitTypeEnum(proto.Message):
         BRANDS_PER_SHARED_SET = 183
         ENABLED_BRAND_LIST_CRITERIA_PER_CAMPAIGN = 184
         SHARED_SETS_PER_ACCOUNT_FOR_BRAND = 185
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

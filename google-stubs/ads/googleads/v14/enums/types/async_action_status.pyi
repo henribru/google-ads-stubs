@@ -16,6 +16,7 @@ class AsyncActionStatusEnum(proto.Message):
         COMPLETED = 4
         FAILED = 5
         COMPLETED_WITH_WARNING = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

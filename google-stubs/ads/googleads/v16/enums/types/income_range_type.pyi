@@ -18,6 +18,7 @@ class IncomeRangeTypeEnum(proto.Message):
         INCOME_RANGE_80_90 = 510005
         INCOME_RANGE_90_UP = 510006
         INCOME_RANGE_UNDETERMINED = 510000
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

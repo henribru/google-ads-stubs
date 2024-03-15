@@ -28,6 +28,7 @@ class FlightPlaceholderFieldEnum(proto.Message):
         SIMILAR_DESTINATION_IDS = 16
         IOS_APP_LINK = 17
         IOS_APP_STORE_ID = 18
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

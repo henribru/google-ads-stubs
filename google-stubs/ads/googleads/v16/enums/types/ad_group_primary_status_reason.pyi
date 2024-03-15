@@ -26,6 +26,7 @@ class AdGroupPrimaryStatusReasonEnum(proto.Message):
         HAS_ADS_LIMITED_BY_POLICY = 14
         MOST_ADS_UNDER_REVIEW = 15
         CAMPAIGN_DRAFT = 16
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -22,6 +22,7 @@ class AdDestinationTypeEnum(proto.Message):
         LEAD_FORM = 10
         YOUTUBE = 11
         UNMODELED_FOR_CONVERSIONS = 12
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -30,6 +30,7 @@ class ConversionLagBucketEnum(proto.Message):
         THIRTY_TO_FORTY_FIVE_DAYS = 18
         FORTY_FIVE_TO_SIXTY_DAYS = 19
         SIXTY_TO_NINETY_DAYS = 20
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

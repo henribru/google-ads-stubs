@@ -39,6 +39,7 @@ class ExperimentErrorEnum(proto.Message):
         CANNOT_REMOVE_IN_CREATION_EXPERIMENT = 27
         CANNOT_ADD_CAMPAIGN_WITH_DEPRECATED_AD_TYPES = 28
         CANNOT_ENABLE_SYNC_FOR_UNSUPPORTED_EXPERIMENT_TYPE = 29
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -16,6 +16,7 @@ class CustomerUserAccessErrorEnum(proto.Message):
         DISALLOWED_ACCESS_ROLE = 4
         LAST_ADMIN_USER_OF_SERVING_CUSTOMER = 5
         LAST_ADMIN_USER_OF_MANAGER = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

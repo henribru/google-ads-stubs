@@ -16,6 +16,7 @@ class OfflineUserDataJobFailureReasonEnum(proto.Message):
         HIGH_AVERAGE_TRANSACTION_VALUE = 4
         LOW_AVERAGE_TRANSACTION_VALUE = 5
         NEWLY_OBSERVED_CURRENCY_CODE = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

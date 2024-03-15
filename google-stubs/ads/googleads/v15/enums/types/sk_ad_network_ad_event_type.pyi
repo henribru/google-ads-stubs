@@ -14,6 +14,7 @@ class SkAdNetworkAdEventTypeEnum(proto.Message):
         UNAVAILABLE = 2
         INTERACTION = 3
         VIEW = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -87,15 +87,19 @@ class ConversionValueRuleSetServiceClient(
     ) -> None: ...
     def mutate_conversion_value_rule_sets(
         self,
-        request: conversion_value_rule_set_service.MutateConversionValueRuleSetsRequest
-        | dict
-        | None = None,
+        request: (
+            conversion_value_rule_set_service.MutateConversionValueRuleSetsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            conversion_value_rule_set_service.ConversionValueRuleSetOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[
+                conversion_value_rule_set_service.ConversionValueRuleSetOperation
+            ]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

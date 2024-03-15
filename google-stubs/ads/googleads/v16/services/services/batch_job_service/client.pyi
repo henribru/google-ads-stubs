@@ -567,8 +567,9 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         *,
         resource_name: str | None = None,
         sequence_token: str | None = None,
-        mutate_operations: MutableSequence[google_ads_service.MutateOperation]
-        | None = None,
+        mutate_operations: (
+            MutableSequence[google_ads_service.MutateOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

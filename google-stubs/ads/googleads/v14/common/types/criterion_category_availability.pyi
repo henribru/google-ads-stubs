@@ -34,7 +34,9 @@ class CriterionCategoryAvailability(proto.Message):
     def __contains__(self, key: Literal["channel", "locale"]) -> bool: ...  # type: ignore[override]
 
 class CriterionCategoryChannelAvailability(proto.Message):
-    availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
+    availability_mode: (
+        CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
+    )
     advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType
     advertising_channel_sub_type: MutableSequence[
         AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
@@ -55,7 +57,9 @@ class CriterionCategoryChannelAvailability(proto.Message):
     def __contains__(self, key: Literal["availability_mode", "advertising_channel_type", "advertising_channel_sub_type", "include_default_channel_sub_type"]) -> bool: ...  # type: ignore[override]
 
 class CriterionCategoryLocaleAvailability(proto.Message):
-    availability_mode: CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
+    availability_mode: (
+        CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
+    )
     country_code: str
     language_code: str
     def __init__(

@@ -14,6 +14,7 @@ class ProductLinkInvitationErrorEnum(proto.Message):
         INVALID_STATUS = 2
         PERMISSION_DENIED = 3
         NO_INVITATION_REQUIRED = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

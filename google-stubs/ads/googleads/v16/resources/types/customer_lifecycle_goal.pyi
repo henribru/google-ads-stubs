@@ -24,8 +24,11 @@ class CustomerLifecycleGoal(proto.Message):
             high_lifetime_value_user_lists: MutableSequence[str] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["existing_user_lists", "high_lifetime_value_user_lists"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
-    lifecycle_goal_customer_definition_settings: CustomerLifecycleGoal.LifecycleGoalCustomerDefinitionSettings
+    lifecycle_goal_customer_definition_settings: (
+        CustomerLifecycleGoal.LifecycleGoalCustomerDefinitionSettings
+    )
     customer_acquisition_goal_value_settings: LifecycleGoalValueSettings
     def __init__(
         self: _M,

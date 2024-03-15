@@ -15,6 +15,7 @@ class InternalErrorEnum(proto.Message):
         ERROR_CODE_NOT_PUBLISHED = 3
         TRANSIENT_ERROR = 4
         DEADLINE_EXCEEDED = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -84,6 +84,7 @@ class CampaignErrorEnum(proto.Message):
         NOT_LINKED_ADVERTISING_PARTNER = 83
         INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS = 84
         CANNOT_TARGET_DISPLAY_NETWORK_WITHOUT_YOUTUBE = 85
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

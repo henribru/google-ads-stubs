@@ -30,6 +30,7 @@ class TargetRestrictionOperation(proto.Message):
         UNKNOWN = 1
         ADD = 2
         REMOVE = 3
+
     operator: TargetRestrictionOperation.Operator
     value: TargetRestriction
     def __init__(

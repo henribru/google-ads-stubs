@@ -14,6 +14,7 @@ class ParentalStatusTypeEnum(proto.Message):
         PARENT = 300
         NOT_A_PARENT = 301
         UNDETERMINED = 302
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

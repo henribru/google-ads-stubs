@@ -15,6 +15,7 @@ class BudgetTypeEnum(proto.Message):
         FIXED_CPA = 4
         SMART_CAMPAIGN = 5
         LOCAL_SERVICES = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

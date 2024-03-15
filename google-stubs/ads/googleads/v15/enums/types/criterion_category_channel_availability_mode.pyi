@@ -14,6 +14,7 @@ class CriterionCategoryChannelAvailabilityModeEnum(proto.Message):
         ALL_CHANNELS = 2
         CHANNEL_TYPE_AND_ALL_SUBTYPES = 3
         CHANNEL_TYPE_AND_SUBSET_SUBTYPES = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

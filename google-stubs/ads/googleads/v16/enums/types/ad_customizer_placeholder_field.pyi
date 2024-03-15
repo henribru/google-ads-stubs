@@ -15,6 +15,7 @@ class AdCustomizerPlaceholderFieldEnum(proto.Message):
         PRICE = 3
         DATE = 4
         STRING = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

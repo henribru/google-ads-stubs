@@ -58,6 +58,7 @@ class RecommendationTypeEnum(proto.Message):
         FORECASTING_SET_TARGET_CPA = 49
         SET_TARGET_CPA = 50
         SET_TARGET_ROAS = 51
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

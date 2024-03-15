@@ -13,6 +13,7 @@ class UserIdentifierSourceEnum(proto.Message):
         UNKNOWN = 1
         FIRST_PARTY = 2
         THIRD_PARTY = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

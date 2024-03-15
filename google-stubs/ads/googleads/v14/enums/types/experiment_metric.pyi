@@ -24,6 +24,7 @@ class ExperimentMetricEnum(proto.Message):
         CUSTOM_ALGORITHMS = 12
         CONVERSIONS = 13
         CONVERSION_VALUE = 14
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

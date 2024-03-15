@@ -13,6 +13,7 @@ class LocalServicesEmployeeTypeEnum(proto.Message):
         UNKNOWN = 1
         BUSINESS_OWNER = 2
         EMPLOYEE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

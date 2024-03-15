@@ -16,6 +16,7 @@ class SkAdNetworkCoarseConversionValueEnum(proto.Message):
         MEDIUM = 4
         HIGH = 5
         NONE = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

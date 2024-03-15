@@ -79,13 +79,14 @@ class SharedCriterionServiceClient(metaclass=SharedCriterionServiceClientMeta):
     ) -> None: ...
     def mutate_shared_criteria(
         self,
-        request: shared_criterion_service.MutateSharedCriteriaRequest
-        | dict
-        | None = None,
+        request: (
+            shared_criterion_service.MutateSharedCriteriaRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[shared_criterion_service.SharedCriterionOperation]
-        | None = None,
+        operations: (
+            MutableSequence[shared_criterion_service.SharedCriterionOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

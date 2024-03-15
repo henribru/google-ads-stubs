@@ -16,6 +16,7 @@ class ProductTypeLevelEnum(proto.Message):
         LEVEL3 = 9
         LEVEL4 = 10
         LEVEL5 = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

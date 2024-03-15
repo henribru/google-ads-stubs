@@ -18,6 +18,7 @@ class AgeRangeTypeEnum(proto.Message):
         AGE_RANGE_55_64 = 503005
         AGE_RANGE_65_UP = 503006
         AGE_RANGE_UNDETERMINED = 503999
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

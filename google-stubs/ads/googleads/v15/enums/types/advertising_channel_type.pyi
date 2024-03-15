@@ -23,6 +23,7 @@ class AdvertisingChannelTypeEnum(proto.Message):
         LOCAL_SERVICES = 11
         DISCOVERY = 12
         TRAVEL = 13
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

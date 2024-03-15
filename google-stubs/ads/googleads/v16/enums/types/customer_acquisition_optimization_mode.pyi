@@ -14,6 +14,7 @@ class CustomerAcquisitionOptimizationModeEnum(proto.Message):
         TARGET_ALL_EQUALLY = 2
         BID_HIGHER_FOR_NEW_CUSTOMER = 3
         TARGET_NEW_CUSTOMER = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

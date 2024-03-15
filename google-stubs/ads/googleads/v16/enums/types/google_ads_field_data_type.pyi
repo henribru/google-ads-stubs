@@ -22,6 +22,7 @@ class GoogleAdsFieldDataTypeEnum(proto.Message):
         RESOURCE_NAME = 10
         STRING = 11
         UINT64 = 12
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -40,6 +40,7 @@ class UserListErrorEnum(proto.Message):
         APP_ID_NOT_ALLOWED = 39
         CANNOT_MUTATE_SYSTEM_LIST = 40
         MOBILE_APP_IS_SENSITIVE = 41
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

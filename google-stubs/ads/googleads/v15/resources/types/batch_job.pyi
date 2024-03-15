@@ -32,6 +32,7 @@ class BatchJob(proto.Message):
             execution_limit_seconds: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["creation_date_time", "start_date_time", "completion_date_time", "estimated_completion_ratio", "operation_count", "executed_operation_count", "execution_limit_seconds"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     next_add_sequence_token: str

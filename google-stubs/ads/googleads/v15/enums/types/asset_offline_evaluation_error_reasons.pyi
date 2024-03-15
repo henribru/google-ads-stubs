@@ -18,6 +18,7 @@ class AssetOfflineEvaluationErrorReasonsEnum(proto.Message):
         PRICE_ASSET_DESCRIPTION_HAS_PRICE_QUALIFIER = 6
         PRICE_ASSET_UNSUPPORTED_LANGUAGE = 7
         PRICE_ASSET_OTHER_ERROR = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

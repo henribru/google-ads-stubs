@@ -14,6 +14,7 @@ class OfflineEventUploadClientEnum(proto.Message):
         GOOGLE_ADS_API = 2
         GOOGLE_ADS_WEB_CLIENT = 3
         ADS_DATA_CONNECTOR = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

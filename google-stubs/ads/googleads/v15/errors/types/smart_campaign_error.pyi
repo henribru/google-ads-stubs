@@ -18,6 +18,7 @@ class SmartCampaignErrorEnum(proto.Message):
         GEO_TARGETS_REQUIRED = 6
         CANNOT_DETERMINE_SUGGESTION_LOCALE = 7
         FINAL_URL_NOT_CRAWLABLE = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

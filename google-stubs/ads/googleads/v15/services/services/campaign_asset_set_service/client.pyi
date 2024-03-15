@@ -79,15 +79,14 @@ class CampaignAssetSetServiceClient(metaclass=CampaignAssetSetServiceClientMeta)
     ) -> None: ...
     def mutate_campaign_asset_sets(
         self,
-        request: campaign_asset_set_service.MutateCampaignAssetSetsRequest
-        | dict
-        | None = None,
+        request: (
+            campaign_asset_set_service.MutateCampaignAssetSetsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            campaign_asset_set_service.CampaignAssetSetOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[campaign_asset_set_service.CampaignAssetSetOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

@@ -100,6 +100,7 @@ class ConversionAction(proto.Message):
             always_use_default_value: bool = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["default_value", "default_currency_code", "always_use_default_value"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     name: str

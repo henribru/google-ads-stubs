@@ -16,6 +16,7 @@ class LegacyAppInstallAdAppStoreEnum(proto.Message):
         WINDOWS_STORE = 4
         WINDOWS_PHONE_STORE = 5
         CN_APP_STORE = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

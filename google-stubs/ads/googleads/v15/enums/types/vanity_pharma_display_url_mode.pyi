@@ -13,6 +13,7 @@ class VanityPharmaDisplayUrlModeEnum(proto.Message):
         UNKNOWN = 1
         MANUFACTURER_WEBSITE_URL = 2
         WEBSITE_DESCRIPTION = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -17,6 +17,7 @@ class SmartCampaignStatusEnum(proto.Message):
         ELIGIBLE = 5
         REMOVED = 6
         ENDED = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

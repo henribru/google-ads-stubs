@@ -13,6 +13,7 @@ class LeadFormDesiredIntentEnum(proto.Message):
         UNKNOWN = 1
         LOW_INTENT = 2
         HIGH_INTENT = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

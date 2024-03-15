@@ -29,6 +29,7 @@ class FeedItemQualityDisapprovalReasonEnum(proto.Message):
         STRUCTURED_SNIPPETS_REPEATED_VALUES = 17
         STRUCTURED_SNIPPETS_EDITORIAL_GUIDELINES = 18
         STRUCTURED_SNIPPETS_HAS_PROMOTIONAL_TEXT = 19
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -14,6 +14,7 @@ class CampaignExperimentTypeEnum(proto.Message):
         BASE = 2
         DRAFT = 3
         EXPERIMENT = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

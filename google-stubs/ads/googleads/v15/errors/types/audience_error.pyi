@@ -21,6 +21,7 @@ class AudienceErrorEnum(proto.Message):
         IN_USE = 9
         MISSING_ASSET_GROUP_ID = 10
         CANNOT_CHANGE_FROM_CUSTOMER_TO_ASSET_GROUP_SCOPE = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

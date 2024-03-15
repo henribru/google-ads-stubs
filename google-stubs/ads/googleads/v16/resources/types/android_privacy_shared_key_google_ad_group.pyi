@@ -17,9 +17,13 @@ _M = TypeVar("_M")
 class AndroidPrivacySharedKeyGoogleAdGroup(proto.Message):
     resource_name: str
     campaign_id: int
-    android_privacy_interaction_type: AndroidPrivacyInteractionTypeEnum.AndroidPrivacyInteractionType
+    android_privacy_interaction_type: (
+        AndroidPrivacyInteractionTypeEnum.AndroidPrivacyInteractionType
+    )
     android_privacy_interaction_date: str
-    android_privacy_network_type: AndroidPrivacyNetworkTypeEnum.AndroidPrivacyNetworkType
+    android_privacy_network_type: (
+        AndroidPrivacyNetworkTypeEnum.AndroidPrivacyNetworkType
+    )
     ad_group_id: int
     shared_ad_group_key: str
     def __init__(

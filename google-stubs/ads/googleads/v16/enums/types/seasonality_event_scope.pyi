@@ -14,6 +14,7 @@ class SeasonalityEventScopeEnum(proto.Message):
         CUSTOMER = 2
         CAMPAIGN = 4
         CHANNEL = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -377,7 +377,9 @@ class ErrorCode(proto.Message):
     campaign_budget_error: CampaignBudgetErrorEnum.CampaignBudgetError
     campaign_error: CampaignErrorEnum.CampaignError
     authentication_error: AuthenticationErrorEnum.AuthenticationError
-    ad_group_criterion_customizer_error: AdGroupCriterionCustomizerErrorEnum.AdGroupCriterionCustomizerError
+    ad_group_criterion_customizer_error: (
+        AdGroupCriterionCustomizerErrorEnum.AdGroupCriterionCustomizerError
+    )
     ad_group_criterion_error: AdGroupCriterionErrorEnum.AdGroupCriterionError
     ad_group_customizer_error: AdGroupCustomizerErrorEnum.AdGroupCustomizerError
     ad_customizer_error: AdCustomizerErrorEnum.AdCustomizerError
@@ -386,27 +388,37 @@ class ErrorCode(proto.Message):
     adx_error: AdxErrorEnum.AdxError
     asset_error: AssetErrorEnum.AssetError
     asset_group_asset_error: AssetGroupAssetErrorEnum.AssetGroupAssetError
-    asset_group_listing_group_filter_error: AssetGroupListingGroupFilterErrorEnum.AssetGroupListingGroupFilterError
+    asset_group_listing_group_filter_error: (
+        AssetGroupListingGroupFilterErrorEnum.AssetGroupListingGroupFilterError
+    )
     asset_group_error: AssetGroupErrorEnum.AssetGroupError
     asset_set_asset_error: AssetSetAssetErrorEnum.AssetSetAssetError
     asset_set_link_error: AssetSetLinkErrorEnum.AssetSetLinkError
     asset_set_error: AssetSetErrorEnum.AssetSetError
     bidding_error: BiddingErrorEnum.BiddingError
     campaign_criterion_error: CampaignCriterionErrorEnum.CampaignCriterionError
-    campaign_conversion_goal_error: CampaignConversionGoalErrorEnum.CampaignConversionGoalError
+    campaign_conversion_goal_error: (
+        CampaignConversionGoalErrorEnum.CampaignConversionGoalError
+    )
     campaign_customizer_error: CampaignCustomizerErrorEnum.CampaignCustomizerError
     collection_size_error: CollectionSizeErrorEnum.CollectionSizeError
-    conversion_goal_campaign_config_error: ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError
+    conversion_goal_campaign_config_error: (
+        ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError
+    )
     country_code_error: CountryCodeErrorEnum.CountryCodeError
     criterion_error: CriterionErrorEnum.CriterionError
-    custom_conversion_goal_error: CustomConversionGoalErrorEnum.CustomConversionGoalError
+    custom_conversion_goal_error: (
+        CustomConversionGoalErrorEnum.CustomConversionGoalError
+    )
     customer_customizer_error: CustomerCustomizerErrorEnum.CustomerCustomizerError
     customer_error: CustomerErrorEnum.CustomerError
     customizer_attribute_error: CustomizerAttributeErrorEnum.CustomizerAttributeError
     date_error: DateErrorEnum.DateError
     date_range_error: DateRangeErrorEnum.DateRangeError
     distinct_error: DistinctErrorEnum.DistinctError
-    feed_attribute_reference_error: FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError
+    feed_attribute_reference_error: (
+        FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError
+    )
     function_error: FunctionErrorEnum.FunctionError
     function_parsing_error: FunctionParsingErrorEnum.FunctionParsingError
     id_error: IdErrorEnum.IdError
@@ -423,15 +435,25 @@ class ErrorCode(proto.Message):
     operator_error: OperatorErrorEnum.OperatorError
     range_error: RangeErrorEnum.RangeError
     recommendation_error: RecommendationErrorEnum.RecommendationError
-    recommendation_subscription_error: RecommendationSubscriptionErrorEnum.RecommendationSubscriptionError
+    recommendation_subscription_error: (
+        RecommendationSubscriptionErrorEnum.RecommendationSubscriptionError
+    )
     region_code_error: RegionCodeErrorEnum.RegionCodeError
     setting_error: SettingErrorEnum.SettingError
     string_format_error: StringFormatErrorEnum.StringFormatError
     string_length_error: StringLengthErrorEnum.StringLengthError
-    operation_access_denied_error: OperationAccessDeniedErrorEnum.OperationAccessDeniedError
-    resource_access_denied_error: ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError
-    resource_count_limit_exceeded_error: ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError
-    youtube_video_registration_error: YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError
+    operation_access_denied_error: (
+        OperationAccessDeniedErrorEnum.OperationAccessDeniedError
+    )
+    resource_access_denied_error: (
+        ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError
+    )
+    resource_count_limit_exceeded_error: (
+        ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError
+    )
+    youtube_video_registration_error: (
+        YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError
+    )
     ad_group_bid_modifier_error: AdGroupBidModifierErrorEnum.AdGroupBidModifierError
     context_error: ContextErrorEnum.ContextError
     field_error: FieldErrorEnum.FieldError
@@ -439,27 +461,41 @@ class ErrorCode(proto.Message):
     shared_criterion_error: SharedCriterionErrorEnum.SharedCriterionError
     campaign_shared_set_error: CampaignSharedSetErrorEnum.CampaignSharedSetError
     conversion_action_error: ConversionActionErrorEnum.ConversionActionError
-    conversion_adjustment_upload_error: ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError
-    conversion_custom_variable_error: ConversionCustomVariableErrorEnum.ConversionCustomVariableError
+    conversion_adjustment_upload_error: (
+        ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError
+    )
+    conversion_custom_variable_error: (
+        ConversionCustomVariableErrorEnum.ConversionCustomVariableError
+    )
     conversion_upload_error: ConversionUploadErrorEnum.ConversionUploadError
     conversion_value_rule_error: ConversionValueRuleErrorEnum.ConversionValueRuleError
-    conversion_value_rule_set_error: ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError
+    conversion_value_rule_set_error: (
+        ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError
+    )
     header_error: HeaderErrorEnum.HeaderError
     database_error: DatabaseErrorEnum.DatabaseError
     policy_finding_error: PolicyFindingErrorEnum.PolicyFindingError
     enum_error: EnumErrorEnum.EnumError
     keyword_plan_error: KeywordPlanErrorEnum.KeywordPlanError
     keyword_plan_campaign_error: KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError
-    keyword_plan_campaign_keyword_error: KeywordPlanCampaignKeywordErrorEnum.KeywordPlanCampaignKeywordError
+    keyword_plan_campaign_keyword_error: (
+        KeywordPlanCampaignKeywordErrorEnum.KeywordPlanCampaignKeywordError
+    )
     keyword_plan_ad_group_error: KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError
-    keyword_plan_ad_group_keyword_error: KeywordPlanAdGroupKeywordErrorEnum.KeywordPlanAdGroupKeywordError
+    keyword_plan_ad_group_keyword_error: (
+        KeywordPlanAdGroupKeywordErrorEnum.KeywordPlanAdGroupKeywordError
+    )
     keyword_plan_idea_error: KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError
-    account_budget_proposal_error: AccountBudgetProposalErrorEnum.AccountBudgetProposalError
+    account_budget_proposal_error: (
+        AccountBudgetProposalErrorEnum.AccountBudgetProposalError
+    )
     user_list_error: UserListErrorEnum.UserListError
     change_event_error: ChangeEventErrorEnum.ChangeEventError
     change_status_error: ChangeStatusErrorEnum.ChangeStatusError
     feed_error: FeedErrorEnum.FeedError
-    geo_target_constant_suggestion_error: GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError
+    geo_target_constant_suggestion_error: (
+        GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError
+    )
     campaign_draft_error: CampaignDraftErrorEnum.CampaignDraftError
     feed_item_error: FeedItemErrorEnum.FeedItemError
     label_error: LabelErrorEnum.LabelError
@@ -481,7 +517,9 @@ class ErrorCode(proto.Message):
     feed_item_target_error: FeedItemTargetErrorEnum.FeedItemTargetError
     policy_violation_error: PolicyViolationErrorEnum.PolicyViolationError
     partial_failure_error: PartialFailureErrorEnum.PartialFailureError
-    policy_validation_parameter_error: PolicyValidationParameterErrorEnum.PolicyValidationParameterError
+    policy_validation_parameter_error: (
+        PolicyValidationParameterErrorEnum.PolicyValidationParameterError
+    )
     size_limit_error: SizeLimitErrorEnum.SizeLimitError
     offline_user_data_job_error: OfflineUserDataJobErrorEnum.OfflineUserDataJobError
     not_allowlisted_error: NotAllowlistedErrorEnum.NotAllowlistedError
@@ -497,7 +535,9 @@ class ErrorCode(proto.Message):
     user_data_error: UserDataErrorEnum.UserDataError
     batch_job_error: BatchJobErrorEnum.BatchJobError
     account_link_error: AccountLinkErrorEnum.AccountLinkError
-    third_party_app_analytics_link_error: ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError
+    third_party_app_analytics_link_error: (
+        ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError
+    )
     customer_user_access_error: CustomerUserAccessErrorEnum.CustomerUserAccessError
     custom_audience_error: CustomAudienceErrorEnum.CustomAudienceError
     audience_error: AudienceErrorEnum.AudienceError
@@ -506,12 +546,20 @@ class ErrorCode(proto.Message):
     experiment_arm_error: ExperimentArmErrorEnum.ExperimentArmError
     audience_insights_error: AudienceInsightsErrorEnum.AudienceInsightsError
     product_link_error: ProductLinkErrorEnum.ProductLinkError
-    customer_sk_ad_network_conversion_value_schema_error: CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError
+    customer_sk_ad_network_conversion_value_schema_error: (
+        CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError
+    )
     currency_error: CurrencyErrorEnum.CurrencyError
     asset_group_signal_error: AssetGroupSignalErrorEnum.AssetGroupSignalError
-    product_link_invitation_error: ProductLinkInvitationErrorEnum.ProductLinkInvitationError
-    customer_lifecycle_goal_error: CustomerLifecycleGoalErrorEnum.CustomerLifecycleGoalError
-    campaign_lifecycle_goal_error: CampaignLifecycleGoalErrorEnum.CampaignLifecycleGoalError
+    product_link_invitation_error: (
+        ProductLinkInvitationErrorEnum.ProductLinkInvitationError
+    )
+    customer_lifecycle_goal_error: (
+        CustomerLifecycleGoalErrorEnum.CustomerLifecycleGoalError
+    )
+    campaign_lifecycle_goal_error: (
+        CampaignLifecycleGoalErrorEnum.CampaignLifecycleGoalError
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -702,6 +750,7 @@ class ErrorLocation(proto.Message):
             index: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["field_name", "index"]) -> bool: ...  # type: ignore[override]
+
     field_path_elements: MutableSequence[ErrorLocation.FieldPathElement]
     def __init__(
         self: _M,
@@ -778,6 +827,7 @@ class QuotaErrorDetails(proto.Message):
         UNKNOWN = 1
         ACCOUNT = 2
         DEVELOPER = 3
+
     rate_scope: QuotaErrorDetails.QuotaRateScope
     rate_name: str
     retry_delay: Duration

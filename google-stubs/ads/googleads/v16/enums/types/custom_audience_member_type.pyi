@@ -15,6 +15,7 @@ class CustomAudienceMemberTypeEnum(proto.Message):
         URL = 3
         PLACE_CATEGORY = 4
         APP = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

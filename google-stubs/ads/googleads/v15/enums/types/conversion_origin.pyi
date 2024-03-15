@@ -17,6 +17,7 @@ class ConversionOriginEnum(proto.Message):
         CALL_FROM_ADS = 5
         STORE = 6
         YOUTUBE_HOSTED = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

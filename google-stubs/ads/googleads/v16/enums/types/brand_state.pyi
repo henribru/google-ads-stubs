@@ -17,6 +17,7 @@ class BrandStateEnum(proto.Message):
         APPROVED = 5
         CANCELLED = 6
         REJECTED = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

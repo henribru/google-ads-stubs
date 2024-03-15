@@ -14,6 +14,7 @@ class CustomerMatchUploadKeyTypeEnum(proto.Message):
         CONTACT_INFO = 2
         CRM_ID = 3
         MOBILE_ADVERTISING_ID = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

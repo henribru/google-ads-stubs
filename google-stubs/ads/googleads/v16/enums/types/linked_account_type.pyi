@@ -12,6 +12,7 @@ class LinkedAccountTypeEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         THIRD_PARTY_APP_ANALYTICS = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

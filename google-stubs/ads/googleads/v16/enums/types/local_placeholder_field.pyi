@@ -30,6 +30,7 @@ class LocalPlaceholderFieldEnum(proto.Message):
         SIMILAR_DEAL_IDS = 18
         IOS_APP_LINK = 19
         IOS_APP_STORE_ID = 20
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -14,6 +14,7 @@ class ChangeStatusOperationEnum(proto.Message):
         ADDED = 2
         CHANGED = 3
         REMOVED = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -16,6 +16,7 @@ class AccessReasonEnum(proto.Message):
         LICENSED = 4
         SUBSCRIBED = 5
         AFFILIATED = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -34,6 +34,7 @@ class MediaFileErrorEnum(proto.Message):
         YOU_TUBE_SERVICE_UNAVAILABLE = 22
         YOU_TUBE_VIDEO_HAS_NON_POSITIVE_DURATION = 23
         YOU_TUBE_VIDEO_NOT_FOUND = 24
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

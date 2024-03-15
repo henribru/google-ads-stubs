@@ -30,6 +30,7 @@ class RecommendationErrorEnum(proto.Message):
         ADVERTISING_CHANNEL_TYPE_GENERATE_NOT_SUPPORTED = 19
         RECOMMENDATION_TYPE_GENERATE_NOT_SUPPORTED = 20
         RECOMMENDATION_TYPES_CANNOT_BE_EMPTY = 21
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

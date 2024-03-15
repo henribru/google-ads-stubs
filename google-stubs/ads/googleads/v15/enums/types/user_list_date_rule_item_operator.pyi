@@ -15,6 +15,7 @@ class UserListDateRuleItemOperatorEnum(proto.Message):
         NOT_EQUALS = 3
         BEFORE = 4
         AFTER = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

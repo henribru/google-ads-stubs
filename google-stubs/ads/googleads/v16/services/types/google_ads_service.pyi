@@ -840,7 +840,9 @@ class GoogleAdsRow(proto.Message):
     local_services_lead_conversation: LocalServicesLeadConversation
     android_privacy_shared_key_google_ad_group: AndroidPrivacySharedKeyGoogleAdGroup
     android_privacy_shared_key_google_campaign: AndroidPrivacySharedKeyGoogleCampaign
-    android_privacy_shared_key_google_network_type: AndroidPrivacySharedKeyGoogleNetworkType
+    android_privacy_shared_key_google_network_type: (
+        AndroidPrivacySharedKeyGoogleNetworkType
+    )
     metrics: Metrics
     segments: Segments
     def __init__(

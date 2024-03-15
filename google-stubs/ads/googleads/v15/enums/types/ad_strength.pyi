@@ -17,6 +17,7 @@ class AdStrengthEnum(proto.Message):
         AVERAGE = 5
         GOOD = 6
         EXCELLENT = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

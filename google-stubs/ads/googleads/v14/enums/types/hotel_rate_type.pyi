@@ -15,6 +15,7 @@ class HotelRateTypeEnum(proto.Message):
         PUBLIC_RATE = 3
         QUALIFIED_RATE = 4
         PRIVATE_RATE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

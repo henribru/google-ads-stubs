@@ -25,6 +25,7 @@ class KeywordPlanErrorEnum(proto.Message):
         MISSING_FORECAST_PERIOD = 14
         INVALID_FORECAST_DATE_RANGE = 15
         INVALID_NAME = 16
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

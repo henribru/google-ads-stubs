@@ -22,6 +22,7 @@ class AffiliateLocationPlaceholderFieldEnum(proto.Message):
         LANGUAGE_CODE = 10
         CHAIN_ID = 11
         CHAIN_NAME = 12
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

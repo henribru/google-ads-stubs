@@ -13,6 +13,7 @@ class AppCampaignAppStoreEnum(proto.Message):
         UNKNOWN = 1
         APPLE_APP_STORE = 2
         GOOGLE_APP_STORE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

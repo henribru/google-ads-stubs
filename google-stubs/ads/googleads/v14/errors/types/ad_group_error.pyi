@@ -26,6 +26,7 @@ class AdGroupErrorEnum(proto.Message):
         PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER = 15
         INVALID_EXCLUDED_PARENT_ASSET_FIELD_TYPE = 16
         INVALID_EXCLUDED_PARENT_ASSET_SET_TYPE = 17
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

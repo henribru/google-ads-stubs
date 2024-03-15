@@ -14,6 +14,7 @@ class GenderTypeEnum(proto.Message):
         MALE = 10
         FEMALE = 11
         UNDETERMINED = 20
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

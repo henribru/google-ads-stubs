@@ -87,6 +87,7 @@ class CampaignErrorEnum(proto.Message):
         CANNOT_LINK_TO_COMPARISON_SHOPPING_SERVICE_ACCOUNT = 86
         CANNOT_TARGET_NETWORK_FOR_COMPARISON_SHOPPING_SERVICE_LINKED_ACCOUNTS = 87
         CANNOT_MODIFY_TEXT_ASSET_AUTOMATION_WITH_ENABLED_TRIAL = 88
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

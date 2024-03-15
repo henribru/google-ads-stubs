@@ -31,6 +31,7 @@ class BillingSetup(proto.Message):
             secondary_payments_profile_id: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["payments_account_id", "payments_account_name", "payments_profile_id", "payments_profile_name", "secondary_payments_profile_id"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     status: BillingSetupStatusEnum.BillingSetupStatus

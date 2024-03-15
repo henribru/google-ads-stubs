@@ -34,6 +34,7 @@ class ConversionAdjustmentUploadErrorEnum(proto.Message):
         CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT = 23
         MISSING_ORDER_ID_FOR_WEBPAGE = 24
         ORDER_ID_CONTAINS_PII = 25
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -12,6 +12,7 @@ class ReachPlanErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         NOT_FORECASTABLE_MISSING_RATE = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

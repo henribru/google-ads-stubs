@@ -15,6 +15,7 @@ class FieldMaskErrorEnum(proto.Message):
         FIELD_MASK_NOT_ALLOWED = 4
         FIELD_NOT_FOUND = 2
         FIELD_HAS_SUBFIELDS = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

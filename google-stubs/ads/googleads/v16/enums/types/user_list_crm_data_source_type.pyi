@@ -14,6 +14,7 @@ class UserListCrmDataSourceTypeEnum(proto.Message):
         FIRST_PARTY = 2
         THIRD_PARTY_CREDIT_BUREAU = 3
         THIRD_PARTY_VOTER_FILE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

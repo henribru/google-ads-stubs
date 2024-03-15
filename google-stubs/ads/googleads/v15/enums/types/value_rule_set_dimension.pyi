@@ -15,6 +15,7 @@ class ValueRuleSetDimensionEnum(proto.Message):
         DEVICE = 3
         AUDIENCE = 4
         NO_CONDITION = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -59,7 +59,9 @@ class Ad(proto.Message):
     device_preference: DeviceEnum.Device
     url_collections: MutableSequence[UrlCollection]
     name: str
-    system_managed_resource_source: SystemManagedResourceSourceEnum.SystemManagedResourceSource
+    system_managed_resource_source: (
+        SystemManagedResourceSourceEnum.SystemManagedResourceSource
+    )
     text_ad: TextAdInfo
     expanded_text_ad: ExpandedTextAdInfo
     call_ad: CallAdInfo

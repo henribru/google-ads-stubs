@@ -44,6 +44,7 @@ class UserListErrorEnum(proto.Message):
         INVALID_SEED_LIST_ACCESS_REASON = 43
         INVALID_SEED_LIST_TYPE = 44
         INVALID_COUNTRY_CODES = 45
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

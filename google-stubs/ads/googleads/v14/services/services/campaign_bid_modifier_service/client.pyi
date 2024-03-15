@@ -75,15 +75,17 @@ class CampaignBidModifierServiceClient(metaclass=CampaignBidModifierServiceClien
     ) -> None: ...
     def mutate_campaign_bid_modifiers(
         self,
-        request: campaign_bid_modifier_service.MutateCampaignBidModifiersRequest
-        | dict
-        | None = None,
+        request: (
+            campaign_bid_modifier_service.MutateCampaignBidModifiersRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            campaign_bid_modifier_service.CampaignBidModifierOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[campaign_bid_modifier_service.CampaignBidModifierOperation]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

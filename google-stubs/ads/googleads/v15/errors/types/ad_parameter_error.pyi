@@ -13,6 +13,7 @@ class AdParameterErrorEnum(proto.Message):
         UNKNOWN = 1
         AD_GROUP_CRITERION_MUST_BE_KEYWORD = 2
         INVALID_INSERTION_TEXT_FORMAT = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

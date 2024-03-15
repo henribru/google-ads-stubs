@@ -16,6 +16,7 @@ class LocalServicesVerificationArtifactStatusEnum(proto.Message):
         PENDING = 4
         NO_SUBMISSION = 5
         CANCELLED = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -15,6 +15,7 @@ class SmartCampaignNotEligibleReasonEnum(proto.Message):
         BILLING_ISSUE = 3
         BUSINESS_PROFILE_LOCATION_REMOVED = 4
         ALL_ADS_DISAPPROVED = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

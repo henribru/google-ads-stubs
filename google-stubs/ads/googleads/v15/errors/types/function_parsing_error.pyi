@@ -22,6 +22,7 @@ class FunctionParsingErrorEnum(proto.Message):
         FEED_ATTRIBUTE_OPERAND_ARGUMENT_NOT_INTEGER = 10
         NO_OPERANDS = 11
         TOO_MANY_OPERANDS = 12
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

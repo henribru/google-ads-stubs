@@ -15,6 +15,7 @@ class InteractionEventTypeEnum(proto.Message):
         ENGAGEMENT = 3
         VIDEO_VIEW = 4
         NONE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

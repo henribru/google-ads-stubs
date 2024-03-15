@@ -28,6 +28,7 @@ class AdGroupErrorEnum(proto.Message):
         INVALID_EXCLUDED_PARENT_ASSET_SET_TYPE = 17
         CANNOT_ADD_AD_GROUP_FOR_CAMPAIGN_TYPE = 18
         INVALID_STATUS = 19
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

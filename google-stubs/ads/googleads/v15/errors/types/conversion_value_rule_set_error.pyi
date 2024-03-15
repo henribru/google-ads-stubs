@@ -24,6 +24,7 @@ class ConversionValueRuleSetErrorEnum(proto.Message):
         DIMENSION_NO_CONDITION_USED_WITH_OTHER_DIMENSIONS = 12
         DIMENSION_NO_CONDITION_NOT_ALLOWED = 13
         UNSUPPORTED_CONVERSION_ACTION_CATEGORIES = 14
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

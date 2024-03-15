@@ -16,6 +16,7 @@ class BiddingStrategyErrorEnum(proto.Message):
         CANNOT_REMOVE_ASSOCIATED_STRATEGY = 4
         BIDDING_STRATEGY_NOT_SUPPORTED = 5
         INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

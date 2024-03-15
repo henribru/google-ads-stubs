@@ -89,7 +89,9 @@ class CallFeedItem(proto.Message):
     call_tracking_enabled: bool
     call_conversion_action: str
     call_conversion_tracking_disabled: bool
-    call_conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState
+    call_conversion_reporting_state: (
+        CallConversionReportingStateEnum.CallConversionReportingState
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -208,7 +210,9 @@ class PriceOffer(proto.Message):
 
 class PromotionFeedItem(proto.Message):
     promotion_target: str
-    discount_modifier: PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier
+    discount_modifier: (
+        PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier
+    )
     promotion_start_date: str
     promotion_end_date: str
     occasion: PromotionExtensionOccasionEnum.PromotionExtensionOccasion

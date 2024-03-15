@@ -13,6 +13,7 @@ class StringFormatErrorEnum(proto.Message):
         UNKNOWN = 1
         ILLEGAL_CHARS = 2
         INVALID_FORMAT = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

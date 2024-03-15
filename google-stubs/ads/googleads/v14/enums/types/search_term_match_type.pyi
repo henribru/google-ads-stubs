@@ -16,6 +16,7 @@ class SearchTermMatchTypeEnum(proto.Message):
         PHRASE = 4
         NEAR_EXACT = 5
         NEAR_PHRASE = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

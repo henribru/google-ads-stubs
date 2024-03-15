@@ -14,6 +14,7 @@ class ProductConditionEnum(proto.Message):
         NEW = 3
         REFURBISHED = 4
         USED = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

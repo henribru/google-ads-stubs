@@ -18,6 +18,7 @@ class CustomerPayPerConversionEligibilityFailureReasonEnum(proto.Message):
         AVERAGE_DAILY_SPEND_TOO_HIGH = 6
         ANALYSIS_NOT_COMPLETE = 7
         OTHER = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

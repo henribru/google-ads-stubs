@@ -62,7 +62,9 @@ class ConversionValueRule(proto.Message):
 
     class ValueRuleGeoLocationCondition(proto.Message):
         excluded_geo_target_constants: MutableSequence[str]
-        excluded_geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
+        excluded_geo_match_type: (
+            ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
+        )
         geo_target_constants: MutableSequence[str]
         geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
         def __init__(
@@ -76,6 +78,7 @@ class ConversionValueRule(proto.Message):
             geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["excluded_geo_target_constants", "excluded_geo_match_type", "geo_target_constants", "geo_match_type"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     action: ConversionValueRule.ValueRuleAction

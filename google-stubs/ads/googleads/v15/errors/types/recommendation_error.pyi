@@ -27,6 +27,7 @@ class RecommendationErrorEnum(proto.Message):
         INVALID_APPLY_REQUEST = 15
         RECOMMENDATION_TYPE_APPLY_NOT_SUPPORTED = 17
         INVALID_MULTIPLIER = 18
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

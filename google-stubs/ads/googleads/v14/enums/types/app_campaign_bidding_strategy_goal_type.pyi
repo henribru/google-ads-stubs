@@ -17,6 +17,7 @@ class AppCampaignBiddingStrategyGoalTypeEnum(proto.Message):
         OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = 5
         OPTIMIZE_PRE_REGISTRATION_CONVERSION_VOLUME = 6
         OPTIMIZE_INSTALLS_WITHOUT_TARGET_INSTALL_COST = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

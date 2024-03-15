@@ -68,22 +68,24 @@ class IdentityVerificationServiceClient(
     ) -> None: ...
     def start_identity_verification(
         self,
-        request: identity_verification_service.StartIdentityVerificationRequest
-        | dict
-        | None = None,
+        request: (
+            identity_verification_service.StartIdentityVerificationRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        verification_program: identity_verification_program.IdentityVerificationProgramEnum.IdentityVerificationProgram
-        | None = None,
+        verification_program: (
+            identity_verification_program.IdentityVerificationProgramEnum.IdentityVerificationProgram
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
     ) -> None: ...
     def get_identity_verification(
         self,
-        request: identity_verification_service.GetIdentityVerificationRequest
-        | dict
-        | None = None,
+        request: (
+            identity_verification_service.GetIdentityVerificationRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,

@@ -14,6 +14,7 @@ class LocalServicesLeadTypeEnum(proto.Message):
         MESSAGE = 2
         PHONE_CALL = 3
         BOOKING = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

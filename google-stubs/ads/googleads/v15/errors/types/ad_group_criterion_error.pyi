@@ -39,6 +39,7 @@ class AdGroupCriterionErrorEnum(proto.Message):
         CANNOT_SET_BOTH_DESTINATION_URL_AND_TRACKING_URL_TEMPLATE = 36
         FINAL_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE = 37
         FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE = 38
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -14,6 +14,7 @@ class TargetImpressionShareLocationEnum(proto.Message):
         ANYWHERE_ON_PAGE = 2
         TOP_OF_PAGE = 3
         ABSOLUTE_TOP_OF_PAGE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

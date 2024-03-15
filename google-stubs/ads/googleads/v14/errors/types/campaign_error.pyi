@@ -83,6 +83,7 @@ class CampaignErrorEnum(proto.Message):
         CONVERSION_LAG_TOO_HIGH = 82
         NOT_LINKED_ADVERTISING_PARTNER = 83
         INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS = 84
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -28,6 +28,7 @@ class JobPlaceholderFieldEnum(proto.Message):
         SIMILAR_JOB_IDS = 17
         IOS_APP_LINK = 18
         IOS_APP_STORE_ID = 19
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

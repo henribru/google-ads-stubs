@@ -50,6 +50,7 @@ class CriterionTypeEnum(proto.Message):
         SEARCH_THEME = 38
         BRAND = 39
         BRAND_LIST = 40
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

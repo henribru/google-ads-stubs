@@ -31,6 +31,7 @@ class HotelPlaceholderFieldEnum(proto.Message):
         SIMILAR_PROPERTY_IDS = 19
         IOS_APP_LINK = 20
         IOS_APP_STORE_ID = 21
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

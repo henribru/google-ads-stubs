@@ -49,6 +49,7 @@ class OfflineUserDataJobErrorEnum(proto.Message):
         INVALID_LIFECYCLE_STAGE = 43
         INVALID_EVENT_VALUE = 44
         EVENT_ATTRIBUTE_ALL_FIELDS_ARE_REQUIRED = 45
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

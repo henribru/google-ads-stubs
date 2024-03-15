@@ -19,6 +19,7 @@ class CampaignFeedErrorEnum(proto.Message):
         MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE = 8
         NO_EXISTING_LOCATION_CUSTOMER_FEED = 9
         LEGACY_FEED_TYPE_READ_ONLY = 10
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

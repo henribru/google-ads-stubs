@@ -15,6 +15,7 @@ class PolicyReviewStatusEnum(proto.Message):
         REVIEWED = 3
         UNDER_APPEAL = 4
         ELIGIBLE_MAY_SERVE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

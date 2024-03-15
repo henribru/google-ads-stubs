@@ -76,8 +76,9 @@ class AssetGroupServiceClient(metaclass=AssetGroupServiceClientMeta):
         request: asset_group_service.MutateAssetGroupsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[asset_group_service.AssetGroupOperation]
-        | None = None,
+        operations: (
+            MutableSequence[asset_group_service.AssetGroupOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

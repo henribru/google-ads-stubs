@@ -37,6 +37,7 @@ class CampaignCriterionErrorEnum(proto.Message):
             24
         )
         LOCAL_SERVICE_ID_NOT_FOUND_FOR_CATEGORY = 25
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

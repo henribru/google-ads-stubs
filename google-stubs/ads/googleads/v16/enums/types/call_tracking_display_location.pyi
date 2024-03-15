@@ -13,6 +13,7 @@ class CallTrackingDisplayLocationEnum(proto.Message):
         UNKNOWN = 1
         AD = 2
         LANDING_PAGE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

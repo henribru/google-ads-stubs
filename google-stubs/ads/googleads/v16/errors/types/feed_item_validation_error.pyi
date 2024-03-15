@@ -116,6 +116,7 @@ class FeedItemValidationErrorEnum(proto.Message):
         IMAGE_ERROR_FORMAT_NOT_ALLOWED = 105
         IMAGE_ERROR_CONSTRAINTS_VIOLATED = 106
         IMAGE_ERROR_SERVER_ERROR = 107
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

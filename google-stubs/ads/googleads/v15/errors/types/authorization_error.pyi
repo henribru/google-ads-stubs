@@ -26,6 +26,7 @@ class AuthorizationErrorEnum(proto.Message):
         ACCESS_DENIED_FOR_ACCOUNT_TYPE = 25
         METRIC_ACCESS_DENIED = 26
         CLOUD_PROJECT_NOT_UNDER_ORGANIZATION = 27
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

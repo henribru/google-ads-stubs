@@ -43,6 +43,7 @@ class AdTypeEnum(proto.Message):
         TRAVEL_AD = 37
         DISCOVERY_VIDEO_RESPONSIVE_AD = 38
         DEMAND_GEN_PRODUCT_AD = 39
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

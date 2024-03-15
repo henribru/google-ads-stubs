@@ -73,9 +73,9 @@ class PaymentsAccountServiceClient(metaclass=PaymentsAccountServiceClientMeta):
     ) -> None: ...
     def list_payments_accounts(
         self,
-        request: payments_account_service.ListPaymentsAccountsRequest
-        | dict
-        | None = None,
+        request: (
+            payments_account_service.ListPaymentsAccountsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,

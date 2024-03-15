@@ -15,6 +15,7 @@ class ConversionTrackingStatusEnum(proto.Message):
         CONVERSION_TRACKING_MANAGED_BY_SELF = 3
         CONVERSION_TRACKING_MANAGED_BY_THIS_MANAGER = 4
         CONVERSION_TRACKING_MANAGED_BY_ANOTHER_MANAGER = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

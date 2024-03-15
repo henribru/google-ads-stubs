@@ -15,6 +15,7 @@ class LeadFormPostSubmitCallToActionTypeEnum(proto.Message):
         DOWNLOAD = 3
         LEARN_MORE = 4
         SHOP_NOW = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

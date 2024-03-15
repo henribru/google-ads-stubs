@@ -75,13 +75,16 @@ class CampaignLifecycleGoalServiceClient(
     ) -> None: ...
     def configure_campaign_lifecycle_goals(
         self,
-        request: campaign_lifecycle_goal_service.ConfigureCampaignLifecycleGoalsRequest
-        | dict
-        | None = None,
+        request: (
+            campaign_lifecycle_goal_service.ConfigureCampaignLifecycleGoalsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operation: campaign_lifecycle_goal_service.CampaignLifecycleGoalOperation
-        | None = None,
+        operation: (
+            campaign_lifecycle_goal_service.CampaignLifecycleGoalOperation | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

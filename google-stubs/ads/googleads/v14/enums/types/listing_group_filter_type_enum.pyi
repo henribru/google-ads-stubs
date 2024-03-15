@@ -14,6 +14,7 @@ class ListingGroupFilterTypeEnum(proto.Message):
         SUBDIVISION = 2
         UNIT_INCLUDED = 3
         UNIT_EXCLUDED = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

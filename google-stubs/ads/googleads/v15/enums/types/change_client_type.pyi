@@ -24,6 +24,7 @@ class ChangeClientTypeEnum(proto.Message):
         INTERNAL_TOOL = 12
         OTHER = 13
         GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION = 14
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

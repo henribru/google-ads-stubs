@@ -12,6 +12,7 @@ class PaymentsAccountErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         NOT_SUPPORTED_FOR_MANAGER_CUSTOMER = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

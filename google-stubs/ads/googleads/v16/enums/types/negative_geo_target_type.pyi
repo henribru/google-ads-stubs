@@ -13,6 +13,7 @@ class NegativeGeoTargetTypeEnum(proto.Message):
         UNKNOWN = 1
         PRESENCE_OR_INTEREST = 4
         PRESENCE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

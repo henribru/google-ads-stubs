@@ -14,6 +14,7 @@ class UserDataErrorEnum(proto.Message):
         OPERATIONS_FOR_CUSTOMER_MATCH_NOT_ALLOWED = 2
         TOO_MANY_USER_IDENTIFIERS = 3
         USER_LIST_NOT_APPLICABLE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

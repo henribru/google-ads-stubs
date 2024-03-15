@@ -88,15 +88,21 @@ class AttributeFieldMapping(proto.Message):
     call_field: CallPlaceholderFieldEnum.CallPlaceholderField
     app_field: AppPlaceholderFieldEnum.AppPlaceholderField
     location_field: LocationPlaceholderFieldEnum.LocationPlaceholderField
-    affiliate_location_field: AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField
+    affiliate_location_field: (
+        AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField
+    )
     callout_field: CalloutPlaceholderFieldEnum.CalloutPlaceholderField
-    structured_snippet_field: StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField
+    structured_snippet_field: (
+        StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField
+    )
     message_field: MessagePlaceholderFieldEnum.MessagePlaceholderField
     price_field: PricePlaceholderFieldEnum.PricePlaceholderField
     promotion_field: PromotionPlaceholderFieldEnum.PromotionPlaceholderField
     ad_customizer_field: AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
     dsa_page_feed_field: DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField
-    location_extension_targeting_field: LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField
+    location_extension_targeting_field: (
+        LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField
+    )
     education_field: EducationPlaceholderFieldEnum.EducationPlaceholderField
     flight_field: FlightPlaceholderFieldEnum.FlightPlaceholderField
     custom_field: CustomPlaceholderFieldEnum.CustomPlaceholderField

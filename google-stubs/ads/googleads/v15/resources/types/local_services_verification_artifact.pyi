@@ -38,7 +38,9 @@ class BackgroundCheckVerificationArtifact(proto.Message):
 
 class InsuranceVerificationArtifact(proto.Message):
     amount_micros: int
-    rejection_reason: LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason
+    rejection_reason: (
+        LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason
+    )
     insurance_document_readonly: LocalServicesDocumentReadOnly
     def __init__(
         self: _M,
@@ -56,7 +58,9 @@ class LicenseVerificationArtifact(proto.Message):
     license_number: str
     licensee_first_name: str
     licensee_last_name: str
-    rejection_reason: LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason
+    rejection_reason: (
+        LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason
+    )
     license_document_readonly: LocalServicesDocumentReadOnly
     def __init__(
         self: _M,
@@ -76,8 +80,12 @@ class LocalServicesVerificationArtifact(proto.Message):
     resource_name: str
     id: int
     creation_date_time: str
-    status: LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
-    artifact_type: LocalServicesVerificationArtifactTypeEnum.LocalServicesVerificationArtifactType
+    status: (
+        LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
+    )
+    artifact_type: (
+        LocalServicesVerificationArtifactTypeEnum.LocalServicesVerificationArtifactType
+    )
     background_check_verification_artifact: BackgroundCheckVerificationArtifact
     insurance_verification_artifact: InsuranceVerificationArtifact
     license_verification_artifact: LicenseVerificationArtifact

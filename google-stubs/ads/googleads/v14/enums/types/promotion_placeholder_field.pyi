@@ -25,6 +25,7 @@ class PromotionPlaceholderFieldEnum(proto.Message):
         TRACKING_URL = 13
         LANGUAGE = 14
         FINAL_URL_SUFFIX = 15
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

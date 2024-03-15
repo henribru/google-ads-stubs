@@ -15,6 +15,7 @@ class GoogleAdsFieldCategoryEnum(proto.Message):
         ATTRIBUTE = 3
         SEGMENT = 5
         METRIC = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

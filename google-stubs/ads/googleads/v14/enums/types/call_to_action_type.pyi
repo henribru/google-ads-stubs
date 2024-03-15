@@ -28,6 +28,7 @@ class CallToActionTypeEnum(proto.Message):
         START_NOW = 16
         VISIT_SITE = 17
         WATCH_NOW = 18
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

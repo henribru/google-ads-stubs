@@ -16,6 +16,7 @@ class CampaignServingStatusEnum(proto.Message):
         ENDED = 4
         PENDING = 5
         SUSPENDED = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

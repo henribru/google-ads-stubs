@@ -65,6 +65,7 @@ class ClickTypeEnum(proto.Message):
         HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION = 55
         SHOPPING_COMPARISON_LISTING = 56
         CROSS_NETWORK = 57
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

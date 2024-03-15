@@ -149,6 +149,7 @@ class ResourceLimitTypeEnum(proto.Message):
         ACCOUNT_LEVEL_NEGATIVE_KEYWORDS_PER_SHARED_SET = 178
         ENABLED_ASSET_PER_HOTEL_PROPERTY_ASSET_SET = 181
         ENABLED_HOTEL_PROPERTY_ASSET_LINKS_PER_ASSET_GROUP = 182
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

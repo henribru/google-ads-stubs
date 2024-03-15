@@ -79,13 +79,14 @@ class AssetSetAssetServiceClient(metaclass=AssetSetAssetServiceClientMeta):
     ) -> None: ...
     def mutate_asset_set_assets(
         self,
-        request: asset_set_asset_service.MutateAssetSetAssetsRequest
-        | dict
-        | None = None,
+        request: (
+            asset_set_asset_service.MutateAssetSetAssetsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[asset_set_asset_service.AssetSetAssetOperation]
-        | None = None,
+        operations: (
+            MutableSequence[asset_set_asset_service.AssetSetAssetOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

@@ -21,6 +21,7 @@ class OperationAccessDeniedErrorEnum(proto.Message):
         OPERATION_NOT_PERMITTED_FOR_REMOVED_RESOURCE = 9
         OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE = 10
         MUTATE_NOT_PERMITTED_FOR_CUSTOMER = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

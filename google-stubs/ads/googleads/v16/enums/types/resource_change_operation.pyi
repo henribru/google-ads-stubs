@@ -14,6 +14,7 @@ class ResourceChangeOperationEnum(proto.Message):
         CREATE = 2
         UPDATE = 3
         REMOVE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

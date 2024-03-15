@@ -75,15 +75,14 @@ class AssetGroupSignalServiceClient(metaclass=AssetGroupSignalServiceClientMeta)
     ) -> None: ...
     def mutate_asset_group_signals(
         self,
-        request: asset_group_signal_service.MutateAssetGroupSignalsRequest
-        | dict
-        | None = None,
+        request: (
+            asset_group_signal_service.MutateAssetGroupSignalsRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            asset_group_signal_service.AssetGroupSignalOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[asset_group_signal_service.AssetGroupSignalOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

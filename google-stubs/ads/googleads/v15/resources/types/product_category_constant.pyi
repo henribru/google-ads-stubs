@@ -29,6 +29,7 @@ class ProductCategoryConstant(proto.Message):
             value: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["region_code", "language_code", "value"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     category_id: int
     product_category_constant_parent: str

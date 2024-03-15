@@ -12,6 +12,7 @@ class TimeZoneErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         INVALID_TIME_ZONE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

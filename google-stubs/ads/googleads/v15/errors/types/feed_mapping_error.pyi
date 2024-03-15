@@ -29,6 +29,7 @@ class FeedMappingErrorEnum(proto.Message):
         INVALID_PLACEHOLDER_TYPE_FOR_SYSTEM_GENERATED_FEED_TYPE = 18
         ATTRIBUTE_FIELD_MAPPING_MISSING_FIELD = 19
         LEGACY_FEED_TYPE_READ_ONLY = 20
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

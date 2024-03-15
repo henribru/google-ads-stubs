@@ -27,6 +27,7 @@ class FunctionErrorEnum(proto.Message):
         MULTIPLE_FEED_IDS_NOT_SUPPORTED = 15
         INVALID_FUNCTION_FOR_FEED_WITH_FIXED_SCHEMA = 16
         INVALID_ATTRIBUTE_NAME = 17
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

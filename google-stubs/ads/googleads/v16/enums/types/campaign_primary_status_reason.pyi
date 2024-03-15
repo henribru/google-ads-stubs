@@ -48,6 +48,7 @@ class CampaignPrimaryStatusReasonEnum(proto.Message):
         MOST_ASSET_GROUPS_UNDER_REVIEW = 36
         NO_ASSET_GROUPS = 37
         ASSET_GROUPS_PAUSED = 38
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

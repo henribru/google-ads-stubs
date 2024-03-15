@@ -51,6 +51,7 @@ class ConversionActionTypeEnum(proto.Message):
         UNIVERSAL_ANALYTICS_TRANSACTION = 39
         GOOGLE_ANALYTICS_4_CUSTOM = 40
         GOOGLE_ANALYTICS_4_PURCHASE = 41
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

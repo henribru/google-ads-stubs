@@ -75,15 +75,19 @@ class CustomConversionGoalServiceClient(
     ) -> None: ...
     def mutate_custom_conversion_goals(
         self,
-        request: custom_conversion_goal_service.MutateCustomConversionGoalsRequest
-        | dict
-        | None = None,
+        request: (
+            custom_conversion_goal_service.MutateCustomConversionGoalsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            custom_conversion_goal_service.CustomConversionGoalOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[
+                custom_conversion_goal_service.CustomConversionGoalOperation
+            ]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

@@ -12,6 +12,7 @@ class FeedItemSetStringFilterTypeEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         EXACT = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

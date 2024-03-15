@@ -24,6 +24,7 @@ class AssetGroupListingGroupFilterErrorEnum(proto.Message):
         CHANGING_CASE_VALUE_WITH_CHILDREN = 12
         SUBDIVISION_HAS_CHILDREN = 13
         CANNOT_REFINE_HIERARCHICAL_EVERYTHING_ELSE = 14
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

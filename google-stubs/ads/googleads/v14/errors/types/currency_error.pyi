@@ -12,6 +12,7 @@ class CurrencyErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         VALUE_NOT_MULTIPLE_OF_BILLABLE_UNIT = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -15,6 +15,7 @@ class SharedSetTypeEnum(proto.Message):
         NEGATIVE_PLACEMENTS = 3
         ACCOUNT_LEVEL_NEGATIVE_KEYWORDS = 4
         BRANDS = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

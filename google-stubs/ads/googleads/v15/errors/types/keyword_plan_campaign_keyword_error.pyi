@@ -12,6 +12,7 @@ class KeywordPlanCampaignKeywordErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         CAMPAIGN_KEYWORD_IS_POSITIVE = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

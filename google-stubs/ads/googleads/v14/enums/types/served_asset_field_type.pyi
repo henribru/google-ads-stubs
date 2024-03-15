@@ -26,6 +26,7 @@ class ServedAssetFieldTypeEnum(proto.Message):
         AD_IMAGE = 29
         LEAD_FORM = 30
         BUSINESS_LOGO = 31
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

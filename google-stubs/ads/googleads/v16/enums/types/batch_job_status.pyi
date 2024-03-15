@@ -14,6 +14,7 @@ class BatchJobStatusEnum(proto.Message):
         PENDING = 2
         RUNNING = 3
         DONE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

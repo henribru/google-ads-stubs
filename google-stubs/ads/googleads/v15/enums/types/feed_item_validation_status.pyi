@@ -14,6 +14,7 @@ class FeedItemValidationStatusEnum(proto.Message):
         PENDING = 2
         INVALID = 3
         VALID = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -13,6 +13,7 @@ class LocationSourceTypeEnum(proto.Message):
         UNKNOWN = 1
         GOOGLE_MY_BUSINESS = 2
         AFFILIATE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

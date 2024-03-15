@@ -24,11 +24,11 @@ proto-plus-stubs = ">=0.5.0"
 google-auth-stubs = ">=0.1.0"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.7.0"
-black = "^23.11.0"
-isort = "^5.12.0"
+mypy = "^1.9.0"
+black = "^24.3.0"
+isort = "^5.13.2"
 stubdefaulter = "^0.1.0"
-ruff = "^0.1.5"
+ruff = "^0.3.3"
 
 [tool.black]
 target-version = ["py37"]

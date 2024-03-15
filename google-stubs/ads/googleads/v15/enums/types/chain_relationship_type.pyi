@@ -13,6 +13,7 @@ class ChainRelationshipTypeEnum(proto.Message):
         UNKNOWN = 1
         AUTO_DEALERS = 2
         GENERAL_RETAILERS = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -18,6 +18,7 @@ class SlotEnum(proto.Message):
         SEARCH_PARTNER_TOP = 6
         SEARCH_PARTNER_OTHER = 7
         MIXED = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

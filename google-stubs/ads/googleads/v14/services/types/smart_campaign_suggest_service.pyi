@@ -40,6 +40,7 @@ class SmartCampaignSuggestionInfo(proto.Message):
             locations: MutableSequence[LocationInfo] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["locations"]) -> bool: ...  # type: ignore[override]
+
     final_url: str
     language_code: str
     ad_schedules: MutableSequence[AdScheduleInfo]
@@ -90,6 +91,7 @@ class SuggestKeywordThemesResponse(proto.Message):
             free_form_keyword_theme: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["keyword_theme_constant", "free_form_keyword_theme"]) -> bool: ...  # type: ignore[override]
+
     keyword_themes: MutableSequence[SuggestKeywordThemesResponse.KeywordTheme]
     def __init__(
         self: _M,
@@ -167,6 +169,7 @@ class SuggestSmartCampaignBudgetOptionsResponse(proto.Message):
             max_daily_clicks: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["min_daily_clicks", "max_daily_clicks"]) -> bool: ...  # type: ignore[override]
+
     low: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption
     recommended: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption
     high: SuggestSmartCampaignBudgetOptionsResponse.BudgetOption

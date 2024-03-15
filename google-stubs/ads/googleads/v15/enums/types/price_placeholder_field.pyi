@@ -64,6 +64,7 @@ class PricePlaceholderFieldEnum(proto.Message):
         ITEM_8_UNIT = 803
         ITEM_8_FINAL_URLS = 804
         ITEM_8_FINAL_MOBILE_URLS = 805
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

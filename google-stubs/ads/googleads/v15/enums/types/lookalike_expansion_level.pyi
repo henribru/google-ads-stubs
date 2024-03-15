@@ -14,6 +14,7 @@ class LookalikeExpansionLevelEnum(proto.Message):
         NARROW = 2
         BALANCED = 3
         BROAD = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

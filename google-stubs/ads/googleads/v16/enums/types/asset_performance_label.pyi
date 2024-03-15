@@ -16,6 +16,7 @@ class AssetPerformanceLabelEnum(proto.Message):
         LOW = 4
         GOOD = 5
         BEST = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

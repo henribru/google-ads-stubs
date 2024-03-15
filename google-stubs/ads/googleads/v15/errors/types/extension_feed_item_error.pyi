@@ -56,6 +56,7 @@ class ExtensionFeedItemErrorEnum(proto.Message):
         TOO_MANY_DECIMAL_PLACES_SPECIFIED = 44
         CONCRETE_EXTENSION_TYPE_REQUIRED = 45
         SCHEDULE_END_NOT_AFTER_START = 46
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

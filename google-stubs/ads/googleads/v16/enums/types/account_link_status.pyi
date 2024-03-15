@@ -17,6 +17,7 @@ class AccountLinkStatusEnum(proto.Message):
         PENDING_APPROVAL = 5
         REJECTED = 6
         REVOKED = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

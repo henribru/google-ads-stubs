@@ -15,6 +15,7 @@ class OfflineUserDataJobTypeEnum(proto.Message):
         STORE_SALES_UPLOAD_THIRD_PARTY = 3
         CUSTOMER_MATCH_USER_LIST = 4
         CUSTOMER_MATCH_WITH_ATTRIBUTES = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

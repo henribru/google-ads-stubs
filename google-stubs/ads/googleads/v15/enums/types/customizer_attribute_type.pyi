@@ -15,6 +15,7 @@ class CustomizerAttributeTypeEnum(proto.Message):
         NUMBER = 3
         PRICE = 4
         PERCENT = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

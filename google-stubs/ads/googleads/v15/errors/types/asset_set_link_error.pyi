@@ -16,6 +16,7 @@ class AssetSetLinkErrorEnum(proto.Message):
         INCOMPATIBLE_ASSET_SET_TYPE_WITH_CAMPAIGN_TYPE = 4
         DUPLICATE_ASSET_SET_LINK = 5
         ASSET_SET_LINK_CANNOT_BE_REMOVED = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -14,6 +14,7 @@ class ValueRuleDeviceTypeEnum(proto.Message):
         MOBILE = 2
         DESKTOP = 3
         TABLET = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

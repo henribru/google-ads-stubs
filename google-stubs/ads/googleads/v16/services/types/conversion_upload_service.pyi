@@ -71,6 +71,7 @@ class CartData(proto.Message):
             unit_price: float = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["product_id", "quantity", "unit_price"]) -> bool: ...  # type: ignore[override]
+
     merchant_id: int
     feed_country_code: str
     feed_language_code: str

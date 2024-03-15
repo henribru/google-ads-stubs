@@ -15,6 +15,7 @@ class GeoTargetConstantSuggestionErrorEnum(proto.Message):
         LOCATION_NAME_LIMIT = 3
         INVALID_COUNTRY_CODE = 4
         REQUEST_PARAMETERS_UNSET = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

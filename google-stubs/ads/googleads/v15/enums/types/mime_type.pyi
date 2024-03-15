@@ -23,6 +23,7 @@ class MimeTypeEnum(proto.Message):
         AUDIO_WAV = 11
         AUDIO_MP3 = 12
         HTML5_AD_ZIP = 13
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

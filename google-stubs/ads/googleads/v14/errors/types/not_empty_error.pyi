@@ -12,6 +12,7 @@ class NotEmptyErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         EMPTY_LIST = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

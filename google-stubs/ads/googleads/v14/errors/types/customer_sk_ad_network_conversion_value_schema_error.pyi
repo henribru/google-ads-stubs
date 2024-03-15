@@ -15,6 +15,7 @@ class CustomerSkAdNetworkConversionValueSchemaErrorEnum(proto.Message):
         INVALID_APP_ID = 3
         INVALID_SCHEMA = 4
         LINK_CODE_NOT_FOUND = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

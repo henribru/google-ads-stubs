@@ -17,6 +17,7 @@ class SearchTermInsightErrorEnum(proto.Message):
         REQUIRES_FILTER_BY_SINGLE_RESOURCE = 5
         SORTING_NOT_ALLOWED_WITH_SEGMENTS = 6
         SUMMARY_ROW_NOT_ALLOWED_WITH_SEGMENTS = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

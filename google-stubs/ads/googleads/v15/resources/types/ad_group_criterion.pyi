@@ -84,6 +84,7 @@ class AdGroupCriterion(proto.Message):
             search_predicted_ctr: QualityScoreBucketEnum.QualityScoreBucket = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["quality_score", "creative_quality_score", "post_click_quality_score", "search_predicted_ctr"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     criterion_id: int
     display_name: str

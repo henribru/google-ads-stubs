@@ -15,6 +15,7 @@ class PaymentModeEnum(proto.Message):
         CONVERSION_VALUE = 5
         CONVERSIONS = 6
         GUEST_STAY = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

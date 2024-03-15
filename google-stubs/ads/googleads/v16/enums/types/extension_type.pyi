@@ -24,6 +24,7 @@ class ExtensionTypeEnum(proto.Message):
         AFFILIATE_LOCATION = 13
         HOTEL_CALLOUT = 15
         IMAGE = 16
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

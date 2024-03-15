@@ -14,6 +14,7 @@ class ValueRuleOperationEnum(proto.Message):
         ADD = 2
         MULTIPLY = 3
         SET = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

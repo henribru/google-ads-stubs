@@ -82,8 +82,9 @@ class AdGroupLabelServiceClient(metaclass=AdGroupLabelServiceClientMeta):
         request: ad_group_label_service.MutateAdGroupLabelsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[ad_group_label_service.AdGroupLabelOperation]
-        | None = None,
+        operations: (
+            MutableSequence[ad_group_label_service.AdGroupLabelOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

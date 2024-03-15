@@ -19,6 +19,7 @@ class UserListStringRuleItemOperatorEnum(proto.Message):
         NOT_CONTAINS = 7
         NOT_STARTS_WITH = 8
         NOT_ENDS_WITH = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

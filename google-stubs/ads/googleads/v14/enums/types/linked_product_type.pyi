@@ -13,6 +13,7 @@ class LinkedProductTypeEnum(proto.Message):
         UNKNOWN = 1
         DATA_PARTNER = 2
         GOOGLE_ADS = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

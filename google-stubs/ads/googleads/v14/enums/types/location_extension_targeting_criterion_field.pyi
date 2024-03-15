@@ -17,6 +17,7 @@ class LocationExtensionTargetingCriterionFieldEnum(proto.Message):
         PROVINCE = 5
         POSTAL_CODE = 6
         COUNTRY_CODE = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

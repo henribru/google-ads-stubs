@@ -17,6 +17,7 @@ class UserListNumberRuleItemOperatorEnum(proto.Message):
         NOT_EQUALS = 5
         LESS_THAN = 6
         LESS_THAN_OR_EQUAL = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

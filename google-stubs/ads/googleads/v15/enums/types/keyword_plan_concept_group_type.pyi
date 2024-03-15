@@ -14,6 +14,7 @@ class KeywordPlanConceptGroupTypeEnum(proto.Message):
         BRAND = 2
         OTHER_BRANDS = 3
         NON_BRAND = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

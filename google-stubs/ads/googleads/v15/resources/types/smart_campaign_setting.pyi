@@ -31,12 +31,15 @@ class SmartCampaignSetting(proto.Message):
             country_code: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["phone_number", "country_code"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     campaign: str
     phone_number: SmartCampaignSetting.PhoneNumber
     advertising_language_code: str
     final_url: str
-    ad_optimized_business_profile_setting: SmartCampaignSetting.AdOptimizedBusinessProfileSetting
+    ad_optimized_business_profile_setting: (
+        SmartCampaignSetting.AdOptimizedBusinessProfileSetting
+    )
     business_name: str
     business_profile_location: str
     def __init__(

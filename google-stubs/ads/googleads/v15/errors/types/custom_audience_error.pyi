@@ -19,6 +19,7 @@ class CustomAudienceErrorEnum(proto.Message):
         MEMBER_TYPE_AND_VALUE_DOES_NOT_MATCH = 7
         POLICY_VIOLATION = 8
         INVALID_TYPE_CHANGE = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

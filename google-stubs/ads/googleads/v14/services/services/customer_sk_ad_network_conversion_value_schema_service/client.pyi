@@ -71,17 +71,19 @@ class CustomerSkAdNetworkConversionValueSchemaServiceClient(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | CustomerSkAdNetworkConversionValueSchemaServiceTransport
-        | None = None,
+        transport: (
+            str | CustomerSkAdNetworkConversionValueSchemaServiceTransport | None
+        ) = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_customer_sk_ad_network_conversion_value_schema(
         self,
-        request: customer_sk_ad_network_conversion_value_schema_service.MutateCustomerSkAdNetworkConversionValueSchemaRequest
-        | dict
-        | None = None,
+        request: (
+            customer_sk_ad_network_conversion_value_schema_service.MutateCustomerSkAdNetworkConversionValueSchemaRequest
+            | dict
+            | None
+        ) = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

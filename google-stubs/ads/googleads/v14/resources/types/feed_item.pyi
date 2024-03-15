@@ -100,7 +100,9 @@ class FeedItemPlaceholderPolicyInfo(proto.Message):
     policy_topic_entries: MutableSequence[PolicyTopicEntry]
     validation_status: FeedItemValidationStatusEnum.FeedItemValidationStatus
     validation_errors: MutableSequence[FeedItemValidationError]
-    quality_approval_status: FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus
+    quality_approval_status: (
+        FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus
+    )
     quality_disapproval_reasons: MutableSequence[
         FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason
     ]

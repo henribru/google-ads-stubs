@@ -19,7 +19,9 @@ _M = TypeVar("_M")
 class Feed(proto.Message):
     class AffiliateLocationFeedData(proto.Message):
         chain_ids: MutableSequence[int]
-        relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
+        relationship_type: (
+            AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
+        )
         def __init__(
             self: _M,
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -45,6 +47,7 @@ class Feed(proto.Message):
                 http_authorization_header: str = ...,
             ) -> None: ...
             def __contains__(self, key: Literal["http_method", "http_request_url", "http_authorization_header"]) -> bool: ...  # type: ignore[override]
+
         oauth_info: Feed.PlacesLocationFeedData.OAuthInfo
         email_address: str
         business_account_id: str
@@ -64,6 +67,7 @@ class Feed(proto.Message):
             label_filters: MutableSequence[str] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["oauth_info", "email_address", "business_account_id", "business_name_filter", "category_filters", "label_filters"]) -> bool: ...  # type: ignore[override]
+
     resource_name: str
     id: int
     name: str
@@ -112,6 +116,7 @@ class FeedAttributeOperation(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         ADD = 2
+
     operator: FeedAttributeOperation.Operator
     value: FeedAttribute
     def __init__(

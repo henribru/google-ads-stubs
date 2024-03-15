@@ -14,6 +14,7 @@ class LocationGroupRadiusUnitsEnum(proto.Message):
         METERS = 2
         MILES = 3
         MILLI_MILES = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

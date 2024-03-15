@@ -16,6 +16,7 @@ class LinkedAccountTypeEnum(proto.Message):
         GOOGLE_ADS = 4
         HOTEL_CENTER = 5
         ADVERTISING_PARTNER = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

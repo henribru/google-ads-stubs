@@ -16,6 +16,7 @@ class PolicyTopicEvidenceDestinationMismatchUrlTypeEnum(proto.Message):
         FINAL_MOBILE_URL = 4
         TRACKING_URL = 5
         MOBILE_TRACKING_URL = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

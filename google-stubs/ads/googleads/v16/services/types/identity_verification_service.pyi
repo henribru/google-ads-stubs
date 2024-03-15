@@ -52,7 +52,9 @@ class IdentityVerification(proto.Message):
     def __contains__(self, key: Literal["verification_program", "identity_verification_requirement", "verification_progress"]) -> bool: ...  # type: ignore[override]
 
 class IdentityVerificationProgress(proto.Message):
-    program_status: IdentityVerificationProgramStatusEnum.IdentityVerificationProgramStatus
+    program_status: (
+        IdentityVerificationProgramStatusEnum.IdentityVerificationProgramStatus
+    )
     invitation_link_expiration_time: str
     action_url: str
     def __init__(

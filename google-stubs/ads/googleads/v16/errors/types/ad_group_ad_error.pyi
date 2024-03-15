@@ -22,6 +22,7 @@ class AdGroupAdErrorEnum(proto.Message):
         AD_TYPE_CANNOT_BE_PAUSED = 10
         AD_TYPE_CANNOT_BE_REMOVED = 11
         CANNOT_UPDATE_DEPRECATED_ADS = 12
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -25,6 +25,7 @@ class LocalServicesInsuranceRejectionReasonEnum(proto.Message):
         WRONG_DOCUMENT_TYPE = 13
         NON_FINAL = 14
         OTHER = 15
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

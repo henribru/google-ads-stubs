@@ -18,6 +18,7 @@ class DayOfWeekEnum(proto.Message):
         FRIDAY = 6
         SATURDAY = 7
         SUNDAY = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

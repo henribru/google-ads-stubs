@@ -14,6 +14,7 @@ class DatabaseErrorEnum(proto.Message):
         CONCURRENT_MODIFICATION = 2
         DATA_CONSTRAINT_VIOLATION = 3
         REQUEST_TOO_LARGE = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

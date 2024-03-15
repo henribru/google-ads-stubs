@@ -31,6 +31,7 @@ class PlaceholderTypeEnum(proto.Message):
         DYNAMIC_LOCAL = 19
         DYNAMIC_JOB = 20
         IMAGE = 21
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

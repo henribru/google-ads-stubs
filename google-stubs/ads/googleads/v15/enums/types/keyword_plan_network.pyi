@@ -13,6 +13,7 @@ class KeywordPlanNetworkEnum(proto.Message):
         UNKNOWN = 1
         GOOGLE_SEARCH = 2
         GOOGLE_SEARCH_AND_PARTNERS = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

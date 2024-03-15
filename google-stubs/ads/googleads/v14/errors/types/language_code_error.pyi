@@ -13,6 +13,7 @@ class LanguageCodeErrorEnum(proto.Message):
         UNKNOWN = 1
         LANGUAGE_CODE_NOT_FOUND = 2
         INVALID_LANGUAGE_CODE = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

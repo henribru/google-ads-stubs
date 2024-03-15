@@ -19,6 +19,7 @@ class KeywordPlanAdGroupKeywordErrorEnum(proto.Message):
         INVALID_KEYWORD_TEXT = 7
         NEGATIVE_KEYWORD_HAS_CPC_BID = 8
         NEW_BMM_KEYWORDS_NOT_ALLOWED = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

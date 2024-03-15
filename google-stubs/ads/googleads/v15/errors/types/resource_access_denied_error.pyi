@@ -12,6 +12,7 @@ class ResourceAccessDeniedErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         WRITE_ACCESS_DENIED = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

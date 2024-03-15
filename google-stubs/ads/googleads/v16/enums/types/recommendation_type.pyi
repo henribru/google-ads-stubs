@@ -65,6 +65,7 @@ class RecommendationTypeEnum(proto.Message):
         CUSTOM_AUDIENCE_OPT_IN = 56
         LEAD_FORM_ASSET = 57
         IMPROVE_DEMAND_GEN_AD_STRENGTH = 58
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

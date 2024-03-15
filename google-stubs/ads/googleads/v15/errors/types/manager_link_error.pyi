@@ -30,6 +30,7 @@ class ManagerLinkErrorEnum(proto.Message):
         INVALID_CHANGE = 18
         CUSTOMER_CANNOT_MANAGE_SELF = 19
         CREATING_ENABLED_LINK_NOT_ALLOWED = 20
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

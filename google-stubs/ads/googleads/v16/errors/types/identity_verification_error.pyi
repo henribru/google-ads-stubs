@@ -14,6 +14,7 @@ class IdentityVerificationErrorEnum(proto.Message):
         NO_EFFECTIVE_BILLING = 2
         BILLING_NOT_ON_MONTHLY_INVOICING = 3
         VERIFICATION_ALREADY_STARTED = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

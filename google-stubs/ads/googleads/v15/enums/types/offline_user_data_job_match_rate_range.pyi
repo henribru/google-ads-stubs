@@ -20,6 +20,7 @@ class OfflineUserDataJobMatchRateRangeEnum(proto.Message):
         MATCH_RANGE_71_TO_80 = 8
         MATCH_RANGE_81_TO_90 = 9
         MATCH_RANGE_91_TO_100 = 10
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

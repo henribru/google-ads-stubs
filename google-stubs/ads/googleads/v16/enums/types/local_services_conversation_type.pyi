@@ -16,6 +16,7 @@ class LocalServicesLeadConversationTypeEnum(proto.Message):
         PHONE_CALL = 4
         SMS = 5
         BOOKING = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -77,15 +77,19 @@ class ConversionCustomVariableServiceClient(
     ) -> None: ...
     def mutate_conversion_custom_variables(
         self,
-        request: conversion_custom_variable_service.MutateConversionCustomVariablesRequest
-        | dict
-        | None = None,
+        request: (
+            conversion_custom_variable_service.MutateConversionCustomVariablesRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            conversion_custom_variable_service.ConversionCustomVariableOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[
+                conversion_custom_variable_service.ConversionCustomVariableOperation
+            ]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

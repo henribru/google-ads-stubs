@@ -38,6 +38,7 @@ class CampaignCriterionErrorEnum(proto.Message):
         )
         LOCAL_SERVICE_ID_NOT_FOUND_FOR_CATEGORY = 25
         CANNOT_ATTACH_BRAND_LIST_TO_NON_QUALIFIED_SEARCH_CAMPAIGN = 26
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -13,6 +13,7 @@ class TimeTypeEnum(proto.Message):
         UNKNOWN = 1
         NOW = 2
         FOREVER = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -15,6 +15,7 @@ class AccountBudgetProposalTypeEnum(proto.Message):
         UPDATE = 3
         END = 4
         REMOVE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

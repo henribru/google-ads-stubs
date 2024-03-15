@@ -50,6 +50,7 @@ class ImageErrorEnum(proto.Message):
         PROBLEM_READING_FILE = 38
         IMAGE_CONSTRAINTS_VIOLATED = 39
         FORMAT_NOT_ALLOWED = 40
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -16,6 +16,7 @@ class ChangeStatusErrorEnum(proto.Message):
         CHANGE_DATE_RANGE_NEGATIVE = 5
         LIMIT_NOT_SPECIFIED = 6
         INVALID_LIMIT_CLAUSE = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

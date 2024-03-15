@@ -12,6 +12,7 @@ class EnumErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         ENUM_VALUE_NOT_PERMITTED = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

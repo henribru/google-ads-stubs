@@ -25,6 +25,7 @@ class ExperimentArmErrorEnum(proto.Message):
         CANNOT_ADD_BASE_CAMPAIGN_WITH_DATE_RANGE = 13
         BIDDING_STRATEGY_NOT_SUPPORTED_IN_EXPERIMENTS = 14
         TRAFFIC_SPLIT_NOT_SUPPORTED_FOR_CHANNEL_TYPE = 15
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

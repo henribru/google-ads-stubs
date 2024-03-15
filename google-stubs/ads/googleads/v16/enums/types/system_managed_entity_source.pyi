@@ -12,6 +12,7 @@ class SystemManagedResourceSourceEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         AD_VARIATIONS = 2
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

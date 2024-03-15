@@ -66,30 +66,36 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
     ) -> None: ...
     def generate_insights_finder_report(
         self,
-        request: audience_insights_service.GenerateInsightsFinderReportRequest
-        | dict
-        | None = None,
+        request: (
+            audience_insights_service.GenerateInsightsFinderReportRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        baseline_audience: audience_insights_service.BasicInsightsAudience
-        | None = None,
-        specific_audience: audience_insights_service.BasicInsightsAudience
-        | None = None,
+        baseline_audience: (
+            audience_insights_service.BasicInsightsAudience | None
+        ) = None,
+        specific_audience: (
+            audience_insights_service.BasicInsightsAudience | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
     ) -> audience_insights_service.GenerateInsightsFinderReportResponse: ...
     def list_audience_insights_attributes(
         self,
-        request: audience_insights_service.ListAudienceInsightsAttributesRequest
-        | dict
-        | None = None,
+        request: (
+            audience_insights_service.ListAudienceInsightsAttributesRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        dimensions: MutableSequence[
-            audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
-        ]
-        | None = None,
+        dimensions: (
+            MutableSequence[
+                audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+            ]
+            | None
+        ) = None,
         query_text: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
@@ -97,9 +103,9 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
     ) -> audience_insights_service.ListAudienceInsightsAttributesResponse: ...
     def list_insights_eligible_dates(
         self,
-        request: audience_insights_service.ListInsightsEligibleDatesRequest
-        | dict
-        | None = None,
+        request: (
+            audience_insights_service.ListInsightsEligibleDatesRequest | dict | None
+        ) = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
@@ -107,25 +113,31 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
     ) -> audience_insights_service.ListInsightsEligibleDatesResponse: ...
     def generate_audience_composition_insights(
         self,
-        request: audience_insights_service.GenerateAudienceCompositionInsightsRequest
-        | dict
-        | None = None,
+        request: (
+            audience_insights_service.GenerateAudienceCompositionInsightsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
         audience: audience_insights_service.InsightsAudience | None = None,
-        dimensions: MutableSequence[
-            audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
-        ]
-        | None = None,
+        dimensions: (
+            MutableSequence[
+                audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+            ]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
     ) -> audience_insights_service.GenerateAudienceCompositionInsightsResponse: ...
     def generate_suggested_targeting_insights(
         self,
-        request: audience_insights_service.GenerateSuggestedTargetingInsightsRequest
-        | dict
-        | None = None,
+        request: (
+            audience_insights_service.GenerateSuggestedTargetingInsightsRequest
+            | dict
+            | None
+        ) = None,
         *,
         customer_id: str | None = None,
         audience: audience_insights_service.InsightsAudience | None = None,

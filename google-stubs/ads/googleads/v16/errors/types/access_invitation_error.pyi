@@ -19,6 +19,7 @@ class AccessInvitationErrorEnum(proto.Message):
         EMAIL_ADDRESS_ALREADY_HAS_PENDING_INVITATION = 7
         PENDING_INVITATIONS_LIMIT_EXCEEDED = 8
         EMAIL_DOMAIN_POLICY_VIOLATED = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

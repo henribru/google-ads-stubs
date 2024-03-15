@@ -17,6 +17,7 @@ class AdGroupPrimaryStatusEnum(proto.Message):
         PENDING = 5
         NOT_ELIGIBLE = 6
         LIMITED = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

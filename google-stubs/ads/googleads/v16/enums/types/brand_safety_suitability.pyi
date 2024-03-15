@@ -14,6 +14,7 @@ class BrandSafetySuitabilityEnum(proto.Message):
         EXPANDED_INVENTORY = 2
         STANDARD_INVENTORY = 3
         LIMITED_INVENTORY = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -23,6 +23,7 @@ class VanityPharmaTextEnum(proto.Message):
         PRESCRIPTION_CONTRACEPTION_WEBSITE_ES = 11
         PRESCRIPTION_VACCINE_WEBSITE_EN = 12
         PRESCRIPTION_VACCINE_WEBSITE_ES = 13
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

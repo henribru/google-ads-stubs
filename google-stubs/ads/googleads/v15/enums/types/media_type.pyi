@@ -17,6 +17,7 @@ class MediaTypeEnum(proto.Message):
         AUDIO = 5
         VIDEO = 6
         DYNAMIC_IMAGE = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

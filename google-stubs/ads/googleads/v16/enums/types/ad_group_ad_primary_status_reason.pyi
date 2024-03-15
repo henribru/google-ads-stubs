@@ -26,6 +26,7 @@ class AdGroupAdPrimaryStatusReasonEnum(proto.Message):
         AD_GROUP_AD_APPROVED_LABELED = 14
         AD_GROUP_AD_AREA_OF_INTEREST_ONLY = 15
         AD_GROUP_AD_UNDER_APPEAL = 16
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

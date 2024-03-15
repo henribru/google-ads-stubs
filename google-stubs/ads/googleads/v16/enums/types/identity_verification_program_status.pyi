@@ -15,6 +15,7 @@ class IdentityVerificationProgramStatusEnum(proto.Message):
         PENDING_REVIEW = 3
         SUCCESS = 4
         FAILURE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

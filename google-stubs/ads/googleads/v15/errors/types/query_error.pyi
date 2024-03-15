@@ -66,6 +66,7 @@ class QueryErrorEnum(proto.Message):
         UNEXPECTED_INPUT = 11
         REQUESTED_METRICS_FOR_MANAGER = 59
         FILTER_HAS_TOO_MANY_VALUES = 63
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

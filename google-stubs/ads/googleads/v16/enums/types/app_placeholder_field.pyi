@@ -19,6 +19,7 @@ class AppPlaceholderFieldEnum(proto.Message):
         FINAL_MOBILE_URLS = 7
         TRACKING_URL = 8
         FINAL_URL_SUFFIX = 9
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

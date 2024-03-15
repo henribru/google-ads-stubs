@@ -76,8 +76,9 @@ class CustomerFeedServiceClient(metaclass=CustomerFeedServiceClientMeta):
         request: customer_feed_service.MutateCustomerFeedsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[customer_feed_service.CustomerFeedOperation]
-        | None = None,
+        operations: (
+            MutableSequence[customer_feed_service.CustomerFeedOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

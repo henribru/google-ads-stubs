@@ -71,6 +71,7 @@ class CampaignToForecast(proto.Message):
             maximize_conversions_bidding_strategy: MaximizeConversionsBiddingStrategy = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["manual_cpc_bidding_strategy", "maximize_clicks_bidding_strategy", "maximize_conversions_bidding_strategy"]) -> bool: ...  # type: ignore[override]
+
     language_constants: MutableSequence[str]
     geo_modifiers: MutableSequence[CriterionBidModifier]
     keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork

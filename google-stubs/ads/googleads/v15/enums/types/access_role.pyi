@@ -15,6 +15,7 @@ class AccessRoleEnum(proto.Message):
         STANDARD = 3
         READ_ONLY = 4
         EMAIL_ONLY = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -15,6 +15,7 @@ class OfflineConversionDiagnosticStatusEnum(proto.Message):
         GOOD = 3
         NEEDS_ATTENTION = 4
         NO_RECENT_UPLOAD = 6
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

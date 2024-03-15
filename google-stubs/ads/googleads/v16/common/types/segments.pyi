@@ -135,9 +135,13 @@ class Segments(proto.Message):
     conversion_action_category: ConversionActionCategoryEnum.ConversionActionCategory
     conversion_action_name: str
     conversion_adjustment: bool
-    conversion_attribution_event_type: ConversionAttributionEventTypeEnum.ConversionAttributionEventType
+    conversion_attribution_event_type: (
+        ConversionAttributionEventTypeEnum.ConversionAttributionEventType
+    )
     conversion_lag_bucket: ConversionLagBucketEnum.ConversionLagBucket
-    conversion_or_adjustment_lag_bucket: ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket
+    conversion_or_adjustment_lag_bucket: (
+        ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket
+    )
     date: str
     day_of_week: DayOfWeekEnum.DayOfWeek
     device: DeviceEnum.Device
@@ -203,12 +207,16 @@ class Segments(proto.Message):
     product_type_l5: str
     quarter: str
     recommendation_type: RecommendationTypeEnum.RecommendationType
-    search_engine_results_page_type: SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType
+    search_engine_results_page_type: (
+        SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType
+    )
     search_subcategory: str
     search_term: str
     search_term_match_type: SearchTermMatchTypeEnum.SearchTermMatchType
     slot: SlotEnum.Slot
-    conversion_value_rule_primary_dimension: ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension
+    conversion_value_rule_primary_dimension: (
+        ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension
+    )
     webpage: str
     week: str
     year: int
@@ -216,13 +224,19 @@ class Segments(proto.Message):
     sk_ad_network_user_type: SkAdNetworkUserTypeEnum.SkAdNetworkUserType
     sk_ad_network_ad_event_type: SkAdNetworkAdEventTypeEnum.SkAdNetworkAdEventType
     sk_ad_network_source_app: SkAdNetworkSourceApp
-    sk_ad_network_attribution_credit: SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit
-    sk_ad_network_coarse_conversion_value: SkAdNetworkCoarseConversionValueEnum.SkAdNetworkCoarseConversionValue
+    sk_ad_network_attribution_credit: (
+        SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit
+    )
+    sk_ad_network_coarse_conversion_value: (
+        SkAdNetworkCoarseConversionValueEnum.SkAdNetworkCoarseConversionValue
+    )
     sk_ad_network_source_domain: str
     sk_ad_network_source_type: SkAdNetworkSourceTypeEnum.SkAdNetworkSourceType
     sk_ad_network_postback_sequence_index: int
     asset_interaction_target: AssetInteractionTarget
-    new_versus_returning_customers: ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket
+    new_versus_returning_customers: (
+        ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -38,6 +38,7 @@ class DistanceBucketEnum(proto.Message):
         WITHIN_35MILES = 26
         WITHIN_40MILES = 27
         BEYOND_40MILES = 28
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

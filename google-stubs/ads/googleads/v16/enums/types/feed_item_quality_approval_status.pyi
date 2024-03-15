@@ -13,6 +13,7 @@ class FeedItemQualityApprovalStatusEnum(proto.Message):
         UNKNOWN = 1
         APPROVED = 2
         DISAPPROVED = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

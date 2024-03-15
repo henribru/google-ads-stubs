@@ -80,8 +80,9 @@ class AdGroupFeedServiceClient(metaclass=AdGroupFeedServiceClientMeta):
         request: ad_group_feed_service.MutateAdGroupFeedsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[ad_group_feed_service.AdGroupFeedOperation]
-        | None = None,
+        operations: (
+            MutableSequence[ad_group_feed_service.AdGroupFeedOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

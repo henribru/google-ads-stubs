@@ -18,6 +18,7 @@ class SitelinkPlaceholderFieldEnum(proto.Message):
         FINAL_MOBILE_URLS = 6
         TRACKING_URL = 7
         FINAL_URL_SUFFIX = 8
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

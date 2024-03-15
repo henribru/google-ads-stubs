@@ -82,8 +82,9 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         request: experiment_service.MutateExperimentsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[experiment_service.ExperimentOperation]
-        | None = None,
+        operations: (
+            MutableSequence[experiment_service.ExperimentOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
@@ -99,9 +100,9 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
     ) -> None: ...
     def list_experiment_async_errors(
         self,
-        request: experiment_service.ListExperimentAsyncErrorsRequest
-        | dict
-        | None = None,
+        request: (
+            experiment_service.ListExperimentAsyncErrorsRequest | dict | None
+        ) = None,
         *,
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
@@ -113,10 +114,9 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         request: experiment_service.GraduateExperimentRequest | dict | None = None,
         *,
         experiment: str | None = None,
-        campaign_budget_mappings: MutableSequence[
-            experiment_service.CampaignBudgetMapping
-        ]
-        | None = None,
+        campaign_budget_mappings: (
+            MutableSequence[experiment_service.CampaignBudgetMapping] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

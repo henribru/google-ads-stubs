@@ -15,6 +15,7 @@ class SharedSetErrorEnum(proto.Message):
         DUPLICATE_NAME = 3
         SHARED_SET_REMOVED = 4
         SHARED_SET_IN_USE = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

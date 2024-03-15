@@ -32,6 +32,7 @@ class AuthenticationErrorEnum(proto.Message):
         ORGANIZATION_NOT_RECOGNIZED = 26
         ORGANIZATION_NOT_APPROVED = 27
         ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

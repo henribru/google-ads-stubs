@@ -21,6 +21,7 @@ class CampaignDraftErrorEnum(proto.Message):
         INVALID_STATUS_TRANSITION = 9
         MAX_NUMBER_OF_DRAFTS_PER_CAMPAIGN_REACHED = 10
         LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY = 11
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

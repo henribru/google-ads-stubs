@@ -93,15 +93,14 @@ class AdGroupCriterionServiceClient(metaclass=AdGroupCriterionServiceClientMeta)
     ) -> None: ...
     def mutate_ad_group_criteria(
         self,
-        request: ad_group_criterion_service.MutateAdGroupCriteriaRequest
-        | dict
-        | None = None,
+        request: (
+            ad_group_criterion_service.MutateAdGroupCriteriaRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            ad_group_criterion_service.AdGroupCriterionOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[ad_group_criterion_service.AdGroupCriterionOperation] | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

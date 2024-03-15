@@ -13,6 +13,7 @@ class BudgetPeriodEnum(proto.Message):
         UNKNOWN = 1
         DAILY = 2
         CUSTOM_PERIOD = 5
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

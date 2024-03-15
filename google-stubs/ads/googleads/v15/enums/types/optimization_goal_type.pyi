@@ -14,6 +14,7 @@ class OptimizationGoalTypeEnum(proto.Message):
         CALL_CLICKS = 2
         DRIVING_DIRECTIONS = 3
         APP_PRE_REGISTRATION = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

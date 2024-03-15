@@ -14,6 +14,7 @@ class BiddingSourceEnum(proto.Message):
         CAMPAIGN_BIDDING_STRATEGY = 5
         AD_GROUP = 6
         AD_GROUP_CRITERION = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -14,6 +14,7 @@ class ReachPlanNetworkEnum(proto.Message):
         YOUTUBE = 2
         GOOGLE_VIDEO_PARTNERS = 3
         YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS = 4
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

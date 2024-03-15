@@ -17,6 +17,7 @@ class AdNetworkTypeEnum(proto.Message):
         YOUTUBE_SEARCH = 5
         YOUTUBE_WATCH = 6
         MIXED = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

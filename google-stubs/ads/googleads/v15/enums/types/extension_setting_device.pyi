@@ -13,6 +13,7 @@ class ExtensionSettingDeviceEnum(proto.Message):
         UNKNOWN = 1
         MOBILE = 2
         DESKTOP = 3
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

@@ -81,15 +81,15 @@ class CampaignCustomizerServiceClient(metaclass=CampaignCustomizerServiceClientM
     ) -> None: ...
     def mutate_campaign_customizers(
         self,
-        request: campaign_customizer_service.MutateCampaignCustomizersRequest
-        | dict
-        | None = None,
+        request: (
+            campaign_customizer_service.MutateCampaignCustomizersRequest | dict | None
+        ) = None,
         *,
         customer_id: str | None = None,
-        operations: MutableSequence[
-            campaign_customizer_service.CampaignCustomizerOperation
-        ]
-        | None = None,
+        operations: (
+            MutableSequence[campaign_customizer_service.CampaignCustomizerOperation]
+            | None
+        ) = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

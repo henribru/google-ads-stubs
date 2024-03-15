@@ -52,7 +52,9 @@ class OfflineUserDataJob(proto.Message):
     def __contains__(self, key: Literal["resource_name", "id", "external_id", "type_", "status", "failure_reason", "operation_metadata", "customer_match_user_list_metadata", "store_sales_metadata"]) -> bool: ...  # type: ignore[override]
 
 class OfflineUserDataJobMetadata(proto.Message):
-    match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange
+    match_rate_range: (
+        OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,

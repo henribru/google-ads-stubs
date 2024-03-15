@@ -17,6 +17,7 @@ class KeywordPlanCampaignErrorEnum(proto.Message):
         DUPLICATE_NAME = 5
         MAX_GEOS_EXCEEDED = 6
         MAX_LANGUAGES_EXCEEDED = 7
+
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
