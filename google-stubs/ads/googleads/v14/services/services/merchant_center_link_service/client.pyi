@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -29,7 +30,12 @@ class MerchantCenterLinkServiceClient(metaclass=MerchantCenterLinkServiceClientM
     @property
     def transport(self) -> MerchantCenterLinkServiceTransport: ...
     def __enter__(self) -> MerchantCenterLinkServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def merchant_center_link_path(customer_id: str, merchant_center_id: str) -> str: ...
     @staticmethod

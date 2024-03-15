@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -30,7 +31,12 @@ class GoogleAdsFieldServiceClient(metaclass=GoogleAdsFieldServiceClientMeta):
     @property
     def transport(self) -> GoogleAdsFieldServiceTransport: ...
     def __enter__(self) -> GoogleAdsFieldServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def google_ads_field_path(google_ads_field: str) -> str: ...
     @staticmethod

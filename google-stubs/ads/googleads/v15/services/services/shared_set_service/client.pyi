@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class SharedSetServiceClient(metaclass=SharedSetServiceClientMeta):
     @property
     def transport(self) -> SharedSetServiceTransport: ...
     def __enter__(self) -> SharedSetServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def shared_set_path(customer_id: str, shared_set_id: str) -> str: ...
     @staticmethod

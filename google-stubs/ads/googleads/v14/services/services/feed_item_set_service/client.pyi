@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class FeedItemSetServiceClient(metaclass=FeedItemSetServiceClientMeta):
     @property
     def transport(self) -> FeedItemSetServiceTransport: ...
     def __enter__(self) -> FeedItemSetServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def feed_path(customer_id: str, feed_id: str) -> str: ...
     @staticmethod

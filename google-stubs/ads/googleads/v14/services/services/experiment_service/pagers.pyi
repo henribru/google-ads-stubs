@@ -2,9 +2,7 @@ from typing import Any, Callable, Iterable, Iterator, Sequence, Tuple
 
 from google.rpc import status_pb2 as status_pb2
 
-from google.ads.googleads.v14.services.types import (
-    experiment_service as experiment_service,
-)
+from google.ads.googleads.v14.services.types import experiment_service
 
 class ListExperimentAsyncErrorsPager:
     def __init__(

@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class CustomAudienceServiceClient(metaclass=CustomAudienceServiceClientMeta):
     @property
     def transport(self) -> CustomAudienceServiceTransport: ...
     def __enter__(self) -> CustomAudienceServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def custom_audience_path(customer_id: str, custom_audience_id: str) -> str: ...
     @staticmethod

@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
     @property
     def transport(self) -> RecommendationServiceTransport: ...
     def __enter__(self) -> RecommendationServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def ad_path(customer_id: str, ad_id: str) -> str: ...
     @staticmethod

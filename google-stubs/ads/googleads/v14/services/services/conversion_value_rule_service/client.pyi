@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class ConversionValueRuleServiceClient(metaclass=ConversionValueRuleServiceClien
     @property
     def transport(self) -> ConversionValueRuleServiceTransport: ...
     def __enter__(self) -> ConversionValueRuleServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def conversion_value_rule_path(
         customer_id: str, conversion_value_rule_id: str

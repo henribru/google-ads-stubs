@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class LabelServiceClient(metaclass=LabelServiceClientMeta):
     @property
     def transport(self) -> LabelServiceTransport: ...
     def __enter__(self) -> LabelServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def label_path(customer_id: str, label_id: str) -> str: ...
     @staticmethod

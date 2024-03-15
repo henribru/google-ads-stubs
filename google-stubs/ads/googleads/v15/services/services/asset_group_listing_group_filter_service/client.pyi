@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -32,7 +33,12 @@ class AssetGroupListingGroupFilterServiceClient(
     @property
     def transport(self) -> AssetGroupListingGroupFilterServiceTransport: ...
     def __enter__(self) -> AssetGroupListingGroupFilterServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def asset_group_path(customer_id: str, asset_group_id: str) -> str: ...
     @staticmethod

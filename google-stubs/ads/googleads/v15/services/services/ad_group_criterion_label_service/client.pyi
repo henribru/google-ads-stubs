@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -30,7 +31,12 @@ class AdGroupCriterionLabelServiceClient(
     @property
     def transport(self) -> AdGroupCriterionLabelServiceTransport: ...
     def __enter__(self) -> AdGroupCriterionLabelServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def ad_group_criterion_path(
         customer_id: str, ad_group_id: str, criterion_id: str

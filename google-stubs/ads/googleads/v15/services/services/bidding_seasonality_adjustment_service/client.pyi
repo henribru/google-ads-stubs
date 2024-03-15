@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -32,7 +33,12 @@ class BiddingSeasonalityAdjustmentServiceClient(
     @property
     def transport(self) -> BiddingSeasonalityAdjustmentServiceTransport: ...
     def __enter__(self) -> BiddingSeasonalityAdjustmentServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def bidding_seasonality_adjustment_path(
         customer_id: str, seasonality_event_id: str

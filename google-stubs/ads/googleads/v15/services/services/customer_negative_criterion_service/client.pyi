@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -30,7 +31,12 @@ class CustomerNegativeCriterionServiceClient(
     @property
     def transport(self) -> CustomerNegativeCriterionServiceTransport: ...
     def __enter__(self) -> CustomerNegativeCriterionServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def customer_negative_criterion_path(
         customer_id: str, criterion_id: str

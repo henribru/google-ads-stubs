@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class CampaignBudgetServiceClient(metaclass=CampaignBudgetServiceClientMeta):
     @property
     def transport(self) -> CampaignBudgetServiceTransport: ...
     def __enter__(self) -> CampaignBudgetServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def campaign_budget_path(customer_id: str, campaign_budget_id: str) -> str: ...
     @staticmethod

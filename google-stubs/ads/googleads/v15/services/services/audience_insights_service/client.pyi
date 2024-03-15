@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -29,7 +30,12 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
     @property
     def transport(self) -> AudienceInsightsServiceTransport: ...
     def __enter__(self) -> AudienceInsightsServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod

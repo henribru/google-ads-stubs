@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class CustomerUserAccessServiceClient(metaclass=CustomerUserAccessServiceClientM
     @property
     def transport(self) -> CustomerUserAccessServiceTransport: ...
     def __enter__(self) -> CustomerUserAccessServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def customer_user_access_path(customer_id: str, user_id: str) -> str: ...
     @staticmethod

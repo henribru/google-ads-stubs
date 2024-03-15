@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -32,7 +33,12 @@ class CustomerSkAdNetworkConversionValueSchemaServiceClient(
     @property
     def transport(self) -> CustomerSkAdNetworkConversionValueSchemaServiceTransport: ...
     def __enter__(self) -> CustomerSkAdNetworkConversionValueSchemaServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def customer_sk_ad_network_conversion_value_schema_path(
         customer_id: str, account_link_id: str
