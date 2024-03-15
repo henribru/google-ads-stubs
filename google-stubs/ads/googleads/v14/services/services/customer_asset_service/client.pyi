@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class CustomerAssetServiceClient(metaclass=CustomerAssetServiceClientMeta):
     @property
     def transport(self) -> CustomerAssetServiceTransport: ...
     def __enter__(self) -> CustomerAssetServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def asset_path(customer_id: str, asset_id: str) -> str: ...
     @staticmethod

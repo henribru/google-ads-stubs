@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -30,7 +31,12 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
     @property
     def transport(self) -> OfflineUserDataJobServiceTransport: ...
     def __enter__(self) -> OfflineUserDataJobServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def offline_user_data_job_path(
         customer_id: str, offline_user_data_update_id: str

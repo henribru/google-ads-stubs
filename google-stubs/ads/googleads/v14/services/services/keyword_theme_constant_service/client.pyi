@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -30,7 +31,12 @@ class KeywordThemeConstantServiceClient(
     @property
     def transport(self) -> KeywordThemeConstantServiceTransport: ...
     def __enter__(self) -> KeywordThemeConstantServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def keyword_theme_constant_path(
         express_category_id: str, express_sub_category_id: str

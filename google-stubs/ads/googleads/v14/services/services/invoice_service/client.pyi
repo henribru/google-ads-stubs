@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -29,7 +30,12 @@ class InvoiceServiceClient(metaclass=InvoiceServiceClientMeta):
     @property
     def transport(self) -> InvoiceServiceTransport: ...
     def __enter__(self) -> InvoiceServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def invoice_path(customer_id: str, invoice_id: str) -> str: ...
     @staticmethod

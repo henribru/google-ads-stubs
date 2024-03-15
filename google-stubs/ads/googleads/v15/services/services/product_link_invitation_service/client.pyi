@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -33,7 +34,12 @@ class ProductLinkInvitationServiceClient(
     @property
     def transport(self) -> ProductLinkInvitationServiceTransport: ...
     def __enter__(self) -> ProductLinkInvitationServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def product_link_invitation_path(
         customer_id: str, customer_invitation_id: str

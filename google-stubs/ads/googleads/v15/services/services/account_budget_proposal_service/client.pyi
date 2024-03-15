@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -30,7 +31,12 @@ class AccountBudgetProposalServiceClient(
     @property
     def transport(self) -> AccountBudgetProposalServiceTransport: ...
     def __enter__(self) -> AccountBudgetProposalServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def account_budget_path(customer_id: str, account_budget_id: str) -> str: ...
     @staticmethod

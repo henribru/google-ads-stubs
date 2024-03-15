@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class BiddingStrategyServiceClient(metaclass=BiddingStrategyServiceClientMeta):
     @property
     def transport(self) -> BiddingStrategyServiceTransport: ...
     def __enter__(self) -> BiddingStrategyServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def bidding_strategy_path(customer_id: str, bidding_strategy_id: str) -> str: ...
     @staticmethod

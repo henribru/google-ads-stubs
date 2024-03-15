@@ -1,8 +1,6 @@
 from typing import Any, Callable, Iterable, Iterator, Sequence, Tuple
 
-from google.ads.googleads.v14.services.types import (
-    batch_job_service as batch_job_service,
-)
+from google.ads.googleads.v14.services.types import batch_job_service
 
 class ListBatchJobResultsPager:
     def __init__(

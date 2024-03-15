@@ -2,9 +2,7 @@ from typing import Any, Callable, Iterable, Iterator, Sequence, Tuple
 
 from google.rpc import status_pb2 as status_pb2
 
-from google.ads.googleads.v15.services.types import (
-    campaign_draft_service as campaign_draft_service,
-)
+from google.ads.googleads.v15.services.types import campaign_draft_service
 
 class ListCampaignDraftAsyncErrorsPager:
     def __init__(

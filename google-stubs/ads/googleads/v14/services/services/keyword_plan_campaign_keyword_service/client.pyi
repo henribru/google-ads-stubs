@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -32,7 +33,12 @@ class KeywordPlanCampaignKeywordServiceClient(
     @property
     def transport(self) -> KeywordPlanCampaignKeywordServiceTransport: ...
     def __enter__(self) -> KeywordPlanCampaignKeywordServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def keyword_plan_campaign_path(
         customer_id: str, keyword_plan_campaign_id: str

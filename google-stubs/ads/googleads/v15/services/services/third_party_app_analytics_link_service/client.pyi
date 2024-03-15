@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -32,7 +33,12 @@ class ThirdPartyAppAnalyticsLinkServiceClient(
     @property
     def transport(self) -> ThirdPartyAppAnalyticsLinkServiceTransport: ...
     def __enter__(self) -> ThirdPartyAppAnalyticsLinkServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def third_party_app_analytics_link_path(
         customer_id: str, customer_link_id: str

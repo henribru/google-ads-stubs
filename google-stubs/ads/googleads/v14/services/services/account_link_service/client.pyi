@@ -1,3 +1,4 @@
+import types
 from typing import Dict, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -29,7 +30,12 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
     @property
     def transport(self) -> AccountLinkServiceTransport: ...
     def __enter__(self) -> AccountLinkServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def account_link_path(customer_id: str, account_link_id: str) -> str: ...
     @staticmethod

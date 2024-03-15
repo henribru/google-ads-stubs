@@ -1,8 +1,6 @@
 from typing import Any, Callable, Iterable, Iterator, Sequence, Tuple
 
-from google.ads.googleads.v14.services.types import (
-    keyword_plan_idea_service as keyword_plan_idea_service,
-)
+from google.ads.googleads.v14.services.types import keyword_plan_idea_service
 
 class GenerateKeywordIdeasPager:
     def __init__(

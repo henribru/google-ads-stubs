@@ -3,9 +3,7 @@ from typing import Any, Callable, Iterable, Iterator, Sequence, Tuple
 from google.ads.googleads.v14.resources.types import (
     google_ads_field as google_ads_field,
 )
-from google.ads.googleads.v14.services.types import (
-    google_ads_field_service as google_ads_field_service,
-)
+from google.ads.googleads.v14.services.types import google_ads_field_service
 
 class SearchGoogleAdsFieldsPager:
     def __init__(

@@ -1,3 +1,4 @@
+import types
 from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
 
 from _typeshed import Incomplete
@@ -28,7 +29,12 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
     @property
     def transport(self) -> ConversionUploadServiceTransport: ...
     def __enter__(self) -> ConversionUploadServiceClient: ...
-    def __exit__(self, type, value, traceback) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     @staticmethod
     def conversion_custom_variable_path(
         customer_id: str, conversion_custom_variable_id: str
