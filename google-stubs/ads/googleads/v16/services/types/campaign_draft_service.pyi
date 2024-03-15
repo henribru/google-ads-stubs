@@ -27,7 +27,7 @@ class CampaignDraftOperation(proto.Message):
         update_mask: FieldMask = ...,
         create: CampaignDraft = ...,
         update: CampaignDraft = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -42,7 +42,7 @@ class ListCampaignDraftAsyncErrorsRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         page_token: str = ...,
-        page_size: int = ...
+        page_size: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "page_token", "page_size"]) -> bool: ...  # type: ignore[override]
 
@@ -55,7 +55,7 @@ class ListCampaignDraftAsyncErrorsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         errors: MutableSequence[Status] = ...,
-        next_page_token: str = ...
+        next_page_token: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["errors", "next_page_token"]) -> bool: ...  # type: ignore[override]
 
@@ -68,7 +68,7 @@ class MutateCampaignDraftResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        campaign_draft: CampaignDraft = ...
+        campaign_draft: CampaignDraft = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign_draft"]) -> bool: ...  # type: ignore[override]
 
@@ -87,7 +87,7 @@ class MutateCampaignDraftsRequest(proto.Message):
         operations: MutableSequence[CampaignDraftOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -100,7 +100,7 @@ class MutateCampaignDraftsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateCampaignDraftResult] = ...
+        results: MutableSequence[MutateCampaignDraftResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
 
@@ -113,6 +113,6 @@ class PromoteCampaignDraftRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         campaign_draft: str = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["campaign_draft", "validate_only"]) -> bool: ...  # type: ignore[override]

@@ -29,6 +29,6 @@ class CustomerUserAccessInvitation(proto.Message):
         access_role: AccessRoleEnum.AccessRole = ...,
         email_address: str = ...,
         creation_date_time: str = ...,
-        invitation_status: AccessInvitationStatusEnum.AccessInvitationStatus = ...
+        invitation_status: AccessInvitationStatusEnum.AccessInvitationStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "invitation_id", "access_role", "email_address", "creation_date_time", "invitation_status"]) -> bool: ...  # type: ignore[override]

@@ -32,6 +32,6 @@ class GeoTargetConstant(proto.Message):
         target_type: str = ...,
         status: GeoTargetConstantStatusEnum.GeoTargetConstantStatus = ...,
         canonical_name: str = ...,
-        parent_geo_target: str = ...
+        parent_geo_target: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "country_code", "target_type", "status", "canonical_name", "parent_geo_target"]) -> bool: ...  # type: ignore[override]

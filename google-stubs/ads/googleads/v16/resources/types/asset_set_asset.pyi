@@ -24,6 +24,6 @@ class AssetSetAsset(proto.Message):
         resource_name: str = ...,
         asset_set: str = ...,
         asset: str = ...,
-        status: AssetSetAssetStatusEnum.AssetSetAssetStatus = ...
+        status: AssetSetAssetStatusEnum.AssetSetAssetStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset_set", "asset", "status"]) -> bool: ...  # type: ignore[override]

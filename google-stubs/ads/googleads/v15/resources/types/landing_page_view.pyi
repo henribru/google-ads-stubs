@@ -16,6 +16,6 @@ class LandingPageView(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        unexpanded_final_url: str = ...
+        unexpanded_final_url: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "unexpanded_final_url"]) -> bool: ...  # type: ignore[override]

@@ -66,7 +66,7 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AccountLinkServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def create_account_link(
         self,
@@ -76,7 +76,7 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
         account_link: gagr_account_link.AccountLink | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> account_link_service.CreateAccountLinkResponse: ...
     def mutate_account_link(
         self,
@@ -86,5 +86,5 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
         operation: account_link_service.AccountLinkOperation | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> account_link_service.MutateAccountLinkResponse: ...

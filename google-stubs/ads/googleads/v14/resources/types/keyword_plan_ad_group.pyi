@@ -22,6 +22,6 @@ class KeywordPlanAdGroup(proto.Message):
         keyword_plan_campaign: str = ...,
         id: int = ...,
         name: str = ...,
-        cpc_bid_micros: int = ...
+        cpc_bid_micros: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "keyword_plan_campaign", "id", "name", "cpc_bid_micros"]) -> bool: ...  # type: ignore[override]

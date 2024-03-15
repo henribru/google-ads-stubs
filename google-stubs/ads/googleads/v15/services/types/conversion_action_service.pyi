@@ -27,7 +27,7 @@ class ConversionActionOperation(proto.Message):
         update_mask: FieldMask = ...,
         create: ConversionAction = ...,
         update: ConversionAction = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -40,7 +40,7 @@ class MutateConversionActionResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        conversion_action: ConversionAction = ...
+        conversion_action: ConversionAction = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "conversion_action"]) -> bool: ...  # type: ignore[override]
 
@@ -59,7 +59,7 @@ class MutateConversionActionsRequest(proto.Message):
         operations: MutableSequence[ConversionActionOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -72,6 +72,6 @@ class MutateConversionActionsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateConversionActionResult] = ...
+        results: MutableSequence[MutateConversionActionResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

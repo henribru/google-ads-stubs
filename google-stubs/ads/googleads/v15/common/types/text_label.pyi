@@ -16,6 +16,6 @@ class TextLabel(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         background_color: str = ...,
-        description: str = ...
+        description: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["background_color", "description"]) -> bool: ...  # type: ignore[override]

@@ -22,7 +22,7 @@ class BrandSuggestion(proto.Message):
         id: str = ...,
         name: str = ...,
         urls: MutableSequence[str] = ...,
-        state: BrandStateEnum.BrandState = ...
+        state: BrandStateEnum.BrandState = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["id", "name", "urls", "state"]) -> bool: ...  # type: ignore[override]
 
@@ -37,7 +37,7 @@ class SuggestBrandsRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         brand_prefix: str = ...,
-        selected_brands: MutableSequence[str] = ...
+        selected_brands: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "brand_prefix", "selected_brands"]) -> bool: ...  # type: ignore[override]
 
@@ -48,6 +48,6 @@ class SuggestBrandsResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        brands: MutableSequence[BrandSuggestion] = ...
+        brands: MutableSequence[BrandSuggestion] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["brands"]) -> bool: ...  # type: ignore[override]

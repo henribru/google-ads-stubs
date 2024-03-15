@@ -71,7 +71,7 @@ class CustomerLifecycleGoalServiceClient(
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CustomerLifecycleGoalServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def configure_customer_lifecycle_goals(
         self,
@@ -84,5 +84,5 @@ class CustomerLifecycleGoalServiceClient(
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> customer_lifecycle_goal_service.ConfigureCustomerLifecycleGoalsResponse: ...

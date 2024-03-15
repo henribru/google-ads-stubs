@@ -18,6 +18,6 @@ class UserLocationView(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         country_criterion_id: int = ...,
-        targeting_location: bool = ...
+        targeting_location: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "country_criterion_id", "targeting_location"]) -> bool: ...  # type: ignore[override]

@@ -17,7 +17,7 @@ class MediaAudio(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        ad_duration_millis: int = ...
+        ad_duration_millis: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["ad_duration_millis"]) -> bool: ...  # type: ignore[override]
 
@@ -30,7 +30,7 @@ class MediaBundle(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         data: bytes = ...,
-        url: str = ...
+        url: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["data", "url"]) -> bool: ...  # type: ignore[override]
 
@@ -61,7 +61,7 @@ class MediaFile(proto.Message):
         image: MediaImage = ...,
         media_bundle: MediaBundle = ...,
         audio: MediaAudio = ...,
-        video: MediaVideo = ...
+        video: MediaVideo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "type_", "mime_type", "source_url", "name", "file_size", "image", "media_bundle", "audio", "video"]) -> bool: ...  # type: ignore[override]
 
@@ -76,7 +76,7 @@ class MediaImage(proto.Message):
         ignore_unknown_fields: bool = False,
         data: bytes = ...,
         full_size_image_url: str = ...,
-        preview_size_image_url: str = ...
+        preview_size_image_url: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["data", "full_size_image_url", "preview_size_image_url"]) -> bool: ...  # type: ignore[override]
 
@@ -93,6 +93,6 @@ class MediaVideo(proto.Message):
         ad_duration_millis: int = ...,
         youtube_video_id: str = ...,
         advertising_id_code: str = ...,
-        isci_code: str = ...
+        isci_code: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["ad_duration_millis", "youtube_video_id", "advertising_id_code", "isci_code"]) -> bool: ...  # type: ignore[override]

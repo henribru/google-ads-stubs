@@ -29,6 +29,6 @@ class CustomizerAttribute(proto.Message):
         id: int = ...,
         name: str = ...,
         type_: CustomizerAttributeTypeEnum.CustomizerAttributeType = ...,
-        status: CustomizerAttributeStatusEnum.CustomizerAttributeStatus = ...
+        status: CustomizerAttributeStatusEnum.CustomizerAttributeStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "type_", "status"]) -> bool: ...  # type: ignore[override]

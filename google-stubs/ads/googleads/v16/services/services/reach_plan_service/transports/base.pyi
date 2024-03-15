@@ -20,7 +20,7 @@ class ReachPlanServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def close(self) -> None: ...
     @property

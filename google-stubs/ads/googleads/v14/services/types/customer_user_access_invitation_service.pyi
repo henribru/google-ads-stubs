@@ -20,7 +20,7 @@ class CustomerUserAccessInvitationOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         create: CustomerUserAccessInvitation = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -33,7 +33,7 @@ class MutateCustomerUserAccessInvitationRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
-        operation: CustomerUserAccessInvitationOperation = ...
+        operation: CustomerUserAccessInvitationOperation = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operation"]) -> bool: ...  # type: ignore[override]
 
@@ -44,7 +44,7 @@ class MutateCustomerUserAccessInvitationResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        result: MutateCustomerUserAccessInvitationResult = ...
+        result: MutateCustomerUserAccessInvitationResult = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
 
@@ -55,6 +55,6 @@ class MutateCustomerUserAccessInvitationResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

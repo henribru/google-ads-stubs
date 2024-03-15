@@ -23,7 +23,7 @@ class UploadUserDataRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[UserDataOperation] = ...,
-        customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...
+        customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "customer_match_user_list_metadata"]) -> bool: ...  # type: ignore[override]
 
@@ -36,7 +36,7 @@ class UploadUserDataResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         upload_date_time: str = ...,
-        received_operations_count: int = ...
+        received_operations_count: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["upload_date_time", "received_operations_count"]) -> bool: ...  # type: ignore[override]
 
@@ -49,6 +49,6 @@ class UserDataOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         create: UserData = ...,
-        remove: UserData = ...
+        remove: UserData = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]

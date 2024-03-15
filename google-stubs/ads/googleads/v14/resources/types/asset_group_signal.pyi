@@ -20,6 +20,6 @@ class AssetGroupSignal(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         asset_group: str = ...,
-        audience: AudienceInfo = ...
+        audience: AudienceInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset_group", "audience"]) -> bool: ...  # type: ignore[override]

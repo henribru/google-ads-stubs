@@ -35,7 +35,7 @@ class AdAssetPolicySummary(proto.Message):
         ignore_unknown_fields: bool = False,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
-        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
+        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]
 
@@ -50,7 +50,7 @@ class AssetDisapproved(proto.Message):
         ignore_unknown_fields: bool = False,
         offline_evaluation_error_reasons: MutableSequence[
             AssetOfflineEvaluationErrorReasonsEnum.AssetOfflineEvaluationErrorReasons
-        ] = ...
+        ] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["offline_evaluation_error_reasons"]) -> bool: ...  # type: ignore[override]
 
@@ -65,6 +65,6 @@ class AssetLinkPrimaryStatusDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         reason: AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason = ...,
         status: AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus = ...,
-        asset_disapproved: AssetDisapproved = ...
+        asset_disapproved: AssetDisapproved = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["reason", "status", "asset_disapproved"]) -> bool: ...  # type: ignore[override]

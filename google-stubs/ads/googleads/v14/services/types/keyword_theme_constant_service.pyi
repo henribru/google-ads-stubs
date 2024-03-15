@@ -22,7 +22,7 @@ class SuggestKeywordThemeConstantsRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         query_text: str = ...,
         country_code: str = ...,
-        language_code: str = ...
+        language_code: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["query_text", "country_code", "language_code"]) -> bool: ...  # type: ignore[override]
 
@@ -33,6 +33,6 @@ class SuggestKeywordThemeConstantsResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        keyword_theme_constants: MutableSequence[KeywordThemeConstant] = ...
+        keyword_theme_constants: MutableSequence[KeywordThemeConstant] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["keyword_theme_constants"]) -> bool: ...  # type: ignore[override]

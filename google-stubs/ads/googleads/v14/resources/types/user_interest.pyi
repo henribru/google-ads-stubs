@@ -33,6 +33,6 @@ class UserInterest(proto.Message):
         name: str = ...,
         user_interest_parent: str = ...,
         launched_to_all: bool = ...,
-        availabilities: MutableSequence[CriterionCategoryAvailability] = ...
+        availabilities: MutableSequence[CriterionCategoryAvailability] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "taxonomy_type", "user_interest_id", "name", "user_interest_parent", "launched_to_all", "availabilities"]) -> bool: ...  # type: ignore[override]

@@ -22,6 +22,6 @@ class Value(proto.Message):
         int64_value: int = ...,
         float_value: float = ...,
         double_value: float = ...,
-        string_value: str = ...
+        string_value: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["boolean_value", "int64_value", "float_value", "double_value", "string_value"]) -> bool: ...  # type: ignore[override]

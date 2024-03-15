@@ -18,6 +18,6 @@ class MobileAppCategoryConstant(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         id: int = ...,
-        name: str = ...
+        name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name"]) -> bool: ...  # type: ignore[override]

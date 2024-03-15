@@ -25,6 +25,6 @@ class CustomerExtensionSetting(proto.Message):
         resource_name: str = ...,
         extension_type: ExtensionTypeEnum.ExtensionType = ...,
         extension_feed_items: MutableSequence[str] = ...,
-        device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...
+        device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "extension_type", "extension_feed_items", "device"]) -> bool: ...  # type: ignore[override]

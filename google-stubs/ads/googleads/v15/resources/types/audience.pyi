@@ -37,6 +37,6 @@ class Audience(proto.Message):
         dimensions: MutableSequence[AudienceDimension] = ...,
         exclusion_dimension: AudienceExclusionDimension = ...,
         scope: AudienceScopeEnum.AudienceScope = ...,
-        asset_group: str = ...
+        asset_group: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "status", "name", "description", "dimensions", "exclusion_dimension", "scope", "asset_group"]) -> bool: ...  # type: ignore[override]

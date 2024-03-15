@@ -20,6 +20,6 @@ class QualifyingQuestion(proto.Message):
         resource_name: str = ...,
         qualifying_question_id: int = ...,
         locale: str = ...,
-        text: str = ...
+        text: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "qualifying_question_id", "locale", "text"]) -> bool: ...  # type: ignore[override]

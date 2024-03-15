@@ -27,6 +27,6 @@ class CampaignConversionGoal(proto.Message):
         campaign: str = ...,
         category: ConversionActionCategoryEnum.ConversionActionCategory = ...,
         origin: ConversionOriginEnum.ConversionOrigin = ...,
-        biddable: bool = ...
+        biddable: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign", "category", "origin", "biddable"]) -> bool: ...  # type: ignore[override]

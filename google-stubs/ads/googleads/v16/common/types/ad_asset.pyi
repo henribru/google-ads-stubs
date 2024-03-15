@@ -22,7 +22,7 @@ class AdCallToActionAsset(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        asset: str = ...
+        asset: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
 
@@ -33,7 +33,7 @@ class AdDiscoveryCarouselCardAsset(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        asset: str = ...
+        asset: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
 
@@ -44,7 +44,7 @@ class AdImageAsset(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        asset: str = ...
+        asset: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
 
@@ -55,7 +55,7 @@ class AdMediaBundleAsset(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        asset: str = ...
+        asset: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
 
@@ -72,7 +72,7 @@ class AdTextAsset(proto.Message):
         text: str = ...,
         pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType = ...,
         asset_performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
-        policy_summary_info: AdAssetPolicySummary = ...
+        policy_summary_info: AdAssetPolicySummary = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["text", "pinned_field", "asset_performance_label", "policy_summary_info"]) -> bool: ...  # type: ignore[override]
 
@@ -83,6 +83,6 @@ class AdVideoAsset(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        asset: str = ...
+        asset: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]

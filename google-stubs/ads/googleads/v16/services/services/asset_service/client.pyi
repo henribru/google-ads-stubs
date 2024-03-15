@@ -69,7 +69,7 @@ class AssetServiceClient(metaclass=AssetServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AssetServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_assets(
         self,
@@ -79,5 +79,5 @@ class AssetServiceClient(metaclass=AssetServiceClientMeta):
         operations: MutableSequence[asset_service.AssetOperation] | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> asset_service.MutateAssetsResponse: ...

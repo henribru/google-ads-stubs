@@ -28,6 +28,6 @@ class ConversionCustomVariable(proto.Message):
         name: str = ...,
         tag: str = ...,
         status: ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus = ...,
-        owner_customer: str = ...
+        owner_customer: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "tag", "status", "owner_customer"]) -> bool: ...  # type: ignore[override]

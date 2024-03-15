@@ -18,6 +18,6 @@ class CustomerLabel(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         customer: str = ...,
-        label: str = ...
+        label: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "customer", "label"]) -> bool: ...  # type: ignore[override]

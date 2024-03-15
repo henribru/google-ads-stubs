@@ -35,6 +35,6 @@ class ClickView(proto.Message):
         campaign_location_target: str = ...,
         user_list: str = ...,
         keyword: str = ...,
-        keyword_info: KeywordInfo = ...
+        keyword_info: KeywordInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "gclid", "area_of_interest", "location_of_presence", "page_number", "ad_group_ad", "campaign_location_target", "user_list", "keyword", "keyword_info"]) -> bool: ...  # type: ignore[override]

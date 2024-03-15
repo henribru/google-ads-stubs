@@ -71,7 +71,7 @@ class ThirdPartyAppAnalyticsLinkServiceClient(
         credentials: ga_credentials.Credentials | None = None,
         transport: str | ThirdPartyAppAnalyticsLinkServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def regenerate_shareable_link_id(
         self,
@@ -81,5 +81,5 @@ class ThirdPartyAppAnalyticsLinkServiceClient(
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> third_party_app_analytics_link_service.RegenerateShareableLinkIdResponse: ...

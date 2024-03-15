@@ -24,6 +24,6 @@ class CustomerAssetSet(proto.Message):
         resource_name: str = ...,
         asset_set: str = ...,
         customer: str = ...,
-        status: AssetSetLinkStatusEnum.AssetSetLinkStatus = ...
+        status: AssetSetLinkStatusEnum.AssetSetLinkStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset_set", "customer", "status"]) -> bool: ...  # type: ignore[override]

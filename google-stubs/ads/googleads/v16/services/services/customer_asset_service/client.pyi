@@ -71,7 +71,7 @@ class CustomerAssetServiceClient(metaclass=CustomerAssetServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CustomerAssetServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_customer_assets(
         self,
@@ -84,5 +84,5 @@ class CustomerAssetServiceClient(metaclass=CustomerAssetServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> customer_asset_service.MutateCustomerAssetsResponse: ...

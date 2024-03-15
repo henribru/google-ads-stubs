@@ -20,7 +20,7 @@ class BusinessNameFilter(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         business_name: str = ...,
-        filter_type: FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType = ...
+        filter_type: FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["business_name", "filter_type"]) -> bool: ...  # type: ignore[override]
 
@@ -31,7 +31,7 @@ class DynamicAffiliateLocationSetFilter(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        chain_ids: MutableSequence[int] = ...
+        chain_ids: MutableSequence[int] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["chain_ids"]) -> bool: ...  # type: ignore[override]
 
@@ -44,6 +44,6 @@ class DynamicLocationSetFilter(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         labels: MutableSequence[str] = ...,
-        business_name_filter: BusinessNameFilter = ...
+        business_name_filter: BusinessNameFilter = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["labels", "business_name_filter"]) -> bool: ...  # type: ignore[override]

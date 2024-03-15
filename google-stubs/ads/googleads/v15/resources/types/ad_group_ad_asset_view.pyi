@@ -34,7 +34,7 @@ class AdGroupAdAssetPolicySummary(proto.Message):
         ignore_unknown_fields: bool = False,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
-        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
+        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]
 
@@ -61,6 +61,6 @@ class AdGroupAdAssetView(proto.Message):
         policy_summary: AdGroupAdAssetPolicySummary = ...,
         performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
         pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType = ...,
-        source: AssetSourceEnum.AssetSource = ...
+        source: AssetSourceEnum.AssetSource = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group_ad", "asset", "field_type", "enabled", "policy_summary", "performance_label", "pinned_field", "source"]) -> bool: ...  # type: ignore[override]

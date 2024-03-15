@@ -16,7 +16,7 @@ class ListPaymentsAccountsRequest(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        customer_id: str = ...
+        customer_id: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id"]) -> bool: ...  # type: ignore[override]
 
@@ -27,6 +27,6 @@ class ListPaymentsAccountsResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        payments_accounts: MutableSequence[PaymentsAccount] = ...
+        payments_accounts: MutableSequence[PaymentsAccount] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["payments_accounts"]) -> bool: ...  # type: ignore[override]

@@ -75,7 +75,7 @@ class AdGroupServiceClient(metaclass=AdGroupServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AdGroupServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_ad_groups(
         self,
@@ -85,5 +85,5 @@ class AdGroupServiceClient(metaclass=AdGroupServiceClientMeta):
         operations: MutableSequence[ad_group_service.AdGroupOperation] | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> ad_group_service.MutateAdGroupsResponse: ...

@@ -26,6 +26,6 @@ class CombinedAudience(proto.Message):
         id: int = ...,
         status: CombinedAudienceStatusEnum.CombinedAudienceStatus = ...,
         name: str = ...,
-        description: str = ...
+        description: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "status", "name", "description"]) -> bool: ...  # type: ignore[override]

@@ -22,7 +22,7 @@ class AccessibleBiddingStrategy(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            target_roas: float = ...
+            target_roas: float = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_roas"]) -> bool: ...  # type: ignore[override]
 
@@ -33,7 +33,7 @@ class AccessibleBiddingStrategy(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            target_cpa_micros: int = ...
+            target_cpa_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_cpa_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -44,7 +44,7 @@ class AccessibleBiddingStrategy(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            target_cpa_micros: int = ...
+            target_cpa_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_cpa_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -59,7 +59,7 @@ class AccessibleBiddingStrategy(proto.Message):
             ignore_unknown_fields: bool = False,
             location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation = ...,
             location_fraction_micros: int = ...,
-            cpc_bid_ceiling_micros: int = ...
+            cpc_bid_ceiling_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["location", "location_fraction_micros", "cpc_bid_ceiling_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -70,7 +70,7 @@ class AccessibleBiddingStrategy(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            target_roas: float = ...
+            target_roas: float = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_roas"]) -> bool: ...  # type: ignore[override]
 
@@ -83,7 +83,7 @@ class AccessibleBiddingStrategy(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             target_spend_micros: int = ...,
-            cpc_bid_ceiling_micros: int = ...
+            cpc_bid_ceiling_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_spend_micros", "cpc_bid_ceiling_micros"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -114,6 +114,6 @@ class AccessibleBiddingStrategy(proto.Message):
         target_cpa: AccessibleBiddingStrategy.TargetCpa = ...,
         target_impression_share: AccessibleBiddingStrategy.TargetImpressionShare = ...,
         target_roas: AccessibleBiddingStrategy.TargetRoas = ...,
-        target_spend: AccessibleBiddingStrategy.TargetSpend = ...
+        target_spend: AccessibleBiddingStrategy.TargetSpend = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "type_", "owner_customer_id", "owner_descriptive_name", "maximize_conversion_value", "maximize_conversions", "target_cpa", "target_impression_share", "target_roas", "target_spend"]) -> bool: ...  # type: ignore[override]

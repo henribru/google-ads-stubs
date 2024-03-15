@@ -24,7 +24,7 @@ class CustomerNegativeCriterionOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         create: CustomerNegativeCriterion = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -43,7 +43,7 @@ class MutateCustomerNegativeCriteriaRequest(proto.Message):
         operations: MutableSequence[CustomerNegativeCriterionOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -56,7 +56,7 @@ class MutateCustomerNegativeCriteriaResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateCustomerNegativeCriteriaResult] = ...
+        results: MutableSequence[MutateCustomerNegativeCriteriaResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
 
@@ -69,6 +69,6 @@ class MutateCustomerNegativeCriteriaResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        customer_negative_criterion: CustomerNegativeCriterion = ...
+        customer_negative_criterion: CustomerNegativeCriterion = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "customer_negative_criterion"]) -> bool: ...  # type: ignore[override]

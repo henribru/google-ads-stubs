@@ -18,6 +18,6 @@ class FeedItemSetLink(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         feed_item: str = ...,
-        feed_item_set: str = ...
+        feed_item_set: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "feed_item", "feed_item_set"]) -> bool: ...  # type: ignore[override]

@@ -20,6 +20,6 @@ class CarrierConstant(proto.Message):
         resource_name: str = ...,
         id: int = ...,
         name: str = ...,
-        country_code: str = ...
+        country_code: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "country_code"]) -> bool: ...  # type: ignore[override]

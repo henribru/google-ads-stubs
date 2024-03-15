@@ -25,6 +25,6 @@ class TagSnippet(proto.Message):
         type_: TrackingCodeTypeEnum.TrackingCodeType = ...,
         page_format: TrackingCodePageFormatEnum.TrackingCodePageFormat = ...,
         global_site_tag: str = ...,
-        event_snippet: str = ...
+        event_snippet: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["type_", "page_format", "global_site_tag", "event_snippet"]) -> bool: ...  # type: ignore[override]

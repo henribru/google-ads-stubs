@@ -19,7 +19,7 @@ class GetMerchantCenterLinkRequest(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -30,7 +30,7 @@ class ListMerchantCenterLinksRequest(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        customer_id: str = ...
+        customer_id: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id"]) -> bool: ...  # type: ignore[override]
 
@@ -41,7 +41,7 @@ class ListMerchantCenterLinksResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        merchant_center_links: MutableSequence[MerchantCenterLink] = ...
+        merchant_center_links: MutableSequence[MerchantCenterLink] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["merchant_center_links"]) -> bool: ...  # type: ignore[override]
 
@@ -56,7 +56,7 @@ class MerchantCenterLinkOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         update: MerchantCenterLink = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -71,7 +71,7 @@ class MutateMerchantCenterLinkRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: MerchantCenterLinkOperation = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -82,7 +82,7 @@ class MutateMerchantCenterLinkResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        result: MutateMerchantCenterLinkResult = ...
+        result: MutateMerchantCenterLinkResult = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
 
@@ -93,6 +93,6 @@ class MutateMerchantCenterLinkResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

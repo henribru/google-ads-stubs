@@ -47,6 +47,6 @@ class GoogleAdsField(proto.Message):
         enum_values: MutableSequence[str] = ...,
         data_type: GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType = ...,
         type_url: str = ...,
-        is_repeated: bool = ...
+        is_repeated: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "name", "category", "selectable", "filterable", "sortable", "selectable_with", "attribute_resources", "metrics", "segments", "enum_values", "data_type", "type_url", "is_repeated"]) -> bool: ...  # type: ignore[override]

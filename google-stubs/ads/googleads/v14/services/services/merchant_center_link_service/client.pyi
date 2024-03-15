@@ -66,7 +66,7 @@ class MerchantCenterLinkServiceClient(metaclass=MerchantCenterLinkServiceClientM
         credentials: ga_credentials.Credentials | None = None,
         transport: str | MerchantCenterLinkServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def list_merchant_center_links(
         self,
@@ -77,7 +77,7 @@ class MerchantCenterLinkServiceClient(metaclass=MerchantCenterLinkServiceClientM
         customer_id: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> merchant_center_link_service.ListMerchantCenterLinksResponse: ...
     def get_merchant_center_link(
         self,
@@ -88,7 +88,7 @@ class MerchantCenterLinkServiceClient(metaclass=MerchantCenterLinkServiceClientM
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> merchant_center_link.MerchantCenterLink: ...
     def mutate_merchant_center_link(
         self,
@@ -101,5 +101,5 @@ class MerchantCenterLinkServiceClient(metaclass=MerchantCenterLinkServiceClientM
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> merchant_center_link_service.MutateMerchantCenterLinkResponse: ...

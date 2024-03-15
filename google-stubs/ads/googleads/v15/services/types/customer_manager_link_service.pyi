@@ -21,7 +21,7 @@ class CustomerManagerLinkOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
-        update: CustomerManagerLink = ...
+        update: CustomerManagerLink = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "update"]) -> bool: ...  # type: ignore[override]
 
@@ -38,7 +38,7 @@ class MoveManagerLinkRequest(proto.Message):
         customer_id: str = ...,
         previous_customer_manager_link: str = ...,
         new_manager: str = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "previous_customer_manager_link", "new_manager", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -49,7 +49,7 @@ class MoveManagerLinkResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -64,7 +64,7 @@ class MutateCustomerManagerLinkRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CustomerManagerLinkOperation] = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -75,7 +75,7 @@ class MutateCustomerManagerLinkResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        results: MutableSequence[MutateCustomerManagerLinkResult] = ...
+        results: MutableSequence[MutateCustomerManagerLinkResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results"]) -> bool: ...  # type: ignore[override]
 
@@ -86,6 +86,6 @@ class MutateCustomerManagerLinkResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

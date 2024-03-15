@@ -75,7 +75,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | ExperimentServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_experiments(
         self,
@@ -86,7 +86,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> experiment_service.MutateExperimentsResponse: ...
     def end_experiment(
         self,
@@ -95,7 +95,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         experiment: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> None: ...
     def list_experiment_async_errors(
         self,
@@ -106,7 +106,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> pagers.ListExperimentAsyncErrorsPager: ...
     def graduate_experiment(
         self,
@@ -119,7 +119,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> None: ...
     def schedule_experiment(
         self,
@@ -128,7 +128,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> operation.Operation: ...
     def promote_experiment(
         self,
@@ -137,5 +137,5 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> operation.Operation: ...

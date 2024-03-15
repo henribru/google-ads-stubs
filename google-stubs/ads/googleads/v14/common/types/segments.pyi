@@ -80,7 +80,7 @@ class AssetInteractionTarget(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         asset: str = ...,
-        interaction_on_this_asset: bool = ...
+        interaction_on_this_asset: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["asset", "interaction_on_this_asset"]) -> bool: ...  # type: ignore[override]
 
@@ -93,7 +93,7 @@ class BudgetCampaignAssociationStatus(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         campaign: str = ...,
-        status: BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus = ...
+        status: BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["campaign", "status"]) -> bool: ...  # type: ignore[override]
 
@@ -106,7 +106,7 @@ class Keyword(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         ad_group_criterion: str = ...,
-        info: KeywordInfo = ...
+        info: KeywordInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["ad_group_criterion", "info"]) -> bool: ...  # type: ignore[override]
 
@@ -313,7 +313,7 @@ class Segments(proto.Message):
         sk_ad_network_source_app: SkAdNetworkSourceApp = ...,
         sk_ad_network_attribution_credit: SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit = ...,
         asset_interaction_target: AssetInteractionTarget = ...,
-        new_versus_returning_customers: ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket = ...
+        new_versus_returning_customers: ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["activity_account_id", "activity_rating", "external_activity_id", "ad_destination_type", "ad_network_type", "ad_group", "asset_group", "auction_insight_domain", "budget_campaign_association_status", "campaign", "click_type", "conversion_action", "conversion_action_category", "conversion_action_name", "conversion_adjustment", "conversion_attribution_event_type", "conversion_lag_bucket", "conversion_or_adjustment_lag_bucket", "date", "day_of_week", "device", "external_conversion_source", "geo_target_airport", "geo_target_canton", "geo_target_city", "geo_target_country", "geo_target_county", "geo_target_district", "geo_target_metro", "geo_target_most_specific_location", "geo_target_postal_code", "geo_target_province", "geo_target_region", "geo_target_state", "hotel_booking_window_days", "hotel_center_id", "hotel_check_in_date", "hotel_check_in_day_of_week", "hotel_city", "hotel_class", "hotel_country", "hotel_date_selection_type", "hotel_length_of_stay", "hotel_rate_rule_id", "hotel_rate_type", "hotel_price_bucket", "hotel_state", "hour", "interaction_on_this_extension", "keyword", "month", "month_of_year", "partner_hotel_id", "placeholder_type", "product_aggregator_id", "product_bidding_category_level1", "product_bidding_category_level2", "product_bidding_category_level3", "product_bidding_category_level4", "product_bidding_category_level5", "product_brand", "product_channel", "product_channel_exclusivity", "product_condition", "product_country", "product_custom_attribute0", "product_custom_attribute1", "product_custom_attribute2", "product_custom_attribute3", "product_custom_attribute4", "product_feed_label", "product_item_id", "product_language", "product_merchant_id", "product_store_id", "product_title", "product_type_l1", "product_type_l2", "product_type_l3", "product_type_l4", "product_type_l5", "quarter", "recommendation_type", "search_engine_results_page_type", "search_subcategory", "search_term", "search_term_match_type", "slot", "conversion_value_rule_primary_dimension", "webpage", "week", "year", "sk_ad_network_conversion_value", "sk_ad_network_user_type", "sk_ad_network_ad_event_type", "sk_ad_network_source_app", "sk_ad_network_attribution_credit", "asset_interaction_target", "new_versus_returning_customers"]) -> bool: ...  # type: ignore[override]
 
@@ -324,6 +324,6 @@ class SkAdNetworkSourceApp(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        sk_ad_network_source_app_id: str = ...
+        sk_ad_network_source_app_id: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["sk_ad_network_source_app_id"]) -> bool: ...  # type: ignore[override]

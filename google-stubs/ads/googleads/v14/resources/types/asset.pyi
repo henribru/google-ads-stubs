@@ -131,7 +131,7 @@ class Asset(proto.Message):
         dynamic_local_asset: DynamicLocalAsset = ...,
         dynamic_jobs_asset: DynamicJobsAsset = ...,
         location_asset: LocationAsset = ...,
-        hotel_property_asset: HotelPropertyAsset = ...
+        hotel_property_asset: HotelPropertyAsset = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "type_", "final_urls", "final_mobile_urls", "tracking_url_template", "url_custom_parameters", "final_url_suffix", "source", "policy_summary", "field_type_policy_summaries", "youtube_video_asset", "media_bundle_asset", "image_asset", "text_asset", "lead_form_asset", "book_on_google_asset", "promotion_asset", "callout_asset", "structured_snippet_asset", "sitelink_asset", "page_feed_asset", "dynamic_education_asset", "mobile_app_asset", "hotel_callout_asset", "call_asset", "price_asset", "call_to_action_asset", "dynamic_real_estate_asset", "dynamic_custom_asset", "dynamic_hotels_and_rentals_asset", "dynamic_flights_asset", "discovery_carousel_card_asset", "dynamic_travel_asset", "dynamic_local_asset", "dynamic_jobs_asset", "location_asset", "hotel_property_asset"]) -> bool: ...  # type: ignore[override]
 
@@ -146,7 +146,7 @@ class AssetFieldTypePolicySummary(proto.Message):
         ignore_unknown_fields: bool = False,
         asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...,
         asset_source: AssetSourceEnum.AssetSource = ...,
-        policy_summary_info: AssetPolicySummary = ...
+        policy_summary_info: AssetPolicySummary = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["asset_field_type", "asset_source", "policy_summary_info"]) -> bool: ...  # type: ignore[override]
 
@@ -161,6 +161,6 @@ class AssetPolicySummary(proto.Message):
         ignore_unknown_fields: bool = False,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
-        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
+        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]

@@ -75,7 +75,7 @@ class AdGroupAdLabelServiceClient(metaclass=AdGroupAdLabelServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AdGroupAdLabelServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_ad_group_ad_labels(
         self,
@@ -88,5 +88,5 @@ class AdGroupAdLabelServiceClient(metaclass=AdGroupAdLabelServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> ad_group_ad_label_service.MutateAdGroupAdLabelsResponse: ...

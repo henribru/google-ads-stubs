@@ -23,7 +23,7 @@ class Fellowship(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         institution_name: str = ...,
-        completion_year: int = ...
+        completion_year: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["institution_name", "completion_year"]) -> bool: ...  # type: ignore[override]
 
@@ -66,7 +66,7 @@ class LocalServicesEmployee(proto.Message):
         email_address: str = ...,
         first_name: str = ...,
         middle_name: str = ...,
-        last_name: str = ...
+        last_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "creation_date_time", "status", "type_", "university_degrees", "residencies", "fellowships", "job_title", "year_started_practicing", "languages_spoken", "category_ids", "national_provider_id_number", "email_address", "first_name", "middle_name", "last_name"]) -> bool: ...  # type: ignore[override]
 
@@ -79,7 +79,7 @@ class Residency(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         institution_name: str = ...,
-        completion_year: int = ...
+        completion_year: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["institution_name", "completion_year"]) -> bool: ...  # type: ignore[override]
 
@@ -94,6 +94,6 @@ class UniversityDegree(proto.Message):
         ignore_unknown_fields: bool = False,
         institution_name: str = ...,
         degree: str = ...,
-        graduation_year: int = ...
+        graduation_year: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["institution_name", "degree", "graduation_year"]) -> bool: ...  # type: ignore[override]

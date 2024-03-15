@@ -83,7 +83,7 @@ class CampaignCriterionServiceClient(metaclass=CampaignCriterionServiceClientMet
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CampaignCriterionServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_campaign_criteria(
         self,
@@ -98,5 +98,5 @@ class CampaignCriterionServiceClient(metaclass=CampaignCriterionServiceClientMet
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> campaign_criterion_service.MutateCampaignCriteriaResponse: ...

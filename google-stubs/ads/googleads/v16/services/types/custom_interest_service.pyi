@@ -21,7 +21,7 @@ class CustomInterestOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: CustomInterest = ...,
-        update: CustomInterest = ...
+        update: CustomInterest = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
 
@@ -32,7 +32,7 @@ class MutateCustomInterestResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -47,7 +47,7 @@ class MutateCustomInterestsRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CustomInterestOperation] = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -58,6 +58,6 @@ class MutateCustomInterestsResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        results: MutableSequence[MutateCustomInterestResult] = ...
+        results: MutableSequence[MutateCustomInterestResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results"]) -> bool: ...  # type: ignore[override]

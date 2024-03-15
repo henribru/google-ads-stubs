@@ -71,7 +71,7 @@ class SmartCampaignSettingServiceClient(
         credentials: ga_credentials.Credentials | None = None,
         transport: str | SmartCampaignSettingServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def get_smart_campaign_status(
         self,
@@ -82,7 +82,7 @@ class SmartCampaignSettingServiceClient(
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> smart_campaign_setting_service.GetSmartCampaignStatusResponse: ...
     def mutate_smart_campaign_settings(
         self,
@@ -97,5 +97,5 @@ class SmartCampaignSettingServiceClient(
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> smart_campaign_setting_service.MutateSmartCampaignSettingsResponse: ...

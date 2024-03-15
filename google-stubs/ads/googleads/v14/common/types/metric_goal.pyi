@@ -21,6 +21,6 @@ class MetricGoal(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         metric: ExperimentMetricEnum.ExperimentMetric = ...,
-        direction: ExperimentMetricDirectionEnum.ExperimentMetricDirection = ...
+        direction: ExperimentMetricDirectionEnum.ExperimentMetricDirection = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["metric", "direction"]) -> bool: ...  # type: ignore[override]

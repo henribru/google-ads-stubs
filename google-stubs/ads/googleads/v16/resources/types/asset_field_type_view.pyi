@@ -18,6 +18,6 @@ class AssetFieldTypeView(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        field_type: AssetFieldTypeEnum.AssetFieldType = ...
+        field_type: AssetFieldTypeEnum.AssetFieldType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "field_type"]) -> bool: ...  # type: ignore[override]

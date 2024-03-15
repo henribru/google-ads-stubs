@@ -54,7 +54,7 @@ class AffiliateLocationFeedItem(proto.Message):
         country_code: str = ...,
         phone_number: str = ...,
         chain_id: int = ...,
-        chain_name: str = ...
+        chain_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["business_name", "address_line_1", "address_line_2", "city", "province", "postal_code", "country_code", "phone_number", "chain_id", "chain_name"]) -> bool: ...  # type: ignore[override]
 
@@ -79,7 +79,7 @@ class AppFeedItem(proto.Message):
         final_mobile_urls: MutableSequence[str] = ...,
         tracking_url_template: str = ...,
         url_custom_parameters: MutableSequence[CustomParameter] = ...,
-        final_url_suffix: str = ...
+        final_url_suffix: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["link_text", "app_id", "app_store", "final_urls", "final_mobile_urls", "tracking_url_template", "url_custom_parameters", "final_url_suffix"]) -> bool: ...  # type: ignore[override]
 
@@ -100,7 +100,7 @@ class CallFeedItem(proto.Message):
         call_tracking_enabled: bool = ...,
         call_conversion_action: str = ...,
         call_conversion_tracking_disabled: bool = ...,
-        call_conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState = ...
+        call_conversion_reporting_state: CallConversionReportingStateEnum.CallConversionReportingState = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["phone_number", "country_code", "call_tracking_enabled", "call_conversion_action", "call_conversion_tracking_disabled", "call_conversion_reporting_state"]) -> bool: ...  # type: ignore[override]
 
@@ -111,7 +111,7 @@ class CalloutFeedItem(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        callout_text: str = ...
+        callout_text: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["callout_text"]) -> bool: ...  # type: ignore[override]
 
@@ -124,7 +124,7 @@ class HotelCalloutFeedItem(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         text: str = ...,
-        language_code: str = ...
+        language_code: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["text", "language_code"]) -> bool: ...  # type: ignore[override]
 
@@ -135,7 +135,7 @@ class ImageFeedItem(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        image_asset: str = ...
+        image_asset: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["image_asset"]) -> bool: ...  # type: ignore[override]
 
@@ -160,7 +160,7 @@ class LocationFeedItem(proto.Message):
         province: str = ...,
         postal_code: str = ...,
         country_code: str = ...,
-        phone_number: str = ...
+        phone_number: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["business_name", "address_line_1", "address_line_2", "city", "province", "postal_code", "country_code", "phone_number"]) -> bool: ...  # type: ignore[override]
 
@@ -181,7 +181,7 @@ class PriceFeedItem(proto.Message):
         tracking_url_template: str = ...,
         language_code: str = ...,
         price_offerings: MutableSequence[PriceOffer] = ...,
-        final_url_suffix: str = ...
+        final_url_suffix: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["type_", "price_qualifier", "tracking_url_template", "language_code", "price_offerings", "final_url_suffix"]) -> bool: ...  # type: ignore[override]
 
@@ -202,7 +202,7 @@ class PriceOffer(proto.Message):
         price: Money = ...,
         unit: PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit = ...,
         final_urls: MutableSequence[str] = ...,
-        final_mobile_urls: MutableSequence[str] = ...
+        final_mobile_urls: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["header", "description", "price", "unit", "final_urls", "final_mobile_urls"]) -> bool: ...  # type: ignore[override]
 
@@ -241,7 +241,7 @@ class PromotionFeedItem(proto.Message):
         percent_off: int = ...,
         money_amount_off: Money = ...,
         promotion_code: str = ...,
-        orders_over_amount: Money = ...
+        orders_over_amount: Money = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["promotion_target", "discount_modifier", "promotion_start_date", "promotion_end_date", "occasion", "final_urls", "final_mobile_urls", "tracking_url_template", "url_custom_parameters", "final_url_suffix", "language_code", "percent_off", "money_amount_off", "promotion_code", "orders_over_amount"]) -> bool: ...  # type: ignore[override]
 
@@ -266,7 +266,7 @@ class SitelinkFeedItem(proto.Message):
         final_mobile_urls: MutableSequence[str] = ...,
         tracking_url_template: str = ...,
         url_custom_parameters: MutableSequence[CustomParameter] = ...,
-        final_url_suffix: str = ...
+        final_url_suffix: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["link_text", "line1", "line2", "final_urls", "final_mobile_urls", "tracking_url_template", "url_custom_parameters", "final_url_suffix"]) -> bool: ...  # type: ignore[override]
 
@@ -279,7 +279,7 @@ class StructuredSnippetFeedItem(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         header: str = ...,
-        values: MutableSequence[str] = ...
+        values: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["header", "values"]) -> bool: ...  # type: ignore[override]
 
@@ -298,6 +298,6 @@ class TextMessageFeedItem(proto.Message):
         country_code: str = ...,
         phone_number: str = ...,
         text: str = ...,
-        extension_text: str = ...
+        extension_text: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["business_name", "country_code", "phone_number", "text", "extension_text"]) -> bool: ...  # type: ignore[override]

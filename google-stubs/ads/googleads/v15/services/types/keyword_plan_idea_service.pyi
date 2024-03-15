@@ -39,7 +39,7 @@ class AdGroupKeywordSuggestion(proto.Message):
         suggested_keyword_text: str = ...,
         suggested_match_type: KeywordMatchTypeEnum.KeywordMatchType = ...,
         suggested_ad_group: str = ...,
-        suggested_campaign: str = ...
+        suggested_campaign: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["keyword_text", "suggested_keyword_text", "suggested_match_type", "suggested_ad_group", "suggested_campaign"]) -> bool: ...  # type: ignore[override]
 
@@ -52,7 +52,7 @@ class BiddableKeyword(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         keyword: KeywordInfo = ...,
-        max_cpc_bid_micros: int = ...
+        max_cpc_bid_micros: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["keyword", "max_cpc_bid_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -68,7 +68,7 @@ class CampaignToForecast(proto.Message):
             ignore_unknown_fields: bool = False,
             manual_cpc_bidding_strategy: ManualCpcBiddingStrategy = ...,
             maximize_clicks_bidding_strategy: MaximizeClicksBiddingStrategy = ...,
-            maximize_conversions_bidding_strategy: MaximizeConversionsBiddingStrategy = ...
+            maximize_conversions_bidding_strategy: MaximizeConversionsBiddingStrategy = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["manual_cpc_bidding_strategy", "maximize_clicks_bidding_strategy", "maximize_conversions_bidding_strategy"]) -> bool: ...  # type: ignore[override]
     language_constants: MutableSequence[str]
@@ -89,7 +89,7 @@ class CampaignToForecast(proto.Message):
         negative_keywords: MutableSequence[KeywordInfo] = ...,
         bidding_strategy: CampaignToForecast.CampaignBiddingStrategy = ...,
         conversion_rate: float = ...,
-        ad_groups: MutableSequence[ForecastAdGroup] = ...
+        ad_groups: MutableSequence[ForecastAdGroup] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["language_constants", "geo_modifiers", "keyword_plan_network", "negative_keywords", "bidding_strategy", "conversion_rate", "ad_groups"]) -> bool: ...  # type: ignore[override]
 
@@ -102,7 +102,7 @@ class CriterionBidModifier(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         geo_target_constant: str = ...,
-        bid_modifier: float = ...
+        bid_modifier: float = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["geo_target_constant", "bid_modifier"]) -> bool: ...  # type: ignore[override]
 
@@ -117,7 +117,7 @@ class ForecastAdGroup(proto.Message):
         ignore_unknown_fields: bool = False,
         max_cpc_bid_micros: int = ...,
         biddable_keywords: MutableSequence[BiddableKeyword] = ...,
-        negative_keywords: MutableSequence[KeywordInfo] = ...
+        negative_keywords: MutableSequence[KeywordInfo] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["max_cpc_bid_micros", "biddable_keywords", "negative_keywords"]) -> bool: ...  # type: ignore[override]
 
@@ -132,7 +132,7 @@ class GenerateAdGroupThemesRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         keywords: MutableSequence[str] = ...,
-        ad_groups: MutableSequence[str] = ...
+        ad_groups: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "keywords", "ad_groups"]) -> bool: ...  # type: ignore[override]
 
@@ -145,7 +145,7 @@ class GenerateAdGroupThemesResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         ad_group_keyword_suggestions: MutableSequence[AdGroupKeywordSuggestion] = ...,
-        unusable_ad_groups: MutableSequence[UnusableAdGroup] = ...
+        unusable_ad_groups: MutableSequence[UnusableAdGroup] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["ad_group_keyword_suggestions", "unusable_ad_groups"]) -> bool: ...  # type: ignore[override]
 
@@ -162,7 +162,7 @@ class GenerateKeywordForecastMetricsRequest(proto.Message):
         customer_id: str = ...,
         currency_code: str = ...,
         forecast_period: DateRange = ...,
-        campaign: CampaignToForecast = ...
+        campaign: CampaignToForecast = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "currency_code", "forecast_period", "campaign"]) -> bool: ...  # type: ignore[override]
 
@@ -173,7 +173,7 @@ class GenerateKeywordForecastMetricsResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        campaign_forecast_metrics: KeywordForecastMetrics = ...
+        campaign_forecast_metrics: KeywordForecastMetrics = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["campaign_forecast_metrics"]) -> bool: ...  # type: ignore[override]
 
@@ -198,7 +198,7 @@ class GenerateKeywordHistoricalMetricsRequest(proto.Message):
         geo_target_constants: MutableSequence[str] = ...,
         keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork = ...,
         aggregate_metrics: KeywordPlanAggregateMetrics = ...,
-        historical_metrics_options: HistoricalMetricsOptions = ...
+        historical_metrics_options: HistoricalMetricsOptions = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "keywords", "language", "include_adult_keywords", "geo_target_constants", "keyword_plan_network", "aggregate_metrics", "historical_metrics_options"]) -> bool: ...  # type: ignore[override]
 
@@ -211,7 +211,7 @@ class GenerateKeywordHistoricalMetricsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         results: MutableSequence[GenerateKeywordHistoricalMetricsResult] = ...,
-        aggregate_metric_results: KeywordPlanAggregateMetricResults = ...
+        aggregate_metric_results: KeywordPlanAggregateMetricResults = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "aggregate_metric_results"]) -> bool: ...  # type: ignore[override]
 
@@ -226,7 +226,7 @@ class GenerateKeywordHistoricalMetricsResult(proto.Message):
         ignore_unknown_fields: bool = False,
         text: str = ...,
         close_variants: MutableSequence[str] = ...,
-        keyword_metrics: KeywordPlanHistoricalMetrics = ...
+        keyword_metrics: KeywordPlanHistoricalMetrics = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["text", "close_variants", "keyword_metrics"]) -> bool: ...  # type: ignore[override]
 
@@ -243,7 +243,7 @@ class GenerateKeywordIdeaResponse(proto.Message):
         results: MutableSequence[GenerateKeywordIdeaResult] = ...,
         aggregate_metric_results: KeywordPlanAggregateMetricResults = ...,
         next_page_token: str = ...,
-        total_size: int = ...
+        total_size: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "aggregate_metric_results", "next_page_token", "total_size"]) -> bool: ...  # type: ignore[override]
 
@@ -260,7 +260,7 @@ class GenerateKeywordIdeaResult(proto.Message):
         text: str = ...,
         keyword_idea_metrics: KeywordPlanHistoricalMetrics = ...,
         keyword_annotations: KeywordAnnotations = ...,
-        close_variants: MutableSequence[str] = ...
+        close_variants: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["text", "keyword_idea_metrics", "keyword_annotations", "close_variants"]) -> bool: ...  # type: ignore[override]
 
@@ -301,7 +301,7 @@ class GenerateKeywordIdeasRequest(proto.Message):
         keyword_and_url_seed: KeywordAndUrlSeed = ...,
         keyword_seed: KeywordSeed = ...,
         url_seed: UrlSeed = ...,
-        site_seed: SiteSeed = ...
+        site_seed: SiteSeed = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "language", "geo_target_constants", "include_adult_keywords", "page_token", "page_size", "keyword_plan_network", "keyword_annotation", "aggregate_metrics", "historical_metrics_options", "keyword_and_url_seed", "keyword_seed", "url_seed", "site_seed"]) -> bool: ...  # type: ignore[override]
 
@@ -314,7 +314,7 @@ class KeywordAndUrlSeed(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         url: str = ...,
-        keywords: MutableSequence[str] = ...
+        keywords: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["url", "keywords"]) -> bool: ...  # type: ignore[override]
 
@@ -339,7 +339,7 @@ class KeywordForecastMetrics(proto.Message):
         cost_micros: int = ...,
         conversions: float = ...,
         conversion_rate: float = ...,
-        average_cpa_micros: int = ...
+        average_cpa_micros: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["impressions", "click_through_rate", "average_cpc_micros", "clicks", "cost_micros", "conversions", "conversion_rate", "average_cpa_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -350,7 +350,7 @@ class KeywordSeed(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        keywords: MutableSequence[str] = ...
+        keywords: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["keywords"]) -> bool: ...  # type: ignore[override]
 
@@ -363,7 +363,7 @@ class ManualCpcBiddingStrategy(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         daily_budget_micros: int = ...,
-        max_cpc_bid_micros: int = ...
+        max_cpc_bid_micros: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["daily_budget_micros", "max_cpc_bid_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -376,7 +376,7 @@ class MaximizeClicksBiddingStrategy(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         daily_target_spend_micros: int = ...,
-        max_cpc_bid_ceiling_micros: int = ...
+        max_cpc_bid_ceiling_micros: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["daily_target_spend_micros", "max_cpc_bid_ceiling_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -387,7 +387,7 @@ class MaximizeConversionsBiddingStrategy(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        daily_target_spend_micros: int = ...
+        daily_target_spend_micros: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["daily_target_spend_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -398,7 +398,7 @@ class SiteSeed(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        site: str = ...
+        site: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["site"]) -> bool: ...  # type: ignore[override]
 
@@ -411,7 +411,7 @@ class UnusableAdGroup(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         ad_group: str = ...,
-        campaign: str = ...
+        campaign: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["ad_group", "campaign"]) -> bool: ...  # type: ignore[override]
 
@@ -422,6 +422,6 @@ class UrlSeed(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        url: str = ...
+        url: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["url"]) -> bool: ...  # type: ignore[override]

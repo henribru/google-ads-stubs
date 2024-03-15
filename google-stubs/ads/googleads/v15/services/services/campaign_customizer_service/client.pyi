@@ -77,7 +77,7 @@ class CampaignCustomizerServiceClient(metaclass=CampaignCustomizerServiceClientM
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CampaignCustomizerServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_campaign_customizers(
         self,
@@ -92,5 +92,5 @@ class CampaignCustomizerServiceClient(metaclass=CampaignCustomizerServiceClientM
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> campaign_customizer_service.MutateCampaignCustomizersResponse: ...

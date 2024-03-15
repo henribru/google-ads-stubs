@@ -71,7 +71,7 @@ class AssetGroupSignalServiceClient(metaclass=AssetGroupSignalServiceClientMeta)
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AssetGroupSignalServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_asset_group_signals(
         self,
@@ -86,5 +86,5 @@ class AssetGroupSignalServiceClient(metaclass=AssetGroupSignalServiceClientMeta)
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> asset_group_signal_service.MutateAssetGroupSignalsResponse: ...

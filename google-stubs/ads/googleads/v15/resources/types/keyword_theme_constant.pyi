@@ -20,6 +20,6 @@ class KeywordThemeConstant(proto.Message):
         resource_name: str = ...,
         country_code: str = ...,
         language_code: str = ...,
-        display_name: str = ...
+        display_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "country_code", "language_code", "display_name"]) -> bool: ...  # type: ignore[override]

@@ -18,6 +18,6 @@ class FeedPlaceholderView(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        placeholder_type: PlaceholderTypeEnum.PlaceholderType = ...
+        placeholder_type: PlaceholderTypeEnum.PlaceholderType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "placeholder_type"]) -> bool: ...  # type: ignore[override]

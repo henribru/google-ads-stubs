@@ -18,7 +18,7 @@ class DateRange(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         start_date: str = ...,
-        end_date: str = ...
+        end_date: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["start_date", "end_date"]) -> bool: ...  # type: ignore[override]
 
@@ -31,7 +31,7 @@ class YearMonth(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         year: int = ...,
-        month: MonthOfYearEnum.MonthOfYear = ...
+        month: MonthOfYearEnum.MonthOfYear = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["year", "month"]) -> bool: ...  # type: ignore[override]
 
@@ -44,6 +44,6 @@ class YearMonthRange(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         start: YearMonth = ...,
-        end: YearMonth = ...
+        end: YearMonth = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["start", "end"]) -> bool: ...  # type: ignore[override]

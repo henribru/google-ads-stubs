@@ -47,6 +47,6 @@ class AdGroupAsset(proto.Message):
         primary_status_details: MutableSequence[AssetLinkPrimaryStatusDetails] = ...,
         primary_status_reasons: MutableSequence[
             AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason
-        ] = ...
+        ] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group", "asset", "field_type", "source", "status", "primary_status", "primary_status_details", "primary_status_reasons"]) -> bool: ...  # type: ignore[override]

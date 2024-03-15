@@ -18,6 +18,6 @@ class AssetGroupProductGroupView(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         asset_group: str = ...,
-        asset_group_listing_group_filter: str = ...
+        asset_group_listing_group_filter: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset_group", "asset_group_listing_group_filter"]) -> bool: ...  # type: ignore[override]

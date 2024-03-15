@@ -46,6 +46,6 @@ class CampaignSimulation(proto.Message):
         target_cpa_point_list: TargetCpaSimulationPointList = ...,
         target_roas_point_list: TargetRoasSimulationPointList = ...,
         target_impression_share_point_list: TargetImpressionShareSimulationPointList = ...,
-        budget_point_list: BudgetSimulationPointList = ...
+        budget_point_list: BudgetSimulationPointList = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign_id", "type_", "modification_method", "start_date", "end_date", "cpc_bid_point_list", "target_cpa_point_list", "target_roas_point_list", "target_impression_share_point_list", "budget_point_list"]) -> bool: ...  # type: ignore[override]

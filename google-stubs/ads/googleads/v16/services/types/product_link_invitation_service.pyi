@@ -23,7 +23,7 @@ class CreateProductLinkInvitationRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
-        product_link_invitation: ProductLinkInvitation = ...
+        product_link_invitation: ProductLinkInvitation = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "product_link_invitation"]) -> bool: ...  # type: ignore[override]
 
@@ -34,7 +34,7 @@ class CreateProductLinkInvitationResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -47,7 +47,7 @@ class RemoveProductLinkInvitationRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -58,7 +58,7 @@ class RemoveProductLinkInvitationResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -73,7 +73,7 @@ class UpdateProductLinkInvitationRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         product_link_invitation_status: ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus = ...,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "product_link_invitation_status", "resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -84,6 +84,6 @@ class UpdateProductLinkInvitationResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

@@ -20,6 +20,6 @@ class FinalAppUrl(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         os_type: AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType = ...,
-        url: str = ...
+        url: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["os_type", "url"]) -> bool: ...  # type: ignore[override]

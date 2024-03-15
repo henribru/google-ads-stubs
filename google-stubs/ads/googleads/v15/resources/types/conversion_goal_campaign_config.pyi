@@ -22,6 +22,6 @@ class ConversionGoalCampaignConfig(proto.Message):
         resource_name: str = ...,
         campaign: str = ...,
         goal_config_level: GoalConfigLevelEnum.GoalConfigLevel = ...,
-        custom_conversion_goal: str = ...
+        custom_conversion_goal: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign", "goal_config_level", "custom_conversion_goal"]) -> bool: ...  # type: ignore[override]

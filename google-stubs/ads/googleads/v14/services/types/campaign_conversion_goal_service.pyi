@@ -21,7 +21,7 @@ class CampaignConversionGoalOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
-        update: CampaignConversionGoal = ...
+        update: CampaignConversionGoal = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "update"]) -> bool: ...  # type: ignore[override]
 
@@ -32,7 +32,7 @@ class MutateCampaignConversionGoalResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -47,7 +47,7 @@ class MutateCampaignConversionGoalsRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[CampaignConversionGoalOperation] = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -58,6 +58,6 @@ class MutateCampaignConversionGoalsResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        results: MutableSequence[MutateCampaignConversionGoalResult] = ...
+        results: MutableSequence[MutateCampaignConversionGoalResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results"]) -> bool: ...  # type: ignore[override]

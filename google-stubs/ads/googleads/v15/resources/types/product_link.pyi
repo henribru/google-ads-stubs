@@ -18,7 +18,7 @@ class DataPartnerIdentifier(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        data_partner_id: int = ...
+        data_partner_id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["data_partner_id"]) -> bool: ...  # type: ignore[override]
 
@@ -29,7 +29,7 @@ class GoogleAdsIdentifier(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        customer: str = ...
+        customer: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer"]) -> bool: ...  # type: ignore[override]
 
@@ -40,7 +40,7 @@ class MerchantCenterIdentifier(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        merchant_center_id: int = ...
+        merchant_center_id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["merchant_center_id"]) -> bool: ...  # type: ignore[override]
 
@@ -61,6 +61,6 @@ class ProductLink(proto.Message):
         type_: LinkedProductTypeEnum.LinkedProductType = ...,
         data_partner: DataPartnerIdentifier = ...,
         google_ads: GoogleAdsIdentifier = ...,
-        merchant_center: MerchantCenterIdentifier = ...
+        merchant_center: MerchantCenterIdentifier = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "product_link_id", "type_", "data_partner", "google_ads", "merchant_center"]) -> bool: ...  # type: ignore[override]

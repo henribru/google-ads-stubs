@@ -69,7 +69,7 @@ class AudienceServiceClient(metaclass=AudienceServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AudienceServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_audiences(
         self,
@@ -79,5 +79,5 @@ class AudienceServiceClient(metaclass=AudienceServiceClientMeta):
         operations: MutableSequence[audience_service.AudienceOperation] | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> audience_service.MutateAudiencesResponse: ...

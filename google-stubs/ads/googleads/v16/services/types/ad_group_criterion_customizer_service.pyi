@@ -24,7 +24,7 @@ class AdGroupCriterionCustomizerOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         create: AdGroupCriterionCustomizer = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -37,7 +37,7 @@ class MutateAdGroupCriterionCustomizerResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        ad_group_criterion_customizer: AdGroupCriterionCustomizer = ...
+        ad_group_criterion_customizer: AdGroupCriterionCustomizer = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group_criterion_customizer"]) -> bool: ...  # type: ignore[override]
 
@@ -56,7 +56,7 @@ class MutateAdGroupCriterionCustomizersRequest(proto.Message):
         operations: MutableSequence[AdGroupCriterionCustomizerOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -69,6 +69,6 @@ class MutateAdGroupCriterionCustomizersResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateAdGroupCriterionCustomizerResult] = ...,
-        partial_failure_error: Status = ...
+        partial_failure_error: Status = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]

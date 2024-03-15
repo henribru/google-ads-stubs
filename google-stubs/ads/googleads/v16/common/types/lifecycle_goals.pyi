@@ -16,6 +16,6 @@ class LifecycleGoalValueSettings(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         value: float = ...,
-        high_lifetime_value: float = ...
+        high_lifetime_value: float = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["value", "high_lifetime_value"]) -> bool: ...  # type: ignore[override]

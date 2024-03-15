@@ -24,6 +24,6 @@ class CampaignBidModifier(proto.Message):
         campaign: str = ...,
         criterion_id: int = ...,
         bid_modifier: float = ...,
-        interaction_type: InteractionTypeInfo = ...
+        interaction_type: InteractionTypeInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign", "criterion_id", "bid_modifier", "interaction_type"]) -> bool: ...  # type: ignore[override]

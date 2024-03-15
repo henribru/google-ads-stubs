@@ -32,7 +32,7 @@ class KeywordPlanCampaign(proto.Message):
         language_constants: MutableSequence[str] = ...,
         keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork = ...,
         cpc_bid_micros: int = ...,
-        geo_targets: MutableSequence[KeywordPlanGeoTarget] = ...
+        geo_targets: MutableSequence[KeywordPlanGeoTarget] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "keyword_plan", "id", "name", "language_constants", "keyword_plan_network", "cpc_bid_micros", "geo_targets"]) -> bool: ...  # type: ignore[override]
 
@@ -43,6 +43,6 @@ class KeywordPlanGeoTarget(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        geo_target_constant: str = ...
+        geo_target_constant: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["geo_target_constant"]) -> bool: ...  # type: ignore[override]

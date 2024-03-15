@@ -22,7 +22,7 @@ class AccountLinkOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         update: AccountLink = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -35,7 +35,7 @@ class CreateAccountLinkRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
-        account_link: AccountLink = ...
+        account_link: AccountLink = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "account_link"]) -> bool: ...  # type: ignore[override]
 
@@ -46,7 +46,7 @@ class CreateAccountLinkResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -63,7 +63,7 @@ class MutateAccountLinkRequest(proto.Message):
         customer_id: str = ...,
         operation: AccountLinkOperation = ...,
         partial_failure: bool = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operation", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -76,7 +76,7 @@ class MutateAccountLinkResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         result: MutateAccountLinkResult = ...,
-        partial_failure_error: Status = ...
+        partial_failure_error: Status = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["result", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
 
@@ -87,6 +87,6 @@ class MutateAccountLinkResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

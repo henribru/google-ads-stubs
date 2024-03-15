@@ -66,7 +66,7 @@ class AdServiceClient(metaclass=AdServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AdServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def get_ad(
         self,
@@ -75,7 +75,7 @@ class AdServiceClient(metaclass=AdServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> ad.Ad: ...
     def mutate_ads(
         self,
@@ -85,5 +85,5 @@ class AdServiceClient(metaclass=AdServiceClientMeta):
         operations: MutableSequence[ad_service.AdOperation] | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> ad_service.MutateAdsResponse: ...

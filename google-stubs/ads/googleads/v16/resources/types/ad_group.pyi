@@ -35,7 +35,7 @@ class AdGroup(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            use_audience_grouped: bool = ...
+            use_audience_grouped: bool = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["use_audience_grouped"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -116,6 +116,6 @@ class AdGroup(proto.Message):
         primary_status: AdGroupPrimaryStatusEnum.AdGroupPrimaryStatus = ...,
         primary_status_reasons: MutableSequence[
             AdGroupPrimaryStatusReasonEnum.AdGroupPrimaryStatusReason
-        ] = ...
+        ] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "status", "type_", "ad_rotation_mode", "base_ad_group", "tracking_url_template", "url_custom_parameters", "campaign", "cpc_bid_micros", "effective_cpc_bid_micros", "cpm_bid_micros", "target_cpa_micros", "cpv_bid_micros", "target_cpm_micros", "target_roas", "percent_cpc_bid_micros", "optimized_targeting_enabled", "display_custom_bid_dimension", "final_url_suffix", "targeting_setting", "audience_setting", "effective_target_cpa_micros", "effective_target_cpa_source", "effective_target_roas", "effective_target_roas_source", "labels", "excluded_parent_asset_field_types", "excluded_parent_asset_set_types", "primary_status", "primary_status_reasons"]) -> bool: ...  # type: ignore[override]

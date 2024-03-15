@@ -53,7 +53,7 @@ class AdGroupAd(proto.Message):
         primary_status: AdGroupAdPrimaryStatusEnum.AdGroupAdPrimaryStatus = ...,
         primary_status_reasons: MutableSequence[
             AdGroupAdPrimaryStatusReasonEnum.AdGroupAdPrimaryStatusReason
-        ] = ...
+        ] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "status", "ad_group", "ad", "policy_summary", "ad_strength", "action_items", "labels", "primary_status", "primary_status_reasons"]) -> bool: ...  # type: ignore[override]
 
@@ -68,6 +68,6 @@ class AdGroupAdPolicySummary(proto.Message):
         ignore_unknown_fields: bool = False,
         policy_topic_entries: MutableSequence[PolicyTopicEntry] = ...,
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
-        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...
+        approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]

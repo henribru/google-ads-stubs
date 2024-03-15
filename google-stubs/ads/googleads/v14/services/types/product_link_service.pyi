@@ -18,7 +18,7 @@ class CreateProductLinkRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
-        product_link: ProductLink = ...
+        product_link: ProductLink = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "product_link"]) -> bool: ...  # type: ignore[override]
 
@@ -29,7 +29,7 @@ class CreateProductLinkResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -44,7 +44,7 @@ class RemoveProductLinkRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         resource_name: str = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "resource_name", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -55,6 +55,6 @@ class RemoveProductLinkResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

@@ -28,6 +28,6 @@ class OperatingSystemVersionConstant(proto.Message):
         name: str = ...,
         os_major_version: int = ...,
         os_minor_version: int = ...,
-        operator_type: OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType = ...
+        operator_type: OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "os_major_version", "os_minor_version", "operator_type"]) -> bool: ...  # type: ignore[override]

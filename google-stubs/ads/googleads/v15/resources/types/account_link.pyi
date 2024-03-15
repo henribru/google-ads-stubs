@@ -36,7 +36,7 @@ class AccountLink(proto.Message):
         third_party_app_analytics: ThirdPartyAppAnalyticsLinkIdentifier = ...,
         data_partner: DataPartnerLinkIdentifier = ...,
         google_ads: GoogleAdsLinkIdentifier = ...,
-        advertising_partner: AdvertisingPartnerLinkIdentifier = ...
+        advertising_partner: AdvertisingPartnerLinkIdentifier = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "account_link_id", "status", "type_", "third_party_app_analytics", "data_partner", "google_ads", "advertising_partner"]) -> bool: ...  # type: ignore[override]
 
@@ -47,7 +47,7 @@ class AdvertisingPartnerLinkIdentifier(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        customer: str = ...
+        customer: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer"]) -> bool: ...  # type: ignore[override]
 
@@ -58,7 +58,7 @@ class DataPartnerLinkIdentifier(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        data_partner_id: int = ...
+        data_partner_id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["data_partner_id"]) -> bool: ...  # type: ignore[override]
 
@@ -69,7 +69,7 @@ class GoogleAdsLinkIdentifier(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        customer: str = ...
+        customer: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer"]) -> bool: ...  # type: ignore[override]
 
@@ -84,6 +84,6 @@ class ThirdPartyAppAnalyticsLinkIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         app_analytics_provider_id: int = ...,
         app_id: str = ...,
-        app_vendor: MobileAppVendorEnum.MobileAppVendor = ...
+        app_vendor: MobileAppVendorEnum.MobileAppVendor = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["app_analytics_provider_id", "app_id", "app_vendor"]) -> bool: ...  # type: ignore[override]

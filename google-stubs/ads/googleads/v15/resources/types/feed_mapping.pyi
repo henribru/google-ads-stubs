@@ -134,7 +134,7 @@ class AttributeFieldMapping(proto.Message):
         travel_field: TravelPlaceholderFieldEnum.TravelPlaceholderField = ...,
         local_field: LocalPlaceholderFieldEnum.LocalPlaceholderField = ...,
         job_field: JobPlaceholderFieldEnum.JobPlaceholderField = ...,
-        image_field: ImagePlaceholderFieldEnum.ImagePlaceholderField = ...
+        image_field: ImagePlaceholderFieldEnum.ImagePlaceholderField = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["feed_attribute_id", "field_id", "sitelink_field", "call_field", "app_field", "location_field", "affiliate_location_field", "callout_field", "structured_snippet_field", "message_field", "price_field", "promotion_field", "ad_customizer_field", "dsa_page_feed_field", "location_extension_targeting_field", "education_field", "flight_field", "custom_field", "hotel_field", "real_estate_field", "travel_field", "local_field", "job_field", "image_field"]) -> bool: ...  # type: ignore[override]
 
@@ -155,6 +155,6 @@ class FeedMapping(proto.Message):
         attribute_field_mappings: MutableSequence[AttributeFieldMapping] = ...,
         status: FeedMappingStatusEnum.FeedMappingStatus = ...,
         placeholder_type: PlaceholderTypeEnum.PlaceholderType = ...,
-        criterion_type: FeedMappingCriterionTypeEnum.FeedMappingCriterionType = ...
+        criterion_type: FeedMappingCriterionTypeEnum.FeedMappingCriterionType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "feed", "attribute_field_mappings", "status", "placeholder_type", "criterion_type"]) -> bool: ...  # type: ignore[override]

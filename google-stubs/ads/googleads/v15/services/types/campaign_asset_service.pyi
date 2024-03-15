@@ -27,7 +27,7 @@ class CampaignAssetOperation(proto.Message):
         update_mask: FieldMask = ...,
         create: CampaignAsset = ...,
         update: CampaignAsset = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -40,7 +40,7 @@ class MutateCampaignAssetResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        campaign_asset: CampaignAsset = ...
+        campaign_asset: CampaignAsset = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign_asset"]) -> bool: ...  # type: ignore[override]
 
@@ -59,7 +59,7 @@ class MutateCampaignAssetsRequest(proto.Message):
         operations: MutableSequence[CampaignAssetOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -72,6 +72,6 @@ class MutateCampaignAssetsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateCampaignAssetResult] = ...
+        results: MutableSequence[MutateCampaignAssetResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

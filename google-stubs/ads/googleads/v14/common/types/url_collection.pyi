@@ -20,6 +20,6 @@ class UrlCollection(proto.Message):
         url_collection_id: str = ...,
         final_urls: MutableSequence[str] = ...,
         final_mobile_urls: MutableSequence[str] = ...,
-        tracking_url_template: str = ...
+        tracking_url_template: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["url_collection_id", "final_urls", "final_mobile_urls", "tracking_url_template"]) -> bool: ...  # type: ignore[override]

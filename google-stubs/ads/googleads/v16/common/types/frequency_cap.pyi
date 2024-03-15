@@ -26,7 +26,7 @@ class FrequencyCapEntry(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         key: FrequencyCapKey = ...,
-        cap: int = ...
+        cap: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["key", "cap"]) -> bool: ...  # type: ignore[override]
 
@@ -43,6 +43,6 @@ class FrequencyCapKey(proto.Message):
         level: FrequencyCapLevelEnum.FrequencyCapLevel = ...,
         event_type: FrequencyCapEventTypeEnum.FrequencyCapEventType = ...,
         time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit = ...,
-        time_length: int = ...
+        time_length: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["level", "event_type", "time_unit", "time_length"]) -> bool: ...  # type: ignore[override]

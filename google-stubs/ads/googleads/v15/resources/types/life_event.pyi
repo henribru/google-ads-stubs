@@ -28,6 +28,6 @@ class LifeEvent(proto.Message):
         name: str = ...,
         parent: str = ...,
         launched_to_all: bool = ...,
-        availabilities: MutableSequence[CriterionCategoryAvailability] = ...
+        availabilities: MutableSequence[CriterionCategoryAvailability] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "parent", "launched_to_all", "availabilities"]) -> bool: ...  # type: ignore[override]

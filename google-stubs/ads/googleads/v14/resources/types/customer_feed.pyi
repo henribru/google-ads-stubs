@@ -26,6 +26,6 @@ class CustomerFeed(proto.Message):
         feed: str = ...,
         placeholder_types: MutableSequence[PlaceholderTypeEnum.PlaceholderType] = ...,
         matching_function: MatchingFunction = ...,
-        status: FeedLinkStatusEnum.FeedLinkStatus = ...
+        status: FeedLinkStatusEnum.FeedLinkStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "feed", "placeholder_types", "matching_function", "status"]) -> bool: ...  # type: ignore[override]

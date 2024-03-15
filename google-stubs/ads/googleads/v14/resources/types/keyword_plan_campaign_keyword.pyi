@@ -26,6 +26,6 @@ class KeywordPlanCampaignKeyword(proto.Message):
         id: int = ...,
         text: str = ...,
         match_type: KeywordMatchTypeEnum.KeywordMatchType = ...,
-        negative: bool = ...
+        negative: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "keyword_plan_campaign", "id", "text", "match_type", "negative"]) -> bool: ...  # type: ignore[override]

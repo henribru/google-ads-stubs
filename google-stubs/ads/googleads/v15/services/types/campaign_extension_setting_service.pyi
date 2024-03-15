@@ -29,7 +29,7 @@ class CampaignExtensionSettingOperation(proto.Message):
         update_mask: FieldMask = ...,
         create: CampaignExtensionSetting = ...,
         update: CampaignExtensionSetting = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -42,7 +42,7 @@ class MutateCampaignExtensionSettingResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        campaign_extension_setting: CampaignExtensionSetting = ...
+        campaign_extension_setting: CampaignExtensionSetting = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign_extension_setting"]) -> bool: ...  # type: ignore[override]
 
@@ -61,7 +61,7 @@ class MutateCampaignExtensionSettingsRequest(proto.Message):
         operations: MutableSequence[CampaignExtensionSettingOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -74,6 +74,6 @@ class MutateCampaignExtensionSettingsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateCampaignExtensionSettingResult] = ...
+        results: MutableSequence[MutateCampaignExtensionSettingResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

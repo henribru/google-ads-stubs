@@ -59,7 +59,7 @@ class FeedItem(proto.Message):
         geo_targeting_restriction: GeoTargetingRestrictionEnum.GeoTargetingRestriction = ...,
         url_custom_parameters: MutableSequence[CustomParameter] = ...,
         status: FeedItemStatusEnum.FeedItemStatus = ...,
-        policy_infos: MutableSequence[FeedItemPlaceholderPolicyInfo] = ...
+        policy_infos: MutableSequence[FeedItemPlaceholderPolicyInfo] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "feed", "id", "start_date_time", "end_date_time", "attribute_values", "geo_targeting_restriction", "url_custom_parameters", "status", "policy_infos"]) -> bool: ...  # type: ignore[override]
 
@@ -88,7 +88,7 @@ class FeedItemAttributeValue(proto.Message):
         integer_values: MutableSequence[int] = ...,
         boolean_values: MutableSequence[bool] = ...,
         string_values: MutableSequence[str] = ...,
-        double_values: MutableSequence[float] = ...
+        double_values: MutableSequence[float] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["feed_attribute_id", "integer_value", "boolean_value", "string_value", "double_value", "price_value", "integer_values", "boolean_values", "string_values", "double_values"]) -> bool: ...  # type: ignore[override]
 
@@ -119,7 +119,7 @@ class FeedItemPlaceholderPolicyInfo(proto.Message):
         quality_approval_status: FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus = ...,
         quality_disapproval_reasons: MutableSequence[
             FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason
-        ] = ...
+        ] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["placeholder_type_enum", "feed_mapping_resource_name", "review_status", "approval_status", "policy_topic_entries", "validation_status", "validation_errors", "quality_approval_status", "quality_disapproval_reasons"]) -> bool: ...  # type: ignore[override]
 
@@ -136,6 +136,6 @@ class FeedItemValidationError(proto.Message):
         validation_error: FeedItemValidationErrorEnum.FeedItemValidationError = ...,
         description: str = ...,
         feed_attribute_ids: MutableSequence[int] = ...,
-        extra_info: str = ...
+        extra_info: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["validation_error", "description", "feed_attribute_ids", "extra_info"]) -> bool: ...  # type: ignore[override]

@@ -27,6 +27,6 @@ class AdGroupExtensionSetting(proto.Message):
         extension_type: ExtensionTypeEnum.ExtensionType = ...,
         ad_group: str = ...,
         extension_feed_items: MutableSequence[str] = ...,
-        device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...
+        device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "extension_type", "ad_group", "extension_feed_items", "device"]) -> bool: ...  # type: ignore[override]

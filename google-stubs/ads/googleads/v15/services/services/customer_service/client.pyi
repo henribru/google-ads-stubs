@@ -70,7 +70,7 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CustomerServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_customer(
         self,
@@ -80,7 +80,7 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
         operation: customer_service.CustomerOperation | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> customer_service.MutateCustomerResponse: ...
     def list_accessible_customers(
         self,
@@ -88,7 +88,7 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> customer_service.ListAccessibleCustomersResponse: ...
     def create_customer_client(
         self,
@@ -98,5 +98,5 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
         customer_client: customer.Customer | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> customer_service.CreateCustomerClientResponse: ...

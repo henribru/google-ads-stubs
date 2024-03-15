@@ -34,6 +34,6 @@ class FeedItemSet(proto.Message):
         display_name: str = ...,
         status: FeedItemSetStatusEnum.FeedItemSetStatus = ...,
         dynamic_location_set_filter: DynamicLocationSetFilter = ...,
-        dynamic_affiliate_location_set_filter: DynamicAffiliateLocationSetFilter = ...
+        dynamic_affiliate_location_set_filter: DynamicAffiliateLocationSetFilter = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "feed", "feed_item_set_id", "display_name", "status", "dynamic_location_set_filter", "dynamic_affiliate_location_set_filter"]) -> bool: ...  # type: ignore[override]

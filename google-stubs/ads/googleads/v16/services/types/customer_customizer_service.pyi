@@ -24,7 +24,7 @@ class CustomerCustomizerOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         create: CustomerCustomizer = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -37,7 +37,7 @@ class MutateCustomerCustomizerResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        customer_customizer: CustomerCustomizer = ...
+        customer_customizer: CustomerCustomizer = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "customer_customizer"]) -> bool: ...  # type: ignore[override]
 
@@ -56,7 +56,7 @@ class MutateCustomerCustomizersRequest(proto.Message):
         operations: MutableSequence[CustomerCustomizerOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -69,6 +69,6 @@ class MutateCustomerCustomizersResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateCustomerCustomizerResult] = ...,
-        partial_failure_error: Status = ...
+        partial_failure_error: Status = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]

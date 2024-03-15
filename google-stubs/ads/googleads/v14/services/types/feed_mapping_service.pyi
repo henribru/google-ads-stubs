@@ -22,7 +22,7 @@ class FeedMappingOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         create: FeedMapping = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -35,7 +35,7 @@ class MutateFeedMappingResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        feed_mapping: FeedMapping = ...
+        feed_mapping: FeedMapping = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "feed_mapping"]) -> bool: ...  # type: ignore[override]
 
@@ -54,7 +54,7 @@ class MutateFeedMappingsRequest(proto.Message):
         operations: MutableSequence[FeedMappingOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -67,6 +67,6 @@ class MutateFeedMappingsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateFeedMappingResult] = ...
+        results: MutableSequence[MutateFeedMappingResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

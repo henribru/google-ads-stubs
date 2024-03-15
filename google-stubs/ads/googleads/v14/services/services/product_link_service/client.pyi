@@ -70,7 +70,7 @@ class ProductLinkServiceClient(metaclass=ProductLinkServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | ProductLinkServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def create_product_link(
         self,
@@ -80,7 +80,7 @@ class ProductLinkServiceClient(metaclass=ProductLinkServiceClientMeta):
         product_link: gagr_product_link.ProductLink | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> product_link_service.CreateProductLinkResponse: ...
     def remove_product_link(
         self,
@@ -90,5 +90,5 @@ class ProductLinkServiceClient(metaclass=ProductLinkServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> product_link_service.RemoveProductLinkResponse: ...

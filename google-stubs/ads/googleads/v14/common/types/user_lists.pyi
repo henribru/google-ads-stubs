@@ -42,7 +42,7 @@ class BasicUserListInfo(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        actions: MutableSequence[UserListActionInfo] = ...
+        actions: MutableSequence[UserListActionInfo] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["actions"]) -> bool: ...  # type: ignore[override]
 
@@ -57,7 +57,7 @@ class CrmBasedUserListInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         app_id: str = ...,
         upload_key_type: CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType = ...,
-        data_source_type: UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType = ...
+        data_source_type: UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["app_id", "upload_key_type", "data_source_type"]) -> bool: ...  # type: ignore[override]
 
@@ -70,7 +70,7 @@ class FlexibleRuleOperandInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         rule: UserListRuleInfo = ...,
-        lookback_window_days: int = ...
+        lookback_window_days: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["rule", "lookback_window_days"]) -> bool: ...  # type: ignore[override]
 
@@ -85,7 +85,7 @@ class FlexibleRuleUserListInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         inclusive_rule_operator: UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator = ...,
         inclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...,
-        exclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...
+        exclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["inclusive_rule_operator", "inclusive_operands", "exclusive_operands"]) -> bool: ...  # type: ignore[override]
 
@@ -96,7 +96,7 @@ class LogicalUserListInfo(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        rules: MutableSequence[UserListLogicalRuleInfo] = ...
+        rules: MutableSequence[UserListLogicalRuleInfo] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["rules"]) -> bool: ...  # type: ignore[override]
 
@@ -107,7 +107,7 @@ class LogicalUserListOperandInfo(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        user_list: str = ...
+        user_list: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["user_list"]) -> bool: ...  # type: ignore[override]
 
@@ -120,7 +120,7 @@ class RuleBasedUserListInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         prepopulation_status: UserListPrepopulationStatusEnum.UserListPrepopulationStatus = ...,
-        flexible_rule_user_list: FlexibleRuleUserListInfo = ...
+        flexible_rule_user_list: FlexibleRuleUserListInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["prepopulation_status", "flexible_rule_user_list"]) -> bool: ...  # type: ignore[override]
 
@@ -131,7 +131,7 @@ class SimilarUserListInfo(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        seed_user_list: str = ...
+        seed_user_list: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["seed_user_list"]) -> bool: ...  # type: ignore[override]
 
@@ -144,7 +144,7 @@ class UserListActionInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         conversion_action: str = ...,
-        remarketing_action: str = ...
+        remarketing_action: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["conversion_action", "remarketing_action"]) -> bool: ...  # type: ignore[override]
 
@@ -159,7 +159,7 @@ class UserListDateRuleItemInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         operator: UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator = ...,
         value: str = ...,
-        offset_in_days: int = ...
+        offset_in_days: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["operator", "value", "offset_in_days"]) -> bool: ...  # type: ignore[override]
 
@@ -172,7 +172,7 @@ class UserListLogicalRuleInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         operator: UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator = ...,
-        rule_operands: MutableSequence[LogicalUserListOperandInfo] = ...
+        rule_operands: MutableSequence[LogicalUserListOperandInfo] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["operator", "rule_operands"]) -> bool: ...  # type: ignore[override]
 
@@ -185,7 +185,7 @@ class UserListNumberRuleItemInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         operator: UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator = ...,
-        value: float = ...
+        value: float = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["operator", "value"]) -> bool: ...  # type: ignore[override]
 
@@ -198,7 +198,7 @@ class UserListRuleInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         rule_type: UserListRuleTypeEnum.UserListRuleType = ...,
-        rule_item_groups: MutableSequence[UserListRuleItemGroupInfo] = ...
+        rule_item_groups: MutableSequence[UserListRuleItemGroupInfo] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["rule_type", "rule_item_groups"]) -> bool: ...  # type: ignore[override]
 
@@ -209,7 +209,7 @@ class UserListRuleItemGroupInfo(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        rule_items: MutableSequence[UserListRuleItemInfo] = ...
+        rule_items: MutableSequence[UserListRuleItemInfo] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["rule_items"]) -> bool: ...  # type: ignore[override]
 
@@ -226,7 +226,7 @@ class UserListRuleItemInfo(proto.Message):
         name: str = ...,
         number_rule_item: UserListNumberRuleItemInfo = ...,
         string_rule_item: UserListStringRuleItemInfo = ...,
-        date_rule_item: UserListDateRuleItemInfo = ...
+        date_rule_item: UserListDateRuleItemInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["name", "number_rule_item", "string_rule_item", "date_rule_item"]) -> bool: ...  # type: ignore[override]
 
@@ -239,6 +239,6 @@ class UserListStringRuleItemInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         operator: UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator = ...,
-        value: str = ...
+        value: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["operator", "value"]) -> bool: ...  # type: ignore[override]

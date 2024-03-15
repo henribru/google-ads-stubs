@@ -18,6 +18,6 @@ class CampaignLabel(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign: str = ...,
-        label: str = ...
+        label: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign", "label"]) -> bool: ...  # type: ignore[override]

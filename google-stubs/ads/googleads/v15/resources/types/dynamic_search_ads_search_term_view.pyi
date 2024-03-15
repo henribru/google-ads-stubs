@@ -28,6 +28,6 @@ class DynamicSearchAdsSearchTermView(proto.Message):
         page_url: str = ...,
         has_negative_keyword: bool = ...,
         has_matching_keyword: bool = ...,
-        has_negative_url: bool = ...
+        has_negative_url: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "search_term", "headline", "landing_page", "page_url", "has_negative_keyword", "has_matching_keyword", "has_negative_url"]) -> bool: ...  # type: ignore[override]

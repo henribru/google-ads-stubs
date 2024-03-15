@@ -83,7 +83,7 @@ class ChangeEvent(proto.Message):
             ad_group_asset: AdGroupAsset = ...,
             asset_set: AssetSet = ...,
             asset_set_asset: AssetSetAsset = ...,
-            campaign_asset_set: CampaignAssetSet = ...
+            campaign_asset_set: CampaignAssetSet = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["ad", "ad_group", "ad_group_criterion", "campaign", "campaign_budget", "ad_group_bid_modifier", "campaign_criterion", "feed", "feed_item", "campaign_feed", "ad_group_feed", "ad_group_ad", "asset", "customer_asset", "campaign_asset", "ad_group_asset", "asset_set", "asset_set_asset", "campaign_asset_set"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -120,6 +120,6 @@ class ChangeEvent(proto.Message):
         ad_group: str = ...,
         feed: str = ...,
         feed_item: str = ...,
-        asset: str = ...
+        asset: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "change_date_time", "change_resource_type", "change_resource_name", "client_type", "user_email", "old_resource", "new_resource", "resource_change_operation", "changed_fields", "campaign", "ad_group", "feed", "feed_item", "asset"]) -> bool: ...  # type: ignore[override]

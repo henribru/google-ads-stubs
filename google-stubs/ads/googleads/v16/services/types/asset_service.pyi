@@ -25,7 +25,7 @@ class AssetOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: Asset = ...,
-        update: Asset = ...
+        update: Asset = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
 
@@ -38,7 +38,7 @@ class MutateAssetResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        asset: Asset = ...
+        asset: Asset = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset"]) -> bool: ...  # type: ignore[override]
 
@@ -57,7 +57,7 @@ class MutateAssetsRequest(proto.Message):
         operations: MutableSequence[AssetOperation] = ...,
         partial_failure: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "response_content_type", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -70,6 +70,6 @@ class MutateAssetsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateAssetResult] = ...
+        results: MutableSequence[MutateAssetResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

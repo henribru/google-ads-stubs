@@ -61,7 +61,7 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | ReachPlanServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def list_plannable_locations(
         self,
@@ -69,7 +69,7 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> reach_plan_service.ListPlannableLocationsResponse: ...
     def list_plannable_products(
         self,
@@ -78,7 +78,7 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
         plannable_location_id: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> reach_plan_service.ListPlannableProductsResponse: ...
     def generate_reach_forecast(
         self,
@@ -90,5 +90,5 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> reach_plan_service.GenerateReachForecastResponse: ...

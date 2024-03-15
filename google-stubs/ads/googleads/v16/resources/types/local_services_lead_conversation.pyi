@@ -35,7 +35,7 @@ class LocalServicesLeadConversation(proto.Message):
         lead: str = ...,
         event_date_time: str = ...,
         phone_call_details: PhoneCallDetails = ...,
-        message_details: MessageDetails = ...
+        message_details: MessageDetails = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "conversation_channel", "participant_type", "lead", "event_date_time", "phone_call_details", "message_details"]) -> bool: ...  # type: ignore[override]
 
@@ -46,7 +46,7 @@ class MessageDetails(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        text: str = ...
+        text: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["text"]) -> bool: ...  # type: ignore[override]
 
@@ -59,6 +59,6 @@ class PhoneCallDetails(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         call_duration_millis: int = ...,
-        call_recording_url: str = ...
+        call_recording_url: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["call_duration_millis", "call_recording_url"]) -> bool: ...  # type: ignore[override]

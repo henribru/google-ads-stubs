@@ -25,6 +25,6 @@ class Label(proto.Message):
         id: int = ...,
         name: str = ...,
         status: LabelStatusEnum.LabelStatus = ...,
-        text_label: TextLabel = ...
+        text_label: TextLabel = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "status", "text_label"]) -> bool: ...  # type: ignore[override]

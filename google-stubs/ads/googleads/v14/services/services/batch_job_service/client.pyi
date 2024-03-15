@@ -501,7 +501,7 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | BatchJobServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_batch_job(
         self,
@@ -511,7 +511,7 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         operation: batch_job_service.BatchJobOperation | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> batch_job_service.MutateBatchJobResponse: ...
     def list_batch_job_results(
         self,
@@ -520,7 +520,7 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> pagers.ListBatchJobResultsPager: ...
     def run_batch_job(
         self,
@@ -529,7 +529,7 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> operation.Operation: ...
     def add_batch_job_operations(
         self,
@@ -541,5 +541,5 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> batch_job_service.AddBatchJobOperationsResponse: ...

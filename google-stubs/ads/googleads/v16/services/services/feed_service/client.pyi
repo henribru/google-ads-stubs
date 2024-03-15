@@ -65,7 +65,7 @@ class FeedServiceClient(metaclass=FeedServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | FeedServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_feeds(
         self,
@@ -75,5 +75,5 @@ class FeedServiceClient(metaclass=FeedServiceClientMeta):
         operations: MutableSequence[feed_service.FeedOperation] | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> feed_service.MutateFeedsResponse: ...

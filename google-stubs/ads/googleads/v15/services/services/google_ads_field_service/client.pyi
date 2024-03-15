@@ -67,7 +67,7 @@ class GoogleAdsFieldServiceClient(metaclass=GoogleAdsFieldServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | GoogleAdsFieldServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def get_google_ads_field(
         self,
@@ -76,7 +76,7 @@ class GoogleAdsFieldServiceClient(metaclass=GoogleAdsFieldServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> google_ads_field.GoogleAdsField: ...
     def search_google_ads_fields(
         self,
@@ -87,5 +87,5 @@ class GoogleAdsFieldServiceClient(metaclass=GoogleAdsFieldServiceClientMeta):
         query: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> pagers.SearchGoogleAdsFieldsPager: ...

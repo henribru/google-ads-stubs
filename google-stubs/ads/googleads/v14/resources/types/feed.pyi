@@ -26,7 +26,7 @@ class Feed(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             chain_ids: MutableSequence[int] = ...,
-            relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType = ...
+            relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["chain_ids", "relationship_type"]) -> bool: ...  # type: ignore[override]
 
@@ -42,7 +42,7 @@ class Feed(proto.Message):
                 ignore_unknown_fields: bool = False,
                 http_method: str = ...,
                 http_request_url: str = ...,
-                http_authorization_header: str = ...
+                http_authorization_header: str = ...,
             ) -> None: ...
             def __contains__(self, key: Literal["http_method", "http_request_url", "http_authorization_header"]) -> bool: ...  # type: ignore[override]
         oauth_info: Feed.PlacesLocationFeedData.OAuthInfo
@@ -61,7 +61,7 @@ class Feed(proto.Message):
             business_account_id: str = ...,
             business_name_filter: str = ...,
             category_filters: MutableSequence[str] = ...,
-            label_filters: MutableSequence[str] = ...
+            label_filters: MutableSequence[str] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["oauth_info", "email_address", "business_account_id", "business_name_filter", "category_filters", "label_filters"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -86,7 +86,7 @@ class Feed(proto.Message):
         origin: FeedOriginEnum.FeedOrigin = ...,
         status: FeedStatusEnum.FeedStatus = ...,
         places_location_feed_data: Feed.PlacesLocationFeedData = ...,
-        affiliate_location_feed_data: Feed.AffiliateLocationFeedData = ...
+        affiliate_location_feed_data: Feed.AffiliateLocationFeedData = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "attributes", "attribute_operations", "origin", "status", "places_location_feed_data", "affiliate_location_feed_data"]) -> bool: ...  # type: ignore[override]
 
@@ -103,7 +103,7 @@ class FeedAttribute(proto.Message):
         id: int = ...,
         name: str = ...,
         type_: FeedAttributeTypeEnum.FeedAttributeType = ...,
-        is_part_of_key: bool = ...
+        is_part_of_key: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["id", "name", "type_", "is_part_of_key"]) -> bool: ...  # type: ignore[override]
 
@@ -120,6 +120,6 @@ class FeedAttributeOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         operator: FeedAttributeOperation.Operator = ...,
-        value: FeedAttribute = ...
+        value: FeedAttribute = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["operator", "value"]) -> bool: ...  # type: ignore[override]

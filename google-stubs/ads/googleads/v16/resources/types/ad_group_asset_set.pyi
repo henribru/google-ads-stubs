@@ -24,6 +24,6 @@ class AdGroupAssetSet(proto.Message):
         resource_name: str = ...,
         ad_group: str = ...,
         asset_set: str = ...,
-        status: AssetSetLinkStatusEnum.AssetSetLinkStatus = ...
+        status: AssetSetLinkStatusEnum.AssetSetLinkStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group", "asset_set", "status"]) -> bool: ...  # type: ignore[override]

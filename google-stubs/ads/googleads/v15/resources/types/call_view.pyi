@@ -38,6 +38,6 @@ class CallView(proto.Message):
         end_call_date_time: str = ...,
         call_tracking_display_location: CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation = ...,
         type_: CallTypeEnum.CallType = ...,
-        call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus = ...
+        call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "caller_country_code", "caller_area_code", "call_duration_seconds", "start_call_date_time", "end_call_date_time", "call_tracking_display_location", "type_", "call_status"]) -> bool: ...  # type: ignore[override]

@@ -45,7 +45,7 @@ class OfflineConversionAlert(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         error: OfflineConversionError = ...,
-        error_percentage: float = ...
+        error_percentage: float = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["error", "error_percentage"]) -> bool: ...  # type: ignore[override]
 
@@ -74,7 +74,7 @@ class OfflineConversionError(proto.Message):
         mutate_error: MutateErrorEnum.MutateError = ...,
         not_allowlisted_error: NotAllowlistedErrorEnum.NotAllowlistedError = ...,
         string_format_error: StringFormatErrorEnum.StringFormatError = ...,
-        string_length_error: StringLengthErrorEnum.StringLengthError = ...
+        string_length_error: StringLengthErrorEnum.StringLengthError = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["collection_size_error", "conversion_adjustment_upload_error", "conversion_upload_error", "date_error", "distinct_error", "field_error", "mutate_error", "not_allowlisted_error", "string_format_error", "string_length_error"]) -> bool: ...  # type: ignore[override]
 
@@ -91,7 +91,7 @@ class OfflineConversionSummary(proto.Message):
         successful_count: int = ...,
         failed_count: int = ...,
         job_id: int = ...,
-        upload_date: str = ...
+        upload_date: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["successful_count", "failed_count", "job_id", "upload_date"]) -> bool: ...  # type: ignore[override]
 
@@ -120,6 +120,6 @@ class OfflineConversionUploadClientSummary(proto.Message):
         last_upload_date_time: str = ...,
         daily_summaries: MutableSequence[OfflineConversionSummary] = ...,
         job_summaries: MutableSequence[OfflineConversionSummary] = ...,
-        alerts: MutableSequence[OfflineConversionAlert] = ...
+        alerts: MutableSequence[OfflineConversionAlert] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "client", "status", "total_event_count", "successful_event_count", "success_rate", "last_upload_date_time", "daily_summaries", "job_summaries", "alerts"]) -> bool: ...  # type: ignore[override]

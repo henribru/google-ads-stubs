@@ -27,6 +27,6 @@ class CampaignExtensionSetting(proto.Message):
         extension_type: ExtensionTypeEnum.ExtensionType = ...,
         campaign: str = ...,
         extension_feed_items: MutableSequence[str] = ...,
-        device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...
+        device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "extension_type", "campaign", "extension_feed_items", "device"]) -> bool: ...  # type: ignore[override]

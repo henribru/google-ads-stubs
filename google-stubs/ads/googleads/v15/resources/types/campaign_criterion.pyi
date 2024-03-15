@@ -131,6 +131,6 @@ class CampaignCriterion(proto.Message):
         combined_audience: CombinedAudienceInfo = ...,
         keyword_theme: KeywordThemeInfo = ...,
         local_service_id: LocalServiceIdInfo = ...,
-        brand_list: BrandListInfo = ...
+        brand_list: BrandListInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign", "criterion_id", "display_name", "bid_modifier", "negative", "type_", "status", "keyword", "placement", "mobile_app_category", "mobile_application", "location", "device", "ad_schedule", "age_range", "gender", "income_range", "parental_status", "user_list", "youtube_video", "youtube_channel", "proximity", "topic", "listing_scope", "language", "ip_block", "content_label", "carrier", "user_interest", "webpage", "operating_system_version", "mobile_device", "location_group", "custom_affinity", "custom_audience", "combined_audience", "keyword_theme", "local_service_id", "brand_list"]) -> bool: ...  # type: ignore[override]

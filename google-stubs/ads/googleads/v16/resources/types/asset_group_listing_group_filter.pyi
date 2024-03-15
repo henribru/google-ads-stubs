@@ -50,7 +50,7 @@ class AssetGroupListingGroupFilter(proto.Message):
         listing_source: ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource = ...,
         case_value: ListingGroupFilterDimension = ...,
         parent_listing_group_filter: str = ...,
-        path: ListingGroupFilterDimensionPath = ...
+        path: ListingGroupFilterDimensionPath = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset_group", "id", "type_", "listing_source", "case_value", "parent_listing_group_filter", "path"]) -> bool: ...  # type: ignore[override]
 
@@ -62,7 +62,7 @@ class ListingGroupFilterDimension(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            value: str = ...
+            value: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
 
@@ -75,7 +75,7 @@ class ListingGroupFilterDimension(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             category_id: int = ...,
-            level: ListingGroupFilterProductCategoryLevelEnum.ListingGroupFilterProductCategoryLevel = ...
+            level: ListingGroupFilterProductCategoryLevelEnum.ListingGroupFilterProductCategoryLevel = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["category_id", "level"]) -> bool: ...  # type: ignore[override]
 
@@ -86,7 +86,7 @@ class ListingGroupFilterDimension(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            channel: ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel = ...
+            channel: ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["channel"]) -> bool: ...  # type: ignore[override]
 
@@ -97,7 +97,7 @@ class ListingGroupFilterDimension(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            condition: ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition = ...
+            condition: ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["condition"]) -> bool: ...  # type: ignore[override]
 
@@ -110,7 +110,7 @@ class ListingGroupFilterDimension(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             value: str = ...,
-            index: ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex = ...
+            index: ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["value", "index"]) -> bool: ...  # type: ignore[override]
 
@@ -121,7 +121,7 @@ class ListingGroupFilterDimension(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            value: str = ...
+            value: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
 
@@ -134,7 +134,7 @@ class ListingGroupFilterDimension(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             value: str = ...,
-            level: ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel = ...
+            level: ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["value", "level"]) -> bool: ...  # type: ignore[override]
 
@@ -147,7 +147,7 @@ class ListingGroupFilterDimension(proto.Message):
             ignore_unknown_fields: bool = False,
             conditions: MutableSequence[
                 ListingGroupFilterDimension.WebpageCondition
-            ] = ...
+            ] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["conditions"]) -> bool: ...  # type: ignore[override]
 
@@ -160,7 +160,7 @@ class ListingGroupFilterDimension(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             custom_label: str = ...,
-            url_contains: str = ...
+            url_contains: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["custom_label", "url_contains"]) -> bool: ...  # type: ignore[override]
     product_category: ListingGroupFilterDimension.ProductCategory
@@ -183,7 +183,7 @@ class ListingGroupFilterDimension(proto.Message):
         product_custom_attribute: ListingGroupFilterDimension.ProductCustomAttribute = ...,
         product_item_id: ListingGroupFilterDimension.ProductItemId = ...,
         product_type: ListingGroupFilterDimension.ProductType = ...,
-        webpage: ListingGroupFilterDimension.Webpage = ...
+        webpage: ListingGroupFilterDimension.Webpage = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["product_category", "product_brand", "product_channel", "product_condition", "product_custom_attribute", "product_item_id", "product_type", "webpage"]) -> bool: ...  # type: ignore[override]
 
@@ -194,6 +194,6 @@ class ListingGroupFilterDimensionPath(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        dimensions: MutableSequence[ListingGroupFilterDimension] = ...
+        dimensions: MutableSequence[ListingGroupFilterDimension] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["dimensions"]) -> bool: ...  # type: ignore[override]

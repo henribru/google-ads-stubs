@@ -81,7 +81,7 @@ class ExtensionFeedItemServiceClient(metaclass=ExtensionFeedItemServiceClientMet
         credentials: ga_credentials.Credentials | None = None,
         transport: str | ExtensionFeedItemServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_extension_feed_items(
         self,
@@ -96,5 +96,5 @@ class ExtensionFeedItemServiceClient(metaclass=ExtensionFeedItemServiceClientMet
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> extension_feed_item_service.MutateExtensionFeedItemsResponse: ...

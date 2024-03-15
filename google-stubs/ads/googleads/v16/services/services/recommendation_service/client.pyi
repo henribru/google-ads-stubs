@@ -93,7 +93,7 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | RecommendationServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def apply_recommendation(
         self,
@@ -104,7 +104,7 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> recommendation_service.ApplyRecommendationResponse: ...
     def dismiss_recommendation(
         self,
@@ -119,7 +119,7 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> recommendation_service.DismissRecommendationResponse: ...
     def generate_recommendations(
         self,
@@ -136,5 +136,5 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> recommendation_service.GenerateRecommendationsResponse: ...

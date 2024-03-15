@@ -23,7 +23,7 @@ class ListInvoicesRequest(proto.Message):
         customer_id: str = ...,
         billing_setup: str = ...,
         issue_year: str = ...,
-        issue_month: MonthOfYearEnum.MonthOfYear = ...
+        issue_month: MonthOfYearEnum.MonthOfYear = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "billing_setup", "issue_year", "issue_month"]) -> bool: ...  # type: ignore[override]
 
@@ -34,6 +34,6 @@ class ListInvoicesResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        invoices: MutableSequence[Invoice] = ...
+        invoices: MutableSequence[Invoice] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["invoices"]) -> bool: ...  # type: ignore[override]

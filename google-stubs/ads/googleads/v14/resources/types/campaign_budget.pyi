@@ -55,6 +55,6 @@ class CampaignBudget(proto.Message):
         recommended_budget_estimated_change_weekly_interactions: int = ...,
         recommended_budget_estimated_change_weekly_views: int = ...,
         type_: BudgetTypeEnum.BudgetType = ...,
-        aligned_bidding_strategy_id: int = ...
+        aligned_bidding_strategy_id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "name", "amount_micros", "total_amount_micros", "status", "delivery_method", "explicitly_shared", "reference_count", "has_recommended_budget", "recommended_budget_amount_micros", "period", "recommended_budget_estimated_change_weekly_clicks", "recommended_budget_estimated_change_weekly_cost_micros", "recommended_budget_estimated_change_weekly_interactions", "recommended_budget_estimated_change_weekly_views", "type_", "aligned_bidding_strategy_id"]) -> bool: ...  # type: ignore[override]

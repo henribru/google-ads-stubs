@@ -46,7 +46,7 @@ class AccountBudget(proto.Message):
             end_date_time: str = ...,
             end_time_type: TimeTypeEnum.TimeType = ...,
             spending_limit_micros: int = ...,
-            spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...
+            spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["account_budget_proposal", "proposal_type", "name", "start_date_time", "purchase_order_number", "notes", "creation_date_time", "end_date_time", "end_time_type", "spending_limit_micros", "spending_limit_type"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -97,6 +97,6 @@ class AccountBudget(proto.Message):
         approved_spending_limit_micros: int = ...,
         approved_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...,
         adjusted_spending_limit_micros: int = ...,
-        adjusted_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...
+        adjusted_spending_limit_type: SpendingLimitTypeEnum.SpendingLimitType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "billing_setup", "status", "name", "proposed_start_date_time", "approved_start_date_time", "total_adjustments_micros", "amount_served_micros", "purchase_order_number", "notes", "pending_proposal", "proposed_end_date_time", "proposed_end_time_type", "approved_end_date_time", "approved_end_time_type", "proposed_spending_limit_micros", "proposed_spending_limit_type", "approved_spending_limit_micros", "approved_spending_limit_type", "adjusted_spending_limit_micros", "adjusted_spending_limit_type"]) -> bool: ...  # type: ignore[override]

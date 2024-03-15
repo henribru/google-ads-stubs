@@ -75,7 +75,7 @@ class BiddingSeasonalityAdjustmentServiceClient(
         credentials: ga_credentials.Credentials | None = None,
         transport: str | BiddingSeasonalityAdjustmentServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_bidding_seasonality_adjustments(
         self,
@@ -90,7 +90,7 @@ class BiddingSeasonalityAdjustmentServiceClient(
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> (
         bidding_seasonality_adjustment_service.MutateBiddingSeasonalityAdjustmentsResponse
     ): ...

@@ -23,7 +23,7 @@ class AccountBudgetProposalOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: AccountBudgetProposal = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -38,7 +38,7 @@ class MutateAccountBudgetProposalRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: AccountBudgetProposalOperation = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -49,7 +49,7 @@ class MutateAccountBudgetProposalResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        result: MutateAccountBudgetProposalResult = ...
+        result: MutateAccountBudgetProposalResult = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
 
@@ -60,6 +60,6 @@ class MutateAccountBudgetProposalResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

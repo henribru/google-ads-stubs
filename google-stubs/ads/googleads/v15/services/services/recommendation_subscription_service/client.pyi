@@ -69,7 +69,7 @@ class RecommendationSubscriptionServiceClient(
         credentials: ga_credentials.Credentials | None = None,
         transport: str | RecommendationSubscriptionServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_recommendation_subscription(
         self,
@@ -84,7 +84,7 @@ class RecommendationSubscriptionServiceClient(
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> (
         recommendation_subscription_service.MutateRecommendationSubscriptionResponse
     ): ...

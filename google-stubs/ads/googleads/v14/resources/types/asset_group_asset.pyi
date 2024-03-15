@@ -52,6 +52,6 @@ class AssetGroupAsset(proto.Message):
         ] = ...,
         primary_status_details: MutableSequence[AssetLinkPrimaryStatusDetails] = ...,
         performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
-        policy_summary: PolicySummary = ...
+        policy_summary: PolicySummary = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset_group", "asset", "field_type", "status", "primary_status", "primary_status_reasons", "primary_status_details", "performance_label", "policy_summary"]) -> bool: ...  # type: ignore[override]

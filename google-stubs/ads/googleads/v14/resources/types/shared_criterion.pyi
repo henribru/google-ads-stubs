@@ -42,6 +42,6 @@ class SharedCriterion(proto.Message):
         youtube_channel: YouTubeChannelInfo = ...,
         placement: PlacementInfo = ...,
         mobile_app_category: MobileAppCategoryInfo = ...,
-        mobile_application: MobileApplicationInfo = ...
+        mobile_application: MobileApplicationInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "shared_set", "criterion_id", "type_", "keyword", "youtube_video", "youtube_channel", "placement", "mobile_app_category", "mobile_application"]) -> bool: ...  # type: ignore[override]

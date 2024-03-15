@@ -65,7 +65,7 @@ class CustomInterestServiceClient(metaclass=CustomInterestServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CustomInterestServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_custom_interests(
         self,
@@ -78,5 +78,5 @@ class CustomInterestServiceClient(metaclass=CustomInterestServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> custom_interest_service.MutateCustomInterestsResponse: ...

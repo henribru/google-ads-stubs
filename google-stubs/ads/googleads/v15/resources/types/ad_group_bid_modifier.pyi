@@ -48,6 +48,6 @@ class AdGroupBidModifier(proto.Message):
         hotel_length_of_stay: HotelLengthOfStayInfo = ...,
         hotel_check_in_day: HotelCheckInDayInfo = ...,
         device: DeviceInfo = ...,
-        hotel_check_in_date_range: HotelCheckInDateRangeInfo = ...
+        hotel_check_in_date_range: HotelCheckInDateRangeInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group", "criterion_id", "bid_modifier", "base_ad_group", "bid_modifier_source", "hotel_date_selection_type", "hotel_advance_booking_window", "hotel_length_of_stay", "hotel_check_in_day", "device", "hotel_check_in_date_range"]) -> bool: ...  # type: ignore[override]

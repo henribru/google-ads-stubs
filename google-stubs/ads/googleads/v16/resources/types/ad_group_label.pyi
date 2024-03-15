@@ -18,6 +18,6 @@ class AdGroupLabel(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         ad_group: str = ...,
-        label: str = ...
+        label: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group", "label"]) -> bool: ...  # type: ignore[override]

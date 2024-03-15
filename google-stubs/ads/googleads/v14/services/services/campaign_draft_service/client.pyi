@@ -73,7 +73,7 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CampaignDraftServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_campaign_drafts(
         self,
@@ -86,7 +86,7 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> campaign_draft_service.MutateCampaignDraftsResponse: ...
     def promote_campaign_draft(
         self,
@@ -97,7 +97,7 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
         campaign_draft: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> operation.Operation: ...
     def list_campaign_draft_async_errors(
         self,
@@ -108,5 +108,5 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> pagers.ListCampaignDraftAsyncErrorsPager: ...

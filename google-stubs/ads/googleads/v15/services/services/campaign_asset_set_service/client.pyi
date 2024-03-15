@@ -75,7 +75,7 @@ class CampaignAssetSetServiceClient(metaclass=CampaignAssetSetServiceClientMeta)
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CampaignAssetSetServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_campaign_asset_sets(
         self,
@@ -90,5 +90,5 @@ class CampaignAssetSetServiceClient(metaclass=CampaignAssetSetServiceClientMeta)
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> campaign_asset_set_service.MutateCampaignAssetSetsResponse: ...

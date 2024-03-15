@@ -29,7 +29,7 @@ class ConceptGroup(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         name: str = ...,
-        type_: KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType = ...
+        type_: KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["name", "type_"]) -> bool: ...  # type: ignore[override]
 
@@ -42,7 +42,7 @@ class HistoricalMetricsOptions(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         year_month_range: YearMonthRange = ...,
-        include_average_cpc: bool = ...
+        include_average_cpc: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["year_month_range", "include_average_cpc"]) -> bool: ...  # type: ignore[override]
 
@@ -53,7 +53,7 @@ class KeywordAnnotations(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        concepts: MutableSequence[KeywordConcept] = ...
+        concepts: MutableSequence[KeywordConcept] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["concepts"]) -> bool: ...  # type: ignore[override]
 
@@ -66,7 +66,7 @@ class KeywordConcept(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         name: str = ...,
-        concept_group: ConceptGroup = ...
+        concept_group: ConceptGroup = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["name", "concept_group"]) -> bool: ...  # type: ignore[override]
 
@@ -77,7 +77,7 @@ class KeywordPlanAggregateMetricResults(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        device_searches: MutableSequence[KeywordPlanDeviceSearches] = ...
+        device_searches: MutableSequence[KeywordPlanDeviceSearches] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["device_searches"]) -> bool: ...  # type: ignore[override]
 
@@ -92,7 +92,7 @@ class KeywordPlanAggregateMetrics(proto.Message):
         ignore_unknown_fields: bool = False,
         aggregate_metric_types: MutableSequence[
             KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType
-        ] = ...
+        ] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["aggregate_metric_types"]) -> bool: ...  # type: ignore[override]
 
@@ -105,7 +105,7 @@ class KeywordPlanDeviceSearches(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         device: DeviceEnum.Device = ...,
-        search_count: int = ...
+        search_count: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["device", "search_count"]) -> bool: ...  # type: ignore[override]
 
@@ -128,7 +128,7 @@ class KeywordPlanHistoricalMetrics(proto.Message):
         competition_index: int = ...,
         low_top_of_page_bid_micros: int = ...,
         high_top_of_page_bid_micros: int = ...,
-        average_cpc_micros: int = ...
+        average_cpc_micros: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["avg_monthly_searches", "monthly_search_volumes", "competition", "competition_index", "low_top_of_page_bid_micros", "high_top_of_page_bid_micros", "average_cpc_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -143,6 +143,6 @@ class MonthlySearchVolume(proto.Message):
         ignore_unknown_fields: bool = False,
         year: int = ...,
         month: MonthOfYearEnum.MonthOfYear = ...,
-        monthly_searches: int = ...
+        monthly_searches: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["year", "month", "monthly_searches"]) -> bool: ...  # type: ignore[override]

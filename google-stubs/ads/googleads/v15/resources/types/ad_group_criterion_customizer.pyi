@@ -27,6 +27,6 @@ class AdGroupCriterionCustomizer(proto.Message):
         ad_group_criterion: str = ...,
         customizer_attribute: str = ...,
         status: CustomizerValueStatusEnum.CustomizerValueStatus = ...,
-        value: CustomizerValue = ...
+        value: CustomizerValue = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group_criterion", "customizer_attribute", "status", "value"]) -> bool: ...  # type: ignore[override]

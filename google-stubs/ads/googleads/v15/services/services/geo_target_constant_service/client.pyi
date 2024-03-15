@@ -65,7 +65,7 @@ class GeoTargetConstantServiceClient(metaclass=GeoTargetConstantServiceClientMet
         credentials: ga_credentials.Credentials | None = None,
         transport: str | GeoTargetConstantServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def suggest_geo_target_constants(
         self,
@@ -75,5 +75,5 @@ class GeoTargetConstantServiceClient(metaclass=GeoTargetConstantServiceClientMet
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> geo_target_constant_service.SuggestGeoTargetConstantsResponse: ...

@@ -28,7 +28,7 @@ class CustomConversionGoalOperation(proto.Message):
         update_mask: FieldMask = ...,
         create: CustomConversionGoal = ...,
         update: CustomConversionGoal = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -41,7 +41,7 @@ class MutateCustomConversionGoalResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        custom_conversion_goal: CustomConversionGoal = ...
+        custom_conversion_goal: CustomConversionGoal = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "custom_conversion_goal"]) -> bool: ...  # type: ignore[override]
 
@@ -58,7 +58,7 @@ class MutateCustomConversionGoalsRequest(proto.Message):
         customer_id: str = ...,
         operations: MutableSequence[CustomConversionGoalOperation] = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -69,6 +69,6 @@ class MutateCustomConversionGoalsResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        results: MutableSequence[MutateCustomConversionGoalResult] = ...
+        results: MutableSequence[MutateCustomConversionGoalResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results"]) -> bool: ...  # type: ignore[override]

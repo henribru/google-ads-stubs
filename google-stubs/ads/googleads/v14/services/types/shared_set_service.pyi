@@ -23,7 +23,7 @@ class MutateSharedSetResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        shared_set: SharedSet = ...
+        shared_set: SharedSet = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "shared_set"]) -> bool: ...  # type: ignore[override]
 
@@ -42,7 +42,7 @@ class MutateSharedSetsRequest(proto.Message):
         operations: MutableSequence[SharedSetOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -55,7 +55,7 @@ class MutateSharedSetsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateSharedSetResult] = ...
+        results: MutableSequence[MutateSharedSetResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
 
@@ -72,6 +72,6 @@ class SharedSetOperation(proto.Message):
         update_mask: FieldMask = ...,
         create: SharedSet = ...,
         update: SharedSet = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]

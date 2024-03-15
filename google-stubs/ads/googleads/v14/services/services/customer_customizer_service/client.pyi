@@ -73,7 +73,7 @@ class CustomerCustomizerServiceClient(metaclass=CustomerCustomizerServiceClientM
         credentials: ga_credentials.Credentials | None = None,
         transport: str | CustomerCustomizerServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_customer_customizers(
         self,
@@ -88,5 +88,5 @@ class CustomerCustomizerServiceClient(metaclass=CustomerCustomizerServiceClientM
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> customer_customizer_service.MutateCustomerCustomizersResponse: ...

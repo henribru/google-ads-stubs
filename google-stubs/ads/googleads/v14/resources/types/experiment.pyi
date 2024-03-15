@@ -43,6 +43,6 @@ class Experiment(proto.Message):
         end_date: str = ...,
         goals: MutableSequence[MetricGoal] = ...,
         long_running_operation: str = ...,
-        promote_status: AsyncActionStatusEnum.AsyncActionStatus = ...
+        promote_status: AsyncActionStatusEnum.AsyncActionStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "experiment_id", "name", "description", "suffix", "type_", "status", "start_date", "end_date", "goals", "long_running_operation", "promote_status"]) -> bool: ...  # type: ignore[override]

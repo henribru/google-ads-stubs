@@ -67,7 +67,7 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
         credentials: ga_credentials.Credentials | None = None,
         transport: str | ConversionUploadServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def upload_click_conversions(
         self,
@@ -81,7 +81,7 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
         partial_failure: bool | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> conversion_upload_service.UploadClickConversionsResponse: ...
     def upload_call_conversions(
         self,
@@ -95,5 +95,5 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
         partial_failure: bool | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> conversion_upload_service.UploadCallConversionsResponse: ...

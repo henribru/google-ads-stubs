@@ -34,7 +34,7 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             new_assets: MutableSequence[Asset] = ...,
             existing_assets: MutableSequence[str] = ...,
-            scope: ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope = ...
+            scope: ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["new_assets", "existing_assets", "scope"]) -> bool: ...  # type: ignore[override]
 
@@ -45,7 +45,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...
+            ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...  # type: ignore[override]
 
@@ -56,7 +56,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            call_extensions: MutableSequence[CallFeedItem] = ...
+            call_extensions: MutableSequence[CallFeedItem] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["call_extensions"]) -> bool: ...  # type: ignore[override]
 
@@ -67,7 +67,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...
+            ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...  # type: ignore[override]
 
@@ -78,7 +78,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            callout_extensions: MutableSequence[CalloutFeedItem] = ...
+            callout_extensions: MutableSequence[CalloutFeedItem] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["callout_extensions"]) -> bool: ...  # type: ignore[override]
 
@@ -89,7 +89,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            new_budget_amount_micros: int = ...
+            new_budget_amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["new_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -102,7 +102,7 @@ class ApplyRecommendationOperation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             target_cpa_micros: int = ...,
-            campaign_budget_amount_micros: int = ...
+            campaign_budget_amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_cpa_micros", "campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -115,7 +115,7 @@ class ApplyRecommendationOperation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             target_roas: float = ...,
-            campaign_budget_amount_micros: int = ...
+            campaign_budget_amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_roas", "campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -130,7 +130,7 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             ad_group: str = ...,
             match_type: KeywordMatchTypeEnum.KeywordMatchType = ...,
-            cpc_bid_micros: int = ...
+            cpc_bid_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["ad_group", "match_type", "cpc_bid_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -141,7 +141,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            target_roas_multiplier: float = ...
+            target_roas_multiplier: float = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_roas_multiplier"]) -> bool: ...  # type: ignore[override]
 
@@ -152,7 +152,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            budget_micros_to_move: int = ...
+            budget_micros_to_move: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["budget_micros_to_move"]) -> bool: ...  # type: ignore[override]
 
@@ -163,7 +163,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            target_multiplier: float = ...
+            target_multiplier: float = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_multiplier"]) -> bool: ...  # type: ignore[override]
 
@@ -174,7 +174,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            target_cpa_multiplier: float = ...
+            target_cpa_multiplier: float = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_cpa_multiplier"]) -> bool: ...  # type: ignore[override]
 
@@ -185,7 +185,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            updated_ad: Ad = ...
+            updated_ad: Ad = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["updated_ad"]) -> bool: ...  # type: ignore[override]
 
@@ -196,7 +196,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            updated_ad: Ad = ...
+            updated_ad: Ad = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["updated_ad"]) -> bool: ...  # type: ignore[override]
 
@@ -207,7 +207,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            ad: Ad = ...
+            ad: Ad = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["ad"]) -> bool: ...  # type: ignore[override]
 
@@ -218,7 +218,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...
+            ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...  # type: ignore[override]
 
@@ -229,7 +229,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            sitelink_extensions: MutableSequence[SitelinkFeedItem] = ...
+            sitelink_extensions: MutableSequence[SitelinkFeedItem] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["sitelink_extensions"]) -> bool: ...  # type: ignore[override]
 
@@ -242,7 +242,7 @@ class ApplyRecommendationOperation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             target_cpa_micros: int = ...,
-            new_campaign_budget_amount_micros: int = ...
+            new_campaign_budget_amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_cpa_micros", "new_campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -255,7 +255,7 @@ class ApplyRecommendationOperation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             target_roas: float = ...,
-            new_campaign_budget_amount_micros: int = ...
+            new_campaign_budget_amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["target_roas", "new_campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -266,7 +266,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            ad: Ad = ...
+            ad: Ad = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["ad"]) -> bool: ...  # type: ignore[override]
 
@@ -277,7 +277,7 @@ class ApplyRecommendationOperation(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            new_budget_amount_micros: int = ...
+            new_budget_amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["new_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -332,7 +332,7 @@ class ApplyRecommendationOperation(proto.Message):
         lower_target_roas: ApplyRecommendationOperation.LowerTargetRoasParameters = ...,
         forecasting_set_target_cpa: ApplyRecommendationOperation.ForecastingSetTargetCpaParameters = ...,
         set_target_cpa: ApplyRecommendationOperation.ForecastingSetTargetCpaParameters = ...,
-        set_target_roas: ApplyRecommendationOperation.ForecastingSetTargetRoasParameters = ...
+        set_target_roas: ApplyRecommendationOperation.ForecastingSetTargetRoasParameters = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign_budget", "text_ad", "keyword", "target_cpa_opt_in", "target_roas_opt_in", "callout_extension", "call_extension", "sitelink_extension", "move_unused_budget", "responsive_search_ad", "use_broad_match_keyword", "responsive_search_ad_asset", "responsive_search_ad_improve_ad_strength", "raise_target_cpa_bid_too_low", "forecasting_set_target_roas", "callout_asset", "call_asset", "sitelink_asset", "raise_target_cpa", "lower_target_roas", "forecasting_set_target_cpa", "set_target_cpa", "set_target_roas"]) -> bool: ...  # type: ignore[override]
 
@@ -347,7 +347,7 @@ class ApplyRecommendationRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operations: MutableSequence[ApplyRecommendationOperation] = ...,
-        partial_failure: bool = ...
+        partial_failure: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure"]) -> bool: ...  # type: ignore[override]
 
@@ -360,7 +360,7 @@ class ApplyRecommendationResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         results: MutableSequence[ApplyRecommendationResult] = ...,
-        partial_failure_error: Status = ...
+        partial_failure_error: Status = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
 
@@ -371,7 +371,7 @@ class ApplyRecommendationResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -383,7 +383,7 @@ class DismissRecommendationRequest(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            resource_name: str = ...
+            resource_name: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
     customer_id: str
@@ -400,7 +400,7 @@ class DismissRecommendationRequest(proto.Message):
         operations: MutableSequence[
             DismissRecommendationRequest.DismissRecommendationOperation
         ] = ...,
-        partial_failure: bool = ...
+        partial_failure: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure"]) -> bool: ...  # type: ignore[override]
 
@@ -412,7 +412,7 @@ class DismissRecommendationResponse(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            resource_name: str = ...
+            resource_name: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
     results: MutableSequence[DismissRecommendationResponse.DismissRecommendationResult]
@@ -425,6 +425,6 @@ class DismissRecommendationResponse(proto.Message):
         results: MutableSequence[
             DismissRecommendationResponse.DismissRecommendationResult
         ] = ...,
-        partial_failure_error: Status = ...
+        partial_failure_error: Status = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]

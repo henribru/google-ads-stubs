@@ -24,7 +24,7 @@ class IdentityVerificationServiceGrpcTransport(IdentityVerificationServiceTransp
         client_cert_source_for_mtls: Callable[[], tuple[bytes, bytes]] | None = None,
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
-        always_use_jwt_access: bool | None = False
+        always_use_jwt_access: bool | None = False,
     ) -> None: ...
     @classmethod
     def create_channel(
@@ -34,7 +34,7 @@ class IdentityVerificationServiceGrpcTransport(IdentityVerificationServiceTransp
         credentials_file: str | None = None,
         scopes: Sequence[str] | None = None,
         quota_project_id: str | None = None,
-        **kwargs
+        **kwargs,
     ) -> grpc.Channel: ...
     @property
     def grpc_channel(self) -> grpc.Channel: ...

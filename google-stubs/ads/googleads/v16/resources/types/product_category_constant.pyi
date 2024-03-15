@@ -26,7 +26,7 @@ class ProductCategoryConstant(proto.Message):
             ignore_unknown_fields: bool = False,
             region_code: str = ...,
             language_code: str = ...,
-            value: str = ...
+            value: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["region_code", "language_code", "value"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -47,6 +47,6 @@ class ProductCategoryConstant(proto.Message):
         state: ProductCategoryStateEnum.ProductCategoryState = ...,
         localizations: MutableSequence[
             ProductCategoryConstant.ProductCategoryLocalization
-        ] = ...
+        ] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "category_id", "product_category_constant_parent", "level", "state", "localizations"]) -> bool: ...  # type: ignore[override]

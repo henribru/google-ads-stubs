@@ -20,6 +20,6 @@ class AdParameter(proto.Message):
         resource_name: str = ...,
         ad_group_criterion: str = ...,
         parameter_index: int = ...,
-        insertion_text: str = ...
+        insertion_text: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group_criterion", "parameter_index", "insertion_text"]) -> bool: ...  # type: ignore[override]

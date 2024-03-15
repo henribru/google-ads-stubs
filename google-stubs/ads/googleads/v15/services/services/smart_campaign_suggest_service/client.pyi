@@ -73,7 +73,7 @@ class SmartCampaignSuggestServiceClient(
         credentials: ga_credentials.Credentials | None = None,
         transport: str | SmartCampaignSuggestServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def suggest_smart_campaign_budget_options(
         self,
@@ -83,7 +83,7 @@ class SmartCampaignSuggestServiceClient(
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsResponse: ...
     def suggest_smart_campaign_ad(
         self,
@@ -93,7 +93,7 @@ class SmartCampaignSuggestServiceClient(
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignAdResponse: ...
     def suggest_keyword_themes(
         self,
@@ -103,5 +103,5 @@ class SmartCampaignSuggestServiceClient(
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> smart_campaign_suggest_service.SuggestKeywordThemesResponse: ...

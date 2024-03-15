@@ -62,7 +62,7 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | KeywordPlanIdeaServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def generate_keyword_ideas(
         self,
@@ -72,7 +72,7 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> pagers.GenerateKeywordIdeasPager: ...
     def generate_keyword_historical_metrics(
         self,
@@ -82,7 +82,7 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> keyword_plan_idea_service.GenerateKeywordHistoricalMetricsResponse: ...
     def generate_ad_group_themes(
         self,
@@ -92,7 +92,7 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> keyword_plan_idea_service.GenerateAdGroupThemesResponse: ...
     def generate_keyword_forecast_metrics(
         self,
@@ -102,5 +102,5 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> keyword_plan_idea_service.GenerateKeywordForecastMetricsResponse: ...

@@ -45,6 +45,6 @@ class FeedItemTarget(proto.Message):
         keyword: KeywordInfo = ...,
         geo_target_constant: str = ...,
         device: FeedItemTargetDeviceEnum.FeedItemTargetDevice = ...,
-        ad_schedule: AdScheduleInfo = ...
+        ad_schedule: AdScheduleInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "feed_item", "feed_item_target_type", "feed_item_target_id", "status", "campaign", "ad_group", "keyword", "geo_target_constant", "device", "ad_schedule"]) -> bool: ...  # type: ignore[override]

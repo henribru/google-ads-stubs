@@ -29,6 +29,6 @@ class AssetGroupSignal(proto.Message):
         approval_status: AssetGroupSignalApprovalStatusEnum.AssetGroupSignalApprovalStatus = ...,
         disapproval_reasons: MutableSequence[str] = ...,
         audience: AudienceInfo = ...,
-        search_theme: SearchThemeInfo = ...
+        search_theme: SearchThemeInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset_group", "approval_status", "disapproval_reasons", "audience", "search_theme"]) -> bool: ...  # type: ignore[override]

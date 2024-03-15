@@ -38,6 +38,6 @@ class CustomerClient(proto.Message):
         currency_code: str = ...,
         id: int = ...,
         applied_labels: MutableSequence[str] = ...,
-        status: CustomerStatusEnum.CustomerStatus = ...
+        status: CustomerStatusEnum.CustomerStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "client_customer", "hidden", "level", "time_zone", "test_account", "manager", "descriptive_name", "currency_code", "id", "applied_labels", "status"]) -> bool: ...  # type: ignore[override]

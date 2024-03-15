@@ -72,7 +72,7 @@ class ProductLinkInvitationServiceClient(
         credentials: ga_credentials.Credentials | None = None,
         transport: str | ProductLinkInvitationServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def update_product_link_invitation(
         self,
@@ -86,5 +86,5 @@ class ProductLinkInvitationServiceClient(
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> product_link_invitation_service.UpdateProductLinkInvitationResponse: ...

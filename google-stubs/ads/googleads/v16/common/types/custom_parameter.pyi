@@ -16,6 +16,6 @@ class CustomParameter(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         key: str = ...,
-        value: str = ...
+        value: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["key", "value"]) -> bool: ...  # type: ignore[override]

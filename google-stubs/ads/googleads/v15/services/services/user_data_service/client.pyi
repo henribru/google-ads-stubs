@@ -61,7 +61,7 @@ class UserDataServiceClient(metaclass=UserDataServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | UserDataServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def upload_user_data(
         self,
@@ -69,5 +69,5 @@ class UserDataServiceClient(metaclass=UserDataServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> user_data_service.UploadUserDataResponse: ...

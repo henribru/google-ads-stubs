@@ -26,6 +26,6 @@ class ExperimentArm(proto.Message):
         control: bool = ...,
         traffic_split: int = ...,
         campaigns: MutableSequence[str] = ...,
-        in_design_campaigns: MutableSequence[str] = ...
+        in_design_campaigns: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "experiment", "name", "control", "traffic_split", "campaigns", "in_design_campaigns"]) -> bool: ...  # type: ignore[override]

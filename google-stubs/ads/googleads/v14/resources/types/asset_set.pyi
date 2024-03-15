@@ -25,7 +25,7 @@ class AssetSet(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             hotel_center_id: int = ...,
-            partner_name: str = ...
+            partner_name: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["hotel_center_id", "partner_name"]) -> bool: ...  # type: ignore[override]
 
@@ -38,7 +38,7 @@ class AssetSet(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             merchant_id: int = ...,
-            feed_label: str = ...
+            feed_label: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["merchant_id", "feed_label"]) -> bool: ...  # type: ignore[override]
     id: int
@@ -67,6 +67,6 @@ class AssetSet(proto.Message):
         hotel_property_data: AssetSet.HotelPropertyData = ...,
         location_set: LocationSet = ...,
         business_profile_location_group: BusinessProfileLocationGroup = ...,
-        chain_location_group: ChainLocationGroup = ...
+        chain_location_group: ChainLocationGroup = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["id", "resource_name", "name", "type_", "status", "merchant_center_feed", "location_group_parent_asset_set_id", "hotel_property_data", "location_set", "business_profile_location_group", "chain_location_group"]) -> bool: ...  # type: ignore[override]

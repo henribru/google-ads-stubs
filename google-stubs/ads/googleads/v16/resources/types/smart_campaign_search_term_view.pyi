@@ -18,6 +18,6 @@ class SmartCampaignSearchTermView(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         search_term: str = ...,
-        campaign: str = ...
+        campaign: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "search_term", "campaign"]) -> bool: ...  # type: ignore[override]

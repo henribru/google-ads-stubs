@@ -18,7 +18,7 @@ class CustomerSkAdNetworkConversionValueSchemaOperation(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        update: CustomerSkAdNetworkConversionValueSchema = ...
+        update: CustomerSkAdNetworkConversionValueSchema = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update"]) -> bool: ...  # type: ignore[override]
 
@@ -33,7 +33,7 @@ class MutateCustomerSkAdNetworkConversionValueSchemaRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         operation: CustomerSkAdNetworkConversionValueSchemaOperation = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -44,7 +44,7 @@ class MutateCustomerSkAdNetworkConversionValueSchemaResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        result: MutateCustomerSkAdNetworkConversionValueSchemaResult = ...
+        result: MutateCustomerSkAdNetworkConversionValueSchemaResult = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
 
@@ -57,6 +57,6 @@ class MutateCustomerSkAdNetworkConversionValueSchemaResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        app_id: str = ...
+        app_id: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "app_id"]) -> bool: ...  # type: ignore[override]

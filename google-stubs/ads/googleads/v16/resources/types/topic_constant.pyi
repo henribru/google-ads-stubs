@@ -20,6 +20,6 @@ class TopicConstant(proto.Message):
         resource_name: str = ...,
         id: int = ...,
         topic_constant_parent: str = ...,
-        path: MutableSequence[str] = ...
+        path: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "topic_constant_parent", "path"]) -> bool: ...  # type: ignore[override]

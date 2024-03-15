@@ -20,6 +20,6 @@ class GeographicView(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         location_type: GeoTargetingTypeEnum.GeoTargetingType = ...,
-        country_criterion_id: int = ...
+        country_criterion_id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "location_type", "country_criterion_id"]) -> bool: ...  # type: ignore[override]

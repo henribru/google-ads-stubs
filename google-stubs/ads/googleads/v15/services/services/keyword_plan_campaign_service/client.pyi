@@ -79,7 +79,7 @@ class KeywordPlanCampaignServiceClient(metaclass=KeywordPlanCampaignServiceClien
         credentials: ga_credentials.Credentials | None = None,
         transport: str | KeywordPlanCampaignServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_keyword_plan_campaigns(
         self,
@@ -94,5 +94,5 @@ class KeywordPlanCampaignServiceClient(metaclass=KeywordPlanCampaignServiceClien
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> keyword_plan_campaign_service.MutateKeywordPlanCampaignsResponse: ...

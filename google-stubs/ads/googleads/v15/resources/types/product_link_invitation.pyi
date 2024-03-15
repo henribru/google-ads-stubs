@@ -21,7 +21,7 @@ class HotelCenterLinkInvitationIdentifier(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        hotel_center_id: int = ...
+        hotel_center_id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["hotel_center_id"]) -> bool: ...  # type: ignore[override]
 
@@ -32,7 +32,7 @@ class MerchantCenterLinkInvitationIdentifier(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        merchant_center_id: int = ...
+        merchant_center_id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["merchant_center_id"]) -> bool: ...  # type: ignore[override]
 
@@ -53,6 +53,6 @@ class ProductLinkInvitation(proto.Message):
         status: ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus = ...,
         type_: LinkedProductTypeEnum.LinkedProductType = ...,
         hotel_center: HotelCenterLinkInvitationIdentifier = ...,
-        merchant_center: MerchantCenterLinkInvitationIdentifier = ...
+        merchant_center: MerchantCenterLinkInvitationIdentifier = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "product_link_invitation_id", "status", "type_", "hotel_center", "merchant_center"]) -> bool: ...  # type: ignore[override]

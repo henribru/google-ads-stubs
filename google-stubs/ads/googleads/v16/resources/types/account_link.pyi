@@ -30,7 +30,7 @@ class AccountLink(proto.Message):
         account_link_id: int = ...,
         status: AccountLinkStatusEnum.AccountLinkStatus = ...,
         type_: LinkedAccountTypeEnum.LinkedAccountType = ...,
-        third_party_app_analytics: ThirdPartyAppAnalyticsLinkIdentifier = ...
+        third_party_app_analytics: ThirdPartyAppAnalyticsLinkIdentifier = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "account_link_id", "status", "type_", "third_party_app_analytics"]) -> bool: ...  # type: ignore[override]
 
@@ -45,6 +45,6 @@ class ThirdPartyAppAnalyticsLinkIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         app_analytics_provider_id: int = ...,
         app_id: str = ...,
-        app_vendor: MobileAppVendorEnum.MobileAppVendor = ...
+        app_vendor: MobileAppVendorEnum.MobileAppVendor = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["app_analytics_provider_id", "app_id", "app_vendor"]) -> bool: ...  # type: ignore[override]

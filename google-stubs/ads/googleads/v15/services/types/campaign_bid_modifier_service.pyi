@@ -29,7 +29,7 @@ class CampaignBidModifierOperation(proto.Message):
         update_mask: FieldMask = ...,
         create: CampaignBidModifier = ...,
         update: CampaignBidModifier = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -42,7 +42,7 @@ class MutateCampaignBidModifierResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        campaign_bid_modifier: CampaignBidModifier = ...
+        campaign_bid_modifier: CampaignBidModifier = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign_bid_modifier"]) -> bool: ...  # type: ignore[override]
 
@@ -61,7 +61,7 @@ class MutateCampaignBidModifiersRequest(proto.Message):
         operations: MutableSequence[CampaignBidModifierOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -74,6 +74,6 @@ class MutateCampaignBidModifiersResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateCampaignBidModifierResult] = ...
+        results: MutableSequence[MutateCampaignBidModifierResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

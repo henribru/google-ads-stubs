@@ -26,7 +26,7 @@ class AdOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         policy_validation_parameter: PolicyValidationParameter = ...,
-        update: Ad = ...
+        update: Ad = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "policy_validation_parameter", "update"]) -> bool: ...  # type: ignore[override]
 
@@ -37,7 +37,7 @@ class GetAdRequest(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -50,7 +50,7 @@ class MutateAdResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        ad: Ad = ...
+        ad: Ad = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad"]) -> bool: ...  # type: ignore[override]
 
@@ -69,7 +69,7 @@ class MutateAdsRequest(proto.Message):
         operations: MutableSequence[AdOperation] = ...,
         partial_failure: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "response_content_type", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -82,6 +82,6 @@ class MutateAdsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateAdResult] = ...
+        results: MutableSequence[MutateAdResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

@@ -27,7 +27,7 @@ class LabelOperation(proto.Message):
         update_mask: FieldMask = ...,
         create: Label = ...,
         update: Label = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -40,7 +40,7 @@ class MutateLabelResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        label: Label = ...
+        label: Label = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "label"]) -> bool: ...  # type: ignore[override]
 
@@ -59,7 +59,7 @@ class MutateLabelsRequest(proto.Message):
         operations: MutableSequence[LabelOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -72,6 +72,6 @@ class MutateLabelsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateLabelResult] = ...
+        results: MutableSequence[MutateLabelResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

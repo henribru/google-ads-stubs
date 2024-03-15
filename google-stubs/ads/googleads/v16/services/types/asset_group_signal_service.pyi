@@ -25,7 +25,7 @@ class AssetGroupSignalOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         exempt_policy_violation_keys: MutableSequence[PolicyViolationKey] = ...,
         create: AssetGroupSignal = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["exempt_policy_violation_keys", "create", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -38,7 +38,7 @@ class MutateAssetGroupSignalResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        asset_group_signal: AssetGroupSignal = ...
+        asset_group_signal: AssetGroupSignal = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "asset_group_signal"]) -> bool: ...  # type: ignore[override]
 
@@ -57,7 +57,7 @@ class MutateAssetGroupSignalsRequest(proto.Message):
         operations: MutableSequence[AssetGroupSignalOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -70,6 +70,6 @@ class MutateAssetGroupSignalsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateAssetGroupSignalResult] = ...,
-        partial_failure_error: Status = ...
+        partial_failure_error: Status = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]

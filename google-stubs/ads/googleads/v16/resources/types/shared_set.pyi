@@ -29,6 +29,6 @@ class SharedSet(proto.Message):
         name: str = ...,
         status: SharedSetStatusEnum.SharedSetStatus = ...,
         member_count: int = ...,
-        reference_count: int = ...
+        reference_count: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "type_", "name", "status", "member_count", "reference_count"]) -> bool: ...  # type: ignore[override]

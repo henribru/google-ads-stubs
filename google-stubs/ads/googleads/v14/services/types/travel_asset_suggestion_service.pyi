@@ -34,7 +34,7 @@ class HotelAssetSuggestion(proto.Message):
         call_to_action: CallToActionTypeEnum.CallToActionType = ...,
         text_assets: MutableSequence[HotelTextAsset] = ...,
         image_assets: MutableSequence[HotelImageAsset] = ...,
-        status: HotelAssetSuggestionStatusEnum.HotelAssetSuggestionStatus = ...
+        status: HotelAssetSuggestionStatusEnum.HotelAssetSuggestionStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["place_id", "final_url", "hotel_name", "call_to_action", "text_assets", "image_assets", "status"]) -> bool: ...  # type: ignore[override]
 
@@ -47,7 +47,7 @@ class HotelImageAsset(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         uri: str = ...,
-        asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...
+        asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["uri", "asset_field_type"]) -> bool: ...  # type: ignore[override]
 
@@ -60,7 +60,7 @@ class HotelTextAsset(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         text: str = ...,
-        asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...
+        asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["text", "asset_field_type"]) -> bool: ...  # type: ignore[override]
 
@@ -75,7 +75,7 @@ class SuggestTravelAssetsRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
         language_option: str = ...,
-        place_ids: MutableSequence[str] = ...
+        place_ids: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "language_option", "place_ids"]) -> bool: ...  # type: ignore[override]
 
@@ -86,6 +86,6 @@ class SuggestTravelAssetsResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        hotel_asset_suggestions: MutableSequence[HotelAssetSuggestion] = ...
+        hotel_asset_suggestions: MutableSequence[HotelAssetSuggestion] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["hotel_asset_suggestions"]) -> bool: ...  # type: ignore[override]

@@ -38,6 +38,6 @@ class HotelReconciliation(proto.Message):
         check_out_date: str = ...,
         reconciled_value_micros: int = ...,
         billed: bool = ...,
-        status: HotelReconciliationStatusEnum.HotelReconciliationStatus = ...
+        status: HotelReconciliationStatusEnum.HotelReconciliationStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "commission_id", "order_id", "campaign", "hotel_center_id", "hotel_id", "check_in_date", "check_out_date", "reconciled_value_micros", "billed", "status"]) -> bool: ...  # type: ignore[override]

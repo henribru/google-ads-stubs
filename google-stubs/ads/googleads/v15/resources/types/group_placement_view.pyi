@@ -24,6 +24,6 @@ class GroupPlacementView(proto.Message):
         placement: str = ...,
         display_name: str = ...,
         target_url: str = ...,
-        placement_type: PlacementTypeEnum.PlacementType = ...
+        placement_type: PlacementTypeEnum.PlacementType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "placement", "display_name", "target_url", "placement_type"]) -> bool: ...  # type: ignore[override]

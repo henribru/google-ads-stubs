@@ -47,7 +47,7 @@ class Invoice(proto.Message):
             invalid_activity_amount_micros: int = ...,
             invalid_activity_summaries: MutableSequence[
                 Invoice.InvalidActivitySummary
-            ] = ...
+            ] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["customer", "customer_descriptive_name", "account_budget", "account_budget_name", "purchase_order_number", "subtotal_amount_micros", "tax_amount_micros", "total_amount_micros", "billable_activity_date_range", "served_amount_micros", "billed_amount_micros", "overdelivery_amount_micros", "invalid_activity_amount_micros", "invalid_activity_summaries"]) -> bool: ...  # type: ignore[override]
 
@@ -94,7 +94,7 @@ class Invoice(proto.Message):
             export_charge_total_amount_micros: int = ...,
             subtotal_amount_micros: int = ...,
             tax_amount_micros: int = ...,
-            total_amount_micros: int = ...
+            total_amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["customer", "billing_correction_subtotal_amount_micros", "billing_correction_tax_amount_micros", "billing_correction_total_amount_micros", "coupon_adjustment_subtotal_amount_micros", "coupon_adjustment_tax_amount_micros", "coupon_adjustment_total_amount_micros", "excess_credit_adjustment_subtotal_amount_micros", "excess_credit_adjustment_tax_amount_micros", "excess_credit_adjustment_total_amount_micros", "regulatory_costs_subtotal_amount_micros", "regulatory_costs_tax_amount_micros", "regulatory_costs_total_amount_micros", "export_charge_subtotal_amount_micros", "export_charge_tax_amount_micros", "export_charge_total_amount_micros", "subtotal_amount_micros", "tax_amount_micros", "total_amount_micros"]) -> bool: ...  # type: ignore[override]
 
@@ -115,7 +115,7 @@ class Invoice(proto.Message):
             original_invoice_id: str = ...,
             original_account_budget_name: str = ...,
             original_purchase_order_number: str = ...,
-            amount_micros: int = ...
+            amount_micros: int = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["original_month_of_service", "original_year_of_service", "original_invoice_id", "original_account_budget_name", "original_purchase_order_number", "amount_micros"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -176,6 +176,6 @@ class Invoice(proto.Message):
         replaced_invoices: MutableSequence[str] = ...,
         pdf_url: str = ...,
         account_budget_summaries: MutableSequence[Invoice.AccountBudgetSummary] = ...,
-        account_summaries: MutableSequence[Invoice.AccountSummary] = ...
+        account_summaries: MutableSequence[Invoice.AccountSummary] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "type_", "billing_setup", "payments_account_id", "payments_profile_id", "issue_date", "due_date", "service_date_range", "currency_code", "adjustments_subtotal_amount_micros", "adjustments_tax_amount_micros", "adjustments_total_amount_micros", "regulatory_costs_subtotal_amount_micros", "regulatory_costs_tax_amount_micros", "regulatory_costs_total_amount_micros", "export_charge_subtotal_amount_micros", "export_charge_tax_amount_micros", "export_charge_total_amount_micros", "subtotal_amount_micros", "tax_amount_micros", "total_amount_micros", "corrected_invoice", "replaced_invoices", "pdf_url", "account_budget_summaries", "account_summaries"]) -> bool: ...  # type: ignore[override]

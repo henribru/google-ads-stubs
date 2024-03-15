@@ -20,7 +20,7 @@ class CustomLeadFormSubmissionField(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         question_text: str = ...,
-        field_value: str = ...
+        field_value: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["question_text", "field_value"]) -> bool: ...  # type: ignore[override]
 
@@ -51,7 +51,7 @@ class LeadFormSubmissionData(proto.Message):
         ad_group: str = ...,
         ad_group_ad: str = ...,
         gclid: str = ...,
-        submission_date_time: str = ...
+        submission_date_time: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "asset", "campaign", "lead_form_submission_fields", "custom_lead_form_submission_fields", "ad_group", "ad_group_ad", "gclid", "submission_date_time"]) -> bool: ...  # type: ignore[override]
 
@@ -64,6 +64,6 @@ class LeadFormSubmissionField(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         field_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType = ...,
-        field_value: str = ...
+        field_value: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["field_type", "field_value"]) -> bool: ...  # type: ignore[override]

@@ -30,7 +30,7 @@ class AdGroupAdOperation(proto.Message):
         policy_validation_parameter: PolicyValidationParameter = ...,
         create: AdGroupAd = ...,
         update: AdGroupAd = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "policy_validation_parameter", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -43,7 +43,7 @@ class MutateAdGroupAdResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        ad_group_ad: AdGroupAd = ...
+        ad_group_ad: AdGroupAd = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "ad_group_ad"]) -> bool: ...  # type: ignore[override]
 
@@ -62,7 +62,7 @@ class MutateAdGroupAdsRequest(proto.Message):
         operations: MutableSequence[AdGroupAdOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -75,6 +75,6 @@ class MutateAdGroupAdsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateAdGroupAdResult] = ...
+        results: MutableSequence[MutateAdGroupAdResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

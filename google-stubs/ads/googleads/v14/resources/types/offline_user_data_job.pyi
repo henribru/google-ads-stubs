@@ -47,7 +47,7 @@ class OfflineUserDataJob(proto.Message):
         failure_reason: OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason = ...,
         operation_metadata: OfflineUserDataJobMetadata = ...,
         customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...,
-        store_sales_metadata: StoreSalesMetadata = ...
+        store_sales_metadata: StoreSalesMetadata = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "external_id", "type_", "status", "failure_reason", "operation_metadata", "customer_match_user_list_metadata", "store_sales_metadata"]) -> bool: ...  # type: ignore[override]
 
@@ -58,6 +58,6 @@ class OfflineUserDataJobMetadata(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange = ...
+        match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["match_rate_range"]) -> bool: ...  # type: ignore[override]

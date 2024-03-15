@@ -21,7 +21,7 @@ class GetIdentityVerificationRequest(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        customer_id: str = ...
+        customer_id: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id"]) -> bool: ...  # type: ignore[override]
 
@@ -32,7 +32,7 @@ class GetIdentityVerificationResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        identity_verification: MutableSequence[IdentityVerification] = ...
+        identity_verification: MutableSequence[IdentityVerification] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["identity_verification"]) -> bool: ...  # type: ignore[override]
 
@@ -47,7 +47,7 @@ class IdentityVerification(proto.Message):
         ignore_unknown_fields: bool = False,
         verification_program: IdentityVerificationProgramEnum.IdentityVerificationProgram = ...,
         identity_verification_requirement: IdentityVerificationRequirement = ...,
-        verification_progress: IdentityVerificationProgress = ...
+        verification_progress: IdentityVerificationProgress = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["verification_program", "identity_verification_requirement", "verification_progress"]) -> bool: ...  # type: ignore[override]
 
@@ -62,7 +62,7 @@ class IdentityVerificationProgress(proto.Message):
         ignore_unknown_fields: bool = False,
         program_status: IdentityVerificationProgramStatusEnum.IdentityVerificationProgramStatus = ...,
         invitation_link_expiration_time: str = ...,
-        action_url: str = ...
+        action_url: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["program_status", "invitation_link_expiration_time", "action_url"]) -> bool: ...  # type: ignore[override]
 
@@ -75,7 +75,7 @@ class IdentityVerificationRequirement(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         verification_start_deadline_time: str = ...,
-        verification_completion_deadline_time: str = ...
+        verification_completion_deadline_time: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["verification_start_deadline_time", "verification_completion_deadline_time"]) -> bool: ...  # type: ignore[override]
 
@@ -88,6 +88,6 @@ class StartIdentityVerificationRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
-        verification_program: IdentityVerificationProgramEnum.IdentityVerificationProgram = ...
+        verification_program: IdentityVerificationProgramEnum.IdentityVerificationProgram = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "verification_program"]) -> bool: ...  # type: ignore[override]

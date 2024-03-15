@@ -24,6 +24,6 @@ class MerchantCenterLink(proto.Message):
         resource_name: str = ...,
         id: int = ...,
         merchant_center_account_name: str = ...,
-        status: MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus = ...
+        status: MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "merchant_center_account_name", "status"]) -> bool: ...  # type: ignore[override]

@@ -73,7 +73,7 @@ class AdParameterServiceClient(metaclass=AdParameterServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AdParameterServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def mutate_ad_parameters(
         self,
@@ -84,5 +84,5 @@ class AdParameterServiceClient(metaclass=AdParameterServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> ad_parameter_service.MutateAdParametersResponse: ...

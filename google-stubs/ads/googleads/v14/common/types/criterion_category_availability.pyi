@@ -29,7 +29,7 @@ class CriterionCategoryAvailability(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         channel: CriterionCategoryChannelAvailability = ...,
-        locale: MutableSequence[CriterionCategoryLocaleAvailability] = ...
+        locale: MutableSequence[CriterionCategoryLocaleAvailability] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["channel", "locale"]) -> bool: ...  # type: ignore[override]
 
@@ -50,7 +50,7 @@ class CriterionCategoryChannelAvailability(proto.Message):
         advertising_channel_sub_type: MutableSequence[
             AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
         ] = ...,
-        include_default_channel_sub_type: bool = ...
+        include_default_channel_sub_type: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["availability_mode", "advertising_channel_type", "advertising_channel_sub_type", "include_default_channel_sub_type"]) -> bool: ...  # type: ignore[override]
 
@@ -65,6 +65,6 @@ class CriterionCategoryLocaleAvailability(proto.Message):
         ignore_unknown_fields: bool = False,
         availability_mode: CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode = ...,
         country_code: str = ...,
-        language_code: str = ...
+        language_code: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["availability_mode", "country_code", "language_code"]) -> bool: ...  # type: ignore[override]

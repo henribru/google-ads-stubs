@@ -25,7 +25,7 @@ class AudienceOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: Audience = ...,
-        update: Audience = ...
+        update: Audience = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
 
@@ -38,7 +38,7 @@ class MutateAudienceResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        audience: Audience = ...
+        audience: Audience = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "audience"]) -> bool: ...  # type: ignore[override]
 
@@ -57,7 +57,7 @@ class MutateAudiencesRequest(proto.Message):
         operations: MutableSequence[AudienceOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -70,6 +70,6 @@ class MutateAudiencesResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateAudienceResult] = ...,
-        partial_failure_error: Status = ...
+        partial_failure_error: Status = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]

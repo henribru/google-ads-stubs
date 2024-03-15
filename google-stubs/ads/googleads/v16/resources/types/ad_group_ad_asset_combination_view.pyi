@@ -20,6 +20,6 @@ class AdGroupAdAssetCombinationView(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         served_assets: MutableSequence[AssetUsage] = ...,
-        enabled: bool = ...
+        enabled: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "served_assets", "enabled"]) -> bool: ...  # type: ignore[override]

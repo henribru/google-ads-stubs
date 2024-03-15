@@ -66,7 +66,7 @@ class InvoiceServiceClient(metaclass=InvoiceServiceClientMeta):
         credentials: ga_credentials.Credentials | None = None,
         transport: str | InvoiceServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def list_invoices(
         self,
@@ -78,5 +78,5 @@ class InvoiceServiceClient(metaclass=InvoiceServiceClientMeta):
         issue_month: month_of_year.MonthOfYearEnum.MonthOfYear | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> invoice_service.ListInvoicesResponse: ...

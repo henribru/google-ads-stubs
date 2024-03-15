@@ -49,6 +49,6 @@ class AssetGroup(proto.Message):
         ] = ...,
         path1: str = ...,
         path2: str = ...,
-        ad_strength: AdStrengthEnum.AdStrength = ...
+        ad_strength: AdStrengthEnum.AdStrength = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "campaign", "name", "final_urls", "final_mobile_urls", "status", "primary_status", "primary_status_reasons", "path1", "path2", "ad_strength"]) -> bool: ...  # type: ignore[override]

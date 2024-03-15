@@ -30,7 +30,7 @@ class ConversionValueRule(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             operation: ValueRuleOperationEnum.ValueRuleOperation = ...,
-            value: float = ...
+            value: float = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["operation", "value"]) -> bool: ...  # type: ignore[override]
 
@@ -43,7 +43,7 @@ class ConversionValueRule(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             user_lists: MutableSequence[str] = ...,
-            user_interests: MutableSequence[str] = ...
+            user_interests: MutableSequence[str] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["user_lists", "user_interests"]) -> bool: ...  # type: ignore[override]
 
@@ -56,7 +56,7 @@ class ConversionValueRule(proto.Message):
             ignore_unknown_fields: bool = False,
             device_types: MutableSequence[
                 ValueRuleDeviceTypeEnum.ValueRuleDeviceType
-            ] = ...
+            ] = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["device_types"]) -> bool: ...  # type: ignore[override]
 
@@ -73,7 +73,7 @@ class ConversionValueRule(proto.Message):
             excluded_geo_target_constants: MutableSequence[str] = ...,
             excluded_geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType = ...,
             geo_target_constants: MutableSequence[str] = ...,
-            geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType = ...
+            geo_match_type: ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["excluded_geo_target_constants", "excluded_geo_match_type", "geo_target_constants", "geo_match_type"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -96,6 +96,6 @@ class ConversionValueRule(proto.Message):
         device_condition: ConversionValueRule.ValueRuleDeviceCondition = ...,
         audience_condition: ConversionValueRule.ValueRuleAudienceCondition = ...,
         owner_customer: str = ...,
-        status: ConversionValueRuleStatusEnum.ConversionValueRuleStatus = ...
+        status: ConversionValueRuleStatusEnum.ConversionValueRuleStatus = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "action", "geo_location_condition", "device_condition", "audience_condition", "owner_customer", "status"]) -> bool: ...  # type: ignore[override]

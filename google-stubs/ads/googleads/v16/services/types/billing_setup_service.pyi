@@ -18,7 +18,7 @@ class BillingSetupOperation(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         create: BillingSetup = ...,
-        remove: str = ...
+        remove: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
 
@@ -31,7 +31,7 @@ class MutateBillingSetupRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
-        operation: BillingSetupOperation = ...
+        operation: BillingSetupOperation = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operation"]) -> bool: ...  # type: ignore[override]
 
@@ -42,7 +42,7 @@ class MutateBillingSetupResponse(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        result: MutateBillingSetupResult = ...
+        result: MutateBillingSetupResult = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
 
@@ -53,6 +53,6 @@ class MutateBillingSetupResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]

@@ -62,7 +62,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         credentials: ga_credentials.Credentials | None = None,
         transport: str | AudienceInsightsServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def generate_insights_finder_report(
         self,
@@ -77,7 +77,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> audience_insights_service.GenerateInsightsFinderReportResponse: ...
     def list_audience_insights_attributes(
         self,
@@ -93,7 +93,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         query_text: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> audience_insights_service.ListAudienceInsightsAttributesResponse: ...
     def list_insights_eligible_dates(
         self,
@@ -103,7 +103,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> audience_insights_service.ListInsightsEligibleDatesResponse: ...
     def generate_audience_composition_insights(
         self,
@@ -119,5 +119,5 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> audience_insights_service.GenerateAudienceCompositionInsightsResponse: ...

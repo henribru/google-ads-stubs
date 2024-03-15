@@ -18,6 +18,6 @@ class CustomerSearchTermInsight(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         category_label: str = ...,
-        id: int = ...
+        id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "category_label", "id"]) -> bool: ...  # type: ignore[override]

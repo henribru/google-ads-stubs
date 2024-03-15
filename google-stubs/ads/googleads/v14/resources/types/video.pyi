@@ -22,6 +22,6 @@ class Video(proto.Message):
         id: str = ...,
         channel_id: str = ...,
         duration_millis: int = ...,
-        title: str = ...
+        title: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "id", "channel_id", "duration_millis", "title"]) -> bool: ...  # type: ignore[override]

@@ -51,6 +51,6 @@ class BiddingSeasonalityAdjustment(proto.Message):
         campaigns: MutableSequence[str] = ...,
         advertising_channel_types: MutableSequence[
             AdvertisingChannelTypeEnum.AdvertisingChannelType
-        ] = ...
+        ] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "seasonality_adjustment_id", "scope", "status", "start_date_time", "end_date_time", "name", "description", "devices", "conversion_rate_modifier", "campaigns", "advertising_channel_types"]) -> bool: ...  # type: ignore[override]

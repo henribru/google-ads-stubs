@@ -18,7 +18,7 @@ class CustomerMatchUserListMetadata(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        user_list: str = ...
+        user_list: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["user_list"]) -> bool: ...  # type: ignore[override]
 
@@ -33,7 +33,7 @@ class EventAttribute(proto.Message):
         ignore_unknown_fields: bool = False,
         event: str = ...,
         event_date_time: str = ...,
-        item_attribute: MutableSequence[EventItemAttribute] = ...
+        item_attribute: MutableSequence[EventItemAttribute] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["event", "event_date_time", "item_attribute"]) -> bool: ...  # type: ignore[override]
 
@@ -44,7 +44,7 @@ class EventItemAttribute(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        item_id: str = ...
+        item_id: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["item_id"]) -> bool: ...  # type: ignore[override]
 
@@ -63,7 +63,7 @@ class ItemAttribute(proto.Message):
         merchant_id: int = ...,
         country_code: str = ...,
         language_code: str = ...,
-        quantity: int = ...
+        quantity: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["item_id", "merchant_id", "country_code", "language_code", "quantity"]) -> bool: ...  # type: ignore[override]
 
@@ -86,7 +86,7 @@ class OfflineUserAddressInfo(proto.Message):
         state: str = ...,
         country_code: str = ...,
         postal_code: str = ...,
-        hashed_street_address: str = ...
+        hashed_street_address: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["hashed_first_name", "hashed_last_name", "city", "state", "country_code", "postal_code", "hashed_street_address"]) -> bool: ...  # type: ignore[override]
 
@@ -97,7 +97,7 @@ class ShoppingLoyalty(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        loyalty_tier: str = ...
+        loyalty_tier: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["loyalty_tier"]) -> bool: ...  # type: ignore[override]
 
@@ -108,7 +108,7 @@ class StoreAttribute(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        store_code: str = ...
+        store_code: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["store_code"]) -> bool: ...  # type: ignore[override]
 
@@ -125,7 +125,7 @@ class StoreSalesMetadata(proto.Message):
         loyalty_fraction: float = ...,
         transaction_upload_fraction: float = ...,
         custom_key: str = ...,
-        third_party_metadata: StoreSalesThirdPartyMetadata = ...
+        third_party_metadata: StoreSalesThirdPartyMetadata = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["loyalty_fraction", "transaction_upload_fraction", "custom_key", "third_party_metadata"]) -> bool: ...  # type: ignore[override]
 
@@ -146,7 +146,7 @@ class StoreSalesThirdPartyMetadata(proto.Message):
         partner_match_fraction: float = ...,
         partner_upload_fraction: float = ...,
         bridge_map_version_id: str = ...,
-        partner_id: int = ...
+        partner_id: int = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["advertiser_upload_date_time", "valid_transaction_fraction", "partner_match_fraction", "partner_upload_fraction", "bridge_map_version_id", "partner_id"]) -> bool: ...  # type: ignore[override]
 
@@ -171,7 +171,7 @@ class TransactionAttribute(proto.Message):
         order_id: str = ...,
         store_attribute: StoreAttribute = ...,
         custom_value: str = ...,
-        item_attribute: ItemAttribute = ...
+        item_attribute: ItemAttribute = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["transaction_date_time", "transaction_amount_micros", "currency_code", "conversion_action", "order_id", "store_attribute", "custom_value", "item_attribute"]) -> bool: ...  # type: ignore[override]
 
@@ -200,7 +200,7 @@ class UserAttribute(proto.Message):
         shopping_loyalty: ShoppingLoyalty = ...,
         lifecycle_stage: str = ...,
         first_purchase_date_time: str = ...,
-        event_attribute: MutableSequence[EventAttribute] = ...
+        event_attribute: MutableSequence[EventAttribute] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["lifetime_value_micros", "lifetime_value_bucket", "last_purchase_date_time", "average_purchase_count", "average_purchase_value_micros", "acquisition_date_time", "shopping_loyalty", "lifecycle_stage", "first_purchase_date_time", "event_attribute"]) -> bool: ...  # type: ignore[override]
 
@@ -215,7 +215,7 @@ class UserData(proto.Message):
         ignore_unknown_fields: bool = False,
         user_identifiers: MutableSequence[UserIdentifier] = ...,
         transaction_attribute: TransactionAttribute = ...,
-        user_attribute: UserAttribute = ...
+        user_attribute: UserAttribute = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["user_identifiers", "transaction_attribute", "user_attribute"]) -> bool: ...  # type: ignore[override]
 
@@ -236,6 +236,6 @@ class UserIdentifier(proto.Message):
         hashed_phone_number: str = ...,
         mobile_id: str = ...,
         third_party_user_id: str = ...,
-        address_info: OfflineUserAddressInfo = ...
+        address_info: OfflineUserAddressInfo = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["user_identifier_source", "hashed_email", "hashed_phone_number", "mobile_id", "third_party_user_id", "address_info"]) -> bool: ...  # type: ignore[override]

@@ -14,6 +14,6 @@ class LocalServicesDocumentReadOnly(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        document_url: str = ...
+        document_url: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["document_url"]) -> bool: ...  # type: ignore[override]

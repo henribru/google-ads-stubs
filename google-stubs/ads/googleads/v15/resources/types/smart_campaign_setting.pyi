@@ -15,7 +15,7 @@ class SmartCampaignSetting(proto.Message):
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
-            include_lead_form: bool = ...
+            include_lead_form: bool = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["include_lead_form"]) -> bool: ...  # type: ignore[override]
 
@@ -28,7 +28,7 @@ class SmartCampaignSetting(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             phone_number: str = ...,
-            country_code: str = ...
+            country_code: str = ...,
         ) -> None: ...
         def __contains__(self, key: Literal["phone_number", "country_code"]) -> bool: ...  # type: ignore[override]
     resource_name: str
@@ -51,6 +51,6 @@ class SmartCampaignSetting(proto.Message):
         final_url: str = ...,
         ad_optimized_business_profile_setting: SmartCampaignSetting.AdOptimizedBusinessProfileSetting = ...,
         business_name: str = ...,
-        business_profile_location: str = ...
+        business_profile_location: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign", "phone_number", "advertising_language_code", "final_url", "ad_optimized_business_profile_setting", "business_name", "business_profile_location"]) -> bool: ...  # type: ignore[override]

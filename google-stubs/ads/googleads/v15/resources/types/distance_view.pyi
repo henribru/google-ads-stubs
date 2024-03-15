@@ -20,6 +20,6 @@ class DistanceView(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         distance_bucket: DistanceBucketEnum.DistanceBucket = ...,
-        metric_system: bool = ...
+        metric_system: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "distance_bucket", "metric_system"]) -> bool: ...  # type: ignore[override]

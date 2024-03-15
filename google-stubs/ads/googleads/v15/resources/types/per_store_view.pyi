@@ -16,6 +16,6 @@ class PerStoreView(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        place_id: str = ...
+        place_id: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "place_id"]) -> bool: ...  # type: ignore[override]

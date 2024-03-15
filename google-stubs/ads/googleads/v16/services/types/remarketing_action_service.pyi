@@ -20,7 +20,7 @@ class MutateRemarketingActionResult(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        resource_name: str = ...
+        resource_name: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
 
@@ -37,7 +37,7 @@ class MutateRemarketingActionsRequest(proto.Message):
         customer_id: str = ...,
         operations: MutableSequence[RemarketingActionOperation] = ...,
         partial_failure: bool = ...,
-        validate_only: bool = ...
+        validate_only: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
 
@@ -50,7 +50,7 @@ class MutateRemarketingActionsResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateRemarketingActionResult] = ...
+        results: MutableSequence[MutateRemarketingActionResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
 
@@ -65,6 +65,6 @@ class RemarketingActionOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: RemarketingAction = ...,
-        update: RemarketingAction = ...
+        update: RemarketingAction = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]

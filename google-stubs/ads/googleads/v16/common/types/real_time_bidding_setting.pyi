@@ -14,6 +14,6 @@ class RealTimeBiddingSetting(proto.Message):
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
-        opt_in: bool = ...
+        opt_in: bool = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["opt_in"]) -> bool: ...  # type: ignore[override]

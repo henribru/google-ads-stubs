@@ -25,7 +25,7 @@ class CampaignLifecycleGoal(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
         campaign: str = ...,
-        customer_acquisition_goal_settings: CustomerAcquisitionGoalSettings = ...
+        customer_acquisition_goal_settings: CustomerAcquisitionGoalSettings = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign", "customer_acquisition_goal_settings"]) -> bool: ...  # type: ignore[override]
 
@@ -38,6 +38,6 @@ class CustomerAcquisitionGoalSettings(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         optimization_mode: CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode = ...,
-        value_settings: LifecycleGoalValueSettings = ...
+        value_settings: LifecycleGoalValueSettings = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["optimization_mode", "value_settings"]) -> bool: ...  # type: ignore[override]

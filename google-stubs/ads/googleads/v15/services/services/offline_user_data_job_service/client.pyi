@@ -69,7 +69,7 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         credentials: ga_credentials.Credentials | None = None,
         transport: str | OfflineUserDataJobServiceTransport | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...
+        client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
     def create_offline_user_data_job(
         self,
@@ -81,7 +81,7 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         job: offline_user_data_job.OfflineUserDataJob | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> offline_user_data_job_service.CreateOfflineUserDataJobResponse: ...
     def add_offline_user_data_job_operations(
         self,
@@ -96,7 +96,7 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> offline_user_data_job_service.AddOfflineUserDataJobOperationsResponse: ...
     def run_offline_user_data_job(
         self,
@@ -107,5 +107,5 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = ()
+        metadata: Sequence[tuple[str, str]] = (),
     ) -> operation.Operation: ...

@@ -27,7 +27,7 @@ class ConversionCustomVariableOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: ConversionCustomVariable = ...,
-        update: ConversionCustomVariable = ...
+        update: ConversionCustomVariable = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
 
@@ -40,7 +40,7 @@ class MutateConversionCustomVariableResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        conversion_custom_variable: ConversionCustomVariable = ...
+        conversion_custom_variable: ConversionCustomVariable = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "conversion_custom_variable"]) -> bool: ...  # type: ignore[override]
 
@@ -59,7 +59,7 @@ class MutateConversionCustomVariablesRequest(proto.Message):
         operations: MutableSequence[ConversionCustomVariableOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -72,6 +72,6 @@ class MutateConversionCustomVariablesResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         partial_failure_error: Status = ...,
-        results: MutableSequence[MutateConversionCustomVariableResult] = ...
+        results: MutableSequence[MutateConversionCustomVariableResult] = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]

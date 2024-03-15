@@ -31,6 +31,6 @@ class AndroidPrivacySharedKeyGoogleNetworkType(proto.Message):
         android_privacy_interaction_type: AndroidPrivacyInteractionTypeEnum.AndroidPrivacyInteractionType = ...,
         android_privacy_interaction_date: str = ...,
         android_privacy_network_type: AndroidPrivacyNetworkTypeEnum.AndroidPrivacyNetworkType = ...,
-        shared_network_type_key: str = ...
+        shared_network_type_key: str = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "campaign_id", "android_privacy_interaction_type", "android_privacy_interaction_date", "android_privacy_network_type", "shared_network_type_key"]) -> bool: ...  # type: ignore[override]

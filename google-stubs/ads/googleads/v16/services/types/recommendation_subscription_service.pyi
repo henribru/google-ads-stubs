@@ -31,7 +31,7 @@ class MutateRecommendationSubscriptionRequest(proto.Message):
         operations: MutableSequence[RecommendationSubscriptionOperation] = ...,
         partial_failure: bool = ...,
         validate_only: bool = ...,
-        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...
+        response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
 
@@ -44,7 +44,7 @@ class MutateRecommendationSubscriptionResponse(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateRecommendationSubscriptionResult] = ...,
-        partial_failure_error: Status = ...
+        partial_failure_error: Status = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
 
@@ -57,7 +57,7 @@ class MutateRecommendationSubscriptionResult(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
-        recommendation_subscription: RecommendationSubscription = ...
+        recommendation_subscription: RecommendationSubscription = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["resource_name", "recommendation_subscription"]) -> bool: ...  # type: ignore[override]
 
@@ -72,6 +72,6 @@ class RecommendationSubscriptionOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update_mask: FieldMask = ...,
         create: RecommendationSubscription = ...,
-        update: RecommendationSubscription = ...
+        update: RecommendationSubscription = ...,
     ) -> None: ...
     def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
