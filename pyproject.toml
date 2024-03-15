@@ -31,7 +31,7 @@ stubdefaulter = "^0.1.0"
 ruff = "^0.3.3"
 
 [tool.black]
-target-version = ["py37"]
+target-version = ["py38"]
 
 [tool.isort]
 profile = "black"
