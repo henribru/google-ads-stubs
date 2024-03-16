@@ -1,4 +1,4 @@
-from typing import Callable, Optional, Sequence, Tuple
+from typing import Callable, Sequence, Tuple
 
 import grpc
 from google.api_core import gapic_v1
@@ -8,6 +8,8 @@ from google.protobuf import empty_pb2
 from google.ads.googleads.v16.services.types import identity_verification_service
 
 from .base import IdentityVerificationServiceTransport
+
+__all__ = ["IdentityVerificationServiceGrpcTransport"]
 
 class IdentityVerificationServiceGrpcTransport(IdentityVerificationServiceTransport):
     def __init__(

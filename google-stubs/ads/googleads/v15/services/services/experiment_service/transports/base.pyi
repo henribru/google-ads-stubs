@@ -1,5 +1,5 @@
 import abc
-from typing import Awaitable, Callable, Optional, Sequence, Union
+from typing import Awaitable, Callable, Sequence
 
 from _typeshed import Incomplete
 from google.api_core import gapic_v1
@@ -8,6 +8,8 @@ from google.longrunning import operations_pb2
 from google.protobuf import empty_pb2
 
 from google.ads.googleads.v15.services.types import experiment_service
+
+__all__ = ["ExperimentServiceTransport"]
 
 class ExperimentServiceTransport(abc.ABC):
     AUTH_SCOPES: Incomplete

@@ -2,3 +2,5 @@ from .base import AssetGroupSignalServiceTransport as AssetGroupSignalServiceTra
 from .grpc import (
     AssetGroupSignalServiceGrpcTransport as AssetGroupSignalServiceGrpcTransport,
 )
+
+__all__ = ["AssetGroupSignalServiceTransport", "AssetGroupSignalServiceGrpcTransport"]

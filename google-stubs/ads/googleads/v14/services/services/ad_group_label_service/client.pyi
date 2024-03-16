@@ -1,5 +1,5 @@
 import types
-from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, MutableSequence, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -12,6 +12,8 @@ from google.auth import credentials as ga_credentials
 from google.ads.googleads.v14.services.types import ad_group_label_service
 
 from .transports.base import AdGroupLabelServiceTransport
+
+__all__ = ["AdGroupLabelServiceClient"]
 
 class AdGroupLabelServiceClientMeta(type):
     def get_transport_class(

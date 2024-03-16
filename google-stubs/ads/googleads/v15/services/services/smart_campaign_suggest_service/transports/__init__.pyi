@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     SmartCampaignSuggestServiceGrpcTransport as SmartCampaignSuggestServiceGrpcTransport,
 )
+
+__all__ = [
+    "SmartCampaignSuggestServiceTransport",
+    "SmartCampaignSuggestServiceGrpcTransport",
+]

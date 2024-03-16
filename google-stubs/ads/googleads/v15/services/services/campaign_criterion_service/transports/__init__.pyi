@@ -2,3 +2,5 @@ from .base import CampaignCriterionServiceTransport as CampaignCriterionServiceT
 from .grpc import (
     CampaignCriterionServiceGrpcTransport as CampaignCriterionServiceGrpcTransport,
 )
+
+__all__ = ["CampaignCriterionServiceTransport", "CampaignCriterionServiceGrpcTransport"]

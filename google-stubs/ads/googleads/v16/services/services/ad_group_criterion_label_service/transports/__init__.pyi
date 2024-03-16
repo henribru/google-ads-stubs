@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     AdGroupCriterionLabelServiceGrpcTransport as AdGroupCriterionLabelServiceGrpcTransport,
 )
+
+__all__ = [
+    "AdGroupCriterionLabelServiceTransport",
+    "AdGroupCriterionLabelServiceGrpcTransport",
+]

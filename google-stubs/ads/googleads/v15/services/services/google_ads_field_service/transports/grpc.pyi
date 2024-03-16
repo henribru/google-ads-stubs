@@ -1,4 +1,4 @@
-from typing import Callable, Optional, Sequence, Tuple
+from typing import Callable, Sequence, Tuple
 
 import grpc
 from google.api_core import gapic_v1
@@ -8,6 +8,8 @@ from google.ads.googleads.v15.resources.types import google_ads_field
 from google.ads.googleads.v15.services.types import google_ads_field_service
 
 from .base import GoogleAdsFieldServiceTransport
+
+__all__ = ["GoogleAdsFieldServiceGrpcTransport"]
 
 class GoogleAdsFieldServiceGrpcTransport(GoogleAdsFieldServiceTransport):
     def __init__(

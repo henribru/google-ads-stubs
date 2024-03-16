@@ -1,11 +1,13 @@
 import abc
-from typing import Awaitable, Callable, Optional, Sequence, Union
+from typing import Awaitable, Callable, Sequence
 
 from _typeshed import Incomplete
 from google.api_core import gapic_v1
 from google.auth import credentials as ga_credentials
 
 from google.ads.googleads.v14.services.types import customer_client_link_service
+
+__all__ = ["CustomerClientLinkServiceTransport"]
 
 class CustomerClientLinkServiceTransport(abc.ABC):
     AUTH_SCOPES: Incomplete

@@ -2,3 +2,5 @@ from .base import PaymentsAccountServiceTransport as PaymentsAccountServiceTrans
 from .grpc import (
     PaymentsAccountServiceGrpcTransport as PaymentsAccountServiceGrpcTransport,
 )
+
+__all__ = ["PaymentsAccountServiceTransport", "PaymentsAccountServiceGrpcTransport"]

@@ -1,5 +1,5 @@
 import types
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -12,6 +12,8 @@ from google.auth import credentials as ga_credentials
 from google.ads.googleads.v14.services.types import travel_asset_suggestion_service
 
 from .transports.base import TravelAssetSuggestionServiceTransport
+
+__all__ = ["TravelAssetSuggestionServiceClient"]
 
 class TravelAssetSuggestionServiceClientMeta(type):
     def get_transport_class(

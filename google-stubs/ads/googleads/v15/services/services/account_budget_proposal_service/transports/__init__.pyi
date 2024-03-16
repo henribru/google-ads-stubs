@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     AccountBudgetProposalServiceGrpcTransport as AccountBudgetProposalServiceGrpcTransport,
 )
+
+__all__ = [
+    "AccountBudgetProposalServiceTransport",
+    "AccountBudgetProposalServiceGrpcTransport",
+]

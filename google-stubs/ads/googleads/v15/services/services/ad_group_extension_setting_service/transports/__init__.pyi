@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     AdGroupExtensionSettingServiceGrpcTransport as AdGroupExtensionSettingServiceGrpcTransport,
 )
+
+__all__ = [
+    "AdGroupExtensionSettingServiceTransport",
+    "AdGroupExtensionSettingServiceGrpcTransport",
+]

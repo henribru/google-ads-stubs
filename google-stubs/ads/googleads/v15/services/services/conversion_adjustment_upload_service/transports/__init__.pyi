@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     ConversionAdjustmentUploadServiceGrpcTransport as ConversionAdjustmentUploadServiceGrpcTransport,
 )
+
+__all__ = [
+    "ConversionAdjustmentUploadServiceTransport",
+    "ConversionAdjustmentUploadServiceGrpcTransport",
+]

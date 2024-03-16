@@ -2,3 +2,5 @@ from .base import AudienceInsightsServiceTransport as AudienceInsightsServiceTra
 from .grpc import (
     AudienceInsightsServiceGrpcTransport as AudienceInsightsServiceGrpcTransport,
 )
+
+__all__ = ["AudienceInsightsServiceTransport", "AudienceInsightsServiceGrpcTransport"]

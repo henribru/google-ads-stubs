@@ -1,5 +1,5 @@
 import abc
-from typing import Awaitable, Callable, Optional, Sequence, Union
+from typing import Awaitable, Callable, Sequence
 
 from _typeshed import Incomplete
 from google.api_core import gapic_v1
@@ -7,6 +7,8 @@ from google.auth import credentials as ga_credentials
 
 from google.ads.googleads.v14.resources.types import merchant_center_link
 from google.ads.googleads.v14.services.types import merchant_center_link_service
+
+__all__ = ["MerchantCenterLinkServiceTransport"]
 
 class MerchantCenterLinkServiceTransport(abc.ABC):
     AUTH_SCOPES: Incomplete

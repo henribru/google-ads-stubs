@@ -2,3 +2,5 @@ from .base import BiddingStrategyServiceTransport as BiddingStrategyServiceTrans
 from .grpc import (
     BiddingStrategyServiceGrpcTransport as BiddingStrategyServiceGrpcTransport,
 )
+
+__all__ = ["BiddingStrategyServiceTransport", "BiddingStrategyServiceGrpcTransport"]

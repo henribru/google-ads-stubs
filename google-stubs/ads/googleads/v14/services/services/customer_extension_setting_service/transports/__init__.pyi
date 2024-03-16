@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     CustomerExtensionSettingServiceGrpcTransport as CustomerExtensionSettingServiceGrpcTransport,
 )
+
+__all__ = [
+    "CustomerExtensionSettingServiceTransport",
+    "CustomerExtensionSettingServiceGrpcTransport",
+]

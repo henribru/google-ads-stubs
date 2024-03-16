@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     MerchantCenterLinkServiceGrpcTransport as MerchantCenterLinkServiceGrpcTransport,
 )
+
+__all__ = [
+    "MerchantCenterLinkServiceTransport",
+    "MerchantCenterLinkServiceGrpcTransport",
+]

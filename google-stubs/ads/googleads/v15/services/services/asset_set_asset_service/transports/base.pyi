@@ -1,11 +1,13 @@
 import abc
-from typing import Awaitable, Callable, Optional, Sequence, Union
+from typing import Awaitable, Callable, Sequence
 
 from _typeshed import Incomplete
 from google.api_core import gapic_v1
 from google.auth import credentials as ga_credentials
 
 from google.ads.googleads.v15.services.types import asset_set_asset_service
+
+__all__ = ["AssetSetAssetServiceTransport"]
 
 class AssetSetAssetServiceTransport(abc.ABC):
     AUTH_SCOPES: Incomplete

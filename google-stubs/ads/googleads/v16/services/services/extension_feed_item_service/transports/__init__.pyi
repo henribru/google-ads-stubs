@@ -2,3 +2,5 @@ from .base import ExtensionFeedItemServiceTransport as ExtensionFeedItemServiceT
 from .grpc import (
     ExtensionFeedItemServiceGrpcTransport as ExtensionFeedItemServiceGrpcTransport,
 )
+
+__all__ = ["ExtensionFeedItemServiceTransport", "ExtensionFeedItemServiceGrpcTransport"]

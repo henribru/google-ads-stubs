@@ -2,3 +2,5 @@ from .base import FeedItemSetLinkServiceTransport as FeedItemSetLinkServiceTrans
 from .grpc import (
     FeedItemSetLinkServiceGrpcTransport as FeedItemSetLinkServiceGrpcTransport,
 )
+
+__all__ = ["FeedItemSetLinkServiceTransport", "FeedItemSetLinkServiceGrpcTransport"]

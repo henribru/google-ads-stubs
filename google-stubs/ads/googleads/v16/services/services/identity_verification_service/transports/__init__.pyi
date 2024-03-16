@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     IdentityVerificationServiceGrpcTransport as IdentityVerificationServiceGrpcTransport,
 )
+
+__all__ = [
+    "IdentityVerificationServiceTransport",
+    "IdentityVerificationServiceGrpcTransport",
+]

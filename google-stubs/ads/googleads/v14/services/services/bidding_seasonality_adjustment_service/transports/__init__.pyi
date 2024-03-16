@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     BiddingSeasonalityAdjustmentServiceGrpcTransport as BiddingSeasonalityAdjustmentServiceGrpcTransport,
 )
+
+__all__ = [
+    "BiddingSeasonalityAdjustmentServiceTransport",
+    "BiddingSeasonalityAdjustmentServiceGrpcTransport",
+]

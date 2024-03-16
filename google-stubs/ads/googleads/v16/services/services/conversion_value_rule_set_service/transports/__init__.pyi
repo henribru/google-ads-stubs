@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     ConversionValueRuleSetServiceGrpcTransport as ConversionValueRuleSetServiceGrpcTransport,
 )
+
+__all__ = [
+    "ConversionValueRuleSetServiceTransport",
+    "ConversionValueRuleSetServiceGrpcTransport",
+]

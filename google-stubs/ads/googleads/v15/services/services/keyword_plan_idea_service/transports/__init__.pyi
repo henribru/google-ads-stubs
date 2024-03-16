@@ -2,3 +2,5 @@ from .base import KeywordPlanIdeaServiceTransport as KeywordPlanIdeaServiceTrans
 from .grpc import (
     KeywordPlanIdeaServiceGrpcTransport as KeywordPlanIdeaServiceGrpcTransport,
 )
+
+__all__ = ["KeywordPlanIdeaServiceTransport", "KeywordPlanIdeaServiceGrpcTransport"]

@@ -2,3 +2,5 @@ from .base import GeoTargetConstantServiceTransport as GeoTargetConstantServiceT
 from .grpc import (
     GeoTargetConstantServiceGrpcTransport as GeoTargetConstantServiceGrpcTransport,
 )
+
+__all__ = ["GeoTargetConstantServiceTransport", "GeoTargetConstantServiceGrpcTransport"]

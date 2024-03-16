@@ -1,5 +1,5 @@
 import abc
-from typing import Awaitable, Callable, Optional, Sequence, Union
+from typing import Awaitable, Callable, Sequence
 
 from _typeshed import Incomplete
 from google.api_core import gapic_v1
@@ -8,6 +8,8 @@ from google.auth import credentials as ga_credentials
 from google.ads.googleads.v16.services.types import (
     bidding_seasonality_adjustment_service,
 )
+
+__all__ = ["BiddingSeasonalityAdjustmentServiceTransport"]
 
 class BiddingSeasonalityAdjustmentServiceTransport(abc.ABC):
     AUTH_SCOPES: Incomplete

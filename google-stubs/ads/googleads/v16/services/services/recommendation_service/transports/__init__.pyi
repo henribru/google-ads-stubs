@@ -2,3 +2,5 @@ from .base import RecommendationServiceTransport as RecommendationServiceTranspo
 from .grpc import (
     RecommendationServiceGrpcTransport as RecommendationServiceGrpcTransport,
 )
+
+__all__ = ["RecommendationServiceTransport", "RecommendationServiceGrpcTransport"]

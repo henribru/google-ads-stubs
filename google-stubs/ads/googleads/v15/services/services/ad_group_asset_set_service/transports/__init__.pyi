@@ -2,3 +2,5 @@ from .base import AdGroupAssetSetServiceTransport as AdGroupAssetSetServiceTrans
 from .grpc import (
     AdGroupAssetSetServiceGrpcTransport as AdGroupAssetSetServiceGrpcTransport,
 )
+
+__all__ = ["AdGroupAssetSetServiceTransport", "AdGroupAssetSetServiceGrpcTransport"]
