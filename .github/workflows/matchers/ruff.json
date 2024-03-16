@@ -1,7 +1,7 @@
 {
   "problemMatcher": [
     {
-      "owner": "black",
+      "owner": "ruff",
       "pattern": [
         {
           "regexp": "^(Would reformat): (.+)$",
