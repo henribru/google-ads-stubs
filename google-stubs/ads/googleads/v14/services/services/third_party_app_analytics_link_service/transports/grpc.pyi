@@ -1,4 +1,4 @@
-from typing import Callable, Optional, Sequence, Tuple
+from typing import Callable, Sequence, Tuple
 
 import grpc
 from google.api_core import gapic_v1
@@ -9,6 +9,8 @@ from google.ads.googleads.v14.services.types import (
 )
 
 from .base import ThirdPartyAppAnalyticsLinkServiceTransport
+
+__all__ = ["ThirdPartyAppAnalyticsLinkServiceGrpcTransport"]
 
 class ThirdPartyAppAnalyticsLinkServiceGrpcTransport(
     ThirdPartyAppAnalyticsLinkServiceTransport

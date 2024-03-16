@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     CampaignCustomizerServiceGrpcTransport as CampaignCustomizerServiceGrpcTransport,
 )
+
+__all__ = [
+    "CampaignCustomizerServiceTransport",
+    "CampaignCustomizerServiceGrpcTransport",
+]

@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     ThirdPartyAppAnalyticsLinkServiceGrpcTransport as ThirdPartyAppAnalyticsLinkServiceGrpcTransport,
 )
+
+__all__ = [
+    "ThirdPartyAppAnalyticsLinkServiceTransport",
+    "ThirdPartyAppAnalyticsLinkServiceGrpcTransport",
+]

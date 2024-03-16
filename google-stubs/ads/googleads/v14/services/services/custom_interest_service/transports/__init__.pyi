@@ -2,3 +2,5 @@ from .base import CustomInterestServiceTransport as CustomInterestServiceTranspo
 from .grpc import (
     CustomInterestServiceGrpcTransport as CustomInterestServiceGrpcTransport,
 )
+
+__all__ = ["CustomInterestServiceTransport", "CustomInterestServiceGrpcTransport"]

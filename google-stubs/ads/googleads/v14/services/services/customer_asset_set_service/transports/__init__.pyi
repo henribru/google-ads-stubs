@@ -2,3 +2,5 @@ from .base import CustomerAssetSetServiceTransport as CustomerAssetSetServiceTra
 from .grpc import (
     CustomerAssetSetServiceGrpcTransport as CustomerAssetSetServiceGrpcTransport,
 )
+
+__all__ = ["CustomerAssetSetServiceTransport", "CustomerAssetSetServiceGrpcTransport"]

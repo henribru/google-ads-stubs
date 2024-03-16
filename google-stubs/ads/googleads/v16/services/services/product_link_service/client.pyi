@@ -1,5 +1,5 @@
 import types
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -13,6 +13,8 @@ from google.ads.googleads.v16.resources.types import product_link as gagr_produc
 from google.ads.googleads.v16.services.types import product_link_service
 
 from .transports.base import ProductLinkServiceTransport
+
+__all__ = ["ProductLinkServiceClient"]
 
 class ProductLinkServiceClientMeta(type):
     def get_transport_class(

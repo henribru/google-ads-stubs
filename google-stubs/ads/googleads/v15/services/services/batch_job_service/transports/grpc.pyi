@@ -1,4 +1,4 @@
-from typing import Callable, Optional, Sequence, Tuple
+from typing import Callable, Sequence, Tuple
 
 import grpc
 from google.api_core import gapic_v1, operations_v1
@@ -8,6 +8,8 @@ from google.longrunning import operations_pb2
 from google.ads.googleads.v15.services.types import batch_job_service
 
 from .base import BatchJobServiceTransport
+
+__all__ = ["BatchJobServiceGrpcTransport"]
 
 class BatchJobServiceGrpcTransport(BatchJobServiceTransport):
     def __init__(

@@ -1,4 +1,4 @@
-from typing import Callable, Optional, Sequence, Tuple
+from typing import Callable, Sequence, Tuple
 
 import grpc
 from google.api_core import gapic_v1
@@ -7,6 +7,8 @@ from google.auth import credentials as ga_credentials
 from google.ads.googleads.v14.services.types import asset_set_asset_service
 
 from .base import AssetSetAssetServiceTransport
+
+__all__ = ["AssetSetAssetServiceGrpcTransport"]
 
 class AssetSetAssetServiceGrpcTransport(AssetSetAssetServiceTransport):
     def __init__(

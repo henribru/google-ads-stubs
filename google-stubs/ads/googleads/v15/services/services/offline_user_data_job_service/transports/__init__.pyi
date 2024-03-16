@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     OfflineUserDataJobServiceGrpcTransport as OfflineUserDataJobServiceGrpcTransport,
 )
+
+__all__ = [
+    "OfflineUserDataJobServiceTransport",
+    "OfflineUserDataJobServiceGrpcTransport",
+]

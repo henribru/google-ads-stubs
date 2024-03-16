@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     AssetGroupListingGroupFilterServiceGrpcTransport as AssetGroupListingGroupFilterServiceGrpcTransport,
 )
+
+__all__ = [
+    "AssetGroupListingGroupFilterServiceTransport",
+    "AssetGroupListingGroupFilterServiceGrpcTransport",
+]

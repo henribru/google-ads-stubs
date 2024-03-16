@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     CustomerNegativeCriterionServiceGrpcTransport as CustomerNegativeCriterionServiceGrpcTransport,
 )
+
+__all__ = [
+    "CustomerNegativeCriterionServiceTransport",
+    "CustomerNegativeCriterionServiceGrpcTransport",
+]

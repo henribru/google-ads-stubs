@@ -4,3 +4,8 @@ from .base import (
 from .grpc import (
     KeywordPlanCampaignServiceGrpcTransport as KeywordPlanCampaignServiceGrpcTransport,
 )
+
+__all__ = [
+    "KeywordPlanCampaignServiceTransport",
+    "KeywordPlanCampaignServiceGrpcTransport",
+]

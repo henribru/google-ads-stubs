@@ -1,5 +1,5 @@
 import types
-from typing import Dict, MutableSequence, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, MutableSequence, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -12,6 +12,8 @@ from google.auth import credentials as ga_credentials
 from google.ads.googleads.v15.services.types import keyword_plan_campaign_service
 
 from .transports.base import KeywordPlanCampaignServiceTransport
+
+__all__ = ["KeywordPlanCampaignServiceClient"]
 
 class KeywordPlanCampaignServiceClientMeta(type):
     def get_transport_class(

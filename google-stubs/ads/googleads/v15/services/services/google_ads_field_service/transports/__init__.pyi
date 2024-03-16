@@ -2,3 +2,5 @@ from .base import GoogleAdsFieldServiceTransport as GoogleAdsFieldServiceTranspo
 from .grpc import (
     GoogleAdsFieldServiceGrpcTransport as GoogleAdsFieldServiceGrpcTransport,
 )
+
+__all__ = ["GoogleAdsFieldServiceTransport", "GoogleAdsFieldServiceGrpcTransport"]

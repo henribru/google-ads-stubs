@@ -1,5 +1,5 @@
 import types
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -14,6 +14,8 @@ from google.ads.googleads.v15.services.services.google_ads_field_service import 
 from google.ads.googleads.v15.services.types import google_ads_field_service
 
 from .transports.base import GoogleAdsFieldServiceTransport
+
+__all__ = ["GoogleAdsFieldServiceClient"]
 
 class GoogleAdsFieldServiceClientMeta(type):
     def get_transport_class(

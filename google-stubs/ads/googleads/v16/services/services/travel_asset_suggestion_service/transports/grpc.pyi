@@ -1,4 +1,4 @@
-from typing import Callable, Optional, Sequence, Tuple
+from typing import Callable, Sequence, Tuple
 
 import grpc
 from google.api_core import gapic_v1
@@ -7,6 +7,8 @@ from google.auth import credentials as ga_credentials
 from google.ads.googleads.v16.services.types import travel_asset_suggestion_service
 
 from .base import TravelAssetSuggestionServiceTransport
+
+__all__ = ["TravelAssetSuggestionServiceGrpcTransport"]
 
 class TravelAssetSuggestionServiceGrpcTransport(TravelAssetSuggestionServiceTransport):
     def __init__(

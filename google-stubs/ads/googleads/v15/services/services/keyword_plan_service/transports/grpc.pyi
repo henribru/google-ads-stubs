@@ -1,4 +1,4 @@
-from typing import Callable, Optional, Sequence, Tuple
+from typing import Callable, Sequence, Tuple
 
 import grpc
 from google.api_core import gapic_v1
@@ -7,6 +7,8 @@ from google.auth import credentials as ga_credentials
 from google.ads.googleads.v15.services.types import keyword_plan_service
 
 from .base import KeywordPlanServiceTransport
+
+__all__ = ["KeywordPlanServiceGrpcTransport"]
 
 class KeywordPlanServiceGrpcTransport(KeywordPlanServiceTransport):
     def __init__(
