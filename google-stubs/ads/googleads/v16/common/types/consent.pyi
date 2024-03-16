@@ -20,4 +20,6 @@ class Consent(proto.Message):
         ad_user_data: ConsentStatusEnum.ConsentStatus = ...,
         ad_personalization: ConsentStatusEnum.ConsentStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["ad_user_data", "ad_personalization"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["ad_user_data", "ad_personalization"]
+    ) -> bool: ...

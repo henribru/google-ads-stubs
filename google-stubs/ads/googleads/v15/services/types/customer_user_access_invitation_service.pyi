@@ -22,7 +22,9 @@ class CustomerUserAccessInvitationOperation(proto.Message):
         create: CustomerUserAccessInvitation = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove"]
+    ) -> bool: ...
 
 class MutateCustomerUserAccessInvitationRequest(proto.Message):
     customer_id: str
@@ -35,7 +37,9 @@ class MutateCustomerUserAccessInvitationRequest(proto.Message):
         customer_id: str = ...,
         operation: CustomerUserAccessInvitationOperation = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation"]
+    ) -> bool: ...
 
 class MutateCustomerUserAccessInvitationResponse(proto.Message):
     result: MutateCustomerUserAccessInvitationResult
@@ -46,7 +50,9 @@ class MutateCustomerUserAccessInvitationResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateCustomerUserAccessInvitationResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class MutateCustomerUserAccessInvitationResult(proto.Message):
     resource_name: str
@@ -57,4 +63,6 @@ class MutateCustomerUserAccessInvitationResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

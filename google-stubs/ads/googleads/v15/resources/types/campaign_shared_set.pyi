@@ -26,4 +26,6 @@ class CampaignSharedSet(proto.Message):
         shared_set: str = ...,
         status: CampaignSharedSetStatusEnum.CampaignSharedSetStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "campaign", "shared_set", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "campaign", "shared_set", "status"]
+    ) -> bool: ...

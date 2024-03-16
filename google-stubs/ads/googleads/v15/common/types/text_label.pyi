@@ -18,4 +18,6 @@ class TextLabel(proto.Message):
         background_color: str = ...,
         description: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["background_color", "description"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["background_color", "description"]
+    ) -> bool: ...

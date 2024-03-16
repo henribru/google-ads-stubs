@@ -34,7 +34,19 @@ class KeywordPlanCampaign(proto.Message):
         cpc_bid_micros: int = ...,
         geo_targets: MutableSequence[KeywordPlanGeoTarget] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "keyword_plan", "id", "name", "language_constants", "keyword_plan_network", "cpc_bid_micros", "geo_targets"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "keyword_plan",
+            "id",
+            "name",
+            "language_constants",
+            "keyword_plan_network",
+            "cpc_bid_micros",
+            "geo_targets",
+        ],
+    ) -> bool: ...
 
 class KeywordPlanGeoTarget(proto.Message):
     geo_target_constant: str
@@ -45,4 +57,6 @@ class KeywordPlanGeoTarget(proto.Message):
         ignore_unknown_fields: bool = False,
         geo_target_constant: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["geo_target_constant"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["geo_target_constant"]
+    ) -> bool: ...

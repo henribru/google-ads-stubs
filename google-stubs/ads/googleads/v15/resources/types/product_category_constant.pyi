@@ -28,7 +28,9 @@ class ProductCategoryConstant(proto.Message):
             language_code: str = ...,
             value: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["region_code", "language_code", "value"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["region_code", "language_code", "value"]
+        ) -> bool: ...
 
     resource_name: str
     category_id: int
@@ -50,4 +52,14 @@ class ProductCategoryConstant(proto.Message):
             ProductCategoryConstant.ProductCategoryLocalization
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "category_id", "product_category_constant_parent", "level", "state", "localizations"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "category_id",
+            "product_category_constant_parent",
+            "level",
+            "state",
+            "localizations",
+        ],
+    ) -> bool: ...

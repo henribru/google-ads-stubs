@@ -75,9 +75,9 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
     ) -> None: ...
     def create_offline_user_data_job(
         self,
-        request: (
-            offline_user_data_job_service.CreateOfflineUserDataJobRequest | dict | None
-        ) = None,
+        request: offline_user_data_job_service.CreateOfflineUserDataJobRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
         job: offline_user_data_job.OfflineUserDataJob | None = None,
@@ -87,26 +87,24 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
     ) -> offline_user_data_job_service.CreateOfflineUserDataJobResponse: ...
     def add_offline_user_data_job_operations(
         self,
-        request: (
-            offline_user_data_job_service.AddOfflineUserDataJobOperationsRequest
-            | dict
-            | None
-        ) = None,
+        request: offline_user_data_job_service.AddOfflineUserDataJobOperationsRequest
+        | dict
+        | None = None,
         *,
         resource_name: str | None = None,
-        operations: (
-            MutableSequence[offline_user_data_job_service.OfflineUserDataJobOperation]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            offline_user_data_job_service.OfflineUserDataJobOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
     ) -> offline_user_data_job_service.AddOfflineUserDataJobOperationsResponse: ...
     def run_offline_user_data_job(
         self,
-        request: (
-            offline_user_data_job_service.RunOfflineUserDataJobRequest | dict | None
-        ) = None,
+        request: offline_user_data_job_service.RunOfflineUserDataJobRequest
+        | dict
+        | None = None,
         *,
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,

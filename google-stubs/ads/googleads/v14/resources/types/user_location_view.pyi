@@ -20,4 +20,7 @@ class UserLocationView(proto.Message):
         country_criterion_id: int = ...,
         targeting_location: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "country_criterion_id", "targeting_location"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["resource_name", "country_criterion_id", "targeting_location"],
+    ) -> bool: ...

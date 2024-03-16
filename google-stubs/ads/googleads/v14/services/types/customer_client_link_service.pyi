@@ -25,7 +25,9 @@ class CustomerClientLinkOperation(proto.Message):
         create: CustomerClientLink = ...,
         update: CustomerClientLink = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update"]
+    ) -> bool: ...
 
 class MutateCustomerClientLinkRequest(proto.Message):
     customer_id: str
@@ -40,7 +42,9 @@ class MutateCustomerClientLinkRequest(proto.Message):
         operation: CustomerClientLinkOperation = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation", "validate_only"]
+    ) -> bool: ...
 
 class MutateCustomerClientLinkResponse(proto.Message):
     result: MutateCustomerClientLinkResult
@@ -51,7 +55,9 @@ class MutateCustomerClientLinkResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateCustomerClientLinkResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class MutateCustomerClientLinkResult(proto.Message):
     resource_name: str
@@ -62,4 +68,6 @@ class MutateCustomerClientLinkResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

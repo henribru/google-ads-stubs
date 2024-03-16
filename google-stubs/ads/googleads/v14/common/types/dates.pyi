@@ -20,7 +20,9 @@ class DateRange(proto.Message):
         start_date: str = ...,
         end_date: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["start_date", "end_date"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["start_date", "end_date"]
+    ) -> bool: ...
 
 class YearMonth(proto.Message):
     year: int
@@ -33,7 +35,9 @@ class YearMonth(proto.Message):
         year: int = ...,
         month: MonthOfYearEnum.MonthOfYear = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["year", "month"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["year", "month"]
+    ) -> bool: ...
 
 class YearMonthRange(proto.Message):
     start: YearMonth
@@ -46,4 +50,6 @@ class YearMonthRange(proto.Message):
         start: YearMonth = ...,
         end: YearMonth = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["start", "end"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["start", "end"]
+    ) -> bool: ...

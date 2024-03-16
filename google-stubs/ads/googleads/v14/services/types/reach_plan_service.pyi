@@ -30,7 +30,9 @@ class AdvancedProductTargeting(proto.Message):
         ignore_unknown_fields: bool = False,
         youtube_select_settings: YouTubeSelectSettings = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["youtube_select_settings"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["youtube_select_settings"]
+    ) -> bool: ...
 
 class AudienceTargeting(proto.Message):
     user_interest: MutableSequence[UserInterestInfo]
@@ -41,7 +43,9 @@ class AudienceTargeting(proto.Message):
         ignore_unknown_fields: bool = False,
         user_interest: MutableSequence[UserInterestInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["user_interest"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["user_interest"]
+    ) -> bool: ...
 
 class CampaignDuration(proto.Message):
     duration_in_days: int
@@ -54,7 +58,9 @@ class CampaignDuration(proto.Message):
         duration_in_days: int = ...,
         date_range: DateRange = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["duration_in_days", "date_range"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["duration_in_days", "date_range"]
+    ) -> bool: ...
 
 class EffectiveFrequencyBreakdown(proto.Message):
     effective_frequency: int
@@ -73,7 +79,16 @@ class EffectiveFrequencyBreakdown(proto.Message):
         effective_coview_reach: int = ...,
         on_target_effective_coview_reach: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["effective_frequency", "on_target_reach", "total_reach", "effective_coview_reach", "on_target_effective_coview_reach"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "effective_frequency",
+            "on_target_reach",
+            "total_reach",
+            "effective_coview_reach",
+            "on_target_effective_coview_reach",
+        ],
+    ) -> bool: ...
 
 class EffectiveFrequencyLimit(proto.Message):
     effective_frequency_breakdown_limit: int
@@ -84,7 +99,9 @@ class EffectiveFrequencyLimit(proto.Message):
         ignore_unknown_fields: bool = False,
         effective_frequency_breakdown_limit: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["effective_frequency_breakdown_limit"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["effective_frequency_breakdown_limit"]
+    ) -> bool: ...
 
 class Forecast(proto.Message):
     on_target_reach: int
@@ -115,7 +132,21 @@ class Forecast(proto.Message):
         on_target_coview_impressions: int = ...,
         total_coview_impressions: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["on_target_reach", "total_reach", "on_target_impressions", "total_impressions", "viewable_impressions", "effective_frequency_breakdowns", "on_target_coview_reach", "total_coview_reach", "on_target_coview_impressions", "total_coview_impressions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "on_target_reach",
+            "total_reach",
+            "on_target_impressions",
+            "total_impressions",
+            "viewable_impressions",
+            "effective_frequency_breakdowns",
+            "on_target_coview_reach",
+            "total_coview_reach",
+            "on_target_coview_impressions",
+            "total_coview_impressions",
+        ],
+    ) -> bool: ...
 
 class ForecastMetricOptions(proto.Message):
     include_coview: bool
@@ -126,7 +157,9 @@ class ForecastMetricOptions(proto.Message):
         ignore_unknown_fields: bool = False,
         include_coview: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["include_coview"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["include_coview"]
+    ) -> bool: ...
 
 class FrequencyCap(proto.Message):
     impressions: int
@@ -139,7 +172,9 @@ class FrequencyCap(proto.Message):
         impressions: int = ...,
         time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["impressions", "time_unit"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["impressions", "time_unit"]
+    ) -> bool: ...
 
 class GenerateReachForecastRequest(proto.Message):
     customer_id: str
@@ -170,7 +205,22 @@ class GenerateReachForecastRequest(proto.Message):
         forecast_metric_options: ForecastMetricOptions = ...,
         customer_reach_group: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "currency_code", "campaign_duration", "cookie_frequency_cap", "cookie_frequency_cap_setting", "min_effective_frequency", "effective_frequency_limit", "targeting", "planned_products", "forecast_metric_options", "customer_reach_group"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "currency_code",
+            "campaign_duration",
+            "cookie_frequency_cap",
+            "cookie_frequency_cap_setting",
+            "min_effective_frequency",
+            "effective_frequency_limit",
+            "targeting",
+            "planned_products",
+            "forecast_metric_options",
+            "customer_reach_group",
+        ],
+    ) -> bool: ...
 
 class GenerateReachForecastResponse(proto.Message):
     on_target_audience_metrics: OnTargetAudienceMetrics
@@ -183,7 +233,9 @@ class GenerateReachForecastResponse(proto.Message):
         on_target_audience_metrics: OnTargetAudienceMetrics = ...,
         reach_curve: ReachCurve = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["on_target_audience_metrics", "reach_curve"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["on_target_audience_metrics", "reach_curve"]
+    ) -> bool: ...
 
 class ListPlannableLocationsRequest(proto.Message):
     def __init__(
@@ -192,7 +244,9 @@ class ListPlannableLocationsRequest(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: NoReturn
+    ) -> bool: ...
 
 class ListPlannableLocationsResponse(proto.Message):
     plannable_locations: MutableSequence[PlannableLocation]
@@ -203,7 +257,9 @@ class ListPlannableLocationsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         plannable_locations: MutableSequence[PlannableLocation] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["plannable_locations"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["plannable_locations"]
+    ) -> bool: ...
 
 class ListPlannableProductsRequest(proto.Message):
     plannable_location_id: str
@@ -214,7 +270,9 @@ class ListPlannableProductsRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         plannable_location_id: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["plannable_location_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["plannable_location_id"]
+    ) -> bool: ...
 
 class ListPlannableProductsResponse(proto.Message):
     product_metadata: MutableSequence[ProductMetadata]
@@ -225,7 +283,9 @@ class ListPlannableProductsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         product_metadata: MutableSequence[ProductMetadata] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["product_metadata"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["product_metadata"]
+    ) -> bool: ...
 
 class OnTargetAudienceMetrics(proto.Message):
     youtube_audience_size: int
@@ -238,7 +298,9 @@ class OnTargetAudienceMetrics(proto.Message):
         youtube_audience_size: int = ...,
         census_audience_size: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["youtube_audience_size", "census_audience_size"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["youtube_audience_size", "census_audience_size"]
+    ) -> bool: ...
 
 class PlannableLocation(proto.Message):
     id: str
@@ -257,7 +319,12 @@ class PlannableLocation(proto.Message):
         country_code: str = ...,
         location_type: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["id", "name", "parent_country_id", "country_code", "location_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "id", "name", "parent_country_id", "country_code", "location_type"
+        ],
+    ) -> bool: ...
 
 class PlannableTargeting(proto.Message):
     age_ranges: MutableSequence[ReachPlanAgeRangeEnum.ReachPlanAgeRange]
@@ -276,7 +343,12 @@ class PlannableTargeting(proto.Message):
         networks: MutableSequence[ReachPlanNetworkEnum.ReachPlanNetwork] = ...,
         youtube_select_lineups: MutableSequence[YouTubeSelectLineUp] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["age_ranges", "genders", "devices", "networks", "youtube_select_lineups"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "age_ranges", "genders", "devices", "networks", "youtube_select_lineups"
+        ],
+    ) -> bool: ...
 
 class PlannedProduct(proto.Message):
     plannable_product_code: str
@@ -291,7 +363,12 @@ class PlannedProduct(proto.Message):
         budget_micros: int = ...,
         advanced_product_targeting: AdvancedProductTargeting = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["plannable_product_code", "budget_micros", "advanced_product_targeting"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "plannable_product_code", "budget_micros", "advanced_product_targeting"
+        ],
+    ) -> bool: ...
 
 class PlannedProductForecast(proto.Message):
     on_target_reach: int
@@ -318,7 +395,20 @@ class PlannedProductForecast(proto.Message):
         on_target_coview_impressions: int = ...,
         total_coview_impressions: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["on_target_reach", "total_reach", "on_target_impressions", "total_impressions", "viewable_impressions", "on_target_coview_reach", "total_coview_reach", "on_target_coview_impressions", "total_coview_impressions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "on_target_reach",
+            "total_reach",
+            "on_target_impressions",
+            "total_impressions",
+            "viewable_impressions",
+            "on_target_coview_reach",
+            "total_coview_reach",
+            "on_target_coview_impressions",
+            "total_coview_impressions",
+        ],
+    ) -> bool: ...
 
 class PlannedProductReachForecast(proto.Message):
     plannable_product_code: str
@@ -333,7 +423,12 @@ class PlannedProductReachForecast(proto.Message):
         cost_micros: int = ...,
         planned_product_forecast: PlannedProductForecast = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["plannable_product_code", "cost_micros", "planned_product_forecast"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "plannable_product_code", "cost_micros", "planned_product_forecast"
+        ],
+    ) -> bool: ...
 
 class ProductMetadata(proto.Message):
     plannable_product_code: str
@@ -348,7 +443,12 @@ class ProductMetadata(proto.Message):
         plannable_product_name: str = ...,
         plannable_targeting: PlannableTargeting = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["plannable_product_code", "plannable_product_name", "plannable_targeting"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "plannable_product_code", "plannable_product_name", "plannable_targeting"
+        ],
+    ) -> bool: ...
 
 class ReachCurve(proto.Message):
     reach_forecasts: MutableSequence[ReachForecast]
@@ -359,7 +459,9 @@ class ReachCurve(proto.Message):
         ignore_unknown_fields: bool = False,
         reach_forecasts: MutableSequence[ReachForecast] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["reach_forecasts"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["reach_forecasts"]
+    ) -> bool: ...
 
 class ReachForecast(proto.Message):
     cost_micros: int
@@ -376,7 +478,9 @@ class ReachForecast(proto.Message):
             PlannedProductReachForecast
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["cost_micros", "forecast", "planned_product_reach_forecasts"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["cost_micros", "forecast", "planned_product_reach_forecasts"]
+    ) -> bool: ...
 
 class Targeting(proto.Message):
     plannable_location_id: str
@@ -399,7 +503,18 @@ class Targeting(proto.Message):
         network: ReachPlanNetworkEnum.ReachPlanNetwork = ...,
         audience_targeting: AudienceTargeting = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["plannable_location_id", "plannable_location_ids", "age_range", "genders", "devices", "network", "audience_targeting"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "plannable_location_id",
+            "plannable_location_ids",
+            "age_range",
+            "genders",
+            "devices",
+            "network",
+            "audience_targeting",
+        ],
+    ) -> bool: ...
 
 class YouTubeSelectLineUp(proto.Message):
     lineup_id: int
@@ -412,7 +527,9 @@ class YouTubeSelectLineUp(proto.Message):
         lineup_id: int = ...,
         lineup_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["lineup_id", "lineup_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["lineup_id", "lineup_name"]
+    ) -> bool: ...
 
 class YouTubeSelectSettings(proto.Message):
     lineup_id: int
@@ -423,4 +540,6 @@ class YouTubeSelectSettings(proto.Message):
         ignore_unknown_fields: bool = False,
         lineup_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["lineup_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["lineup_id"]
+    ) -> bool: ...

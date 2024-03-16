@@ -28,7 +28,16 @@ class GeoTargetConstantSuggestion(proto.Message):
         geo_target_constant: GeoTargetConstant = ...,
         geo_target_constant_parents: MutableSequence[GeoTargetConstant] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["locale", "reach", "search_term", "geo_target_constant", "geo_target_constant_parents"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "locale",
+            "reach",
+            "search_term",
+            "geo_target_constant",
+            "geo_target_constant_parents",
+        ],
+    ) -> bool: ...
 
 class SuggestGeoTargetConstantsRequest(proto.Message):
     class GeoTargets(proto.Message):
@@ -40,7 +49,9 @@ class SuggestGeoTargetConstantsRequest(proto.Message):
             ignore_unknown_fields: bool = False,
             geo_target_constants: MutableSequence[str] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["geo_target_constants"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["geo_target_constants"]
+        ) -> bool: ...
 
     class LocationNames(proto.Message):
         names: MutableSequence[str]
@@ -51,7 +62,9 @@ class SuggestGeoTargetConstantsRequest(proto.Message):
             ignore_unknown_fields: bool = False,
             names: MutableSequence[str] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["names"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["names"]
+        ) -> bool: ...
 
     locale: str
     country_code: str
@@ -67,7 +80,9 @@ class SuggestGeoTargetConstantsRequest(proto.Message):
         location_names: SuggestGeoTargetConstantsRequest.LocationNames = ...,
         geo_targets: SuggestGeoTargetConstantsRequest.GeoTargets = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["locale", "country_code", "location_names", "geo_targets"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["locale", "country_code", "location_names", "geo_targets"]
+    ) -> bool: ...
 
 class SuggestGeoTargetConstantsResponse(proto.Message):
     geo_target_constant_suggestions: MutableSequence[GeoTargetConstantSuggestion]
@@ -80,4 +95,6 @@ class SuggestGeoTargetConstantsResponse(proto.Message):
             GeoTargetConstantSuggestion
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["geo_target_constant_suggestions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["geo_target_constant_suggestions"]
+    ) -> bool: ...

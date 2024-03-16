@@ -22,7 +22,9 @@ class MutateRemarketingActionResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class MutateRemarketingActionsRequest(proto.Message):
     customer_id: str
@@ -39,7 +41,10 @@ class MutateRemarketingActionsRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["customer_id", "operations", "partial_failure", "validate_only"],
+    ) -> bool: ...
 
 class MutateRemarketingActionsResponse(proto.Message):
     partial_failure_error: Status
@@ -52,7 +57,9 @@ class MutateRemarketingActionsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateRemarketingActionResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...
 
 class RemarketingActionOperation(proto.Message):
     update_mask: FieldMask
@@ -67,4 +74,6 @@ class RemarketingActionOperation(proto.Message):
         create: RemarketingAction = ...,
         update: RemarketingAction = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update"]
+    ) -> bool: ...

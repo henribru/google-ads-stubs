@@ -26,7 +26,9 @@ class KeywordPlanOperation(proto.Message):
         update: KeywordPlan = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateKeywordPlansRequest(proto.Message):
     customer_id: str
@@ -43,7 +45,10 @@ class MutateKeywordPlansRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["customer_id", "operations", "partial_failure", "validate_only"],
+    ) -> bool: ...
 
 class MutateKeywordPlansResponse(proto.Message):
     partial_failure_error: Status
@@ -56,7 +61,9 @@ class MutateKeywordPlansResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateKeywordPlansResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...
 
 class MutateKeywordPlansResult(proto.Message):
     resource_name: str
@@ -67,4 +74,6 @@ class MutateKeywordPlansResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

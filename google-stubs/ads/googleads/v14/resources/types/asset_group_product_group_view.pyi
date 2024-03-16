@@ -20,4 +20,9 @@ class AssetGroupProductGroupView(proto.Message):
         asset_group: str = ...,
         asset_group_listing_group_filter: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "asset_group", "asset_group_listing_group_filter"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "asset_group", "asset_group_listing_group_filter"
+        ],
+    ) -> bool: ...

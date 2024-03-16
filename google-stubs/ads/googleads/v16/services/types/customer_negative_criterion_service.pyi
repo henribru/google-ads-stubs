@@ -26,7 +26,9 @@ class CustomerNegativeCriterionOperation(proto.Message):
         create: CustomerNegativeCriterion = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove"]
+    ) -> bool: ...
 
 class MutateCustomerNegativeCriteriaRequest(proto.Message):
     customer_id: str
@@ -45,7 +47,16 @@ class MutateCustomerNegativeCriteriaRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateCustomerNegativeCriteriaResponse(proto.Message):
     partial_failure_error: Status
@@ -58,7 +69,9 @@ class MutateCustomerNegativeCriteriaResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateCustomerNegativeCriteriaResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...
 
 class MutateCustomerNegativeCriteriaResult(proto.Message):
     resource_name: str
@@ -71,4 +84,6 @@ class MutateCustomerNegativeCriteriaResult(proto.Message):
         resource_name: str = ...,
         customer_negative_criterion: CustomerNegativeCriterion = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "customer_negative_criterion"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "customer_negative_criterion"]
+    ) -> bool: ...

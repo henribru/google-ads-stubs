@@ -24,7 +24,9 @@ class AgeDimension(proto.Message):
         age_ranges: MutableSequence[AgeSegment] = ...,
         include_undetermined: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["age_ranges", "include_undetermined"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["age_ranges", "include_undetermined"]
+    ) -> bool: ...
 
 class AgeSegment(proto.Message):
     min_age: int
@@ -37,7 +39,9 @@ class AgeSegment(proto.Message):
         min_age: int = ...,
         max_age: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["min_age", "max_age"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["min_age", "max_age"]
+    ) -> bool: ...
 
 class AudienceDimension(proto.Message):
     age: AgeDimension
@@ -56,7 +60,12 @@ class AudienceDimension(proto.Message):
         parental_status: ParentalStatusDimension = ...,
         audience_segments: AudienceSegmentDimension = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["age", "gender", "household_income", "parental_status", "audience_segments"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "age", "gender", "household_income", "parental_status", "audience_segments"
+        ],
+    ) -> bool: ...
 
 class AudienceExclusionDimension(proto.Message):
     exclusions: MutableSequence[ExclusionSegment]
@@ -67,7 +76,9 @@ class AudienceExclusionDimension(proto.Message):
         ignore_unknown_fields: bool = False,
         exclusions: MutableSequence[ExclusionSegment] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["exclusions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["exclusions"]
+    ) -> bool: ...
 
 class AudienceSegment(proto.Message):
     user_list: UserListSegment
@@ -86,7 +97,16 @@ class AudienceSegment(proto.Message):
         detailed_demographic: DetailedDemographicSegment = ...,
         custom_audience: CustomAudienceSegment = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["user_list", "user_interest", "life_event", "detailed_demographic", "custom_audience"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "user_list",
+            "user_interest",
+            "life_event",
+            "detailed_demographic",
+            "custom_audience",
+        ],
+    ) -> bool: ...
 
 class AudienceSegmentDimension(proto.Message):
     segments: MutableSequence[AudienceSegment]
@@ -97,7 +117,9 @@ class AudienceSegmentDimension(proto.Message):
         ignore_unknown_fields: bool = False,
         segments: MutableSequence[AudienceSegment] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["segments"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["segments"]
+    ) -> bool: ...
 
 class CustomAudienceSegment(proto.Message):
     custom_audience: str
@@ -108,7 +130,9 @@ class CustomAudienceSegment(proto.Message):
         ignore_unknown_fields: bool = False,
         custom_audience: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["custom_audience"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["custom_audience"]
+    ) -> bool: ...
 
 class DetailedDemographicSegment(proto.Message):
     detailed_demographic: str
@@ -119,7 +143,9 @@ class DetailedDemographicSegment(proto.Message):
         ignore_unknown_fields: bool = False,
         detailed_demographic: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["detailed_demographic"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["detailed_demographic"]
+    ) -> bool: ...
 
 class ExclusionSegment(proto.Message):
     user_list: UserListSegment
@@ -130,7 +156,9 @@ class ExclusionSegment(proto.Message):
         ignore_unknown_fields: bool = False,
         user_list: UserListSegment = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["user_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["user_list"]
+    ) -> bool: ...
 
 class GenderDimension(proto.Message):
     genders: MutableSequence[GenderTypeEnum.GenderType]
@@ -143,7 +171,9 @@ class GenderDimension(proto.Message):
         genders: MutableSequence[GenderTypeEnum.GenderType] = ...,
         include_undetermined: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["genders", "include_undetermined"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["genders", "include_undetermined"]
+    ) -> bool: ...
 
 class HouseholdIncomeDimension(proto.Message):
     income_ranges: MutableSequence[IncomeRangeTypeEnum.IncomeRangeType]
@@ -156,7 +186,9 @@ class HouseholdIncomeDimension(proto.Message):
         income_ranges: MutableSequence[IncomeRangeTypeEnum.IncomeRangeType] = ...,
         include_undetermined: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["income_ranges", "include_undetermined"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["income_ranges", "include_undetermined"]
+    ) -> bool: ...
 
 class LifeEventSegment(proto.Message):
     life_event: str
@@ -167,7 +199,9 @@ class LifeEventSegment(proto.Message):
         ignore_unknown_fields: bool = False,
         life_event: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["life_event"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["life_event"]
+    ) -> bool: ...
 
 class ParentalStatusDimension(proto.Message):
     parental_statuses: MutableSequence[ParentalStatusTypeEnum.ParentalStatusType]
@@ -182,7 +216,9 @@ class ParentalStatusDimension(proto.Message):
         ] = ...,
         include_undetermined: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["parental_statuses", "include_undetermined"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["parental_statuses", "include_undetermined"]
+    ) -> bool: ...
 
 class UserInterestSegment(proto.Message):
     user_interest_category: str
@@ -193,7 +229,9 @@ class UserInterestSegment(proto.Message):
         ignore_unknown_fields: bool = False,
         user_interest_category: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["user_interest_category"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["user_interest_category"]
+    ) -> bool: ...
 
 class UserListSegment(proto.Message):
     user_list: str
@@ -204,4 +242,6 @@ class UserListSegment(proto.Message):
         ignore_unknown_fields: bool = False,
         user_list: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["user_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["user_list"]
+    ) -> bool: ...

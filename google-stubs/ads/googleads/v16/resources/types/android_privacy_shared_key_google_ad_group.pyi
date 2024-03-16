@@ -39,4 +39,15 @@ class AndroidPrivacySharedKeyGoogleAdGroup(proto.Message):
         ad_group_id: int = ...,
         shared_ad_group_key: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "campaign_id", "android_privacy_interaction_type", "android_privacy_interaction_date", "android_privacy_network_type", "ad_group_id", "shared_ad_group_key"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "campaign_id",
+            "android_privacy_interaction_type",
+            "android_privacy_interaction_date",
+            "android_privacy_network_type",
+            "ad_group_id",
+            "shared_ad_group_key",
+        ],
+    ) -> bool: ...

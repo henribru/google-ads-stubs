@@ -40,4 +40,20 @@ class CustomerClient(proto.Message):
         applied_labels: MutableSequence[str] = ...,
         status: CustomerStatusEnum.CustomerStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "client_customer", "hidden", "level", "time_zone", "test_account", "manager", "descriptive_name", "currency_code", "id", "applied_labels", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "client_customer",
+            "hidden",
+            "level",
+            "time_zone",
+            "test_account",
+            "manager",
+            "descriptive_name",
+            "currency_code",
+            "id",
+            "applied_labels",
+            "status",
+        ],
+    ) -> bool: ...

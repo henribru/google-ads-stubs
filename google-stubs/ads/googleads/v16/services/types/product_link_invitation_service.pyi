@@ -25,7 +25,9 @@ class CreateProductLinkInvitationRequest(proto.Message):
         customer_id: str = ...,
         product_link_invitation: ProductLinkInvitation = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "product_link_invitation"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "product_link_invitation"]
+    ) -> bool: ...
 
 class CreateProductLinkInvitationResponse(proto.Message):
     resource_name: str
@@ -36,7 +38,9 @@ class CreateProductLinkInvitationResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class RemoveProductLinkInvitationRequest(proto.Message):
     customer_id: str
@@ -49,7 +53,9 @@ class RemoveProductLinkInvitationRequest(proto.Message):
         customer_id: str = ...,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "resource_name"]
+    ) -> bool: ...
 
 class RemoveProductLinkInvitationResponse(proto.Message):
     resource_name: str
@@ -60,7 +66,9 @@ class RemoveProductLinkInvitationResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class UpdateProductLinkInvitationRequest(proto.Message):
     customer_id: str
@@ -77,7 +85,10 @@ class UpdateProductLinkInvitationRequest(proto.Message):
         product_link_invitation_status: ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus = ...,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "product_link_invitation_status", "resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["customer_id", "product_link_invitation_status", "resource_name"],
+    ) -> bool: ...
 
 class UpdateProductLinkInvitationResponse(proto.Message):
     resource_name: str
@@ -88,4 +99,6 @@ class UpdateProductLinkInvitationResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

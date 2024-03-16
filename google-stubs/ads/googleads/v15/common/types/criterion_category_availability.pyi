@@ -31,12 +31,12 @@ class CriterionCategoryAvailability(proto.Message):
         channel: CriterionCategoryChannelAvailability = ...,
         locale: MutableSequence[CriterionCategoryLocaleAvailability] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["channel", "locale"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["channel", "locale"]
+    ) -> bool: ...
 
 class CriterionCategoryChannelAvailability(proto.Message):
-    availability_mode: (
-        CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
-    )
+    availability_mode: CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
     advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType
     advertising_channel_sub_type: MutableSequence[
         AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
@@ -54,12 +54,18 @@ class CriterionCategoryChannelAvailability(proto.Message):
         ] = ...,
         include_default_channel_sub_type: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["availability_mode", "advertising_channel_type", "advertising_channel_sub_type", "include_default_channel_sub_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "availability_mode",
+            "advertising_channel_type",
+            "advertising_channel_sub_type",
+            "include_default_channel_sub_type",
+        ],
+    ) -> bool: ...
 
 class CriterionCategoryLocaleAvailability(proto.Message):
-    availability_mode: (
-        CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
-    )
+    availability_mode: CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
     country_code: str
     language_code: str
     def __init__(
@@ -71,4 +77,6 @@ class CriterionCategoryLocaleAvailability(proto.Message):
         country_code: str = ...,
         language_code: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["availability_mode", "country_code", "language_code"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["availability_mode", "country_code", "language_code"]
+    ) -> bool: ...

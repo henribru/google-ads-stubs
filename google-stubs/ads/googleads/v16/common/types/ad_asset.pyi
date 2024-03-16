@@ -24,7 +24,9 @@ class AdCallToActionAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["asset"]
+    ) -> bool: ...
 
 class AdDiscoveryCarouselCardAsset(proto.Message):
     asset: str
@@ -35,7 +37,9 @@ class AdDiscoveryCarouselCardAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["asset"]
+    ) -> bool: ...
 
 class AdImageAsset(proto.Message):
     asset: str
@@ -46,7 +50,9 @@ class AdImageAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["asset"]
+    ) -> bool: ...
 
 class AdMediaBundleAsset(proto.Message):
     asset: str
@@ -57,7 +63,9 @@ class AdMediaBundleAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["asset"]
+    ) -> bool: ...
 
 class AdTextAsset(proto.Message):
     text: str
@@ -74,7 +82,12 @@ class AdTextAsset(proto.Message):
         asset_performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ...,
         policy_summary_info: AdAssetPolicySummary = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["text", "pinned_field", "asset_performance_label", "policy_summary_info"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "text", "pinned_field", "asset_performance_label", "policy_summary_info"
+        ],
+    ) -> bool: ...
 
 class AdVideoAsset(proto.Message):
     asset: str
@@ -85,4 +98,6 @@ class AdVideoAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         asset: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["asset"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["asset"]
+    ) -> bool: ...

@@ -25,7 +25,10 @@ class UploadUserDataRequest(proto.Message):
         operations: MutableSequence[UserDataOperation] = ...,
         customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "customer_match_user_list_metadata"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["customer_id", "operations", "customer_match_user_list_metadata"],
+    ) -> bool: ...
 
 class UploadUserDataResponse(proto.Message):
     upload_date_time: str
@@ -38,7 +41,9 @@ class UploadUserDataResponse(proto.Message):
         upload_date_time: str = ...,
         received_operations_count: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["upload_date_time", "received_operations_count"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["upload_date_time", "received_operations_count"]
+    ) -> bool: ...
 
 class UserDataOperation(proto.Message):
     create: UserData
@@ -51,4 +56,6 @@ class UserDataOperation(proto.Message):
         create: UserData = ...,
         remove: UserData = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove"]
+    ) -> bool: ...

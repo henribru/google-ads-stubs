@@ -77,11 +77,9 @@ class ThirdPartyAppAnalyticsLinkServiceClient(
     ) -> None: ...
     def regenerate_shareable_link_id(
         self,
-        request: (
-            third_party_app_analytics_link_service.RegenerateShareableLinkIdRequest
-            | dict
-            | None
-        ) = None,
+        request: third_party_app_analytics_link_service.RegenerateShareableLinkIdRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

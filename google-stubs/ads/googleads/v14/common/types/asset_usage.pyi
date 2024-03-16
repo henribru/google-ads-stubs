@@ -22,4 +22,6 @@ class AssetUsage(proto.Message):
         asset: str = ...,
         served_asset_field_type: ServedAssetFieldTypeEnum.ServedAssetFieldType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["asset", "served_asset_field_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["asset", "served_asset_field_type"]
+    ) -> bool: ...

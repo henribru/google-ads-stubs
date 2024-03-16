@@ -22,4 +22,9 @@ class AdParameter(proto.Message):
         parameter_index: int = ...,
         insertion_text: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "ad_group_criterion", "parameter_index", "insertion_text"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "ad_group_criterion", "parameter_index", "insertion_text"
+        ],
+    ) -> bool: ...

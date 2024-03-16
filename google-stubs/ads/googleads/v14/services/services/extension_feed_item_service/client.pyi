@@ -87,15 +87,15 @@ class ExtensionFeedItemServiceClient(metaclass=ExtensionFeedItemServiceClientMet
     ) -> None: ...
     def mutate_extension_feed_items(
         self,
-        request: (
-            extension_feed_item_service.MutateExtensionFeedItemsRequest | dict | None
-        ) = None,
+        request: extension_feed_item_service.MutateExtensionFeedItemsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[extension_feed_item_service.ExtensionFeedItemOperation]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            extension_feed_item_service.ExtensionFeedItemOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

@@ -82,9 +82,8 @@ class AdParameterServiceClient(metaclass=AdParameterServiceClientMeta):
         request: ad_parameter_service.MutateAdParametersRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[ad_parameter_service.AdParameterOperation] | None
-        ) = None,
+        operations: MutableSequence[ad_parameter_service.AdParameterOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

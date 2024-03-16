@@ -37,4 +37,18 @@ class ClickView(proto.Message):
         keyword: str = ...,
         keyword_info: KeywordInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "gclid", "area_of_interest", "location_of_presence", "page_number", "ad_group_ad", "campaign_location_target", "user_list", "keyword", "keyword_info"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "gclid",
+            "area_of_interest",
+            "location_of_presence",
+            "page_number",
+            "ad_group_ad",
+            "campaign_location_target",
+            "user_list",
+            "keyword",
+            "keyword_info",
+        ],
+    ) -> bool: ...

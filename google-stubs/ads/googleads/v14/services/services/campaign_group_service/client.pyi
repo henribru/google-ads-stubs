@@ -71,14 +71,13 @@ class CampaignGroupServiceClient(metaclass=CampaignGroupServiceClientMeta):
     ) -> None: ...
     def mutate_campaign_groups(
         self,
-        request: (
-            campaign_group_service.MutateCampaignGroupsRequest | dict | None
-        ) = None,
+        request: campaign_group_service.MutateCampaignGroupsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[campaign_group_service.CampaignGroupOperation] | None
-        ) = None,
+        operations: MutableSequence[campaign_group_service.CampaignGroupOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

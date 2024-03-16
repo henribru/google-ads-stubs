@@ -49,4 +49,22 @@ class GoogleAdsField(proto.Message):
         type_url: str = ...,
         is_repeated: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "name", "category", "selectable", "filterable", "sortable", "selectable_with", "attribute_resources", "metrics", "segments", "enum_values", "data_type", "type_url", "is_repeated"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "name",
+            "category",
+            "selectable",
+            "filterable",
+            "sortable",
+            "selectable_with",
+            "attribute_resources",
+            "metrics",
+            "segments",
+            "enum_values",
+            "data_type",
+            "type_url",
+            "is_repeated",
+        ],
+    ) -> bool: ...

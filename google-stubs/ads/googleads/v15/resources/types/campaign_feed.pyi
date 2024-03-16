@@ -30,4 +30,14 @@ class CampaignFeed(proto.Message):
         matching_function: MatchingFunction = ...,
         status: FeedLinkStatusEnum.FeedLinkStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "feed", "campaign", "placeholder_types", "matching_function", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "feed",
+            "campaign",
+            "placeholder_types",
+            "matching_function",
+            "status",
+        ],
+    ) -> bool: ...

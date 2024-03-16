@@ -22,4 +22,6 @@ class GeographicView(proto.Message):
         location_type: GeoTargetingTypeEnum.GeoTargetingType = ...,
         country_criterion_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "location_type", "country_criterion_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "location_type", "country_criterion_id"]
+    ) -> bool: ...

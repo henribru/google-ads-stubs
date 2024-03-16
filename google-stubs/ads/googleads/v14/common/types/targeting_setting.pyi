@@ -22,7 +22,9 @@ class TargetRestriction(proto.Message):
         targeting_dimension: TargetingDimensionEnum.TargetingDimension = ...,
         bid_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["targeting_dimension", "bid_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["targeting_dimension", "bid_only"]
+    ) -> bool: ...
 
 class TargetRestrictionOperation(proto.Message):
     class Operator(proto.Enum):
@@ -41,7 +43,9 @@ class TargetRestrictionOperation(proto.Message):
         operator: TargetRestrictionOperation.Operator = ...,
         value: TargetRestriction = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operator", "value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operator", "value"]
+    ) -> bool: ...
 
 class TargetingSetting(proto.Message):
     target_restrictions: MutableSequence[TargetRestriction]
@@ -56,4 +60,6 @@ class TargetingSetting(proto.Message):
             TargetRestrictionOperation
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["target_restrictions", "target_restriction_operations"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["target_restrictions", "target_restriction_operations"]
+    ) -> bool: ...

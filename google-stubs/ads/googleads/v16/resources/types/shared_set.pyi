@@ -31,4 +31,15 @@ class SharedSet(proto.Message):
         member_count: int = ...,
         reference_count: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "type_", "name", "status", "member_count", "reference_count"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "type_",
+            "name",
+            "status",
+            "member_count",
+            "reference_count",
+        ],
+    ) -> bool: ...

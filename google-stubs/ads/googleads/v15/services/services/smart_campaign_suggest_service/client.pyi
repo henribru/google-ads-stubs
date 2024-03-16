@@ -79,11 +79,9 @@ class SmartCampaignSuggestServiceClient(
     ) -> None: ...
     def suggest_smart_campaign_budget_options(
         self,
-        request: (
-            smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsRequest
-            | dict
-            | None
-        ) = None,
+        request: smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
@@ -91,9 +89,9 @@ class SmartCampaignSuggestServiceClient(
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsResponse: ...
     def suggest_smart_campaign_ad(
         self,
-        request: (
-            smart_campaign_suggest_service.SuggestSmartCampaignAdRequest | dict | None
-        ) = None,
+        request: smart_campaign_suggest_service.SuggestSmartCampaignAdRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
@@ -101,9 +99,9 @@ class SmartCampaignSuggestServiceClient(
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignAdResponse: ...
     def suggest_keyword_themes(
         self,
-        request: (
-            smart_campaign_suggest_service.SuggestKeywordThemesRequest | dict | None
-        ) = None,
+        request: smart_campaign_suggest_service.SuggestKeywordThemesRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

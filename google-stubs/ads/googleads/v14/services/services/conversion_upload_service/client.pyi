@@ -73,14 +73,13 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
     ) -> None: ...
     def upload_click_conversions(
         self,
-        request: (
-            conversion_upload_service.UploadClickConversionsRequest | dict | None
-        ) = None,
+        request: conversion_upload_service.UploadClickConversionsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        conversions: (
-            MutableSequence[conversion_upload_service.ClickConversion] | None
-        ) = None,
+        conversions: MutableSequence[conversion_upload_service.ClickConversion]
+        | None = None,
         partial_failure: bool | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
@@ -88,14 +87,13 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
     ) -> conversion_upload_service.UploadClickConversionsResponse: ...
     def upload_call_conversions(
         self,
-        request: (
-            conversion_upload_service.UploadCallConversionsRequest | dict | None
-        ) = None,
+        request: conversion_upload_service.UploadCallConversionsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        conversions: (
-            MutableSequence[conversion_upload_service.CallConversion] | None
-        ) = None,
+        conversions: MutableSequence[conversion_upload_service.CallConversion]
+        | None = None,
         partial_failure: bool | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

@@ -32,4 +32,6 @@ class PromotionPlaceholderFieldEnum(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: NoReturn
+    ) -> bool: ...

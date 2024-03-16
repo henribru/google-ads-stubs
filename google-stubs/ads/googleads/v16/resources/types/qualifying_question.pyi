@@ -22,4 +22,6 @@ class QualifyingQuestion(proto.Message):
         locale: str = ...,
         text: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "qualifying_question_id", "locale", "text"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "qualifying_question_id", "locale", "text"]
+    ) -> bool: ...

@@ -26,4 +26,6 @@ class CampaignAssetSet(proto.Message):
         asset_set: str = ...,
         status: AssetSetLinkStatusEnum.AssetSetLinkStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "campaign", "asset_set", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "campaign", "asset_set", "status"]
+    ) -> bool: ...

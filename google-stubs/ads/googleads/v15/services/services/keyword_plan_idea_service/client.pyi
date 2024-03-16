@@ -68,9 +68,9 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
     ) -> None: ...
     def generate_keyword_ideas(
         self,
-        request: (
-            keyword_plan_idea_service.GenerateKeywordIdeasRequest | dict | None
-        ) = None,
+        request: keyword_plan_idea_service.GenerateKeywordIdeasRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
@@ -78,11 +78,9 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
     ) -> pagers.GenerateKeywordIdeasPager: ...
     def generate_keyword_historical_metrics(
         self,
-        request: (
-            keyword_plan_idea_service.GenerateKeywordHistoricalMetricsRequest
-            | dict
-            | None
-        ) = None,
+        request: keyword_plan_idea_service.GenerateKeywordHistoricalMetricsRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
@@ -90,9 +88,9 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
     ) -> keyword_plan_idea_service.GenerateKeywordHistoricalMetricsResponse: ...
     def generate_ad_group_themes(
         self,
-        request: (
-            keyword_plan_idea_service.GenerateAdGroupThemesRequest | dict | None
-        ) = None,
+        request: keyword_plan_idea_service.GenerateAdGroupThemesRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
@@ -100,11 +98,9 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
     ) -> keyword_plan_idea_service.GenerateAdGroupThemesResponse: ...
     def generate_keyword_forecast_metrics(
         self,
-        request: (
-            keyword_plan_idea_service.GenerateKeywordForecastMetricsRequest
-            | dict
-            | None
-        ) = None,
+        request: keyword_plan_idea_service.GenerateKeywordForecastMetricsRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

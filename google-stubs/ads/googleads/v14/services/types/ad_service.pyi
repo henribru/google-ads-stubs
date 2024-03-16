@@ -28,7 +28,9 @@ class AdOperation(proto.Message):
         policy_validation_parameter: PolicyValidationParameter = ...,
         update: Ad = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "policy_validation_parameter", "update"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "policy_validation_parameter", "update"]
+    ) -> bool: ...
 
 class GetAdRequest(proto.Message):
     resource_name: str
@@ -39,7 +41,9 @@ class GetAdRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class MutateAdResult(proto.Message):
     resource_name: str
@@ -52,7 +56,9 @@ class MutateAdResult(proto.Message):
         resource_name: str = ...,
         ad: Ad = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "ad"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "ad"]
+    ) -> bool: ...
 
 class MutateAdsRequest(proto.Message):
     customer_id: str
@@ -71,7 +77,16 @@ class MutateAdsRequest(proto.Message):
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "response_content_type", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "response_content_type",
+            "validate_only",
+        ],
+    ) -> bool: ...
 
 class MutateAdsResponse(proto.Message):
     partial_failure_error: Status
@@ -84,4 +99,6 @@ class MutateAdsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...

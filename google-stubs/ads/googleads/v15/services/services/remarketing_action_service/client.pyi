@@ -73,15 +73,15 @@ class RemarketingActionServiceClient(metaclass=RemarketingActionServiceClientMet
     ) -> None: ...
     def mutate_remarketing_actions(
         self,
-        request: (
-            remarketing_action_service.MutateRemarketingActionsRequest | dict | None
-        ) = None,
+        request: remarketing_action_service.MutateRemarketingActionsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[remarketing_action_service.RemarketingActionOperation]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            remarketing_action_service.RemarketingActionOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

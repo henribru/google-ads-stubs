@@ -84,9 +84,8 @@ class AdGroupAssetServiceClient(metaclass=AdGroupAssetServiceClientMeta):
         request: ad_group_asset_service.MutateAdGroupAssetsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[ad_group_asset_service.AdGroupAssetOperation] | None
-        ) = None,
+        operations: MutableSequence[ad_group_asset_service.AdGroupAssetOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

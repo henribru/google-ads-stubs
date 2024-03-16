@@ -19,9 +19,7 @@ _M = TypeVar("_M")
 class Feed(proto.Message):
     class AffiliateLocationFeedData(proto.Message):
         chain_ids: MutableSequence[int]
-        relationship_type: (
-            AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
-        )
+        relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType
         def __init__(
             self: _M,
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -30,7 +28,9 @@ class Feed(proto.Message):
             chain_ids: MutableSequence[int] = ...,
             relationship_type: AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["chain_ids", "relationship_type"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["chain_ids", "relationship_type"]
+        ) -> bool: ...
 
     class PlacesLocationFeedData(proto.Message):
         class OAuthInfo(proto.Message):
@@ -46,7 +46,12 @@ class Feed(proto.Message):
                 http_request_url: str = ...,
                 http_authorization_header: str = ...,
             ) -> None: ...
-            def __contains__(self, key: Literal["http_method", "http_request_url", "http_authorization_header"]) -> bool: ...  # type: ignore[override]
+            def __contains__(  # type: ignore[override]
+                self,
+                key: Literal[
+                    "http_method", "http_request_url", "http_authorization_header"
+                ],
+            ) -> bool: ...
 
         oauth_info: Feed.PlacesLocationFeedData.OAuthInfo
         email_address: str
@@ -66,7 +71,17 @@ class Feed(proto.Message):
             category_filters: MutableSequence[str] = ...,
             label_filters: MutableSequence[str] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["oauth_info", "email_address", "business_account_id", "business_name_filter", "category_filters", "label_filters"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "oauth_info",
+                "email_address",
+                "business_account_id",
+                "business_name_filter",
+                "category_filters",
+                "label_filters",
+            ],
+        ) -> bool: ...
 
     resource_name: str
     id: int
@@ -92,7 +107,20 @@ class Feed(proto.Message):
         places_location_feed_data: Feed.PlacesLocationFeedData = ...,
         affiliate_location_feed_data: Feed.AffiliateLocationFeedData = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "attributes", "attribute_operations", "origin", "status", "places_location_feed_data", "affiliate_location_feed_data"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "name",
+            "attributes",
+            "attribute_operations",
+            "origin",
+            "status",
+            "places_location_feed_data",
+            "affiliate_location_feed_data",
+        ],
+    ) -> bool: ...
 
 class FeedAttribute(proto.Message):
     id: int
@@ -109,7 +137,9 @@ class FeedAttribute(proto.Message):
         type_: FeedAttributeTypeEnum.FeedAttributeType = ...,
         is_part_of_key: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["id", "name", "type_", "is_part_of_key"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["id", "name", "type_", "is_part_of_key"]
+    ) -> bool: ...
 
 class FeedAttributeOperation(proto.Message):
     class Operator(proto.Enum):
@@ -127,4 +157,6 @@ class FeedAttributeOperation(proto.Message):
         operator: FeedAttributeOperation.Operator = ...,
         value: FeedAttribute = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operator", "value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operator", "value"]
+    ) -> bool: ...

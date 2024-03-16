@@ -21,12 +21,8 @@ class ConversionUploadErrorEnum(proto.Message):
         INVALID_CONVERSION_ACTION = 9
         TOO_RECENT_CONVERSION_ACTION = 10
         CONVERSION_TRACKING_NOT_ENABLED_AT_IMPRESSION_TIME = 11
-        EXTERNAL_ATTRIBUTION_DATA_SET_FOR_NON_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = (
-            12
-        )
-        EXTERNAL_ATTRIBUTION_DATA_NOT_SET_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = (
-            13
-        )
+        EXTERNAL_ATTRIBUTION_DATA_SET_FOR_NON_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 12
+        EXTERNAL_ATTRIBUTION_DATA_NOT_SET_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 13
         ORDER_ID_NOT_PERMITTED_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 14
         ORDER_ID_ALREADY_IN_USE = 15
         DUPLICATE_ORDER_ID = 16
@@ -64,4 +60,6 @@ class ConversionUploadErrorEnum(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: NoReturn
+    ) -> bool: ...

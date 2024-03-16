@@ -45,4 +45,18 @@ class CustomerNegativeCriterion(proto.Message):
         youtube_channel: YouTubeChannelInfo = ...,
         negative_keyword_list: NegativeKeywordListInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "type_", "content_label", "mobile_application", "mobile_app_category", "placement", "youtube_video", "youtube_channel", "negative_keyword_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "type_",
+            "content_label",
+            "mobile_application",
+            "mobile_app_category",
+            "placement",
+            "youtube_video",
+            "youtube_channel",
+            "negative_keyword_list",
+        ],
+    ) -> bool: ...

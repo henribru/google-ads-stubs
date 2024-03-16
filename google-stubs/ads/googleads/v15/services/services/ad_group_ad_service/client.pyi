@@ -88,9 +88,8 @@ class AdGroupAdServiceClient(metaclass=AdGroupAdServiceClientMeta):
         request: ad_group_ad_service.MutateAdGroupAdsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[ad_group_ad_service.AdGroupAdOperation] | None
-        ) = None,
+        operations: MutableSequence[ad_group_ad_service.AdGroupAdOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

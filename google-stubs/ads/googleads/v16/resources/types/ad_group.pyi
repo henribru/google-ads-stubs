@@ -37,7 +37,9 @@ class AdGroup(proto.Message):
             ignore_unknown_fields: bool = False,
             use_audience_grouped: bool = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["use_audience_grouped"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["use_audience_grouped"]
+        ) -> bool: ...
 
     resource_name: str
     id: int
@@ -119,4 +121,40 @@ class AdGroup(proto.Message):
             AdGroupPrimaryStatusReasonEnum.AdGroupPrimaryStatusReason
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "status", "type_", "ad_rotation_mode", "base_ad_group", "tracking_url_template", "url_custom_parameters", "campaign", "cpc_bid_micros", "effective_cpc_bid_micros", "cpm_bid_micros", "target_cpa_micros", "cpv_bid_micros", "target_cpm_micros", "target_roas", "percent_cpc_bid_micros", "optimized_targeting_enabled", "display_custom_bid_dimension", "final_url_suffix", "targeting_setting", "audience_setting", "effective_target_cpa_micros", "effective_target_cpa_source", "effective_target_roas", "effective_target_roas_source", "labels", "excluded_parent_asset_field_types", "excluded_parent_asset_set_types", "primary_status", "primary_status_reasons"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "name",
+            "status",
+            "type_",
+            "ad_rotation_mode",
+            "base_ad_group",
+            "tracking_url_template",
+            "url_custom_parameters",
+            "campaign",
+            "cpc_bid_micros",
+            "effective_cpc_bid_micros",
+            "cpm_bid_micros",
+            "target_cpa_micros",
+            "cpv_bid_micros",
+            "target_cpm_micros",
+            "target_roas",
+            "percent_cpc_bid_micros",
+            "optimized_targeting_enabled",
+            "display_custom_bid_dimension",
+            "final_url_suffix",
+            "targeting_setting",
+            "audience_setting",
+            "effective_target_cpa_micros",
+            "effective_target_cpa_source",
+            "effective_target_roas",
+            "effective_target_roas_source",
+            "labels",
+            "excluded_parent_asset_field_types",
+            "excluded_parent_asset_set_types",
+            "primary_status",
+            "primary_status_reasons",
+        ],
+    ) -> bool: ...

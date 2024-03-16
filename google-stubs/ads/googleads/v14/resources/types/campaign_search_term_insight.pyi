@@ -22,4 +22,6 @@ class CampaignSearchTermInsight(proto.Message):
         id: int = ...,
         campaign_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "category_label", "id", "campaign_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "category_label", "id", "campaign_id"]
+    ) -> bool: ...

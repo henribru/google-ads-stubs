@@ -44,4 +44,18 @@ class SharedCriterion(proto.Message):
         mobile_app_category: MobileAppCategoryInfo = ...,
         mobile_application: MobileApplicationInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "shared_set", "criterion_id", "type_", "keyword", "youtube_video", "youtube_channel", "placement", "mobile_app_category", "mobile_application"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "shared_set",
+            "criterion_id",
+            "type_",
+            "keyword",
+            "youtube_video",
+            "youtube_channel",
+            "placement",
+            "mobile_app_category",
+            "mobile_application",
+        ],
+    ) -> bool: ...

@@ -22,4 +22,6 @@ class DistanceView(proto.Message):
         distance_bucket: DistanceBucketEnum.DistanceBucket = ...,
         metric_system: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "distance_bucket", "metric_system"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "distance_bucket", "metric_system"]
+    ) -> bool: ...

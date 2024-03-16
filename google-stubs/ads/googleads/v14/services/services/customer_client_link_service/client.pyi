@@ -77,14 +77,13 @@ class CustomerClientLinkServiceClient(metaclass=CustomerClientLinkServiceClientM
     ) -> None: ...
     def mutate_customer_client_link(
         self,
-        request: (
-            customer_client_link_service.MutateCustomerClientLinkRequest | dict | None
-        ) = None,
+        request: customer_client_link_service.MutateCustomerClientLinkRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operation: (
-            customer_client_link_service.CustomerClientLinkOperation | None
-        ) = None,
+        operation: customer_client_link_service.CustomerClientLinkOperation
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

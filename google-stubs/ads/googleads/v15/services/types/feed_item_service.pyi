@@ -29,7 +29,9 @@ class FeedItemOperation(proto.Message):
         update: FeedItem = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateFeedItemResult(proto.Message):
     resource_name: str
@@ -42,7 +44,9 @@ class MutateFeedItemResult(proto.Message):
         resource_name: str = ...,
         feed_item: FeedItem = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "feed_item"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "feed_item"]
+    ) -> bool: ...
 
 class MutateFeedItemsRequest(proto.Message):
     customer_id: str
@@ -61,7 +65,16 @@ class MutateFeedItemsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateFeedItemsResponse(proto.Message):
     partial_failure_error: Status
@@ -74,4 +87,6 @@ class MutateFeedItemsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateFeedItemResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...

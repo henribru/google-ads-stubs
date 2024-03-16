@@ -27,7 +27,9 @@ class AssetSet(proto.Message):
             hotel_center_id: int = ...,
             partner_name: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["hotel_center_id", "partner_name"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["hotel_center_id", "partner_name"]
+        ) -> bool: ...
 
     class MerchantCenterFeed(proto.Message):
         merchant_id: int
@@ -40,7 +42,9 @@ class AssetSet(proto.Message):
             merchant_id: int = ...,
             feed_label: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant_id", "feed_label"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["merchant_id", "feed_label"]
+        ) -> bool: ...
 
     id: int
     resource_name: str
@@ -70,4 +74,19 @@ class AssetSet(proto.Message):
         business_profile_location_group: BusinessProfileLocationGroup = ...,
         chain_location_group: ChainLocationGroup = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["id", "resource_name", "name", "type_", "status", "merchant_center_feed", "location_group_parent_asset_set_id", "hotel_property_data", "location_set", "business_profile_location_group", "chain_location_group"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "id",
+            "resource_name",
+            "name",
+            "type_",
+            "status",
+            "merchant_center_feed",
+            "location_group_parent_asset_set_id",
+            "hotel_property_data",
+            "location_set",
+            "business_profile_location_group",
+            "chain_location_group",
+        ],
+    ) -> bool: ...

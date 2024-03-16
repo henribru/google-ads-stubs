@@ -28,4 +28,7 @@ class CustomConversionGoal(proto.Message):
         conversion_actions: MutableSequence[str] = ...,
         status: CustomConversionGoalStatusEnum.CustomConversionGoalStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "conversion_actions", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["resource_name", "id", "name", "conversion_actions", "status"],
+    ) -> bool: ...

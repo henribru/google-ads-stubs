@@ -34,7 +34,9 @@ class BackgroundCheckVerificationArtifact(proto.Message):
         case_url: str = ...,
         final_adjudication_date_time: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["case_url", "final_adjudication_date_time"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["case_url", "final_adjudication_date_time"]
+    ) -> bool: ...
 
 class InsuranceVerificationArtifact(proto.Message):
     amount_micros: int
@@ -51,7 +53,12 @@ class InsuranceVerificationArtifact(proto.Message):
         rejection_reason: LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason = ...,
         insurance_document_readonly: LocalServicesDocumentReadOnly = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["amount_micros", "rejection_reason", "insurance_document_readonly"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "amount_micros", "rejection_reason", "insurance_document_readonly"
+        ],
+    ) -> bool: ...
 
 class LicenseVerificationArtifact(proto.Message):
     license_type: str
@@ -74,15 +81,23 @@ class LicenseVerificationArtifact(proto.Message):
         rejection_reason: LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason = ...,
         license_document_readonly: LocalServicesDocumentReadOnly = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["license_type", "license_number", "licensee_first_name", "licensee_last_name", "rejection_reason", "license_document_readonly"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "license_type",
+            "license_number",
+            "licensee_first_name",
+            "licensee_last_name",
+            "rejection_reason",
+            "license_document_readonly",
+        ],
+    ) -> bool: ...
 
 class LocalServicesVerificationArtifact(proto.Message):
     resource_name: str
     id: int
     creation_date_time: str
-    status: (
-        LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
-    )
+    status: LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
     artifact_type: (
         LocalServicesVerificationArtifactTypeEnum.LocalServicesVerificationArtifactType
     )
@@ -103,4 +118,16 @@ class LocalServicesVerificationArtifact(proto.Message):
         insurance_verification_artifact: InsuranceVerificationArtifact = ...,
         license_verification_artifact: LicenseVerificationArtifact = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "creation_date_time", "status", "artifact_type", "background_check_verification_artifact", "insurance_verification_artifact", "license_verification_artifact"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "creation_date_time",
+            "status",
+            "artifact_type",
+            "background_check_verification_artifact",
+            "insurance_verification_artifact",
+            "license_verification_artifact",
+        ],
+    ) -> bool: ...

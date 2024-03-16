@@ -27,4 +27,9 @@ class CustomerExtensionSetting(proto.Message):
         extension_feed_items: MutableSequence[str] = ...,
         device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "extension_type", "extension_feed_items", "device"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "extension_type", "extension_feed_items", "device"
+        ],
+    ) -> bool: ...

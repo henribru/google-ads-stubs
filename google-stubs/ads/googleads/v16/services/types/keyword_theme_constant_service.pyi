@@ -24,7 +24,9 @@ class SuggestKeywordThemeConstantsRequest(proto.Message):
         country_code: str = ...,
         language_code: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["query_text", "country_code", "language_code"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["query_text", "country_code", "language_code"]
+    ) -> bool: ...
 
 class SuggestKeywordThemeConstantsResponse(proto.Message):
     keyword_theme_constants: MutableSequence[KeywordThemeConstant]
@@ -35,4 +37,6 @@ class SuggestKeywordThemeConstantsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         keyword_theme_constants: MutableSequence[KeywordThemeConstant] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["keyword_theme_constants"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["keyword_theme_constants"]
+    ) -> bool: ...

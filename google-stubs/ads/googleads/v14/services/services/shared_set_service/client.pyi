@@ -74,9 +74,8 @@ class SharedSetServiceClient(metaclass=SharedSetServiceClientMeta):
         request: shared_set_service.MutateSharedSetsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[shared_set_service.SharedSetOperation] | None
-        ) = None,
+        operations: MutableSequence[shared_set_service.SharedSetOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

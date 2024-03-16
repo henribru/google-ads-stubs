@@ -26,7 +26,9 @@ class ConversionGoalCampaignConfigOperation(proto.Message):
         update_mask: FieldMask = ...,
         update: ConversionGoalCampaignConfig = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "update"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "update"]
+    ) -> bool: ...
 
 class MutateConversionGoalCampaignConfigResult(proto.Message):
     resource_name: str
@@ -39,7 +41,9 @@ class MutateConversionGoalCampaignConfigResult(proto.Message):
         resource_name: str = ...,
         conversion_goal_campaign_config: ConversionGoalCampaignConfig = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "conversion_goal_campaign_config"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "conversion_goal_campaign_config"]
+    ) -> bool: ...
 
 class MutateConversionGoalCampaignConfigsRequest(proto.Message):
     customer_id: str
@@ -56,7 +60,12 @@ class MutateConversionGoalCampaignConfigsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id", "operations", "validate_only", "response_content_type"
+        ],
+    ) -> bool: ...
 
 class MutateConversionGoalCampaignConfigsResponse(proto.Message):
     results: MutableSequence[MutateConversionGoalCampaignConfigResult]
@@ -67,4 +76,6 @@ class MutateConversionGoalCampaignConfigsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         results: MutableSequence[MutateConversionGoalCampaignConfigResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results"]
+    ) -> bool: ...

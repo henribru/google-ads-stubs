@@ -29,7 +29,10 @@ class MatchingFunction(proto.Message):
         left_operands: MutableSequence[Operand] = ...,
         right_operands: MutableSequence[Operand] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["function_string", "operator", "left_operands", "right_operands"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["function_string", "operator", "left_operands", "right_operands"],
+    ) -> bool: ...
 
 class Operand(proto.Message):
     class ConstantOperand(proto.Message):
@@ -47,7 +50,10 @@ class Operand(proto.Message):
             boolean_value: bool = ...,
             double_value: float = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["string_value", "long_value", "boolean_value", "double_value"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal["string_value", "long_value", "boolean_value", "double_value"],
+        ) -> bool: ...
 
     class FeedAttributeOperand(proto.Message):
         feed_id: int
@@ -60,7 +66,9 @@ class Operand(proto.Message):
             feed_id: int = ...,
             feed_attribute_id: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["feed_id", "feed_attribute_id"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["feed_id", "feed_attribute_id"]
+        ) -> bool: ...
 
     class FunctionOperand(proto.Message):
         matching_function: MatchingFunction
@@ -71,7 +79,9 @@ class Operand(proto.Message):
             ignore_unknown_fields: bool = False,
             matching_function: MatchingFunction = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["matching_function"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["matching_function"]
+        ) -> bool: ...
 
     class RequestContextOperand(proto.Message):
         context_type: MatchingFunctionContextTypeEnum.MatchingFunctionContextType
@@ -82,7 +92,9 @@ class Operand(proto.Message):
             ignore_unknown_fields: bool = False,
             context_type: MatchingFunctionContextTypeEnum.MatchingFunctionContextType = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["context_type"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["context_type"]
+        ) -> bool: ...
 
     constant_operand: Operand.ConstantOperand
     feed_attribute_operand: Operand.FeedAttributeOperand
@@ -98,4 +110,12 @@ class Operand(proto.Message):
         function_operand: Operand.FunctionOperand = ...,
         request_context_operand: Operand.RequestContextOperand = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["constant_operand", "feed_attribute_operand", "function_operand", "request_context_operand"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "constant_operand",
+            "feed_attribute_operand",
+            "function_operand",
+            "request_context_operand",
+        ],
+    ) -> bool: ...

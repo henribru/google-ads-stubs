@@ -24,7 +24,9 @@ class AssetSetAssetOperation(proto.Message):
         create: AssetSetAsset = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove"]
+    ) -> bool: ...
 
 class MutateAssetSetAssetResult(proto.Message):
     resource_name: str
@@ -37,7 +39,9 @@ class MutateAssetSetAssetResult(proto.Message):
         resource_name: str = ...,
         asset_set_asset: AssetSetAsset = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "asset_set_asset"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "asset_set_asset"]
+    ) -> bool: ...
 
 class MutateAssetSetAssetsRequest(proto.Message):
     customer_id: str
@@ -56,7 +60,16 @@ class MutateAssetSetAssetsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateAssetSetAssetsResponse(proto.Message):
     results: MutableSequence[MutateAssetSetAssetResult]
@@ -69,4 +82,6 @@ class MutateAssetSetAssetsResponse(proto.Message):
         results: MutableSequence[MutateAssetSetAssetResult] = ...,
         partial_failure_error: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "partial_failure_error"]
+    ) -> bool: ...

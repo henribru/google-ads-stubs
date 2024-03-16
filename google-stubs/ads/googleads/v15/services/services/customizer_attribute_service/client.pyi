@@ -73,15 +73,15 @@ class CustomizerAttributeServiceClient(metaclass=CustomizerAttributeServiceClien
     ) -> None: ...
     def mutate_customizer_attributes(
         self,
-        request: (
-            customizer_attribute_service.MutateCustomizerAttributesRequest | dict | None
-        ) = None,
+        request: customizer_attribute_service.MutateCustomizerAttributesRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[customizer_attribute_service.CustomizerAttributeOperation]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            customizer_attribute_service.CustomizerAttributeOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

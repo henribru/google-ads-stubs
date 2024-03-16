@@ -81,14 +81,13 @@ class AdGroupAdLabelServiceClient(metaclass=AdGroupAdLabelServiceClientMeta):
     ) -> None: ...
     def mutate_ad_group_ad_labels(
         self,
-        request: (
-            ad_group_ad_label_service.MutateAdGroupAdLabelsRequest | dict | None
-        ) = None,
+        request: ad_group_ad_label_service.MutateAdGroupAdLabelsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[ad_group_ad_label_service.AdGroupAdLabelOperation] | None
-        ) = None,
+        operations: MutableSequence[ad_group_ad_label_service.AdGroupAdLabelOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

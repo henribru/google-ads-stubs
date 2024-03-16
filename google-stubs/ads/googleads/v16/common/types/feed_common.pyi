@@ -18,4 +18,6 @@ class Money(proto.Message):
         currency_code: str = ...,
         amount_micros: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["currency_code", "amount_micros"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["currency_code", "amount_micros"]
+    ) -> bool: ...

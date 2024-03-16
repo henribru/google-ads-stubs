@@ -81,14 +81,13 @@ class CampaignLabelServiceClient(metaclass=CampaignLabelServiceClientMeta):
     ) -> None: ...
     def mutate_campaign_labels(
         self,
-        request: (
-            campaign_label_service.MutateCampaignLabelsRequest | dict | None
-        ) = None,
+        request: campaign_label_service.MutateCampaignLabelsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[campaign_label_service.CampaignLabelOperation] | None
-        ) = None,
+        operations: MutableSequence[campaign_label_service.CampaignLabelOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

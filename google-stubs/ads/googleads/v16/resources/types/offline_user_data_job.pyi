@@ -49,7 +49,20 @@ class OfflineUserDataJob(proto.Message):
         customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...,
         store_sales_metadata: StoreSalesMetadata = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "external_id", "type_", "status", "failure_reason", "operation_metadata", "customer_match_user_list_metadata", "store_sales_metadata"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "external_id",
+            "type_",
+            "status",
+            "failure_reason",
+            "operation_metadata",
+            "customer_match_user_list_metadata",
+            "store_sales_metadata",
+        ],
+    ) -> bool: ...
 
 class OfflineUserDataJobMetadata(proto.Message):
     match_rate_range: (
@@ -62,4 +75,6 @@ class OfflineUserDataJobMetadata(proto.Message):
         ignore_unknown_fields: bool = False,
         match_rate_range: OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["match_rate_range"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["match_rate_range"]
+    ) -> bool: ...

@@ -24,7 +24,9 @@ class BrandSuggestion(proto.Message):
         urls: MutableSequence[str] = ...,
         state: BrandStateEnum.BrandState = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["id", "name", "urls", "state"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["id", "name", "urls", "state"]
+    ) -> bool: ...
 
 class SuggestBrandsRequest(proto.Message):
     customer_id: str
@@ -39,7 +41,9 @@ class SuggestBrandsRequest(proto.Message):
         brand_prefix: str = ...,
         selected_brands: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "brand_prefix", "selected_brands"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "brand_prefix", "selected_brands"]
+    ) -> bool: ...
 
 class SuggestBrandsResponse(proto.Message):
     brands: MutableSequence[BrandSuggestion]
@@ -50,4 +54,6 @@ class SuggestBrandsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         brands: MutableSequence[BrandSuggestion] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["brands"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["brands"]
+    ) -> bool: ...

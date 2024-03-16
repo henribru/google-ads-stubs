@@ -28,4 +28,14 @@ class CustomerUserAccess(proto.Message):
         access_creation_date_time: str = ...,
         inviter_user_email_address: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "user_id", "email_address", "access_role", "access_creation_date_time", "inviter_user_email_address"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "user_id",
+            "email_address",
+            "access_role",
+            "access_creation_date_time",
+            "inviter_user_email_address",
+        ],
+    ) -> bool: ...

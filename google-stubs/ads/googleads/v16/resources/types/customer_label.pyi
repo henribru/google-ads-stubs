@@ -20,4 +20,6 @@ class CustomerLabel(proto.Message):
         customer: str = ...,
         label: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "customer", "label"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "customer", "label"]
+    ) -> bool: ...

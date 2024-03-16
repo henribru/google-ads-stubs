@@ -71,14 +71,13 @@ class CustomerUserAccessServiceClient(metaclass=CustomerUserAccessServiceClientM
     ) -> None: ...
     def mutate_customer_user_access(
         self,
-        request: (
-            customer_user_access_service.MutateCustomerUserAccessRequest | dict | None
-        ) = None,
+        request: customer_user_access_service.MutateCustomerUserAccessRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operation: (
-            customer_user_access_service.CustomerUserAccessOperation | None
-        ) = None,
+        operation: customer_user_access_service.CustomerUserAccessOperation
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

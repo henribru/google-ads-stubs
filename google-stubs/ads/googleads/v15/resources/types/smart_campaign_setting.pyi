@@ -17,7 +17,9 @@ class SmartCampaignSetting(proto.Message):
             ignore_unknown_fields: bool = False,
             include_lead_form: bool = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["include_lead_form"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["include_lead_form"]
+        ) -> bool: ...
 
     class PhoneNumber(proto.Message):
         phone_number: str
@@ -30,7 +32,9 @@ class SmartCampaignSetting(proto.Message):
             phone_number: str = ...,
             country_code: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["phone_number", "country_code"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["phone_number", "country_code"]
+        ) -> bool: ...
 
     resource_name: str
     campaign: str
@@ -56,4 +60,16 @@ class SmartCampaignSetting(proto.Message):
         business_name: str = ...,
         business_profile_location: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "campaign", "phone_number", "advertising_language_code", "final_url", "ad_optimized_business_profile_setting", "business_name", "business_profile_location"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "campaign",
+            "phone_number",
+            "advertising_language_code",
+            "final_url",
+            "ad_optimized_business_profile_setting",
+            "business_name",
+            "business_profile_location",
+        ],
+    ) -> bool: ...

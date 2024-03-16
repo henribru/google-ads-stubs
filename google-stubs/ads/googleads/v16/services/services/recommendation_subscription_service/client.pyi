@@ -75,19 +75,15 @@ class RecommendationSubscriptionServiceClient(
     ) -> None: ...
     def mutate_recommendation_subscription(
         self,
-        request: (
-            recommendation_subscription_service.MutateRecommendationSubscriptionRequest
-            | dict
-            | None
-        ) = None,
+        request: recommendation_subscription_service.MutateRecommendationSubscriptionRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                recommendation_subscription_service.RecommendationSubscriptionOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            recommendation_subscription_service.RecommendationSubscriptionOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

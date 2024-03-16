@@ -18,4 +18,6 @@ class PaidOrganicSearchTermView(proto.Message):
         resource_name: str = ...,
         search_term: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "search_term"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "search_term"]
+    ) -> bool: ...

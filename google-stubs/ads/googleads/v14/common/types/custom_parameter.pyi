@@ -18,4 +18,6 @@ class CustomParameter(proto.Message):
         key: str = ...,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["key", "value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["key", "value"]
+    ) -> bool: ...

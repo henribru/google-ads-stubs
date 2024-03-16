@@ -18,7 +18,9 @@ class ListPaymentsAccountsRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id"]
+    ) -> bool: ...
 
 class ListPaymentsAccountsResponse(proto.Message):
     payments_accounts: MutableSequence[PaymentsAccount]
@@ -29,4 +31,6 @@ class ListPaymentsAccountsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         payments_accounts: MutableSequence[PaymentsAccount] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["payments_accounts"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["payments_accounts"]
+    ) -> bool: ...

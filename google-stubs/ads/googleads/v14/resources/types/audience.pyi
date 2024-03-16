@@ -34,4 +34,15 @@ class Audience(proto.Message):
         dimensions: MutableSequence[AudienceDimension] = ...,
         exclusion_dimension: AudienceExclusionDimension = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "status", "name", "description", "dimensions", "exclusion_dimension"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "status",
+            "name",
+            "description",
+            "dimensions",
+            "exclusion_dimension",
+        ],
+    ) -> bool: ...

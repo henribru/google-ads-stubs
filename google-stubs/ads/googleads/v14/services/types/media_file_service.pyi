@@ -22,7 +22,9 @@ class MediaFileOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         create: MediaFile = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create"]
+    ) -> bool: ...
 
 class MutateMediaFileResult(proto.Message):
     resource_name: str
@@ -35,7 +37,9 @@ class MutateMediaFileResult(proto.Message):
         resource_name: str = ...,
         media_file: MediaFile = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "media_file"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "media_file"]
+    ) -> bool: ...
 
 class MutateMediaFilesRequest(proto.Message):
     customer_id: str
@@ -54,7 +58,16 @@ class MutateMediaFilesRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateMediaFilesResponse(proto.Message):
     partial_failure_error: Status
@@ -67,4 +80,6 @@ class MutateMediaFilesResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateMediaFileResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...

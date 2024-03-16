@@ -29,7 +29,9 @@ class CampaignGroupOperation(proto.Message):
         update: CampaignGroup = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateCampaignGroupResult(proto.Message):
     resource_name: str
@@ -42,7 +44,9 @@ class MutateCampaignGroupResult(proto.Message):
         resource_name: str = ...,
         campaign_group: CampaignGroup = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "campaign_group"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "campaign_group"]
+    ) -> bool: ...
 
 class MutateCampaignGroupsRequest(proto.Message):
     customer_id: str
@@ -61,7 +65,16 @@ class MutateCampaignGroupsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateCampaignGroupsResponse(proto.Message):
     results: MutableSequence[MutateCampaignGroupResult]
@@ -74,4 +87,6 @@ class MutateCampaignGroupsResponse(proto.Message):
         results: MutableSequence[MutateCampaignGroupResult] = ...,
         partial_failure_error: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "partial_failure_error"]
+    ) -> bool: ...

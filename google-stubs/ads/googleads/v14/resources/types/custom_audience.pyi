@@ -38,7 +38,12 @@ class CustomAudience(proto.Message):
         description: str = ...,
         members: MutableSequence[CustomAudienceMember] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "status", "name", "type_", "description", "members"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "id", "status", "name", "type_", "description", "members"
+        ],
+    ) -> bool: ...
 
 class CustomAudienceMember(proto.Message):
     member_type: CustomAudienceMemberTypeEnum.CustomAudienceMemberType
@@ -57,4 +62,6 @@ class CustomAudienceMember(proto.Message):
         place_category: int = ...,
         app: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["member_type", "keyword", "url", "place_category", "app"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["member_type", "keyword", "url", "place_category", "app"]
+    ) -> bool: ...

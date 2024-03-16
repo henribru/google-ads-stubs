@@ -35,7 +35,9 @@ class Recommendation(proto.Message):
             customer_id: int = ...,
             descriptive_name: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["customer_id", "descriptive_name"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["customer_id", "descriptive_name"]
+        ) -> bool: ...
 
     class CallAssetRecommendation(proto.Message):
         def __init__(
@@ -44,7 +46,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class CalloutAssetRecommendation(proto.Message):
         recommended_campaign_callout_assets: MutableSequence[Asset]
@@ -57,7 +61,13 @@ class Recommendation(proto.Message):
             recommended_campaign_callout_assets: MutableSequence[Asset] = ...,
             recommended_customer_callout_assets: MutableSequence[Asset] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["recommended_campaign_callout_assets", "recommended_customer_callout_assets"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "recommended_campaign_callout_assets",
+                "recommended_customer_callout_assets",
+            ],
+        ) -> bool: ...
 
     class CampaignBudget(proto.Message):
         current_amount_micros: int
@@ -72,7 +82,14 @@ class Recommendation(proto.Message):
             recommended_new_amount_micros: int = ...,
             new_start_date: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["current_amount_micros", "recommended_new_amount_micros", "new_start_date"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "current_amount_micros",
+                "recommended_new_amount_micros",
+                "new_start_date",
+            ],
+        ) -> bool: ...
 
     class CampaignBudgetRecommendation(proto.Message):
         class CampaignBudgetRecommendationOption(proto.Message):
@@ -86,7 +103,9 @@ class Recommendation(proto.Message):
                 budget_amount_micros: int = ...,
                 impact: Recommendation.RecommendationImpact = ...,
             ) -> None: ...
-            def __contains__(self, key: Literal["budget_amount_micros", "impact"]) -> bool: ...  # type: ignore[override]
+            def __contains__(  # type: ignore[override]
+                self, key: Literal["budget_amount_micros", "impact"]
+            ) -> bool: ...
 
         current_budget_amount_micros: int
         recommended_budget_amount_micros: int
@@ -104,7 +123,14 @@ class Recommendation(proto.Message):
                 Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption
             ] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["current_budget_amount_micros", "recommended_budget_amount_micros", "budget_options"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "current_budget_amount_micros",
+                "recommended_budget_amount_micros",
+                "budget_options",
+            ],
+        ) -> bool: ...
 
     class CustomAudienceOptInRecommendation(proto.Message):
         keywords: MutableSequence[KeywordInfo]
@@ -115,7 +141,9 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = False,
             keywords: MutableSequence[KeywordInfo] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["keywords"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["keywords"]
+        ) -> bool: ...
 
     class DisplayExpansionOptInRecommendation(proto.Message):
         def __init__(
@@ -124,7 +152,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class DynamicImageExtensionOptInRecommendation(proto.Message):
         def __init__(
@@ -133,7 +163,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class EnhancedCpcOptInRecommendation(proto.Message):
         def __init__(
@@ -142,7 +174,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class ForecastingSetTargetCpaRecommendation(proto.Message):
         recommended_target_cpa_micros: int
@@ -155,7 +189,9 @@ class Recommendation(proto.Message):
             recommended_target_cpa_micros: int = ...,
             campaign_budget: Recommendation.CampaignBudget = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["recommended_target_cpa_micros", "campaign_budget"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["recommended_target_cpa_micros", "campaign_budget"]
+        ) -> bool: ...
 
     class ForecastingSetTargetRoasRecommendation(proto.Message):
         recommended_target_roas: float
@@ -168,7 +204,9 @@ class Recommendation(proto.Message):
             recommended_target_roas: float = ...,
             campaign_budget: Recommendation.CampaignBudget = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["recommended_target_roas", "campaign_budget"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["recommended_target_roas", "campaign_budget"]
+        ) -> bool: ...
 
     class ImproveDemandGenAdStrengthRecommendation(proto.Message):
         ad: str
@@ -183,7 +221,9 @@ class Recommendation(proto.Message):
             ad_strength: AdStrengthEnum.AdStrength = ...,
             demand_gen_asset_action_items: MutableSequence[str] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad", "ad_strength", "demand_gen_asset_action_items"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad", "ad_strength", "demand_gen_asset_action_items"]
+        ) -> bool: ...
 
     class ImproveGoogleTagCoverageRecommendation(proto.Message):
         def __init__(
@@ -192,7 +232,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class ImprovePerformanceMaxAdStrengthRecommendation(proto.Message):
         asset_group: str
@@ -203,7 +245,9 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = False,
             asset_group: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["asset_group"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["asset_group"]
+        ) -> bool: ...
 
     class KeywordMatchTypeRecommendation(proto.Message):
         keyword: KeywordInfo
@@ -216,7 +260,9 @@ class Recommendation(proto.Message):
             keyword: KeywordInfo = ...,
             recommended_match_type: KeywordMatchTypeEnum.KeywordMatchType = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["keyword", "recommended_match_type"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["keyword", "recommended_match_type"]
+        ) -> bool: ...
 
     class KeywordRecommendation(proto.Message):
         class SearchTerm(proto.Message):
@@ -230,7 +276,9 @@ class Recommendation(proto.Message):
                 text: str = ...,
                 estimated_weekly_search_count: int = ...,
             ) -> None: ...
-            def __contains__(self, key: Literal["text", "estimated_weekly_search_count"]) -> bool: ...  # type: ignore[override]
+            def __contains__(  # type: ignore[override]
+                self, key: Literal["text", "estimated_weekly_search_count"]
+            ) -> bool: ...
 
         keyword: KeywordInfo
         search_terms: MutableSequence[Recommendation.KeywordRecommendation.SearchTerm]
@@ -246,7 +294,9 @@ class Recommendation(proto.Message):
             ] = ...,
             recommended_cpc_bid_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["keyword", "search_terms", "recommended_cpc_bid_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["keyword", "search_terms", "recommended_cpc_bid_micros"]
+        ) -> bool: ...
 
     class LeadFormAssetRecommendation(proto.Message):
         def __init__(
@@ -255,7 +305,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class LowerTargetRoasRecommendation(proto.Message):
         target_adjustment: Recommendation.TargetAdjustmentInfo
@@ -266,7 +318,9 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = False,
             target_adjustment: Recommendation.TargetAdjustmentInfo = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_adjustment"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_adjustment"]
+        ) -> bool: ...
 
     class MaximizeClicksOptInRecommendation(proto.Message):
         recommended_budget_amount_micros: int
@@ -277,7 +331,9 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = False,
             recommended_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["recommended_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["recommended_budget_amount_micros"]
+        ) -> bool: ...
 
     class MaximizeConversionValueOptInRecommendation(proto.Message):
         def __init__(
@@ -286,7 +342,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class MaximizeConversionsOptInRecommendation(proto.Message):
         recommended_budget_amount_micros: int
@@ -297,7 +355,9 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = False,
             recommended_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["recommended_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["recommended_budget_amount_micros"]
+        ) -> bool: ...
 
     class MerchantInfo(proto.Message):
         id: int
@@ -312,7 +372,9 @@ class Recommendation(proto.Message):
             name: str = ...,
             multi_client: bool = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["id", "name", "multi_client"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["id", "name", "multi_client"]
+        ) -> bool: ...
 
     class MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation(proto.Message):
         apply_link: str
@@ -323,7 +385,9 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = False,
             apply_link: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["apply_link"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["apply_link"]
+        ) -> bool: ...
 
     class MoveUnusedBudgetRecommendation(proto.Message):
         excess_campaign_budget: str
@@ -336,7 +400,9 @@ class Recommendation(proto.Message):
             excess_campaign_budget: str = ...,
             budget_recommendation: Recommendation.CampaignBudgetRecommendation = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["excess_campaign_budget", "budget_recommendation"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["excess_campaign_budget", "budget_recommendation"]
+        ) -> bool: ...
 
     class OptimizeAdRotationRecommendation(proto.Message):
         def __init__(
@@ -345,7 +411,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class PerformanceMaxFinalUrlOptInRecommendation(proto.Message):
         def __init__(
@@ -354,7 +422,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class PerformanceMaxOptInRecommendation(proto.Message):
         def __init__(
@@ -363,7 +433,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class RaiseTargetCpaBidTooLowRecommendation(proto.Message):
         recommended_target_multiplier: float
@@ -376,7 +448,10 @@ class Recommendation(proto.Message):
             recommended_target_multiplier: float = ...,
             average_target_cpa_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["recommended_target_multiplier", "average_target_cpa_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal["recommended_target_multiplier", "average_target_cpa_micros"],
+        ) -> bool: ...
 
     class RaiseTargetCpaRecommendation(proto.Message):
         target_adjustment: Recommendation.TargetAdjustmentInfo
@@ -389,7 +464,9 @@ class Recommendation(proto.Message):
             target_adjustment: Recommendation.TargetAdjustmentInfo = ...,
             app_bidding_goal: AppBiddingGoalEnum.AppBiddingGoal = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_adjustment", "app_bidding_goal"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_adjustment", "app_bidding_goal"]
+        ) -> bool: ...
 
     class RecommendationImpact(proto.Message):
         base_metrics: Recommendation.RecommendationMetrics
@@ -402,7 +479,9 @@ class Recommendation(proto.Message):
             base_metrics: Recommendation.RecommendationMetrics = ...,
             potential_metrics: Recommendation.RecommendationMetrics = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["base_metrics", "potential_metrics"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["base_metrics", "potential_metrics"]
+        ) -> bool: ...
 
     class RecommendationMetrics(proto.Message):
         impressions: float
@@ -423,7 +502,17 @@ class Recommendation(proto.Message):
             conversions_value: float = ...,
             video_views: float = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["impressions", "clicks", "cost_micros", "conversions", "conversions_value", "video_views"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "impressions",
+                "clicks",
+                "cost_micros",
+                "conversions",
+                "conversions_value",
+                "video_views",
+            ],
+        ) -> bool: ...
 
     class RefreshCustomerMatchListRecommendation(proto.Message):
         user_list_id: int
@@ -444,7 +533,17 @@ class Recommendation(proto.Message):
             targeting_accounts_count: int = ...,
             owner_account: Recommendation.AccountInfo = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["user_list_id", "user_list_name", "days_since_last_refresh", "top_spending_account", "targeting_accounts_count", "owner_account"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "user_list_id",
+                "user_list_name",
+                "days_since_last_refresh",
+                "top_spending_account",
+                "targeting_accounts_count",
+                "owner_account",
+            ],
+        ) -> bool: ...
 
     class ResponsiveSearchAdAssetRecommendation(proto.Message):
         current_ad: Ad
@@ -457,7 +556,9 @@ class Recommendation(proto.Message):
             current_ad: Ad = ...,
             recommended_assets: Ad = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["current_ad", "recommended_assets"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["current_ad", "recommended_assets"]
+        ) -> bool: ...
 
     class ResponsiveSearchAdImproveAdStrengthRecommendation(proto.Message):
         current_ad: Ad
@@ -470,7 +571,9 @@ class Recommendation(proto.Message):
             current_ad: Ad = ...,
             recommended_ad: Ad = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["current_ad", "recommended_ad"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["current_ad", "recommended_ad"]
+        ) -> bool: ...
 
     class ResponsiveSearchAdRecommendation(proto.Message):
         ad: Ad
@@ -481,7 +584,9 @@ class Recommendation(proto.Message):
             ignore_unknown_fields: bool = False,
             ad: Ad = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad"]
+        ) -> bool: ...
 
     class SearchPartnersOptInRecommendation(proto.Message):
         def __init__(
@@ -490,7 +595,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class ShoppingAddProductsToCampaignRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
@@ -505,7 +612,9 @@ class Recommendation(proto.Message):
             feed_label: str = ...,
             reason: ShoppingAddProductsToCampaignRecommendationEnum.Reason = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant", "feed_label", "reason"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["merchant", "feed_label", "reason"]
+        ) -> bool: ...
 
     class ShoppingFixDisapprovedProductsRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
@@ -522,7 +631,12 @@ class Recommendation(proto.Message):
             products_count: int = ...,
             disapproved_products_count: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant", "feed_label", "products_count", "disapproved_products_count"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "merchant", "feed_label", "products_count", "disapproved_products_count"
+            ],
+        ) -> bool: ...
 
     class ShoppingMerchantCenterAccountSuspensionRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
@@ -535,7 +649,9 @@ class Recommendation(proto.Message):
             merchant: Recommendation.MerchantInfo = ...,
             feed_label: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant", "feed_label"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["merchant", "feed_label"]
+        ) -> bool: ...
 
     class ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(
         proto.Message
@@ -550,7 +666,9 @@ class Recommendation(proto.Message):
             merchant: Recommendation.MerchantInfo = ...,
             feed_label: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant", "feed_label"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["merchant", "feed_label"]
+        ) -> bool: ...
 
     class ShoppingOfferAttributeRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
@@ -567,7 +685,12 @@ class Recommendation(proto.Message):
             offers_count: int = ...,
             demoted_offers_count: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant", "feed_label", "offers_count", "demoted_offers_count"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "merchant", "feed_label", "offers_count", "demoted_offers_count"
+            ],
+        ) -> bool: ...
 
     class ShoppingTargetAllOffersRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
@@ -582,7 +705,9 @@ class Recommendation(proto.Message):
             untargeted_offers_count: int = ...,
             feed_label: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant", "untargeted_offers_count", "feed_label"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["merchant", "untargeted_offers_count", "feed_label"]
+        ) -> bool: ...
 
     class SitelinkAssetRecommendation(proto.Message):
         recommended_campaign_sitelink_assets: MutableSequence[Asset]
@@ -595,7 +720,13 @@ class Recommendation(proto.Message):
             recommended_campaign_sitelink_assets: MutableSequence[Asset] = ...,
             recommended_customer_sitelink_assets: MutableSequence[Asset] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["recommended_campaign_sitelink_assets", "recommended_customer_sitelink_assets"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "recommended_campaign_sitelink_assets",
+                "recommended_customer_sitelink_assets",
+            ],
+        ) -> bool: ...
 
     class TargetAdjustmentInfo(proto.Message):
         shared_set: str
@@ -610,7 +741,14 @@ class Recommendation(proto.Message):
             recommended_target_multiplier: float = ...,
             current_average_target_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["shared_set", "recommended_target_multiplier", "current_average_target_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "shared_set",
+                "recommended_target_multiplier",
+                "current_average_target_micros",
+            ],
+        ) -> bool: ...
 
     class TargetCpaOptInRecommendation(proto.Message):
         class TargetCpaOptInRecommendationOption(proto.Message):
@@ -628,7 +766,15 @@ class Recommendation(proto.Message):
                 required_campaign_budget_amount_micros: int = ...,
                 impact: Recommendation.RecommendationImpact = ...,
             ) -> None: ...
-            def __contains__(self, key: Literal["goal", "target_cpa_micros", "required_campaign_budget_amount_micros", "impact"]) -> bool: ...  # type: ignore[override]
+            def __contains__(  # type: ignore[override]
+                self,
+                key: Literal[
+                    "goal",
+                    "target_cpa_micros",
+                    "required_campaign_budget_amount_micros",
+                    "impact",
+                ],
+            ) -> bool: ...
 
         options: MutableSequence[
             Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption
@@ -644,7 +790,9 @@ class Recommendation(proto.Message):
             ] = ...,
             recommended_target_cpa_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["options", "recommended_target_cpa_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["options", "recommended_target_cpa_micros"]
+        ) -> bool: ...
 
     class TargetRoasOptInRecommendation(proto.Message):
         recommended_target_roas: float
@@ -657,7 +805,12 @@ class Recommendation(proto.Message):
             recommended_target_roas: float = ...,
             required_campaign_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["recommended_target_roas", "required_campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "recommended_target_roas", "required_campaign_budget_amount_micros"
+            ],
+        ) -> bool: ...
 
     class TextAdRecommendation(proto.Message):
         ad: Ad
@@ -672,7 +825,9 @@ class Recommendation(proto.Message):
             creation_date: str = ...,
             auto_apply_date: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad", "creation_date", "auto_apply_date"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad", "creation_date", "auto_apply_date"]
+        ) -> bool: ...
 
     class UpgradeLocalCampaignToPerformanceMaxRecommendation(proto.Message):
         def __init__(
@@ -681,7 +836,9 @@ class Recommendation(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
         ) -> None: ...
-        def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: NoReturn
+        ) -> bool: ...
 
     class UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation(proto.Message):
         merchant_id: int
@@ -694,7 +851,9 @@ class Recommendation(proto.Message):
             merchant_id: int = ...,
             sales_country_code: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant_id", "sales_country_code"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["merchant_id", "sales_country_code"]
+        ) -> bool: ...
 
     class UseBroadMatchKeywordRecommendation(proto.Message):
         keyword: MutableSequence[KeywordInfo]
@@ -713,7 +872,16 @@ class Recommendation(proto.Message):
             campaign_uses_shared_budget: bool = ...,
             required_campaign_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["keyword", "suggested_keywords_count", "campaign_keywords_count", "campaign_uses_shared_budget", "required_campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "keyword",
+                "suggested_keywords_count",
+                "campaign_keywords_count",
+                "campaign_uses_shared_budget",
+                "required_campaign_budget_amount_micros",
+            ],
+        ) -> bool: ...
 
     resource_name: str
     type_: RecommendationTypeEnum.RecommendationType
@@ -808,9 +976,7 @@ class Recommendation(proto.Message):
     shopping_fix_merchant_center_account_suspension_warning_recommendation: (
         Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation
     )
-    shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation: (
-        Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation
-    )
+    shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation: Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation
     dynamic_image_extension_opt_in_recommendation: (
         Recommendation.DynamicImageExtensionOptInRecommendation
     )
@@ -919,4 +1085,70 @@ class Recommendation(proto.Message):
         lead_form_asset_recommendation: Recommendation.LeadFormAssetRecommendation = ...,
         improve_demand_gen_ad_strength_recommendation: Recommendation.ImproveDemandGenAdStrengthRecommendation = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "type_", "impact", "campaign_budget", "campaign", "ad_group", "dismissed", "campaigns", "campaign_budget_recommendation", "forecasting_campaign_budget_recommendation", "keyword_recommendation", "text_ad_recommendation", "target_cpa_opt_in_recommendation", "maximize_conversions_opt_in_recommendation", "enhanced_cpc_opt_in_recommendation", "search_partners_opt_in_recommendation", "maximize_clicks_opt_in_recommendation", "optimize_ad_rotation_recommendation", "keyword_match_type_recommendation", "move_unused_budget_recommendation", "target_roas_opt_in_recommendation", "responsive_search_ad_recommendation", "marginal_roi_campaign_budget_recommendation", "use_broad_match_keyword_recommendation", "responsive_search_ad_asset_recommendation", "upgrade_smart_shopping_campaign_to_performance_max_recommendation", "responsive_search_ad_improve_ad_strength_recommendation", "display_expansion_opt_in_recommendation", "upgrade_local_campaign_to_performance_max_recommendation", "raise_target_cpa_bid_too_low_recommendation", "forecasting_set_target_roas_recommendation", "callout_asset_recommendation", "sitelink_asset_recommendation", "call_asset_recommendation", "shopping_add_age_group_recommendation", "shopping_add_color_recommendation", "shopping_add_gender_recommendation", "shopping_add_gtin_recommendation", "shopping_add_more_identifiers_recommendation", "shopping_add_size_recommendation", "shopping_add_products_to_campaign_recommendation", "shopping_fix_disapproved_products_recommendation", "shopping_target_all_offers_recommendation", "shopping_fix_suspended_merchant_center_account_recommendation", "shopping_fix_merchant_center_account_suspension_warning_recommendation", "shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation", "dynamic_image_extension_opt_in_recommendation", "raise_target_cpa_recommendation", "lower_target_roas_recommendation", "performance_max_opt_in_recommendation", "improve_performance_max_ad_strength_recommendation", "migrate_dynamic_search_ads_campaign_to_performance_max_recommendation", "forecasting_set_target_cpa_recommendation", "set_target_cpa_recommendation", "set_target_roas_recommendation", "maximize_conversion_value_opt_in_recommendation", "improve_google_tag_coverage_recommendation", "performance_max_final_url_opt_in_recommendation", "refresh_customer_match_list_recommendation", "custom_audience_opt_in_recommendation", "lead_form_asset_recommendation", "improve_demand_gen_ad_strength_recommendation"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "type_",
+            "impact",
+            "campaign_budget",
+            "campaign",
+            "ad_group",
+            "dismissed",
+            "campaigns",
+            "campaign_budget_recommendation",
+            "forecasting_campaign_budget_recommendation",
+            "keyword_recommendation",
+            "text_ad_recommendation",
+            "target_cpa_opt_in_recommendation",
+            "maximize_conversions_opt_in_recommendation",
+            "enhanced_cpc_opt_in_recommendation",
+            "search_partners_opt_in_recommendation",
+            "maximize_clicks_opt_in_recommendation",
+            "optimize_ad_rotation_recommendation",
+            "keyword_match_type_recommendation",
+            "move_unused_budget_recommendation",
+            "target_roas_opt_in_recommendation",
+            "responsive_search_ad_recommendation",
+            "marginal_roi_campaign_budget_recommendation",
+            "use_broad_match_keyword_recommendation",
+            "responsive_search_ad_asset_recommendation",
+            "upgrade_smart_shopping_campaign_to_performance_max_recommendation",
+            "responsive_search_ad_improve_ad_strength_recommendation",
+            "display_expansion_opt_in_recommendation",
+            "upgrade_local_campaign_to_performance_max_recommendation",
+            "raise_target_cpa_bid_too_low_recommendation",
+            "forecasting_set_target_roas_recommendation",
+            "callout_asset_recommendation",
+            "sitelink_asset_recommendation",
+            "call_asset_recommendation",
+            "shopping_add_age_group_recommendation",
+            "shopping_add_color_recommendation",
+            "shopping_add_gender_recommendation",
+            "shopping_add_gtin_recommendation",
+            "shopping_add_more_identifiers_recommendation",
+            "shopping_add_size_recommendation",
+            "shopping_add_products_to_campaign_recommendation",
+            "shopping_fix_disapproved_products_recommendation",
+            "shopping_target_all_offers_recommendation",
+            "shopping_fix_suspended_merchant_center_account_recommendation",
+            "shopping_fix_merchant_center_account_suspension_warning_recommendation",
+            "shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation",
+            "dynamic_image_extension_opt_in_recommendation",
+            "raise_target_cpa_recommendation",
+            "lower_target_roas_recommendation",
+            "performance_max_opt_in_recommendation",
+            "improve_performance_max_ad_strength_recommendation",
+            "migrate_dynamic_search_ads_campaign_to_performance_max_recommendation",
+            "forecasting_set_target_cpa_recommendation",
+            "set_target_cpa_recommendation",
+            "set_target_roas_recommendation",
+            "maximize_conversion_value_opt_in_recommendation",
+            "improve_google_tag_coverage_recommendation",
+            "performance_max_final_url_opt_in_recommendation",
+            "refresh_customer_match_list_recommendation",
+            "custom_audience_opt_in_recommendation",
+            "lead_form_asset_recommendation",
+            "improve_demand_gen_ad_strength_recommendation",
+        ],
+    ) -> bool: ...

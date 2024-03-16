@@ -25,7 +25,9 @@ class CampaignLifecycleGoalOperation(proto.Message):
         create: CampaignLifecycleGoal = ...,
         update: CampaignLifecycleGoal = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update"]
+    ) -> bool: ...
 
 class ConfigureCampaignLifecycleGoalsRequest(proto.Message):
     customer_id: str
@@ -40,7 +42,9 @@ class ConfigureCampaignLifecycleGoalsRequest(proto.Message):
         operation: CampaignLifecycleGoalOperation = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation", "validate_only"]
+    ) -> bool: ...
 
 class ConfigureCampaignLifecycleGoalsResponse(proto.Message):
     result: ConfigureCampaignLifecycleGoalsResult
@@ -51,7 +55,9 @@ class ConfigureCampaignLifecycleGoalsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: ConfigureCampaignLifecycleGoalsResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class ConfigureCampaignLifecycleGoalsResult(proto.Message):
     resource_name: str
@@ -62,4 +68,6 @@ class ConfigureCampaignLifecycleGoalsResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

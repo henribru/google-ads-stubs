@@ -79,14 +79,13 @@ class CustomerLabelServiceClient(metaclass=CustomerLabelServiceClientMeta):
     ) -> None: ...
     def mutate_customer_labels(
         self,
-        request: (
-            customer_label_service.MutateCustomerLabelsRequest | dict | None
-        ) = None,
+        request: customer_label_service.MutateCustomerLabelsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[customer_label_service.CustomerLabelOperation] | None
-        ) = None,
+        operations: MutableSequence[customer_label_service.CustomerLabelOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

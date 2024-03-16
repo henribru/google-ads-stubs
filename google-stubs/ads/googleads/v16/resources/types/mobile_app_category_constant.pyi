@@ -20,4 +20,6 @@ class MobileAppCategoryConstant(proto.Message):
         id: int = ...,
         name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "id", "name"]
+    ) -> bool: ...

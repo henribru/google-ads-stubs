@@ -100,9 +100,7 @@ class AttributeFieldMapping(proto.Message):
     promotion_field: PromotionPlaceholderFieldEnum.PromotionPlaceholderField
     ad_customizer_field: AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
     dsa_page_feed_field: DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField
-    location_extension_targeting_field: (
-        LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField
-    )
+    location_extension_targeting_field: LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField
     education_field: EducationPlaceholderFieldEnum.EducationPlaceholderField
     flight_field: FlightPlaceholderFieldEnum.FlightPlaceholderField
     custom_field: CustomPlaceholderFieldEnum.CustomPlaceholderField
@@ -142,7 +140,35 @@ class AttributeFieldMapping(proto.Message):
         job_field: JobPlaceholderFieldEnum.JobPlaceholderField = ...,
         image_field: ImagePlaceholderFieldEnum.ImagePlaceholderField = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["feed_attribute_id", "field_id", "sitelink_field", "call_field", "app_field", "location_field", "affiliate_location_field", "callout_field", "structured_snippet_field", "message_field", "price_field", "promotion_field", "ad_customizer_field", "dsa_page_feed_field", "location_extension_targeting_field", "education_field", "flight_field", "custom_field", "hotel_field", "real_estate_field", "travel_field", "local_field", "job_field", "image_field"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "feed_attribute_id",
+            "field_id",
+            "sitelink_field",
+            "call_field",
+            "app_field",
+            "location_field",
+            "affiliate_location_field",
+            "callout_field",
+            "structured_snippet_field",
+            "message_field",
+            "price_field",
+            "promotion_field",
+            "ad_customizer_field",
+            "dsa_page_feed_field",
+            "location_extension_targeting_field",
+            "education_field",
+            "flight_field",
+            "custom_field",
+            "hotel_field",
+            "real_estate_field",
+            "travel_field",
+            "local_field",
+            "job_field",
+            "image_field",
+        ],
+    ) -> bool: ...
 
 class FeedMapping(proto.Message):
     resource_name: str
@@ -163,4 +189,14 @@ class FeedMapping(proto.Message):
         placeholder_type: PlaceholderTypeEnum.PlaceholderType = ...,
         criterion_type: FeedMappingCriterionTypeEnum.FeedMappingCriterionType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "feed", "attribute_field_mappings", "status", "placeholder_type", "criterion_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "feed",
+            "attribute_field_mappings",
+            "status",
+            "placeholder_type",
+            "criterion_type",
+        ],
+    ) -> bool: ...

@@ -81,22 +81,16 @@ class AssetGroupListingGroupFilterServiceClient(
     ) -> None: ...
     def mutate_asset_group_listing_group_filters(
         self,
-        request: (
-            asset_group_listing_group_filter_service.MutateAssetGroupListingGroupFiltersRequest
-            | dict
-            | None
-        ) = None,
+        request: asset_group_listing_group_filter_service.MutateAssetGroupListingGroupFiltersRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                asset_group_listing_group_filter_service.AssetGroupListingGroupFilterOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            asset_group_listing_group_filter_service.AssetGroupListingGroupFilterOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
-    ) -> (
-        asset_group_listing_group_filter_service.MutateAssetGroupListingGroupFiltersResponse
-    ): ...
+    ) -> asset_group_listing_group_filter_service.MutateAssetGroupListingGroupFiltersResponse: ...

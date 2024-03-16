@@ -20,7 +20,9 @@ class BillingSetupOperation(proto.Message):
         create: BillingSetup = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove"]
+    ) -> bool: ...
 
 class MutateBillingSetupRequest(proto.Message):
     customer_id: str
@@ -33,7 +35,9 @@ class MutateBillingSetupRequest(proto.Message):
         customer_id: str = ...,
         operation: BillingSetupOperation = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation"]
+    ) -> bool: ...
 
 class MutateBillingSetupResponse(proto.Message):
     result: MutateBillingSetupResult
@@ -44,7 +48,9 @@ class MutateBillingSetupResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateBillingSetupResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class MutateBillingSetupResult(proto.Message):
     resource_name: str
@@ -55,4 +61,6 @@ class MutateBillingSetupResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

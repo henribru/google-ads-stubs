@@ -30,7 +30,9 @@ class AddBatchJobOperationsRequest(proto.Message):
         sequence_token: str = ...,
         mutate_operations: MutableSequence[MutateOperation] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "sequence_token", "mutate_operations"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "sequence_token", "mutate_operations"]
+    ) -> bool: ...
 
 class AddBatchJobOperationsResponse(proto.Message):
     total_operations: int
@@ -43,7 +45,9 @@ class AddBatchJobOperationsResponse(proto.Message):
         total_operations: int = ...,
         next_sequence_token: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["total_operations", "next_sequence_token"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["total_operations", "next_sequence_token"]
+    ) -> bool: ...
 
 class BatchJobOperation(proto.Message):
     create: BatchJob
@@ -56,7 +60,9 @@ class BatchJobOperation(proto.Message):
         create: BatchJob = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove"]
+    ) -> bool: ...
 
 class BatchJobResult(proto.Message):
     operation_index: int
@@ -71,7 +77,9 @@ class BatchJobResult(proto.Message):
         mutate_operation_response: MutateOperationResponse = ...,
         status: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operation_index", "mutate_operation_response", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operation_index", "mutate_operation_response", "status"]
+    ) -> bool: ...
 
 class ListBatchJobResultsRequest(proto.Message):
     resource_name: str
@@ -88,7 +96,12 @@ class ListBatchJobResultsRequest(proto.Message):
         page_size: int = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "page_token", "page_size", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "page_token", "page_size", "response_content_type"
+        ],
+    ) -> bool: ...
 
 class ListBatchJobResultsResponse(proto.Message):
     results: MutableSequence[BatchJobResult]
@@ -101,7 +114,9 @@ class ListBatchJobResultsResponse(proto.Message):
         results: MutableSequence[BatchJobResult] = ...,
         next_page_token: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "next_page_token"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "next_page_token"]
+    ) -> bool: ...
 
 class MutateBatchJobRequest(proto.Message):
     customer_id: str
@@ -114,7 +129,9 @@ class MutateBatchJobRequest(proto.Message):
         customer_id: str = ...,
         operation: BatchJobOperation = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation"]
+    ) -> bool: ...
 
 class MutateBatchJobResponse(proto.Message):
     result: MutateBatchJobResult
@@ -125,7 +142,9 @@ class MutateBatchJobResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateBatchJobResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class MutateBatchJobResult(proto.Message):
     resource_name: str
@@ -136,7 +155,9 @@ class MutateBatchJobResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class RunBatchJobRequest(proto.Message):
     resource_name: str
@@ -147,4 +168,6 @@ class RunBatchJobRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

@@ -30,7 +30,16 @@ class AddOfflineUserDataJobOperationsRequest(proto.Message):
         operations: MutableSequence[OfflineUserDataJobOperation] = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "enable_partial_failure", "enable_warnings", "operations", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "enable_partial_failure",
+            "enable_warnings",
+            "operations",
+            "validate_only",
+        ],
+    ) -> bool: ...
 
 class AddOfflineUserDataJobOperationsResponse(proto.Message):
     partial_failure_error: Status
@@ -43,7 +52,9 @@ class AddOfflineUserDataJobOperationsResponse(proto.Message):
         partial_failure_error: Status = ...,
         warning: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "warning"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "warning"]
+    ) -> bool: ...
 
 class CreateOfflineUserDataJobRequest(proto.Message):
     customer_id: str
@@ -60,7 +71,12 @@ class CreateOfflineUserDataJobRequest(proto.Message):
         validate_only: bool = ...,
         enable_match_rate_range_preview: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "job", "validate_only", "enable_match_rate_range_preview"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id", "job", "validate_only", "enable_match_rate_range_preview"
+        ],
+    ) -> bool: ...
 
 class CreateOfflineUserDataJobResponse(proto.Message):
     resource_name: str
@@ -71,7 +87,9 @@ class CreateOfflineUserDataJobResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class OfflineUserDataJobOperation(proto.Message):
     create: UserData
@@ -86,7 +104,9 @@ class OfflineUserDataJobOperation(proto.Message):
         remove: UserData = ...,
         remove_all: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove", "remove_all"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove", "remove_all"]
+    ) -> bool: ...
 
 class RunOfflineUserDataJobRequest(proto.Message):
     resource_name: str
@@ -99,4 +119,6 @@ class RunOfflineUserDataJobRequest(proto.Message):
         resource_name: str = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "validate_only"]
+    ) -> bool: ...

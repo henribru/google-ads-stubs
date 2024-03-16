@@ -77,20 +77,14 @@ class CustomerUserAccessInvitationServiceClient(
     ) -> None: ...
     def mutate_customer_user_access_invitation(
         self,
-        request: (
-            customer_user_access_invitation_service.MutateCustomerUserAccessInvitationRequest
-            | dict
-            | None
-        ) = None,
+        request: customer_user_access_invitation_service.MutateCustomerUserAccessInvitationRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operation: (
-            customer_user_access_invitation_service.CustomerUserAccessInvitationOperation
-            | None
-        ) = None,
+        operation: customer_user_access_invitation_service.CustomerUserAccessInvitationOperation
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
-    ) -> (
-        customer_user_access_invitation_service.MutateCustomerUserAccessInvitationResponse
-    ): ...
+    ) -> customer_user_access_invitation_service.MutateCustomerUserAccessInvitationResponse: ...

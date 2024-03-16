@@ -45,4 +45,18 @@ class AdGroupSimulation(proto.Message):
         target_cpa_point_list: TargetCpaSimulationPointList = ...,
         target_roas_point_list: TargetRoasSimulationPointList = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "ad_group_id", "type_", "modification_method", "start_date", "end_date", "cpc_bid_point_list", "cpv_bid_point_list", "target_cpa_point_list", "target_roas_point_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "ad_group_id",
+            "type_",
+            "modification_method",
+            "start_date",
+            "end_date",
+            "cpc_bid_point_list",
+            "cpv_bid_point_list",
+            "target_cpa_point_list",
+            "target_roas_point_list",
+        ],
+    ) -> bool: ...

@@ -31,4 +31,9 @@ class RecommendationSubscription(proto.Message):
         modify_date_time: str = ...,
         status: RecommendationSubscriptionStatusEnum.RecommendationSubscriptionStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "type_", "create_date_time", "modify_date_time", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "type_", "create_date_time", "modify_date_time", "status"
+        ],
+    ) -> bool: ...

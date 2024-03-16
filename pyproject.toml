@@ -25,22 +25,15 @@ google-auth-stubs = ">=0.1.0"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.9.0"
-black = "^24.3.0"
-isort = "^5.13.2"
 stubdefaulter = "^0.1.0"
 ruff = "^0.3.3"
 
-[tool.black]
-target-version = ["py38"]
-
-[tool.isort]
-profile = "black"
-known_first_party = "google.ads.googleads"
-combine_as_imports = true
-float_to_top = true
-
 [tool.ruff.lint]
-select = ["UP"]
+select = ["UP", "I"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["google.ads.googleads"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

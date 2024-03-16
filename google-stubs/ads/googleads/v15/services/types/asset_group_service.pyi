@@ -26,7 +26,9 @@ class AssetGroupOperation(proto.Message):
         update: AssetGroup = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateAssetGroupResult(proto.Message):
     resource_name: str
@@ -37,7 +39,9 @@ class MutateAssetGroupResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class MutateAssetGroupsRequest(proto.Message):
     customer_id: str
@@ -52,7 +56,9 @@ class MutateAssetGroupsRequest(proto.Message):
         operations: MutableSequence[AssetGroupOperation] = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operations", "validate_only"]
+    ) -> bool: ...
 
 class MutateAssetGroupsResponse(proto.Message):
     results: MutableSequence[MutateAssetGroupResult]
@@ -65,4 +71,6 @@ class MutateAssetGroupsResponse(proto.Message):
         results: MutableSequence[MutateAssetGroupResult] = ...,
         partial_failure_error: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "partial_failure_error"]
+    ) -> bool: ...

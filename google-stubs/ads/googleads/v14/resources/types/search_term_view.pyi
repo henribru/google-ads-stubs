@@ -26,4 +26,6 @@ class SearchTermView(proto.Message):
         ad_group: str = ...,
         status: SearchTermTargetingStatusEnum.SearchTermTargetingStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "search_term", "ad_group", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "search_term", "ad_group", "status"]
+    ) -> bool: ...

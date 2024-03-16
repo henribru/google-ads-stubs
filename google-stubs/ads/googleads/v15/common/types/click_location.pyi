@@ -24,4 +24,6 @@ class ClickLocation(proto.Message):
         most_specific: str = ...,
         region: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["city", "country", "metro", "most_specific", "region"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["city", "country", "metro", "most_specific", "region"]
+    ) -> bool: ...

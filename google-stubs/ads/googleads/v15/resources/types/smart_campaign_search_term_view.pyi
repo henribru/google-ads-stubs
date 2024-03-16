@@ -20,4 +20,6 @@ class SmartCampaignSearchTermView(proto.Message):
         search_term: str = ...,
         campaign: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "search_term", "campaign"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "search_term", "campaign"]
+    ) -> bool: ...

@@ -79,23 +79,22 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
     ) -> None: ...
     def mutate_campaign_drafts(
         self,
-        request: (
-            campaign_draft_service.MutateCampaignDraftsRequest | dict | None
-        ) = None,
+        request: campaign_draft_service.MutateCampaignDraftsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[campaign_draft_service.CampaignDraftOperation] | None
-        ) = None,
+        operations: MutableSequence[campaign_draft_service.CampaignDraftOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
     ) -> campaign_draft_service.MutateCampaignDraftsResponse: ...
     def promote_campaign_draft(
         self,
-        request: (
-            campaign_draft_service.PromoteCampaignDraftRequest | dict | None
-        ) = None,
+        request: campaign_draft_service.PromoteCampaignDraftRequest
+        | dict
+        | None = None,
         *,
         campaign_draft: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
@@ -104,9 +103,9 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
     ) -> operation.Operation: ...
     def list_campaign_draft_async_errors(
         self,
-        request: (
-            campaign_draft_service.ListCampaignDraftAsyncErrorsRequest | dict | None
-        ) = None,
+        request: campaign_draft_service.ListCampaignDraftAsyncErrorsRequest
+        | dict
+        | None = None,
         *,
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
