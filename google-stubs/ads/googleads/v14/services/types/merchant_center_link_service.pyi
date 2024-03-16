@@ -21,7 +21,9 @@ class GetMerchantCenterLinkRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class ListMerchantCenterLinksRequest(proto.Message):
     customer_id: str
@@ -32,7 +34,9 @@ class ListMerchantCenterLinksRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id"]
+    ) -> bool: ...
 
 class ListMerchantCenterLinksResponse(proto.Message):
     merchant_center_links: MutableSequence[MerchantCenterLink]
@@ -43,7 +47,9 @@ class ListMerchantCenterLinksResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         merchant_center_links: MutableSequence[MerchantCenterLink] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["merchant_center_links"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant_center_links"]
+    ) -> bool: ...
 
 class MerchantCenterLinkOperation(proto.Message):
     update_mask: FieldMask
@@ -58,7 +64,9 @@ class MerchantCenterLinkOperation(proto.Message):
         update: MerchantCenterLink = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "update", "remove"]
+    ) -> bool: ...
 
 class MutateMerchantCenterLinkRequest(proto.Message):
     customer_id: str
@@ -73,7 +81,9 @@ class MutateMerchantCenterLinkRequest(proto.Message):
         operation: MerchantCenterLinkOperation = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation", "validate_only"]
+    ) -> bool: ...
 
 class MutateMerchantCenterLinkResponse(proto.Message):
     result: MutateMerchantCenterLinkResult
@@ -84,7 +94,9 @@ class MutateMerchantCenterLinkResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateMerchantCenterLinkResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class MutateMerchantCenterLinkResult(proto.Message):
     resource_name: str
@@ -95,4 +107,6 @@ class MutateMerchantCenterLinkResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

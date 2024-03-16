@@ -82,9 +82,9 @@ class GoogleAdsFieldServiceClient(metaclass=GoogleAdsFieldServiceClientMeta):
     ) -> google_ads_field.GoogleAdsField: ...
     def search_google_ads_fields(
         self,
-        request: (
-            google_ads_field_service.SearchGoogleAdsFieldsRequest | dict | None
-        ) = None,
+        request: google_ads_field_service.SearchGoogleAdsFieldsRequest
+        | dict
+        | None = None,
         *,
         query: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,

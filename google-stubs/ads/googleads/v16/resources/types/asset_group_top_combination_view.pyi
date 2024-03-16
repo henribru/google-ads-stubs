@@ -18,7 +18,9 @@ class AssetGroupAssetCombinationData(proto.Message):
         ignore_unknown_fields: bool = False,
         asset_combination_served_assets: MutableSequence[AssetUsage] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["asset_combination_served_assets"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["asset_combination_served_assets"]
+    ) -> bool: ...
 
 class AssetGroupTopCombinationView(proto.Message):
     resource_name: str
@@ -33,4 +35,6 @@ class AssetGroupTopCombinationView(proto.Message):
             AssetGroupAssetCombinationData
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "asset_group_top_combinations"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "asset_group_top_combinations"]
+    ) -> bool: ...

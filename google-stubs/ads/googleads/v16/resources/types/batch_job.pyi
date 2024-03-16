@@ -31,7 +31,18 @@ class BatchJob(proto.Message):
             executed_operation_count: int = ...,
             execution_limit_seconds: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["creation_date_time", "start_date_time", "completion_date_time", "estimated_completion_ratio", "operation_count", "executed_operation_count", "execution_limit_seconds"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "creation_date_time",
+                "start_date_time",
+                "completion_date_time",
+                "estimated_completion_ratio",
+                "operation_count",
+                "executed_operation_count",
+                "execution_limit_seconds",
+            ],
+        ) -> bool: ...
 
     resource_name: str
     id: int
@@ -51,4 +62,14 @@ class BatchJob(proto.Message):
         status: BatchJobStatusEnum.BatchJobStatus = ...,
         long_running_operation: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "next_add_sequence_token", "metadata", "status", "long_running_operation"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "next_add_sequence_token",
+            "metadata",
+            "status",
+            "long_running_operation",
+        ],
+    ) -> bool: ...

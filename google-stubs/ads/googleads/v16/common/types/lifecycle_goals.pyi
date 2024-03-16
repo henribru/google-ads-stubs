@@ -18,4 +18,6 @@ class LifecycleGoalValueSettings(proto.Message):
         value: float = ...,
         high_lifetime_value: float = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value", "high_lifetime_value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value", "high_lifetime_value"]
+    ) -> bool: ...

@@ -28,4 +28,6 @@ class CombinedAudience(proto.Message):
         name: str = ...,
         description: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "status", "name", "description"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "id", "status", "name", "description"]
+    ) -> bool: ...

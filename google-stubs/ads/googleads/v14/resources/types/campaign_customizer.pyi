@@ -29,4 +29,9 @@ class CampaignCustomizer(proto.Message):
         status: CustomizerValueStatusEnum.CustomizerValueStatus = ...,
         value: CustomizerValue = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "campaign", "customizer_attribute", "status", "value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "campaign", "customizer_attribute", "status", "value"
+        ],
+    ) -> bool: ...

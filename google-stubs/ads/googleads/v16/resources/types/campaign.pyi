@@ -111,7 +111,9 @@ class Campaign(proto.Message):
             app_id: str = ...,
             app_store: AppCampaignAppStoreEnum.AppCampaignAppStore = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["bidding_strategy_goal_type", "app_id", "app_store"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["bidding_strategy_goal_type", "app_id", "app_store"]
+        ) -> bool: ...
 
     class AssetAutomationSetting(proto.Message):
         asset_automation_type: AssetAutomationTypeEnum.AssetAutomationType
@@ -124,7 +126,9 @@ class Campaign(proto.Message):
             asset_automation_type: AssetAutomationTypeEnum.AssetAutomationType = ...,
             asset_automation_status: AssetAutomationStatusEnum.AssetAutomationStatus = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["asset_automation_type", "asset_automation_status"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["asset_automation_type", "asset_automation_status"]
+        ) -> bool: ...
 
     class AudienceSetting(proto.Message):
         use_audience_grouped: bool
@@ -135,7 +139,9 @@ class Campaign(proto.Message):
             ignore_unknown_fields: bool = False,
             use_audience_grouped: bool = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["use_audience_grouped"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["use_audience_grouped"]
+        ) -> bool: ...
 
     class CategoryBid(proto.Message):
         category_id: str
@@ -148,7 +154,9 @@ class Campaign(proto.Message):
             category_id: str = ...,
             manual_cpa_bid_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["category_id", "manual_cpa_bid_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["category_id", "manual_cpa_bid_micros"]
+        ) -> bool: ...
 
     class DiscoveryCampaignSettings(proto.Message):
         upgraded_targeting: bool
@@ -159,7 +167,9 @@ class Campaign(proto.Message):
             ignore_unknown_fields: bool = False,
             upgraded_targeting: bool = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["upgraded_targeting"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["upgraded_targeting"]
+        ) -> bool: ...
 
     class DynamicSearchAdsSetting(proto.Message):
         domain_name: str
@@ -176,7 +186,12 @@ class Campaign(proto.Message):
             use_supplied_urls_only: bool = ...,
             feeds: MutableSequence[str] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["domain_name", "language_code", "use_supplied_urls_only", "feeds"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "domain_name", "language_code", "use_supplied_urls_only", "feeds"
+            ],
+        ) -> bool: ...
 
     class GeoTargetTypeSetting(proto.Message):
         positive_geo_target_type: PositiveGeoTargetTypeEnum.PositiveGeoTargetType
@@ -189,7 +204,9 @@ class Campaign(proto.Message):
             positive_geo_target_type: PositiveGeoTargetTypeEnum.PositiveGeoTargetType = ...,
             negative_geo_target_type: NegativeGeoTargetTypeEnum.NegativeGeoTargetType = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["positive_geo_target_type", "negative_geo_target_type"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["positive_geo_target_type", "negative_geo_target_type"]
+        ) -> bool: ...
 
     class HotelSettingInfo(proto.Message):
         hotel_center_id: int
@@ -200,7 +217,9 @@ class Campaign(proto.Message):
             ignore_unknown_fields: bool = False,
             hotel_center_id: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["hotel_center_id"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["hotel_center_id"]
+        ) -> bool: ...
 
     class LocalCampaignSetting(proto.Message):
         location_source_type: LocationSourceTypeEnum.LocationSourceType
@@ -211,7 +230,9 @@ class Campaign(proto.Message):
             ignore_unknown_fields: bool = False,
             location_source_type: LocationSourceTypeEnum.LocationSourceType = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["location_source_type"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["location_source_type"]
+        ) -> bool: ...
 
     class LocalServicesCampaignSettings(proto.Message):
         category_bids: MutableSequence[Campaign.CategoryBid]
@@ -222,7 +243,9 @@ class Campaign(proto.Message):
             ignore_unknown_fields: bool = False,
             category_bids: MutableSequence[Campaign.CategoryBid] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["category_bids"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["category_bids"]
+        ) -> bool: ...
 
     class NetworkSettings(proto.Message):
         target_google_search: bool
@@ -243,7 +266,17 @@ class Campaign(proto.Message):
             target_youtube: bool = ...,
             target_google_tv_network: bool = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_google_search", "target_search_network", "target_content_network", "target_partner_search_network", "target_youtube", "target_google_tv_network"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "target_google_search",
+                "target_search_network",
+                "target_content_network",
+                "target_partner_search_network",
+                "target_youtube",
+                "target_google_tv_network",
+            ],
+        ) -> bool: ...
 
     class OptimizationGoalSetting(proto.Message):
         optimization_goal_types: MutableSequence[
@@ -258,7 +291,9 @@ class Campaign(proto.Message):
                 OptimizationGoalTypeEnum.OptimizationGoalType
             ] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["optimization_goal_types"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["optimization_goal_types"]
+        ) -> bool: ...
 
     class PerformanceMaxUpgrade(proto.Message):
         performance_max_campaign: str
@@ -273,7 +308,10 @@ class Campaign(proto.Message):
             pre_upgrade_campaign: str = ...,
             status: PerformanceMaxUpgradeStatusEnum.PerformanceMaxUpgradeStatus = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["performance_max_campaign", "pre_upgrade_campaign", "status"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal["performance_max_campaign", "pre_upgrade_campaign", "status"],
+        ) -> bool: ...
 
     class SelectiveOptimization(proto.Message):
         conversion_actions: MutableSequence[str]
@@ -284,7 +322,9 @@ class Campaign(proto.Message):
             ignore_unknown_fields: bool = False,
             conversion_actions: MutableSequence[str] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["conversion_actions"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["conversion_actions"]
+        ) -> bool: ...
 
     class ShoppingSetting(proto.Message):
         merchant_id: int
@@ -307,7 +347,18 @@ class Campaign(proto.Message):
             advertising_partner_ids: MutableSequence[int] = ...,
             disable_product_feed: bool = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["merchant_id", "feed_label", "campaign_priority", "enable_local", "use_vehicle_inventory", "advertising_partner_ids", "disable_product_feed"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "merchant_id",
+                "feed_label",
+                "campaign_priority",
+                "enable_local",
+                "use_vehicle_inventory",
+                "advertising_partner_ids",
+                "disable_product_feed",
+            ],
+        ) -> bool: ...
 
     class TrackingSetting(proto.Message):
         tracking_url: str
@@ -318,7 +369,9 @@ class Campaign(proto.Message):
             ignore_unknown_fields: bool = False,
             tracking_url: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["tracking_url"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["tracking_url"]
+        ) -> bool: ...
 
     class TravelCampaignSettings(proto.Message):
         travel_account_id: int
@@ -329,7 +382,9 @@ class Campaign(proto.Message):
             ignore_unknown_fields: bool = False,
             travel_account_id: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["travel_account_id"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["travel_account_id"]
+        ) -> bool: ...
 
     class VanityPharma(proto.Message):
         vanity_pharma_display_url_mode: (
@@ -344,7 +399,9 @@ class Campaign(proto.Message):
             vanity_pharma_display_url_mode: VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode = ...,
             vanity_pharma_text: VanityPharmaTextEnum.VanityPharmaText = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["vanity_pharma_display_url_mode", "vanity_pharma_text"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["vanity_pharma_display_url_mode", "vanity_pharma_text"]
+        ) -> bool: ...
 
     resource_name: str
     id: int
@@ -500,4 +557,73 @@ class Campaign(proto.Message):
         percent_cpc: PercentCpc = ...,
         target_cpm: TargetCpm = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "primary_status", "primary_status_reasons", "status", "serving_status", "bidding_strategy_system_status", "ad_serving_optimization_status", "advertising_channel_type", "advertising_channel_sub_type", "tracking_url_template", "url_custom_parameters", "local_services_campaign_settings", "travel_campaign_settings", "discovery_campaign_settings", "real_time_bidding_setting", "network_settings", "hotel_setting", "dynamic_search_ads_setting", "shopping_setting", "targeting_setting", "audience_setting", "geo_target_type_setting", "local_campaign_setting", "app_campaign_setting", "labels", "experiment_type", "base_campaign", "campaign_budget", "bidding_strategy_type", "accessible_bidding_strategy", "start_date", "campaign_group", "end_date", "final_url_suffix", "frequency_caps", "video_brand_safety_suitability", "vanity_pharma", "selective_optimization", "optimization_goal_setting", "tracking_setting", "payment_mode", "optimization_score", "excluded_parent_asset_field_types", "excluded_parent_asset_set_types", "url_expansion_opt_out", "performance_max_upgrade", "hotel_property_asset_set", "listing_type", "asset_automation_settings", "bidding_strategy", "commission", "manual_cpa", "manual_cpc", "manual_cpm", "manual_cpv", "maximize_conversions", "maximize_conversion_value", "target_cpa", "target_impression_share", "target_roas", "target_spend", "percent_cpc", "target_cpm"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "name",
+            "primary_status",
+            "primary_status_reasons",
+            "status",
+            "serving_status",
+            "bidding_strategy_system_status",
+            "ad_serving_optimization_status",
+            "advertising_channel_type",
+            "advertising_channel_sub_type",
+            "tracking_url_template",
+            "url_custom_parameters",
+            "local_services_campaign_settings",
+            "travel_campaign_settings",
+            "discovery_campaign_settings",
+            "real_time_bidding_setting",
+            "network_settings",
+            "hotel_setting",
+            "dynamic_search_ads_setting",
+            "shopping_setting",
+            "targeting_setting",
+            "audience_setting",
+            "geo_target_type_setting",
+            "local_campaign_setting",
+            "app_campaign_setting",
+            "labels",
+            "experiment_type",
+            "base_campaign",
+            "campaign_budget",
+            "bidding_strategy_type",
+            "accessible_bidding_strategy",
+            "start_date",
+            "campaign_group",
+            "end_date",
+            "final_url_suffix",
+            "frequency_caps",
+            "video_brand_safety_suitability",
+            "vanity_pharma",
+            "selective_optimization",
+            "optimization_goal_setting",
+            "tracking_setting",
+            "payment_mode",
+            "optimization_score",
+            "excluded_parent_asset_field_types",
+            "excluded_parent_asset_set_types",
+            "url_expansion_opt_out",
+            "performance_max_upgrade",
+            "hotel_property_asset_set",
+            "listing_type",
+            "asset_automation_settings",
+            "bidding_strategy",
+            "commission",
+            "manual_cpa",
+            "manual_cpc",
+            "manual_cpm",
+            "manual_cpv",
+            "maximize_conversions",
+            "maximize_conversion_value",
+            "target_cpa",
+            "target_impression_share",
+            "target_roas",
+            "target_spend",
+            "percent_cpc",
+            "target_cpm",
+        ],
+    ) -> bool: ...

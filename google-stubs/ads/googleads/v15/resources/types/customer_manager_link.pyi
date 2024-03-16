@@ -26,4 +26,7 @@ class CustomerManagerLink(proto.Message):
         manager_link_id: int = ...,
         status: ManagerLinkStatusEnum.ManagerLinkStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "manager_customer", "manager_link_id", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["resource_name", "manager_customer", "manager_link_id", "status"],
+    ) -> bool: ...

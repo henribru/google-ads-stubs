@@ -24,7 +24,9 @@ class AccountLinkOperation(proto.Message):
         update: AccountLink = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "update", "remove"]
+    ) -> bool: ...
 
 class CreateAccountLinkRequest(proto.Message):
     customer_id: str
@@ -37,7 +39,9 @@ class CreateAccountLinkRequest(proto.Message):
         customer_id: str = ...,
         account_link: AccountLink = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "account_link"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "account_link"]
+    ) -> bool: ...
 
 class CreateAccountLinkResponse(proto.Message):
     resource_name: str
@@ -48,7 +52,9 @@ class CreateAccountLinkResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class MutateAccountLinkRequest(proto.Message):
     customer_id: str
@@ -65,7 +71,10 @@ class MutateAccountLinkRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["customer_id", "operation", "partial_failure", "validate_only"],
+    ) -> bool: ...
 
 class MutateAccountLinkResponse(proto.Message):
     result: MutateAccountLinkResult
@@ -78,7 +87,9 @@ class MutateAccountLinkResponse(proto.Message):
         result: MutateAccountLinkResult = ...,
         partial_failure_error: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result", "partial_failure_error"]
+    ) -> bool: ...
 
 class MutateAccountLinkResult(proto.Message):
     resource_name: str
@@ -89,4 +100,6 @@ class MutateAccountLinkResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

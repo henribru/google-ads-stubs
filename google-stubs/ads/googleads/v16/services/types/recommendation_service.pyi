@@ -52,7 +52,9 @@ class ApplyRecommendationOperation(proto.Message):
             existing_assets: MutableSequence[str] = ...,
             scope: ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["new_assets", "existing_assets", "scope"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["new_assets", "existing_assets", "scope"]
+        ) -> bool: ...
 
     class CallAssetParameters(proto.Message):
         ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
@@ -63,7 +65,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad_asset_apply_parameters"]
+        ) -> bool: ...
 
     class CallExtensionParameters(proto.Message):
         call_extensions: MutableSequence[CallFeedItem]
@@ -74,7 +78,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             call_extensions: MutableSequence[CallFeedItem] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["call_extensions"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["call_extensions"]
+        ) -> bool: ...
 
     class CalloutAssetParameters(proto.Message):
         ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
@@ -85,7 +91,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad_asset_apply_parameters"]
+        ) -> bool: ...
 
     class CalloutExtensionParameters(proto.Message):
         callout_extensions: MutableSequence[CalloutFeedItem]
@@ -96,7 +104,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             callout_extensions: MutableSequence[CalloutFeedItem] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["callout_extensions"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["callout_extensions"]
+        ) -> bool: ...
 
     class CampaignBudgetParameters(proto.Message):
         new_budget_amount_micros: int
@@ -107,7 +117,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             new_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["new_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["new_budget_amount_micros"]
+        ) -> bool: ...
 
     class ForecastingSetTargetCpaParameters(proto.Message):
         target_cpa_micros: int
@@ -120,7 +132,9 @@ class ApplyRecommendationOperation(proto.Message):
             target_cpa_micros: int = ...,
             campaign_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_cpa_micros", "campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_cpa_micros", "campaign_budget_amount_micros"]
+        ) -> bool: ...
 
     class ForecastingSetTargetRoasParameters(proto.Message):
         target_roas: float
@@ -133,7 +147,9 @@ class ApplyRecommendationOperation(proto.Message):
             target_roas: float = ...,
             campaign_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_roas", "campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_roas", "campaign_budget_amount_micros"]
+        ) -> bool: ...
 
     class KeywordParameters(proto.Message):
         ad_group: str
@@ -148,7 +164,9 @@ class ApplyRecommendationOperation(proto.Message):
             match_type: KeywordMatchTypeEnum.KeywordMatchType = ...,
             cpc_bid_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad_group", "match_type", "cpc_bid_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad_group", "match_type", "cpc_bid_micros"]
+        ) -> bool: ...
 
     class LeadFormAssetParameters(proto.Message):
         ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
@@ -161,7 +179,12 @@ class ApplyRecommendationOperation(proto.Message):
             ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...,
             set_submit_lead_form_asset_campaign_goal: bool = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad_asset_apply_parameters", "set_submit_lead_form_asset_campaign_goal"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "ad_asset_apply_parameters", "set_submit_lead_form_asset_campaign_goal"
+            ],
+        ) -> bool: ...
 
     class LowerTargetRoasParameters(proto.Message):
         target_roas_multiplier: float
@@ -172,7 +195,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             target_roas_multiplier: float = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_roas_multiplier"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_roas_multiplier"]
+        ) -> bool: ...
 
     class MoveUnusedBudgetParameters(proto.Message):
         budget_micros_to_move: int
@@ -183,7 +208,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             budget_micros_to_move: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["budget_micros_to_move"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["budget_micros_to_move"]
+        ) -> bool: ...
 
     class RaiseTargetCpaBidTooLowParameters(proto.Message):
         target_multiplier: float
@@ -194,7 +221,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             target_multiplier: float = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_multiplier"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_multiplier"]
+        ) -> bool: ...
 
     class RaiseTargetCpaParameters(proto.Message):
         target_cpa_multiplier: float
@@ -205,7 +234,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             target_cpa_multiplier: float = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_cpa_multiplier"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_cpa_multiplier"]
+        ) -> bool: ...
 
     class ResponsiveSearchAdAssetParameters(proto.Message):
         updated_ad: Ad
@@ -216,7 +247,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             updated_ad: Ad = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["updated_ad"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["updated_ad"]
+        ) -> bool: ...
 
     class ResponsiveSearchAdImproveAdStrengthParameters(proto.Message):
         updated_ad: Ad
@@ -227,7 +260,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             updated_ad: Ad = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["updated_ad"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["updated_ad"]
+        ) -> bool: ...
 
     class ResponsiveSearchAdParameters(proto.Message):
         ad: Ad
@@ -238,7 +273,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             ad: Ad = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad"]
+        ) -> bool: ...
 
     class SitelinkAssetParameters(proto.Message):
         ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
@@ -249,7 +286,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad_asset_apply_parameters"]
+        ) -> bool: ...
 
     class SitelinkExtensionParameters(proto.Message):
         sitelink_extensions: MutableSequence[SitelinkFeedItem]
@@ -260,7 +299,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             sitelink_extensions: MutableSequence[SitelinkFeedItem] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["sitelink_extensions"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["sitelink_extensions"]
+        ) -> bool: ...
 
     class TargetCpaOptInParameters(proto.Message):
         target_cpa_micros: int
@@ -273,7 +314,9 @@ class ApplyRecommendationOperation(proto.Message):
             target_cpa_micros: int = ...,
             new_campaign_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_cpa_micros", "new_campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_cpa_micros", "new_campaign_budget_amount_micros"]
+        ) -> bool: ...
 
     class TargetRoasOptInParameters(proto.Message):
         target_roas: float
@@ -286,7 +329,9 @@ class ApplyRecommendationOperation(proto.Message):
             target_roas: float = ...,
             new_campaign_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_roas", "new_campaign_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_roas", "new_campaign_budget_amount_micros"]
+        ) -> bool: ...
 
     class TextAdParameters(proto.Message):
         ad: Ad
@@ -297,7 +342,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             ad: Ad = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad"]
+        ) -> bool: ...
 
     class UseBroadMatchKeywordParameters(proto.Message):
         new_budget_amount_micros: int
@@ -308,7 +355,9 @@ class ApplyRecommendationOperation(proto.Message):
             ignore_unknown_fields: bool = False,
             new_budget_amount_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["new_budget_amount_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["new_budget_amount_micros"]
+        ) -> bool: ...
 
     resource_name: str
     campaign_budget: ApplyRecommendationOperation.CampaignBudgetParameters
@@ -376,7 +425,36 @@ class ApplyRecommendationOperation(proto.Message):
         set_target_roas: ApplyRecommendationOperation.ForecastingSetTargetRoasParameters = ...,
         lead_form_asset: ApplyRecommendationOperation.LeadFormAssetParameters = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "campaign_budget", "text_ad", "keyword", "target_cpa_opt_in", "target_roas_opt_in", "callout_extension", "call_extension", "sitelink_extension", "move_unused_budget", "responsive_search_ad", "use_broad_match_keyword", "responsive_search_ad_asset", "responsive_search_ad_improve_ad_strength", "raise_target_cpa_bid_too_low", "forecasting_set_target_roas", "callout_asset", "call_asset", "sitelink_asset", "raise_target_cpa", "lower_target_roas", "forecasting_set_target_cpa", "set_target_cpa", "set_target_roas", "lead_form_asset"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "campaign_budget",
+            "text_ad",
+            "keyword",
+            "target_cpa_opt_in",
+            "target_roas_opt_in",
+            "callout_extension",
+            "call_extension",
+            "sitelink_extension",
+            "move_unused_budget",
+            "responsive_search_ad",
+            "use_broad_match_keyword",
+            "responsive_search_ad_asset",
+            "responsive_search_ad_improve_ad_strength",
+            "raise_target_cpa_bid_too_low",
+            "forecasting_set_target_roas",
+            "callout_asset",
+            "call_asset",
+            "sitelink_asset",
+            "raise_target_cpa",
+            "lower_target_roas",
+            "forecasting_set_target_cpa",
+            "set_target_cpa",
+            "set_target_roas",
+            "lead_form_asset",
+        ],
+    ) -> bool: ...
 
 class ApplyRecommendationRequest(proto.Message):
     customer_id: str
@@ -391,7 +469,9 @@ class ApplyRecommendationRequest(proto.Message):
         operations: MutableSequence[ApplyRecommendationOperation] = ...,
         partial_failure: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operations", "partial_failure"]
+    ) -> bool: ...
 
 class ApplyRecommendationResponse(proto.Message):
     results: MutableSequence[ApplyRecommendationResult]
@@ -404,7 +484,9 @@ class ApplyRecommendationResponse(proto.Message):
         results: MutableSequence[ApplyRecommendationResult] = ...,
         partial_failure_error: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "partial_failure_error"]
+    ) -> bool: ...
 
 class ApplyRecommendationResult(proto.Message):
     resource_name: str
@@ -415,7 +497,9 @@ class ApplyRecommendationResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class DismissRecommendationRequest(proto.Message):
     class DismissRecommendationOperation(proto.Message):
@@ -427,7 +511,9 @@ class DismissRecommendationRequest(proto.Message):
             ignore_unknown_fields: bool = False,
             resource_name: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["resource_name"]
+        ) -> bool: ...
 
     customer_id: str
     operations: MutableSequence[
@@ -445,7 +531,9 @@ class DismissRecommendationRequest(proto.Message):
         ] = ...,
         partial_failure: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operations", "partial_failure"]
+    ) -> bool: ...
 
 class DismissRecommendationResponse(proto.Message):
     class DismissRecommendationResult(proto.Message):
@@ -457,7 +545,9 @@ class DismissRecommendationResponse(proto.Message):
             ignore_unknown_fields: bool = False,
             resource_name: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["resource_name"]
+        ) -> bool: ...
 
     results: MutableSequence[DismissRecommendationResponse.DismissRecommendationResult]
     partial_failure_error: Status
@@ -471,7 +561,9 @@ class DismissRecommendationResponse(proto.Message):
         ] = ...,
         partial_failure_error: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "partial_failure_error"]
+    ) -> bool: ...
 
 class GenerateRecommendationsRequest(proto.Message):
     class AdGroupInfo(proto.Message):
@@ -485,7 +577,9 @@ class GenerateRecommendationsRequest(proto.Message):
             ad_group_type: AdGroupTypeEnum.AdGroupType = ...,
             keywords: MutableSequence[KeywordInfo] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["ad_group_type", "keywords"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["ad_group_type", "keywords"]
+        ) -> bool: ...
 
     class BiddingInfo(proto.Message):
         bidding_strategy_type: BiddingStrategyTypeEnum.BiddingStrategyType
@@ -500,7 +594,10 @@ class GenerateRecommendationsRequest(proto.Message):
             target_cpa_micros: int = ...,
             target_roas: float = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["bidding_strategy_type", "target_cpa_micros", "target_roas"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal["bidding_strategy_type", "target_cpa_micros", "target_roas"],
+        ) -> bool: ...
 
     class SeedInfo(proto.Message):
         url_seed: str
@@ -513,7 +610,9 @@ class GenerateRecommendationsRequest(proto.Message):
             url_seed: str = ...,
             keyword_seeds: MutableSequence[str] = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["url_seed", "keyword_seeds"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["url_seed", "keyword_seeds"]
+        ) -> bool: ...
 
     customer_id: str
     recommendation_types: MutableSequence[RecommendationTypeEnum.RecommendationType]
@@ -541,7 +640,19 @@ class GenerateRecommendationsRequest(proto.Message):
         ] = ...,
         seed_info: GenerateRecommendationsRequest.SeedInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "recommendation_types", "advertising_channel_type", "campaign_sitelink_count", "conversion_tracking_status", "bidding_info", "ad_group_info", "seed_info"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "recommendation_types",
+            "advertising_channel_type",
+            "campaign_sitelink_count",
+            "conversion_tracking_status",
+            "bidding_info",
+            "ad_group_info",
+            "seed_info",
+        ],
+    ) -> bool: ...
 
 class GenerateRecommendationsResponse(proto.Message):
     recommendations: MutableSequence[Recommendation]
@@ -552,4 +663,6 @@ class GenerateRecommendationsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         recommendations: MutableSequence[Recommendation] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["recommendations"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["recommendations"]
+    ) -> bool: ...

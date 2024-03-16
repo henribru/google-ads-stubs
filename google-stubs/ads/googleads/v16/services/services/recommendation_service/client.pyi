@@ -102,47 +102,40 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
         request: recommendation_service.ApplyRecommendationRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[recommendation_service.ApplyRecommendationOperation] | None
-        ) = None,
+        operations: MutableSequence[recommendation_service.ApplyRecommendationOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
     ) -> recommendation_service.ApplyRecommendationResponse: ...
     def dismiss_recommendation(
         self,
-        request: (
-            recommendation_service.DismissRecommendationRequest | dict | None
-        ) = None,
+        request: recommendation_service.DismissRecommendationRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                recommendation_service.DismissRecommendationRequest.DismissRecommendationOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            recommendation_service.DismissRecommendationRequest.DismissRecommendationOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
     ) -> recommendation_service.DismissRecommendationResponse: ...
     def generate_recommendations(
         self,
-        request: (
-            recommendation_service.GenerateRecommendationsRequest | dict | None
-        ) = None,
+        request: recommendation_service.GenerateRecommendationsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        recommendation_types: (
-            MutableSequence[
-                recommendation_type.RecommendationTypeEnum.RecommendationType
-            ]
-            | None
-        ) = None,
-        advertising_channel_type: (
-            gage_advertising_channel_type.AdvertisingChannelTypeEnum.AdvertisingChannelType
-            | None
-        ) = None,
+        recommendation_types: MutableSequence[
+            recommendation_type.RecommendationTypeEnum.RecommendationType
+        ]
+        | None = None,
+        advertising_channel_type: gage_advertising_channel_type.AdvertisingChannelTypeEnum.AdvertisingChannelType
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

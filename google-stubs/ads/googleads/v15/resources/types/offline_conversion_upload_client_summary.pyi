@@ -47,7 +47,9 @@ class OfflineConversionAlert(proto.Message):
         error: OfflineConversionError = ...,
         error_percentage: float = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["error", "error_percentage"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["error", "error_percentage"]
+    ) -> bool: ...
 
 class OfflineConversionError(proto.Message):
     collection_size_error: CollectionSizeErrorEnum.CollectionSizeError
@@ -78,7 +80,21 @@ class OfflineConversionError(proto.Message):
         string_format_error: StringFormatErrorEnum.StringFormatError = ...,
         string_length_error: StringLengthErrorEnum.StringLengthError = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["collection_size_error", "conversion_adjustment_upload_error", "conversion_upload_error", "date_error", "distinct_error", "field_error", "mutate_error", "not_allowlisted_error", "string_format_error", "string_length_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "collection_size_error",
+            "conversion_adjustment_upload_error",
+            "conversion_upload_error",
+            "date_error",
+            "distinct_error",
+            "field_error",
+            "mutate_error",
+            "not_allowlisted_error",
+            "string_format_error",
+            "string_length_error",
+        ],
+    ) -> bool: ...
 
 class OfflineConversionSummary(proto.Message):
     successful_count: int
@@ -95,7 +111,9 @@ class OfflineConversionSummary(proto.Message):
         job_id: int = ...,
         upload_date: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["successful_count", "failed_count", "job_id", "upload_date"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["successful_count", "failed_count", "job_id", "upload_date"]
+    ) -> bool: ...
 
 class OfflineConversionUploadClientSummary(proto.Message):
     resource_name: str
@@ -124,4 +142,18 @@ class OfflineConversionUploadClientSummary(proto.Message):
         job_summaries: MutableSequence[OfflineConversionSummary] = ...,
         alerts: MutableSequence[OfflineConversionAlert] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "client", "status", "total_event_count", "successful_event_count", "success_rate", "last_upload_date_time", "daily_summaries", "job_summaries", "alerts"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "client",
+            "status",
+            "total_event_count",
+            "successful_event_count",
+            "success_rate",
+            "last_upload_date_time",
+            "daily_summaries",
+            "job_summaries",
+            "alerts",
+        ],
+    ) -> bool: ...

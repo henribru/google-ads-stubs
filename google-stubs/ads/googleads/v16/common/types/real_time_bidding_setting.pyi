@@ -16,4 +16,6 @@ class RealTimeBiddingSetting(proto.Message):
         ignore_unknown_fields: bool = False,
         opt_in: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["opt_in"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["opt_in"]
+    ) -> bool: ...

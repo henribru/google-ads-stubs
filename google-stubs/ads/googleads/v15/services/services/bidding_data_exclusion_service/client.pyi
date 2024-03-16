@@ -79,19 +79,15 @@ class BiddingDataExclusionServiceClient(
     ) -> None: ...
     def mutate_bidding_data_exclusions(
         self,
-        request: (
-            bidding_data_exclusion_service.MutateBiddingDataExclusionsRequest
-            | dict
-            | None
-        ) = None,
+        request: bidding_data_exclusion_service.MutateBiddingDataExclusionsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                bidding_data_exclusion_service.BiddingDataExclusionOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            bidding_data_exclusion_service.BiddingDataExclusionOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

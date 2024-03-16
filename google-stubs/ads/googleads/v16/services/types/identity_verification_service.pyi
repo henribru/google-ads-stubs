@@ -23,7 +23,9 @@ class GetIdentityVerificationRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_id: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id"]
+    ) -> bool: ...
 
 class GetIdentityVerificationResponse(proto.Message):
     identity_verification: MutableSequence[IdentityVerification]
@@ -34,7 +36,9 @@ class GetIdentityVerificationResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         identity_verification: MutableSequence[IdentityVerification] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["identity_verification"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["identity_verification"]
+    ) -> bool: ...
 
 class IdentityVerification(proto.Message):
     verification_program: IdentityVerificationProgramEnum.IdentityVerificationProgram
@@ -49,7 +53,14 @@ class IdentityVerification(proto.Message):
         identity_verification_requirement: IdentityVerificationRequirement = ...,
         verification_progress: IdentityVerificationProgress = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["verification_program", "identity_verification_requirement", "verification_progress"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "verification_program",
+            "identity_verification_requirement",
+            "verification_progress",
+        ],
+    ) -> bool: ...
 
 class IdentityVerificationProgress(proto.Message):
     program_status: (
@@ -66,7 +77,10 @@ class IdentityVerificationProgress(proto.Message):
         invitation_link_expiration_time: str = ...,
         action_url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["program_status", "invitation_link_expiration_time", "action_url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["program_status", "invitation_link_expiration_time", "action_url"],
+    ) -> bool: ...
 
 class IdentityVerificationRequirement(proto.Message):
     verification_start_deadline_time: str
@@ -79,7 +93,12 @@ class IdentityVerificationRequirement(proto.Message):
         verification_start_deadline_time: str = ...,
         verification_completion_deadline_time: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["verification_start_deadline_time", "verification_completion_deadline_time"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "verification_start_deadline_time", "verification_completion_deadline_time"
+        ],
+    ) -> bool: ...
 
 class StartIdentityVerificationRequest(proto.Message):
     customer_id: str
@@ -92,4 +111,6 @@ class StartIdentityVerificationRequest(proto.Message):
         customer_id: str = ...,
         verification_program: IdentityVerificationProgramEnum.IdentityVerificationProgram = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "verification_program"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "verification_program"]
+    ) -> bool: ...

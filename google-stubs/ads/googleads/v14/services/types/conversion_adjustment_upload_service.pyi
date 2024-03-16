@@ -36,7 +36,19 @@ class ConversionAdjustment(proto.Message):
         user_identifiers: MutableSequence[UserIdentifier] = ...,
         user_agent: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["gclid_date_time_pair", "order_id", "conversion_action", "adjustment_date_time", "adjustment_type", "restatement_value", "user_identifiers", "user_agent"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "gclid_date_time_pair",
+            "order_id",
+            "conversion_action",
+            "adjustment_date_time",
+            "adjustment_type",
+            "restatement_value",
+            "user_identifiers",
+            "user_agent",
+        ],
+    ) -> bool: ...
 
 class ConversionAdjustmentResult(proto.Message):
     gclid_date_time_pair: GclidDateTimePair
@@ -55,7 +67,16 @@ class ConversionAdjustmentResult(proto.Message):
         adjustment_date_time: str = ...,
         adjustment_type: ConversionAdjustmentTypeEnum.ConversionAdjustmentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["gclid_date_time_pair", "order_id", "conversion_action", "adjustment_date_time", "adjustment_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "gclid_date_time_pair",
+            "order_id",
+            "conversion_action",
+            "adjustment_date_time",
+            "adjustment_type",
+        ],
+    ) -> bool: ...
 
 class GclidDateTimePair(proto.Message):
     gclid: str
@@ -68,7 +89,9 @@ class GclidDateTimePair(proto.Message):
         gclid: str = ...,
         conversion_date_time: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["gclid", "conversion_date_time"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["gclid", "conversion_date_time"]
+    ) -> bool: ...
 
 class RestatementValue(proto.Message):
     adjusted_value: float
@@ -81,7 +104,9 @@ class RestatementValue(proto.Message):
         adjusted_value: float = ...,
         currency_code: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["adjusted_value", "currency_code"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["adjusted_value", "currency_code"]
+    ) -> bool: ...
 
 class UploadConversionAdjustmentsRequest(proto.Message):
     customer_id: str
@@ -98,7 +123,12 @@ class UploadConversionAdjustmentsRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "conversion_adjustments", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id", "conversion_adjustments", "partial_failure", "validate_only"
+        ],
+    ) -> bool: ...
 
 class UploadConversionAdjustmentsResponse(proto.Message):
     partial_failure_error: Status
@@ -113,4 +143,6 @@ class UploadConversionAdjustmentsResponse(proto.Message):
         results: MutableSequence[ConversionAdjustmentResult] = ...,
         job_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results", "job_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results", "job_id"]
+    ) -> bool: ...

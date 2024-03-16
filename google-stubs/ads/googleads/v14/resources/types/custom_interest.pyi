@@ -38,7 +38,12 @@ class CustomInterest(proto.Message):
         description: str = ...,
         members: MutableSequence[CustomInterestMember] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "status", "name", "type_", "description", "members"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "id", "status", "name", "type_", "description", "members"
+        ],
+    ) -> bool: ...
 
 class CustomInterestMember(proto.Message):
     member_type: CustomInterestMemberTypeEnum.CustomInterestMemberType
@@ -51,4 +56,6 @@ class CustomInterestMember(proto.Message):
         member_type: CustomInterestMemberTypeEnum.CustomInterestMemberType = ...,
         parameter: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["member_type", "parameter"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["member_type", "parameter"]
+    ) -> bool: ...

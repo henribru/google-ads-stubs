@@ -37,7 +37,9 @@ class AdAssetPolicySummary(proto.Message):
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["policy_topic_entries", "review_status", "approval_status"]
+    ) -> bool: ...
 
 class AssetDisapproved(proto.Message):
     offline_evaluation_error_reasons: MutableSequence[
@@ -52,7 +54,9 @@ class AssetDisapproved(proto.Message):
             AssetOfflineEvaluationErrorReasonsEnum.AssetOfflineEvaluationErrorReasons
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["offline_evaluation_error_reasons"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["offline_evaluation_error_reasons"]
+    ) -> bool: ...
 
 class AssetLinkPrimaryStatusDetails(proto.Message):
     reason: AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason
@@ -67,4 +71,6 @@ class AssetLinkPrimaryStatusDetails(proto.Message):
         status: AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus = ...,
         asset_disapproved: AssetDisapproved = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["reason", "status", "asset_disapproved"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["reason", "status", "asset_disapproved"]
+    ) -> bool: ...

@@ -28,7 +28,9 @@ class FrequencyCapEntry(proto.Message):
         key: FrequencyCapKey = ...,
         cap: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["key", "cap"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["key", "cap"]
+    ) -> bool: ...
 
 class FrequencyCapKey(proto.Message):
     level: FrequencyCapLevelEnum.FrequencyCapLevel
@@ -45,4 +47,6 @@ class FrequencyCapKey(proto.Message):
         time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit = ...,
         time_length: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["level", "event_type", "time_unit", "time_length"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["level", "event_type", "time_unit", "time_length"]
+    ) -> bool: ...

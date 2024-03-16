@@ -25,7 +25,9 @@ class AccountBudgetProposalOperation(proto.Message):
         create: AccountBudgetProposal = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "remove"]
+    ) -> bool: ...
 
 class MutateAccountBudgetProposalRequest(proto.Message):
     customer_id: str
@@ -40,7 +42,9 @@ class MutateAccountBudgetProposalRequest(proto.Message):
         operation: AccountBudgetProposalOperation = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation", "validate_only"]
+    ) -> bool: ...
 
 class MutateAccountBudgetProposalResponse(proto.Message):
     result: MutateAccountBudgetProposalResult
@@ -51,7 +55,9 @@ class MutateAccountBudgetProposalResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateAccountBudgetProposalResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class MutateAccountBudgetProposalResult(proto.Message):
     resource_name: str
@@ -62,4 +68,6 @@ class MutateAccountBudgetProposalResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...

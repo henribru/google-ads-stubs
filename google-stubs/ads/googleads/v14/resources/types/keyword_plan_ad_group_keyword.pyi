@@ -30,4 +30,15 @@ class KeywordPlanAdGroupKeyword(proto.Message):
         cpc_bid_micros: int = ...,
         negative: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "keyword_plan_ad_group", "id", "text", "match_type", "cpc_bid_micros", "negative"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "keyword_plan_ad_group",
+            "id",
+            "text",
+            "match_type",
+            "cpc_bid_micros",
+            "negative",
+        ],
+    ) -> bool: ...

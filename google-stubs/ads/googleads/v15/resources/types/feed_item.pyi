@@ -61,7 +61,21 @@ class FeedItem(proto.Message):
         status: FeedItemStatusEnum.FeedItemStatus = ...,
         policy_infos: MutableSequence[FeedItemPlaceholderPolicyInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "feed", "id", "start_date_time", "end_date_time", "attribute_values", "geo_targeting_restriction", "url_custom_parameters", "status", "policy_infos"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "feed",
+            "id",
+            "start_date_time",
+            "end_date_time",
+            "attribute_values",
+            "geo_targeting_restriction",
+            "url_custom_parameters",
+            "status",
+            "policy_infos",
+        ],
+    ) -> bool: ...
 
 class FeedItemAttributeValue(proto.Message):
     feed_attribute_id: int
@@ -90,7 +104,21 @@ class FeedItemAttributeValue(proto.Message):
         string_values: MutableSequence[str] = ...,
         double_values: MutableSequence[float] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["feed_attribute_id", "integer_value", "boolean_value", "string_value", "double_value", "price_value", "integer_values", "boolean_values", "string_values", "double_values"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "feed_attribute_id",
+            "integer_value",
+            "boolean_value",
+            "string_value",
+            "double_value",
+            "price_value",
+            "integer_values",
+            "boolean_values",
+            "string_values",
+            "double_values",
+        ],
+    ) -> bool: ...
 
 class FeedItemPlaceholderPolicyInfo(proto.Message):
     placeholder_type_enum: PlaceholderTypeEnum.PlaceholderType
@@ -123,7 +151,20 @@ class FeedItemPlaceholderPolicyInfo(proto.Message):
             FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["placeholder_type_enum", "feed_mapping_resource_name", "review_status", "approval_status", "policy_topic_entries", "validation_status", "validation_errors", "quality_approval_status", "quality_disapproval_reasons"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "placeholder_type_enum",
+            "feed_mapping_resource_name",
+            "review_status",
+            "approval_status",
+            "policy_topic_entries",
+            "validation_status",
+            "validation_errors",
+            "quality_approval_status",
+            "quality_disapproval_reasons",
+        ],
+    ) -> bool: ...
 
 class FeedItemValidationError(proto.Message):
     validation_error: FeedItemValidationErrorEnum.FeedItemValidationError
@@ -140,4 +181,9 @@ class FeedItemValidationError(proto.Message):
         feed_attribute_ids: MutableSequence[int] = ...,
         extra_info: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["validation_error", "description", "feed_attribute_ids", "extra_info"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "validation_error", "description", "feed_attribute_ids", "extra_info"
+        ],
+    ) -> bool: ...

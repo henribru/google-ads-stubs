@@ -28,4 +28,15 @@ class PaymentsAccount(proto.Message):
         secondary_payments_profile_id: str = ...,
         paying_manager_customer: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "payments_account_id", "name", "currency_code", "payments_profile_id", "secondary_payments_profile_id", "paying_manager_customer"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "payments_account_id",
+            "name",
+            "currency_code",
+            "payments_profile_id",
+            "secondary_payments_profile_id",
+            "paying_manager_customer",
+        ],
+    ) -> bool: ...

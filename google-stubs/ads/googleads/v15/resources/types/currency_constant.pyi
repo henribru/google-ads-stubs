@@ -24,4 +24,7 @@ class CurrencyConstant(proto.Message):
         symbol: str = ...,
         billable_unit_micros: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "code", "name", "symbol", "billable_unit_micros"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["resource_name", "code", "name", "symbol", "billable_unit_micros"],
+    ) -> bool: ...

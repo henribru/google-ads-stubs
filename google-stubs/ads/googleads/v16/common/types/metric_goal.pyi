@@ -23,4 +23,6 @@ class MetricGoal(proto.Message):
         metric: ExperimentMetricEnum.ExperimentMetric = ...,
         direction: ExperimentMetricDirectionEnum.ExperimentMetricDirection = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["metric", "direction"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["metric", "direction"]
+    ) -> bool: ...

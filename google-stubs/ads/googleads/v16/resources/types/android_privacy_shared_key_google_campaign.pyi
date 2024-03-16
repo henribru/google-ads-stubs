@@ -30,4 +30,13 @@ class AndroidPrivacySharedKeyGoogleCampaign(proto.Message):
         android_privacy_interaction_date: str = ...,
         shared_campaign_key: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "campaign_id", "android_privacy_interaction_type", "android_privacy_interaction_date", "shared_campaign_key"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "campaign_id",
+            "android_privacy_interaction_type",
+            "android_privacy_interaction_date",
+            "shared_campaign_key",
+        ],
+    ) -> bool: ...

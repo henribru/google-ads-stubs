@@ -37,4 +37,16 @@ class ProductBiddingCategoryConstant(proto.Message):
         language_code: str = ...,
         localized_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "country_code", "product_bidding_category_constant_parent", "level", "status", "language_code", "localized_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "country_code",
+            "product_bidding_category_constant_parent",
+            "level",
+            "status",
+            "language_code",
+            "localized_name",
+        ],
+    ) -> bool: ...

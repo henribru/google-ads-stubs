@@ -31,7 +31,9 @@ class GetSmartCampaignStatusRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class GetSmartCampaignStatusResponse(proto.Message):
     smart_campaign_status: SmartCampaignStatusEnum.SmartCampaignStatus
@@ -52,7 +54,17 @@ class GetSmartCampaignStatusResponse(proto.Message):
         removed_details: SmartCampaignRemovedDetails = ...,
         ended_details: SmartCampaignEndedDetails = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["smart_campaign_status", "not_eligible_details", "eligible_details", "paused_details", "removed_details", "ended_details"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "smart_campaign_status",
+            "not_eligible_details",
+            "eligible_details",
+            "paused_details",
+            "removed_details",
+            "ended_details",
+        ],
+    ) -> bool: ...
 
 class MutateSmartCampaignSettingResult(proto.Message):
     resource_name: str
@@ -65,7 +77,9 @@ class MutateSmartCampaignSettingResult(proto.Message):
         resource_name: str = ...,
         smart_campaign_setting: SmartCampaignSetting = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "smart_campaign_setting"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "smart_campaign_setting"]
+    ) -> bool: ...
 
 class MutateSmartCampaignSettingsRequest(proto.Message):
     customer_id: str
@@ -84,7 +98,16 @@ class MutateSmartCampaignSettingsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateSmartCampaignSettingsResponse(proto.Message):
     partial_failure_error: Status
@@ -97,7 +120,9 @@ class MutateSmartCampaignSettingsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateSmartCampaignSettingResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...
 
 class SmartCampaignEligibleDetails(proto.Message):
     last_impression_date_time: str
@@ -110,7 +135,9 @@ class SmartCampaignEligibleDetails(proto.Message):
         last_impression_date_time: str = ...,
         end_date_time: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["last_impression_date_time", "end_date_time"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["last_impression_date_time", "end_date_time"]
+    ) -> bool: ...
 
 class SmartCampaignEndedDetails(proto.Message):
     end_date_time: str
@@ -121,7 +148,9 @@ class SmartCampaignEndedDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         end_date_time: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["end_date_time"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["end_date_time"]
+    ) -> bool: ...
 
 class SmartCampaignNotEligibleDetails(proto.Message):
     not_eligible_reason: (
@@ -134,7 +163,9 @@ class SmartCampaignNotEligibleDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         not_eligible_reason: SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["not_eligible_reason"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["not_eligible_reason"]
+    ) -> bool: ...
 
 class SmartCampaignPausedDetails(proto.Message):
     paused_date_time: str
@@ -145,7 +176,9 @@ class SmartCampaignPausedDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         paused_date_time: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["paused_date_time"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["paused_date_time"]
+    ) -> bool: ...
 
 class SmartCampaignRemovedDetails(proto.Message):
     removed_date_time: str
@@ -156,7 +189,9 @@ class SmartCampaignRemovedDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         removed_date_time: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["removed_date_time"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["removed_date_time"]
+    ) -> bool: ...
 
 class SmartCampaignSettingOperation(proto.Message):
     update: SmartCampaignSetting
@@ -169,4 +204,6 @@ class SmartCampaignSettingOperation(proto.Message):
         update: SmartCampaignSetting = ...,
         update_mask: FieldMask = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update", "update_mask"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update", "update_mask"]
+    ) -> bool: ...

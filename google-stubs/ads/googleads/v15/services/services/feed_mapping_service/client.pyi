@@ -80,9 +80,8 @@ class FeedMappingServiceClient(metaclass=FeedMappingServiceClientMeta):
         request: feed_mapping_service.MutateFeedMappingsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[feed_mapping_service.FeedMappingOperation] | None
-        ) = None,
+        operations: MutableSequence[feed_mapping_service.FeedMappingOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

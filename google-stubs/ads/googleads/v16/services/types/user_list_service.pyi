@@ -20,7 +20,9 @@ class MutateUserListResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class MutateUserListsRequest(proto.Message):
     customer_id: str
@@ -37,7 +39,10 @@ class MutateUserListsRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["customer_id", "operations", "partial_failure", "validate_only"],
+    ) -> bool: ...
 
 class MutateUserListsResponse(proto.Message):
     partial_failure_error: Status
@@ -50,7 +55,9 @@ class MutateUserListsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateUserListResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...
 
 class UserListOperation(proto.Message):
     update_mask: FieldMask
@@ -67,4 +74,6 @@ class UserListOperation(proto.Message):
         update: UserList = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...

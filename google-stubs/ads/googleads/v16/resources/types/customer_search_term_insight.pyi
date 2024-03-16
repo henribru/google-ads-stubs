@@ -20,4 +20,6 @@ class CustomerSearchTermInsight(proto.Message):
         category_label: str = ...,
         id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "category_label", "id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "category_label", "id"]
+    ) -> bool: ...

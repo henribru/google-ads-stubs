@@ -22,4 +22,6 @@ class CustomizerValue(proto.Message):
         type_: CustomizerAttributeTypeEnum.CustomizerAttributeType = ...,
         string_value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_", "string_value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_", "string_value"]
+    ) -> bool: ...

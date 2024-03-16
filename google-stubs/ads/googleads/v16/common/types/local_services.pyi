@@ -16,4 +16,6 @@ class LocalServicesDocumentReadOnly(proto.Message):
         ignore_unknown_fields: bool = False,
         document_url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["document_url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["document_url"]
+    ) -> bool: ...

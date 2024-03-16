@@ -28,7 +28,9 @@ class KeywordPlanCampaignKeywordOperation(proto.Message):
         update: KeywordPlanCampaignKeyword = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateKeywordPlanCampaignKeywordResult(proto.Message):
     resource_name: str
@@ -39,7 +41,9 @@ class MutateKeywordPlanCampaignKeywordResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class MutateKeywordPlanCampaignKeywordsRequest(proto.Message):
     customer_id: str
@@ -56,7 +60,10 @@ class MutateKeywordPlanCampaignKeywordsRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["customer_id", "operations", "partial_failure", "validate_only"],
+    ) -> bool: ...
 
 class MutateKeywordPlanCampaignKeywordsResponse(proto.Message):
     partial_failure_error: Status
@@ -69,4 +76,6 @@ class MutateKeywordPlanCampaignKeywordsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateKeywordPlanCampaignKeywordResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...

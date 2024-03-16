@@ -55,7 +55,9 @@ class BookOnGoogleAsset(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: NoReturn
+    ) -> bool: ...
 
 class BusinessProfileLocation(proto.Message):
     labels: MutableSequence[str]
@@ -70,7 +72,9 @@ class BusinessProfileLocation(proto.Message):
         store_code: str = ...,
         listing_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["labels", "store_code", "listing_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["labels", "store_code", "listing_id"]
+    ) -> bool: ...
 
 class CallAsset(proto.Message):
     country_code: str
@@ -91,7 +95,16 @@ class CallAsset(proto.Message):
         call_conversion_action: str = ...,
         ad_schedule_targets: MutableSequence[AdScheduleInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["country_code", "phone_number", "call_conversion_reporting_state", "call_conversion_action", "ad_schedule_targets"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "country_code",
+            "phone_number",
+            "call_conversion_reporting_state",
+            "call_conversion_action",
+            "ad_schedule_targets",
+        ],
+    ) -> bool: ...
 
 class CallToActionAsset(proto.Message):
     call_to_action: CallToActionTypeEnum.CallToActionType
@@ -102,7 +115,9 @@ class CallToActionAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         call_to_action: CallToActionTypeEnum.CallToActionType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["call_to_action"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["call_to_action"]
+    ) -> bool: ...
 
 class CalloutAsset(proto.Message):
     callout_text: str
@@ -119,7 +134,10 @@ class CalloutAsset(proto.Message):
         end_date: str = ...,
         ad_schedule_targets: MutableSequence[AdScheduleInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["callout_text", "start_date", "end_date", "ad_schedule_targets"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["callout_text", "start_date", "end_date", "ad_schedule_targets"],
+    ) -> bool: ...
 
 class DiscoveryCarouselCardAsset(proto.Message):
     marketing_image_asset: str
@@ -138,7 +156,16 @@ class DiscoveryCarouselCardAsset(proto.Message):
         headline: str = ...,
         call_to_action_text: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["marketing_image_asset", "square_marketing_image_asset", "portrait_marketing_image_asset", "headline", "call_to_action_text"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "marketing_image_asset",
+            "square_marketing_image_asset",
+            "portrait_marketing_image_asset",
+            "headline",
+            "call_to_action_text",
+        ],
+    ) -> bool: ...
 
 class DynamicCustomAsset(proto.Message):
     id: str
@@ -181,7 +208,28 @@ class DynamicCustomAsset(proto.Message):
         ios_app_store_id: int = ...,
         similar_ids: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["id", "id2", "item_title", "item_subtitle", "item_description", "item_address", "item_category", "price", "sale_price", "formatted_price", "formatted_sale_price", "image_url", "contextual_keywords", "android_app_link", "ios_app_link", "ios_app_store_id", "similar_ids"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "id",
+            "id2",
+            "item_title",
+            "item_subtitle",
+            "item_description",
+            "item_address",
+            "item_category",
+            "price",
+            "sale_price",
+            "formatted_price",
+            "formatted_sale_price",
+            "image_url",
+            "contextual_keywords",
+            "android_app_link",
+            "ios_app_link",
+            "ios_app_store_id",
+            "similar_ids",
+        ],
+    ) -> bool: ...
 
 class DynamicEducationAsset(proto.Message):
     program_id: str
@@ -218,7 +266,25 @@ class DynamicEducationAsset(proto.Message):
         thumbnail_image_url: str = ...,
         image_url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["program_id", "location_id", "program_name", "subject", "program_description", "school_name", "address", "contextual_keywords", "android_app_link", "similar_program_ids", "ios_app_link", "ios_app_store_id", "thumbnail_image_url", "image_url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "program_id",
+            "location_id",
+            "program_name",
+            "subject",
+            "program_description",
+            "school_name",
+            "address",
+            "contextual_keywords",
+            "android_app_link",
+            "similar_program_ids",
+            "ios_app_link",
+            "ios_app_store_id",
+            "thumbnail_image_url",
+            "image_url",
+        ],
+    ) -> bool: ...
 
 class DynamicFlightsAsset(proto.Message):
     destination_id: str
@@ -257,7 +323,26 @@ class DynamicFlightsAsset(proto.Message):
         similar_destination_ids: MutableSequence[str] = ...,
         custom_mapping: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["destination_id", "origin_id", "flight_description", "image_url", "destination_name", "origin_name", "flight_price", "flight_sale_price", "formatted_price", "formatted_sale_price", "android_app_link", "ios_app_link", "ios_app_store_id", "similar_destination_ids", "custom_mapping"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "destination_id",
+            "origin_id",
+            "flight_description",
+            "image_url",
+            "destination_name",
+            "origin_name",
+            "flight_price",
+            "flight_sale_price",
+            "formatted_price",
+            "formatted_sale_price",
+            "android_app_link",
+            "ios_app_link",
+            "ios_app_store_id",
+            "similar_destination_ids",
+            "custom_mapping",
+        ],
+    ) -> bool: ...
 
 class DynamicHotelsAndRentalsAsset(proto.Message):
     property_id: str
@@ -300,7 +385,28 @@ class DynamicHotelsAndRentalsAsset(proto.Message):
         formatted_sale_price: str = ...,
         similar_property_ids: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["property_id", "property_name", "image_url", "destination_name", "description", "price", "sale_price", "star_rating", "category", "contextual_keywords", "address", "android_app_link", "ios_app_link", "ios_app_store_id", "formatted_price", "formatted_sale_price", "similar_property_ids"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "property_id",
+            "property_name",
+            "image_url",
+            "destination_name",
+            "description",
+            "price",
+            "sale_price",
+            "star_rating",
+            "category",
+            "contextual_keywords",
+            "address",
+            "android_app_link",
+            "ios_app_link",
+            "ios_app_store_id",
+            "formatted_price",
+            "formatted_sale_price",
+            "similar_property_ids",
+        ],
+    ) -> bool: ...
 
 class DynamicJobsAsset(proto.Message):
     job_id: str
@@ -337,7 +443,25 @@ class DynamicJobsAsset(proto.Message):
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["job_id", "location_id", "job_title", "job_subtitle", "description", "image_url", "job_category", "contextual_keywords", "address", "salary", "android_app_link", "similar_job_ids", "ios_app_link", "ios_app_store_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "job_id",
+            "location_id",
+            "job_title",
+            "job_subtitle",
+            "description",
+            "image_url",
+            "job_category",
+            "contextual_keywords",
+            "address",
+            "salary",
+            "android_app_link",
+            "similar_job_ids",
+            "ios_app_link",
+            "ios_app_store_id",
+        ],
+    ) -> bool: ...
 
 class DynamicLocalAsset(proto.Message):
     deal_id: str
@@ -378,7 +502,27 @@ class DynamicLocalAsset(proto.Message):
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["deal_id", "deal_name", "subtitle", "description", "price", "sale_price", "image_url", "address", "category", "contextual_keywords", "formatted_price", "formatted_sale_price", "android_app_link", "similar_deal_ids", "ios_app_link", "ios_app_store_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "deal_id",
+            "deal_name",
+            "subtitle",
+            "description",
+            "price",
+            "sale_price",
+            "image_url",
+            "address",
+            "category",
+            "contextual_keywords",
+            "formatted_price",
+            "formatted_sale_price",
+            "android_app_link",
+            "similar_deal_ids",
+            "ios_app_link",
+            "ios_app_store_id",
+        ],
+    ) -> bool: ...
 
 class DynamicRealEstateAsset(proto.Message):
     listing_id: str
@@ -417,7 +561,26 @@ class DynamicRealEstateAsset(proto.Message):
         ios_app_store_id: int = ...,
         similar_listing_ids: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["listing_id", "listing_name", "city_name", "description", "address", "price", "image_url", "property_type", "listing_type", "contextual_keywords", "formatted_price", "android_app_link", "ios_app_link", "ios_app_store_id", "similar_listing_ids"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "listing_id",
+            "listing_name",
+            "city_name",
+            "description",
+            "address",
+            "price",
+            "image_url",
+            "property_type",
+            "listing_type",
+            "contextual_keywords",
+            "formatted_price",
+            "android_app_link",
+            "ios_app_link",
+            "ios_app_store_id",
+            "similar_listing_ids",
+        ],
+    ) -> bool: ...
 
 class DynamicTravelAsset(proto.Message):
     destination_id: str
@@ -460,7 +623,28 @@ class DynamicTravelAsset(proto.Message):
         ios_app_link: str = ...,
         ios_app_store_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["destination_id", "origin_id", "title", "destination_name", "destination_address", "origin_name", "price", "sale_price", "formatted_price", "formatted_sale_price", "category", "contextual_keywords", "similar_destination_ids", "image_url", "android_app_link", "ios_app_link", "ios_app_store_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "destination_id",
+            "origin_id",
+            "title",
+            "destination_name",
+            "destination_address",
+            "origin_name",
+            "price",
+            "sale_price",
+            "formatted_price",
+            "formatted_sale_price",
+            "category",
+            "contextual_keywords",
+            "similar_destination_ids",
+            "image_url",
+            "android_app_link",
+            "ios_app_link",
+            "ios_app_store_id",
+        ],
+    ) -> bool: ...
 
 class HotelCalloutAsset(proto.Message):
     text: str
@@ -473,7 +657,9 @@ class HotelCalloutAsset(proto.Message):
         text: str = ...,
         language_code: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["text", "language_code"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["text", "language_code"]
+    ) -> bool: ...
 
 class HotelPropertyAsset(proto.Message):
     place_id: str
@@ -488,7 +674,9 @@ class HotelPropertyAsset(proto.Message):
         hotel_address: str = ...,
         hotel_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["place_id", "hotel_address", "hotel_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["place_id", "hotel_address", "hotel_name"]
+    ) -> bool: ...
 
 class ImageAsset(proto.Message):
     data: bytes
@@ -505,7 +693,9 @@ class ImageAsset(proto.Message):
         mime_type: MimeTypeEnum.MimeType = ...,
         full_size: ImageDimension = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["data", "file_size", "mime_type", "full_size"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["data", "file_size", "mime_type", "full_size"]
+    ) -> bool: ...
 
 class ImageDimension(proto.Message):
     height_pixels: int
@@ -520,7 +710,9 @@ class ImageDimension(proto.Message):
         width_pixels: int = ...,
         url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["height_pixels", "width_pixels", "url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["height_pixels", "width_pixels", "url"]
+    ) -> bool: ...
 
 class LeadFormAsset(proto.Message):
     business_name: str
@@ -561,7 +753,26 @@ class LeadFormAsset(proto.Message):
         desired_intent: LeadFormDesiredIntentEnum.LeadFormDesiredIntent = ...,
         custom_disclosure: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["business_name", "call_to_action_type", "call_to_action_description", "headline", "description", "privacy_policy_url", "post_submit_headline", "post_submit_description", "fields", "custom_question_fields", "delivery_methods", "post_submit_call_to_action_type", "background_image_asset", "desired_intent", "custom_disclosure"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "business_name",
+            "call_to_action_type",
+            "call_to_action_description",
+            "headline",
+            "description",
+            "privacy_policy_url",
+            "post_submit_headline",
+            "post_submit_description",
+            "fields",
+            "custom_question_fields",
+            "delivery_methods",
+            "post_submit_call_to_action_type",
+            "background_image_asset",
+            "desired_intent",
+            "custom_disclosure",
+        ],
+    ) -> bool: ...
 
 class LeadFormCustomQuestionField(proto.Message):
     custom_question_text: str
@@ -576,7 +787,12 @@ class LeadFormCustomQuestionField(proto.Message):
         single_choice_answers: LeadFormSingleChoiceAnswers = ...,
         has_location_answer: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["custom_question_text", "single_choice_answers", "has_location_answer"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "custom_question_text", "single_choice_answers", "has_location_answer"
+        ],
+    ) -> bool: ...
 
 class LeadFormDeliveryMethod(proto.Message):
     webhook: WebhookDelivery
@@ -587,7 +803,9 @@ class LeadFormDeliveryMethod(proto.Message):
         ignore_unknown_fields: bool = False,
         webhook: WebhookDelivery = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["webhook"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["webhook"]
+    ) -> bool: ...
 
 class LeadFormField(proto.Message):
     input_type: LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType
@@ -602,7 +820,9 @@ class LeadFormField(proto.Message):
         single_choice_answers: LeadFormSingleChoiceAnswers = ...,
         has_location_answer: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["input_type", "single_choice_answers", "has_location_answer"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["input_type", "single_choice_answers", "has_location_answer"]
+    ) -> bool: ...
 
 class LeadFormSingleChoiceAnswers(proto.Message):
     answers: MutableSequence[str]
@@ -613,7 +833,9 @@ class LeadFormSingleChoiceAnswers(proto.Message):
         ignore_unknown_fields: bool = False,
         answers: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["answers"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["answers"]
+    ) -> bool: ...
 
 class LocationAsset(proto.Message):
     place_id: str
@@ -628,7 +850,12 @@ class LocationAsset(proto.Message):
         business_profile_locations: MutableSequence[BusinessProfileLocation] = ...,
         location_ownership_type: LocationOwnershipTypeEnum.LocationOwnershipType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["place_id", "business_profile_locations", "location_ownership_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "place_id", "business_profile_locations", "location_ownership_type"
+        ],
+    ) -> bool: ...
 
 class MediaBundleAsset(proto.Message):
     data: bytes
@@ -639,7 +866,9 @@ class MediaBundleAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         data: bytes = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["data"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["data"]
+    ) -> bool: ...
 
 class MobileAppAsset(proto.Message):
     app_id: str
@@ -658,7 +887,9 @@ class MobileAppAsset(proto.Message):
         start_date: str = ...,
         end_date: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["app_id", "app_store", "link_text", "start_date", "end_date"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["app_id", "app_store", "link_text", "start_date", "end_date"]
+    ) -> bool: ...
 
 class PageFeedAsset(proto.Message):
     page_url: str
@@ -671,7 +902,9 @@ class PageFeedAsset(proto.Message):
         page_url: str = ...,
         labels: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["page_url", "labels"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["page_url", "labels"]
+    ) -> bool: ...
 
 class PriceAsset(proto.Message):
     type_: PriceExtensionTypeEnum.PriceExtensionType
@@ -688,7 +921,10 @@ class PriceAsset(proto.Message):
         language_code: str = ...,
         price_offerings: MutableSequence[PriceOffering] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_", "price_qualifier", "language_code", "price_offerings"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["type_", "price_qualifier", "language_code", "price_offerings"],
+    ) -> bool: ...
 
 class PriceOffering(proto.Message):
     header: str
@@ -709,7 +945,12 @@ class PriceOffering(proto.Message):
         final_url: str = ...,
         final_mobile_url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["header", "description", "price", "unit", "final_url", "final_mobile_url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "header", "description", "price", "unit", "final_url", "final_mobile_url"
+        ],
+    ) -> bool: ...
 
 class PromotionAsset(proto.Message):
     promotion_target: str
@@ -746,7 +987,24 @@ class PromotionAsset(proto.Message):
         promotion_code: str = ...,
         orders_over_amount: Money = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["promotion_target", "discount_modifier", "redemption_start_date", "redemption_end_date", "occasion", "language_code", "start_date", "end_date", "ad_schedule_targets", "percent_off", "money_amount_off", "promotion_code", "orders_over_amount"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "promotion_target",
+            "discount_modifier",
+            "redemption_start_date",
+            "redemption_end_date",
+            "occasion",
+            "language_code",
+            "start_date",
+            "end_date",
+            "ad_schedule_targets",
+            "percent_off",
+            "money_amount_off",
+            "promotion_code",
+            "orders_over_amount",
+        ],
+    ) -> bool: ...
 
 class SitelinkAsset(proto.Message):
     link_text: str
@@ -767,7 +1025,17 @@ class SitelinkAsset(proto.Message):
         end_date: str = ...,
         ad_schedule_targets: MutableSequence[AdScheduleInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["link_text", "description1", "description2", "start_date", "end_date", "ad_schedule_targets"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "link_text",
+            "description1",
+            "description2",
+            "start_date",
+            "end_date",
+            "ad_schedule_targets",
+        ],
+    ) -> bool: ...
 
 class StructuredSnippetAsset(proto.Message):
     header: str
@@ -780,7 +1048,9 @@ class StructuredSnippetAsset(proto.Message):
         header: str = ...,
         values: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["header", "values"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["header", "values"]
+    ) -> bool: ...
 
 class TextAsset(proto.Message):
     text: str
@@ -791,7 +1061,9 @@ class TextAsset(proto.Message):
         ignore_unknown_fields: bool = False,
         text: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["text"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["text"]
+    ) -> bool: ...
 
 class WebhookDelivery(proto.Message):
     advertiser_webhook_url: str
@@ -806,7 +1078,12 @@ class WebhookDelivery(proto.Message):
         google_secret: str = ...,
         payload_schema_version: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["advertiser_webhook_url", "google_secret", "payload_schema_version"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "advertiser_webhook_url", "google_secret", "payload_schema_version"
+        ],
+    ) -> bool: ...
 
 class YoutubeVideoAsset(proto.Message):
     youtube_video_id: str
@@ -819,4 +1096,6 @@ class YoutubeVideoAsset(proto.Message):
         youtube_video_id: str = ...,
         youtube_video_title: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["youtube_video_id", "youtube_video_title"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["youtube_video_id", "youtube_video_title"]
+    ) -> bool: ...

@@ -81,22 +81,16 @@ class BiddingSeasonalityAdjustmentServiceClient(
     ) -> None: ...
     def mutate_bidding_seasonality_adjustments(
         self,
-        request: (
-            bidding_seasonality_adjustment_service.MutateBiddingSeasonalityAdjustmentsRequest
-            | dict
-            | None
-        ) = None,
+        request: bidding_seasonality_adjustment_service.MutateBiddingSeasonalityAdjustmentsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
-    ) -> (
-        bidding_seasonality_adjustment_service.MutateBiddingSeasonalityAdjustmentsResponse
-    ): ...
+    ) -> bidding_seasonality_adjustment_service.MutateBiddingSeasonalityAdjustmentsResponse: ...

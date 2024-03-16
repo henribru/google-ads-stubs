@@ -79,19 +79,15 @@ class CustomerExtensionSettingServiceClient(
     ) -> None: ...
     def mutate_customer_extension_settings(
         self,
-        request: (
-            customer_extension_setting_service.MutateCustomerExtensionSettingsRequest
-            | dict
-            | None
-        ) = None,
+        request: customer_extension_setting_service.MutateCustomerExtensionSettingsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                customer_extension_setting_service.CustomerExtensionSettingOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            customer_extension_setting_service.CustomerExtensionSettingOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

@@ -24,4 +24,6 @@ class LanguageConstant(proto.Message):
         name: str = ...,
         targetable: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "code", "name", "targetable"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "id", "code", "name", "targetable"]
+    ) -> bool: ...

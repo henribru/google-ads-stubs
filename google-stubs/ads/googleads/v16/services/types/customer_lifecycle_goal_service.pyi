@@ -25,7 +25,9 @@ class ConfigureCustomerLifecycleGoalsRequest(proto.Message):
         operation: CustomerLifecycleGoalOperation = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation", "validate_only"]
+    ) -> bool: ...
 
 class ConfigureCustomerLifecycleGoalsResponse(proto.Message):
     result: ConfigureCustomerLifecycleGoalsResult
@@ -36,7 +38,9 @@ class ConfigureCustomerLifecycleGoalsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: ConfigureCustomerLifecycleGoalsResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class ConfigureCustomerLifecycleGoalsResult(proto.Message):
     resource_name: str
@@ -47,7 +51,9 @@ class ConfigureCustomerLifecycleGoalsResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class CustomerLifecycleGoalOperation(proto.Message):
     update_mask: FieldMask
@@ -62,4 +68,6 @@ class CustomerLifecycleGoalOperation(proto.Message):
         create: CustomerLifecycleGoal = ...,
         update: CustomerLifecycleGoal = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update"]
+    ) -> bool: ...

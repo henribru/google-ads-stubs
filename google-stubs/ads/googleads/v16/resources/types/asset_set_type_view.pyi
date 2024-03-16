@@ -20,4 +20,6 @@ class AssetSetTypeView(proto.Message):
         resource_name: str = ...,
         asset_set_type: AssetSetTypeEnum.AssetSetType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "asset_set_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "asset_set_type"]
+    ) -> bool: ...

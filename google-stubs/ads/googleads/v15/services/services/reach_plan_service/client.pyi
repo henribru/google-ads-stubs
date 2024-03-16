@@ -88,9 +88,8 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
         *,
         customer_id: str | None = None,
         campaign_duration: reach_plan_service.CampaignDuration | None = None,
-        planned_products: (
-            MutableSequence[reach_plan_service.PlannedProduct] | None
-        ) = None,
+        planned_products: MutableSequence[reach_plan_service.PlannedProduct]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

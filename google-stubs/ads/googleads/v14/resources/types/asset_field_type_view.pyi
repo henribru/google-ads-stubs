@@ -20,4 +20,6 @@ class AssetFieldTypeView(proto.Message):
         resource_name: str = ...,
         field_type: AssetFieldTypeEnum.AssetFieldType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "field_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "field_type"]
+    ) -> bool: ...

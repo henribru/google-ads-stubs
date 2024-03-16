@@ -34,4 +34,16 @@ class CampaignDraft(proto.Message):
         has_experiment_running: bool = ...,
         long_running_operation: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "draft_id", "base_campaign", "name", "draft_campaign", "status", "has_experiment_running", "long_running_operation"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "draft_id",
+            "base_campaign",
+            "name",
+            "draft_campaign",
+            "status",
+            "has_experiment_running",
+            "long_running_operation",
+        ],
+    ) -> bool: ...

@@ -64,4 +64,25 @@ class BiddingStrategy(proto.Message):
         target_roas: TargetRoas = ...,
         target_spend: TargetSpend = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "status", "type_", "currency_code", "effective_currency_code", "aligned_campaign_budget_id", "campaign_count", "non_removed_campaign_count", "enhanced_cpc", "maximize_conversion_value", "maximize_conversions", "target_cpa", "target_impression_share", "target_roas", "target_spend"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "name",
+            "status",
+            "type_",
+            "currency_code",
+            "effective_currency_code",
+            "aligned_campaign_budget_id",
+            "campaign_count",
+            "non_removed_campaign_count",
+            "enhanced_cpc",
+            "maximize_conversion_value",
+            "maximize_conversions",
+            "target_cpa",
+            "target_impression_share",
+            "target_roas",
+            "target_spend",
+        ],
+    ) -> bool: ...

@@ -28,4 +28,6 @@ class PolicySummary(proto.Message):
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["policy_topic_entries", "review_status", "approval_status"]
+    ) -> bool: ...

@@ -41,4 +41,17 @@ class AdGroupCriterionSimulation(proto.Message):
         cpc_bid_point_list: CpcBidSimulationPointList = ...,
         percent_cpc_bid_point_list: PercentCpcBidSimulationPointList = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "ad_group_id", "criterion_id", "type_", "modification_method", "start_date", "end_date", "cpc_bid_point_list", "percent_cpc_bid_point_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "ad_group_id",
+            "criterion_id",
+            "type_",
+            "modification_method",
+            "start_date",
+            "end_date",
+            "cpc_bid_point_list",
+            "percent_cpc_bid_point_list",
+        ],
+    ) -> bool: ...

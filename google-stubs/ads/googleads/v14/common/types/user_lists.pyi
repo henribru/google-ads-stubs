@@ -44,7 +44,9 @@ class BasicUserListInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         actions: MutableSequence[UserListActionInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["actions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["actions"]
+    ) -> bool: ...
 
 class CrmBasedUserListInfo(proto.Message):
     app_id: str
@@ -59,7 +61,9 @@ class CrmBasedUserListInfo(proto.Message):
         upload_key_type: CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType = ...,
         data_source_type: UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["app_id", "upload_key_type", "data_source_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["app_id", "upload_key_type", "data_source_type"]
+    ) -> bool: ...
 
 class FlexibleRuleOperandInfo(proto.Message):
     rule: UserListRuleInfo
@@ -72,7 +76,9 @@ class FlexibleRuleOperandInfo(proto.Message):
         rule: UserListRuleInfo = ...,
         lookback_window_days: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["rule", "lookback_window_days"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["rule", "lookback_window_days"]
+    ) -> bool: ...
 
 class FlexibleRuleUserListInfo(proto.Message):
     inclusive_rule_operator: (
@@ -89,7 +95,12 @@ class FlexibleRuleUserListInfo(proto.Message):
         inclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...,
         exclusive_operands: MutableSequence[FlexibleRuleOperandInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["inclusive_rule_operator", "inclusive_operands", "exclusive_operands"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "inclusive_rule_operator", "inclusive_operands", "exclusive_operands"
+        ],
+    ) -> bool: ...
 
 class LogicalUserListInfo(proto.Message):
     rules: MutableSequence[UserListLogicalRuleInfo]
@@ -100,7 +111,9 @@ class LogicalUserListInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         rules: MutableSequence[UserListLogicalRuleInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["rules"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["rules"]
+    ) -> bool: ...
 
 class LogicalUserListOperandInfo(proto.Message):
     user_list: str
@@ -111,7 +124,9 @@ class LogicalUserListOperandInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         user_list: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["user_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["user_list"]
+    ) -> bool: ...
 
 class RuleBasedUserListInfo(proto.Message):
     prepopulation_status: UserListPrepopulationStatusEnum.UserListPrepopulationStatus
@@ -124,7 +139,9 @@ class RuleBasedUserListInfo(proto.Message):
         prepopulation_status: UserListPrepopulationStatusEnum.UserListPrepopulationStatus = ...,
         flexible_rule_user_list: FlexibleRuleUserListInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["prepopulation_status", "flexible_rule_user_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["prepopulation_status", "flexible_rule_user_list"]
+    ) -> bool: ...
 
 class SimilarUserListInfo(proto.Message):
     seed_user_list: str
@@ -135,7 +152,9 @@ class SimilarUserListInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         seed_user_list: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["seed_user_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["seed_user_list"]
+    ) -> bool: ...
 
 class UserListActionInfo(proto.Message):
     conversion_action: str
@@ -148,7 +167,9 @@ class UserListActionInfo(proto.Message):
         conversion_action: str = ...,
         remarketing_action: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["conversion_action", "remarketing_action"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["conversion_action", "remarketing_action"]
+    ) -> bool: ...
 
 class UserListDateRuleItemInfo(proto.Message):
     operator: UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator
@@ -163,7 +184,9 @@ class UserListDateRuleItemInfo(proto.Message):
         value: str = ...,
         offset_in_days: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operator", "value", "offset_in_days"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operator", "value", "offset_in_days"]
+    ) -> bool: ...
 
 class UserListLogicalRuleInfo(proto.Message):
     operator: UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator
@@ -176,7 +199,9 @@ class UserListLogicalRuleInfo(proto.Message):
         operator: UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator = ...,
         rule_operands: MutableSequence[LogicalUserListOperandInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operator", "rule_operands"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operator", "rule_operands"]
+    ) -> bool: ...
 
 class UserListNumberRuleItemInfo(proto.Message):
     operator: UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator
@@ -189,7 +214,9 @@ class UserListNumberRuleItemInfo(proto.Message):
         operator: UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator = ...,
         value: float = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operator", "value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operator", "value"]
+    ) -> bool: ...
 
 class UserListRuleInfo(proto.Message):
     rule_type: UserListRuleTypeEnum.UserListRuleType
@@ -202,7 +229,9 @@ class UserListRuleInfo(proto.Message):
         rule_type: UserListRuleTypeEnum.UserListRuleType = ...,
         rule_item_groups: MutableSequence[UserListRuleItemGroupInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["rule_type", "rule_item_groups"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["rule_type", "rule_item_groups"]
+    ) -> bool: ...
 
 class UserListRuleItemGroupInfo(proto.Message):
     rule_items: MutableSequence[UserListRuleItemInfo]
@@ -213,7 +242,9 @@ class UserListRuleItemGroupInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         rule_items: MutableSequence[UserListRuleItemInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["rule_items"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["rule_items"]
+    ) -> bool: ...
 
 class UserListRuleItemInfo(proto.Message):
     name: str
@@ -230,7 +261,10 @@ class UserListRuleItemInfo(proto.Message):
         string_rule_item: UserListStringRuleItemInfo = ...,
         date_rule_item: UserListDateRuleItemInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["name", "number_rule_item", "string_rule_item", "date_rule_item"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["name", "number_rule_item", "string_rule_item", "date_rule_item"],
+    ) -> bool: ...
 
 class UserListStringRuleItemInfo(proto.Message):
     operator: UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator
@@ -243,4 +277,6 @@ class UserListStringRuleItemInfo(proto.Message):
         operator: UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator = ...,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operator", "value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operator", "value"]
+    ) -> bool: ...

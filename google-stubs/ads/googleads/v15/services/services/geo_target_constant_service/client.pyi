@@ -71,9 +71,9 @@ class GeoTargetConstantServiceClient(metaclass=GeoTargetConstantServiceClientMet
     ) -> None: ...
     def suggest_geo_target_constants(
         self,
-        request: (
-            geo_target_constant_service.SuggestGeoTargetConstantsRequest | dict | None
-        ) = None,
+        request: geo_target_constant_service.SuggestGeoTargetConstantsRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

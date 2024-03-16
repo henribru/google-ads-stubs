@@ -66,7 +66,16 @@ class AdGroupCriterion(proto.Message):
             estimated_add_clicks_at_first_position_cpc: int = ...,
             estimated_add_cost_at_first_position_cpc: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["first_page_cpc_micros", "first_position_cpc_micros", "top_of_page_cpc_micros", "estimated_add_clicks_at_first_position_cpc", "estimated_add_cost_at_first_position_cpc"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "first_page_cpc_micros",
+                "first_position_cpc_micros",
+                "top_of_page_cpc_micros",
+                "estimated_add_clicks_at_first_position_cpc",
+                "estimated_add_cost_at_first_position_cpc",
+            ],
+        ) -> bool: ...
 
     class QualityInfo(proto.Message):
         quality_score: int
@@ -83,7 +92,15 @@ class AdGroupCriterion(proto.Message):
             post_click_quality_score: QualityScoreBucketEnum.QualityScoreBucket = ...,
             search_predicted_ctr: QualityScoreBucketEnum.QualityScoreBucket = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["quality_score", "creative_quality_score", "post_click_quality_score", "search_predicted_ctr"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "quality_score",
+                "creative_quality_score",
+                "post_click_quality_score",
+                "search_predicted_ctr",
+            ],
+        ) -> bool: ...
 
     resource_name: str
     criterion_id: int
@@ -199,4 +216,62 @@ class AdGroupCriterion(proto.Message):
         location: LocationInfo = ...,
         language: LanguageInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "criterion_id", "display_name", "status", "quality_info", "ad_group", "type_", "negative", "system_serving_status", "approval_status", "disapproval_reasons", "labels", "bid_modifier", "cpc_bid_micros", "cpm_bid_micros", "cpv_bid_micros", "percent_cpc_bid_micros", "effective_cpc_bid_micros", "effective_cpm_bid_micros", "effective_cpv_bid_micros", "effective_percent_cpc_bid_micros", "effective_cpc_bid_source", "effective_cpm_bid_source", "effective_cpv_bid_source", "effective_percent_cpc_bid_source", "position_estimates", "final_urls", "final_mobile_urls", "final_url_suffix", "tracking_url_template", "url_custom_parameters", "keyword", "placement", "mobile_app_category", "mobile_application", "listing_group", "age_range", "gender", "income_range", "parental_status", "user_list", "youtube_video", "youtube_channel", "topic", "user_interest", "webpage", "app_payment_model", "custom_affinity", "custom_intent", "custom_audience", "combined_audience", "audience", "location", "language"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "criterion_id",
+            "display_name",
+            "status",
+            "quality_info",
+            "ad_group",
+            "type_",
+            "negative",
+            "system_serving_status",
+            "approval_status",
+            "disapproval_reasons",
+            "labels",
+            "bid_modifier",
+            "cpc_bid_micros",
+            "cpm_bid_micros",
+            "cpv_bid_micros",
+            "percent_cpc_bid_micros",
+            "effective_cpc_bid_micros",
+            "effective_cpm_bid_micros",
+            "effective_cpv_bid_micros",
+            "effective_percent_cpc_bid_micros",
+            "effective_cpc_bid_source",
+            "effective_cpm_bid_source",
+            "effective_cpv_bid_source",
+            "effective_percent_cpc_bid_source",
+            "position_estimates",
+            "final_urls",
+            "final_mobile_urls",
+            "final_url_suffix",
+            "tracking_url_template",
+            "url_custom_parameters",
+            "keyword",
+            "placement",
+            "mobile_app_category",
+            "mobile_application",
+            "listing_group",
+            "age_range",
+            "gender",
+            "income_range",
+            "parental_status",
+            "user_list",
+            "youtube_video",
+            "youtube_channel",
+            "topic",
+            "user_interest",
+            "webpage",
+            "app_payment_model",
+            "custom_affinity",
+            "custom_intent",
+            "custom_audience",
+            "combined_audience",
+            "audience",
+            "location",
+            "language",
+        ],
+    ) -> bool: ...

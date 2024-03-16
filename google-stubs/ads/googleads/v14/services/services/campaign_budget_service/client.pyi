@@ -71,14 +71,13 @@ class CampaignBudgetServiceClient(metaclass=CampaignBudgetServiceClientMeta):
     ) -> None: ...
     def mutate_campaign_budgets(
         self,
-        request: (
-            campaign_budget_service.MutateCampaignBudgetsRequest | dict | None
-        ) = None,
+        request: campaign_budget_service.MutateCampaignBudgetsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[campaign_budget_service.CampaignBudgetOperation] | None
-        ) = None,
+        operations: MutableSequence[campaign_budget_service.CampaignBudgetOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

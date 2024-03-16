@@ -36,7 +36,18 @@ class HotelAssetSuggestion(proto.Message):
         image_assets: MutableSequence[HotelImageAsset] = ...,
         status: HotelAssetSuggestionStatusEnum.HotelAssetSuggestionStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["place_id", "final_url", "hotel_name", "call_to_action", "text_assets", "image_assets", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "place_id",
+            "final_url",
+            "hotel_name",
+            "call_to_action",
+            "text_assets",
+            "image_assets",
+            "status",
+        ],
+    ) -> bool: ...
 
 class HotelImageAsset(proto.Message):
     uri: str
@@ -49,7 +60,9 @@ class HotelImageAsset(proto.Message):
         uri: str = ...,
         asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["uri", "asset_field_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["uri", "asset_field_type"]
+    ) -> bool: ...
 
 class HotelTextAsset(proto.Message):
     text: str
@@ -62,7 +75,9 @@ class HotelTextAsset(proto.Message):
         text: str = ...,
         asset_field_type: AssetFieldTypeEnum.AssetFieldType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["text", "asset_field_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["text", "asset_field_type"]
+    ) -> bool: ...
 
 class SuggestTravelAssetsRequest(proto.Message):
     customer_id: str
@@ -77,7 +92,9 @@ class SuggestTravelAssetsRequest(proto.Message):
         language_option: str = ...,
         place_ids: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "language_option", "place_ids"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "language_option", "place_ids"]
+    ) -> bool: ...
 
 class SuggestTravelAssetsResponse(proto.Message):
     hotel_asset_suggestions: MutableSequence[HotelAssetSuggestion]
@@ -88,4 +105,6 @@ class SuggestTravelAssetsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         hotel_asset_suggestions: MutableSequence[HotelAssetSuggestion] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["hotel_asset_suggestions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["hotel_asset_suggestions"]
+    ) -> bool: ...

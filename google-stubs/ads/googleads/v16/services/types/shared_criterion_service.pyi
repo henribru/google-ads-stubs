@@ -30,7 +30,16 @@ class MutateSharedCriteriaRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateSharedCriteriaResponse(proto.Message):
     partial_failure_error: Status
@@ -43,7 +52,9 @@ class MutateSharedCriteriaResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateSharedCriterionResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...
 
 class MutateSharedCriterionResult(proto.Message):
     resource_name: str
@@ -56,7 +67,9 @@ class MutateSharedCriterionResult(proto.Message):
         resource_name: str = ...,
         shared_criterion: SharedCriterion = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "shared_criterion"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "shared_criterion"]
+    ) -> bool: ...
 
 class SharedCriterionOperation(proto.Message):
     create: SharedCriterion
@@ -69,4 +82,6 @@ class SharedCriterionOperation(proto.Message):
         create: SharedCriterion = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove"]
+    ) -> bool: ...

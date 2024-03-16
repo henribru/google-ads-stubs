@@ -31,7 +31,9 @@ class ConversionValueRuleSetOperation(proto.Message):
         update: ConversionValueRuleSet = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateConversionValueRuleSetResult(proto.Message):
     resource_name: str
@@ -44,7 +46,9 @@ class MutateConversionValueRuleSetResult(proto.Message):
         resource_name: str = ...,
         conversion_value_rule_set: ConversionValueRuleSet = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "conversion_value_rule_set"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "conversion_value_rule_set"]
+    ) -> bool: ...
 
 class MutateConversionValueRuleSetsRequest(proto.Message):
     customer_id: str
@@ -63,7 +67,16 @@ class MutateConversionValueRuleSetsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateConversionValueRuleSetsResponse(proto.Message):
     results: MutableSequence[MutateConversionValueRuleSetResult]
@@ -76,4 +89,6 @@ class MutateConversionValueRuleSetsResponse(proto.Message):
         results: MutableSequence[MutateConversionValueRuleSetResult] = ...,
         partial_failure_error: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "partial_failure_error"]
+    ) -> bool: ...

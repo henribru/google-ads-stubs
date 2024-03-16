@@ -41,7 +41,19 @@ class AdGroupAd(proto.Message):
         action_items: MutableSequence[str] = ...,
         labels: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "status", "ad_group", "ad", "policy_summary", "ad_strength", "action_items", "labels"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "status",
+            "ad_group",
+            "ad",
+            "policy_summary",
+            "ad_strength",
+            "action_items",
+            "labels",
+        ],
+    ) -> bool: ...
 
 class AdGroupAdPolicySummary(proto.Message):
     policy_topic_entries: MutableSequence[PolicyTopicEntry]
@@ -56,4 +68,6 @@ class AdGroupAdPolicySummary(proto.Message):
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["policy_topic_entries", "review_status", "approval_status"]
+    ) -> bool: ...

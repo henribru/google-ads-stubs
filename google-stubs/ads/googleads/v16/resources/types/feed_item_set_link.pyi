@@ -20,4 +20,6 @@ class FeedItemSetLink(proto.Message):
         feed_item: str = ...,
         feed_item_set: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "feed_item", "feed_item_set"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "feed_item", "feed_item_set"]
+    ) -> bool: ...

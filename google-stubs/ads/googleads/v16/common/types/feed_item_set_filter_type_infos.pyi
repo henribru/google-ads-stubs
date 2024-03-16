@@ -22,7 +22,9 @@ class BusinessNameFilter(proto.Message):
         business_name: str = ...,
         filter_type: FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["business_name", "filter_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["business_name", "filter_type"]
+    ) -> bool: ...
 
 class DynamicAffiliateLocationSetFilter(proto.Message):
     chain_ids: MutableSequence[int]
@@ -33,7 +35,9 @@ class DynamicAffiliateLocationSetFilter(proto.Message):
         ignore_unknown_fields: bool = False,
         chain_ids: MutableSequence[int] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["chain_ids"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["chain_ids"]
+    ) -> bool: ...
 
 class DynamicLocationSetFilter(proto.Message):
     labels: MutableSequence[str]
@@ -46,4 +50,6 @@ class DynamicLocationSetFilter(proto.Message):
         labels: MutableSequence[str] = ...,
         business_name_filter: BusinessNameFilter = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["labels", "business_name_filter"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["labels", "business_name_filter"]
+    ) -> bool: ...

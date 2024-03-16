@@ -36,7 +36,9 @@ class AdGroupAdAssetPolicySummary(proto.Message):
         review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ...,
         approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["policy_topic_entries", "review_status", "approval_status"]
+    ) -> bool: ...
 
 class AdGroupAdAssetView(proto.Message):
     resource_name: str
@@ -63,4 +65,17 @@ class AdGroupAdAssetView(proto.Message):
         pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType = ...,
         source: AssetSourceEnum.AssetSource = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "ad_group_ad", "asset", "field_type", "enabled", "policy_summary", "performance_label", "pinned_field", "source"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "ad_group_ad",
+            "asset",
+            "field_type",
+            "enabled",
+            "policy_summary",
+            "performance_label",
+            "pinned_field",
+            "source",
+        ],
+    ) -> bool: ...

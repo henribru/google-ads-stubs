@@ -37,7 +37,19 @@ class LocalServicesLeadConversation(proto.Message):
         phone_call_details: PhoneCallDetails = ...,
         message_details: MessageDetails = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "conversation_channel", "participant_type", "lead", "event_date_time", "phone_call_details", "message_details"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "conversation_channel",
+            "participant_type",
+            "lead",
+            "event_date_time",
+            "phone_call_details",
+            "message_details",
+        ],
+    ) -> bool: ...
 
 class MessageDetails(proto.Message):
     text: str
@@ -48,7 +60,9 @@ class MessageDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         text: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["text"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["text"]
+    ) -> bool: ...
 
 class PhoneCallDetails(proto.Message):
     call_duration_millis: int
@@ -61,4 +75,6 @@ class PhoneCallDetails(proto.Message):
         call_duration_millis: int = ...,
         call_recording_url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["call_duration_millis", "call_recording_url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["call_duration_millis", "call_recording_url"]
+    ) -> bool: ...

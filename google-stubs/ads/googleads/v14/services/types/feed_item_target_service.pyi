@@ -24,7 +24,9 @@ class FeedItemTargetOperation(proto.Message):
         create: FeedItemTarget = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["create", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["create", "remove"]
+    ) -> bool: ...
 
 class MutateFeedItemTargetResult(proto.Message):
     resource_name: str
@@ -37,7 +39,9 @@ class MutateFeedItemTargetResult(proto.Message):
         resource_name: str = ...,
         feed_item_target: FeedItemTarget = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "feed_item_target"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "feed_item_target"]
+    ) -> bool: ...
 
 class MutateFeedItemTargetsRequest(proto.Message):
     customer_id: str
@@ -56,7 +60,16 @@ class MutateFeedItemTargetsRequest(proto.Message):
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "response_content_type", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "response_content_type",
+            "validate_only",
+        ],
+    ) -> bool: ...
 
 class MutateFeedItemTargetsResponse(proto.Message):
     partial_failure_error: Status
@@ -69,4 +82,6 @@ class MutateFeedItemTargetsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateFeedItemTargetResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...

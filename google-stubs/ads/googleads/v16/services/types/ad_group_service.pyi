@@ -29,7 +29,9 @@ class AdGroupOperation(proto.Message):
         update: AdGroup = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateAdGroupResult(proto.Message):
     resource_name: str
@@ -42,7 +44,9 @@ class MutateAdGroupResult(proto.Message):
         resource_name: str = ...,
         ad_group: AdGroup = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "ad_group"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "ad_group"]
+    ) -> bool: ...
 
 class MutateAdGroupsRequest(proto.Message):
     customer_id: str
@@ -61,7 +65,16 @@ class MutateAdGroupsRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateAdGroupsResponse(proto.Message):
     partial_failure_error: Status
@@ -74,4 +87,6 @@ class MutateAdGroupsResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateAdGroupResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...

@@ -20,7 +20,9 @@ class CustomerSkAdNetworkConversionValueSchemaOperation(proto.Message):
         ignore_unknown_fields: bool = False,
         update: CustomerSkAdNetworkConversionValueSchema = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update"]
+    ) -> bool: ...
 
 class MutateCustomerSkAdNetworkConversionValueSchemaRequest(proto.Message):
     customer_id: str
@@ -35,7 +37,9 @@ class MutateCustomerSkAdNetworkConversionValueSchemaRequest(proto.Message):
         operation: CustomerSkAdNetworkConversionValueSchemaOperation = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "operation", "validate_only"]
+    ) -> bool: ...
 
 class MutateCustomerSkAdNetworkConversionValueSchemaResponse(proto.Message):
     result: MutateCustomerSkAdNetworkConversionValueSchemaResult
@@ -46,7 +50,9 @@ class MutateCustomerSkAdNetworkConversionValueSchemaResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         result: MutateCustomerSkAdNetworkConversionValueSchemaResult = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["result"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["result"]
+    ) -> bool: ...
 
 class MutateCustomerSkAdNetworkConversionValueSchemaResult(proto.Message):
     resource_name: str
@@ -59,4 +65,6 @@ class MutateCustomerSkAdNetworkConversionValueSchemaResult(proto.Message):
         resource_name: str = ...,
         app_id: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "app_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "app_id"]
+    ) -> bool: ...

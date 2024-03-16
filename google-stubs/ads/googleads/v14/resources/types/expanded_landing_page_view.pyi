@@ -18,4 +18,6 @@ class ExpandedLandingPageView(proto.Message):
         resource_name: str = ...,
         expanded_final_url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "expanded_final_url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "expanded_final_url"]
+    ) -> bool: ...

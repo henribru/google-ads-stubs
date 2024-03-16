@@ -83,16 +83,13 @@ class AccountBudgetProposalServiceClient(
     ) -> None: ...
     def mutate_account_budget_proposal(
         self,
-        request: (
-            account_budget_proposal_service.MutateAccountBudgetProposalRequest
-            | dict
-            | None
-        ) = None,
+        request: account_budget_proposal_service.MutateAccountBudgetProposalRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operation: (
-            account_budget_proposal_service.AccountBudgetProposalOperation | None
-        ) = None,
+        operation: account_budget_proposal_service.AccountBudgetProposalOperation
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

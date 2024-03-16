@@ -22,4 +22,6 @@ class FinalAppUrl(proto.Message):
         os_type: AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType = ...,
         url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["os_type", "url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["os_type", "url"]
+    ) -> bool: ...

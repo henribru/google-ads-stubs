@@ -30,7 +30,16 @@ class BillingSetup(proto.Message):
             payments_profile_name: str = ...,
             secondary_payments_profile_id: str = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["payments_account_id", "payments_account_name", "payments_profile_id", "payments_profile_name", "secondary_payments_profile_id"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "payments_account_id",
+                "payments_account_name",
+                "payments_profile_id",
+                "payments_profile_name",
+                "secondary_payments_profile_id",
+            ],
+        ) -> bool: ...
 
     resource_name: str
     id: int
@@ -56,4 +65,17 @@ class BillingSetup(proto.Message):
         end_date_time: str = ...,
         end_time_type: TimeTypeEnum.TimeType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "status", "payments_account", "payments_account_info", "start_date_time", "start_time_type", "end_date_time", "end_time_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "status",
+            "payments_account",
+            "payments_account_info",
+            "start_date_time",
+            "start_time_type",
+            "end_date_time",
+            "end_time_type",
+        ],
+    ) -> bool: ...

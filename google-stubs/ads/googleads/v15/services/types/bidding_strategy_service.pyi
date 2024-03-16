@@ -29,7 +29,9 @@ class BiddingStrategyOperation(proto.Message):
         update: BiddingStrategy = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateBiddingStrategiesRequest(proto.Message):
     customer_id: str
@@ -48,7 +50,16 @@ class MutateBiddingStrategiesRequest(proto.Message):
         validate_only: bool = ...,
         response_content_type: ResponseContentTypeEnum.ResponseContentType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "customer_id",
+            "operations",
+            "partial_failure",
+            "validate_only",
+            "response_content_type",
+        ],
+    ) -> bool: ...
 
 class MutateBiddingStrategiesResponse(proto.Message):
     partial_failure_error: Status
@@ -61,7 +72,9 @@ class MutateBiddingStrategiesResponse(proto.Message):
         partial_failure_error: Status = ...,
         results: MutableSequence[MutateBiddingStrategyResult] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["partial_failure_error", "results"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["partial_failure_error", "results"]
+    ) -> bool: ...
 
 class MutateBiddingStrategyResult(proto.Message):
     resource_name: str
@@ -74,4 +87,6 @@ class MutateBiddingStrategyResult(proto.Message):
         resource_name: str = ...,
         bidding_strategy: BiddingStrategy = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "bidding_strategy"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "bidding_strategy"]
+    ) -> bool: ...

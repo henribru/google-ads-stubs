@@ -26,4 +26,6 @@ class CampaignGroup(proto.Message):
         name: str = ...,
         status: CampaignGroupStatusEnum.CampaignGroupStatus = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "status"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "id", "name", "status"]
+    ) -> bool: ...

@@ -80,9 +80,8 @@ class FeedItemSetServiceClient(metaclass=FeedItemSetServiceClientMeta):
         request: feed_item_set_service.MutateFeedItemSetsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[feed_item_set_service.FeedItemSetOperation] | None
-        ) = None,
+        operations: MutableSequence[feed_item_set_service.FeedItemSetOperation]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

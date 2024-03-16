@@ -85,22 +85,16 @@ class ConversionGoalCampaignConfigServiceClient(
     ) -> None: ...
     def mutate_conversion_goal_campaign_configs(
         self,
-        request: (
-            conversion_goal_campaign_config_service.MutateConversionGoalCampaignConfigsRequest
-            | dict
-            | None
-        ) = None,
+        request: conversion_goal_campaign_config_service.MutateConversionGoalCampaignConfigsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                conversion_goal_campaign_config_service.ConversionGoalCampaignConfigOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            conversion_goal_campaign_config_service.ConversionGoalCampaignConfigOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),
-    ) -> (
-        conversion_goal_campaign_config_service.MutateConversionGoalCampaignConfigsResponse
-    ): ...
+    ) -> conversion_goal_campaign_config_service.MutateConversionGoalCampaignConfigsResponse: ...

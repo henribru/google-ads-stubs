@@ -24,4 +24,6 @@ class RemarketingAction(proto.Message):
         name: str = ...,
         tag_snippets: MutableSequence[TagSnippet] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "tag_snippets"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "id", "name", "tag_snippets"]
+    ) -> bool: ...

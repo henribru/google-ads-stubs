@@ -23,7 +23,9 @@ class AdvertisingPartnerLinkInvitationIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         customer: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer"]
+    ) -> bool: ...
 
 class HotelCenterLinkInvitationIdentifier(proto.Message):
     hotel_center_id: int
@@ -34,7 +36,9 @@ class HotelCenterLinkInvitationIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         hotel_center_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["hotel_center_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["hotel_center_id"]
+    ) -> bool: ...
 
 class MerchantCenterLinkInvitationIdentifier(proto.Message):
     merchant_center_id: int
@@ -45,7 +49,9 @@ class MerchantCenterLinkInvitationIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         merchant_center_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["merchant_center_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant_center_id"]
+    ) -> bool: ...
 
 class ProductLinkInvitation(proto.Message):
     resource_name: str
@@ -68,4 +74,15 @@ class ProductLinkInvitation(proto.Message):
         merchant_center: MerchantCenterLinkInvitationIdentifier = ...,
         advertising_partner: AdvertisingPartnerLinkInvitationIdentifier = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "product_link_invitation_id", "status", "type_", "hotel_center", "merchant_center", "advertising_partner"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "product_link_invitation_id",
+            "status",
+            "type_",
+            "hotel_center",
+            "merchant_center",
+            "advertising_partner",
+        ],
+    ) -> bool: ...

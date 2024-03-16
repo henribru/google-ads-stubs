@@ -27,7 +27,9 @@ class KeywordPlan(proto.Message):
         name: str = ...,
         forecast_period: KeywordPlanForecastPeriod = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "forecast_period"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "id", "name", "forecast_period"]
+    ) -> bool: ...
 
 class KeywordPlanForecastPeriod(proto.Message):
     date_interval: KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
@@ -40,4 +42,6 @@ class KeywordPlanForecastPeriod(proto.Message):
         date_interval: KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval = ...,
         date_range: DateRange = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["date_interval", "date_range"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["date_interval", "date_range"]
+    ) -> bool: ...

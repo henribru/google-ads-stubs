@@ -26,7 +26,9 @@ class FeedItemSetOperation(proto.Message):
         update: FeedItemSet = ...,
         remove: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["update_mask", "create", "update", "remove"]
+    ) -> bool: ...
 
 class MutateFeedItemSetResult(proto.Message):
     resource_name: str
@@ -37,7 +39,9 @@ class MutateFeedItemSetResult(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class MutateFeedItemSetsRequest(proto.Message):
     customer_id: str
@@ -54,7 +58,10 @@ class MutateFeedItemSetsRequest(proto.Message):
         partial_failure: bool = ...,
         validate_only: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["customer_id", "operations", "partial_failure", "validate_only"],
+    ) -> bool: ...
 
 class MutateFeedItemSetsResponse(proto.Message):
     results: MutableSequence[MutateFeedItemSetResult]
@@ -67,4 +74,6 @@ class MutateFeedItemSetsResponse(proto.Message):
         results: MutableSequence[MutateFeedItemSetResult] = ...,
         partial_failure_error: Status = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "partial_failure_error"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "partial_failure_error"]
+    ) -> bool: ...

@@ -60,7 +60,9 @@ class ActivityCountryInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class ActivityIdInfo(proto.Message):
     value: str
@@ -71,7 +73,9 @@ class ActivityIdInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class ActivityRatingInfo(proto.Message):
     value: int
@@ -82,7 +86,9 @@ class ActivityRatingInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class AdScheduleInfo(proto.Message):
     start_minute: MinuteOfHourEnum.MinuteOfHour
@@ -101,7 +107,12 @@ class AdScheduleInfo(proto.Message):
         end_hour: int = ...,
         day_of_week: DayOfWeekEnum.DayOfWeek = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["start_minute", "end_minute", "start_hour", "end_hour", "day_of_week"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "start_minute", "end_minute", "start_hour", "end_hour", "day_of_week"
+        ],
+    ) -> bool: ...
 
 class AddressInfo(proto.Message):
     postal_code: str
@@ -124,7 +135,18 @@ class AddressInfo(proto.Message):
         street_address2: str = ...,
         city_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["postal_code", "province_code", "country_code", "province_name", "street_address", "street_address2", "city_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "postal_code",
+            "province_code",
+            "country_code",
+            "province_name",
+            "street_address",
+            "street_address2",
+            "city_name",
+        ],
+    ) -> bool: ...
 
 class AgeRangeInfo(proto.Message):
     type_: AgeRangeTypeEnum.AgeRangeType
@@ -135,7 +157,9 @@ class AgeRangeInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: AgeRangeTypeEnum.AgeRangeType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class AppPaymentModelInfo(proto.Message):
     type_: AppPaymentModelTypeEnum.AppPaymentModelType
@@ -146,7 +170,9 @@ class AppPaymentModelInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: AppPaymentModelTypeEnum.AppPaymentModelType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class AudienceInfo(proto.Message):
     audience: str
@@ -157,7 +183,9 @@ class AudienceInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         audience: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["audience"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["audience"]
+    ) -> bool: ...
 
 class CarrierInfo(proto.Message):
     carrier_constant: str
@@ -168,7 +196,9 @@ class CarrierInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         carrier_constant: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["carrier_constant"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["carrier_constant"]
+    ) -> bool: ...
 
 class CombinedAudienceInfo(proto.Message):
     combined_audience: str
@@ -179,7 +209,9 @@ class CombinedAudienceInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         combined_audience: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["combined_audience"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["combined_audience"]
+    ) -> bool: ...
 
 class ContentLabelInfo(proto.Message):
     type_: ContentLabelTypeEnum.ContentLabelType
@@ -190,7 +222,9 @@ class ContentLabelInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: ContentLabelTypeEnum.ContentLabelType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class CustomAffinityInfo(proto.Message):
     custom_affinity: str
@@ -201,7 +235,9 @@ class CustomAffinityInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         custom_affinity: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["custom_affinity"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["custom_affinity"]
+    ) -> bool: ...
 
 class CustomAudienceInfo(proto.Message):
     custom_audience: str
@@ -212,7 +248,9 @@ class CustomAudienceInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         custom_audience: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["custom_audience"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["custom_audience"]
+    ) -> bool: ...
 
 class CustomIntentInfo(proto.Message):
     custom_intent: str
@@ -223,7 +261,9 @@ class CustomIntentInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         custom_intent: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["custom_intent"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["custom_intent"]
+    ) -> bool: ...
 
 class DeviceInfo(proto.Message):
     type_: DeviceEnum.Device
@@ -234,7 +274,9 @@ class DeviceInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: DeviceEnum.Device = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class GenderInfo(proto.Message):
     type_: GenderTypeEnum.GenderType
@@ -245,7 +287,9 @@ class GenderInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: GenderTypeEnum.GenderType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class GeoPointInfo(proto.Message):
     longitude_in_micro_degrees: int
@@ -258,7 +302,9 @@ class GeoPointInfo(proto.Message):
         longitude_in_micro_degrees: int = ...,
         latitude_in_micro_degrees: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["longitude_in_micro_degrees", "latitude_in_micro_degrees"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["longitude_in_micro_degrees", "latitude_in_micro_degrees"]
+    ) -> bool: ...
 
 class HotelAdvanceBookingWindowInfo(proto.Message):
     min_days: int
@@ -271,7 +317,9 @@ class HotelAdvanceBookingWindowInfo(proto.Message):
         min_days: int = ...,
         max_days: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["min_days", "max_days"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["min_days", "max_days"]
+    ) -> bool: ...
 
 class HotelCheckInDateRangeInfo(proto.Message):
     start_date: str
@@ -284,7 +332,9 @@ class HotelCheckInDateRangeInfo(proto.Message):
         start_date: str = ...,
         end_date: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["start_date", "end_date"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["start_date", "end_date"]
+    ) -> bool: ...
 
 class HotelCheckInDayInfo(proto.Message):
     day_of_week: DayOfWeekEnum.DayOfWeek
@@ -295,7 +345,9 @@ class HotelCheckInDayInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         day_of_week: DayOfWeekEnum.DayOfWeek = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["day_of_week"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["day_of_week"]
+    ) -> bool: ...
 
 class HotelCityInfo(proto.Message):
     city_criterion: str
@@ -306,7 +358,9 @@ class HotelCityInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         city_criterion: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["city_criterion"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["city_criterion"]
+    ) -> bool: ...
 
 class HotelClassInfo(proto.Message):
     value: int
@@ -317,7 +371,9 @@ class HotelClassInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class HotelCountryRegionInfo(proto.Message):
     country_region_criterion: str
@@ -328,7 +384,9 @@ class HotelCountryRegionInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         country_region_criterion: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["country_region_criterion"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["country_region_criterion"]
+    ) -> bool: ...
 
 class HotelDateSelectionTypeInfo(proto.Message):
     type_: HotelDateSelectionTypeEnum.HotelDateSelectionType
@@ -339,7 +397,9 @@ class HotelDateSelectionTypeInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: HotelDateSelectionTypeEnum.HotelDateSelectionType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class HotelIdInfo(proto.Message):
     value: str
@@ -350,7 +410,9 @@ class HotelIdInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class HotelLengthOfStayInfo(proto.Message):
     min_nights: int
@@ -363,7 +425,9 @@ class HotelLengthOfStayInfo(proto.Message):
         min_nights: int = ...,
         max_nights: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["min_nights", "max_nights"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["min_nights", "max_nights"]
+    ) -> bool: ...
 
 class HotelStateInfo(proto.Message):
     state_criterion: str
@@ -374,7 +438,9 @@ class HotelStateInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         state_criterion: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["state_criterion"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["state_criterion"]
+    ) -> bool: ...
 
 class IncomeRangeInfo(proto.Message):
     type_: IncomeRangeTypeEnum.IncomeRangeType
@@ -385,7 +451,9 @@ class IncomeRangeInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: IncomeRangeTypeEnum.IncomeRangeType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class InteractionTypeInfo(proto.Message):
     type_: InteractionTypeEnum.InteractionType
@@ -396,7 +464,9 @@ class InteractionTypeInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: InteractionTypeEnum.InteractionType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class IpBlockInfo(proto.Message):
     ip_address: str
@@ -407,7 +477,9 @@ class IpBlockInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         ip_address: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["ip_address"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["ip_address"]
+    ) -> bool: ...
 
 class KeywordInfo(proto.Message):
     text: str
@@ -420,7 +492,9 @@ class KeywordInfo(proto.Message):
         text: str = ...,
         match_type: KeywordMatchTypeEnum.KeywordMatchType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["text", "match_type"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["text", "match_type"]
+    ) -> bool: ...
 
 class KeywordThemeInfo(proto.Message):
     keyword_theme_constant: str
@@ -433,7 +507,9 @@ class KeywordThemeInfo(proto.Message):
         keyword_theme_constant: str = ...,
         free_form_keyword_theme: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["keyword_theme_constant", "free_form_keyword_theme"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["keyword_theme_constant", "free_form_keyword_theme"]
+    ) -> bool: ...
 
 class LanguageInfo(proto.Message):
     language_constant: str
@@ -444,7 +520,9 @@ class LanguageInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         language_constant: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["language_constant"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["language_constant"]
+    ) -> bool: ...
 
 class ListingDimensionInfo(proto.Message):
     hotel_id: HotelIdInfo
@@ -495,7 +573,32 @@ class ListingDimensionInfo(proto.Message):
         activity_country: ActivityCountryInfo = ...,
         unknown_listing_dimension: UnknownListingDimensionInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["hotel_id", "hotel_class", "hotel_country_region", "hotel_state", "hotel_city", "product_bidding_category", "product_brand", "product_channel", "product_channel_exclusivity", "product_condition", "product_custom_attribute", "product_item_id", "product_type", "product_grouping", "product_labels", "product_legacy_condition", "product_type_full", "activity_id", "activity_rating", "activity_country", "unknown_listing_dimension"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "hotel_id",
+            "hotel_class",
+            "hotel_country_region",
+            "hotel_state",
+            "hotel_city",
+            "product_bidding_category",
+            "product_brand",
+            "product_channel",
+            "product_channel_exclusivity",
+            "product_condition",
+            "product_custom_attribute",
+            "product_item_id",
+            "product_type",
+            "product_grouping",
+            "product_labels",
+            "product_legacy_condition",
+            "product_type_full",
+            "activity_id",
+            "activity_rating",
+            "activity_country",
+            "unknown_listing_dimension",
+        ],
+    ) -> bool: ...
 
 class ListingDimensionPath(proto.Message):
     dimensions: MutableSequence[ListingDimensionInfo]
@@ -506,7 +609,9 @@ class ListingDimensionPath(proto.Message):
         ignore_unknown_fields: bool = False,
         dimensions: MutableSequence[ListingDimensionInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["dimensions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["dimensions"]
+    ) -> bool: ...
 
 class ListingGroupInfo(proto.Message):
     type_: ListingGroupTypeEnum.ListingGroupType
@@ -523,7 +628,9 @@ class ListingGroupInfo(proto.Message):
         parent_ad_group_criterion: str = ...,
         path: ListingDimensionPath = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_", "case_value", "parent_ad_group_criterion", "path"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_", "case_value", "parent_ad_group_criterion", "path"]
+    ) -> bool: ...
 
 class ListingScopeInfo(proto.Message):
     dimensions: MutableSequence[ListingDimensionInfo]
@@ -534,7 +641,9 @@ class ListingScopeInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         dimensions: MutableSequence[ListingDimensionInfo] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["dimensions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["dimensions"]
+    ) -> bool: ...
 
 class LocalServiceIdInfo(proto.Message):
     service_id: str
@@ -545,7 +654,9 @@ class LocalServiceIdInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         service_id: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["service_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["service_id"]
+    ) -> bool: ...
 
 class LocationGroupInfo(proto.Message):
     feed: str
@@ -568,7 +679,18 @@ class LocationGroupInfo(proto.Message):
         enable_customer_level_location_asset_set: bool = ...,
         location_group_asset_sets: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["feed", "geo_target_constants", "radius", "radius_units", "feed_item_sets", "enable_customer_level_location_asset_set", "location_group_asset_sets"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "feed",
+            "geo_target_constants",
+            "radius",
+            "radius_units",
+            "feed_item_sets",
+            "enable_customer_level_location_asset_set",
+            "location_group_asset_sets",
+        ],
+    ) -> bool: ...
 
 class LocationInfo(proto.Message):
     geo_target_constant: str
@@ -579,7 +701,9 @@ class LocationInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         geo_target_constant: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["geo_target_constant"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["geo_target_constant"]
+    ) -> bool: ...
 
 class MobileAppCategoryInfo(proto.Message):
     mobile_app_category_constant: str
@@ -590,7 +714,9 @@ class MobileAppCategoryInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         mobile_app_category_constant: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["mobile_app_category_constant"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["mobile_app_category_constant"]
+    ) -> bool: ...
 
 class MobileApplicationInfo(proto.Message):
     app_id: str
@@ -603,7 +729,9 @@ class MobileApplicationInfo(proto.Message):
         app_id: str = ...,
         name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["app_id", "name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["app_id", "name"]
+    ) -> bool: ...
 
 class MobileDeviceInfo(proto.Message):
     mobile_device_constant: str
@@ -614,7 +742,9 @@ class MobileDeviceInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         mobile_device_constant: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["mobile_device_constant"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["mobile_device_constant"]
+    ) -> bool: ...
 
 class NegativeKeywordListInfo(proto.Message):
     shared_set: str
@@ -625,7 +755,9 @@ class NegativeKeywordListInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         shared_set: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["shared_set"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["shared_set"]
+    ) -> bool: ...
 
 class OperatingSystemVersionInfo(proto.Message):
     operating_system_version_constant: str
@@ -636,7 +768,9 @@ class OperatingSystemVersionInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         operating_system_version_constant: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operating_system_version_constant"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operating_system_version_constant"]
+    ) -> bool: ...
 
 class ParentalStatusInfo(proto.Message):
     type_: ParentalStatusTypeEnum.ParentalStatusType
@@ -647,7 +781,9 @@ class ParentalStatusInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         type_: ParentalStatusTypeEnum.ParentalStatusType = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["type_"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["type_"]
+    ) -> bool: ...
 
 class PlacementInfo(proto.Message):
     url: str
@@ -658,7 +794,9 @@ class PlacementInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["url"]
+    ) -> bool: ...
 
 class ProductBiddingCategoryInfo(proto.Message):
     id: int
@@ -671,7 +809,9 @@ class ProductBiddingCategoryInfo(proto.Message):
         id: int = ...,
         level: ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["id", "level"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["id", "level"]
+    ) -> bool: ...
 
 class ProductBrandInfo(proto.Message):
     value: str
@@ -682,7 +822,9 @@ class ProductBrandInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class ProductChannelExclusivityInfo(proto.Message):
     channel_exclusivity: ProductChannelExclusivityEnum.ProductChannelExclusivity
@@ -693,7 +835,9 @@ class ProductChannelExclusivityInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         channel_exclusivity: ProductChannelExclusivityEnum.ProductChannelExclusivity = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["channel_exclusivity"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["channel_exclusivity"]
+    ) -> bool: ...
 
 class ProductChannelInfo(proto.Message):
     channel: ProductChannelEnum.ProductChannel
@@ -704,7 +848,9 @@ class ProductChannelInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         channel: ProductChannelEnum.ProductChannel = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["channel"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["channel"]
+    ) -> bool: ...
 
 class ProductConditionInfo(proto.Message):
     condition: ProductConditionEnum.ProductCondition
@@ -715,7 +861,9 @@ class ProductConditionInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         condition: ProductConditionEnum.ProductCondition = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["condition"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["condition"]
+    ) -> bool: ...
 
 class ProductCustomAttributeInfo(proto.Message):
     value: str
@@ -728,7 +876,9 @@ class ProductCustomAttributeInfo(proto.Message):
         value: str = ...,
         index: ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value", "index"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value", "index"]
+    ) -> bool: ...
 
 class ProductGroupingInfo(proto.Message):
     value: str
@@ -739,7 +889,9 @@ class ProductGroupingInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class ProductItemIdInfo(proto.Message):
     value: str
@@ -750,7 +902,9 @@ class ProductItemIdInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class ProductLabelsInfo(proto.Message):
     value: str
@@ -761,7 +915,9 @@ class ProductLabelsInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class ProductLegacyConditionInfo(proto.Message):
     value: str
@@ -772,7 +928,9 @@ class ProductLegacyConditionInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class ProductTypeFullInfo(proto.Message):
     value: str
@@ -783,7 +941,9 @@ class ProductTypeFullInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         value: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value"]
+    ) -> bool: ...
 
 class ProductTypeInfo(proto.Message):
     value: str
@@ -796,7 +956,9 @@ class ProductTypeInfo(proto.Message):
         value: str = ...,
         level: ProductTypeLevelEnum.ProductTypeLevel = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["value", "level"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["value", "level"]
+    ) -> bool: ...
 
 class ProximityInfo(proto.Message):
     geo_point: GeoPointInfo
@@ -813,7 +975,9 @@ class ProximityInfo(proto.Message):
         radius_units: ProximityRadiusUnitsEnum.ProximityRadiusUnits = ...,
         address: AddressInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["geo_point", "radius", "radius_units", "address"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["geo_point", "radius", "radius_units", "address"]
+    ) -> bool: ...
 
 class TopicInfo(proto.Message):
     topic_constant: str
@@ -826,7 +990,9 @@ class TopicInfo(proto.Message):
         topic_constant: str = ...,
         path: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["topic_constant", "path"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["topic_constant", "path"]
+    ) -> bool: ...
 
 class UnknownListingDimensionInfo(proto.Message):
     def __init__(
@@ -835,7 +1001,9 @@ class UnknownListingDimensionInfo(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
     ) -> None: ...
-    def __contains__(self, key: NoReturn) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: NoReturn
+    ) -> bool: ...
 
 class UserInterestInfo(proto.Message):
     user_interest_category: str
@@ -846,7 +1014,9 @@ class UserInterestInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         user_interest_category: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["user_interest_category"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["user_interest_category"]
+    ) -> bool: ...
 
 class UserListInfo(proto.Message):
     user_list: str
@@ -857,7 +1027,9 @@ class UserListInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         user_list: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["user_list"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["user_list"]
+    ) -> bool: ...
 
 class WebpageConditionInfo(proto.Message):
     operand: WebpageConditionOperandEnum.WebpageConditionOperand
@@ -872,7 +1044,9 @@ class WebpageConditionInfo(proto.Message):
         operator: WebpageConditionOperatorEnum.WebpageConditionOperator = ...,
         argument: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["operand", "operator", "argument"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["operand", "operator", "argument"]
+    ) -> bool: ...
 
 class WebpageInfo(proto.Message):
     criterion_name: str
@@ -889,7 +1063,10 @@ class WebpageInfo(proto.Message):
         coverage_percentage: float = ...,
         sample: WebpageSampleInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["criterion_name", "conditions", "coverage_percentage", "sample"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["criterion_name", "conditions", "coverage_percentage", "sample"],
+    ) -> bool: ...
 
 class WebpageSampleInfo(proto.Message):
     sample_urls: MutableSequence[str]
@@ -900,7 +1077,9 @@ class WebpageSampleInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         sample_urls: MutableSequence[str] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["sample_urls"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["sample_urls"]
+    ) -> bool: ...
 
 class YouTubeChannelInfo(proto.Message):
     channel_id: str
@@ -911,7 +1090,9 @@ class YouTubeChannelInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         channel_id: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["channel_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["channel_id"]
+    ) -> bool: ...
 
 class YouTubeVideoInfo(proto.Message):
     video_id: str
@@ -922,4 +1103,6 @@ class YouTubeVideoInfo(proto.Message):
         ignore_unknown_fields: bool = False,
         video_id: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["video_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["video_id"]
+    ) -> bool: ...

@@ -83,19 +83,15 @@ class KeywordPlanAdGroupKeywordServiceClient(
     ) -> None: ...
     def mutate_keyword_plan_ad_group_keywords(
         self,
-        request: (
-            keyword_plan_ad_group_keyword_service.MutateKeywordPlanAdGroupKeywordsRequest
-            | dict
-            | None
-        ) = None,
+        request: keyword_plan_ad_group_keyword_service.MutateKeywordPlanAdGroupKeywordsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

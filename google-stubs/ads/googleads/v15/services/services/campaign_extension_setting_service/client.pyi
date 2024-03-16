@@ -83,19 +83,15 @@ class CampaignExtensionSettingServiceClient(
     ) -> None: ...
     def mutate_campaign_extension_settings(
         self,
-        request: (
-            campaign_extension_setting_service.MutateCampaignExtensionSettingsRequest
-            | dict
-            | None
-        ) = None,
+        request: campaign_extension_setting_service.MutateCampaignExtensionSettingsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
-        operations: (
-            MutableSequence[
-                campaign_extension_setting_service.CampaignExtensionSettingOperation
-            ]
-            | None
-        ) = None,
+        operations: MutableSequence[
+            campaign_extension_setting_service.CampaignExtensionSettingOperation
+        ]
+        | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str]] = (),

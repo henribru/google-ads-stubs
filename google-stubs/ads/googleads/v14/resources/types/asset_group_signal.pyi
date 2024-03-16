@@ -22,4 +22,6 @@ class AssetGroupSignal(proto.Message):
         asset_group: str = ...,
         audience: AudienceInfo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "asset_group", "audience"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "asset_group", "audience"]
+    ) -> bool: ...

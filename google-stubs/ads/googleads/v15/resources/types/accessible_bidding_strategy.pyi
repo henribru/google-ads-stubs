@@ -24,7 +24,9 @@ class AccessibleBiddingStrategy(proto.Message):
             ignore_unknown_fields: bool = False,
             target_roas: float = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_roas"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_roas"]
+        ) -> bool: ...
 
     class MaximizeConversions(proto.Message):
         target_cpa_micros: int
@@ -35,7 +37,9 @@ class AccessibleBiddingStrategy(proto.Message):
             ignore_unknown_fields: bool = False,
             target_cpa_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_cpa_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_cpa_micros"]
+        ) -> bool: ...
 
     class TargetCpa(proto.Message):
         target_cpa_micros: int
@@ -46,7 +50,9 @@ class AccessibleBiddingStrategy(proto.Message):
             ignore_unknown_fields: bool = False,
             target_cpa_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_cpa_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_cpa_micros"]
+        ) -> bool: ...
 
     class TargetImpressionShare(proto.Message):
         location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation
@@ -61,7 +67,12 @@ class AccessibleBiddingStrategy(proto.Message):
             location_fraction_micros: int = ...,
             cpc_bid_ceiling_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["location", "location_fraction_micros", "cpc_bid_ceiling_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self,
+            key: Literal[
+                "location", "location_fraction_micros", "cpc_bid_ceiling_micros"
+            ],
+        ) -> bool: ...
 
     class TargetRoas(proto.Message):
         target_roas: float
@@ -72,7 +83,9 @@ class AccessibleBiddingStrategy(proto.Message):
             ignore_unknown_fields: bool = False,
             target_roas: float = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_roas"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_roas"]
+        ) -> bool: ...
 
     class TargetSpend(proto.Message):
         target_spend_micros: int
@@ -85,7 +98,9 @@ class AccessibleBiddingStrategy(proto.Message):
             target_spend_micros: int = ...,
             cpc_bid_ceiling_micros: int = ...,
         ) -> None: ...
-        def __contains__(self, key: Literal["target_spend_micros", "cpc_bid_ceiling_micros"]) -> bool: ...  # type: ignore[override]
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["target_spend_micros", "cpc_bid_ceiling_micros"]
+        ) -> bool: ...
 
     resource_name: str
     id: int
@@ -117,4 +132,20 @@ class AccessibleBiddingStrategy(proto.Message):
         target_roas: AccessibleBiddingStrategy.TargetRoas = ...,
         target_spend: AccessibleBiddingStrategy.TargetSpend = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "name", "type_", "owner_customer_id", "owner_descriptive_name", "maximize_conversion_value", "maximize_conversions", "target_cpa", "target_impression_share", "target_roas", "target_spend"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "name",
+            "type_",
+            "owner_customer_id",
+            "owner_descriptive_name",
+            "maximize_conversion_value",
+            "maximize_conversions",
+            "target_cpa",
+            "target_impression_share",
+            "target_roas",
+            "target_spend",
+        ],
+    ) -> bool: ...

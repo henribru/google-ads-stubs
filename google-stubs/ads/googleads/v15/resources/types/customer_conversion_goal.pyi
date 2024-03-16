@@ -27,4 +27,6 @@ class CustomerConversionGoal(proto.Message):
         origin: ConversionOriginEnum.ConversionOrigin = ...,
         biddable: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "category", "origin", "biddable"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "category", "origin", "biddable"]
+    ) -> bool: ...

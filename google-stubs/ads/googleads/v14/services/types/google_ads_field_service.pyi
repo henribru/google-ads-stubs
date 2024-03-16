@@ -18,7 +18,9 @@ class GetGoogleAdsFieldRequest(proto.Message):
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]
+    ) -> bool: ...
 
 class SearchGoogleAdsFieldsRequest(proto.Message):
     query: str
@@ -33,7 +35,9 @@ class SearchGoogleAdsFieldsRequest(proto.Message):
         page_token: str = ...,
         page_size: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["query", "page_token", "page_size"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["query", "page_token", "page_size"]
+    ) -> bool: ...
 
 class SearchGoogleAdsFieldsResponse(proto.Message):
     results: MutableSequence[GoogleAdsField]
@@ -48,4 +52,6 @@ class SearchGoogleAdsFieldsResponse(proto.Message):
         next_page_token: str = ...,
         total_results_count: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["results", "next_page_token", "total_results_count"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["results", "next_page_token", "total_results_count"]
+    ) -> bool: ...

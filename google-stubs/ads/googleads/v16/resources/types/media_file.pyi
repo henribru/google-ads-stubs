@@ -19,7 +19,9 @@ class MediaAudio(proto.Message):
         ignore_unknown_fields: bool = False,
         ad_duration_millis: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["ad_duration_millis"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["ad_duration_millis"]
+    ) -> bool: ...
 
 class MediaBundle(proto.Message):
     data: bytes
@@ -32,7 +34,9 @@ class MediaBundle(proto.Message):
         data: bytes = ...,
         url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["data", "url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["data", "url"]
+    ) -> bool: ...
 
 class MediaFile(proto.Message):
     resource_name: str
@@ -63,7 +67,22 @@ class MediaFile(proto.Message):
         audio: MediaAudio = ...,
         video: MediaVideo = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "type_", "mime_type", "source_url", "name", "file_size", "image", "media_bundle", "audio", "video"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "type_",
+            "mime_type",
+            "source_url",
+            "name",
+            "file_size",
+            "image",
+            "media_bundle",
+            "audio",
+            "video",
+        ],
+    ) -> bool: ...
 
 class MediaImage(proto.Message):
     data: bytes
@@ -78,7 +97,9 @@ class MediaImage(proto.Message):
         full_size_image_url: str = ...,
         preview_size_image_url: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["data", "full_size_image_url", "preview_size_image_url"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["data", "full_size_image_url", "preview_size_image_url"]
+    ) -> bool: ...
 
 class MediaVideo(proto.Message):
     ad_duration_millis: int
@@ -95,4 +116,9 @@ class MediaVideo(proto.Message):
         advertising_id_code: str = ...,
         isci_code: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["ad_duration_millis", "youtube_video_id", "advertising_id_code", "isci_code"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "ad_duration_millis", "youtube_video_id", "advertising_id_code", "isci_code"
+        ],
+    ) -> bool: ...

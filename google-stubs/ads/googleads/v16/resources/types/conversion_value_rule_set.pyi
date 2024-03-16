@@ -51,4 +51,17 @@ class ConversionValueRuleSet(proto.Message):
             ConversionActionCategoryEnum.ConversionActionCategory
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "id", "conversion_value_rules", "dimensions", "owner_customer", "attachment_type", "campaign", "status", "conversion_action_categories"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "id",
+            "conversion_value_rules",
+            "dimensions",
+            "owner_customer",
+            "attachment_type",
+            "campaign",
+            "status",
+            "conversion_action_categories",
+        ],
+    ) -> bool: ...

@@ -32,7 +32,20 @@ class BudgetSimulationPoint(proto.Message):
         top_slot_impressions: int = ...,
         interactions: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["budget_amount_micros", "required_cpc_bid_ceiling_micros", "biddable_conversions", "biddable_conversions_value", "clicks", "cost_micros", "impressions", "top_slot_impressions", "interactions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "budget_amount_micros",
+            "required_cpc_bid_ceiling_micros",
+            "biddable_conversions",
+            "biddable_conversions_value",
+            "clicks",
+            "cost_micros",
+            "impressions",
+            "top_slot_impressions",
+            "interactions",
+        ],
+    ) -> bool: ...
 
 class BudgetSimulationPointList(proto.Message):
     points: MutableSequence[BudgetSimulationPoint]
@@ -43,7 +56,9 @@ class BudgetSimulationPointList(proto.Message):
         ignore_unknown_fields: bool = False,
         points: MutableSequence[BudgetSimulationPoint] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["points"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["points"]
+    ) -> bool: ...
 
 class CpcBidSimulationPoint(proto.Message):
     required_budget_amount_micros: int
@@ -70,7 +85,20 @@ class CpcBidSimulationPoint(proto.Message):
         cpc_bid_micros: int = ...,
         cpc_bid_scaling_modifier: float = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["required_budget_amount_micros", "biddable_conversions", "biddable_conversions_value", "clicks", "cost_micros", "impressions", "top_slot_impressions", "cpc_bid_micros", "cpc_bid_scaling_modifier"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "required_budget_amount_micros",
+            "biddable_conversions",
+            "biddable_conversions_value",
+            "clicks",
+            "cost_micros",
+            "impressions",
+            "top_slot_impressions",
+            "cpc_bid_micros",
+            "cpc_bid_scaling_modifier",
+        ],
+    ) -> bool: ...
 
 class CpcBidSimulationPointList(proto.Message):
     points: MutableSequence[CpcBidSimulationPoint]
@@ -81,7 +109,9 @@ class CpcBidSimulationPointList(proto.Message):
         ignore_unknown_fields: bool = False,
         points: MutableSequence[CpcBidSimulationPoint] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["points"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["points"]
+    ) -> bool: ...
 
 class CpvBidSimulationPoint(proto.Message):
     cpv_bid_micros: int
@@ -98,7 +128,9 @@ class CpvBidSimulationPoint(proto.Message):
         impressions: int = ...,
         views: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["cpv_bid_micros", "cost_micros", "impressions", "views"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["cpv_bid_micros", "cost_micros", "impressions", "views"]
+    ) -> bool: ...
 
 class CpvBidSimulationPointList(proto.Message):
     points: MutableSequence[CpvBidSimulationPoint]
@@ -109,7 +141,9 @@ class CpvBidSimulationPointList(proto.Message):
         ignore_unknown_fields: bool = False,
         points: MutableSequence[CpvBidSimulationPoint] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["points"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["points"]
+    ) -> bool: ...
 
 class PercentCpcBidSimulationPoint(proto.Message):
     percent_cpc_bid_micros: int
@@ -132,7 +166,18 @@ class PercentCpcBidSimulationPoint(proto.Message):
         impressions: int = ...,
         top_slot_impressions: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["percent_cpc_bid_micros", "biddable_conversions", "biddable_conversions_value", "clicks", "cost_micros", "impressions", "top_slot_impressions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "percent_cpc_bid_micros",
+            "biddable_conversions",
+            "biddable_conversions_value",
+            "clicks",
+            "cost_micros",
+            "impressions",
+            "top_slot_impressions",
+        ],
+    ) -> bool: ...
 
 class PercentCpcBidSimulationPointList(proto.Message):
     points: MutableSequence[PercentCpcBidSimulationPoint]
@@ -143,7 +188,9 @@ class PercentCpcBidSimulationPointList(proto.Message):
         ignore_unknown_fields: bool = False,
         points: MutableSequence[PercentCpcBidSimulationPoint] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["points"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["points"]
+    ) -> bool: ...
 
 class TargetCpaSimulationPoint(proto.Message):
     required_budget_amount_micros: int
@@ -176,7 +223,23 @@ class TargetCpaSimulationPoint(proto.Message):
         target_cpa_micros: int = ...,
         target_cpa_scaling_modifier: float = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["required_budget_amount_micros", "biddable_conversions", "biddable_conversions_value", "app_installs", "in_app_actions", "clicks", "cost_micros", "impressions", "top_slot_impressions", "interactions", "target_cpa_micros", "target_cpa_scaling_modifier"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "required_budget_amount_micros",
+            "biddable_conversions",
+            "biddable_conversions_value",
+            "app_installs",
+            "in_app_actions",
+            "clicks",
+            "cost_micros",
+            "impressions",
+            "top_slot_impressions",
+            "interactions",
+            "target_cpa_micros",
+            "target_cpa_scaling_modifier",
+        ],
+    ) -> bool: ...
 
 class TargetCpaSimulationPointList(proto.Message):
     points: MutableSequence[TargetCpaSimulationPoint]
@@ -187,7 +250,9 @@ class TargetCpaSimulationPointList(proto.Message):
         ignore_unknown_fields: bool = False,
         points: MutableSequence[TargetCpaSimulationPoint] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["points"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["points"]
+    ) -> bool: ...
 
 class TargetImpressionShareSimulationPoint(proto.Message):
     target_impression_share_micros: int
@@ -216,7 +281,21 @@ class TargetImpressionShareSimulationPoint(proto.Message):
         top_slot_impressions: int = ...,
         absolute_top_impressions: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["target_impression_share_micros", "required_cpc_bid_ceiling_micros", "required_budget_amount_micros", "biddable_conversions", "biddable_conversions_value", "clicks", "cost_micros", "impressions", "top_slot_impressions", "absolute_top_impressions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "target_impression_share_micros",
+            "required_cpc_bid_ceiling_micros",
+            "required_budget_amount_micros",
+            "biddable_conversions",
+            "biddable_conversions_value",
+            "clicks",
+            "cost_micros",
+            "impressions",
+            "top_slot_impressions",
+            "absolute_top_impressions",
+        ],
+    ) -> bool: ...
 
 class TargetImpressionShareSimulationPointList(proto.Message):
     points: MutableSequence[TargetImpressionShareSimulationPoint]
@@ -227,7 +306,9 @@ class TargetImpressionShareSimulationPointList(proto.Message):
         ignore_unknown_fields: bool = False,
         points: MutableSequence[TargetImpressionShareSimulationPoint] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["points"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["points"]
+    ) -> bool: ...
 
 class TargetRoasSimulationPoint(proto.Message):
     target_roas: float
@@ -252,7 +333,19 @@ class TargetRoasSimulationPoint(proto.Message):
         impressions: int = ...,
         top_slot_impressions: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["target_roas", "required_budget_amount_micros", "biddable_conversions", "biddable_conversions_value", "clicks", "cost_micros", "impressions", "top_slot_impressions"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "target_roas",
+            "required_budget_amount_micros",
+            "biddable_conversions",
+            "biddable_conversions_value",
+            "clicks",
+            "cost_micros",
+            "impressions",
+            "top_slot_impressions",
+        ],
+    ) -> bool: ...
 
 class TargetRoasSimulationPointList(proto.Message):
     points: MutableSequence[TargetRoasSimulationPoint]
@@ -263,4 +356,6 @@ class TargetRoasSimulationPointList(proto.Message):
         ignore_unknown_fields: bool = False,
         points: MutableSequence[TargetRoasSimulationPoint] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["points"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["points"]
+    ) -> bool: ...

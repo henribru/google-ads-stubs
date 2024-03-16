@@ -20,4 +20,6 @@ class AdGroupAdLabel(proto.Message):
         ad_group_ad: str = ...,
         label: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "ad_group_ad", "label"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "ad_group_ad", "label"]
+    ) -> bool: ...

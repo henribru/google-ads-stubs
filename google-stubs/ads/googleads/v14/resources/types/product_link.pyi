@@ -20,7 +20,9 @@ class DataPartnerIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         data_partner_id: int = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["data_partner_id"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["data_partner_id"]
+    ) -> bool: ...
 
 class GoogleAdsIdentifier(proto.Message):
     customer: str
@@ -31,7 +33,9 @@ class GoogleAdsIdentifier(proto.Message):
         ignore_unknown_fields: bool = False,
         customer: str = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["customer"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer"]
+    ) -> bool: ...
 
 class ProductLink(proto.Message):
     resource_name: str
@@ -50,4 +54,9 @@ class ProductLink(proto.Message):
         data_partner: DataPartnerIdentifier = ...,
         google_ads: GoogleAdsIdentifier = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "product_link_id", "type_", "data_partner", "google_ads"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name", "product_link_id", "type_", "data_partner", "google_ads"
+        ],
+    ) -> bool: ...

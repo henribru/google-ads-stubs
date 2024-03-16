@@ -69,9 +69,9 @@ class TravelAssetSuggestionServiceClient(
     ) -> None: ...
     def suggest_travel_assets(
         self,
-        request: (
-            travel_asset_suggestion_service.SuggestTravelAssetsRequest | dict | None
-        ) = None,
+        request: travel_asset_suggestion_service.SuggestTravelAssetsRequest
+        | dict
+        | None = None,
         *,
         customer_id: str | None = None,
         language_option: str | None = None,

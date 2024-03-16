@@ -75,11 +75,9 @@ class KeywordThemeConstantServiceClient(
     ) -> None: ...
     def suggest_keyword_theme_constants(
         self,
-        request: (
-            keyword_theme_constant_service.SuggestKeywordThemeConstantsRequest
-            | dict
-            | None
-        ) = None,
+        request: keyword_theme_constant_service.SuggestKeywordThemeConstantsRequest
+        | dict
+        | None = None,
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,

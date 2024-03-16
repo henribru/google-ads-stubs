@@ -22,4 +22,6 @@ class AdGroupAdAssetCombinationView(proto.Message):
         served_assets: MutableSequence[AssetUsage] = ...,
         enabled: bool = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "served_assets", "enabled"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name", "served_assets", "enabled"]
+    ) -> bool: ...

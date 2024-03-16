@@ -51,4 +51,19 @@ class BiddingDataExclusion(proto.Message):
             AdvertisingChannelTypeEnum.AdvertisingChannelType
         ] = ...,
     ) -> None: ...
-    def __contains__(self, key: Literal["resource_name", "data_exclusion_id", "scope", "status", "start_date_time", "end_date_time", "name", "description", "devices", "campaigns", "advertising_channel_types"]) -> bool: ...  # type: ignore[override]
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "resource_name",
+            "data_exclusion_id",
+            "scope",
+            "status",
+            "start_date_time",
+            "end_date_time",
+            "name",
+            "description",
+            "devices",
+            "campaigns",
+            "advertising_channel_types",
+        ],
+    ) -> bool: ...
