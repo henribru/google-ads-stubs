@@ -3,6 +3,7 @@ from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
 import proto
+from google.rpc.status_pb2 import Status
 from typing_extensions import Literal
 
 from google.ads.googleads.v16.resources.types.customer_sk_ad_network_conversion_value_schema import (
@@ -28,6 +29,7 @@ class MutateCustomerSkAdNetworkConversionValueSchemaRequest(proto.Message):
     customer_id: str
     operation: CustomerSkAdNetworkConversionValueSchemaOperation
     validate_only: bool
+    enable_warnings: bool
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -36,22 +38,26 @@ class MutateCustomerSkAdNetworkConversionValueSchemaRequest(proto.Message):
         customer_id: str = ...,
         operation: CustomerSkAdNetworkConversionValueSchemaOperation = ...,
         validate_only: bool = ...,
+        enable_warnings: bool = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: Literal["customer_id", "operation", "validate_only"]
+        self,
+        key: Literal["customer_id", "operation", "validate_only", "enable_warnings"],
     ) -> bool: ...
 
 class MutateCustomerSkAdNetworkConversionValueSchemaResponse(proto.Message):
     result: MutateCustomerSkAdNetworkConversionValueSchemaResult
+    warning: Status
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
         result: MutateCustomerSkAdNetworkConversionValueSchemaResult = ...,
+        warning: Status = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: Literal["result"]
+        self, key: Literal["result", "warning"]
     ) -> bool: ...
 
 class MutateCustomerSkAdNetworkConversionValueSchemaResult(proto.Message):

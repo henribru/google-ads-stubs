@@ -38,6 +38,7 @@ class AssetFieldTypeEnum(proto.Message):
         AD_IMAGE = 26
         BUSINESS_LOGO = 27
         HOTEL_PROPERTY = 28
+        DISCOVERY_CAROUSEL_CARD = 29
 
     def __init__(
         self: _M,

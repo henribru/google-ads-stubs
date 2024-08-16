@@ -557,6 +557,9 @@ from google.ads.googleads.v16.enums.types.bidding_strategy_type import (
 from google.ads.googleads.v16.enums.types.billing_setup_status import (
     BillingSetupStatusEnum as BillingSetupStatusEnum,
 )
+from google.ads.googleads.v16.enums.types.brand_request_rejection_reason import (
+    BrandRequestRejectionReasonEnum as BrandRequestRejectionReasonEnum,
+)
 from google.ads.googleads.v16.enums.types.brand_safety_suitability import (
     BrandSafetySuitabilityEnum as BrandSafetySuitabilityEnum,
 )
@@ -1011,6 +1014,9 @@ from google.ads.googleads.v16.enums.types.local_services_employee_type import (
 )
 from google.ads.googleads.v16.enums.types.local_services_insurance_rejection_reason import (
     LocalServicesInsuranceRejectionReasonEnum as LocalServicesInsuranceRejectionReasonEnum,
+)
+from google.ads.googleads.v16.enums.types.local_services_lead_credit_state import (
+    LocalServicesCreditStateEnum as LocalServicesCreditStateEnum,
 )
 from google.ads.googleads.v16.enums.types.local_services_lead_status import (
     LocalServicesLeadStatusEnum as LocalServicesLeadStatusEnum,
@@ -1845,6 +1851,9 @@ from google.ads.googleads.v16.errors.types.user_data_error import (
 from google.ads.googleads.v16.errors.types.user_list_error import (
     UserListErrorEnum as UserListErrorEnum,
 )
+from google.ads.googleads.v16.errors.types.video_campaign_error import (
+    VideoCampaignErrorEnum as VideoCampaignErrorEnum,
+)
 from google.ads.googleads.v16.errors.types.youtube_video_registration_error import (
     YoutubeVideoRegistrationErrorEnum as YoutubeVideoRegistrationErrorEnum,
 )
@@ -2271,6 +2280,7 @@ from google.ads.googleads.v16.resources.types.local_services_employee import (
 )
 from google.ads.googleads.v16.resources.types.local_services_lead import (
     ContactDetails as ContactDetails,
+    CreditDetails as CreditDetails,
     LocalServicesLead as LocalServicesLead,
     Note as Note,
 )

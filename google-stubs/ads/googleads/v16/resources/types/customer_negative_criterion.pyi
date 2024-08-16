@@ -7,6 +7,7 @@ from typing_extensions import Literal
 
 from google.ads.googleads.v16.common.types.criteria import (
     ContentLabelInfo,
+    IpBlockInfo,
     MobileAppCategoryInfo,
     MobileApplicationInfo,
     NegativeKeywordListInfo,
@@ -29,6 +30,7 @@ class CustomerNegativeCriterion(proto.Message):
     youtube_video: YouTubeVideoInfo
     youtube_channel: YouTubeChannelInfo
     negative_keyword_list: NegativeKeywordListInfo
+    ip_block: IpBlockInfo
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -44,6 +46,7 @@ class CustomerNegativeCriterion(proto.Message):
         youtube_video: YouTubeVideoInfo = ...,
         youtube_channel: YouTubeChannelInfo = ...,
         negative_keyword_list: NegativeKeywordListInfo = ...,
+        ip_block: IpBlockInfo = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -58,5 +61,6 @@ class CustomerNegativeCriterion(proto.Message):
             "youtube_video",
             "youtube_channel",
             "negative_keyword_list",
+            "ip_block",
         ],
     ) -> bool: ...

@@ -9,6 +9,10 @@ from google.ads.googleads.v16.enums.types.age_range_type import AgeRangeTypeEnum
 from google.ads.googleads.v16.enums.types.app_payment_model_type import (
     AppPaymentModelTypeEnum,
 )
+from google.ads.googleads.v16.enums.types.brand_request_rejection_reason import (
+    BrandRequestRejectionReasonEnum,
+)
+from google.ads.googleads.v16.enums.types.brand_state import BrandStateEnum
 from google.ads.googleads.v16.enums.types.content_label_type import ContentLabelTypeEnum
 from google.ads.googleads.v16.enums.types.day_of_week import DayOfWeekEnum
 from google.ads.googleads.v16.enums.types.device import DeviceEnum
@@ -214,16 +218,27 @@ class AudienceInfo(proto.Message):
     ) -> bool: ...
 
 class BrandInfo(proto.Message):
+    display_name: str
     entity_id: str
+    primary_url: str
+    rejection_reason: BrandRequestRejectionReasonEnum.BrandRequestRejectionReason
+    status: BrandStateEnum.BrandState
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
+        display_name: str = ...,
         entity_id: str = ...,
+        primary_url: str = ...,
+        rejection_reason: BrandRequestRejectionReasonEnum.BrandRequestRejectionReason = ...,
+        status: BrandStateEnum.BrandState = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: Literal["entity_id"]
+        self,
+        key: Literal[
+            "display_name", "entity_id", "primary_url", "rejection_reason", "status"
+        ],
     ) -> bool: ...
 
 class BrandListInfo(proto.Message):
