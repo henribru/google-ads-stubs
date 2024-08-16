@@ -5,10 +5,36 @@ import google.protobuf.message
 import proto
 from typing_extensions import Literal
 
+from google.ads.googleads.v16.enums.types.sk_ad_network_coarse_conversion_value import (
+    SkAdNetworkCoarseConversionValueEnum,
+)
+
 _M = TypeVar("_M")
 
 class CustomerSkAdNetworkConversionValueSchema(proto.Message):
     class SkAdNetworkConversionValueSchema(proto.Message):
+        class CoarseGrainedConversionValueMappings(proto.Message):
+            low_conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping
+            medium_conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping
+            high_conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping
+            def __init__(
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+                *,
+                ignore_unknown_fields: bool = False,
+                low_conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping = ...,
+                medium_conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping = ...,
+                high_conversion_value_mapping: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping = ...,
+            ) -> None: ...
+            def __contains__(  # type: ignore[override]
+                self,
+                key: Literal[
+                    "low_conversion_value_mapping",
+                    "medium_conversion_value_mapping",
+                    "high_conversion_value_mapping",
+                ],
+            ) -> bool: ...
+
         class ConversionValueMapping(proto.Message):
             min_time_post_install_hours: int
             max_time_post_install_hours: int
@@ -120,10 +146,43 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                 ],
             ) -> bool: ...
 
+        class PostbackMapping(proto.Message):
+            postback_sequence_index: int
+            coarse_grained_conversion_value_mappings: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.CoarseGrainedConversionValueMappings
+            lock_window_coarse_conversion_value: (
+                SkAdNetworkCoarseConversionValueEnum.SkAdNetworkCoarseConversionValue
+            )
+            lock_window_fine_conversion_value: int
+            lock_window_event: str
+            def __init__(
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+                *,
+                ignore_unknown_fields: bool = False,
+                postback_sequence_index: int = ...,
+                coarse_grained_conversion_value_mappings: CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.CoarseGrainedConversionValueMappings = ...,
+                lock_window_coarse_conversion_value: SkAdNetworkCoarseConversionValueEnum.SkAdNetworkCoarseConversionValue = ...,
+                lock_window_fine_conversion_value: int = ...,
+                lock_window_event: str = ...,
+            ) -> None: ...
+            def __contains__(  # type: ignore[override]
+                self,
+                key: Literal[
+                    "postback_sequence_index",
+                    "coarse_grained_conversion_value_mappings",
+                    "lock_window_coarse_conversion_value",
+                    "lock_window_fine_conversion_value",
+                    "lock_window_event",
+                ],
+            ) -> bool: ...
+
         app_id: str
         measurement_window_hours: int
         fine_grained_conversion_value_mappings: MutableSequence[
             CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.FineGrainedConversionValueMappings
+        ]
+        postback_mappings: MutableSequence[
+            CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.PostbackMapping
         ]
         def __init__(
             self: _M,
@@ -135,6 +194,9 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
             fine_grained_conversion_value_mappings: MutableSequence[
                 CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.FineGrainedConversionValueMappings
             ] = ...,
+            postback_mappings: MutableSequence[
+                CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.PostbackMapping
+            ] = ...,
         ) -> None: ...
         def __contains__(  # type: ignore[override]
             self,
@@ -142,6 +204,7 @@ class CustomerSkAdNetworkConversionValueSchema(proto.Message):
                 "app_id",
                 "measurement_window_hours",
                 "fine_grained_conversion_value_mappings",
+                "postback_mappings",
             ],
         ) -> bool: ...
 

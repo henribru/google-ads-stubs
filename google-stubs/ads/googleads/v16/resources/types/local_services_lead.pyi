@@ -5,6 +5,9 @@ import google.protobuf.message
 import proto
 from typing_extensions import Literal
 
+from google.ads.googleads.v16.enums.types.local_services_lead_credit_state import (
+    LocalServicesCreditStateEnum,
+)
 from google.ads.googleads.v16.enums.types.local_services_lead_status import (
     LocalServicesLeadStatusEnum,
 )
@@ -31,6 +34,21 @@ class ContactDetails(proto.Message):
         self, key: Literal["phone_number", "email", "consumer_name"]
     ) -> bool: ...
 
+class CreditDetails(proto.Message):
+    credit_state: LocalServicesCreditStateEnum.CreditState
+    credit_state_last_update_date_time: str
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        credit_state: LocalServicesCreditStateEnum.CreditState = ...,
+        credit_state_last_update_date_time: str = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["credit_state", "credit_state_last_update_date_time"]
+    ) -> bool: ...
+
 class LocalServicesLead(proto.Message):
     resource_name: str
     id: int
@@ -43,6 +61,7 @@ class LocalServicesLead(proto.Message):
     locale: str
     note: Note
     lead_charged: bool
+    credit_details: CreditDetails
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -59,6 +78,7 @@ class LocalServicesLead(proto.Message):
         locale: str = ...,
         note: Note = ...,
         lead_charged: bool = ...,
+        credit_details: CreditDetails = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -74,6 +94,7 @@ class LocalServicesLead(proto.Message):
             "locale",
             "note",
             "lead_charged",
+            "credit_details",
         ],
     ) -> bool: ...
 

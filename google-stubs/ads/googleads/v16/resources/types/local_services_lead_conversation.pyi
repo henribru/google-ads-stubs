@@ -1,4 +1,4 @@
-from collections.abc import Mapping
+from collections.abc import Mapping, MutableSequence
 from typing import Any, NoReturn, TypeVar
 
 import google.protobuf.message
@@ -53,15 +53,17 @@ class LocalServicesLeadConversation(proto.Message):
 
 class MessageDetails(proto.Message):
     text: str
+    attachment_urls: MutableSequence[str]
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
         text: str = ...,
+        attachment_urls: MutableSequence[str] = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: Literal["text"]
+        self, key: Literal["text", "attachment_urls"]
     ) -> bool: ...
 
 class PhoneCallDetails(proto.Message):

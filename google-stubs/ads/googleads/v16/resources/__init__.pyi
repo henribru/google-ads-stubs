@@ -90,6 +90,7 @@ __all__ = [
     "ConversionTrackingSetting",
     "ConversionValueRule",
     "ConversionValueRuleSet",
+    "CreditDetails",
     "CurrencyConstant",
     "CustomAudience",
     "CustomAudienceMember",
@@ -326,6 +327,7 @@ __all__ = [
 #   ConversionTrackingSetting
 #   ConversionValueRule
 #   ConversionValueRuleSet
+#   CreditDetails
 #   CurrencyConstant
 #   CustomAudience
 #   CustomAudienceMember

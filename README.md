@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/google-ads-stubs.svg)](https://badge.fury.io/py/google-ads-stubs)
 
 This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). 
-It's currently compatible with v23.1.0 of this library (v16 of the API). It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
+It's currently compatible with v25.0.0 of this library (v17.1 of the API). It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
 
 **This is in no way affiliated with Google.**
 
@@ -30,10 +30,10 @@ method of `GoogleAdsClient`.The workaround is to explicitly state the type. You 
 # Replace this:
 campaign_operation = client.get_type('CampaignOperation')
 # With this:
-from google.ads.googleads.v16 import CampaignOperation
+from google.ads.googleads.v17 import CampaignOperation
 campaign_operation: CampaignOperation = client.get_type('CampaignOperation')
 # Or this:
-from google.ads.googleads.v16 import CampaignOperation
+from google.ads.googleads.v17 import CampaignOperation
 campaign_operation = CampaignOperation()
 ```
 While it is technically possible to type this method using a combination of overloading and literal types,
@@ -51,7 +51,7 @@ AdGroupAd({
     "ad": {"type": 2},
 })
 # With this:
-from google.ads.googleads.v16 import AdGroupAdStatusEnum, AdStrengtEnum, AdTypeEnum, Ad
+from google.ads.googleads.v17 import AdGroupAdStatusEnum, AdStrengtEnum, AdTypeEnum, Ad
 AdGroupAd(
     status=AdGroupAdStatusEnum.AdGroupAdStatus.ENABLED, 
     ad=Ad(type=AdTypeEnum.AdType.TEXT_AD),

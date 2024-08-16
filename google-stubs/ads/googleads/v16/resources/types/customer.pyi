@@ -5,6 +5,9 @@ import google.protobuf.message
 import proto
 from typing_extensions import Literal
 
+from google.ads.googleads.v16.enums.types.brand_safety_suitability import (
+    BrandSafetySuitabilityEnum,
+)
 from google.ads.googleads.v16.enums.types.conversion_tracking_status_enum import (
     ConversionTrackingStatusEnum,
 )
@@ -98,6 +101,7 @@ class Customer(proto.Message):
     image_asset_auto_migration_done_date_time: str
     customer_agreement_setting: CustomerAgreementSetting
     local_services_settings: LocalServicesSettings
+    video_brand_safety_suitability: BrandSafetySuitabilityEnum.BrandSafetySuitability
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -129,6 +133,7 @@ class Customer(proto.Message):
         image_asset_auto_migration_done_date_time: str = ...,
         customer_agreement_setting: CustomerAgreementSetting = ...,
         local_services_settings: LocalServicesSettings = ...,
+        video_brand_safety_suitability: BrandSafetySuitabilityEnum.BrandSafetySuitability = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -157,6 +162,7 @@ class Customer(proto.Message):
             "image_asset_auto_migration_done_date_time",
             "customer_agreement_setting",
             "local_services_settings",
+            "video_brand_safety_suitability",
         ],
     ) -> bool: ...
 

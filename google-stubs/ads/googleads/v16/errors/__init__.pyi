@@ -158,6 +158,7 @@ __all__ = [
     "UrlFieldErrorEnum",
     "UserDataErrorEnum",
     "UserListErrorEnum",
+    "VideoCampaignErrorEnum",
     "YoutubeVideoRegistrationErrorEnum",
 ]
 
@@ -321,4 +322,5 @@ __all__ = [
 #   UrlFieldErrorEnum
 #   UserDataErrorEnum
 #   UserListErrorEnum
+#   VideoCampaignErrorEnum
 #   YoutubeVideoRegistrationErrorEnum

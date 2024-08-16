@@ -358,6 +358,9 @@ from google.ads.googleads.v16.errors.types.time_zone_error import TimeZoneErrorE
 from google.ads.googleads.v16.errors.types.url_field_error import UrlFieldErrorEnum
 from google.ads.googleads.v16.errors.types.user_data_error import UserDataErrorEnum
 from google.ads.googleads.v16.errors.types.user_list_error import UserListErrorEnum
+from google.ads.googleads.v16.errors.types.video_campaign_error import (
+    VideoCampaignErrorEnum,
+)
 from google.ads.googleads.v16.errors.types.youtube_video_registration_error import (
     YoutubeVideoRegistrationErrorEnum,
 )
@@ -379,6 +382,7 @@ class ErrorCode(proto.Message):
     ad_group_error: AdGroupErrorEnum.AdGroupError
     campaign_budget_error: CampaignBudgetErrorEnum.CampaignBudgetError
     campaign_error: CampaignErrorEnum.CampaignError
+    video_campaign_error: VideoCampaignErrorEnum.VideoCampaignError
     authentication_error: AuthenticationErrorEnum.AuthenticationError
     ad_group_criterion_customizer_error: (
         AdGroupCriterionCustomizerErrorEnum.AdGroupCriterionCustomizerError
@@ -581,6 +585,7 @@ class ErrorCode(proto.Message):
         ad_group_error: AdGroupErrorEnum.AdGroupError = ...,
         campaign_budget_error: CampaignBudgetErrorEnum.CampaignBudgetError = ...,
         campaign_error: CampaignErrorEnum.CampaignError = ...,
+        video_campaign_error: VideoCampaignErrorEnum.VideoCampaignError = ...,
         authentication_error: AuthenticationErrorEnum.AuthenticationError = ...,
         ad_group_criterion_customizer_error: AdGroupCriterionCustomizerErrorEnum.AdGroupCriterionCustomizerError = ...,
         ad_group_criterion_error: AdGroupCriterionErrorEnum.AdGroupCriterionError = ...,
@@ -736,6 +741,7 @@ class ErrorCode(proto.Message):
             "ad_group_error",
             "campaign_budget_error",
             "campaign_error",
+            "video_campaign_error",
             "authentication_error",
             "ad_group_criterion_customizer_error",
             "ad_group_criterion_error",
