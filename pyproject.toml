@@ -15,18 +15,18 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.13"
-typing-extensions = ">=3.10.0"
-googleapis-common-protos-stubs = ">=2.0.0"
-google-ads = ">=25.0.0"
-grpc-stubs = ">=1.24.7"
-types-protobuf = ">=3.18.0"
-proto-plus-stubs = ">=0.5.0"
-google-auth-stubs = ">=0.1.0"
+typing-extensions = "4.1.0"
+googleapis-common-protos-stubs = "2.3.1"
+google-ads = "25.0.0"
+grpc-stubs = "1.53.0.5"
+types-protobuf = "3.20.4.2"
+proto-plus-stubs = "0.5.0"
+google-auth-stubs = "0.3.0"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.9.0"
+mypy = "1.9.0"
 stubdefaulter = "^0.1.0"
-ruff = "^0.3.3"
+ruff = "0.3.3"
 
 [tool.ruff.lint]
 select = ["UP", "I"]
