@@ -5,6 +5,7 @@
 !/google-stubs/{__init__.pyi, py.typed}
 !/google-stubs/ads/**
 !/pyproject.toml
+!/uv.lock
 !/README.md
 !/LICENSE
 __pycache__
