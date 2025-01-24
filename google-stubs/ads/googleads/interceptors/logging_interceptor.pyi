@@ -5,7 +5,7 @@ from typing import TypeVar
 import grpc
 from google.protobuf.message import Message
 
-from google.ads.googleads import v16, v17
+from google.ads.googleads import v16, v17, v18
 
 from .interceptor import Interceptor
 
@@ -15,6 +15,8 @@ _Request = TypeVar(
     v16.SearchGoogleAdsStreamRequest,
     v17.SearchGoogleAdsRequest,
     v17.SearchGoogleAdsStreamRequest,
+    v18.SearchGoogleAdsRequest,
+    v18.SearchGoogleAdsStreamRequest,
 )
 _Response = TypeVar("_Response")
 
