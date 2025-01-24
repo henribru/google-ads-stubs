@@ -124,7 +124,7 @@ wheels = [
 
 [[package]]
 name = "google-ads-stubs"
-version = "19.0.0"
+version = "20.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "google-ads" },

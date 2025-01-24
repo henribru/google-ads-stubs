@@ -57,3 +57,11 @@ AdGroupAd(
     ad=Ad(type=AdTypeEnum.AdType.TEXT_AD),
 )
 ```
+
+
+## Development
+You can run `gen.sh` to generate new stubs, but note that there are a few manual steps before and after mentioned in the script.
+
+Feel free to use this to open a PR when new versions come out.
+
+Contributions to automate the remaining manual steps are also welcome.
