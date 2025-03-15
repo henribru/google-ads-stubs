@@ -2,5 +2,12 @@ from .base import ConversionUploadServiceTransport as ConversionUploadServiceTra
 from .grpc import (
     ConversionUploadServiceGrpcTransport as ConversionUploadServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    ConversionUploadServiceGrpcAsyncIOTransport as ConversionUploadServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["ConversionUploadServiceTransport", "ConversionUploadServiceGrpcTransport"]
+__all__ = [
+    "ConversionUploadServiceTransport",
+    "ConversionUploadServiceGrpcTransport",
+    "ConversionUploadServiceGrpcAsyncIOTransport",
+]

@@ -1,5 +1,5 @@
 import types
-from typing import Dict, MutableSequence, Sequence, Tuple, Type
+from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -30,13 +30,6 @@ class AssetServiceClient(metaclass=AssetServiceClientMeta):
     from_service_account_json = from_service_account_file
     @property
     def transport(self) -> AssetServiceTransport: ...
-    def __enter__(self) -> AssetServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
     @staticmethod
     def asset_path(customer_id: str, asset_id: str) -> str: ...
     @staticmethod
@@ -65,11 +58,22 @@ class AssetServiceClient(metaclass=AssetServiceClientMeta):
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
+    @classmethod
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
+    @property
+    def api_endpoint(self): ...
+    @property
+    def universe_domain(self) -> str: ...
     def __init__(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str | AssetServiceTransport | None = None,
+        transport: str
+        | AssetServiceTransport
+        | Callable[..., AssetServiceTransport]
+        | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
@@ -81,5 +85,12 @@ class AssetServiceClient(metaclass=AssetServiceClientMeta):
         operations: MutableSequence[asset_service.AssetOperation] | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> asset_service.MutateAssetsResponse: ...
+    def __enter__(self) -> AssetServiceClient: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

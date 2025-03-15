@@ -1,5 +1,5 @@
 import types
-from typing import Dict, MutableSequence, Sequence, Tuple, Type
+from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -34,13 +34,6 @@ class AdGroupCriterionCustomizerServiceClient(
     from_service_account_json = from_service_account_file
     @property
     def transport(self) -> AdGroupCriterionCustomizerServiceTransport: ...
-    def __enter__(self) -> AdGroupCriterionCustomizerServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
     @staticmethod
     def ad_group_criterion_path(
         customer_id: str, ad_group_id: str, criterion_id: str
@@ -82,11 +75,22 @@ class AdGroupCriterionCustomizerServiceClient(
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
+    @classmethod
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
+    @property
+    def api_endpoint(self): ...
+    @property
+    def universe_domain(self) -> str: ...
     def __init__(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str | AdGroupCriterionCustomizerServiceTransport | None = None,
+        transport: str
+        | AdGroupCriterionCustomizerServiceTransport
+        | Callable[..., AdGroupCriterionCustomizerServiceTransport]
+        | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
@@ -103,7 +107,14 @@ class AdGroupCriterionCustomizerServiceClient(
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> (
         ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersResponse
     ): ...
+    def __enter__(self) -> AdGroupCriterionCustomizerServiceClient: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

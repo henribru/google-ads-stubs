@@ -4,8 +4,12 @@ from .base import (
 from .grpc import (
     ConversionAdjustmentUploadServiceGrpcTransport as ConversionAdjustmentUploadServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    ConversionAdjustmentUploadServiceGrpcAsyncIOTransport as ConversionAdjustmentUploadServiceGrpcAsyncIOTransport,
+)
 
 __all__ = [
     "ConversionAdjustmentUploadServiceTransport",
     "ConversionAdjustmentUploadServiceGrpcTransport",
+    "ConversionAdjustmentUploadServiceGrpcAsyncIOTransport",
 ]

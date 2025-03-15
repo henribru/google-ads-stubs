@@ -22,8 +22,11 @@ class ExtensionFeedItemServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def mutate_extension_feed_items(
@@ -33,3 +36,5 @@ class ExtensionFeedItemServiceTransport(abc.ABC):
         extension_feed_item_service.MutateExtensionFeedItemsResponse
         | Awaitable[extension_feed_item_service.MutateExtensionFeedItemsResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

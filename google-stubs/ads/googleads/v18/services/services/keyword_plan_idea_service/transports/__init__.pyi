@@ -2,5 +2,12 @@ from .base import KeywordPlanIdeaServiceTransport as KeywordPlanIdeaServiceTrans
 from .grpc import (
     KeywordPlanIdeaServiceGrpcTransport as KeywordPlanIdeaServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    KeywordPlanIdeaServiceGrpcAsyncIOTransport as KeywordPlanIdeaServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["KeywordPlanIdeaServiceTransport", "KeywordPlanIdeaServiceGrpcTransport"]
+__all__ = [
+    "KeywordPlanIdeaServiceTransport",
+    "KeywordPlanIdeaServiceGrpcTransport",
+    "KeywordPlanIdeaServiceGrpcAsyncIOTransport",
+]

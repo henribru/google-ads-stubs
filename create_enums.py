@@ -8,19 +8,16 @@ from google.ads.googleads import client
 enums_module = importlib.import_module(
     f"google.ads.googleads.{client._DEFAULT_VERSION}.enums"
 )
-version_package = importlib.import_module(
-    f"google.ads.googleads.{client._DEFAULT_VERSION}"
-)
 
 
 lines = []
 for enum in enums_module.__all__:
-    enum_class = getattr(version_package, enum)
+    enum_class = getattr(enums_module, enum)
     for attr in dir(enum_class):
         attr_val = getattr(enum_class, attr)
         if isinstance(attr_val, ProtoEnumMeta):
             lines.append(
-                f"    {enum}: type[{client._DEFAULT_VERSION}.{enum}.{attr_val.__name__}]"
+                f"    {enum}: type[{client._DEFAULT_VERSION}.enums.{enum}.{attr_val.__name__}]"
             )
             break
 

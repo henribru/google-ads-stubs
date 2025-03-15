@@ -5,18 +5,20 @@ from typing import TypeVar
 import grpc
 from google.protobuf.message import Message
 
-from google.ads.googleads import v16, v17, v18
+import google.ads.googleads.v17.services
+import google.ads.googleads.v18.services
+import google.ads.googleads.v19.services
 
 from .interceptor import Interceptor
 
 _Request = TypeVar(
     "_Request",
-    v16.SearchGoogleAdsRequest,
-    v16.SearchGoogleAdsStreamRequest,
-    v17.SearchGoogleAdsRequest,
-    v17.SearchGoogleAdsStreamRequest,
-    v18.SearchGoogleAdsRequest,
-    v18.SearchGoogleAdsStreamRequest,
+    google.ads.googleads.v17.services.SearchGoogleAdsRequest,
+    google.ads.googleads.v17.services.SearchGoogleAdsStreamRequest,
+    google.ads.googleads.v18.services.SearchGoogleAdsRequest,
+    google.ads.googleads.v18.services.SearchGoogleAdsStreamRequest,
+    google.ads.googleads.v19.services.SearchGoogleAdsRequest,
+    google.ads.googleads.v19.services.SearchGoogleAdsStreamRequest,
 )
 _Response = TypeVar("_Response")
 

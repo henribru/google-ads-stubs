@@ -10,6 +10,9 @@ from .base import AudienceInsightsServiceTransport
 
 __all__ = ["AudienceInsightsServiceGrpcTransport"]
 
+class _LoggingClientInterceptor(grpc.UnaryUnaryClientInterceptor):
+    def intercept_unary_unary(self, continuation, client_call_details, request): ...
+
 class AudienceInsightsServiceGrpcTransport(AudienceInsightsServiceTransport):
     def __init__(
         self,
@@ -18,7 +21,7 @@ class AudienceInsightsServiceGrpcTransport(AudienceInsightsServiceTransport):
         credentials: ga_credentials.Credentials | None = None,
         credentials_file: str | None = None,
         scopes: Sequence[str] | None = None,
-        channel: grpc.Channel | None = None,
+        channel: grpc.Channel | Callable[..., grpc.Channel] | None = None,
         api_mtls_endpoint: str | None = None,
         client_cert_source: Callable[[], tuple[bytes, bytes]] | None = None,
         ssl_channel_credentials: grpc.ChannelCredentials | None = None,
@@ -26,6 +29,7 @@ class AudienceInsightsServiceGrpcTransport(AudienceInsightsServiceTransport):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
     ) -> None: ...
     @classmethod
     def create_channel(
@@ -82,3 +86,5 @@ class AudienceInsightsServiceGrpcTransport(AudienceInsightsServiceTransport):
         audience_insights_service.GenerateAudienceOverlapInsightsResponse,
     ]: ...
     def close(self) -> None: ...
+    @property
+    def kind(self) -> str: ...

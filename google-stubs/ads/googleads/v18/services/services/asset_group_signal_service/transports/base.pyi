@@ -22,8 +22,11 @@ class AssetGroupSignalServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def mutate_asset_group_signals(
@@ -33,3 +36,5 @@ class AssetGroupSignalServiceTransport(abc.ABC):
         asset_group_signal_service.MutateAssetGroupSignalsResponse
         | Awaitable[asset_group_signal_service.MutateAssetGroupSignalsResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

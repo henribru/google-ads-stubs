@@ -22,8 +22,11 @@ class ConversionValueRuleServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def mutate_conversion_value_rules(
@@ -33,3 +36,5 @@ class ConversionValueRuleServiceTransport(abc.ABC):
         conversion_value_rule_service.MutateConversionValueRulesResponse
         | Awaitable[conversion_value_rule_service.MutateConversionValueRulesResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

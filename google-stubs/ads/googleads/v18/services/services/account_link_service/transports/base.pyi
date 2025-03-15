@@ -22,8 +22,11 @@ class AccountLinkServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def create_account_link(
@@ -41,3 +44,5 @@ class AccountLinkServiceTransport(abc.ABC):
         account_link_service.MutateAccountLinkResponse
         | Awaitable[account_link_service.MutateAccountLinkResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

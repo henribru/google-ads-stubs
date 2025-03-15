@@ -2,5 +2,12 @@ from .base import AdGroupCustomizerServiceTransport as AdGroupCustomizerServiceT
 from .grpc import (
     AdGroupCustomizerServiceGrpcTransport as AdGroupCustomizerServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    AdGroupCustomizerServiceGrpcAsyncIOTransport as AdGroupCustomizerServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["AdGroupCustomizerServiceTransport", "AdGroupCustomizerServiceGrpcTransport"]
+__all__ = [
+    "AdGroupCustomizerServiceTransport",
+    "AdGroupCustomizerServiceGrpcTransport",
+    "AdGroupCustomizerServiceGrpcAsyncIOTransport",
+]

@@ -1,11 +1,11 @@
-from typing import Any, Callable, Iterable, Iterator, Sequence, Tuple
+from typing import Any, AsyncIterator, Awaitable, Callable, Iterator, Sequence, Tuple
 
 from _typeshed import Incomplete
-from google.api_core import gapic_v1, retry as retries
 
 from google.ads.googleads.v18.services.types import google_ads_service
 
 OptionalRetry: Incomplete
+OptionalAsyncRetry: Incomplete
 
 class SearchPager:
     def __init__(
@@ -13,11 +13,30 @@ class SearchPager:
         method: Callable[..., google_ads_service.SearchGoogleAdsResponse],
         request: google_ads_service.SearchGoogleAdsRequest,
         response: google_ads_service.SearchGoogleAdsResponse,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        *,
+        retry: OptionalRetry = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
     def __getattr__(self, name: str) -> Any: ...
     @property
-    def pages(self) -> Iterable[google_ads_service.SearchGoogleAdsResponse]: ...
+    def pages(self) -> Iterator[google_ads_service.SearchGoogleAdsResponse]: ...
     def __iter__(self) -> Iterator[google_ads_service.GoogleAdsRow]: ...
+
+class SearchAsyncPager:
+    def __init__(
+        self,
+        method: Callable[..., Awaitable[google_ads_service.SearchGoogleAdsResponse]],
+        request: google_ads_service.SearchGoogleAdsRequest,
+        response: google_ads_service.SearchGoogleAdsResponse,
+        *,
+        retry: OptionalAsyncRetry = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> None: ...
+    def __getattr__(self, name: str) -> Any: ...
+    @property
+    async def pages(
+        self,
+    ) -> AsyncIterator[google_ads_service.SearchGoogleAdsResponse]: ...
+    def __aiter__(self) -> AsyncIterator[google_ads_service.GoogleAdsRow]: ...

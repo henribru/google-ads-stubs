@@ -2,5 +2,12 @@ from .base import BrandSuggestionServiceTransport as BrandSuggestionServiceTrans
 from .grpc import (
     BrandSuggestionServiceGrpcTransport as BrandSuggestionServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    BrandSuggestionServiceGrpcAsyncIOTransport as BrandSuggestionServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["BrandSuggestionServiceTransport", "BrandSuggestionServiceGrpcTransport"]
+__all__ = [
+    "BrandSuggestionServiceTransport",
+    "BrandSuggestionServiceGrpcTransport",
+    "BrandSuggestionServiceGrpcAsyncIOTransport",
+]

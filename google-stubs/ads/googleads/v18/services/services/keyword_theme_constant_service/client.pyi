@@ -1,5 +1,5 @@
 import types
-from typing import Dict, Sequence, Tuple, Type
+from typing import Callable, Dict, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -32,13 +32,6 @@ class KeywordThemeConstantServiceClient(
     from_service_account_json = from_service_account_file
     @property
     def transport(self) -> KeywordThemeConstantServiceTransport: ...
-    def __enter__(self) -> KeywordThemeConstantServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
     @staticmethod
     def keyword_theme_constant_path(
         express_category_id: str, express_sub_category_id: str
@@ -65,11 +58,22 @@ class KeywordThemeConstantServiceClient(
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
+    @classmethod
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
+    @property
+    def api_endpoint(self): ...
+    @property
+    def universe_domain(self) -> str: ...
     def __init__(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str | KeywordThemeConstantServiceTransport | None = None,
+        transport: str
+        | KeywordThemeConstantServiceTransport
+        | Callable[..., KeywordThemeConstantServiceTransport]
+        | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
@@ -81,5 +85,12 @@ class KeywordThemeConstantServiceClient(
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> keyword_theme_constant_service.SuggestKeywordThemeConstantsResponse: ...
+    def __enter__(self) -> KeywordThemeConstantServiceClient: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

@@ -2,5 +2,12 @@ from .base import CampaignBudgetServiceTransport as CampaignBudgetServiceTranspo
 from .grpc import (
     CampaignBudgetServiceGrpcTransport as CampaignBudgetServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    CampaignBudgetServiceGrpcAsyncIOTransport as CampaignBudgetServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["CampaignBudgetServiceTransport", "CampaignBudgetServiceGrpcTransport"]
+__all__ = [
+    "CampaignBudgetServiceTransport",
+    "CampaignBudgetServiceGrpcTransport",
+    "CampaignBudgetServiceGrpcAsyncIOTransport",
+]

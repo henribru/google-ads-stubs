@@ -22,8 +22,11 @@ class AudienceInsightsServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def generate_insights_finder_report(
@@ -87,3 +90,5 @@ class AudienceInsightsServiceTransport(abc.ABC):
             audience_insights_service.GenerateTargetingSuggestionMetricsResponse
         ],
     ]: ...
+    @property
+    def kind(self) -> str: ...

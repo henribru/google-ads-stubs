@@ -2,5 +2,12 @@ from .base import BiddingStrategyServiceTransport as BiddingStrategyServiceTrans
 from .grpc import (
     BiddingStrategyServiceGrpcTransport as BiddingStrategyServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    BiddingStrategyServiceGrpcAsyncIOTransport as BiddingStrategyServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["BiddingStrategyServiceTransport", "BiddingStrategyServiceGrpcTransport"]
+__all__ = [
+    "BiddingStrategyServiceTransport",
+    "BiddingStrategyServiceGrpcTransport",
+    "BiddingStrategyServiceGrpcAsyncIOTransport",
+]

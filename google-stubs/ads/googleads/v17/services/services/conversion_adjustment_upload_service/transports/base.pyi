@@ -22,8 +22,11 @@ class ConversionAdjustmentUploadServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def upload_conversion_adjustments(
@@ -35,3 +38,5 @@ class ConversionAdjustmentUploadServiceTransport(abc.ABC):
             conversion_adjustment_upload_service.UploadConversionAdjustmentsResponse
         ],
     ]: ...
+    @property
+    def kind(self) -> str: ...

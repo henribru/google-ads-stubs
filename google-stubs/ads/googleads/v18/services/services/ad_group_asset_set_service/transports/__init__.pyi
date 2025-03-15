@@ -2,5 +2,12 @@ from .base import AdGroupAssetSetServiceTransport as AdGroupAssetSetServiceTrans
 from .grpc import (
     AdGroupAssetSetServiceGrpcTransport as AdGroupAssetSetServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    AdGroupAssetSetServiceGrpcAsyncIOTransport as AdGroupAssetSetServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["AdGroupAssetSetServiceTransport", "AdGroupAssetSetServiceGrpcTransport"]
+__all__ = [
+    "AdGroupAssetSetServiceTransport",
+    "AdGroupAssetSetServiceGrpcTransport",
+    "AdGroupAssetSetServiceGrpcAsyncIOTransport",
+]

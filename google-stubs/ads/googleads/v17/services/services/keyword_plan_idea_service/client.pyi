@@ -1,5 +1,5 @@
 import types
-from typing import Dict, Sequence, Tuple, Type
+from typing import Callable, Dict, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -31,13 +31,6 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
     from_service_account_json = from_service_account_file
     @property
     def transport(self) -> KeywordPlanIdeaServiceTransport: ...
-    def __enter__(self) -> KeywordPlanIdeaServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
@@ -58,11 +51,22 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
+    @classmethod
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
+    @property
+    def api_endpoint(self): ...
+    @property
+    def universe_domain(self) -> str: ...
     def __init__(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str | KeywordPlanIdeaServiceTransport | None = None,
+        transport: str
+        | KeywordPlanIdeaServiceTransport
+        | Callable[..., KeywordPlanIdeaServiceTransport]
+        | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
@@ -74,7 +78,7 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.GenerateKeywordIdeasPager: ...
     def generate_keyword_historical_metrics(
         self,
@@ -84,7 +88,7 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> keyword_plan_idea_service.GenerateKeywordHistoricalMetricsResponse: ...
     def generate_ad_group_themes(
         self,
@@ -94,7 +98,7 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> keyword_plan_idea_service.GenerateAdGroupThemesResponse: ...
     def generate_keyword_forecast_metrics(
         self,
@@ -104,5 +108,12 @@ class KeywordPlanIdeaServiceClient(metaclass=KeywordPlanIdeaServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> keyword_plan_idea_service.GenerateKeywordForecastMetricsResponse: ...
+    def __enter__(self) -> KeywordPlanIdeaServiceClient: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

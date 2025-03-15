@@ -22,8 +22,11 @@ class CustomizerAttributeServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def mutate_customizer_attributes(
@@ -33,3 +36,5 @@ class CustomizerAttributeServiceTransport(abc.ABC):
         customizer_attribute_service.MutateCustomizerAttributesResponse
         | Awaitable[customizer_attribute_service.MutateCustomizerAttributesResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

@@ -24,8 +24,11 @@ class ThirdPartyAppAnalyticsLinkServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def regenerate_shareable_link_id(
@@ -37,3 +40,5 @@ class ThirdPartyAppAnalyticsLinkServiceTransport(abc.ABC):
             third_party_app_analytics_link_service.RegenerateShareableLinkIdResponse
         ],
     ]: ...
+    @property
+    def kind(self) -> str: ...

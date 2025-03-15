@@ -2,5 +2,12 @@ from .base import CampaignSharedSetServiceTransport as CampaignSharedSetServiceT
 from .grpc import (
     CampaignSharedSetServiceGrpcTransport as CampaignSharedSetServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    CampaignSharedSetServiceGrpcAsyncIOTransport as CampaignSharedSetServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["CampaignSharedSetServiceTransport", "CampaignSharedSetServiceGrpcTransport"]
+__all__ = [
+    "CampaignSharedSetServiceTransport",
+    "CampaignSharedSetServiceGrpcTransport",
+    "CampaignSharedSetServiceGrpcAsyncIOTransport",
+]
