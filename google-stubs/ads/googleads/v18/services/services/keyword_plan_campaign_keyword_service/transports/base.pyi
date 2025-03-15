@@ -24,8 +24,11 @@ class KeywordPlanCampaignKeywordServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def mutate_keyword_plan_campaign_keywords(
@@ -39,3 +42,5 @@ class KeywordPlanCampaignKeywordServiceTransport(abc.ABC):
             keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsResponse
         ],
     ]: ...
+    @property
+    def kind(self) -> str: ...

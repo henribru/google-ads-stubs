@@ -1,5 +1,5 @@
 import types
-from typing import Dict, MutableSequence, Sequence, Tuple, Type
+from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -32,13 +32,6 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
     from_service_account_json = from_service_account_file
     @property
     def transport(self) -> OfflineUserDataJobServiceTransport: ...
-    def __enter__(self) -> OfflineUserDataJobServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
     @staticmethod
     def offline_user_data_job_path(
         customer_id: str, offline_user_data_update_id: str
@@ -65,11 +58,22 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
+    @classmethod
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
+    @property
+    def api_endpoint(self): ...
+    @property
+    def universe_domain(self) -> str: ...
     def __init__(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str | OfflineUserDataJobServiceTransport | None = None,
+        transport: str
+        | OfflineUserDataJobServiceTransport
+        | Callable[..., OfflineUserDataJobServiceTransport]
+        | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
@@ -83,7 +87,7 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         job: offline_user_data_job.OfflineUserDataJob | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> offline_user_data_job_service.CreateOfflineUserDataJobResponse: ...
     def add_offline_user_data_job_operations(
         self,
@@ -98,7 +102,7 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> offline_user_data_job_service.AddOfflineUserDataJobOperationsResponse: ...
     def run_offline_user_data_job(
         self,
@@ -109,5 +113,12 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         resource_name: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation.Operation: ...
+    def __enter__(self) -> OfflineUserDataJobServiceClient: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

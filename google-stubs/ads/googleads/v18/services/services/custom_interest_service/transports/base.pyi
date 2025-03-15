@@ -22,8 +22,11 @@ class CustomInterestServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def mutate_custom_interests(
@@ -33,3 +36,5 @@ class CustomInterestServiceTransport(abc.ABC):
         custom_interest_service.MutateCustomInterestsResponse
         | Awaitable[custom_interest_service.MutateCustomInterestsResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

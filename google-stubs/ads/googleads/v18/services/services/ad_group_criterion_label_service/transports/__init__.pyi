@@ -4,8 +4,12 @@ from .base import (
 from .grpc import (
     AdGroupCriterionLabelServiceGrpcTransport as AdGroupCriterionLabelServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    AdGroupCriterionLabelServiceGrpcAsyncIOTransport as AdGroupCriterionLabelServiceGrpcAsyncIOTransport,
+)
 
 __all__ = [
     "AdGroupCriterionLabelServiceTransport",
     "AdGroupCriterionLabelServiceGrpcTransport",
+    "AdGroupCriterionLabelServiceGrpcAsyncIOTransport",
 ]

@@ -2,5 +2,12 @@ from .base import ShareablePreviewServiceTransport as ShareablePreviewServiceTra
 from .grpc import (
     ShareablePreviewServiceGrpcTransport as ShareablePreviewServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    ShareablePreviewServiceGrpcAsyncIOTransport as ShareablePreviewServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["ShareablePreviewServiceTransport", "ShareablePreviewServiceGrpcTransport"]
+__all__ = [
+    "ShareablePreviewServiceTransport",
+    "ShareablePreviewServiceGrpcTransport",
+    "ShareablePreviewServiceGrpcAsyncIOTransport",
+]

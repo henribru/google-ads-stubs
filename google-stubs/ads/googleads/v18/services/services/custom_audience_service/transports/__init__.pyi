@@ -2,5 +2,12 @@ from .base import CustomAudienceServiceTransport as CustomAudienceServiceTranspo
 from .grpc import (
     CustomAudienceServiceGrpcTransport as CustomAudienceServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    CustomAudienceServiceGrpcAsyncIOTransport as CustomAudienceServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["CustomAudienceServiceTransport", "CustomAudienceServiceGrpcTransport"]
+__all__ = [
+    "CustomAudienceServiceTransport",
+    "CustomAudienceServiceGrpcTransport",
+    "CustomAudienceServiceGrpcAsyncIOTransport",
+]

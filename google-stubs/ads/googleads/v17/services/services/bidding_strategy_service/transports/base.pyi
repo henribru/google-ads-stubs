@@ -22,8 +22,11 @@ class BiddingStrategyServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def mutate_bidding_strategies(
@@ -33,3 +36,5 @@ class BiddingStrategyServiceTransport(abc.ABC):
         bidding_strategy_service.MutateBiddingStrategiesResponse
         | Awaitable[bidding_strategy_service.MutateBiddingStrategiesResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

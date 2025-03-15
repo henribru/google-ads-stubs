@@ -1,11 +1,11 @@
-from typing import Any, Callable, Iterable, Iterator, Sequence, Tuple
+from typing import Any, AsyncIterator, Awaitable, Callable, Iterator, Sequence, Tuple
 
 from _typeshed import Incomplete
-from google.api_core import gapic_v1, retry as retries
 
 from google.ads.googleads.v18.services.types import batch_job_service
 
 OptionalRetry: Incomplete
+OptionalAsyncRetry: Incomplete
 
 class ListBatchJobResultsPager:
     def __init__(
@@ -13,11 +13,30 @@ class ListBatchJobResultsPager:
         method: Callable[..., batch_job_service.ListBatchJobResultsResponse],
         request: batch_job_service.ListBatchJobResultsRequest,
         response: batch_job_service.ListBatchJobResultsResponse,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        *,
+        retry: OptionalRetry = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
     def __getattr__(self, name: str) -> Any: ...
     @property
-    def pages(self) -> Iterable[batch_job_service.ListBatchJobResultsResponse]: ...
+    def pages(self) -> Iterator[batch_job_service.ListBatchJobResultsResponse]: ...
     def __iter__(self) -> Iterator[batch_job_service.BatchJobResult]: ...
+
+class ListBatchJobResultsAsyncPager:
+    def __init__(
+        self,
+        method: Callable[..., Awaitable[batch_job_service.ListBatchJobResultsResponse]],
+        request: batch_job_service.ListBatchJobResultsRequest,
+        response: batch_job_service.ListBatchJobResultsResponse,
+        *,
+        retry: OptionalAsyncRetry = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> None: ...
+    def __getattr__(self, name: str) -> Any: ...
+    @property
+    async def pages(
+        self,
+    ) -> AsyncIterator[batch_job_service.ListBatchJobResultsResponse]: ...
+    def __aiter__(self) -> AsyncIterator[batch_job_service.BatchJobResult]: ...

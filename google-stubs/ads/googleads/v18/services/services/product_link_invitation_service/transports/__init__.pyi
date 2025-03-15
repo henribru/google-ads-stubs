@@ -4,8 +4,12 @@ from .base import (
 from .grpc import (
     ProductLinkInvitationServiceGrpcTransport as ProductLinkInvitationServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    ProductLinkInvitationServiceGrpcAsyncIOTransport as ProductLinkInvitationServiceGrpcAsyncIOTransport,
+)
 
 __all__ = [
     "ProductLinkInvitationServiceTransport",
     "ProductLinkInvitationServiceGrpcTransport",
+    "ProductLinkInvitationServiceGrpcAsyncIOTransport",
 ]

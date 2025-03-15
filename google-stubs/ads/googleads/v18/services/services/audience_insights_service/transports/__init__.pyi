@@ -2,5 +2,12 @@ from .base import AudienceInsightsServiceTransport as AudienceInsightsServiceTra
 from .grpc import (
     AudienceInsightsServiceGrpcTransport as AudienceInsightsServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    AudienceInsightsServiceGrpcAsyncIOTransport as AudienceInsightsServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["AudienceInsightsServiceTransport", "AudienceInsightsServiceGrpcTransport"]
+__all__ = [
+    "AudienceInsightsServiceTransport",
+    "AudienceInsightsServiceGrpcTransport",
+    "AudienceInsightsServiceGrpcAsyncIOTransport",
+]

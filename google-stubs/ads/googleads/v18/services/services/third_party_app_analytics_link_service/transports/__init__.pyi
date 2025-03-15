@@ -4,8 +4,12 @@ from .base import (
 from .grpc import (
     ThirdPartyAppAnalyticsLinkServiceGrpcTransport as ThirdPartyAppAnalyticsLinkServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    ThirdPartyAppAnalyticsLinkServiceGrpcAsyncIOTransport as ThirdPartyAppAnalyticsLinkServiceGrpcAsyncIOTransport,
+)
 
 __all__ = [
     "ThirdPartyAppAnalyticsLinkServiceTransport",
     "ThirdPartyAppAnalyticsLinkServiceGrpcTransport",
+    "ThirdPartyAppAnalyticsLinkServiceGrpcAsyncIOTransport",
 ]

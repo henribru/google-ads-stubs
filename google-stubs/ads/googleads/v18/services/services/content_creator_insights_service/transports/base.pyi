@@ -22,8 +22,11 @@ class ContentCreatorInsightsServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def generate_creator_insights(
@@ -33,3 +36,5 @@ class ContentCreatorInsightsServiceTransport(abc.ABC):
         content_creator_insights_service.GenerateCreatorInsightsResponse
         | Awaitable[content_creator_insights_service.GenerateCreatorInsightsResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

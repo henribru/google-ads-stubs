@@ -1,5 +1,5 @@
 import types
-from typing import Dict, MutableSequence, Sequence, Tuple, Type
+from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -34,13 +34,6 @@ class KeywordPlanCampaignKeywordServiceClient(
     from_service_account_json = from_service_account_file
     @property
     def transport(self) -> KeywordPlanCampaignKeywordServiceTransport: ...
-    def __enter__(self) -> KeywordPlanCampaignKeywordServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
     @staticmethod
     def keyword_plan_campaign_path(
         customer_id: str, keyword_plan_campaign_id: str
@@ -73,11 +66,22 @@ class KeywordPlanCampaignKeywordServiceClient(
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
+    @classmethod
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
+    @property
+    def api_endpoint(self): ...
+    @property
+    def universe_domain(self) -> str: ...
     def __init__(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str | KeywordPlanCampaignKeywordServiceTransport | None = None,
+        transport: str
+        | KeywordPlanCampaignKeywordServiceTransport
+        | Callable[..., KeywordPlanCampaignKeywordServiceTransport]
+        | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
@@ -94,7 +98,14 @@ class KeywordPlanCampaignKeywordServiceClient(
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> (
         keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsResponse
     ): ...
+    def __enter__(self) -> KeywordPlanCampaignKeywordServiceClient: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

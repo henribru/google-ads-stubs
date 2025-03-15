@@ -2,5 +2,12 @@ from .base import CustomInterestServiceTransport as CustomInterestServiceTranspo
 from .grpc import (
     CustomInterestServiceGrpcTransport as CustomInterestServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    CustomInterestServiceGrpcAsyncIOTransport as CustomInterestServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["CustomInterestServiceTransport", "CustomInterestServiceGrpcTransport"]
+__all__ = [
+    "CustomInterestServiceTransport",
+    "CustomInterestServiceGrpcTransport",
+    "CustomInterestServiceGrpcAsyncIOTransport",
+]

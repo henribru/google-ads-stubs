@@ -1,5 +1,5 @@
 import types
-from typing import Dict, MutableSequence, Sequence, Tuple, Type
+from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -30,13 +30,6 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
     from_service_account_json = from_service_account_file
     @property
     def transport(self) -> ReachPlanServiceTransport: ...
-    def __enter__(self) -> ReachPlanServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
@@ -57,11 +50,22 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
+    @classmethod
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
+    @property
+    def api_endpoint(self): ...
+    @property
+    def universe_domain(self) -> str: ...
     def __init__(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str | ReachPlanServiceTransport | None = None,
+        transport: str
+        | ReachPlanServiceTransport
+        | Callable[..., ReachPlanServiceTransport]
+        | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
@@ -71,7 +75,7 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
         *,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> reach_plan_service.ListPlannableLocationsResponse: ...
     def list_plannable_products(
         self,
@@ -80,7 +84,7 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
         plannable_location_id: str | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> reach_plan_service.ListPlannableProductsResponse: ...
     def generate_reach_forecast(
         self,
@@ -92,5 +96,12 @@ class ReachPlanServiceClient(metaclass=ReachPlanServiceClientMeta):
         | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> reach_plan_service.GenerateReachForecastResponse: ...
+    def __enter__(self) -> ReachPlanServiceClient: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

@@ -2,5 +2,12 @@ from .base import GoogleAdsFieldServiceTransport as GoogleAdsFieldServiceTranspo
 from .grpc import (
     GoogleAdsFieldServiceGrpcTransport as GoogleAdsFieldServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    GoogleAdsFieldServiceGrpcAsyncIOTransport as GoogleAdsFieldServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["GoogleAdsFieldServiceTransport", "GoogleAdsFieldServiceGrpcTransport"]
+__all__ = [
+    "GoogleAdsFieldServiceTransport",
+    "GoogleAdsFieldServiceGrpcTransport",
+    "GoogleAdsFieldServiceGrpcAsyncIOTransport",
+]

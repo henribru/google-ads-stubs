@@ -22,8 +22,11 @@ class ProductLinkServiceTransport(abc.ABC):
         quota_project_id: str | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
         always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
         **kwargs,
     ) -> None: ...
+    @property
+    def host(self): ...
     def close(self) -> None: ...
     @property
     def create_product_link(
@@ -41,3 +44,5 @@ class ProductLinkServiceTransport(abc.ABC):
         product_link_service.RemoveProductLinkResponse
         | Awaitable[product_link_service.RemoveProductLinkResponse],
     ]: ...
+    @property
+    def kind(self) -> str: ...

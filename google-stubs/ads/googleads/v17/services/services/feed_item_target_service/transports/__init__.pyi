@@ -2,5 +2,12 @@ from .base import FeedItemTargetServiceTransport as FeedItemTargetServiceTranspo
 from .grpc import (
     FeedItemTargetServiceGrpcTransport as FeedItemTargetServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    FeedItemTargetServiceGrpcAsyncIOTransport as FeedItemTargetServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["FeedItemTargetServiceTransport", "FeedItemTargetServiceGrpcTransport"]
+__all__ = [
+    "FeedItemTargetServiceTransport",
+    "FeedItemTargetServiceGrpcTransport",
+    "FeedItemTargetServiceGrpcAsyncIOTransport",
+]

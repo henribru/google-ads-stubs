@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -eou pipefail
+shopt -s globstar
 
 # Manual: Clone https://github.com/googleads/google-ads-python
 # Manual: Update google-ads-python dependency
@@ -12,13 +13,12 @@ cd google-ads-python
 git restore .
 git pull
 rm __init__.py
-shopt -s globstar
-sed -i 's/: OptionalRetry/: Union\[retries\.Retry, gapic_v1\.method\._MethodDefault\]/' google/ads/googleads/**/*.py
+sed -i 's/: OptionalRetry/: Union\[retries\.Retry, gapic_v1\.method\._MethodDefault\]/' google/ads/googleads/**/client.py
+sed -i 's/: OptionalRetry/: Union\[retries\.AsyncRetry, gapic_v1\.method\._MethodDefault\]/' google/ads/googleads/**/async_client.py
 cd ..
 rm -rf google-stubs/ads/googleads/v*
 uv run python stubgen.py
 uv run python create_type_stubs.py
-uv run python create_types_pyi.py
 uv run create_enums.py
 uv run create_service_overloads.py
 ./stubdefaulter.sh
@@ -28,6 +28,8 @@ uv run ruff format google-stubs
 mv gitignore .gitignore
 sed -i 's/from typing/import types\nfrom typing/' google-stubs/ads/googleads/v*/**/client.pyi
 sed -i 's/def operations_client(self) -> operations_v1\.OperationsClient: \.\.\./def operations_client(self) -> operations_v1\.OperationsClient: \.\.\.  # type: ignore\[override\]/' google-stubs/ads/googleads/v*/**/*.pyi
+sed -i 's/def operations_client(self) -> operations_v1\.OperationsAsyncClient: \.\.\./def operations_client(self) -> operations_v1\.OperationsAsyncClient: \.\.\.  # type: ignore\[override\]/' google-stubs/ads/googleads/v*/**/*.pyi
+sed -i 's/from grpc.experimental import aio/from grpc.experimental import aio  # type: ignore[attr-defined]/' google-stubs/ads/googleads/**/*.pyi
 mv google-stubs google
 uv run mypy --namespace-packages --explicit-package-bases google || true  # || true so we can move the folder back on failure.
 mv google google-stubs

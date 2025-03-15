@@ -4,8 +4,12 @@ from .base import (
 from .grpc import (
     AssetGroupListingGroupFilterServiceGrpcTransport as AssetGroupListingGroupFilterServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    AssetGroupListingGroupFilterServiceGrpcAsyncIOTransport as AssetGroupListingGroupFilterServiceGrpcAsyncIOTransport,
+)
 
 __all__ = [
     "AssetGroupListingGroupFilterServiceTransport",
     "AssetGroupListingGroupFilterServiceGrpcTransport",
+    "AssetGroupListingGroupFilterServiceGrpcAsyncIOTransport",
 ]

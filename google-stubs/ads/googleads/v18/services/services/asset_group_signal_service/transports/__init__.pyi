@@ -2,5 +2,12 @@ from .base import AssetGroupSignalServiceTransport as AssetGroupSignalServiceTra
 from .grpc import (
     AssetGroupSignalServiceGrpcTransport as AssetGroupSignalServiceGrpcTransport,
 )
+from .grpc_asyncio import (
+    AssetGroupSignalServiceGrpcAsyncIOTransport as AssetGroupSignalServiceGrpcAsyncIOTransport,
+)
 
-__all__ = ["AssetGroupSignalServiceTransport", "AssetGroupSignalServiceGrpcTransport"]
+__all__ = [
+    "AssetGroupSignalServiceTransport",
+    "AssetGroupSignalServiceGrpcTransport",
+    "AssetGroupSignalServiceGrpcAsyncIOTransport",
+]

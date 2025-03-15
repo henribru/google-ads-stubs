@@ -1,5 +1,5 @@
 import types
-from typing import Dict, Sequence, Tuple, Type
+from typing import Callable, Dict, Sequence, Tuple, Type
 
 from _typeshed import Incomplete
 from google.api_core import (
@@ -31,13 +31,6 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
     from_service_account_json = from_service_account_file
     @property
     def transport(self) -> AccountLinkServiceTransport: ...
-    def __enter__(self) -> AccountLinkServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
     @staticmethod
     def account_link_path(customer_id: str, account_link_id: str) -> str: ...
     @staticmethod
@@ -62,11 +55,22 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
     def common_location_path(project: str, location: str) -> str: ...
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
+    @classmethod
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
+    @property
+    def api_endpoint(self): ...
+    @property
+    def universe_domain(self) -> str: ...
     def __init__(
         self,
         *,
         credentials: ga_credentials.Credentials | None = None,
-        transport: str | AccountLinkServiceTransport | None = None,
+        transport: str
+        | AccountLinkServiceTransport
+        | Callable[..., AccountLinkServiceTransport]
+        | None = None,
         client_options: client_options_lib.ClientOptions | dict | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
@@ -78,7 +82,7 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
         account_link: gagr_account_link.AccountLink | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> account_link_service.CreateAccountLinkResponse: ...
     def mutate_account_link(
         self,
@@ -88,5 +92,12 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
         operation: account_link_service.AccountLinkOperation | None = None,
         retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
         timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str]] = (),
+        metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> account_link_service.MutateAccountLinkResponse: ...
+    def __enter__(self) -> AccountLinkServiceClient: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
