@@ -1,3 +1,4 @@
+import types
 from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
 
 from _typeshed import Incomplete

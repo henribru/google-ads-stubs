@@ -4,7 +4,7 @@ import grpc
 from google.api_core import gapic_v1, operations_v1
 from google.auth import credentials as ga_credentials
 from google.longrunning import operations_pb2
-from grpc.experimental import aio
+from grpc.experimental import aio  # type: ignore[attr-defined]
 
 from google.ads.googleads.v20.services.types import batch_job_service
 
@@ -48,7 +48,7 @@ class BatchJobServiceGrpcAsyncIOTransport(BatchJobServiceTransport):
     @property
     def grpc_channel(self) -> aio.Channel: ...
     @property
-    def operations_client(self) -> operations_v1.OperationsAsyncClient: ...
+    def operations_client(self) -> operations_v1.OperationsAsyncClient: ...  # type: ignore[override]
     @property
     def mutate_batch_job(
         self,

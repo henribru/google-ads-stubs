@@ -3,7 +3,7 @@ from typing import Awaitable, Callable, Sequence, Tuple
 import grpc
 from google.api_core import gapic_v1
 from google.auth import credentials as ga_credentials
-from grpc.experimental import aio
+from grpc.experimental import aio  # type: ignore[attr-defined]
 
 from google.ads.googleads.v19.services.types import custom_audience_service
 
