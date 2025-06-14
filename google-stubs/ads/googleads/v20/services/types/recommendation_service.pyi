@@ -1,0 +1,166 @@
+import proto
+from _typeshed import Incomplete
+from google.ads.googleads.v20.common.types import criteria, extensions
+from google.ads.googleads.v20.enums.types import ad_group_type as gage_ad_group_type, advertising_channel_type as gage_advertising_channel_type, bidding_strategy_type as gage_bidding_strategy_type, conversion_tracking_status_enum, keyword_match_type, recommendation_type, target_impression_share_location
+from google.ads.googleads.v20.resources.types import ad as gagr_ad, asset, recommendation
+from google.rpc import status_pb2
+from typing import MutableSequence
+
+__protobuf__: Incomplete
+
+class ApplyRecommendationRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence['ApplyRecommendationOperation']
+    partial_failure: bool
+
+class ApplyRecommendationOperation(proto.Message):
+    class CampaignBudgetParameters(proto.Message):
+        new_budget_amount_micros: int
+    class ForecastingSetTargetRoasParameters(proto.Message):
+        target_roas: float
+        campaign_budget_amount_micros: int
+    class TextAdParameters(proto.Message):
+        ad: gagr_ad.Ad
+    class KeywordParameters(proto.Message):
+        ad_group: str
+        match_type: keyword_match_type.KeywordMatchTypeEnum.KeywordMatchType
+        cpc_bid_micros: int
+    class TargetCpaOptInParameters(proto.Message):
+        target_cpa_micros: int
+        new_campaign_budget_amount_micros: int
+    class TargetRoasOptInParameters(proto.Message):
+        target_roas: float
+        new_campaign_budget_amount_micros: int
+    class CalloutExtensionParameters(proto.Message):
+        callout_extensions: MutableSequence[extensions.CalloutFeedItem]
+    class CallExtensionParameters(proto.Message):
+        call_extensions: MutableSequence[extensions.CallFeedItem]
+    class SitelinkExtensionParameters(proto.Message):
+        sitelink_extensions: MutableSequence[extensions.SitelinkFeedItem]
+    class CalloutAssetParameters(proto.Message):
+        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
+    class CallAssetParameters(proto.Message):
+        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
+    class SitelinkAssetParameters(proto.Message):
+        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
+    class RaiseTargetCpaParameters(proto.Message):
+        target_cpa_multiplier: float
+    class LowerTargetRoasParameters(proto.Message):
+        target_roas_multiplier: float
+    class AdAssetApplyParameters(proto.Message):
+        class ApplyScope(proto.Enum):
+            UNSPECIFIED: int
+            UNKNOWN: int
+            CUSTOMER: int
+            CAMPAIGN: int
+        new_assets: MutableSequence[asset.Asset]
+        existing_assets: MutableSequence[str]
+        scope: ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope
+    class MoveUnusedBudgetParameters(proto.Message):
+        budget_micros_to_move: int
+    class ResponsiveSearchAdAssetParameters(proto.Message):
+        updated_ad: gagr_ad.Ad
+    class ResponsiveSearchAdImproveAdStrengthParameters(proto.Message):
+        updated_ad: gagr_ad.Ad
+    class ResponsiveSearchAdParameters(proto.Message):
+        ad: gagr_ad.Ad
+    class RaiseTargetCpaBidTooLowParameters(proto.Message):
+        target_multiplier: float
+    class UseBroadMatchKeywordParameters(proto.Message):
+        new_budget_amount_micros: int
+    class ForecastingSetTargetCpaParameters(proto.Message):
+        target_cpa_micros: int
+        campaign_budget_amount_micros: int
+    class LeadFormAssetParameters(proto.Message):
+        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
+        set_submit_lead_form_asset_campaign_goal: bool
+    resource_name: str
+    campaign_budget: CampaignBudgetParameters
+    text_ad: TextAdParameters
+    keyword: KeywordParameters
+    target_cpa_opt_in: TargetCpaOptInParameters
+    target_roas_opt_in: TargetRoasOptInParameters
+    callout_extension: CalloutExtensionParameters
+    call_extension: CallExtensionParameters
+    sitelink_extension: SitelinkExtensionParameters
+    move_unused_budget: MoveUnusedBudgetParameters
+    responsive_search_ad: ResponsiveSearchAdParameters
+    use_broad_match_keyword: UseBroadMatchKeywordParameters
+    responsive_search_ad_asset: ResponsiveSearchAdAssetParameters
+    responsive_search_ad_improve_ad_strength: ResponsiveSearchAdImproveAdStrengthParameters
+    raise_target_cpa_bid_too_low: RaiseTargetCpaBidTooLowParameters
+    forecasting_set_target_roas: ForecastingSetTargetRoasParameters
+    callout_asset: CalloutAssetParameters
+    call_asset: CallAssetParameters
+    sitelink_asset: SitelinkAssetParameters
+    raise_target_cpa: RaiseTargetCpaParameters
+    lower_target_roas: LowerTargetRoasParameters
+    forecasting_set_target_cpa: ForecastingSetTargetCpaParameters
+    set_target_cpa: ForecastingSetTargetCpaParameters
+    set_target_roas: ForecastingSetTargetRoasParameters
+    lead_form_asset: LeadFormAssetParameters
+
+class ApplyRecommendationResponse(proto.Message):
+    results: MutableSequence['ApplyRecommendationResult']
+    partial_failure_error: status_pb2.Status
+
+class ApplyRecommendationResult(proto.Message):
+    resource_name: str
+
+class DismissRecommendationRequest(proto.Message):
+    class DismissRecommendationOperation(proto.Message):
+        resource_name: str
+    customer_id: str
+    operations: MutableSequence[DismissRecommendationOperation]
+    partial_failure: bool
+
+class DismissRecommendationResponse(proto.Message):
+    class DismissRecommendationResult(proto.Message):
+        resource_name: str
+    results: MutableSequence[DismissRecommendationResult]
+    partial_failure_error: status_pb2.Status
+
+class GenerateRecommendationsRequest(proto.Message):
+    class BiddingInfo(proto.Message):
+        bidding_strategy_type: gage_bidding_strategy_type.BiddingStrategyTypeEnum.BiddingStrategyType
+        target_cpa_micros: int
+        target_roas: float
+        target_impression_share_info: GenerateRecommendationsRequest.TargetImpressionShareInfo
+    class AdGroupInfo(proto.Message):
+        ad_group_type: gage_ad_group_type.AdGroupTypeEnum.AdGroupType
+        keywords: MutableSequence[criteria.KeywordInfo]
+    class SeedInfo(proto.Message):
+        url_seed: str
+        keyword_seeds: MutableSequence[str]
+    class BudgetInfo(proto.Message):
+        current_budget: int
+    class AssetGroupInfo(proto.Message):
+        final_url: str
+        headline: MutableSequence[str]
+        description: MutableSequence[str]
+    class TargetImpressionShareInfo(proto.Message):
+        location: target_impression_share_location.TargetImpressionShareLocationEnum.TargetImpressionShareLocation
+        target_impression_share_micros: int
+        max_cpc_bid_ceiling: int
+    customer_id: str
+    recommendation_types: MutableSequence[recommendation_type.RecommendationTypeEnum.RecommendationType]
+    advertising_channel_type: gage_advertising_channel_type.AdvertisingChannelTypeEnum.AdvertisingChannelType
+    campaign_sitelink_count: int
+    conversion_tracking_status: conversion_tracking_status_enum.ConversionTrackingStatusEnum.ConversionTrackingStatus
+    bidding_info: BiddingInfo
+    ad_group_info: MutableSequence[AdGroupInfo]
+    seed_info: SeedInfo
+    budget_info: BudgetInfo
+    campaign_image_asset_count: int
+    campaign_call_asset_count: int
+    country_codes: MutableSequence[str]
+    language_codes: MutableSequence[str]
+    positive_locations_ids: MutableSequence[int]
+    negative_locations_ids: MutableSequence[int]
+    asset_group_info: MutableSequence[AssetGroupInfo]
+    target_partner_search_network: bool
+    target_content_network: bool
+    merchant_center_account_id: int
+
+class GenerateRecommendationsResponse(proto.Message):
+    recommendations: MutableSequence[recommendation.Recommendation]

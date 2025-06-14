@@ -1,11 +1,7 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class Video(proto.Message):
     resource_name: str
@@ -13,18 +9,3 @@ class Video(proto.Message):
     channel_id: str
     duration_millis: int
     title: str
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-        id: str = ...,
-        channel_id: str = ...,
-        duration_millis: int = ...,
-        title: str = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal["resource_name", "id", "channel_id", "duration_millis", "title"],
-    ) -> bool: ...

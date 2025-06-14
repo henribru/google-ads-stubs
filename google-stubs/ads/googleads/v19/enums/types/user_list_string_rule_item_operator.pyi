@@ -1,31 +1,17 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class UserListStringRuleItemOperatorEnum(proto.Message):
     class UserListStringRuleItemOperator(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        CONTAINS = 2
-        EQUALS = 3
-        STARTS_WITH = 4
-        ENDS_WITH = 5
-        NOT_EQUALS = 6
-        NOT_CONTAINS = 7
-        NOT_STARTS_WITH = 8
-        NOT_ENDS_WITH = 9
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        CONTAINS: int
+        EQUALS: int
+        STARTS_WITH: int
+        ENDS_WITH: int
+        NOT_EQUALS: int
+        NOT_CONTAINS: int
+        NOT_STARTS_WITH: int
+        NOT_ENDS_WITH: int

@@ -1,0 +1,227 @@
+import proto
+from _typeshed import Incomplete
+from google.ads.googleads.v20.common.types import criteria
+from google.ads.googleads.v20.enums.types import ad_strength as gage_ad_strength, app_bidding_goal as gage_app_bidding_goal, keyword_match_type, recommendation_type, shopping_add_products_to_campaign_recommendation_enum, target_cpa_opt_in_recommendation_goal
+from google.ads.googleads.v20.resources.types import ad as gagr_ad, asset
+from typing import MutableSequence
+
+__protobuf__: Incomplete
+
+class Recommendation(proto.Message):
+    class MerchantInfo(proto.Message):
+        id: int
+        name: str
+        multi_client: bool
+    class RecommendationImpact(proto.Message):
+        base_metrics: Recommendation.RecommendationMetrics
+        potential_metrics: Recommendation.RecommendationMetrics
+    class RecommendationMetrics(proto.Message):
+        impressions: float
+        clicks: float
+        cost_micros: int
+        conversions: float
+        conversions_value: float
+        video_views: float
+    class CampaignBudgetRecommendation(proto.Message):
+        class CampaignBudgetRecommendationOption(proto.Message):
+            budget_amount_micros: int
+            impact: Recommendation.RecommendationImpact
+        current_budget_amount_micros: int
+        recommended_budget_amount_micros: int
+        budget_options: MutableSequence['Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption']
+    class KeywordRecommendation(proto.Message):
+        class SearchTerm(proto.Message):
+            text: str
+            estimated_weekly_search_count: int
+        keyword: criteria.KeywordInfo
+        search_terms: MutableSequence['Recommendation.KeywordRecommendation.SearchTerm']
+        recommended_cpc_bid_micros: int
+    class TextAdRecommendation(proto.Message):
+        ad: gagr_ad.Ad
+        creation_date: str
+        auto_apply_date: str
+    class TargetCpaOptInRecommendation(proto.Message):
+        class TargetCpaOptInRecommendationOption(proto.Message):
+            goal: target_cpa_opt_in_recommendation_goal.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
+            target_cpa_micros: int
+            required_campaign_budget_amount_micros: int
+            impact: Recommendation.RecommendationImpact
+        options: MutableSequence['Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption']
+        recommended_target_cpa_micros: int
+    class MaximizeConversionsOptInRecommendation(proto.Message):
+        recommended_budget_amount_micros: int
+    class EnhancedCpcOptInRecommendation(proto.Message): ...
+    class SearchPartnersOptInRecommendation(proto.Message): ...
+    class MaximizeClicksOptInRecommendation(proto.Message):
+        recommended_budget_amount_micros: int
+    class OptimizeAdRotationRecommendation(proto.Message): ...
+    class CalloutAssetRecommendation(proto.Message):
+        recommended_campaign_callout_assets: MutableSequence[asset.Asset]
+        recommended_customer_callout_assets: MutableSequence[asset.Asset]
+    class SitelinkAssetRecommendation(proto.Message):
+        recommended_campaign_sitelink_assets: MutableSequence[asset.Asset]
+        recommended_customer_sitelink_assets: MutableSequence[asset.Asset]
+    class CallAssetRecommendation(proto.Message): ...
+    class KeywordMatchTypeRecommendation(proto.Message):
+        keyword: criteria.KeywordInfo
+        recommended_match_type: keyword_match_type.KeywordMatchTypeEnum.KeywordMatchType
+    class MoveUnusedBudgetRecommendation(proto.Message):
+        excess_campaign_budget: str
+        budget_recommendation: Recommendation.CampaignBudgetRecommendation
+    class TargetRoasOptInRecommendation(proto.Message):
+        recommended_target_roas: float
+        required_campaign_budget_amount_micros: int
+    class ResponsiveSearchAdAssetRecommendation(proto.Message):
+        current_ad: gagr_ad.Ad
+        recommended_assets: gagr_ad.Ad
+    class ResponsiveSearchAdImproveAdStrengthRecommendation(proto.Message):
+        current_ad: gagr_ad.Ad
+        recommended_ad: gagr_ad.Ad
+    class ResponsiveSearchAdRecommendation(proto.Message):
+        ad: gagr_ad.Ad
+    class UseBroadMatchKeywordRecommendation(proto.Message):
+        keyword: MutableSequence[criteria.KeywordInfo]
+        suggested_keywords_count: int
+        campaign_keywords_count: int
+        campaign_uses_shared_budget: bool
+        required_campaign_budget_amount_micros: int
+    class UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation(proto.Message):
+        merchant_id: int
+        sales_country_code: str
+    class RaiseTargetCpaBidTooLowRecommendation(proto.Message):
+        recommended_target_multiplier: float
+        average_target_cpa_micros: int
+    class DisplayExpansionOptInRecommendation(proto.Message): ...
+    class UpgradeLocalCampaignToPerformanceMaxRecommendation(proto.Message): ...
+    class ForecastingSetTargetRoasRecommendation(proto.Message):
+        recommended_target_roas: float
+        campaign_budget: Recommendation.CampaignBudget
+    class ShoppingOfferAttributeRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        offers_count: int
+        demoted_offers_count: int
+    class ShoppingFixDisapprovedProductsRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        products_count: int
+        disapproved_products_count: int
+    class ShoppingTargetAllOffersRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        untargeted_offers_count: int
+        feed_label: str
+    class ShoppingAddProductsToCampaignRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        reason: shopping_add_products_to_campaign_recommendation_enum.ShoppingAddProductsToCampaignRecommendationEnum.Reason
+    class ShoppingMerchantCenterAccountSuspensionRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+    class ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+    class TargetAdjustmentInfo(proto.Message):
+        shared_set: str
+        recommended_target_multiplier: float
+        current_average_target_micros: int
+    class RaiseTargetCpaRecommendation(proto.Message):
+        target_adjustment: Recommendation.TargetAdjustmentInfo
+        app_bidding_goal: gage_app_bidding_goal.AppBiddingGoalEnum.AppBiddingGoal
+    class LowerTargetRoasRecommendation(proto.Message):
+        target_adjustment: Recommendation.TargetAdjustmentInfo
+    class DynamicImageExtensionOptInRecommendation(proto.Message): ...
+    class CampaignBudget(proto.Message):
+        current_amount_micros: int
+        recommended_new_amount_micros: int
+        new_start_date: str
+    class PerformanceMaxOptInRecommendation(proto.Message): ...
+    class ImprovePerformanceMaxAdStrengthRecommendation(proto.Message):
+        asset_group: str
+        ad_strength: gage_ad_strength.AdStrengthEnum.AdStrength
+    class MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation(proto.Message):
+        apply_link: str
+    class ForecastingSetTargetCpaRecommendation(proto.Message):
+        recommended_target_cpa_micros: int
+        campaign_budget: Recommendation.CampaignBudget
+    class MaximizeConversionValueOptInRecommendation(proto.Message): ...
+    class ImproveGoogleTagCoverageRecommendation(proto.Message): ...
+    class PerformanceMaxFinalUrlOptInRecommendation(proto.Message): ...
+    class RefreshCustomerMatchListRecommendation(proto.Message):
+        user_list_id: int
+        user_list_name: str
+        days_since_last_refresh: int
+        top_spending_account: MutableSequence['Recommendation.AccountInfo']
+        targeting_accounts_count: int
+        owner_account: Recommendation.AccountInfo
+    class AccountInfo(proto.Message):
+        customer_id: int
+        descriptive_name: str
+    class CustomAudienceOptInRecommendation(proto.Message):
+        keywords: MutableSequence[criteria.KeywordInfo]
+    class LeadFormAssetRecommendation(proto.Message): ...
+    class ImproveDemandGenAdStrengthRecommendation(proto.Message):
+        ad: str
+        ad_strength: gage_ad_strength.AdStrengthEnum.AdStrength
+        demand_gen_asset_action_items: MutableSequence[str]
+    resource_name: str
+    type_: recommendation_type.RecommendationTypeEnum.RecommendationType
+    impact: RecommendationImpact
+    campaign_budget: str
+    campaign: str
+    ad_group: str
+    dismissed: bool
+    campaigns: MutableSequence[str]
+    campaign_budget_recommendation: CampaignBudgetRecommendation
+    forecasting_campaign_budget_recommendation: CampaignBudgetRecommendation
+    keyword_recommendation: KeywordRecommendation
+    text_ad_recommendation: TextAdRecommendation
+    target_cpa_opt_in_recommendation: TargetCpaOptInRecommendation
+    maximize_conversions_opt_in_recommendation: MaximizeConversionsOptInRecommendation
+    enhanced_cpc_opt_in_recommendation: EnhancedCpcOptInRecommendation
+    search_partners_opt_in_recommendation: SearchPartnersOptInRecommendation
+    maximize_clicks_opt_in_recommendation: MaximizeClicksOptInRecommendation
+    optimize_ad_rotation_recommendation: OptimizeAdRotationRecommendation
+    keyword_match_type_recommendation: KeywordMatchTypeRecommendation
+    move_unused_budget_recommendation: MoveUnusedBudgetRecommendation
+    target_roas_opt_in_recommendation: TargetRoasOptInRecommendation
+    responsive_search_ad_recommendation: ResponsiveSearchAdRecommendation
+    marginal_roi_campaign_budget_recommendation: CampaignBudgetRecommendation
+    use_broad_match_keyword_recommendation: UseBroadMatchKeywordRecommendation
+    responsive_search_ad_asset_recommendation: ResponsiveSearchAdAssetRecommendation
+    upgrade_smart_shopping_campaign_to_performance_max_recommendation: UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation
+    responsive_search_ad_improve_ad_strength_recommendation: ResponsiveSearchAdImproveAdStrengthRecommendation
+    display_expansion_opt_in_recommendation: DisplayExpansionOptInRecommendation
+    upgrade_local_campaign_to_performance_max_recommendation: UpgradeLocalCampaignToPerformanceMaxRecommendation
+    raise_target_cpa_bid_too_low_recommendation: RaiseTargetCpaBidTooLowRecommendation
+    forecasting_set_target_roas_recommendation: ForecastingSetTargetRoasRecommendation
+    callout_asset_recommendation: CalloutAssetRecommendation
+    sitelink_asset_recommendation: SitelinkAssetRecommendation
+    call_asset_recommendation: CallAssetRecommendation
+    shopping_add_age_group_recommendation: ShoppingOfferAttributeRecommendation
+    shopping_add_color_recommendation: ShoppingOfferAttributeRecommendation
+    shopping_add_gender_recommendation: ShoppingOfferAttributeRecommendation
+    shopping_add_gtin_recommendation: ShoppingOfferAttributeRecommendation
+    shopping_add_more_identifiers_recommendation: ShoppingOfferAttributeRecommendation
+    shopping_add_size_recommendation: ShoppingOfferAttributeRecommendation
+    shopping_add_products_to_campaign_recommendation: ShoppingAddProductsToCampaignRecommendation
+    shopping_fix_disapproved_products_recommendation: ShoppingFixDisapprovedProductsRecommendation
+    shopping_target_all_offers_recommendation: ShoppingTargetAllOffersRecommendation
+    shopping_fix_suspended_merchant_center_account_recommendation: ShoppingMerchantCenterAccountSuspensionRecommendation
+    shopping_fix_merchant_center_account_suspension_warning_recommendation: ShoppingMerchantCenterAccountSuspensionRecommendation
+    shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation: ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation
+    dynamic_image_extension_opt_in_recommendation: DynamicImageExtensionOptInRecommendation
+    raise_target_cpa_recommendation: RaiseTargetCpaRecommendation
+    lower_target_roas_recommendation: LowerTargetRoasRecommendation
+    performance_max_opt_in_recommendation: PerformanceMaxOptInRecommendation
+    improve_performance_max_ad_strength_recommendation: ImprovePerformanceMaxAdStrengthRecommendation
+    migrate_dynamic_search_ads_campaign_to_performance_max_recommendation: MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation
+    forecasting_set_target_cpa_recommendation: ForecastingSetTargetCpaRecommendation
+    set_target_cpa_recommendation: ForecastingSetTargetCpaRecommendation
+    set_target_roas_recommendation: ForecastingSetTargetRoasRecommendation
+    maximize_conversion_value_opt_in_recommendation: MaximizeConversionValueOptInRecommendation
+    improve_google_tag_coverage_recommendation: ImproveGoogleTagCoverageRecommendation
+    performance_max_final_url_opt_in_recommendation: PerformanceMaxFinalUrlOptInRecommendation
+    refresh_customer_match_list_recommendation: RefreshCustomerMatchListRecommendation
+    custom_audience_opt_in_recommendation: CustomAudienceOptInRecommendation
+    lead_form_asset_recommendation: LeadFormAssetRecommendation
+    improve_demand_gen_ad_strength_recommendation: ImproveDemandGenAdStrengthRecommendation

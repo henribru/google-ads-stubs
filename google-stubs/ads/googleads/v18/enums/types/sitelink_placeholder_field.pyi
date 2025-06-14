@@ -1,30 +1,16 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class SitelinkPlaceholderFieldEnum(proto.Message):
     class SitelinkPlaceholderField(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        TEXT = 2
-        LINE_1 = 3
-        LINE_2 = 4
-        FINAL_URLS = 5
-        FINAL_MOBILE_URLS = 6
-        TRACKING_URL = 7
-        FINAL_URL_SUFFIX = 8
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        TEXT: int
+        LINE_1: int
+        LINE_2: int
+        FINAL_URLS: int
+        FINAL_MOBILE_URLS: int
+        TRACKING_URL: int
+        FINAL_URL_SUFFIX: int

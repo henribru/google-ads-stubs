@@ -1,43 +1,15 @@
-from collections.abc import Mapping, MutableSequence
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v18.common.types import matching_function as gagc_matching_function
+from google.ads.googleads.v18.enums.types import feed_link_status, placeholder_type
+from typing import MutableSequence
 
-from google.ads.googleads.v18.common.types.matching_function import MatchingFunction
-from google.ads.googleads.v18.enums.types.feed_link_status import FeedLinkStatusEnum
-from google.ads.googleads.v18.enums.types.placeholder_type import PlaceholderTypeEnum
-
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class AdGroupFeed(proto.Message):
     resource_name: str
     feed: str
     ad_group: str
-    placeholder_types: MutableSequence[PlaceholderTypeEnum.PlaceholderType]
-    matching_function: MatchingFunction
-    status: FeedLinkStatusEnum.FeedLinkStatus
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-        feed: str = ...,
-        ad_group: str = ...,
-        placeholder_types: MutableSequence[PlaceholderTypeEnum.PlaceholderType] = ...,
-        matching_function: MatchingFunction = ...,
-        status: FeedLinkStatusEnum.FeedLinkStatus = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal[
-            "resource_name",
-            "feed",
-            "ad_group",
-            "placeholder_types",
-            "matching_function",
-            "status",
-        ],
-    ) -> bool: ...
+    placeholder_types: MutableSequence[placeholder_type.PlaceholderTypeEnum.PlaceholderType]
+    matching_function: gagc_matching_function.MatchingFunction
+    status: feed_link_status.FeedLinkStatusEnum.FeedLinkStatus

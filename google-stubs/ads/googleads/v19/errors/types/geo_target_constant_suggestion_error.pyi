@@ -1,27 +1,13 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class GeoTargetConstantSuggestionErrorEnum(proto.Message):
     class GeoTargetConstantSuggestionError(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        LOCATION_NAME_SIZE_LIMIT = 2
-        LOCATION_NAME_LIMIT = 3
-        INVALID_COUNTRY_CODE = 4
-        REQUEST_PARAMETERS_UNSET = 5
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        LOCATION_NAME_SIZE_LIMIT: int
+        LOCATION_NAME_LIMIT: int
+        INVALID_COUNTRY_CODE: int
+        REQUEST_PARAMETERS_UNSET: int

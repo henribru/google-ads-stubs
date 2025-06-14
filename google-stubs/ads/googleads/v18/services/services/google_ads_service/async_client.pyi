@@ -1,16 +1,13 @@
-from typing import AsyncIterable, Awaitable, Callable, MutableSequence, Sequence, Tuple
-
+from .transports.base import GoogleAdsServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v18.services.services.google_ads_service import pagers
+from google.ads.googleads.v18.services.types import google_ads_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import AsyncIterable, Awaitable, Callable, MutableSequence, Sequence, Tuple
 
-from google.ads.googleads.v18.services.services.google_ads_service import pagers
-from google.ads.googleads.v18.services.types import google_ads_service
-
-from .transports.base import GoogleAdsServiceTransport
-
-__all__ = ["GoogleAdsServiceAsyncClient"]
+__all__ = ['GoogleAdsServiceAsyncClient']
 
 class GoogleAdsServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -395,9 +392,7 @@ class GoogleAdsServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> GoogleAdsServiceTransport: ...
     @property
@@ -405,47 +400,9 @@ class GoogleAdsServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | GoogleAdsServiceTransport
-        | Callable[..., GoogleAdsServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def search(
-        self,
-        request: google_ads_service.SearchGoogleAdsRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        query: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> pagers.SearchAsyncPager: ...
-    def search_stream(
-        self,
-        request: google_ads_service.SearchGoogleAdsStreamRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        query: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> Awaitable[AsyncIterable[google_ads_service.SearchGoogleAdsStreamResponse]]: ...
-    async def mutate(
-        self,
-        request: google_ads_service.MutateGoogleAdsRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        mutate_operations: MutableSequence[google_ads_service.MutateOperation]
-        | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> google_ads_service.MutateGoogleAdsResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | GoogleAdsServiceTransport | Callable[..., GoogleAdsServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def search(self, request: google_ads_service.SearchGoogleAdsRequest | dict | None = None, *, customer_id: str | None = None, query: str | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[Tuple[str, str | bytes]] = ()) -> pagers.SearchAsyncPager: ...
+    def search_stream(self, request: google_ads_service.SearchGoogleAdsStreamRequest | dict | None = None, *, customer_id: str | None = None, query: str | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[Tuple[str, str | bytes]] = ()) -> Awaitable[AsyncIterable[google_ads_service.SearchGoogleAdsStreamResponse]]: ...
+    async def mutate(self, request: google_ads_service.MutateGoogleAdsRequest | dict | None = None, *, customer_id: str | None = None, mutate_operations: MutableSequence[google_ads_service.MutateOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[Tuple[str, str | bytes]] = ()) -> google_ads_service.MutateGoogleAdsResponse: ...
     async def __aenter__(self) -> GoogleAdsServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

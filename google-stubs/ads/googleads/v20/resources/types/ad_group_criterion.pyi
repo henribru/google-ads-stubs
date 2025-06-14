@@ -1,0 +1,76 @@
+import proto
+from _typeshed import Incomplete
+from google.ads.googleads.v20.common.types import criteria, custom_parameter
+from google.ads.googleads.v20.enums.types import ad_group_criterion_approval_status, ad_group_criterion_primary_status, ad_group_criterion_primary_status_reason, ad_group_criterion_status, bidding_source, criterion_system_serving_status, criterion_type, quality_score_bucket
+from typing import MutableSequence
+
+__protobuf__: Incomplete
+
+class AdGroupCriterion(proto.Message):
+    class QualityInfo(proto.Message):
+        quality_score: int
+        creative_quality_score: quality_score_bucket.QualityScoreBucketEnum.QualityScoreBucket
+        post_click_quality_score: quality_score_bucket.QualityScoreBucketEnum.QualityScoreBucket
+        search_predicted_ctr: quality_score_bucket.QualityScoreBucketEnum.QualityScoreBucket
+    class PositionEstimates(proto.Message):
+        first_page_cpc_micros: int
+        first_position_cpc_micros: int
+        top_of_page_cpc_micros: int
+        estimated_add_clicks_at_first_position_cpc: int
+        estimated_add_cost_at_first_position_cpc: int
+    resource_name: str
+    criterion_id: int
+    display_name: str
+    status: ad_group_criterion_status.AdGroupCriterionStatusEnum.AdGroupCriterionStatus
+    quality_info: QualityInfo
+    ad_group: str
+    type_: criterion_type.CriterionTypeEnum.CriterionType
+    negative: bool
+    system_serving_status: criterion_system_serving_status.CriterionSystemServingStatusEnum.CriterionSystemServingStatus
+    approval_status: ad_group_criterion_approval_status.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus
+    disapproval_reasons: MutableSequence[str]
+    labels: MutableSequence[str]
+    bid_modifier: float
+    cpc_bid_micros: int
+    cpm_bid_micros: int
+    cpv_bid_micros: int
+    percent_cpc_bid_micros: int
+    effective_cpc_bid_micros: int
+    effective_cpm_bid_micros: int
+    effective_cpv_bid_micros: int
+    effective_percent_cpc_bid_micros: int
+    effective_cpc_bid_source: bidding_source.BiddingSourceEnum.BiddingSource
+    effective_cpm_bid_source: bidding_source.BiddingSourceEnum.BiddingSource
+    effective_cpv_bid_source: bidding_source.BiddingSourceEnum.BiddingSource
+    effective_percent_cpc_bid_source: bidding_source.BiddingSourceEnum.BiddingSource
+    position_estimates: PositionEstimates
+    final_urls: MutableSequence[str]
+    final_mobile_urls: MutableSequence[str]
+    final_url_suffix: str
+    tracking_url_template: str
+    url_custom_parameters: MutableSequence[custom_parameter.CustomParameter]
+    primary_status: ad_group_criterion_primary_status.AdGroupCriterionPrimaryStatusEnum.AdGroupCriterionPrimaryStatus
+    primary_status_reasons: MutableSequence[ad_group_criterion_primary_status_reason.AdGroupCriterionPrimaryStatusReasonEnum.AdGroupCriterionPrimaryStatusReason]
+    keyword: criteria.KeywordInfo
+    placement: criteria.PlacementInfo
+    mobile_app_category: criteria.MobileAppCategoryInfo
+    mobile_application: criteria.MobileApplicationInfo
+    listing_group: criteria.ListingGroupInfo
+    age_range: criteria.AgeRangeInfo
+    gender: criteria.GenderInfo
+    income_range: criteria.IncomeRangeInfo
+    parental_status: criteria.ParentalStatusInfo
+    user_list: criteria.UserListInfo
+    youtube_video: criteria.YouTubeVideoInfo
+    youtube_channel: criteria.YouTubeChannelInfo
+    topic: criteria.TopicInfo
+    user_interest: criteria.UserInterestInfo
+    webpage: criteria.WebpageInfo
+    app_payment_model: criteria.AppPaymentModelInfo
+    custom_affinity: criteria.CustomAffinityInfo
+    custom_intent: criteria.CustomIntentInfo
+    custom_audience: criteria.CustomAudienceInfo
+    combined_audience: criteria.CombinedAudienceInfo
+    audience: criteria.AudienceInfo
+    location: criteria.LocationInfo
+    language: criteria.LanguageInfo

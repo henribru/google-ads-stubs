@@ -1,0 +1,78 @@
+import proto
+from _typeshed import Incomplete
+from google.ads.googleads.v20.common.types import dates
+from google.ads.googleads.v20.enums.types import invoice_type, month_of_year
+from typing import MutableSequence
+
+__protobuf__: Incomplete
+
+class Invoice(proto.Message):
+    class AccountSummary(proto.Message):
+        customer: str
+        billing_correction_subtotal_amount_micros: int
+        billing_correction_tax_amount_micros: int
+        billing_correction_total_amount_micros: int
+        coupon_adjustment_subtotal_amount_micros: int
+        coupon_adjustment_tax_amount_micros: int
+        coupon_adjustment_total_amount_micros: int
+        excess_credit_adjustment_subtotal_amount_micros: int
+        excess_credit_adjustment_tax_amount_micros: int
+        excess_credit_adjustment_total_amount_micros: int
+        regulatory_costs_subtotal_amount_micros: int
+        regulatory_costs_tax_amount_micros: int
+        regulatory_costs_total_amount_micros: int
+        export_charge_subtotal_amount_micros: int
+        export_charge_tax_amount_micros: int
+        export_charge_total_amount_micros: int
+        subtotal_amount_micros: int
+        tax_amount_micros: int
+        total_amount_micros: int
+    class AccountBudgetSummary(proto.Message):
+        customer: str
+        customer_descriptive_name: str
+        account_budget: str
+        account_budget_name: str
+        purchase_order_number: str
+        subtotal_amount_micros: int
+        tax_amount_micros: int
+        total_amount_micros: int
+        billable_activity_date_range: dates.DateRange
+        served_amount_micros: int
+        billed_amount_micros: int
+        overdelivery_amount_micros: int
+        invalid_activity_amount_micros: int
+        invalid_activity_summaries: MutableSequence['Invoice.InvalidActivitySummary']
+    class InvalidActivitySummary(proto.Message):
+        original_month_of_service: month_of_year.MonthOfYearEnum.MonthOfYear
+        original_year_of_service: str
+        original_invoice_id: str
+        original_account_budget_name: str
+        original_purchase_order_number: str
+        amount_micros: int
+    resource_name: str
+    id: str
+    type_: invoice_type.InvoiceTypeEnum.InvoiceType
+    billing_setup: str
+    payments_account_id: str
+    payments_profile_id: str
+    issue_date: str
+    due_date: str
+    service_date_range: dates.DateRange
+    currency_code: str
+    adjustments_subtotal_amount_micros: int
+    adjustments_tax_amount_micros: int
+    adjustments_total_amount_micros: int
+    regulatory_costs_subtotal_amount_micros: int
+    regulatory_costs_tax_amount_micros: int
+    regulatory_costs_total_amount_micros: int
+    export_charge_subtotal_amount_micros: int
+    export_charge_tax_amount_micros: int
+    export_charge_total_amount_micros: int
+    subtotal_amount_micros: int
+    tax_amount_micros: int
+    total_amount_micros: int
+    corrected_invoice: str
+    replaced_invoices: MutableSequence[str]
+    pdf_url: str
+    account_budget_summaries: MutableSequence[AccountBudgetSummary]
+    account_summaries: MutableSequence[AccountSummary]

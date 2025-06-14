@@ -1,79 +1,27 @@
-from collections.abc import Mapping, MutableSequence
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from google.protobuf.field_mask_pb2 import FieldMask
-from google.rpc.status_pb2 import Status
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v18.resources.types import keyword_plan
+from google.protobuf import field_mask_pb2
+from google.rpc import status_pb2
+from typing import MutableSequence
 
-from google.ads.googleads.v18.resources.types.keyword_plan import KeywordPlan
-
-_M = TypeVar("_M")
-
-class KeywordPlanOperation(proto.Message):
-    update_mask: FieldMask
-    create: KeywordPlan
-    update: KeywordPlan
-    remove: str
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        update_mask: FieldMask = ...,
-        create: KeywordPlan = ...,
-        update: KeywordPlan = ...,
-        remove: str = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["update_mask", "create", "update", "remove"]
-    ) -> bool: ...
+__protobuf__: Incomplete
 
 class MutateKeywordPlansRequest(proto.Message):
     customer_id: str
-    operations: MutableSequence[KeywordPlanOperation]
+    operations: MutableSequence['KeywordPlanOperation']
     partial_failure: bool
     validate_only: bool
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        customer_id: str = ...,
-        operations: MutableSequence[KeywordPlanOperation] = ...,
-        partial_failure: bool = ...,
-        validate_only: bool = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal["customer_id", "operations", "partial_failure", "validate_only"],
-    ) -> bool: ...
+
+class KeywordPlanOperation(proto.Message):
+    update_mask: field_mask_pb2.FieldMask
+    create: keyword_plan.KeywordPlan
+    update: keyword_plan.KeywordPlan
+    remove: str
 
 class MutateKeywordPlansResponse(proto.Message):
-    partial_failure_error: Status
-    results: MutableSequence[MutateKeywordPlansResult]
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        partial_failure_error: Status = ...,
-        results: MutableSequence[MutateKeywordPlansResult] = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["partial_failure_error", "results"]
-    ) -> bool: ...
+    partial_failure_error: status_pb2.Status
+    results: MutableSequence['MutateKeywordPlansResult']
 
 class MutateKeywordPlansResult(proto.Message):
     resource_name: str
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["resource_name"]
-    ) -> bool: ...

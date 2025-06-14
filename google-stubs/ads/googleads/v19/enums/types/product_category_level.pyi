@@ -1,28 +1,14 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class ProductCategoryLevelEnum(proto.Message):
     class ProductCategoryLevel(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        LEVEL1 = 2
-        LEVEL2 = 3
-        LEVEL3 = 4
-        LEVEL4 = 5
-        LEVEL5 = 6
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        LEVEL1: int
+        LEVEL2: int
+        LEVEL3: int
+        LEVEL4: int
+        LEVEL5: int

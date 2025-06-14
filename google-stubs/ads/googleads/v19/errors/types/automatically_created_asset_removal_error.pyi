@@ -1,28 +1,14 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class AutomaticallyCreatedAssetRemovalErrorEnum(proto.Message):
     class AutomaticallyCreatedAssetRemovalError(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        AD_DOES_NOT_EXIST = 2
-        INVALID_AD_TYPE = 3
-        ASSET_DOES_NOT_EXIST = 4
-        ASSET_FIELD_TYPE_DOES_NOT_MATCH = 5
-        NOT_AN_AUTOMATICALLY_CREATED_ASSET = 6
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        AD_DOES_NOT_EXIST: int
+        INVALID_AD_TYPE: int
+        ASSET_DOES_NOT_EXIST: int
+        ASSET_FIELD_TYPE_DOES_NOT_MATCH: int
+        NOT_AN_AUTOMATICALLY_CREATED_ASSET: int

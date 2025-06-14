@@ -1,0 +1,11 @@
+import proto
+from _typeshed import Incomplete
+from google.ads.googleads.v20.enums.types import manager_link_status
+
+__protobuf__: Incomplete
+
+class CustomerManagerLink(proto.Message):
+    resource_name: str
+    manager_customer: str
+    manager_link_id: int
+    status: manager_link_status.ManagerLinkStatusEnum.ManagerLinkStatus

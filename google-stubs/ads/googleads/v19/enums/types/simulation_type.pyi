@@ -1,31 +1,17 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class SimulationTypeEnum(proto.Message):
     class SimulationType(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        CPC_BID = 2
-        CPV_BID = 3
-        TARGET_CPA = 4
-        BID_MODIFIER = 5
-        TARGET_ROAS = 6
-        PERCENT_CPC_BID = 7
-        TARGET_IMPRESSION_SHARE = 8
-        BUDGET = 9
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        CPC_BID: int
+        CPV_BID: int
+        TARGET_CPA: int
+        BID_MODIFIER: int
+        TARGET_ROAS: int
+        PERCENT_CPC_BID: int
+        TARGET_IMPRESSION_SHARE: int
+        BUDGET: int

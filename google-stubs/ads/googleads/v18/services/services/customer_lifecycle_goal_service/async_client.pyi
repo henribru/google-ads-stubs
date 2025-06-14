@@ -1,15 +1,12 @@
-from typing import Callable, Sequence, Tuple
-
+from .transports.base import CustomerLifecycleGoalServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v18.services.types import customer_lifecycle_goal_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, Sequence, Tuple
 
-from google.ads.googleads.v18.services.types import customer_lifecycle_goal_service
-
-from .transports.base import CustomerLifecycleGoalServiceTransport
-
-__all__ = ["CustomerLifecycleGoalServiceAsyncClient"]
+__all__ = ['CustomerLifecycleGoalServiceAsyncClient']
 
 class CustomerLifecycleGoalServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -32,9 +29,7 @@ class CustomerLifecycleGoalServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> CustomerLifecycleGoalServiceTransport: ...
     @property
@@ -42,29 +37,7 @@ class CustomerLifecycleGoalServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | CustomerLifecycleGoalServiceTransport
-        | Callable[..., CustomerLifecycleGoalServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def configure_customer_lifecycle_goals(
-        self,
-        request: customer_lifecycle_goal_service.ConfigureCustomerLifecycleGoalsRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operation: customer_lifecycle_goal_service.CustomerLifecycleGoalOperation
-        | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> customer_lifecycle_goal_service.ConfigureCustomerLifecycleGoalsResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | CustomerLifecycleGoalServiceTransport | Callable[..., CustomerLifecycleGoalServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def configure_customer_lifecycle_goals(self, request: customer_lifecycle_goal_service.ConfigureCustomerLifecycleGoalsRequest | dict | None = None, *, customer_id: str | None = None, operation: customer_lifecycle_goal_service.CustomerLifecycleGoalOperation | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[Tuple[str, str | bytes]] = ()) -> customer_lifecycle_goal_service.ConfigureCustomerLifecycleGoalsResponse: ...
     async def __aenter__(self) -> CustomerLifecycleGoalServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

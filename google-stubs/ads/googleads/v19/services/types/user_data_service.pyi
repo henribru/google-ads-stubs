@@ -1,61 +1,19 @@
-from collections.abc import Mapping, MutableSequence
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v19.common.types import offline_user_data
+from typing import MutableSequence
 
-from google.ads.googleads.v19.common.types.offline_user_data import (
-    CustomerMatchUserListMetadata,
-    UserData,
-)
-
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class UploadUserDataRequest(proto.Message):
     customer_id: str
-    operations: MutableSequence[UserDataOperation]
-    customer_match_user_list_metadata: CustomerMatchUserListMetadata
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        customer_id: str = ...,
-        operations: MutableSequence[UserDataOperation] = ...,
-        customer_match_user_list_metadata: CustomerMatchUserListMetadata = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal["customer_id", "operations", "customer_match_user_list_metadata"],
-    ) -> bool: ...
+    operations: MutableSequence['UserDataOperation']
+    customer_match_user_list_metadata: offline_user_data.CustomerMatchUserListMetadata
+
+class UserDataOperation(proto.Message):
+    create: offline_user_data.UserData
+    remove: offline_user_data.UserData
 
 class UploadUserDataResponse(proto.Message):
     upload_date_time: str
     received_operations_count: int
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        upload_date_time: str = ...,
-        received_operations_count: int = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["upload_date_time", "received_operations_count"]
-    ) -> bool: ...
-
-class UserDataOperation(proto.Message):
-    create: UserData
-    remove: UserData
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        create: UserData = ...,
-        remove: UserData = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["create", "remove"]
-    ) -> bool: ...

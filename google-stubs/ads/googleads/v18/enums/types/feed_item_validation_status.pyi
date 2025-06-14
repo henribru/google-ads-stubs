@@ -1,26 +1,12 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class FeedItemValidationStatusEnum(proto.Message):
     class FeedItemValidationStatus(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        PENDING = 2
-        INVALID = 3
-        VALID = 4
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        PENDING: int
+        INVALID: int
+        VALID: int

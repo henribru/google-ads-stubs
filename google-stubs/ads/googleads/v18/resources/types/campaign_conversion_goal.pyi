@@ -1,35 +1,12 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v18.enums.types import conversion_action_category, conversion_origin
 
-from google.ads.googleads.v18.enums.types.conversion_action_category import (
-    ConversionActionCategoryEnum,
-)
-from google.ads.googleads.v18.enums.types.conversion_origin import ConversionOriginEnum
-
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class CampaignConversionGoal(proto.Message):
     resource_name: str
     campaign: str
-    category: ConversionActionCategoryEnum.ConversionActionCategory
-    origin: ConversionOriginEnum.ConversionOrigin
+    category: conversion_action_category.ConversionActionCategoryEnum.ConversionActionCategory
+    origin: conversion_origin.ConversionOriginEnum.ConversionOrigin
     biddable: bool
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-        campaign: str = ...,
-        category: ConversionActionCategoryEnum.ConversionActionCategory = ...,
-        origin: ConversionOriginEnum.ConversionOrigin = ...,
-        biddable: bool = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal["resource_name", "campaign", "category", "origin", "biddable"],
-    ) -> bool: ...

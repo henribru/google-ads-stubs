@@ -1,42 +1,12 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v19.enums.types import advertising_channel_type as gage_advertising_channel_type, asset_field_type, asset_source as gage_asset_source
 
-from google.ads.googleads.v19.enums.types.advertising_channel_type import (
-    AdvertisingChannelTypeEnum,
-)
-from google.ads.googleads.v19.enums.types.asset_field_type import AssetFieldTypeEnum
-from google.ads.googleads.v19.enums.types.asset_source import AssetSourceEnum
-
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class ChannelAggregateAssetView(proto.Message):
     resource_name: str
-    advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType
+    advertising_channel_type: gage_advertising_channel_type.AdvertisingChannelTypeEnum.AdvertisingChannelType
     asset: str
-    asset_source: AssetSourceEnum.AssetSource
-    field_type: AssetFieldTypeEnum.AssetFieldType
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-        advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType = ...,
-        asset: str = ...,
-        asset_source: AssetSourceEnum.AssetSource = ...,
-        field_type: AssetFieldTypeEnum.AssetFieldType = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal[
-            "resource_name",
-            "advertising_channel_type",
-            "asset",
-            "asset_source",
-            "field_type",
-        ],
-    ) -> bool: ...
+    asset_source: gage_asset_source.AssetSourceEnum.AssetSource
+    field_type: asset_field_type.AssetFieldTypeEnum.AssetFieldType

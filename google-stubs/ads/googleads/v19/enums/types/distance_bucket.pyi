@@ -1,50 +1,36 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class DistanceBucketEnum(proto.Message):
     class DistanceBucket(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        WITHIN_700M = 2
-        WITHIN_1KM = 3
-        WITHIN_5KM = 4
-        WITHIN_10KM = 5
-        WITHIN_15KM = 6
-        WITHIN_20KM = 7
-        WITHIN_25KM = 8
-        WITHIN_30KM = 9
-        WITHIN_35KM = 10
-        WITHIN_40KM = 11
-        WITHIN_45KM = 12
-        WITHIN_50KM = 13
-        WITHIN_55KM = 14
-        WITHIN_60KM = 15
-        WITHIN_65KM = 16
-        BEYOND_65KM = 17
-        WITHIN_0_7MILES = 18
-        WITHIN_1MILE = 19
-        WITHIN_5MILES = 20
-        WITHIN_10MILES = 21
-        WITHIN_15MILES = 22
-        WITHIN_20MILES = 23
-        WITHIN_25MILES = 24
-        WITHIN_30MILES = 25
-        WITHIN_35MILES = 26
-        WITHIN_40MILES = 27
-        BEYOND_40MILES = 28
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        WITHIN_700M: int
+        WITHIN_1KM: int
+        WITHIN_5KM: int
+        WITHIN_10KM: int
+        WITHIN_15KM: int
+        WITHIN_20KM: int
+        WITHIN_25KM: int
+        WITHIN_30KM: int
+        WITHIN_35KM: int
+        WITHIN_40KM: int
+        WITHIN_45KM: int
+        WITHIN_50KM: int
+        WITHIN_55KM: int
+        WITHIN_60KM: int
+        WITHIN_65KM: int
+        BEYOND_65KM: int
+        WITHIN_0_7MILES: int
+        WITHIN_1MILE: int
+        WITHIN_5MILES: int
+        WITHIN_10MILES: int
+        WITHIN_15MILES: int
+        WITHIN_20MILES: int
+        WITHIN_25MILES: int
+        WITHIN_30MILES: int
+        WITHIN_35MILES: int
+        WITHIN_40MILES: int
+        BEYOND_40MILES: int

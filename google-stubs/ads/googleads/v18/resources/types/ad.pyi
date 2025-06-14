@@ -1,183 +1,50 @@
-from collections.abc import Mapping, MutableSequence
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v18.common.types import ad_type_infos, custom_parameter, final_app_url, url_collection
+from google.ads.googleads.v18.enums.types import ad_type, device, system_managed_entity_source
+from typing import MutableSequence
 
-from google.ads.googleads.v18.common.types.ad_type_infos import (
-    AppAdInfo,
-    AppEngagementAdInfo,
-    AppPreRegistrationAdInfo,
-    CallAdInfo,
-    DemandGenCarouselAdInfo,
-    DemandGenMultiAssetAdInfo,
-    DemandGenProductAdInfo,
-    DemandGenVideoResponsiveAdInfo,
-    DisplayUploadAdInfo,
-    ExpandedDynamicSearchAdInfo,
-    ExpandedTextAdInfo,
-    HotelAdInfo,
-    ImageAdInfo,
-    LegacyAppInstallAdInfo,
-    LegacyResponsiveDisplayAdInfo,
-    LocalAdInfo,
-    ResponsiveDisplayAdInfo,
-    ResponsiveSearchAdInfo,
-    ShoppingComparisonListingAdInfo,
-    ShoppingProductAdInfo,
-    ShoppingSmartAdInfo,
-    SmartCampaignAdInfo,
-    TextAdInfo,
-    TravelAdInfo,
-    VideoAdInfo,
-    VideoResponsiveAdInfo,
-)
-from google.ads.googleads.v18.common.types.custom_parameter import CustomParameter
-from google.ads.googleads.v18.common.types.final_app_url import FinalAppUrl
-from google.ads.googleads.v18.common.types.url_collection import UrlCollection
-from google.ads.googleads.v18.enums.types.ad_type import AdTypeEnum
-from google.ads.googleads.v18.enums.types.device import DeviceEnum
-from google.ads.googleads.v18.enums.types.system_managed_entity_source import (
-    SystemManagedResourceSourceEnum,
-)
-
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class Ad(proto.Message):
     resource_name: str
     id: int
     final_urls: MutableSequence[str]
-    final_app_urls: MutableSequence[FinalAppUrl]
+    final_app_urls: MutableSequence[final_app_url.FinalAppUrl]
     final_mobile_urls: MutableSequence[str]
     tracking_url_template: str
     final_url_suffix: str
-    url_custom_parameters: MutableSequence[CustomParameter]
+    url_custom_parameters: MutableSequence[custom_parameter.CustomParameter]
     display_url: str
-    type_: AdTypeEnum.AdType
+    type_: ad_type.AdTypeEnum.AdType
     added_by_google_ads: bool
-    device_preference: DeviceEnum.Device
-    url_collections: MutableSequence[UrlCollection]
+    device_preference: device.DeviceEnum.Device
+    url_collections: MutableSequence[url_collection.UrlCollection]
     name: str
-    system_managed_resource_source: (
-        SystemManagedResourceSourceEnum.SystemManagedResourceSource
-    )
-    text_ad: TextAdInfo
-    expanded_text_ad: ExpandedTextAdInfo
-    call_ad: CallAdInfo
-    expanded_dynamic_search_ad: ExpandedDynamicSearchAdInfo
-    hotel_ad: HotelAdInfo
-    shopping_smart_ad: ShoppingSmartAdInfo
-    shopping_product_ad: ShoppingProductAdInfo
-    image_ad: ImageAdInfo
-    video_ad: VideoAdInfo
-    video_responsive_ad: VideoResponsiveAdInfo
-    responsive_search_ad: ResponsiveSearchAdInfo
-    legacy_responsive_display_ad: LegacyResponsiveDisplayAdInfo
-    app_ad: AppAdInfo
-    legacy_app_install_ad: LegacyAppInstallAdInfo
-    responsive_display_ad: ResponsiveDisplayAdInfo
-    local_ad: LocalAdInfo
-    display_upload_ad: DisplayUploadAdInfo
-    app_engagement_ad: AppEngagementAdInfo
-    shopping_comparison_listing_ad: ShoppingComparisonListingAdInfo
-    smart_campaign_ad: SmartCampaignAdInfo
-    app_pre_registration_ad: AppPreRegistrationAdInfo
-    demand_gen_multi_asset_ad: DemandGenMultiAssetAdInfo
-    demand_gen_carousel_ad: DemandGenCarouselAdInfo
-    demand_gen_video_responsive_ad: DemandGenVideoResponsiveAdInfo
-    demand_gen_product_ad: DemandGenProductAdInfo
-    travel_ad: TravelAdInfo
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-        id: int = ...,
-        final_urls: MutableSequence[str] = ...,
-        final_app_urls: MutableSequence[FinalAppUrl] = ...,
-        final_mobile_urls: MutableSequence[str] = ...,
-        tracking_url_template: str = ...,
-        final_url_suffix: str = ...,
-        url_custom_parameters: MutableSequence[CustomParameter] = ...,
-        display_url: str = ...,
-        type_: AdTypeEnum.AdType = ...,
-        added_by_google_ads: bool = ...,
-        device_preference: DeviceEnum.Device = ...,
-        url_collections: MutableSequence[UrlCollection] = ...,
-        name: str = ...,
-        system_managed_resource_source: SystemManagedResourceSourceEnum.SystemManagedResourceSource = ...,
-        text_ad: TextAdInfo = ...,
-        expanded_text_ad: ExpandedTextAdInfo = ...,
-        call_ad: CallAdInfo = ...,
-        expanded_dynamic_search_ad: ExpandedDynamicSearchAdInfo = ...,
-        hotel_ad: HotelAdInfo = ...,
-        shopping_smart_ad: ShoppingSmartAdInfo = ...,
-        shopping_product_ad: ShoppingProductAdInfo = ...,
-        image_ad: ImageAdInfo = ...,
-        video_ad: VideoAdInfo = ...,
-        video_responsive_ad: VideoResponsiveAdInfo = ...,
-        responsive_search_ad: ResponsiveSearchAdInfo = ...,
-        legacy_responsive_display_ad: LegacyResponsiveDisplayAdInfo = ...,
-        app_ad: AppAdInfo = ...,
-        legacy_app_install_ad: LegacyAppInstallAdInfo = ...,
-        responsive_display_ad: ResponsiveDisplayAdInfo = ...,
-        local_ad: LocalAdInfo = ...,
-        display_upload_ad: DisplayUploadAdInfo = ...,
-        app_engagement_ad: AppEngagementAdInfo = ...,
-        shopping_comparison_listing_ad: ShoppingComparisonListingAdInfo = ...,
-        smart_campaign_ad: SmartCampaignAdInfo = ...,
-        app_pre_registration_ad: AppPreRegistrationAdInfo = ...,
-        demand_gen_multi_asset_ad: DemandGenMultiAssetAdInfo = ...,
-        demand_gen_carousel_ad: DemandGenCarouselAdInfo = ...,
-        demand_gen_video_responsive_ad: DemandGenVideoResponsiveAdInfo = ...,
-        demand_gen_product_ad: DemandGenProductAdInfo = ...,
-        travel_ad: TravelAdInfo = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal[
-            "resource_name",
-            "id",
-            "final_urls",
-            "final_app_urls",
-            "final_mobile_urls",
-            "tracking_url_template",
-            "final_url_suffix",
-            "url_custom_parameters",
-            "display_url",
-            "type_",
-            "added_by_google_ads",
-            "device_preference",
-            "url_collections",
-            "name",
-            "system_managed_resource_source",
-            "text_ad",
-            "expanded_text_ad",
-            "call_ad",
-            "expanded_dynamic_search_ad",
-            "hotel_ad",
-            "shopping_smart_ad",
-            "shopping_product_ad",
-            "image_ad",
-            "video_ad",
-            "video_responsive_ad",
-            "responsive_search_ad",
-            "legacy_responsive_display_ad",
-            "app_ad",
-            "legacy_app_install_ad",
-            "responsive_display_ad",
-            "local_ad",
-            "display_upload_ad",
-            "app_engagement_ad",
-            "shopping_comparison_listing_ad",
-            "smart_campaign_ad",
-            "app_pre_registration_ad",
-            "demand_gen_multi_asset_ad",
-            "demand_gen_carousel_ad",
-            "demand_gen_video_responsive_ad",
-            "demand_gen_product_ad",
-            "travel_ad",
-        ],
-    ) -> bool: ...
+    system_managed_resource_source: system_managed_entity_source.SystemManagedResourceSourceEnum.SystemManagedResourceSource
+    text_ad: ad_type_infos.TextAdInfo
+    expanded_text_ad: ad_type_infos.ExpandedTextAdInfo
+    call_ad: ad_type_infos.CallAdInfo
+    expanded_dynamic_search_ad: ad_type_infos.ExpandedDynamicSearchAdInfo
+    hotel_ad: ad_type_infos.HotelAdInfo
+    shopping_smart_ad: ad_type_infos.ShoppingSmartAdInfo
+    shopping_product_ad: ad_type_infos.ShoppingProductAdInfo
+    image_ad: ad_type_infos.ImageAdInfo
+    video_ad: ad_type_infos.VideoAdInfo
+    video_responsive_ad: ad_type_infos.VideoResponsiveAdInfo
+    responsive_search_ad: ad_type_infos.ResponsiveSearchAdInfo
+    legacy_responsive_display_ad: ad_type_infos.LegacyResponsiveDisplayAdInfo
+    app_ad: ad_type_infos.AppAdInfo
+    legacy_app_install_ad: ad_type_infos.LegacyAppInstallAdInfo
+    responsive_display_ad: ad_type_infos.ResponsiveDisplayAdInfo
+    local_ad: ad_type_infos.LocalAdInfo
+    display_upload_ad: ad_type_infos.DisplayUploadAdInfo
+    app_engagement_ad: ad_type_infos.AppEngagementAdInfo
+    shopping_comparison_listing_ad: ad_type_infos.ShoppingComparisonListingAdInfo
+    smart_campaign_ad: ad_type_infos.SmartCampaignAdInfo
+    app_pre_registration_ad: ad_type_infos.AppPreRegistrationAdInfo
+    demand_gen_multi_asset_ad: ad_type_infos.DemandGenMultiAssetAdInfo
+    demand_gen_carousel_ad: ad_type_infos.DemandGenCarouselAdInfo
+    demand_gen_video_responsive_ad: ad_type_infos.DemandGenVideoResponsiveAdInfo
+    demand_gen_product_ad: ad_type_infos.DemandGenProductAdInfo
+    travel_ad: ad_type_infos.TravelAdInfo

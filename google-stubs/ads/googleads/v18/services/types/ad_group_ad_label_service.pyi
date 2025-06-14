@@ -1,74 +1,24 @@
-from collections.abc import Mapping, MutableSequence
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from google.rpc.status_pb2 import Status
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v18.resources.types import ad_group_ad_label
+from google.rpc import status_pb2
+from typing import MutableSequence
 
-from google.ads.googleads.v18.resources.types.ad_group_ad_label import AdGroupAdLabel
-
-_M = TypeVar("_M")
-
-class AdGroupAdLabelOperation(proto.Message):
-    create: AdGroupAdLabel
-    remove: str
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        create: AdGroupAdLabel = ...,
-        remove: str = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["create", "remove"]
-    ) -> bool: ...
-
-class MutateAdGroupAdLabelResult(proto.Message):
-    resource_name: str
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["resource_name"]
-    ) -> bool: ...
+__protobuf__: Incomplete
 
 class MutateAdGroupAdLabelsRequest(proto.Message):
     customer_id: str
-    operations: MutableSequence[AdGroupAdLabelOperation]
+    operations: MutableSequence['AdGroupAdLabelOperation']
     partial_failure: bool
     validate_only: bool
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        customer_id: str = ...,
-        operations: MutableSequence[AdGroupAdLabelOperation] = ...,
-        partial_failure: bool = ...,
-        validate_only: bool = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal["customer_id", "operations", "partial_failure", "validate_only"],
-    ) -> bool: ...
+
+class AdGroupAdLabelOperation(proto.Message):
+    create: ad_group_ad_label.AdGroupAdLabel
+    remove: str
 
 class MutateAdGroupAdLabelsResponse(proto.Message):
-    partial_failure_error: Status
-    results: MutableSequence[MutateAdGroupAdLabelResult]
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        partial_failure_error: Status = ...,
-        results: MutableSequence[MutateAdGroupAdLabelResult] = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["partial_failure_error", "results"]
-    ) -> bool: ...
+    partial_failure_error: status_pb2.Status
+    results: MutableSequence['MutateAdGroupAdLabelResult']
+
+class MutateAdGroupAdLabelResult(proto.Message):
+    resource_name: str

@@ -1,27 +1,13 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class InternalErrorEnum(proto.Message):
     class InternalError(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        INTERNAL_ERROR = 2
-        ERROR_CODE_NOT_PUBLISHED = 3
-        TRANSIENT_ERROR = 4
-        DEADLINE_EXCEEDED = 5
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        INTERNAL_ERROR: int
+        ERROR_CODE_NOT_PUBLISHED: int
+        TRANSIENT_ERROR: int
+        DEADLINE_EXCEEDED: int

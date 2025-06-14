@@ -1,27 +1,13 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class BrandRequestRejectionReasonEnum(proto.Message):
     class BrandRequestRejectionReason(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        EXISTING_BRAND = 2
-        EXISTING_BRAND_VARIANT = 3
-        INCORRECT_INFORMATION = 4
-        NOT_A_BRAND = 5
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        EXISTING_BRAND: int
+        EXISTING_BRAND_VARIANT: int
+        INCORRECT_INFORMATION: int
+        NOT_A_BRAND: int

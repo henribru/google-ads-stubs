@@ -1,26 +1,12 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class AdSharingErrorEnum(proto.Message):
     class AdSharingError(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        AD_GROUP_ALREADY_CONTAINS_AD = 2
-        INCOMPATIBLE_AD_UNDER_AD_GROUP = 3
-        CANNOT_SHARE_INACTIVE_AD = 4
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        AD_GROUP_ALREADY_CONTAINS_AD: int
+        INCOMPATIBLE_AD_UNDER_AD_GROUP: int
+        CANNOT_SHARE_INACTIVE_AD: int

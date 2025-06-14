@@ -1,79 +1,27 @@
-from collections.abc import Mapping, MutableSequence
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from google.protobuf.field_mask_pb2 import FieldMask
-from google.rpc.status_pb2 import Status
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v19.resources.types import asset_group_asset
+from google.protobuf import field_mask_pb2
+from google.rpc import status_pb2
+from typing import MutableSequence
 
-from google.ads.googleads.v19.resources.types.asset_group_asset import AssetGroupAsset
-
-_M = TypeVar("_M")
-
-class AssetGroupAssetOperation(proto.Message):
-    update_mask: FieldMask
-    create: AssetGroupAsset
-    update: AssetGroupAsset
-    remove: str
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        update_mask: FieldMask = ...,
-        create: AssetGroupAsset = ...,
-        update: AssetGroupAsset = ...,
-        remove: str = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["update_mask", "create", "update", "remove"]
-    ) -> bool: ...
-
-class MutateAssetGroupAssetResult(proto.Message):
-    resource_name: str
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["resource_name"]
-    ) -> bool: ...
+__protobuf__: Incomplete
 
 class MutateAssetGroupAssetsRequest(proto.Message):
     customer_id: str
-    operations: MutableSequence[AssetGroupAssetOperation]
+    operations: MutableSequence['AssetGroupAssetOperation']
     partial_failure: bool
     validate_only: bool
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        customer_id: str = ...,
-        operations: MutableSequence[AssetGroupAssetOperation] = ...,
-        partial_failure: bool = ...,
-        validate_only: bool = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal["customer_id", "operations", "partial_failure", "validate_only"],
-    ) -> bool: ...
+
+class AssetGroupAssetOperation(proto.Message):
+    update_mask: field_mask_pb2.FieldMask
+    create: asset_group_asset.AssetGroupAsset
+    update: asset_group_asset.AssetGroupAsset
+    remove: str
 
 class MutateAssetGroupAssetsResponse(proto.Message):
-    results: MutableSequence[MutateAssetGroupAssetResult]
-    partial_failure_error: Status
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        results: MutableSequence[MutateAssetGroupAssetResult] = ...,
-        partial_failure_error: Status = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: Literal["results", "partial_failure_error"]
-    ) -> bool: ...
+    results: MutableSequence['MutateAssetGroupAssetResult']
+    partial_failure_error: status_pb2.Status
+
+class MutateAssetGroupAssetResult(proto.Message):
+    resource_name: str

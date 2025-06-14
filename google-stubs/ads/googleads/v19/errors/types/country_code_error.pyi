@@ -1,24 +1,10 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class CountryCodeErrorEnum(proto.Message):
     class CountryCodeError(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        INVALID_COUNTRY_CODE = 2
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        INVALID_COUNTRY_CODE: int

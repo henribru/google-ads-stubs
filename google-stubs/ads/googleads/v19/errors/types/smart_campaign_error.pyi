@@ -1,30 +1,16 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class SmartCampaignErrorEnum(proto.Message):
     class SmartCampaignError(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        INVALID_BUSINESS_LOCATION_ID = 2
-        INVALID_CAMPAIGN = 3
-        BUSINESS_NAME_OR_BUSINESS_LOCATION_ID_MISSING = 4
-        REQUIRED_SUGGESTION_FIELD_MISSING = 5
-        GEO_TARGETS_REQUIRED = 6
-        CANNOT_DETERMINE_SUGGESTION_LOCALE = 7
-        FINAL_URL_NOT_CRAWLABLE = 8
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        INVALID_BUSINESS_LOCATION_ID: int
+        INVALID_CAMPAIGN: int
+        BUSINESS_NAME_OR_BUSINESS_LOCATION_ID_MISSING: int
+        REQUIRED_SUGGESTION_FIELD_MISSING: int
+        GEO_TARGETS_REQUIRED: int
+        CANNOT_DETERMINE_SUGGESTION_LOCALE: int
+        FINAL_URL_NOT_CRAWLABLE: int

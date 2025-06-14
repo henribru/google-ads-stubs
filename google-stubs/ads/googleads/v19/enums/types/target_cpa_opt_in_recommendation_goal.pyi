@@ -1,27 +1,13 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class TargetCpaOptInRecommendationGoalEnum(proto.Message):
     class TargetCpaOptInRecommendationGoal(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        SAME_COST = 2
-        SAME_CONVERSIONS = 3
-        SAME_CPA = 4
-        CLOSEST_CPA = 5
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        SAME_COST: int
+        SAME_CONVERSIONS: int
+        SAME_CPA: int
+        CLOSEST_CPA: int

@@ -1,41 +1,13 @@
-from collections.abc import Mapping, MutableSequence
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v18.enums.types import extension_setting_device, extension_type as gage_extension_type
+from typing import MutableSequence
 
-from google.ads.googleads.v18.enums.types.extension_setting_device import (
-    ExtensionSettingDeviceEnum,
-)
-from google.ads.googleads.v18.enums.types.extension_type import ExtensionTypeEnum
-
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class CampaignExtensionSetting(proto.Message):
     resource_name: str
-    extension_type: ExtensionTypeEnum.ExtensionType
+    extension_type: gage_extension_type.ExtensionTypeEnum.ExtensionType
     campaign: str
     extension_feed_items: MutableSequence[str]
-    device: ExtensionSettingDeviceEnum.ExtensionSettingDevice
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-        extension_type: ExtensionTypeEnum.ExtensionType = ...,
-        campaign: str = ...,
-        extension_feed_items: MutableSequence[str] = ...,
-        device: ExtensionSettingDeviceEnum.ExtensionSettingDevice = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal[
-            "resource_name",
-            "extension_type",
-            "campaign",
-            "extension_feed_items",
-            "device",
-        ],
-    ) -> bool: ...
+    device: extension_setting_device.ExtensionSettingDeviceEnum.ExtensionSettingDevice

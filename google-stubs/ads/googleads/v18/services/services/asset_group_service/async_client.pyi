@@ -1,15 +1,12 @@
-from typing import Callable, MutableSequence, Sequence, Tuple
-
+from .transports.base import AssetGroupServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v18.services.types import asset_group_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence, Tuple
 
-from google.ads.googleads.v18.services.types import asset_group_service
-
-from .transports.base import AssetGroupServiceTransport
-
-__all__ = ["AssetGroupServiceAsyncClient"]
+__all__ = ['AssetGroupServiceAsyncClient']
 
 class AssetGroupServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -34,9 +31,7 @@ class AssetGroupServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> AssetGroupServiceTransport: ...
     @property
@@ -44,27 +39,7 @@ class AssetGroupServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | AssetGroupServiceTransport
-        | Callable[..., AssetGroupServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def mutate_asset_groups(
-        self,
-        request: asset_group_service.MutateAssetGroupsRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[asset_group_service.AssetGroupOperation]
-        | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> asset_group_service.MutateAssetGroupsResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AssetGroupServiceTransport | Callable[..., AssetGroupServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def mutate_asset_groups(self, request: asset_group_service.MutateAssetGroupsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[asset_group_service.AssetGroupOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[Tuple[str, str | bytes]] = ()) -> asset_group_service.MutateAssetGroupsResponse: ...
     async def __aenter__(self) -> AssetGroupServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

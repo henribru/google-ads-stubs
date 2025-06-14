@@ -1,37 +1,13 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
+from google.ads.googleads.v19.common.types import customizer_value
+from google.ads.googleads.v19.enums.types import customizer_value_status
 
-from google.ads.googleads.v19.common.types.customizer_value import CustomizerValue
-from google.ads.googleads.v19.enums.types.customizer_value_status import (
-    CustomizerValueStatusEnum,
-)
-
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class CampaignCustomizer(proto.Message):
     resource_name: str
     campaign: str
     customizer_attribute: str
-    status: CustomizerValueStatusEnum.CustomizerValueStatus
-    value: CustomizerValue
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-        resource_name: str = ...,
-        campaign: str = ...,
-        customizer_attribute: str = ...,
-        status: CustomizerValueStatusEnum.CustomizerValueStatus = ...,
-        value: CustomizerValue = ...,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self,
-        key: Literal[
-            "resource_name", "campaign", "customizer_attribute", "status", "value"
-        ],
-    ) -> bool: ...
+    status: customizer_value_status.CustomizerValueStatusEnum.CustomizerValueStatus
+    value: customizer_value.CustomizerValue

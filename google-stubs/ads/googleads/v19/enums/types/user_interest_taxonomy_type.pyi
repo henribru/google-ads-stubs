@@ -1,28 +1,14 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class UserInterestTaxonomyTypeEnum(proto.Message):
     class UserInterestTaxonomyType(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        AFFINITY = 2
-        IN_MARKET = 3
-        MOBILE_APP_INSTALL_USER = 4
-        VERTICAL_GEO = 5
-        NEW_SMART_PHONE_USER = 6
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        AFFINITY: int
+        IN_MARKET: int
+        MOBILE_APP_INSTALL_USER: int
+        VERTICAL_GEO: int
+        NEW_SMART_PHONE_USER: int

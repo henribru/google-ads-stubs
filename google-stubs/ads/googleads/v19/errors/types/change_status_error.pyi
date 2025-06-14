@@ -1,28 +1,14 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
-from typing_extensions import Literal
+from _typeshed import Incomplete
 
-_M = TypeVar("_M")
+__protobuf__: Incomplete
 
 class ChangeStatusErrorEnum(proto.Message):
     class ChangeStatusError(proto.Enum):
-        UNSPECIFIED = 0
-        UNKNOWN = 1
-        START_DATE_TOO_OLD = 3
-        CHANGE_DATE_RANGE_INFINITE = 4
-        CHANGE_DATE_RANGE_NEGATIVE = 5
-        LIMIT_NOT_SPECIFIED = 6
-        INVALID_LIMIT_CLAUSE = 7
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
-    def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+        UNSPECIFIED: int
+        UNKNOWN: int
+        START_DATE_TOO_OLD: int
+        CHANGE_DATE_RANGE_INFINITE: int
+        CHANGE_DATE_RANGE_NEGATIVE: int
+        LIMIT_NOT_SPECIFIED: int
+        INVALID_LIMIT_CLAUSE: int
