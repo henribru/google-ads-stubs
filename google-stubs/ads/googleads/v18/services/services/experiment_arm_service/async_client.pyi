@@ -1,12 +1,15 @@
-from .transports.base import ExperimentArmServiceTransport
+from typing import Callable, MutableSequence, Sequence, Tuple
+
 from _typeshed import Incomplete
-from google.ads.googleads.v18.services.types import experiment_arm_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
-from typing import Callable, MutableSequence, Sequence, Tuple
 
-__all__ = ['ExperimentArmServiceAsyncClient']
+from google.ads.googleads.v18.services.types import experiment_arm_service
+
+from .transports.base import ExperimentArmServiceTransport
+
+__all__ = ["ExperimentArmServiceAsyncClient"]
 
 class ExperimentArmServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -33,7 +36,9 @@ class ExperimentArmServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: ClientOptions | None = None
+    ): ...
     @property
     def transport(self) -> ExperimentArmServiceTransport: ...
     @property
@@ -41,7 +46,29 @@ class ExperimentArmServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | ExperimentArmServiceTransport | Callable[..., ExperimentArmServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    async def mutate_experiment_arms(self, request: experiment_arm_service.MutateExperimentArmsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[experiment_arm_service.ExperimentArmOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[Tuple[str, str | bytes]] = ()) -> experiment_arm_service.MutateExperimentArmsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | ExperimentArmServiceTransport
+        | Callable[..., ExperimentArmServiceTransport]
+        | None = "grpc_asyncio",
+        client_options: ClientOptions | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    async def mutate_experiment_arms(
+        self,
+        request: experiment_arm_service.MutateExperimentArmsRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[experiment_arm_service.ExperimentArmOperation]
+        | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> experiment_arm_service.MutateExperimentArmsResponse: ...
     async def __aenter__(self) -> ExperimentArmServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

@@ -1,26 +1,67 @@
+from typing import Awaitable, Callable, Sequence, Tuple
+
 import grpc
-from .base import SmartCampaignSettingServiceTransport
-from google.ads.googleads.v20.services.types import smart_campaign_setting_service
 from google.api_core import gapic_v1
 from google.auth import credentials as ga_credentials
 from grpc.experimental import aio
-from typing import Awaitable, Callable, Sequence, Tuple
 
-__all__ = ['SmartCampaignSettingServiceGrpcAsyncIOTransport']
+from google.ads.googleads.v20.services.types import smart_campaign_setting_service
+
+from .base import SmartCampaignSettingServiceTransport
+
+__all__ = ["SmartCampaignSettingServiceGrpcAsyncIOTransport"]
 
 class _LoggingClientAIOInterceptor(grpc.aio.UnaryUnaryClientInterceptor):
-    async def intercept_unary_unary(self, continuation, client_call_details, request): ...
+    async def intercept_unary_unary(
+        self, continuation, client_call_details, request
+    ): ...
 
-class SmartCampaignSettingServiceGrpcAsyncIOTransport(SmartCampaignSettingServiceTransport):
+class SmartCampaignSettingServiceGrpcAsyncIOTransport(
+    SmartCampaignSettingServiceTransport
+):
     @classmethod
-    def create_channel(cls, host: str = 'googleads.googleapis.com', credentials: ga_credentials.Credentials | None = None, credentials_file: str | None = None, scopes: Sequence[str] | None = None, quota_project_id: str | None = None, **kwargs) -> aio.Channel: ...
-    def __init__(self, *, host: str = 'googleads.googleapis.com', credentials: ga_credentials.Credentials | None = None, credentials_file: str | None = None, scopes: Sequence[str] | None = None, channel: aio.Channel | Callable[..., aio.Channel] | None = None, api_mtls_endpoint: str | None = None, client_cert_source: Callable[[], Tuple[bytes, bytes]] | None = None, ssl_channel_credentials: grpc.ChannelCredentials | None = None, client_cert_source_for_mtls: Callable[[], Tuple[bytes, bytes]] | None = None, quota_project_id: str | None = None, client_info: gapic_v1.client_info.ClientInfo = ..., always_use_jwt_access: bool | None = False, api_audience: str | None = None) -> None: ...
+    def create_channel(
+        cls,
+        host: str = "googleads.googleapis.com",
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
+        **kwargs,
+    ) -> aio.Channel: ...
+    def __init__(
+        self,
+        *,
+        host: str = "googleads.googleapis.com",
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        channel: aio.Channel | Callable[..., aio.Channel] | None = None,
+        api_mtls_endpoint: str | None = None,
+        client_cert_source: Callable[[], tuple[bytes, bytes]] | None = None,
+        ssl_channel_credentials: grpc.ChannelCredentials | None = None,
+        client_cert_source_for_mtls: Callable[[], tuple[bytes, bytes]] | None = None,
+        quota_project_id: str | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+        always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
+    ) -> None: ...
     @property
     def grpc_channel(self) -> aio.Channel: ...
     @property
-    def get_smart_campaign_status(self) -> Callable[[smart_campaign_setting_service.GetSmartCampaignStatusRequest], Awaitable[smart_campaign_setting_service.GetSmartCampaignStatusResponse]]: ...
+    def get_smart_campaign_status(
+        self,
+    ) -> Callable[
+        [smart_campaign_setting_service.GetSmartCampaignStatusRequest],
+        Awaitable[smart_campaign_setting_service.GetSmartCampaignStatusResponse],
+    ]: ...
     @property
-    def mutate_smart_campaign_settings(self) -> Callable[[smart_campaign_setting_service.MutateSmartCampaignSettingsRequest], Awaitable[smart_campaign_setting_service.MutateSmartCampaignSettingsResponse]]: ...
+    def mutate_smart_campaign_settings(
+        self,
+    ) -> Callable[
+        [smart_campaign_setting_service.MutateSmartCampaignSettingsRequest],
+        Awaitable[smart_campaign_setting_service.MutateSmartCampaignSettingsResponse],
+    ]: ...
     def close(self): ...
     @property
     def kind(self) -> str: ...

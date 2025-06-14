@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class OperationAccessDeniedErrorEnum(proto.Message):
     class OperationAccessDeniedError(proto.Enum):
         UNSPECIFIED = 0
@@ -18,6 +21,13 @@ class OperationAccessDeniedErrorEnum(proto.Message):
         OPERATION_NOT_PERMITTED_FOR_REMOVED_RESOURCE = 9
         OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE = 10
         MUTATE_NOT_PERMITTED_FOR_CUSTOMER = 11
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

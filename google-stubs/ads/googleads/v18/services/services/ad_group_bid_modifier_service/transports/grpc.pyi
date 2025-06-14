@@ -1,23 +1,55 @@
-import grpc
-from .base import AdGroupBidModifierServiceTransport
-from google.ads.googleads.v18.services.types import ad_group_bid_modifier_service
-from google.api_core import gapic_v1
-from google.auth import credentials as ga_credentials
 from typing import Callable, Sequence, Tuple
 
-__all__ = ['AdGroupBidModifierServiceGrpcTransport']
+import grpc
+from google.api_core import gapic_v1
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v18.services.types import ad_group_bid_modifier_service
+
+from .base import AdGroupBidModifierServiceTransport
+
+__all__ = ["AdGroupBidModifierServiceGrpcTransport"]
 
 class _LoggingClientInterceptor(grpc.UnaryUnaryClientInterceptor):
     def intercept_unary_unary(self, continuation, client_call_details, request): ...
 
 class AdGroupBidModifierServiceGrpcTransport(AdGroupBidModifierServiceTransport):
-    def __init__(self, *, host: str = 'googleads.googleapis.com', credentials: ga_credentials.Credentials | None = None, credentials_file: str | None = None, scopes: Sequence[str] | None = None, channel: grpc.Channel | Callable[..., grpc.Channel] | None = None, api_mtls_endpoint: str | None = None, client_cert_source: Callable[[], Tuple[bytes, bytes]] | None = None, ssl_channel_credentials: grpc.ChannelCredentials | None = None, client_cert_source_for_mtls: Callable[[], Tuple[bytes, bytes]] | None = None, quota_project_id: str | None = None, client_info: gapic_v1.client_info.ClientInfo = ..., always_use_jwt_access: bool | None = False, api_audience: str | None = None) -> None: ...
+    def __init__(
+        self,
+        *,
+        host: str = "googleads.googleapis.com",
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        channel: grpc.Channel | Callable[..., grpc.Channel] | None = None,
+        api_mtls_endpoint: str | None = None,
+        client_cert_source: Callable[[], tuple[bytes, bytes]] | None = None,
+        ssl_channel_credentials: grpc.ChannelCredentials | None = None,
+        client_cert_source_for_mtls: Callable[[], tuple[bytes, bytes]] | None = None,
+        quota_project_id: str | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+        always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
+    ) -> None: ...
     @classmethod
-    def create_channel(cls, host: str = 'googleads.googleapis.com', credentials: ga_credentials.Credentials | None = None, credentials_file: str | None = None, scopes: Sequence[str] | None = None, quota_project_id: str | None = None, **kwargs) -> grpc.Channel: ...
+    def create_channel(
+        cls,
+        host: str = "googleads.googleapis.com",
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
+        **kwargs,
+    ) -> grpc.Channel: ...
     @property
     def grpc_channel(self) -> grpc.Channel: ...
     @property
-    def mutate_ad_group_bid_modifiers(self) -> Callable[[ad_group_bid_modifier_service.MutateAdGroupBidModifiersRequest], ad_group_bid_modifier_service.MutateAdGroupBidModifiersResponse]: ...
+    def mutate_ad_group_bid_modifiers(
+        self,
+    ) -> Callable[
+        [ad_group_bid_modifier_service.MutateAdGroupBidModifiersRequest],
+        ad_group_bid_modifier_service.MutateAdGroupBidModifiersResponse,
+    ]: ...
     def close(self) -> None: ...
     @property
     def kind(self) -> str: ...

@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class ResourceLimitTypeEnum(proto.Message):
     class ResourceLimitType(proto.Enum):
         UNSPECIFIED = 0
@@ -151,6 +154,13 @@ class ResourceLimitTypeEnum(proto.Message):
         SHARED_SETS_PER_ACCOUNT_FOR_BRAND = 185
         LOOKALIKE_USER_LISTS_PER_CUSTOMER = 186
         LOGO_CAMPAIGN_ASSETS_PER_CAMPAIGN = 187
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

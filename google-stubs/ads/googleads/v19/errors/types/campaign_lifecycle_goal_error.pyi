@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class CampaignLifecycleGoalErrorEnum(proto.Message):
     class CampaignLifecycleGoalError(proto.Enum):
         UNSPECIFIED = 0
@@ -19,6 +22,13 @@ class CampaignLifecycleGoalErrorEnum(proto.Message):
         CUSTOMER_ACQUISITION_VALUE_MISSING = 10
         CUSTOMER_ACQUISITION_MISSING_EXISTING_CUSTOMER_DEFINITION = 11
         CUSTOMER_ACQUISITION_MISSING_HIGH_VALUE_CUSTOMER_DEFINITION = 12
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class RealEstatePlaceholderFieldEnum(proto.Message):
     class RealEstatePlaceholderField(proto.Enum):
         UNSPECIFIED = 0
@@ -26,6 +29,13 @@ class RealEstatePlaceholderFieldEnum(proto.Message):
         SIMILAR_LISTING_IDS = 17
         IOS_APP_LINK = 18
         IOS_APP_STORE_ID = 19
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...
