@@ -1,13 +1,17 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class SharedSetErrorEnum(proto.Message):
     class SharedSetError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE: int
-        DUPLICATE_NAME: int
-        SHARED_SET_REMOVED: int
-        SHARED_SET_IN_USE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE = 2
+        DUPLICATE_NAME = 3
+        SHARED_SET_REMOVED = 4
+        SHARED_SET_IN_USE = 5
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

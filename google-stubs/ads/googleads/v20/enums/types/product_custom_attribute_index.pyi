@@ -1,14 +1,18 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class ProductCustomAttributeIndexEnum(proto.Message):
     class ProductCustomAttributeIndex(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INDEX0: int
-        INDEX1: int
-        INDEX2: int
-        INDEX3: int
-        INDEX4: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INDEX0 = 7
+        INDEX1 = 8
+        INDEX2 = 9
+        INDEX3 = 10
+        INDEX4 = 11
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

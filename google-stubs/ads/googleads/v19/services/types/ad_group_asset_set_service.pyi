@@ -1,27 +1,39 @@
+from google.rpc.status_pb2 import Status
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.enums.types.response_content_type import ResponseContentTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.resources.types.ad_group_asset_set import AdGroupAssetSet
+from google.ads.googleads.v19.resources.types.ad_group_asset_set import AdGroupAssetSet
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v19.resources.types import ad_group_asset_set as gagr_ad_group_asset_set
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class MutateAdGroupAssetSetsRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['AdGroupAssetSetOperation']
-    partial_failure: bool
-    validate_only: bool
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AdGroupAssetSetOperation(proto.Message):
-    create: gagr_ad_group_asset_set.AdGroupAssetSet
+    create: AdGroupAssetSet
     remove: str
-
-class MutateAdGroupAssetSetsResponse(proto.Message):
-    results: MutableSequence['MutateAdGroupAssetSetResult']
-    partial_failure_error: status_pb2.Status
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., create: AdGroupAssetSet = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["create", "remove"]) -> bool: ...
 class MutateAdGroupAssetSetResult(proto.Message):
     resource_name: str
-    ad_group_asset_set: gagr_ad_group_asset_set.AdGroupAssetSet
+    ad_group_asset_set: AdGroupAssetSet
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., ad_group_asset_set: AdGroupAssetSet = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "ad_group_asset_set"]) -> bool: ...
+class MutateAdGroupAssetSetsRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[AdGroupAssetSetOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[AdGroupAssetSetOperation] = ..., partial_failure: bool = ..., validate_only: bool = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...
+class MutateAdGroupAssetSetsResponse(proto.Message):
+    results: MutableSequence[MutateAdGroupAssetSetResult]
+    partial_failure_error: Status
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., results: MutableSequence[MutateAdGroupAssetSetResult] = ..., partial_failure_error: Status = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["results", "partial_failure_error"]) -> bool: ...

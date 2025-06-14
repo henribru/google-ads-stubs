@@ -1,15 +1,19 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class SearchTermInsightErrorEnum(proto.Message):
     class SearchTermInsightError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        FILTERING_NOT_ALLOWED_WITH_SEGMENTS: int
-        LIMIT_NOT_ALLOWED_WITH_SEGMENTS: int
-        MISSING_FIELD_IN_SELECT_CLAUSE: int
-        REQUIRES_FILTER_BY_SINGLE_RESOURCE: int
-        SORTING_NOT_ALLOWED_WITH_SEGMENTS: int
-        SUMMARY_ROW_NOT_ALLOWED_WITH_SEGMENTS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        FILTERING_NOT_ALLOWED_WITH_SEGMENTS = 2
+        LIMIT_NOT_ALLOWED_WITH_SEGMENTS = 3
+        MISSING_FIELD_IN_SELECT_CLAUSE = 4
+        REQUIRES_FILTER_BY_SINGLE_RESOURCE = 5
+        SORTING_NOT_ALLOWED_WITH_SEGMENTS = 6
+        SUMMARY_ROW_NOT_ALLOWED_WITH_SEGMENTS = 7
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

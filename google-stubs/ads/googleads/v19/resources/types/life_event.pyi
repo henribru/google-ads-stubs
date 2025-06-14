@@ -1,14 +1,18 @@
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.common.types.criterion_category_availability import CriterionCategoryAvailability
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.common.types import criterion_category_availability
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class LifeEvent(proto.Message):
     resource_name: str
     id: int
     name: str
     parent: str
     launched_to_all: bool
-    availabilities: MutableSequence[criterion_category_availability.CriterionCategoryAvailability]
+    availabilities: MutableSequence[CriterionCategoryAvailability]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., id: int = ..., name: str = ..., parent: str = ..., launched_to_all: bool = ..., availabilities: MutableSequence[CriterionCategoryAvailability] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "id", "name", "parent", "launched_to_all", "availabilities"]) -> bool: ...

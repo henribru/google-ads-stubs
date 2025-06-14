@@ -1,46 +1,50 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CampaignPrimaryStatusReasonEnum(proto.Message):
     class CampaignPrimaryStatusReason(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CAMPAIGN_REMOVED: int
-        CAMPAIGN_PAUSED: int
-        CAMPAIGN_PENDING: int
-        CAMPAIGN_ENDED: int
-        CAMPAIGN_DRAFT: int
-        BIDDING_STRATEGY_MISCONFIGURED: int
-        BIDDING_STRATEGY_LIMITED: int
-        BIDDING_STRATEGY_LEARNING: int
-        BIDDING_STRATEGY_CONSTRAINED: int
-        BUDGET_CONSTRAINED: int
-        BUDGET_MISCONFIGURED: int
-        SEARCH_VOLUME_LIMITED: int
-        AD_GROUPS_PAUSED: int
-        NO_AD_GROUPS: int
-        KEYWORDS_PAUSED: int
-        NO_KEYWORDS: int
-        AD_GROUP_ADS_PAUSED: int
-        NO_AD_GROUP_ADS: int
-        HAS_ADS_LIMITED_BY_POLICY: int
-        HAS_ADS_DISAPPROVED: int
-        MOST_ADS_UNDER_REVIEW: int
-        MISSING_LEAD_FORM_EXTENSION: int
-        MISSING_CALL_EXTENSION: int
-        LEAD_FORM_EXTENSION_UNDER_REVIEW: int
-        LEAD_FORM_EXTENSION_DISAPPROVED: int
-        CALL_EXTENSION_UNDER_REVIEW: int
-        CALL_EXTENSION_DISAPPROVED: int
-        NO_MOBILE_APPLICATION_AD_GROUP_CRITERIA: int
-        CAMPAIGN_GROUP_PAUSED: int
-        CAMPAIGN_GROUP_ALL_GROUP_BUDGETS_ENDED: int
-        APP_NOT_RELEASED: int
-        APP_PARTIALLY_RELEASED: int
-        HAS_ASSET_GROUPS_DISAPPROVED: int
-        HAS_ASSET_GROUPS_LIMITED_BY_POLICY: int
-        MOST_ASSET_GROUPS_UNDER_REVIEW: int
-        NO_ASSET_GROUPS: int
-        ASSET_GROUPS_PAUSED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CAMPAIGN_REMOVED = 2
+        CAMPAIGN_PAUSED = 3
+        CAMPAIGN_PENDING = 4
+        CAMPAIGN_ENDED = 5
+        CAMPAIGN_DRAFT = 6
+        BIDDING_STRATEGY_MISCONFIGURED = 7
+        BIDDING_STRATEGY_LIMITED = 8
+        BIDDING_STRATEGY_LEARNING = 9
+        BIDDING_STRATEGY_CONSTRAINED = 10
+        BUDGET_CONSTRAINED = 11
+        BUDGET_MISCONFIGURED = 12
+        SEARCH_VOLUME_LIMITED = 13
+        AD_GROUPS_PAUSED = 14
+        NO_AD_GROUPS = 15
+        KEYWORDS_PAUSED = 16
+        NO_KEYWORDS = 17
+        AD_GROUP_ADS_PAUSED = 18
+        NO_AD_GROUP_ADS = 19
+        HAS_ADS_LIMITED_BY_POLICY = 20
+        HAS_ADS_DISAPPROVED = 21
+        MOST_ADS_UNDER_REVIEW = 22
+        MISSING_LEAD_FORM_EXTENSION = 23
+        MISSING_CALL_EXTENSION = 24
+        LEAD_FORM_EXTENSION_UNDER_REVIEW = 25
+        LEAD_FORM_EXTENSION_DISAPPROVED = 26
+        CALL_EXTENSION_UNDER_REVIEW = 27
+        CALL_EXTENSION_DISAPPROVED = 28
+        NO_MOBILE_APPLICATION_AD_GROUP_CRITERIA = 29
+        CAMPAIGN_GROUP_PAUSED = 30
+        CAMPAIGN_GROUP_ALL_GROUP_BUDGETS_ENDED = 31
+        APP_NOT_RELEASED = 32
+        APP_PARTIALLY_RELEASED = 33
+        HAS_ASSET_GROUPS_DISAPPROVED = 34
+        HAS_ASSET_GROUPS_LIMITED_BY_POLICY = 35
+        MOST_ASSET_GROUPS_UNDER_REVIEW = 36
+        NO_ASSET_GROUPS = 37
+        ASSET_GROUPS_PAUSED = 38
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

@@ -1,23 +1,34 @@
+from google.ads.googleads.v20.enums.types.asset_source import AssetSourceEnum
+from google.ads.googleads.v20.enums.types.served_asset_field_type import ServedAssetFieldTypeEnum
+from google.ads.googleads.v20.enums.types.asset_performance_label import AssetPerformanceLabelEnum
+from google.ads.googleads.v20.enums.types.asset_field_type import AssetFieldTypeEnum
+from google.ads.googleads.v20.enums.types.policy_approval_status import PolicyApprovalStatusEnum
+from google.ads.googleads.v20.enums.types.policy_review_status import PolicyReviewStatusEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.common.types.policy import PolicyTopicEntry
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.common.types import policy
-from google.ads.googleads.v20.enums.types import asset_field_type, asset_performance_label, asset_source, policy_approval_status, policy_review_status, served_asset_field_type
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
+class AdGroupAdAssetPolicySummary(proto.Message):
+    policy_topic_entries: MutableSequence[PolicyTopicEntry]
+    review_status: PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., policy_topic_entries: MutableSequence[PolicyTopicEntry] = ..., review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ..., approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...
 class AdGroupAdAssetView(proto.Message):
     resource_name: str
     ad_group_ad: str
     asset: str
-    field_type: asset_field_type.AssetFieldTypeEnum.AssetFieldType
+    field_type: AssetFieldTypeEnum.AssetFieldType
     enabled: bool
     policy_summary: AdGroupAdAssetPolicySummary
-    performance_label: asset_performance_label.AssetPerformanceLabelEnum.AssetPerformanceLabel
-    pinned_field: served_asset_field_type.ServedAssetFieldTypeEnum.ServedAssetFieldType
-    source: asset_source.AssetSourceEnum.AssetSource
-
-class AdGroupAdAssetPolicySummary(proto.Message):
-    policy_topic_entries: MutableSequence[policy.PolicyTopicEntry]
-    review_status: policy_review_status.PolicyReviewStatusEnum.PolicyReviewStatus
-    approval_status: policy_approval_status.PolicyApprovalStatusEnum.PolicyApprovalStatus
+    performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel
+    pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType
+    source: AssetSourceEnum.AssetSource
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., ad_group_ad: str = ..., asset: str = ..., field_type: AssetFieldTypeEnum.AssetFieldType = ..., enabled: bool = ..., policy_summary: AdGroupAdAssetPolicySummary = ..., performance_label: AssetPerformanceLabelEnum.AssetPerformanceLabel = ..., pinned_field: ServedAssetFieldTypeEnum.ServedAssetFieldType = ..., source: AssetSourceEnum.AssetSource = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "ad_group_ad", "asset", "field_type", "enabled", "policy_summary", "performance_label", "pinned_field", "source"]) -> bool: ...

@@ -1,27 +1,39 @@
+from collections.abc import MutableSequence
+from google.rpc.status_pb2 import Status
+from google.ads.googleads.v18.enums.types.response_content_type import ResponseContentTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.resources.types.feed_item_target import FeedItemTarget
+from google.ads.googleads.v18.resources.types.feed_item_target import FeedItemTarget
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v18.resources.types import feed_item_target as gagr_feed_item_target
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class MutateFeedItemTargetsRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['FeedItemTargetOperation']
-    partial_failure: bool
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-    validate_only: bool
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class FeedItemTargetOperation(proto.Message):
-    create: gagr_feed_item_target.FeedItemTarget
+    create: FeedItemTarget
     remove: str
-
-class MutateFeedItemTargetsResponse(proto.Message):
-    partial_failure_error: status_pb2.Status
-    results: MutableSequence['MutateFeedItemTargetResult']
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., create: FeedItemTarget = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["create", "remove"]) -> bool: ...
 class MutateFeedItemTargetResult(proto.Message):
     resource_name: str
-    feed_item_target: gagr_feed_item_target.FeedItemTarget
+    feed_item_target: FeedItemTarget
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., feed_item_target: FeedItemTarget = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "feed_item_target"]) -> bool: ...
+class MutateFeedItemTargetsRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[FeedItemTargetOperation]
+    partial_failure: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    validate_only: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[FeedItemTargetOperation] = ..., partial_failure: bool = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ..., validate_only: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure", "response_content_type", "validate_only"]) -> bool: ...
+class MutateFeedItemTargetsResponse(proto.Message):
+    partial_failure_error: Status
+    results: MutableSequence[MutateFeedItemTargetResult]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., partial_failure_error: Status = ..., results: MutableSequence[MutateFeedItemTargetResult] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["partial_failure_error", "results"]) -> bool: ...

@@ -1,16 +1,20 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomerPayPerConversionEligibilityFailureReasonEnum(proto.Message):
     class CustomerPayPerConversionEligibilityFailureReason(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NOT_ENOUGH_CONVERSIONS: int
-        CONVERSION_LAG_TOO_HIGH: int
-        HAS_CAMPAIGN_WITH_SHARED_BUDGET: int
-        HAS_UPLOAD_CLICKS_CONVERSION: int
-        AVERAGE_DAILY_SPEND_TOO_HIGH: int
-        ANALYSIS_NOT_COMPLETE: int
-        OTHER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NOT_ENOUGH_CONVERSIONS = 2
+        CONVERSION_LAG_TOO_HIGH = 3
+        HAS_CAMPAIGN_WITH_SHARED_BUDGET = 4
+        HAS_UPLOAD_CLICKS_CONVERSION = 5
+        AVERAGE_DAILY_SPEND_TOO_HIGH = 6
+        ANALYSIS_NOT_COMPLETE = 7
+        OTHER = 8
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

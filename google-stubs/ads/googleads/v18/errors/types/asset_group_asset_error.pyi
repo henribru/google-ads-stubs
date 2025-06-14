@@ -1,13 +1,17 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AssetGroupAssetErrorEnum(proto.Message):
     class AssetGroupAssetError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DUPLICATE_RESOURCE: int
-        EXPANDABLE_TAGS_NOT_ALLOWED_IN_DESCRIPTION: int
-        AD_CUSTOMIZER_NOT_SUPPORTED: int
-        HOTEL_PROPERTY_ASSET_NOT_LINKED_TO_CAMPAIGN: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DUPLICATE_RESOURCE = 2
+        EXPANDABLE_TAGS_NOT_ALLOWED_IN_DESCRIPTION = 3
+        AD_CUSTOMIZER_NOT_SUPPORTED = 4
+        HOTEL_PROPERTY_ASSET_NOT_LINKED_TO_CAMPAIGN = 5
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

@@ -1,9 +1,12 @@
+from google.ads.googleads.v20.enums.types.google_voice_call_status import GoogleVoiceCallStatusEnum
+from google.ads.googleads.v20.enums.types.call_type import CallTypeEnum
+from google.ads.googleads.v20.enums.types.call_tracking_display_location import CallTrackingDisplayLocationEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.enums.types import call_tracking_display_location as gage_call_tracking_display_location, call_type, google_voice_call_status
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CallView(proto.Message):
     resource_name: str
     caller_country_code: str
@@ -11,6 +14,9 @@ class CallView(proto.Message):
     call_duration_seconds: int
     start_call_date_time: str
     end_call_date_time: str
-    call_tracking_display_location: gage_call_tracking_display_location.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation
-    type_: call_type.CallTypeEnum.CallType
-    call_status: google_voice_call_status.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus
+    call_tracking_display_location: CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation
+    type_: CallTypeEnum.CallType
+    call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., caller_country_code: str = ..., caller_area_code: str = ..., call_duration_seconds: int = ..., start_call_date_time: str = ..., end_call_date_time: str = ..., call_tracking_display_location: CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation = ..., type_: CallTypeEnum.CallType = ..., call_status: GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "caller_country_code", "caller_area_code", "call_duration_seconds", "start_call_date_time", "end_call_date_time", "call_tracking_display_location", "type_", "call_status"]) -> bool: ...

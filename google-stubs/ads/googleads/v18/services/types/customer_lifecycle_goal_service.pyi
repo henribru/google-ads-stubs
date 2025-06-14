@@ -1,22 +1,33 @@
+from google.ads.googleads.v18.resources.types.customer_lifecycle_goal import CustomerLifecycleGoal
+from google.ads.googleads.v18.resources.types.customer_lifecycle_goal import CustomerLifecycleGoal
+from google.protobuf.field_mask_pb2 import FieldMask
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.resources.types import customer_lifecycle_goal
-from google.protobuf import field_mask_pb2
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class ConfigureCustomerLifecycleGoalsRequest(proto.Message):
     customer_id: str
     operation: CustomerLifecycleGoalOperation
     validate_only: bool
-
-class CustomerLifecycleGoalOperation(proto.Message):
-    update_mask: field_mask_pb2.FieldMask
-    create: customer_lifecycle_goal.CustomerLifecycleGoal
-    update: customer_lifecycle_goal.CustomerLifecycleGoal
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operation: CustomerLifecycleGoalOperation = ..., validate_only: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operation", "validate_only"]) -> bool: ...
 class ConfigureCustomerLifecycleGoalsResponse(proto.Message):
     result: ConfigureCustomerLifecycleGoalsResult
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., result: ConfigureCustomerLifecycleGoalsResult = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["result"]) -> bool: ...
 class ConfigureCustomerLifecycleGoalsResult(proto.Message):
     resource_name: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name"]) -> bool: ...
+class CustomerLifecycleGoalOperation(proto.Message):
+    update_mask: FieldMask
+    create: CustomerLifecycleGoal
+    update: CustomerLifecycleGoal
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., update_mask: FieldMask = ..., create: CustomerLifecycleGoal = ..., update: CustomerLifecycleGoal = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["update_mask", "create", "update"]) -> bool: ...

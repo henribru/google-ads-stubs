@@ -1,17 +1,21 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class ConversionValueRulePrimaryDimensionEnum(proto.Message):
     class ConversionValueRulePrimaryDimension(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NO_RULE_APPLIED: int
-        ORIGINAL: int
-        NEW_VS_RETURNING_USER: int
-        GEO_LOCATION: int
-        DEVICE: int
-        AUDIENCE: int
-        MULTIPLE: int
-        ITINERARY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NO_RULE_APPLIED = 2
+        ORIGINAL = 3
+        NEW_VS_RETURNING_USER = 4
+        GEO_LOCATION = 5
+        DEVICE = 6
+        AUDIENCE = 7
+        MULTIPLE = 8
+        ITINERARY = 9
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

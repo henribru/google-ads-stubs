@@ -1,9 +1,14 @@
+from google.ads.googleads.v19.enums.types.consent_status import ConsentStatusEnum
+from google.ads.googleads.v19.enums.types.consent_status import ConsentStatusEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.enums.types import consent_status
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class Consent(proto.Message):
-    ad_user_data: consent_status.ConsentStatusEnum.ConsentStatus
-    ad_personalization: consent_status.ConsentStatusEnum.ConsentStatus
+    ad_user_data: ConsentStatusEnum.ConsentStatus
+    ad_personalization: ConsentStatusEnum.ConsentStatus
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_user_data: ConsentStatusEnum.ConsentStatus = ..., ad_personalization: ConsentStatusEnum.ConsentStatus = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["ad_user_data", "ad_personalization"]) -> bool: ...

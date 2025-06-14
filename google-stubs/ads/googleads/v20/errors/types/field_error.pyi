@@ -1,17 +1,21 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class FieldErrorEnum(proto.Message):
     class FieldError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        REQUIRED: int
-        IMMUTABLE_FIELD: int
-        INVALID_VALUE: int
-        VALUE_MUST_BE_UNSET: int
-        REQUIRED_NONEMPTY_LIST: int
-        FIELD_CANNOT_BE_CLEARED: int
-        BLOCKED_VALUE: int
-        FIELD_CAN_ONLY_BE_CLEARED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        REQUIRED = 2
+        IMMUTABLE_FIELD = 3
+        INVALID_VALUE = 4
+        VALUE_MUST_BE_UNSET = 5
+        REQUIRED_NONEMPTY_LIST = 6
+        FIELD_CANNOT_BE_CLEARED = 7
+        BLOCKED_VALUE = 9
+        FIELD_CAN_ONLY_BE_CLEARED = 10
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

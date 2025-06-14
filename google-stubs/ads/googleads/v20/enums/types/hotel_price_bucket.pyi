@@ -1,13 +1,17 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class HotelPriceBucketEnum(proto.Message):
     class HotelPriceBucket(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        LOWEST_UNIQUE: int
-        LOWEST_TIED: int
-        NOT_LOWEST: int
-        ONLY_PARTNER_SHOWN: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        LOWEST_UNIQUE = 2
+        LOWEST_TIED = 3
+        NOT_LOWEST = 4
+        ONLY_PARTNER_SHOWN = 5
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

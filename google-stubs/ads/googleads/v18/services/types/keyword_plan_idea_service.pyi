@@ -1,11 +1,160 @@
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.keyword_plan_common import HistoricalMetricsOptions
+from google.ads.googleads.v18.common.types.keyword_plan_common import KeywordPlanAggregateMetrics
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.keyword_plan_keyword_annotation import KeywordPlanKeywordAnnotationEnum
+from google.ads.googleads.v18.enums.types.keyword_plan_network import KeywordPlanNetworkEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.keyword_plan_common import KeywordAnnotations
+from google.ads.googleads.v18.common.types.keyword_plan_common import KeywordPlanHistoricalMetrics
+from google.ads.googleads.v18.common.types.keyword_plan_common import KeywordPlanAggregateMetricResults
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.keyword_plan_common import KeywordPlanHistoricalMetrics
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.keyword_plan_common import KeywordPlanAggregateMetricResults
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.keyword_plan_common import HistoricalMetricsOptions
+from google.ads.googleads.v18.common.types.keyword_plan_common import KeywordPlanAggregateMetrics
+from google.ads.googleads.v18.enums.types.keyword_plan_network import KeywordPlanNetworkEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.dates import DateRange
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import KeywordInfo
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import KeywordInfo
+from google.ads.googleads.v18.enums.types.keyword_plan_network import KeywordPlanNetworkEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import KeywordInfo
+from google.ads.googleads.v18.enums.types.keyword_match_type import KeywordMatchTypeEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.common.types import criteria, dates, keyword_plan_common
-from google.ads.googleads.v18.enums.types import keyword_match_type, keyword_plan_keyword_annotation, keyword_plan_network as gage_keyword_plan_network
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
+class AdGroupKeywordSuggestion(proto.Message):
+    keyword_text: str
+    suggested_keyword_text: str
+    suggested_match_type: KeywordMatchTypeEnum.KeywordMatchType
+    suggested_ad_group: str
+    suggested_campaign: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., keyword_text: str = ..., suggested_keyword_text: str = ..., suggested_match_type: KeywordMatchTypeEnum.KeywordMatchType = ..., suggested_ad_group: str = ..., suggested_campaign: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["keyword_text", "suggested_keyword_text", "suggested_match_type", "suggested_ad_group", "suggested_campaign"]) -> bool: ...
+class BiddableKeyword(proto.Message):
+    keyword: KeywordInfo
+    max_cpc_bid_micros: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., keyword: KeywordInfo = ..., max_cpc_bid_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["keyword", "max_cpc_bid_micros"]) -> bool: ...
+class CampaignToForecast(proto.Message):
+    class CampaignBiddingStrategy(proto.Message):
+        manual_cpc_bidding_strategy: ManualCpcBiddingStrategy
+        maximize_clicks_bidding_strategy: MaximizeClicksBiddingStrategy
+        maximize_conversions_bidding_strategy: MaximizeConversionsBiddingStrategy
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., manual_cpc_bidding_strategy: ManualCpcBiddingStrategy = ..., maximize_clicks_bidding_strategy: MaximizeClicksBiddingStrategy = ..., maximize_conversions_bidding_strategy: MaximizeConversionsBiddingStrategy = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["manual_cpc_bidding_strategy", "maximize_clicks_bidding_strategy", "maximize_conversions_bidding_strategy"]) -> bool: ...
+    language_constants: MutableSequence[str]
+    geo_modifiers: MutableSequence[CriterionBidModifier]
+    keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork
+    negative_keywords: MutableSequence[KeywordInfo]
+    bidding_strategy: CampaignToForecast.CampaignBiddingStrategy
+    conversion_rate: float
+    ad_groups: MutableSequence[ForecastAdGroup]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., language_constants: MutableSequence[str] = ..., geo_modifiers: MutableSequence[CriterionBidModifier] = ..., keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork = ..., negative_keywords: MutableSequence[KeywordInfo] = ..., bidding_strategy: CampaignToForecast.CampaignBiddingStrategy = ..., conversion_rate: float = ..., ad_groups: MutableSequence[ForecastAdGroup] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["language_constants", "geo_modifiers", "keyword_plan_network", "negative_keywords", "bidding_strategy", "conversion_rate", "ad_groups"]) -> bool: ...
+class CriterionBidModifier(proto.Message):
+    geo_target_constant: str
+    bid_modifier: float
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., geo_target_constant: str = ..., bid_modifier: float = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["geo_target_constant", "bid_modifier"]) -> bool: ...
+class ForecastAdGroup(proto.Message):
+    max_cpc_bid_micros: int
+    biddable_keywords: MutableSequence[BiddableKeyword]
+    negative_keywords: MutableSequence[KeywordInfo]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., max_cpc_bid_micros: int = ..., biddable_keywords: MutableSequence[BiddableKeyword] = ..., negative_keywords: MutableSequence[KeywordInfo] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["max_cpc_bid_micros", "biddable_keywords", "negative_keywords"]) -> bool: ...
+class GenerateAdGroupThemesRequest(proto.Message):
+    customer_id: str
+    keywords: MutableSequence[str]
+    ad_groups: MutableSequence[str]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., keywords: MutableSequence[str] = ..., ad_groups: MutableSequence[str] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "keywords", "ad_groups"]) -> bool: ...
+class GenerateAdGroupThemesResponse(proto.Message):
+    ad_group_keyword_suggestions: MutableSequence[AdGroupKeywordSuggestion]
+    unusable_ad_groups: MutableSequence[UnusableAdGroup]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_group_keyword_suggestions: MutableSequence[AdGroupKeywordSuggestion] = ..., unusable_ad_groups: MutableSequence[UnusableAdGroup] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["ad_group_keyword_suggestions", "unusable_ad_groups"]) -> bool: ...
+class GenerateKeywordForecastMetricsRequest(proto.Message):
+    customer_id: str
+    currency_code: str
+    forecast_period: DateRange
+    campaign: CampaignToForecast
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., currency_code: str = ..., forecast_period: DateRange = ..., campaign: CampaignToForecast = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "currency_code", "forecast_period", "campaign"]) -> bool: ...
+class GenerateKeywordForecastMetricsResponse(proto.Message):
+    campaign_forecast_metrics: KeywordForecastMetrics
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., campaign_forecast_metrics: KeywordForecastMetrics = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["campaign_forecast_metrics"]) -> bool: ...
+class GenerateKeywordHistoricalMetricsRequest(proto.Message):
+    customer_id: str
+    keywords: MutableSequence[str]
+    language: str
+    include_adult_keywords: bool
+    geo_target_constants: MutableSequence[str]
+    keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork
+    aggregate_metrics: KeywordPlanAggregateMetrics
+    historical_metrics_options: HistoricalMetricsOptions
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., keywords: MutableSequence[str] = ..., language: str = ..., include_adult_keywords: bool = ..., geo_target_constants: MutableSequence[str] = ..., keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork = ..., aggregate_metrics: KeywordPlanAggregateMetrics = ..., historical_metrics_options: HistoricalMetricsOptions = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "keywords", "language", "include_adult_keywords", "geo_target_constants", "keyword_plan_network", "aggregate_metrics", "historical_metrics_options"]) -> bool: ...
+class GenerateKeywordHistoricalMetricsResponse(proto.Message):
+    results: MutableSequence[GenerateKeywordHistoricalMetricsResult]
+    aggregate_metric_results: KeywordPlanAggregateMetricResults
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., results: MutableSequence[GenerateKeywordHistoricalMetricsResult] = ..., aggregate_metric_results: KeywordPlanAggregateMetricResults = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["results", "aggregate_metric_results"]) -> bool: ...
+class GenerateKeywordHistoricalMetricsResult(proto.Message):
+    text: str
+    close_variants: MutableSequence[str]
+    keyword_metrics: KeywordPlanHistoricalMetrics
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., text: str = ..., close_variants: MutableSequence[str] = ..., keyword_metrics: KeywordPlanHistoricalMetrics = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["text", "close_variants", "keyword_metrics"]) -> bool: ...
+class GenerateKeywordIdeaResponse(proto.Message):
+    results: MutableSequence[GenerateKeywordIdeaResult]
+    aggregate_metric_results: KeywordPlanAggregateMetricResults
+    next_page_token: str
+    total_size: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., results: MutableSequence[GenerateKeywordIdeaResult] = ..., aggregate_metric_results: KeywordPlanAggregateMetricResults = ..., next_page_token: str = ..., total_size: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["results", "aggregate_metric_results", "next_page_token", "total_size"]) -> bool: ...
+class GenerateKeywordIdeaResult(proto.Message):
+    text: str
+    keyword_idea_metrics: KeywordPlanHistoricalMetrics
+    keyword_annotations: KeywordAnnotations
+    close_variants: MutableSequence[str]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., text: str = ..., keyword_idea_metrics: KeywordPlanHistoricalMetrics = ..., keyword_annotations: KeywordAnnotations = ..., close_variants: MutableSequence[str] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["text", "keyword_idea_metrics", "keyword_annotations", "close_variants"]) -> bool: ...
 class GenerateKeywordIdeasRequest(proto.Message):
     customer_id: str
     language: str
@@ -13,127 +162,23 @@ class GenerateKeywordIdeasRequest(proto.Message):
     include_adult_keywords: bool
     page_token: str
     page_size: int
-    keyword_plan_network: gage_keyword_plan_network.KeywordPlanNetworkEnum.KeywordPlanNetwork
-    keyword_annotation: MutableSequence[keyword_plan_keyword_annotation.KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation]
-    aggregate_metrics: keyword_plan_common.KeywordPlanAggregateMetrics
-    historical_metrics_options: keyword_plan_common.HistoricalMetricsOptions
+    keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork
+    keyword_annotation: MutableSequence[KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation]
+    aggregate_metrics: KeywordPlanAggregateMetrics
+    historical_metrics_options: HistoricalMetricsOptions
     keyword_and_url_seed: KeywordAndUrlSeed
     keyword_seed: KeywordSeed
     url_seed: UrlSeed
     site_seed: SiteSeed
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., language: str = ..., geo_target_constants: MutableSequence[str] = ..., include_adult_keywords: bool = ..., page_token: str = ..., page_size: int = ..., keyword_plan_network: KeywordPlanNetworkEnum.KeywordPlanNetwork = ..., keyword_annotation: MutableSequence[KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation] = ..., aggregate_metrics: KeywordPlanAggregateMetrics = ..., historical_metrics_options: HistoricalMetricsOptions = ..., keyword_and_url_seed: KeywordAndUrlSeed = ..., keyword_seed: KeywordSeed = ..., url_seed: UrlSeed = ..., site_seed: SiteSeed = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "language", "geo_target_constants", "include_adult_keywords", "page_token", "page_size", "keyword_plan_network", "keyword_annotation", "aggregate_metrics", "historical_metrics_options", "keyword_and_url_seed", "keyword_seed", "url_seed", "site_seed"]) -> bool: ...
 class KeywordAndUrlSeed(proto.Message):
     url: str
     keywords: MutableSequence[str]
-
-class KeywordSeed(proto.Message):
-    keywords: MutableSequence[str]
-
-class SiteSeed(proto.Message):
-    site: str
-
-class UrlSeed(proto.Message):
-    url: str
-
-class GenerateKeywordIdeaResponse(proto.Message):
-    @property
-    def raw_page(self): ...
-    results: MutableSequence['GenerateKeywordIdeaResult']
-    aggregate_metric_results: keyword_plan_common.KeywordPlanAggregateMetricResults
-    next_page_token: str
-    total_size: int
-
-class GenerateKeywordIdeaResult(proto.Message):
-    text: str
-    keyword_idea_metrics: keyword_plan_common.KeywordPlanHistoricalMetrics
-    keyword_annotations: keyword_plan_common.KeywordAnnotations
-    close_variants: MutableSequence[str]
-
-class GenerateKeywordHistoricalMetricsRequest(proto.Message):
-    customer_id: str
-    keywords: MutableSequence[str]
-    language: str
-    include_adult_keywords: bool
-    geo_target_constants: MutableSequence[str]
-    keyword_plan_network: gage_keyword_plan_network.KeywordPlanNetworkEnum.KeywordPlanNetwork
-    aggregate_metrics: keyword_plan_common.KeywordPlanAggregateMetrics
-    historical_metrics_options: keyword_plan_common.HistoricalMetricsOptions
-
-class GenerateKeywordHistoricalMetricsResponse(proto.Message):
-    results: MutableSequence['GenerateKeywordHistoricalMetricsResult']
-    aggregate_metric_results: keyword_plan_common.KeywordPlanAggregateMetricResults
-
-class GenerateKeywordHistoricalMetricsResult(proto.Message):
-    text: str
-    close_variants: MutableSequence[str]
-    keyword_metrics: keyword_plan_common.KeywordPlanHistoricalMetrics
-
-class GenerateAdGroupThemesRequest(proto.Message):
-    customer_id: str
-    keywords: MutableSequence[str]
-    ad_groups: MutableSequence[str]
-
-class GenerateAdGroupThemesResponse(proto.Message):
-    ad_group_keyword_suggestions: MutableSequence['AdGroupKeywordSuggestion']
-    unusable_ad_groups: MutableSequence['UnusableAdGroup']
-
-class AdGroupKeywordSuggestion(proto.Message):
-    keyword_text: str
-    suggested_keyword_text: str
-    suggested_match_type: keyword_match_type.KeywordMatchTypeEnum.KeywordMatchType
-    suggested_ad_group: str
-    suggested_campaign: str
-
-class UnusableAdGroup(proto.Message):
-    ad_group: str
-    campaign: str
-
-class GenerateKeywordForecastMetricsRequest(proto.Message):
-    customer_id: str
-    currency_code: str
-    forecast_period: dates.DateRange
-    campaign: CampaignToForecast
-
-class CampaignToForecast(proto.Message):
-    class CampaignBiddingStrategy(proto.Message):
-        manual_cpc_bidding_strategy: ManualCpcBiddingStrategy
-        maximize_clicks_bidding_strategy: MaximizeClicksBiddingStrategy
-        maximize_conversions_bidding_strategy: MaximizeConversionsBiddingStrategy
-    language_constants: MutableSequence[str]
-    geo_modifiers: MutableSequence['CriterionBidModifier']
-    keyword_plan_network: gage_keyword_plan_network.KeywordPlanNetworkEnum.KeywordPlanNetwork
-    negative_keywords: MutableSequence[criteria.KeywordInfo]
-    bidding_strategy: CampaignBiddingStrategy
-    conversion_rate: float
-    ad_groups: MutableSequence['ForecastAdGroup']
-
-class ForecastAdGroup(proto.Message):
-    max_cpc_bid_micros: int
-    biddable_keywords: MutableSequence['BiddableKeyword']
-    negative_keywords: MutableSequence[criteria.KeywordInfo]
-
-class BiddableKeyword(proto.Message):
-    keyword: criteria.KeywordInfo
-    max_cpc_bid_micros: int
-
-class CriterionBidModifier(proto.Message):
-    geo_target_constant: str
-    bid_modifier: float
-
-class ManualCpcBiddingStrategy(proto.Message):
-    daily_budget_micros: int
-    max_cpc_bid_micros: int
-
-class MaximizeClicksBiddingStrategy(proto.Message):
-    daily_target_spend_micros: int
-    max_cpc_bid_ceiling_micros: int
-
-class MaximizeConversionsBiddingStrategy(proto.Message):
-    daily_target_spend_micros: int
-
-class GenerateKeywordForecastMetricsResponse(proto.Message):
-    campaign_forecast_metrics: KeywordForecastMetrics
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., url: str = ..., keywords: MutableSequence[str] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["url", "keywords"]) -> bool: ...
 class KeywordForecastMetrics(proto.Message):
     impressions: float
     click_through_rate: float
@@ -143,3 +188,44 @@ class KeywordForecastMetrics(proto.Message):
     conversions: float
     conversion_rate: float
     average_cpa_micros: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., impressions: float = ..., click_through_rate: float = ..., average_cpc_micros: int = ..., clicks: float = ..., cost_micros: int = ..., conversions: float = ..., conversion_rate: float = ..., average_cpa_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["impressions", "click_through_rate", "average_cpc_micros", "clicks", "cost_micros", "conversions", "conversion_rate", "average_cpa_micros"]) -> bool: ...
+class KeywordSeed(proto.Message):
+    keywords: MutableSequence[str]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., keywords: MutableSequence[str] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["keywords"]) -> bool: ...
+class ManualCpcBiddingStrategy(proto.Message):
+    daily_budget_micros: int
+    max_cpc_bid_micros: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., daily_budget_micros: int = ..., max_cpc_bid_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["daily_budget_micros", "max_cpc_bid_micros"]) -> bool: ...
+class MaximizeClicksBiddingStrategy(proto.Message):
+    daily_target_spend_micros: int
+    max_cpc_bid_ceiling_micros: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., daily_target_spend_micros: int = ..., max_cpc_bid_ceiling_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["daily_target_spend_micros", "max_cpc_bid_ceiling_micros"]) -> bool: ...
+class MaximizeConversionsBiddingStrategy(proto.Message):
+    daily_target_spend_micros: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., daily_target_spend_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["daily_target_spend_micros"]) -> bool: ...
+class SiteSeed(proto.Message):
+    site: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., site: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["site"]) -> bool: ...
+class UnusableAdGroup(proto.Message):
+    ad_group: str
+    campaign: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_group: str = ..., campaign: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["ad_group", "campaign"]) -> bool: ...
+class UrlSeed(proto.Message):
+    url: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., url: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["url"]) -> bool: ...

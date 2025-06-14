@@ -1,11 +1,15 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AdGroupBidModifierErrorEnum(proto.Message):
     class AdGroupBidModifierError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CRITERION_ID_NOT_SUPPORTED: int
-        CANNOT_OVERRIDE_OPTED_OUT_CAMPAIGN_CRITERION_BID_MODIFIER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CRITERION_ID_NOT_SUPPORTED = 2
+        CANNOT_OVERRIDE_OPTED_OUT_CAMPAIGN_CRITERION_BID_MODIFIER = 3
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

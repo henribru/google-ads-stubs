@@ -1,15 +1,19 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class LocationExtensionTargetingCriterionFieldEnum(proto.Message):
     class LocationExtensionTargetingCriterionField(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ADDRESS_LINE_1: int
-        ADDRESS_LINE_2: int
-        CITY: int
-        PROVINCE: int
-        POSTAL_CODE: int
-        COUNTRY_CODE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ADDRESS_LINE_1 = 2
+        ADDRESS_LINE_2 = 3
+        CITY = 4
+        PROVINCE = 5
+        POSTAL_CODE = 6
+        COUNTRY_CODE = 7
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

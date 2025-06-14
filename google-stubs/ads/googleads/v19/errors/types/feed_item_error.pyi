@@ -1,19 +1,23 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class FeedItemErrorEnum(proto.Message):
     class FeedItemError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CANNOT_CONVERT_ATTRIBUTE_VALUE_FROM_STRING: int
-        CANNOT_OPERATE_ON_REMOVED_FEED_ITEM: int
-        DATE_TIME_MUST_BE_IN_ACCOUNT_TIME_ZONE: int
-        KEY_ATTRIBUTES_NOT_FOUND: int
-        INVALID_URL: int
-        MISSING_KEY_ATTRIBUTES: int
-        KEY_ATTRIBUTES_NOT_UNIQUE: int
-        CANNOT_MODIFY_KEY_ATTRIBUTE_VALUE: int
-        SIZE_TOO_LARGE_FOR_MULTI_VALUE_ATTRIBUTE: int
-        LEGACY_FEED_TYPE_READ_ONLY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CANNOT_CONVERT_ATTRIBUTE_VALUE_FROM_STRING = 2
+        CANNOT_OPERATE_ON_REMOVED_FEED_ITEM = 3
+        DATE_TIME_MUST_BE_IN_ACCOUNT_TIME_ZONE = 4
+        KEY_ATTRIBUTES_NOT_FOUND = 5
+        INVALID_URL = 6
+        MISSING_KEY_ATTRIBUTES = 7
+        KEY_ATTRIBUTES_NOT_UNIQUE = 8
+        CANNOT_MODIFY_KEY_ATTRIBUTE_VALUE = 9
+        SIZE_TOO_LARGE_FOR_MULTI_VALUE_ATTRIBUTE = 10
+        LEGACY_FEED_TYPE_READ_ONLY = 11
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

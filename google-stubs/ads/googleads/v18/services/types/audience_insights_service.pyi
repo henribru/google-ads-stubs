@@ -1,129 +1,121 @@
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import ParentalStatusInfo
+from google.ads.googleads.v18.common.types.criteria import GenderInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import AgeRangeInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from google.ads.googleads.v18.common.types.dates import DateRange
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.audience_insights_dimension import AudienceInsightsDimensionEnum
+from google.ads.googleads.v18.enums.types.audience_insights_marketing_objective import AudienceInsightsMarketingObjectiveEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import IncomeRangeInfo
+from google.ads.googleads.v18.common.types.criteria import ParentalStatusInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import AgeRangeInfo
+from google.ads.googleads.v18.common.types.criteria import GenderInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.audience_insights_dimension import AudienceInsightsDimensionEnum
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.audience_insights_dimension import AudienceInsightsDimensionEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from google.ads.googleads.v18.common.types.criteria import YouTubeChannelInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.audience_insights_dimension import AudienceInsightsDimensionEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import UserInterestInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import AgeRangeInfo
+from google.ads.googleads.v18.common.types.criteria import GenderInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from google.ads.googleads.v18.enums.types.audience_insights_dimension import AudienceInsightsDimensionEnum
+from google.ads.googleads.v18.common.types.criteria import YouTubeChannelInfo
+from google.ads.googleads.v18.common.types.criteria import IncomeRangeInfo
+from google.ads.googleads.v18.common.types.criteria import ParentalStatusInfo
+from google.ads.googleads.v18.common.types.criteria import UserInterestInfo
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from google.ads.googleads.v18.common.types.criteria import GenderInfo
+from google.ads.googleads.v18.common.types.criteria import AgeRangeInfo
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.audience_insights_dimension import AudienceInsightsDimensionEnum
+from collections.abc import MutableSequence
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.common.types import criteria, dates
-from google.ads.googleads.v18.enums.types import audience_insights_dimension, audience_insights_marketing_objective
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class GenerateInsightsFinderReportRequest(proto.Message):
-    customer_id: str
-    baseline_audience: BasicInsightsAudience
-    specific_audience: BasicInsightsAudience
-    customer_insights_group: str
-
-class GenerateInsightsFinderReportResponse(proto.Message):
-    saved_report_url: str
-
-class GenerateAudienceCompositionInsightsRequest(proto.Message):
-    customer_id: str
-    audience: InsightsAudience
-    baseline_audience: InsightsAudience
-    data_month: str
-    dimensions: MutableSequence[audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension]
-    customer_insights_group: str
-
-class GenerateAudienceCompositionInsightsResponse(proto.Message):
-    sections: MutableSequence['AudienceCompositionSection']
-
-class GenerateSuggestedTargetingInsightsRequest(proto.Message):
-    customer_id: str
-    customer_insights_group: str
-    audience_definition: InsightsAudienceDefinition
-    audience_description: InsightsAudienceDescription
-
-class GenerateSuggestedTargetingInsightsResponse(proto.Message):
-    suggestions: MutableSequence['TargetingSuggestionMetrics']
-
-class TargetingSuggestionMetrics(proto.Message):
-    locations: MutableSequence['AudienceInsightsAttributeMetadata']
-    age_ranges: MutableSequence[criteria.AgeRangeInfo]
-    gender: criteria.GenderInfo
-    parental_status: criteria.ParentalStatusInfo
-    user_interests: MutableSequence['AudienceInsightsAttributeMetadata']
-    coverage: float
-    index: float
-    potential_youtube_reach: int
-
-class ListAudienceInsightsAttributesRequest(proto.Message):
-    customer_id: str
-    dimensions: MutableSequence[audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension]
-    query_text: str
-    customer_insights_group: str
-    location_country_filters: MutableSequence[criteria.LocationInfo]
-    youtube_reach_location: criteria.LocationInfo
-
-class ListAudienceInsightsAttributesResponse(proto.Message):
-    attributes: MutableSequence['AudienceInsightsAttributeMetadata']
-
-class ListInsightsEligibleDatesRequest(proto.Message): ...
-
-class ListInsightsEligibleDatesResponse(proto.Message):
-    data_months: MutableSequence[str]
-    last_thirty_days: dates.DateRange
-
-class GenerateAudienceOverlapInsightsRequest(proto.Message):
-    customer_id: str
-    country_location: criteria.LocationInfo
-    primary_attribute: AudienceInsightsAttribute
-    dimensions: MutableSequence[audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension]
-    customer_insights_group: str
-
-class GenerateAudienceOverlapInsightsResponse(proto.Message):
-    primary_attribute_metadata: AudienceInsightsAttributeMetadata
-    dimension_results: MutableSequence['DimensionOverlapResult']
-
-class DimensionOverlapResult(proto.Message):
-    dimension: audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
-    items: MutableSequence['AudienceOverlapItem']
-
-class AudienceOverlapItem(proto.Message):
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
+class AudienceCompositionAttribute(proto.Message):
     attribute_metadata: AudienceInsightsAttributeMetadata
-    potential_youtube_reach_intersection: int
-
-class GenerateTargetingSuggestionMetricsRequest(proto.Message):
-    customer_id: str
-    audiences: MutableSequence['BasicInsightsAudience']
-    customer_insights_group: str
-
-class GenerateTargetingSuggestionMetricsResponse(proto.Message):
-    suggestions: MutableSequence['TargetingSuggestionMetrics']
-
+    metrics: AudienceCompositionMetrics
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., attribute_metadata: AudienceInsightsAttributeMetadata = ..., metrics: AudienceCompositionMetrics = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["attribute_metadata", "metrics"]) -> bool: ...
+class AudienceCompositionAttributeCluster(proto.Message):
+    cluster_display_name: str
+    cluster_metrics: AudienceCompositionMetrics
+    attributes: MutableSequence[AudienceCompositionAttribute]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., cluster_display_name: str = ..., cluster_metrics: AudienceCompositionMetrics = ..., attributes: MutableSequence[AudienceCompositionAttribute] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["cluster_display_name", "cluster_metrics", "attributes"]) -> bool: ...
+class AudienceCompositionMetrics(proto.Message):
+    baseline_audience_share: float
+    audience_share: float
+    index: float
+    score: float
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., baseline_audience_share: float = ..., audience_share: float = ..., index: float = ..., score: float = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["baseline_audience_share", "audience_share", "index", "score"]) -> bool: ...
+class AudienceCompositionSection(proto.Message):
+    dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension
+    top_attributes: MutableSequence[AudienceCompositionAttribute]
+    clustered_attributes: MutableSequence[AudienceCompositionAttributeCluster]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension = ..., top_attributes: MutableSequence[AudienceCompositionAttribute] = ..., clustered_attributes: MutableSequence[AudienceCompositionAttributeCluster] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["dimension", "top_attributes", "clustered_attributes"]) -> bool: ...
 class AudienceInsightsAttribute(proto.Message):
-    age_range: criteria.AgeRangeInfo
-    gender: criteria.GenderInfo
-    location: criteria.LocationInfo
-    user_interest: criteria.UserInterestInfo
+    age_range: AgeRangeInfo
+    gender: GenderInfo
+    location: LocationInfo
+    user_interest: UserInterestInfo
     entity: AudienceInsightsEntity
     category: AudienceInsightsCategory
     dynamic_lineup: AudienceInsightsDynamicLineup
-    parental_status: criteria.ParentalStatusInfo
-    income_range: criteria.IncomeRangeInfo
-    youtube_channel: criteria.YouTubeChannelInfo
-
-class AudienceInsightsTopic(proto.Message):
-    entity: AudienceInsightsEntity
-    category: AudienceInsightsCategory
-
-class AudienceInsightsEntity(proto.Message):
-    knowledge_graph_machine_id: str
-
-class AudienceInsightsCategory(proto.Message):
-    category_id: str
-
-class AudienceInsightsDynamicLineup(proto.Message):
-    dynamic_lineup_id: str
-
-class BasicInsightsAudience(proto.Message):
-    country_location: MutableSequence[criteria.LocationInfo]
-    sub_country_locations: MutableSequence[criteria.LocationInfo]
-    gender: criteria.GenderInfo
-    age_ranges: MutableSequence[criteria.AgeRangeInfo]
-    user_interests: MutableSequence[criteria.UserInterestInfo]
-    topics: MutableSequence['AudienceInsightsTopic']
-
+    parental_status: ParentalStatusInfo
+    income_range: IncomeRangeInfo
+    youtube_channel: YouTubeChannelInfo
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., age_range: AgeRangeInfo = ..., gender: GenderInfo = ..., location: LocationInfo = ..., user_interest: UserInterestInfo = ..., entity: AudienceInsightsEntity = ..., category: AudienceInsightsCategory = ..., dynamic_lineup: AudienceInsightsDynamicLineup = ..., parental_status: ParentalStatusInfo = ..., income_range: IncomeRangeInfo = ..., youtube_channel: YouTubeChannelInfo = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["age_range", "gender", "location", "user_interest", "entity", "category", "dynamic_lineup", "parental_status", "income_range", "youtube_channel"]) -> bool: ...
 class AudienceInsightsAttributeMetadata(proto.Message):
-    dimension: audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+    dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension
     attribute: AudienceInsightsAttribute
     display_name: str
     display_info: str
@@ -132,66 +124,216 @@ class AudienceInsightsAttributeMetadata(proto.Message):
     dynamic_attribute_metadata: DynamicLineupAttributeMetadata
     location_attribute_metadata: LocationAttributeMetadata
     user_interest_attribute_metadata: UserInterestAttributeMetadata
-
-class YouTubeChannelAttributeMetadata(proto.Message):
-    subscriber_count: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension = ..., attribute: AudienceInsightsAttribute = ..., display_name: str = ..., display_info: str = ..., potential_youtube_reach: int = ..., youtube_channel_metadata: YouTubeChannelAttributeMetadata = ..., dynamic_attribute_metadata: DynamicLineupAttributeMetadata = ..., location_attribute_metadata: LocationAttributeMetadata = ..., user_interest_attribute_metadata: UserInterestAttributeMetadata = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["dimension", "attribute", "display_name", "display_info", "potential_youtube_reach", "youtube_channel_metadata", "dynamic_attribute_metadata", "location_attribute_metadata", "user_interest_attribute_metadata"]) -> bool: ...
+class AudienceInsightsCategory(proto.Message):
+    category_id: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., category_id: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["category_id"]) -> bool: ...
+class AudienceInsightsDynamicLineup(proto.Message):
+    dynamic_lineup_id: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., dynamic_lineup_id: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["dynamic_lineup_id"]) -> bool: ...
+class AudienceInsightsEntity(proto.Message):
+    knowledge_graph_machine_id: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., knowledge_graph_machine_id: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["knowledge_graph_machine_id"]) -> bool: ...
+class AudienceInsightsTopic(proto.Message):
+    entity: AudienceInsightsEntity
+    category: AudienceInsightsCategory
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., entity: AudienceInsightsEntity = ..., category: AudienceInsightsCategory = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["entity", "category"]) -> bool: ...
+class AudienceOverlapItem(proto.Message):
+    attribute_metadata: AudienceInsightsAttributeMetadata
+    potential_youtube_reach_intersection: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., attribute_metadata: AudienceInsightsAttributeMetadata = ..., potential_youtube_reach_intersection: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["attribute_metadata", "potential_youtube_reach_intersection"]) -> bool: ...
+class BasicInsightsAudience(proto.Message):
+    country_location: MutableSequence[LocationInfo]
+    sub_country_locations: MutableSequence[LocationInfo]
+    gender: GenderInfo
+    age_ranges: MutableSequence[AgeRangeInfo]
+    user_interests: MutableSequence[UserInterestInfo]
+    topics: MutableSequence[AudienceInsightsTopic]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., country_location: MutableSequence[LocationInfo] = ..., sub_country_locations: MutableSequence[LocationInfo] = ..., gender: GenderInfo = ..., age_ranges: MutableSequence[AgeRangeInfo] = ..., user_interests: MutableSequence[UserInterestInfo] = ..., topics: MutableSequence[AudienceInsightsTopic] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["country_location", "sub_country_locations", "gender", "age_ranges", "user_interests", "topics"]) -> bool: ...
+class DimensionOverlapResult(proto.Message):
+    dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension
+    items: MutableSequence[AudienceOverlapItem]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension = ..., items: MutableSequence[AudienceOverlapItem] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["dimension", "items"]) -> bool: ...
 class DynamicLineupAttributeMetadata(proto.Message):
     class SampleChannel(proto.Message):
-        youtube_channel: criteria.YouTubeChannelInfo
+        youtube_channel: YouTubeChannelInfo
         display_name: str
         youtube_channel_metadata: YouTubeChannelAttributeMetadata
-    inventory_country: criteria.LocationInfo
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., youtube_channel: YouTubeChannelInfo = ..., display_name: str = ..., youtube_channel_metadata: YouTubeChannelAttributeMetadata = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["youtube_channel", "display_name", "youtube_channel_metadata"]) -> bool: ...
+    inventory_country: LocationInfo
     median_monthly_inventory: int
     channel_count_lower_bound: int
     channel_count_upper_bound: int
-    sample_channels: MutableSequence[SampleChannel]
-
-class LocationAttributeMetadata(proto.Message):
-    country_location: criteria.LocationInfo
-
-class UserInterestAttributeMetadata(proto.Message):
-    user_interest_description: str
-
+    sample_channels: MutableSequence[DynamicLineupAttributeMetadata.SampleChannel]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., inventory_country: LocationInfo = ..., median_monthly_inventory: int = ..., channel_count_lower_bound: int = ..., channel_count_upper_bound: int = ..., sample_channels: MutableSequence[DynamicLineupAttributeMetadata.SampleChannel] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["inventory_country", "median_monthly_inventory", "channel_count_lower_bound", "channel_count_upper_bound", "sample_channels"]) -> bool: ...
+class GenerateAudienceCompositionInsightsRequest(proto.Message):
+    customer_id: str
+    audience: InsightsAudience
+    baseline_audience: InsightsAudience
+    data_month: str
+    dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
+    customer_insights_group: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., audience: InsightsAudience = ..., baseline_audience: InsightsAudience = ..., data_month: str = ..., dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension] = ..., customer_insights_group: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "audience", "baseline_audience", "data_month", "dimensions", "customer_insights_group"]) -> bool: ...
+class GenerateAudienceCompositionInsightsResponse(proto.Message):
+    sections: MutableSequence[AudienceCompositionSection]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., sections: MutableSequence[AudienceCompositionSection] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["sections"]) -> bool: ...
+class GenerateAudienceOverlapInsightsRequest(proto.Message):
+    customer_id: str
+    country_location: LocationInfo
+    primary_attribute: AudienceInsightsAttribute
+    dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
+    customer_insights_group: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., country_location: LocationInfo = ..., primary_attribute: AudienceInsightsAttribute = ..., dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension] = ..., customer_insights_group: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "country_location", "primary_attribute", "dimensions", "customer_insights_group"]) -> bool: ...
+class GenerateAudienceOverlapInsightsResponse(proto.Message):
+    primary_attribute_metadata: AudienceInsightsAttributeMetadata
+    dimension_results: MutableSequence[DimensionOverlapResult]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., primary_attribute_metadata: AudienceInsightsAttributeMetadata = ..., dimension_results: MutableSequence[DimensionOverlapResult] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["primary_attribute_metadata", "dimension_results"]) -> bool: ...
+class GenerateInsightsFinderReportRequest(proto.Message):
+    customer_id: str
+    baseline_audience: BasicInsightsAudience
+    specific_audience: BasicInsightsAudience
+    customer_insights_group: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., baseline_audience: BasicInsightsAudience = ..., specific_audience: BasicInsightsAudience = ..., customer_insights_group: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "baseline_audience", "specific_audience", "customer_insights_group"]) -> bool: ...
+class GenerateInsightsFinderReportResponse(proto.Message):
+    saved_report_url: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., saved_report_url: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["saved_report_url"]) -> bool: ...
+class GenerateSuggestedTargetingInsightsRequest(proto.Message):
+    customer_id: str
+    customer_insights_group: str
+    audience_definition: InsightsAudienceDefinition
+    audience_description: InsightsAudienceDescription
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., customer_insights_group: str = ..., audience_definition: InsightsAudienceDefinition = ..., audience_description: InsightsAudienceDescription = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "customer_insights_group", "audience_definition", "audience_description"]) -> bool: ...
+class GenerateSuggestedTargetingInsightsResponse(proto.Message):
+    suggestions: MutableSequence[TargetingSuggestionMetrics]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., suggestions: MutableSequence[TargetingSuggestionMetrics] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["suggestions"]) -> bool: ...
+class GenerateTargetingSuggestionMetricsRequest(proto.Message):
+    customer_id: str
+    audiences: MutableSequence[BasicInsightsAudience]
+    customer_insights_group: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., audiences: MutableSequence[BasicInsightsAudience] = ..., customer_insights_group: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "audiences", "customer_insights_group"]) -> bool: ...
+class GenerateTargetingSuggestionMetricsResponse(proto.Message):
+    suggestions: MutableSequence[TargetingSuggestionMetrics]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., suggestions: MutableSequence[TargetingSuggestionMetrics] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["suggestions"]) -> bool: ...
+class InsightsAudience(proto.Message):
+    country_locations: MutableSequence[LocationInfo]
+    sub_country_locations: MutableSequence[LocationInfo]
+    gender: GenderInfo
+    age_ranges: MutableSequence[AgeRangeInfo]
+    parental_status: ParentalStatusInfo
+    income_ranges: MutableSequence[IncomeRangeInfo]
+    dynamic_lineups: MutableSequence[AudienceInsightsDynamicLineup]
+    topic_audience_combinations: MutableSequence[InsightsAudienceAttributeGroup]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., country_locations: MutableSequence[LocationInfo] = ..., sub_country_locations: MutableSequence[LocationInfo] = ..., gender: GenderInfo = ..., age_ranges: MutableSequence[AgeRangeInfo] = ..., parental_status: ParentalStatusInfo = ..., income_ranges: MutableSequence[IncomeRangeInfo] = ..., dynamic_lineups: MutableSequence[AudienceInsightsDynamicLineup] = ..., topic_audience_combinations: MutableSequence[InsightsAudienceAttributeGroup] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["country_locations", "sub_country_locations", "gender", "age_ranges", "parental_status", "income_ranges", "dynamic_lineups", "topic_audience_combinations"]) -> bool: ...
+class InsightsAudienceAttributeGroup(proto.Message):
+    attributes: MutableSequence[AudienceInsightsAttribute]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., attributes: MutableSequence[AudienceInsightsAttribute] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["attributes"]) -> bool: ...
 class InsightsAudienceDefinition(proto.Message):
     audience: InsightsAudience
     baseline_audience: InsightsAudience
     data_month: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., audience: InsightsAudience = ..., baseline_audience: InsightsAudience = ..., data_month: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["audience", "baseline_audience", "data_month"]) -> bool: ...
 class InsightsAudienceDescription(proto.Message):
-    country_locations: MutableSequence[criteria.LocationInfo]
+    country_locations: MutableSequence[LocationInfo]
     audience_description: str
-    marketing_objective: audience_insights_marketing_objective.AudienceInsightsMarketingObjectiveEnum.AudienceInsightsMarketingObjective
-
-class InsightsAudience(proto.Message):
-    country_locations: MutableSequence[criteria.LocationInfo]
-    sub_country_locations: MutableSequence[criteria.LocationInfo]
-    gender: criteria.GenderInfo
-    age_ranges: MutableSequence[criteria.AgeRangeInfo]
-    parental_status: criteria.ParentalStatusInfo
-    income_ranges: MutableSequence[criteria.IncomeRangeInfo]
-    dynamic_lineups: MutableSequence['AudienceInsightsDynamicLineup']
-    topic_audience_combinations: MutableSequence['InsightsAudienceAttributeGroup']
-
-class InsightsAudienceAttributeGroup(proto.Message):
-    attributes: MutableSequence['AudienceInsightsAttribute']
-
-class AudienceCompositionSection(proto.Message):
-    dimension: audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
-    top_attributes: MutableSequence['AudienceCompositionAttribute']
-    clustered_attributes: MutableSequence['AudienceCompositionAttributeCluster']
-
-class AudienceCompositionAttributeCluster(proto.Message):
-    cluster_display_name: str
-    cluster_metrics: AudienceCompositionMetrics
-    attributes: MutableSequence['AudienceCompositionAttribute']
-
-class AudienceCompositionMetrics(proto.Message):
-    baseline_audience_share: float
-    audience_share: float
+    marketing_objective: AudienceInsightsMarketingObjectiveEnum.AudienceInsightsMarketingObjective
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., country_locations: MutableSequence[LocationInfo] = ..., audience_description: str = ..., marketing_objective: AudienceInsightsMarketingObjectiveEnum.AudienceInsightsMarketingObjective = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["country_locations", "audience_description", "marketing_objective"]) -> bool: ...
+class ListAudienceInsightsAttributesRequest(proto.Message):
+    customer_id: str
+    dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension]
+    query_text: str
+    customer_insights_group: str
+    location_country_filters: MutableSequence[LocationInfo]
+    youtube_reach_location: LocationInfo
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., dimensions: MutableSequence[AudienceInsightsDimensionEnum.AudienceInsightsDimension] = ..., query_text: str = ..., customer_insights_group: str = ..., location_country_filters: MutableSequence[LocationInfo] = ..., youtube_reach_location: LocationInfo = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "dimensions", "query_text", "customer_insights_group", "location_country_filters", "youtube_reach_location"]) -> bool: ...
+class ListAudienceInsightsAttributesResponse(proto.Message):
+    attributes: MutableSequence[AudienceInsightsAttributeMetadata]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., attributes: MutableSequence[AudienceInsightsAttributeMetadata] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["attributes"]) -> bool: ...
+class ListInsightsEligibleDatesRequest(proto.Message):
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...
+class ListInsightsEligibleDatesResponse(proto.Message):
+    data_months: MutableSequence[str]
+    last_thirty_days: DateRange
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., data_months: MutableSequence[str] = ..., last_thirty_days: DateRange = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["data_months", "last_thirty_days"]) -> bool: ...
+class LocationAttributeMetadata(proto.Message):
+    country_location: LocationInfo
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., country_location: LocationInfo = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["country_location"]) -> bool: ...
+class TargetingSuggestionMetrics(proto.Message):
+    locations: MutableSequence[AudienceInsightsAttributeMetadata]
+    age_ranges: MutableSequence[AgeRangeInfo]
+    gender: GenderInfo
+    parental_status: ParentalStatusInfo
+    user_interests: MutableSequence[AudienceInsightsAttributeMetadata]
+    coverage: float
     index: float
-    score: float
-
-class AudienceCompositionAttribute(proto.Message):
-    attribute_metadata: AudienceInsightsAttributeMetadata
-    metrics: AudienceCompositionMetrics
+    potential_youtube_reach: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., locations: MutableSequence[AudienceInsightsAttributeMetadata] = ..., age_ranges: MutableSequence[AgeRangeInfo] = ..., gender: GenderInfo = ..., parental_status: ParentalStatusInfo = ..., user_interests: MutableSequence[AudienceInsightsAttributeMetadata] = ..., coverage: float = ..., index: float = ..., potential_youtube_reach: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["locations", "age_ranges", "gender", "parental_status", "user_interests", "coverage", "index", "potential_youtube_reach"]) -> bool: ...
+class UserInterestAttributeMetadata(proto.Message):
+    user_interest_description: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., user_interest_description: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["user_interest_description"]) -> bool: ...
+class YouTubeChannelAttributeMetadata(proto.Message):
+    subscriber_count: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., subscriber_count: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["subscriber_count"]) -> bool: ...

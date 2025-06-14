@@ -1,16 +1,20 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class IncomeRangeTypeEnum(proto.Message):
     class IncomeRangeType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INCOME_RANGE_0_50: int
-        INCOME_RANGE_50_60: int
-        INCOME_RANGE_60_70: int
-        INCOME_RANGE_70_80: int
-        INCOME_RANGE_80_90: int
-        INCOME_RANGE_90_UP: int
-        INCOME_RANGE_UNDETERMINED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INCOME_RANGE_0_50 = 510001
+        INCOME_RANGE_50_60 = 510002
+        INCOME_RANGE_60_70 = 510003
+        INCOME_RANGE_70_80 = 510004
+        INCOME_RANGE_80_90 = 510005
+        INCOME_RANGE_90_UP = 510006
+        INCOME_RANGE_UNDETERMINED = 510000
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

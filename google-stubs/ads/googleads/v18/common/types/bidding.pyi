@@ -1,67 +1,110 @@
+from google.ads.googleads.v18.enums.types.target_impression_share_location import TargetImpressionShareLocationEnum
+from google.ads.googleads.v18.enums.types.target_frequency_time_unit import TargetFrequencyTimeUnitEnum
+from google.ads.googleads.v18.enums.types.fixed_cpm_target_frequency_time_unit import FixedCpmTargetFrequencyTimeUnitEnum
+from google.ads.googleads.v18.enums.types.fixed_cpm_goal import FixedCpmGoalEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import fixed_cpm_goal, fixed_cpm_target_frequency_time_unit, target_frequency_time_unit, target_impression_share_location
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class Commission(proto.Message):
     commission_rate_micros: int
-
-class EnhancedCpc(proto.Message): ...
-class ManualCpa(proto.Message): ...
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., commission_rate_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["commission_rate_micros"]) -> bool: ...
+class EnhancedCpc(proto.Message):
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...
+class FixedCpm(proto.Message):
+    goal: FixedCpmGoalEnum.FixedCpmGoal
+    target_frequency_info: FixedCpmTargetFrequencyGoalInfo
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., goal: FixedCpmGoalEnum.FixedCpmGoal = ..., target_frequency_info: FixedCpmTargetFrequencyGoalInfo = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["goal", "target_frequency_info"]) -> bool: ...
+class FixedCpmTargetFrequencyGoalInfo(proto.Message):
+    target_count: int
+    time_unit: FixedCpmTargetFrequencyTimeUnitEnum.FixedCpmTargetFrequencyTimeUnit
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_count: int = ..., time_unit: FixedCpmTargetFrequencyTimeUnitEnum.FixedCpmTargetFrequencyTimeUnit = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["target_count", "time_unit"]) -> bool: ...
+class ManualCpa(proto.Message):
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...
 class ManualCpc(proto.Message):
     enhanced_cpc_enabled: bool
-
-class ManualCpm(proto.Message): ...
-class ManualCpv(proto.Message): ...
-
-class MaximizeConversions(proto.Message):
-    cpc_bid_ceiling_micros: int
-    cpc_bid_floor_micros: int
-    target_cpa_micros: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., enhanced_cpc_enabled: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["enhanced_cpc_enabled"]) -> bool: ...
+class ManualCpm(proto.Message):
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...
+class ManualCpv(proto.Message):
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...
 class MaximizeConversionValue(proto.Message):
     target_roas: float
     cpc_bid_ceiling_micros: int
     cpc_bid_floor_micros: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_roas: float = ..., cpc_bid_ceiling_micros: int = ..., cpc_bid_floor_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["target_roas", "cpc_bid_ceiling_micros", "cpc_bid_floor_micros"]) -> bool: ...
+class MaximizeConversions(proto.Message):
+    cpc_bid_ceiling_micros: int
+    cpc_bid_floor_micros: int
+    target_cpa_micros: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., cpc_bid_ceiling_micros: int = ..., cpc_bid_floor_micros: int = ..., target_cpa_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["cpc_bid_ceiling_micros", "cpc_bid_floor_micros", "target_cpa_micros"]) -> bool: ...
+class PercentCpc(proto.Message):
+    cpc_bid_ceiling_micros: int
+    enhanced_cpc_enabled: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., cpc_bid_ceiling_micros: int = ..., enhanced_cpc_enabled: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["cpc_bid_ceiling_micros", "enhanced_cpc_enabled"]) -> bool: ...
 class TargetCpa(proto.Message):
     target_cpa_micros: int
     cpc_bid_ceiling_micros: int
     cpc_bid_floor_micros: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_cpa_micros: int = ..., cpc_bid_ceiling_micros: int = ..., cpc_bid_floor_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["target_cpa_micros", "cpc_bid_ceiling_micros", "cpc_bid_floor_micros"]) -> bool: ...
 class TargetCpm(proto.Message):
     target_frequency_goal: TargetCpmTargetFrequencyGoal
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_frequency_goal: TargetCpmTargetFrequencyGoal = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["target_frequency_goal"]) -> bool: ...
 class TargetCpmTargetFrequencyGoal(proto.Message):
     target_count: int
-    time_unit: target_frequency_time_unit.TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit
-
+    time_unit: TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_count: int = ..., time_unit: TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["target_count", "time_unit"]) -> bool: ...
+class TargetCpv(proto.Message):
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...
 class TargetImpressionShare(proto.Message):
-    location: target_impression_share_location.TargetImpressionShareLocationEnum.TargetImpressionShareLocation
+    location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation
     location_fraction_micros: int
     cpc_bid_ceiling_micros: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation = ..., location_fraction_micros: int = ..., cpc_bid_ceiling_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["location", "location_fraction_micros", "cpc_bid_ceiling_micros"]) -> bool: ...
 class TargetRoas(proto.Message):
     target_roas: float
     cpc_bid_ceiling_micros: int
     cpc_bid_floor_micros: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_roas: float = ..., cpc_bid_ceiling_micros: int = ..., cpc_bid_floor_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["target_roas", "cpc_bid_ceiling_micros", "cpc_bid_floor_micros"]) -> bool: ...
 class TargetSpend(proto.Message):
     target_spend_micros: int
     cpc_bid_ceiling_micros: int
-
-class PercentCpc(proto.Message):
-    cpc_bid_ceiling_micros: int
-    enhanced_cpc_enabled: bool
-
-class FixedCpm(proto.Message):
-    goal: fixed_cpm_goal.FixedCpmGoalEnum.FixedCpmGoal
-    target_frequency_info: FixedCpmTargetFrequencyGoalInfo
-
-class FixedCpmTargetFrequencyGoalInfo(proto.Message):
-    target_count: int
-    time_unit: fixed_cpm_target_frequency_time_unit.FixedCpmTargetFrequencyTimeUnitEnum.FixedCpmTargetFrequencyTimeUnit
-
-class TargetCpv(proto.Message): ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_spend_micros: int = ..., cpc_bid_ceiling_micros: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["target_spend_micros", "cpc_bid_ceiling_micros"]) -> bool: ...

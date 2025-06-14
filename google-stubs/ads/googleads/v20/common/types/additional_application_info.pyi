@@ -1,9 +1,13 @@
+from google.ads.googleads.v20.enums.types.application_instance import ApplicationInstanceEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.enums.types import application_instance as gage_application_instance
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AdditionalApplicationInfo(proto.Message):
     application_id: str
-    application_instance: gage_application_instance.ApplicationInstanceEnum.ApplicationInstance
+    application_instance: ApplicationInstanceEnum.ApplicationInstance
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., application_id: str = ..., application_instance: ApplicationInstanceEnum.ApplicationInstance = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["application_id", "application_instance"]) -> bool: ...

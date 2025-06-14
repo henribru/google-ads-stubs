@@ -1,18 +1,22 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AssetGroupPrimaryStatusReasonEnum(proto.Message):
     class AssetGroupPrimaryStatusReason(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        ASSET_GROUP_PAUSED: int
-        ASSET_GROUP_REMOVED: int
-        CAMPAIGN_REMOVED: int
-        CAMPAIGN_PAUSED: int
-        CAMPAIGN_PENDING: int
-        CAMPAIGN_ENDED: int
-        ASSET_GROUP_LIMITED: int
-        ASSET_GROUP_DISAPPROVED: int
-        ASSET_GROUP_UNDER_REVIEW: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        ASSET_GROUP_PAUSED = 2
+        ASSET_GROUP_REMOVED = 3
+        CAMPAIGN_REMOVED = 4
+        CAMPAIGN_PAUSED = 5
+        CAMPAIGN_PENDING = 6
+        CAMPAIGN_ENDED = 7
+        ASSET_GROUP_LIMITED = 8
+        ASSET_GROUP_DISAPPROVED = 9
+        ASSET_GROUP_UNDER_REVIEW = 10
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

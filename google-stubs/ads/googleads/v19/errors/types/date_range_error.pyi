@@ -1,14 +1,18 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class DateRangeErrorEnum(proto.Message):
     class DateRangeError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_DATE: int
-        START_DATE_AFTER_END_DATE: int
-        CANNOT_SET_DATE_TO_PAST: int
-        AFTER_MAXIMUM_ALLOWABLE_DATE: int
-        CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_DATE = 2
+        START_DATE_AFTER_END_DATE = 3
+        CANNOT_SET_DATE_TO_PAST = 4
+        AFTER_MAXIMUM_ALLOWABLE_DATE = 5
+        CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED = 6
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

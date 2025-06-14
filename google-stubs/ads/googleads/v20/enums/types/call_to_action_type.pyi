@@ -1,26 +1,30 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CallToActionTypeEnum(proto.Message):
     class CallToActionType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        LEARN_MORE: int
-        GET_QUOTE: int
-        APPLY_NOW: int
-        SIGN_UP: int
-        CONTACT_US: int
-        SUBSCRIBE: int
-        DOWNLOAD: int
-        BOOK_NOW: int
-        SHOP_NOW: int
-        BUY_NOW: int
-        DONATE_NOW: int
-        ORDER_NOW: int
-        PLAY_NOW: int
-        SEE_MORE: int
-        START_NOW: int
-        VISIT_SITE: int
-        WATCH_NOW: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        LEARN_MORE = 2
+        GET_QUOTE = 3
+        APPLY_NOW = 4
+        SIGN_UP = 5
+        CONTACT_US = 6
+        SUBSCRIBE = 7
+        DOWNLOAD = 8
+        BOOK_NOW = 9
+        SHOP_NOW = 10
+        BUY_NOW = 11
+        DONATE_NOW = 12
+        ORDER_NOW = 13
+        PLAY_NOW = 14
+        SEE_MORE = 15
+        START_NOW = 16
+        VISIT_SITE = 17
+        WATCH_NOW = 18
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

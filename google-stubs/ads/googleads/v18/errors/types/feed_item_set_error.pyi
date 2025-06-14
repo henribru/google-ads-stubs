@@ -1,16 +1,20 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class FeedItemSetErrorEnum(proto.Message):
     class FeedItemSetError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        FEED_ITEM_SET_REMOVED: int
-        CANNOT_CLEAR_DYNAMIC_FILTER: int
-        CANNOT_CREATE_DYNAMIC_FILTER: int
-        INVALID_FEED_TYPE: int
-        DUPLICATE_NAME: int
-        WRONG_DYNAMIC_FILTER_FOR_FEED_TYPE: int
-        DYNAMIC_FILTER_INVALID_CHAIN_IDS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        FEED_ITEM_SET_REMOVED = 2
+        CANNOT_CLEAR_DYNAMIC_FILTER = 3
+        CANNOT_CREATE_DYNAMIC_FILTER = 4
+        INVALID_FEED_TYPE = 5
+        DUPLICATE_NAME = 6
+        WRONG_DYNAMIC_FILTER_FOR_FEED_TYPE = 7
+        DYNAMIC_FILTER_INVALID_CHAIN_IDS = 8
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

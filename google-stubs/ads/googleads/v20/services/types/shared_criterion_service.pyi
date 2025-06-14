@@ -1,27 +1,39 @@
+from google.ads.googleads.v20.resources.types.shared_criterion import SharedCriterion
+from google.ads.googleads.v20.resources.types.shared_criterion import SharedCriterion
+from collections.abc import MutableSequence
+from google.rpc.status_pb2 import Status
+from google.ads.googleads.v20.enums.types.response_content_type import ResponseContentTypeEnum
+from collections.abc import MutableSequence
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v20.resources.types import shared_criterion as gagr_shared_criterion
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class MutateSharedCriteriaRequest(proto.Message):
     customer_id: str
-    operations: MutableSequence['SharedCriterionOperation']
+    operations: MutableSequence[SharedCriterionOperation]
     partial_failure: bool
     validate_only: bool
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-
-class SharedCriterionOperation(proto.Message):
-    create: gagr_shared_criterion.SharedCriterion
-    remove: str
-
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[SharedCriterionOperation] = ..., partial_failure: bool = ..., validate_only: bool = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...
 class MutateSharedCriteriaResponse(proto.Message):
-    partial_failure_error: status_pb2.Status
-    results: MutableSequence['MutateSharedCriterionResult']
-
+    partial_failure_error: Status
+    results: MutableSequence[MutateSharedCriterionResult]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., partial_failure_error: Status = ..., results: MutableSequence[MutateSharedCriterionResult] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["partial_failure_error", "results"]) -> bool: ...
 class MutateSharedCriterionResult(proto.Message):
     resource_name: str
-    shared_criterion: gagr_shared_criterion.SharedCriterion
+    shared_criterion: SharedCriterion
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., shared_criterion: SharedCriterion = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "shared_criterion"]) -> bool: ...
+class SharedCriterionOperation(proto.Message):
+    create: SharedCriterion
+    remove: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., create: SharedCriterion = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["create", "remove"]) -> bool: ...

@@ -1,14 +1,18 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class LocalServicesLeadSurveyAnswerEnum(proto.Message):
     class SurveyAnswer(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        VERY_SATISFIED: int
-        SATISFIED: int
-        NEUTRAL: int
-        DISSATISFIED: int
-        VERY_DISSATISFIED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        VERY_SATISFIED = 2
+        SATISFIED = 3
+        NEUTRAL = 4
+        DISSATISFIED = 5
+        VERY_DISSATISFIED = 6
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

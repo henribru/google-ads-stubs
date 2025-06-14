@@ -1,12 +1,16 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class YoutubeVideoRegistrationErrorEnum(proto.Message):
     class YoutubeVideoRegistrationError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        VIDEO_NOT_FOUND: int
-        VIDEO_NOT_ACCESSIBLE: int
-        VIDEO_NOT_ELIGIBLE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        VIDEO_NOT_FOUND = 2
+        VIDEO_NOT_ACCESSIBLE = 3
+        VIDEO_NOT_ELIGIBLE = 4
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

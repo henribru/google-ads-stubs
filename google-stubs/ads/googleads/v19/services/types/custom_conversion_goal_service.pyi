@@ -1,27 +1,40 @@
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.enums.types.response_content_type import ResponseContentTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.resources.types.custom_conversion_goal import CustomConversionGoal
+from google.ads.googleads.v19.resources.types.custom_conversion_goal import CustomConversionGoal
+from google.ads.googleads.v19.resources.types.custom_conversion_goal import CustomConversionGoal
+from google.protobuf.field_mask_pb2 import FieldMask
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v19.resources.types import custom_conversion_goal as gagr_custom_conversion_goal
-from google.protobuf import field_mask_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class MutateCustomConversionGoalsRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['CustomConversionGoalOperation']
-    validate_only: bool
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomConversionGoalOperation(proto.Message):
-    update_mask: field_mask_pb2.FieldMask
-    create: gagr_custom_conversion_goal.CustomConversionGoal
-    update: gagr_custom_conversion_goal.CustomConversionGoal
+    update_mask: FieldMask
+    create: CustomConversionGoal
+    update: CustomConversionGoal
     remove: str
-
-class MutateCustomConversionGoalsResponse(proto.Message):
-    results: MutableSequence['MutateCustomConversionGoalResult']
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., update_mask: FieldMask = ..., create: CustomConversionGoal = ..., update: CustomConversionGoal = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...
 class MutateCustomConversionGoalResult(proto.Message):
     resource_name: str
-    custom_conversion_goal: gagr_custom_conversion_goal.CustomConversionGoal
+    custom_conversion_goal: CustomConversionGoal
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., custom_conversion_goal: CustomConversionGoal = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "custom_conversion_goal"]) -> bool: ...
+class MutateCustomConversionGoalsRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[CustomConversionGoalOperation]
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[CustomConversionGoalOperation] = ..., validate_only: bool = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "validate_only", "response_content_type"]) -> bool: ...
+class MutateCustomConversionGoalsResponse(proto.Message):
+    results: MutableSequence[MutateCustomConversionGoalResult]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., results: MutableSequence[MutateCustomConversionGoalResult] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["results"]) -> bool: ...

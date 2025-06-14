@@ -1,29 +1,41 @@
+from google.rpc.status_pb2 import Status
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.enums.types.response_content_type import ResponseContentTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.resources.types.customizer_attribute import CustomizerAttribute
+from google.ads.googleads.v19.resources.types.customizer_attribute import CustomizerAttribute
+from google.protobuf.field_mask_pb2 import FieldMask
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v19.resources.types import customizer_attribute as gagr_customizer_attribute
-from google.protobuf import field_mask_pb2
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class MutateCustomizerAttributesRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['CustomizerAttributeOperation']
-    partial_failure: bool
-    validate_only: bool
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomizerAttributeOperation(proto.Message):
-    update_mask: field_mask_pb2.FieldMask
-    create: gagr_customizer_attribute.CustomizerAttribute
+    update_mask: FieldMask
+    create: CustomizerAttribute
     remove: str
-
-class MutateCustomizerAttributesResponse(proto.Message):
-    results: MutableSequence['MutateCustomizerAttributeResult']
-    partial_failure_error: status_pb2.Status
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., update_mask: FieldMask = ..., create: CustomizerAttribute = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["update_mask", "create", "remove"]) -> bool: ...
 class MutateCustomizerAttributeResult(proto.Message):
     resource_name: str
-    customizer_attribute: gagr_customizer_attribute.CustomizerAttribute
+    customizer_attribute: CustomizerAttribute
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., customizer_attribute: CustomizerAttribute = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "customizer_attribute"]) -> bool: ...
+class MutateCustomizerAttributesRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[CustomizerAttributeOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[CustomizerAttributeOperation] = ..., partial_failure: bool = ..., validate_only: bool = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...
+class MutateCustomizerAttributesResponse(proto.Message):
+    results: MutableSequence[MutateCustomizerAttributeResult]
+    partial_failure_error: Status
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., results: MutableSequence[MutateCustomizerAttributeResult] = ..., partial_failure_error: Status = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["results", "partial_failure_error"]) -> bool: ...

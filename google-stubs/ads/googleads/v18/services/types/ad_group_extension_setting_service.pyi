@@ -1,30 +1,43 @@
+from collections.abc import MutableSequence
+from google.rpc.status_pb2 import Status
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.resources.types.ad_group_extension_setting import AdGroupExtensionSetting
+from google.ads.googleads.v18.resources.types.ad_group_extension_setting import AdGroupExtensionSetting
+from google.ads.googleads.v18.resources.types.ad_group_extension_setting import AdGroupExtensionSetting
+from google.ads.googleads.v18.enums.types.response_content_type import ResponseContentTypeEnum
+from google.protobuf.field_mask_pb2 import FieldMask
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v18.resources.types import ad_group_extension_setting as gagr_ad_group_extension_setting
-from google.protobuf import field_mask_pb2
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class MutateAdGroupExtensionSettingsRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['AdGroupExtensionSettingOperation']
-    partial_failure: bool
-    validate_only: bool
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AdGroupExtensionSettingOperation(proto.Message):
-    update_mask: field_mask_pb2.FieldMask
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-    create: gagr_ad_group_extension_setting.AdGroupExtensionSetting
-    update: gagr_ad_group_extension_setting.AdGroupExtensionSetting
+    update_mask: FieldMask
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    create: AdGroupExtensionSetting
+    update: AdGroupExtensionSetting
     remove: str
-
-class MutateAdGroupExtensionSettingsResponse(proto.Message):
-    partial_failure_error: status_pb2.Status
-    results: MutableSequence['MutateAdGroupExtensionSettingResult']
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., update_mask: FieldMask = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ..., create: AdGroupExtensionSetting = ..., update: AdGroupExtensionSetting = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["update_mask", "response_content_type", "create", "update", "remove"]) -> bool: ...
 class MutateAdGroupExtensionSettingResult(proto.Message):
     resource_name: str
-    ad_group_extension_setting: gagr_ad_group_extension_setting.AdGroupExtensionSetting
+    ad_group_extension_setting: AdGroupExtensionSetting
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., ad_group_extension_setting: AdGroupExtensionSetting = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "ad_group_extension_setting"]) -> bool: ...
+class MutateAdGroupExtensionSettingsRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[AdGroupExtensionSettingOperation]
+    partial_failure: bool
+    validate_only: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[AdGroupExtensionSettingOperation] = ..., partial_failure: bool = ..., validate_only: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure", "validate_only"]) -> bool: ...
+class MutateAdGroupExtensionSettingsResponse(proto.Message):
+    partial_failure_error: Status
+    results: MutableSequence[MutateAdGroupExtensionSettingResult]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., partial_failure_error: Status = ..., results: MutableSequence[MutateAdGroupExtensionSettingResult] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["partial_failure_error", "results"]) -> bool: ...

@@ -1,16 +1,22 @@
+from google.ads.googleads.v20.common.types.dates import DateRange
+from google.ads.googleads.v20.enums.types.keyword_plan_forecast_interval import KeywordPlanForecastIntervalEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.common.types import dates
-from google.ads.googleads.v20.enums.types import keyword_plan_forecast_interval
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class KeywordPlan(proto.Message):
     resource_name: str
     id: int
     name: str
     forecast_period: KeywordPlanForecastPeriod
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., id: int = ..., name: str = ..., forecast_period: KeywordPlanForecastPeriod = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "id", "name", "forecast_period"]) -> bool: ...
 class KeywordPlanForecastPeriod(proto.Message):
-    date_interval: keyword_plan_forecast_interval.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
-    date_range: dates.DateRange
+    date_interval: KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
+    date_range: DateRange
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., date_interval: KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval = ..., date_range: DateRange = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["date_interval", "date_range"]) -> bool: ...

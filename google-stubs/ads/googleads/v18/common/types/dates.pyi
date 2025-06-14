@@ -1,17 +1,25 @@
+from google.ads.googleads.v18.enums.types.month_of_year import MonthOfYearEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import month_of_year
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class DateRange(proto.Message):
     start_date: str
     end_date: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., start_date: str = ..., end_date: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["start_date", "end_date"]) -> bool: ...
+class YearMonth(proto.Message):
+    year: int
+    month: MonthOfYearEnum.MonthOfYear
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., year: int = ..., month: MonthOfYearEnum.MonthOfYear = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["year", "month"]) -> bool: ...
 class YearMonthRange(proto.Message):
     start: YearMonth
     end: YearMonth
-
-class YearMonth(proto.Message):
-    year: int
-    month: month_of_year.MonthOfYearEnum.MonthOfYear
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., start: YearMonth = ..., end: YearMonth = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["start", "end"]) -> bool: ...

@@ -1,16 +1,20 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AttributionModelEnum(proto.Message):
     class AttributionModel(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        EXTERNAL: int
-        GOOGLE_ADS_LAST_CLICK: int
-        GOOGLE_SEARCH_ATTRIBUTION_FIRST_CLICK: int
-        GOOGLE_SEARCH_ATTRIBUTION_LINEAR: int
-        GOOGLE_SEARCH_ATTRIBUTION_TIME_DECAY: int
-        GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED: int
-        GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        EXTERNAL = 100
+        GOOGLE_ADS_LAST_CLICK = 101
+        GOOGLE_SEARCH_ATTRIBUTION_FIRST_CLICK = 102
+        GOOGLE_SEARCH_ATTRIBUTION_LINEAR = 103
+        GOOGLE_SEARCH_ATTRIBUTION_TIME_DECAY = 104
+        GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED = 105
+        GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN = 106
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

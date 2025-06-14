@@ -1,31 +1,35 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AuthenticationErrorEnum(proto.Message):
     class AuthenticationError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        AUTHENTICATION_ERROR: int
-        CLIENT_CUSTOMER_ID_INVALID: int
-        CUSTOMER_NOT_FOUND: int
-        GOOGLE_ACCOUNT_DELETED: int
-        GOOGLE_ACCOUNT_COOKIE_INVALID: int
-        GOOGLE_ACCOUNT_AUTHENTICATION_FAILED: int
-        GOOGLE_ACCOUNT_USER_AND_ADS_USER_MISMATCH: int
-        LOGIN_COOKIE_REQUIRED: int
-        NOT_ADS_USER: int
-        OAUTH_TOKEN_INVALID: int
-        OAUTH_TOKEN_EXPIRED: int
-        OAUTH_TOKEN_DISABLED: int
-        OAUTH_TOKEN_REVOKED: int
-        OAUTH_TOKEN_HEADER_INVALID: int
-        LOGIN_COOKIE_INVALID: int
-        USER_ID_INVALID: int
-        TWO_STEP_VERIFICATION_NOT_ENROLLED: int
-        ADVANCED_PROTECTION_NOT_ENROLLED: int
-        ORGANIZATION_NOT_RECOGNIZED: int
-        ORGANIZATION_NOT_APPROVED: int
-        ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN: int
-        DEVELOPER_TOKEN_INVALID: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        AUTHENTICATION_ERROR = 2
+        CLIENT_CUSTOMER_ID_INVALID = 5
+        CUSTOMER_NOT_FOUND = 8
+        GOOGLE_ACCOUNT_DELETED = 9
+        GOOGLE_ACCOUNT_COOKIE_INVALID = 10
+        GOOGLE_ACCOUNT_AUTHENTICATION_FAILED = 25
+        GOOGLE_ACCOUNT_USER_AND_ADS_USER_MISMATCH = 12
+        LOGIN_COOKIE_REQUIRED = 13
+        NOT_ADS_USER = 14
+        OAUTH_TOKEN_INVALID = 15
+        OAUTH_TOKEN_EXPIRED = 16
+        OAUTH_TOKEN_DISABLED = 17
+        OAUTH_TOKEN_REVOKED = 18
+        OAUTH_TOKEN_HEADER_INVALID = 19
+        LOGIN_COOKIE_INVALID = 20
+        USER_ID_INVALID = 22
+        TWO_STEP_VERIFICATION_NOT_ENROLLED = 23
+        ADVANCED_PROTECTION_NOT_ENROLLED = 24
+        ORGANIZATION_NOT_RECOGNIZED = 26
+        ORGANIZATION_NOT_APPROVED = 27
+        ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28
+        DEVELOPER_TOKEN_INVALID = 29
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

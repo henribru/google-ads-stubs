@@ -1,21 +1,32 @@
+from google.rpc.status_pb2 import Status
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
 import proto
-from _typeshed import Incomplete
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AppendLeadConversationRequest(proto.Message):
     customer_id: str
-    conversations: MutableSequence['Conversation']
-
+    conversations: MutableSequence[Conversation]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., conversations: MutableSequence[Conversation] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "conversations"]) -> bool: ...
 class AppendLeadConversationResponse(proto.Message):
-    responses: MutableSequence['ConversationOrError']
-
+    responses: MutableSequence[ConversationOrError]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., responses: MutableSequence[ConversationOrError] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["responses"]) -> bool: ...
 class Conversation(proto.Message):
     local_services_lead: str
     text: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., local_services_lead: str = ..., text: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["local_services_lead", "text"]) -> bool: ...
 class ConversationOrError(proto.Message):
     local_services_lead_conversation: str
-    partial_failure_error: status_pb2.Status
+    partial_failure_error: Status
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., local_services_lead_conversation: str = ..., partial_failure_error: Status = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["local_services_lead_conversation", "partial_failure_error"]) -> bool: ...

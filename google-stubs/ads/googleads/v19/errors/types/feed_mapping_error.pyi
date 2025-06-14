@@ -1,27 +1,31 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class FeedMappingErrorEnum(proto.Message):
     class FeedMappingError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_PLACEHOLDER_FIELD: int
-        INVALID_CRITERION_FIELD: int
-        INVALID_PLACEHOLDER_TYPE: int
-        INVALID_CRITERION_TYPE: int
-        NO_ATTRIBUTE_FIELD_MAPPINGS: int
-        FEED_ATTRIBUTE_TYPE_MISMATCH: int
-        CANNOT_OPERATE_ON_MAPPINGS_FOR_SYSTEM_GENERATED_FEED: int
-        MULTIPLE_MAPPINGS_FOR_PLACEHOLDER_TYPE: int
-        MULTIPLE_MAPPINGS_FOR_CRITERION_TYPE: int
-        MULTIPLE_MAPPINGS_FOR_PLACEHOLDER_FIELD: int
-        MULTIPLE_MAPPINGS_FOR_CRITERION_FIELD: int
-        UNEXPECTED_ATTRIBUTE_FIELD_MAPPINGS: int
-        LOCATION_PLACEHOLDER_ONLY_FOR_PLACES_FEEDS: int
-        CANNOT_MODIFY_MAPPINGS_FOR_TYPED_FEED: int
-        INVALID_PLACEHOLDER_TYPE_FOR_NON_SYSTEM_GENERATED_FEED: int
-        INVALID_PLACEHOLDER_TYPE_FOR_SYSTEM_GENERATED_FEED_TYPE: int
-        ATTRIBUTE_FIELD_MAPPING_MISSING_FIELD: int
-        LEGACY_FEED_TYPE_READ_ONLY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_PLACEHOLDER_FIELD = 2
+        INVALID_CRITERION_FIELD = 3
+        INVALID_PLACEHOLDER_TYPE = 4
+        INVALID_CRITERION_TYPE = 5
+        NO_ATTRIBUTE_FIELD_MAPPINGS = 7
+        FEED_ATTRIBUTE_TYPE_MISMATCH = 8
+        CANNOT_OPERATE_ON_MAPPINGS_FOR_SYSTEM_GENERATED_FEED = 9
+        MULTIPLE_MAPPINGS_FOR_PLACEHOLDER_TYPE = 10
+        MULTIPLE_MAPPINGS_FOR_CRITERION_TYPE = 11
+        MULTIPLE_MAPPINGS_FOR_PLACEHOLDER_FIELD = 12
+        MULTIPLE_MAPPINGS_FOR_CRITERION_FIELD = 13
+        UNEXPECTED_ATTRIBUTE_FIELD_MAPPINGS = 14
+        LOCATION_PLACEHOLDER_ONLY_FOR_PLACES_FEEDS = 15
+        CANNOT_MODIFY_MAPPINGS_FOR_TYPED_FEED = 16
+        INVALID_PLACEHOLDER_TYPE_FOR_NON_SYSTEM_GENERATED_FEED = 17
+        INVALID_PLACEHOLDER_TYPE_FOR_SYSTEM_GENERATED_FEED_TYPE = 18
+        ATTRIBUTE_FIELD_MAPPING_MISSING_FIELD = 19
+        LEGACY_FEED_TYPE_READ_ONLY = 20
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

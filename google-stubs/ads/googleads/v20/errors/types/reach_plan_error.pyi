@@ -1,12 +1,16 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class ReachPlanErrorEnum(proto.Message):
     class ReachPlanError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NOT_FORECASTABLE_MISSING_RATE: int
-        NOT_FORECASTABLE_NOT_ENOUGH_INVENTORY: int
-        NOT_FORECASTABLE_ACCOUNT_NOT_ENABLED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NOT_FORECASTABLE_MISSING_RATE = 2
+        NOT_FORECASTABLE_NOT_ENOUGH_INVENTORY = 3
+        NOT_FORECASTABLE_ACCOUNT_NOT_ENABLED = 4
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

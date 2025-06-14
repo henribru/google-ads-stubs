@@ -1,28 +1,42 @@
+from google.ads.googleads.v19.enums.types.data_link_status import DataLinkStatusEnum
+from google.ads.googleads.v19.resources.types.data_link import DataLink
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.enums.types import data_link_status as gage_data_link_status
-from google.ads.googleads.v19.resources.types import data_link as gagr_data_link
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CreateDataLinkRequest(proto.Message):
     customer_id: str
-    data_link: gagr_data_link.DataLink
-
+    data_link: DataLink
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., data_link: DataLink = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "data_link"]) -> bool: ...
 class CreateDataLinkResponse(proto.Message):
     resource_name: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name"]) -> bool: ...
 class RemoveDataLinkRequest(proto.Message):
     customer_id: str
     resource_name: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "resource_name"]) -> bool: ...
 class RemoveDataLinkResponse(proto.Message):
     resource_name: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name"]) -> bool: ...
 class UpdateDataLinkRequest(proto.Message):
     customer_id: str
-    data_link_status: gage_data_link_status.DataLinkStatusEnum.DataLinkStatus
+    data_link_status: DataLinkStatusEnum.DataLinkStatus
     resource_name: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., data_link_status: DataLinkStatusEnum.DataLinkStatus = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "data_link_status", "resource_name"]) -> bool: ...
 class UpdateDataLinkResponse(proto.Message):
     resource_name: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name"]) -> bool: ...

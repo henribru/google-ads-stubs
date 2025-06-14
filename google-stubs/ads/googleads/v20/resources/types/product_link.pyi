@@ -1,26 +1,38 @@
+from google.ads.googleads.v20.enums.types.linked_product_type import LinkedProductTypeEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.enums.types import linked_product_type
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
+class AdvertisingPartnerIdentifier(proto.Message):
+    customer: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer"]) -> bool: ...
+class DataPartnerIdentifier(proto.Message):
+    data_partner_id: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., data_partner_id: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["data_partner_id"]) -> bool: ...
+class GoogleAdsIdentifier(proto.Message):
+    customer: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer"]) -> bool: ...
+class MerchantCenterIdentifier(proto.Message):
+    merchant_center_id: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., merchant_center_id: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["merchant_center_id"]) -> bool: ...
 class ProductLink(proto.Message):
     resource_name: str
     product_link_id: int
-    type_: linked_product_type.LinkedProductTypeEnum.LinkedProductType
+    type_: LinkedProductTypeEnum.LinkedProductType
     data_partner: DataPartnerIdentifier
     google_ads: GoogleAdsIdentifier
     merchant_center: MerchantCenterIdentifier
     advertising_partner: AdvertisingPartnerIdentifier
-
-class DataPartnerIdentifier(proto.Message):
-    data_partner_id: int
-
-class GoogleAdsIdentifier(proto.Message):
-    customer: str
-
-class MerchantCenterIdentifier(proto.Message):
-    merchant_center_id: int
-
-class AdvertisingPartnerIdentifier(proto.Message):
-    customer: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., product_link_id: int = ..., type_: LinkedProductTypeEnum.LinkedProductType = ..., data_partner: DataPartnerIdentifier = ..., google_ads: GoogleAdsIdentifier = ..., merchant_center: MerchantCenterIdentifier = ..., advertising_partner: AdvertisingPartnerIdentifier = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "product_link_id", "type_", "data_partner", "google_ads", "merchant_center", "advertising_partner"]) -> bool: ...

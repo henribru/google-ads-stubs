@@ -1,13 +1,17 @@
+from google.ads.googleads.v18.enums.types.custom_conversion_goal_status import CustomConversionGoalStatusEnum
+from collections.abc import MutableSequence
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import custom_conversion_goal_status
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomConversionGoal(proto.Message):
     resource_name: str
     id: int
     name: str
     conversion_actions: MutableSequence[str]
-    status: custom_conversion_goal_status.CustomConversionGoalStatusEnum.CustomConversionGoalStatus
+    status: CustomConversionGoalStatusEnum.CustomConversionGoalStatus
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., id: int = ..., name: str = ..., conversion_actions: MutableSequence[str] = ..., status: CustomConversionGoalStatusEnum.CustomConversionGoalStatus = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "id", "name", "conversion_actions", "status"]) -> bool: ...

@@ -1,21 +1,25 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AdvertisingChannelTypeEnum(proto.Message):
     class AdvertisingChannelType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        SEARCH: int
-        DISPLAY: int
-        SHOPPING: int
-        HOTEL: int
-        VIDEO: int
-        MULTI_CHANNEL: int
-        LOCAL: int
-        SMART: int
-        PERFORMANCE_MAX: int
-        LOCAL_SERVICES: int
-        TRAVEL: int
-        DEMAND_GEN: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        SEARCH = 2
+        DISPLAY = 3
+        SHOPPING = 4
+        HOTEL = 5
+        VIDEO = 6
+        MULTI_CHANNEL = 7
+        LOCAL = 8
+        SMART = 9
+        PERFORMANCE_MAX = 10
+        LOCAL_SERVICES = 11
+        TRAVEL = 13
+        DEMAND_GEN = 14
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

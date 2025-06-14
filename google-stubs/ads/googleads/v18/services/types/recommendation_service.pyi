@@ -1,165 +1,311 @@
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.resources.types.recommendation import Recommendation
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.conversion_tracking_status_enum import ConversionTrackingStatusEnum
+from google.ads.googleads.v18.enums.types.advertising_channel_type import AdvertisingChannelTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.recommendation_type import RecommendationTypeEnum
+from google.ads.googleads.v18.enums.types.target_impression_share_location import TargetImpressionShareLocationEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.bidding_strategy_type import BiddingStrategyTypeEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import KeywordInfo
+from google.ads.googleads.v18.enums.types.ad_group_type import AdGroupTypeEnum
+from google.rpc.status_pb2 import Status
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.rpc.status_pb2 import Status
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.resources.types.ad import Ad
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.extensions import SitelinkFeedItem
+from google.ads.googleads.v18.resources.types.ad import Ad
+from google.ads.googleads.v18.resources.types.ad import Ad
+from google.ads.googleads.v18.resources.types.ad import Ad
+from google.ads.googleads.v18.enums.types.keyword_match_type import KeywordMatchTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.extensions import CalloutFeedItem
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.extensions import CallFeedItem
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.resources.types.asset import Asset
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.common.types import criteria, extensions
-from google.ads.googleads.v18.enums.types import ad_group_type as gage_ad_group_type, advertising_channel_type as gage_advertising_channel_type, bidding_strategy_type as gage_bidding_strategy_type, conversion_tracking_status_enum, keyword_match_type, recommendation_type, target_impression_share_location
-from google.ads.googleads.v18.resources.types import ad as gagr_ad, asset, recommendation
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class ApplyRecommendationRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['ApplyRecommendationOperation']
-    partial_failure: bool
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class ApplyRecommendationOperation(proto.Message):
-    class CampaignBudgetParameters(proto.Message):
-        new_budget_amount_micros: int
-    class ForecastingSetTargetRoasParameters(proto.Message):
-        target_roas: float
-        campaign_budget_amount_micros: int
-    class TextAdParameters(proto.Message):
-        ad: gagr_ad.Ad
-    class KeywordParameters(proto.Message):
-        ad_group: str
-        match_type: keyword_match_type.KeywordMatchTypeEnum.KeywordMatchType
-        cpc_bid_micros: int
-    class TargetCpaOptInParameters(proto.Message):
-        target_cpa_micros: int
-        new_campaign_budget_amount_micros: int
-    class TargetRoasOptInParameters(proto.Message):
-        target_roas: float
-        new_campaign_budget_amount_micros: int
-    class CalloutExtensionParameters(proto.Message):
-        callout_extensions: MutableSequence[extensions.CalloutFeedItem]
-    class CallExtensionParameters(proto.Message):
-        call_extensions: MutableSequence[extensions.CallFeedItem]
-    class SitelinkExtensionParameters(proto.Message):
-        sitelink_extensions: MutableSequence[extensions.SitelinkFeedItem]
-    class CalloutAssetParameters(proto.Message):
-        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
-    class CallAssetParameters(proto.Message):
-        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
-    class SitelinkAssetParameters(proto.Message):
-        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
-    class RaiseTargetCpaParameters(proto.Message):
-        target_cpa_multiplier: float
-    class LowerTargetRoasParameters(proto.Message):
-        target_roas_multiplier: float
     class AdAssetApplyParameters(proto.Message):
         class ApplyScope(proto.Enum):
-            UNSPECIFIED: int
-            UNKNOWN: int
-            CUSTOMER: int
-            CAMPAIGN: int
-        new_assets: MutableSequence[asset.Asset]
+            UNSPECIFIED = 0
+            UNKNOWN = 1
+            CUSTOMER = 2
+            CAMPAIGN = 3
+        new_assets: MutableSequence[Asset]
         existing_assets: MutableSequence[str]
         scope: ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope
-    class MoveUnusedBudgetParameters(proto.Message):
-        budget_micros_to_move: int
-    class ResponsiveSearchAdAssetParameters(proto.Message):
-        updated_ad: gagr_ad.Ad
-    class ResponsiveSearchAdImproveAdStrengthParameters(proto.Message):
-        updated_ad: gagr_ad.Ad
-    class ResponsiveSearchAdParameters(proto.Message):
-        ad: gagr_ad.Ad
-    class RaiseTargetCpaBidTooLowParameters(proto.Message):
-        target_multiplier: float
-    class UseBroadMatchKeywordParameters(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., new_assets: MutableSequence[Asset] = ..., existing_assets: MutableSequence[str] = ..., scope: ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["new_assets", "existing_assets", "scope"]) -> bool: ...
+    class CallAssetParameters(proto.Message):
+        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...
+    class CallExtensionParameters(proto.Message):
+        call_extensions: MutableSequence[CallFeedItem]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., call_extensions: MutableSequence[CallFeedItem] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["call_extensions"]) -> bool: ...
+    class CalloutAssetParameters(proto.Message):
+        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...
+    class CalloutExtensionParameters(proto.Message):
+        callout_extensions: MutableSequence[CalloutFeedItem]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., callout_extensions: MutableSequence[CalloutFeedItem] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["callout_extensions"]) -> bool: ...
+    class CampaignBudgetParameters(proto.Message):
         new_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., new_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["new_budget_amount_micros"]) -> bool: ...
     class ForecastingSetTargetCpaParameters(proto.Message):
         target_cpa_micros: int
         campaign_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_cpa_micros: int = ..., campaign_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_cpa_micros", "campaign_budget_amount_micros"]) -> bool: ...
+    class ForecastingSetTargetRoasParameters(proto.Message):
+        target_roas: float
+        campaign_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_roas: float = ..., campaign_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_roas", "campaign_budget_amount_micros"]) -> bool: ...
+    class KeywordParameters(proto.Message):
+        ad_group: str
+        match_type: KeywordMatchTypeEnum.KeywordMatchType
+        cpc_bid_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_group: str = ..., match_type: KeywordMatchTypeEnum.KeywordMatchType = ..., cpc_bid_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad_group", "match_type", "cpc_bid_micros"]) -> bool: ...
     class LeadFormAssetParameters(proto.Message):
         ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
         set_submit_lead_form_asset_campaign_goal: bool
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ..., set_submit_lead_form_asset_campaign_goal: bool = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad_asset_apply_parameters", "set_submit_lead_form_asset_campaign_goal"]) -> bool: ...
+    class LowerTargetRoasParameters(proto.Message):
+        target_roas_multiplier: float
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_roas_multiplier: float = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_roas_multiplier"]) -> bool: ...
+    class MoveUnusedBudgetParameters(proto.Message):
+        budget_micros_to_move: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., budget_micros_to_move: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["budget_micros_to_move"]) -> bool: ...
+    class RaiseTargetCpaBidTooLowParameters(proto.Message):
+        target_multiplier: float
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_multiplier: float = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_multiplier"]) -> bool: ...
+    class RaiseTargetCpaParameters(proto.Message):
+        target_cpa_multiplier: float
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_cpa_multiplier: float = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_cpa_multiplier"]) -> bool: ...
+    class ResponsiveSearchAdAssetParameters(proto.Message):
+        updated_ad: Ad
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., updated_ad: Ad = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["updated_ad"]) -> bool: ...
+    class ResponsiveSearchAdImproveAdStrengthParameters(proto.Message):
+        updated_ad: Ad
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., updated_ad: Ad = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["updated_ad"]) -> bool: ...
+    class ResponsiveSearchAdParameters(proto.Message):
+        ad: Ad
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad: Ad = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad"]) -> bool: ...
+    class SitelinkAssetParameters(proto.Message):
+        ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_asset_apply_parameters: ApplyRecommendationOperation.AdAssetApplyParameters = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad_asset_apply_parameters"]) -> bool: ...
+    class SitelinkExtensionParameters(proto.Message):
+        sitelink_extensions: MutableSequence[SitelinkFeedItem]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., sitelink_extensions: MutableSequence[SitelinkFeedItem] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["sitelink_extensions"]) -> bool: ...
+    class TargetCpaOptInParameters(proto.Message):
+        target_cpa_micros: int
+        new_campaign_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_cpa_micros: int = ..., new_campaign_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_cpa_micros", "new_campaign_budget_amount_micros"]) -> bool: ...
+    class TargetRoasOptInParameters(proto.Message):
+        target_roas: float
+        new_campaign_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_roas: float = ..., new_campaign_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_roas", "new_campaign_budget_amount_micros"]) -> bool: ...
+    class TextAdParameters(proto.Message):
+        ad: Ad
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad: Ad = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad"]) -> bool: ...
+    class UseBroadMatchKeywordParameters(proto.Message):
+        new_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., new_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["new_budget_amount_micros"]) -> bool: ...
     resource_name: str
-    campaign_budget: CampaignBudgetParameters
-    text_ad: TextAdParameters
-    keyword: KeywordParameters
-    target_cpa_opt_in: TargetCpaOptInParameters
-    target_roas_opt_in: TargetRoasOptInParameters
-    callout_extension: CalloutExtensionParameters
-    call_extension: CallExtensionParameters
-    sitelink_extension: SitelinkExtensionParameters
-    move_unused_budget: MoveUnusedBudgetParameters
-    responsive_search_ad: ResponsiveSearchAdParameters
-    use_broad_match_keyword: UseBroadMatchKeywordParameters
-    responsive_search_ad_asset: ResponsiveSearchAdAssetParameters
-    responsive_search_ad_improve_ad_strength: ResponsiveSearchAdImproveAdStrengthParameters
-    raise_target_cpa_bid_too_low: RaiseTargetCpaBidTooLowParameters
-    forecasting_set_target_roas: ForecastingSetTargetRoasParameters
-    callout_asset: CalloutAssetParameters
-    call_asset: CallAssetParameters
-    sitelink_asset: SitelinkAssetParameters
-    raise_target_cpa: RaiseTargetCpaParameters
-    lower_target_roas: LowerTargetRoasParameters
-    forecasting_set_target_cpa: ForecastingSetTargetCpaParameters
-    set_target_cpa: ForecastingSetTargetCpaParameters
-    set_target_roas: ForecastingSetTargetRoasParameters
-    lead_form_asset: LeadFormAssetParameters
-
+    campaign_budget: ApplyRecommendationOperation.CampaignBudgetParameters
+    text_ad: ApplyRecommendationOperation.TextAdParameters
+    keyword: ApplyRecommendationOperation.KeywordParameters
+    target_cpa_opt_in: ApplyRecommendationOperation.TargetCpaOptInParameters
+    target_roas_opt_in: ApplyRecommendationOperation.TargetRoasOptInParameters
+    callout_extension: ApplyRecommendationOperation.CalloutExtensionParameters
+    call_extension: ApplyRecommendationOperation.CallExtensionParameters
+    sitelink_extension: ApplyRecommendationOperation.SitelinkExtensionParameters
+    move_unused_budget: ApplyRecommendationOperation.MoveUnusedBudgetParameters
+    responsive_search_ad: ApplyRecommendationOperation.ResponsiveSearchAdParameters
+    use_broad_match_keyword: ApplyRecommendationOperation.UseBroadMatchKeywordParameters
+    responsive_search_ad_asset: ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters
+    responsive_search_ad_improve_ad_strength: ApplyRecommendationOperation.ResponsiveSearchAdImproveAdStrengthParameters
+    raise_target_cpa_bid_too_low: ApplyRecommendationOperation.RaiseTargetCpaBidTooLowParameters
+    forecasting_set_target_roas: ApplyRecommendationOperation.ForecastingSetTargetRoasParameters
+    callout_asset: ApplyRecommendationOperation.CalloutAssetParameters
+    call_asset: ApplyRecommendationOperation.CallAssetParameters
+    sitelink_asset: ApplyRecommendationOperation.SitelinkAssetParameters
+    raise_target_cpa: ApplyRecommendationOperation.RaiseTargetCpaParameters
+    lower_target_roas: ApplyRecommendationOperation.LowerTargetRoasParameters
+    forecasting_set_target_cpa: ApplyRecommendationOperation.ForecastingSetTargetCpaParameters
+    set_target_cpa: ApplyRecommendationOperation.ForecastingSetTargetCpaParameters
+    set_target_roas: ApplyRecommendationOperation.ForecastingSetTargetRoasParameters
+    lead_form_asset: ApplyRecommendationOperation.LeadFormAssetParameters
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., campaign_budget: ApplyRecommendationOperation.CampaignBudgetParameters = ..., text_ad: ApplyRecommendationOperation.TextAdParameters = ..., keyword: ApplyRecommendationOperation.KeywordParameters = ..., target_cpa_opt_in: ApplyRecommendationOperation.TargetCpaOptInParameters = ..., target_roas_opt_in: ApplyRecommendationOperation.TargetRoasOptInParameters = ..., callout_extension: ApplyRecommendationOperation.CalloutExtensionParameters = ..., call_extension: ApplyRecommendationOperation.CallExtensionParameters = ..., sitelink_extension: ApplyRecommendationOperation.SitelinkExtensionParameters = ..., move_unused_budget: ApplyRecommendationOperation.MoveUnusedBudgetParameters = ..., responsive_search_ad: ApplyRecommendationOperation.ResponsiveSearchAdParameters = ..., use_broad_match_keyword: ApplyRecommendationOperation.UseBroadMatchKeywordParameters = ..., responsive_search_ad_asset: ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters = ..., responsive_search_ad_improve_ad_strength: ApplyRecommendationOperation.ResponsiveSearchAdImproveAdStrengthParameters = ..., raise_target_cpa_bid_too_low: ApplyRecommendationOperation.RaiseTargetCpaBidTooLowParameters = ..., forecasting_set_target_roas: ApplyRecommendationOperation.ForecastingSetTargetRoasParameters = ..., callout_asset: ApplyRecommendationOperation.CalloutAssetParameters = ..., call_asset: ApplyRecommendationOperation.CallAssetParameters = ..., sitelink_asset: ApplyRecommendationOperation.SitelinkAssetParameters = ..., raise_target_cpa: ApplyRecommendationOperation.RaiseTargetCpaParameters = ..., lower_target_roas: ApplyRecommendationOperation.LowerTargetRoasParameters = ..., forecasting_set_target_cpa: ApplyRecommendationOperation.ForecastingSetTargetCpaParameters = ..., set_target_cpa: ApplyRecommendationOperation.ForecastingSetTargetCpaParameters = ..., set_target_roas: ApplyRecommendationOperation.ForecastingSetTargetRoasParameters = ..., lead_form_asset: ApplyRecommendationOperation.LeadFormAssetParameters = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "campaign_budget", "text_ad", "keyword", "target_cpa_opt_in", "target_roas_opt_in", "callout_extension", "call_extension", "sitelink_extension", "move_unused_budget", "responsive_search_ad", "use_broad_match_keyword", "responsive_search_ad_asset", "responsive_search_ad_improve_ad_strength", "raise_target_cpa_bid_too_low", "forecasting_set_target_roas", "callout_asset", "call_asset", "sitelink_asset", "raise_target_cpa", "lower_target_roas", "forecasting_set_target_cpa", "set_target_cpa", "set_target_roas", "lead_form_asset"]) -> bool: ...
+class ApplyRecommendationRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[ApplyRecommendationOperation]
+    partial_failure: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[ApplyRecommendationOperation] = ..., partial_failure: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure"]) -> bool: ...
 class ApplyRecommendationResponse(proto.Message):
-    results: MutableSequence['ApplyRecommendationResult']
-    partial_failure_error: status_pb2.Status
-
+    results: MutableSequence[ApplyRecommendationResult]
+    partial_failure_error: Status
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., results: MutableSequence[ApplyRecommendationResult] = ..., partial_failure_error: Status = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["results", "partial_failure_error"]) -> bool: ...
 class ApplyRecommendationResult(proto.Message):
     resource_name: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name"]) -> bool: ...
 class DismissRecommendationRequest(proto.Message):
     class DismissRecommendationOperation(proto.Message):
         resource_name: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]) -> bool: ...
     customer_id: str
-    operations: MutableSequence[DismissRecommendationOperation]
+    operations: MutableSequence[DismissRecommendationRequest.DismissRecommendationOperation]
     partial_failure: bool
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[DismissRecommendationRequest.DismissRecommendationOperation] = ..., partial_failure: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure"]) -> bool: ...
 class DismissRecommendationResponse(proto.Message):
     class DismissRecommendationResult(proto.Message):
         resource_name: str
-    results: MutableSequence[DismissRecommendationResult]
-    partial_failure_error: status_pb2.Status
-
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["resource_name"]) -> bool: ...
+    results: MutableSequence[DismissRecommendationResponse.DismissRecommendationResult]
+    partial_failure_error: Status
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., results: MutableSequence[DismissRecommendationResponse.DismissRecommendationResult] = ..., partial_failure_error: Status = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["results", "partial_failure_error"]) -> bool: ...
 class GenerateRecommendationsRequest(proto.Message):
-    class BiddingInfo(proto.Message):
-        bidding_strategy_type: gage_bidding_strategy_type.BiddingStrategyTypeEnum.BiddingStrategyType
-        target_cpa_micros: int
-        target_roas: float
-        target_impression_share_info: GenerateRecommendationsRequest.TargetImpressionShareInfo
     class AdGroupInfo(proto.Message):
-        ad_group_type: gage_ad_group_type.AdGroupTypeEnum.AdGroupType
-        keywords: MutableSequence[criteria.KeywordInfo]
-    class SeedInfo(proto.Message):
-        url_seed: str
-        keyword_seeds: MutableSequence[str]
-    class BudgetInfo(proto.Message):
-        current_budget: int
+        ad_group_type: AdGroupTypeEnum.AdGroupType
+        keywords: MutableSequence[KeywordInfo]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad_group_type: AdGroupTypeEnum.AdGroupType = ..., keywords: MutableSequence[KeywordInfo] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad_group_type", "keywords"]) -> bool: ...
     class AssetGroupInfo(proto.Message):
         final_url: str
         headline: MutableSequence[str]
         description: MutableSequence[str]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., final_url: str = ..., headline: MutableSequence[str] = ..., description: MutableSequence[str] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["final_url", "headline", "description"]) -> bool: ...
+    class BiddingInfo(proto.Message):
+        bidding_strategy_type: BiddingStrategyTypeEnum.BiddingStrategyType
+        target_cpa_micros: int
+        target_roas: float
+        target_impression_share_info: GenerateRecommendationsRequest.TargetImpressionShareInfo
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., bidding_strategy_type: BiddingStrategyTypeEnum.BiddingStrategyType = ..., target_cpa_micros: int = ..., target_roas: float = ..., target_impression_share_info: GenerateRecommendationsRequest.TargetImpressionShareInfo = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["bidding_strategy_type", "target_cpa_micros", "target_roas", "target_impression_share_info"]) -> bool: ...
+    class BudgetInfo(proto.Message):
+        current_budget: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., current_budget: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["current_budget"]) -> bool: ...
+    class SeedInfo(proto.Message):
+        url_seed: str
+        keyword_seeds: MutableSequence[str]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., url_seed: str = ..., keyword_seeds: MutableSequence[str] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["url_seed", "keyword_seeds"]) -> bool: ...
     class TargetImpressionShareInfo(proto.Message):
-        location: target_impression_share_location.TargetImpressionShareLocationEnum.TargetImpressionShareLocation
+        location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation
         target_impression_share_micros: int
         max_cpc_bid_ceiling: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., location: TargetImpressionShareLocationEnum.TargetImpressionShareLocation = ..., target_impression_share_micros: int = ..., max_cpc_bid_ceiling: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["location", "target_impression_share_micros", "max_cpc_bid_ceiling"]) -> bool: ...
     customer_id: str
-    recommendation_types: MutableSequence[recommendation_type.RecommendationTypeEnum.RecommendationType]
-    advertising_channel_type: gage_advertising_channel_type.AdvertisingChannelTypeEnum.AdvertisingChannelType
+    recommendation_types: MutableSequence[RecommendationTypeEnum.RecommendationType]
+    advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType
     campaign_sitelink_count: int
-    conversion_tracking_status: conversion_tracking_status_enum.ConversionTrackingStatusEnum.ConversionTrackingStatus
-    bidding_info: BiddingInfo
-    ad_group_info: MutableSequence[AdGroupInfo]
-    seed_info: SeedInfo
-    budget_info: BudgetInfo
+    conversion_tracking_status: ConversionTrackingStatusEnum.ConversionTrackingStatus
+    bidding_info: GenerateRecommendationsRequest.BiddingInfo
+    ad_group_info: MutableSequence[GenerateRecommendationsRequest.AdGroupInfo]
+    seed_info: GenerateRecommendationsRequest.SeedInfo
+    budget_info: GenerateRecommendationsRequest.BudgetInfo
     campaign_image_asset_count: int
     campaign_call_asset_count: int
     country_codes: MutableSequence[str]
     language_codes: MutableSequence[str]
     positive_locations_ids: MutableSequence[int]
     negative_locations_ids: MutableSequence[int]
-    asset_group_info: MutableSequence[AssetGroupInfo]
+    asset_group_info: MutableSequence[GenerateRecommendationsRequest.AssetGroupInfo]
     target_partner_search_network: bool
     target_content_network: bool
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., recommendation_types: MutableSequence[RecommendationTypeEnum.RecommendationType] = ..., advertising_channel_type: AdvertisingChannelTypeEnum.AdvertisingChannelType = ..., campaign_sitelink_count: int = ..., conversion_tracking_status: ConversionTrackingStatusEnum.ConversionTrackingStatus = ..., bidding_info: GenerateRecommendationsRequest.BiddingInfo = ..., ad_group_info: MutableSequence[GenerateRecommendationsRequest.AdGroupInfo] = ..., seed_info: GenerateRecommendationsRequest.SeedInfo = ..., budget_info: GenerateRecommendationsRequest.BudgetInfo = ..., campaign_image_asset_count: int = ..., campaign_call_asset_count: int = ..., country_codes: MutableSequence[str] = ..., language_codes: MutableSequence[str] = ..., positive_locations_ids: MutableSequence[int] = ..., negative_locations_ids: MutableSequence[int] = ..., asset_group_info: MutableSequence[GenerateRecommendationsRequest.AssetGroupInfo] = ..., target_partner_search_network: bool = ..., target_content_network: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "recommendation_types", "advertising_channel_type", "campaign_sitelink_count", "conversion_tracking_status", "bidding_info", "ad_group_info", "seed_info", "budget_info", "campaign_image_asset_count", "campaign_call_asset_count", "country_codes", "language_codes", "positive_locations_ids", "negative_locations_ids", "asset_group_info", "target_partner_search_network", "target_content_network"]) -> bool: ...
 class GenerateRecommendationsResponse(proto.Message):
-    recommendations: MutableSequence[recommendation.Recommendation]
+    recommendations: MutableSequence[Recommendation]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommendations: MutableSequence[Recommendation] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["recommendations"]) -> bool: ...

@@ -1,13 +1,17 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class NonSkippableMinDurationEnum(proto.Message):
     class NonSkippableMinDuration(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        MIN_DURATION_FIVE_SECONDS: int
-        MIN_DURATION_SEVEN_SECONDS: int
-        MIN_DURATION_SIXTEEN_SECONDS: int
-        MIN_DURATION_THIRTY_ONE_SECONDS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        MIN_DURATION_FIVE_SECONDS = 2
+        MIN_DURATION_SEVEN_SECONDS = 3
+        MIN_DURATION_SIXTEEN_SECONDS = 4
+        MIN_DURATION_THIRTY_ONE_SECONDS = 5
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

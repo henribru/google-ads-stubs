@@ -1,14 +1,18 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class LocalServicesLeadSurveySatisfiedReasonEnum(proto.Message):
     class SurveySatisfiedReason(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        OTHER_SATISFIED_REASON: int
-        BOOKED_CUSTOMER: int
-        LIKELY_BOOKED_CUSTOMER: int
-        SERVICE_RELATED: int
-        HIGH_VALUE_SERVICE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        OTHER_SATISFIED_REASON = 2
+        BOOKED_CUSTOMER = 3
+        LIKELY_BOOKED_CUSTOMER = 4
+        SERVICE_RELATED = 5
+        HIGH_VALUE_SERVICE = 6
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

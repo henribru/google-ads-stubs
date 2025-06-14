@@ -1,30 +1,43 @@
+from collections.abc import MutableSequence
+from google.rpc.status_pb2 import Status
+from google.ads.googleads.v18.enums.types.response_content_type import ResponseContentTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.resources.types.customer_feed import CustomerFeed
+from google.ads.googleads.v18.resources.types.customer_feed import CustomerFeed
+from google.ads.googleads.v18.resources.types.customer_feed import CustomerFeed
+from google.protobuf.field_mask_pb2 import FieldMask
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v18.resources.types import customer_feed as gagr_customer_feed
-from google.protobuf import field_mask_pb2
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class MutateCustomerFeedsRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['CustomerFeedOperation']
-    partial_failure: bool
-    validate_only: bool
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomerFeedOperation(proto.Message):
-    update_mask: field_mask_pb2.FieldMask
-    create: gagr_customer_feed.CustomerFeed
-    update: gagr_customer_feed.CustomerFeed
+    update_mask: FieldMask
+    create: CustomerFeed
+    update: CustomerFeed
     remove: str
-
-class MutateCustomerFeedsResponse(proto.Message):
-    partial_failure_error: status_pb2.Status
-    results: MutableSequence['MutateCustomerFeedResult']
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., update_mask: FieldMask = ..., create: CustomerFeed = ..., update: CustomerFeed = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...
 class MutateCustomerFeedResult(proto.Message):
     resource_name: str
-    customer_feed: gagr_customer_feed.CustomerFeed
+    customer_feed: CustomerFeed
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., customer_feed: CustomerFeed = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "customer_feed"]) -> bool: ...
+class MutateCustomerFeedsRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[CustomerFeedOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[CustomerFeedOperation] = ..., partial_failure: bool = ..., validate_only: bool = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...
+class MutateCustomerFeedsResponse(proto.Message):
+    partial_failure_error: Status
+    results: MutableSequence[MutateCustomerFeedResult]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., partial_failure_error: Status = ..., results: MutableSequence[MutateCustomerFeedResult] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["partial_failure_error", "results"]) -> bool: ...

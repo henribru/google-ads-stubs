@@ -1,10 +1,16 @@
+from google.ads.googleads.v18.enums.types.ad_strength import AdStrengthEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.asset_group_primary_status_reason import AssetGroupPrimaryStatusReasonEnum
+from google.ads.googleads.v18.enums.types.asset_group_primary_status import AssetGroupPrimaryStatusEnum
+from google.ads.googleads.v18.enums.types.asset_group_status import AssetGroupStatusEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import ad_strength as gage_ad_strength, asset_group_primary_status, asset_group_primary_status_reason, asset_group_status
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AssetGroup(proto.Message):
     resource_name: str
     id: int
@@ -12,9 +18,12 @@ class AssetGroup(proto.Message):
     name: str
     final_urls: MutableSequence[str]
     final_mobile_urls: MutableSequence[str]
-    status: asset_group_status.AssetGroupStatusEnum.AssetGroupStatus
-    primary_status: asset_group_primary_status.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus
-    primary_status_reasons: MutableSequence[asset_group_primary_status_reason.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason]
+    status: AssetGroupStatusEnum.AssetGroupStatus
+    primary_status: AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus
+    primary_status_reasons: MutableSequence[AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason]
     path1: str
     path2: str
-    ad_strength: gage_ad_strength.AdStrengthEnum.AdStrength
+    ad_strength: AdStrengthEnum.AdStrength
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., id: int = ..., campaign: str = ..., name: str = ..., final_urls: MutableSequence[str] = ..., final_mobile_urls: MutableSequence[str] = ..., status: AssetGroupStatusEnum.AssetGroupStatus = ..., primary_status: AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus = ..., primary_status_reasons: MutableSequence[AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason] = ..., path1: str = ..., path2: str = ..., ad_strength: AdStrengthEnum.AdStrength = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "id", "campaign", "name", "final_urls", "final_mobile_urls", "status", "primary_status", "primary_status_reasons", "path1", "path2", "ad_strength"]) -> bool: ...

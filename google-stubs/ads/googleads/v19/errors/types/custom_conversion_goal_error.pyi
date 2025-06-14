@@ -1,15 +1,19 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomConversionGoalErrorEnum(proto.Message):
     class CustomConversionGoalError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_CONVERSION_ACTION: int
-        CONVERSION_ACTION_NOT_ENABLED: int
-        CANNOT_REMOVE_LINKED_CUSTOM_CONVERSION_GOAL: int
-        CUSTOM_GOAL_DUPLICATE_NAME: int
-        DUPLICATE_CONVERSION_ACTION_LIST: int
-        NON_BIDDABLE_CONVERSION_ACTION_NOT_ELIGIBLE_FOR_CUSTOM_GOAL: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_CONVERSION_ACTION = 2
+        CONVERSION_ACTION_NOT_ENABLED = 3
+        CANNOT_REMOVE_LINKED_CUSTOM_CONVERSION_GOAL = 4
+        CUSTOM_GOAL_DUPLICATE_NAME = 5
+        DUPLICATE_CONVERSION_ACTION_LIST = 6
+        NON_BIDDABLE_CONVERSION_ACTION_NOT_ELIGIBLE_FOR_CUSTOM_GOAL = 7
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

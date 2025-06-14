@@ -1,12 +1,16 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AssetAutomationTypeEnum(proto.Message):
     class AssetAutomationType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        TEXT_ASSET_AUTOMATION: int
-        GENERATE_VERTICAL_YOUTUBE_VIDEOS: int
-        GENERATE_SHORTER_YOUTUBE_VIDEOS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        TEXT_ASSET_AUTOMATION = 2
+        GENERATE_VERTICAL_YOUTUBE_VIDEOS = 3
+        GENERATE_SHORTER_YOUTUBE_VIDEOS = 4
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

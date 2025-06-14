@@ -1,12 +1,16 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class FrequencyCapLevelEnum(proto.Message):
     class FrequencyCapLevel(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        AD_GROUP_AD: int
-        AD_GROUP: int
-        CAMPAIGN: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        AD_GROUP_AD = 2
+        AD_GROUP = 3
+        CAMPAIGN = 4
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

@@ -1,14 +1,18 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class LinkedProductTypeEnum(proto.Message):
     class LinkedProductType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        DATA_PARTNER: int
-        GOOGLE_ADS: int
-        HOTEL_CENTER: int
-        MERCHANT_CENTER: int
-        ADVERTISING_PARTNER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        DATA_PARTNER = 2
+        GOOGLE_ADS = 3
+        HOTEL_CENTER = 7
+        MERCHANT_CENTER = 8
+        ADVERTISING_PARTNER = 9
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

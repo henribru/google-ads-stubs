@@ -1,20 +1,215 @@
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.enums.types.recommendation_type import RecommendationTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.common.types.criteria import KeywordInfo
+from google.ads.googleads.v20.resources.types.ad import Ad
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.enums.types.target_cpa_opt_in_recommendation_goal import TargetCpaOptInRecommendationGoalEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.resources.types.asset import Asset
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.resources.types.asset import Asset
+from google.ads.googleads.v20.enums.types.shopping_add_products_to_campaign_recommendation_enum import ShoppingAddProductsToCampaignRecommendationEnum
+from google.ads.googleads.v20.resources.types.ad import Ad
+from google.ads.googleads.v20.resources.types.ad import Ad
+from google.ads.googleads.v20.resources.types.ad import Ad
+from google.ads.googleads.v20.resources.types.ad import Ad
+from google.ads.googleads.v20.resources.types.ad import Ad
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.enums.types.app_bidding_goal import AppBiddingGoalEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.common.types.criteria import KeywordInfo
+from google.ads.googleads.v20.enums.types.keyword_match_type import KeywordMatchTypeEnum
+from google.ads.googleads.v20.common.types.criteria import KeywordInfo
+from google.ads.googleads.v20.enums.types.ad_strength import AdStrengthEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.enums.types.ad_strength import AdStrengthEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.common.types.criteria import KeywordInfo
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.resources.types.asset import Asset
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.resources.types.asset import Asset
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.common.types import criteria
-from google.ads.googleads.v20.enums.types import ad_strength as gage_ad_strength, app_bidding_goal as gage_app_bidding_goal, keyword_match_type, recommendation_type, shopping_add_products_to_campaign_recommendation_enum, target_cpa_opt_in_recommendation_goal
-from google.ads.googleads.v20.resources.types import ad as gagr_ad, asset
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class Recommendation(proto.Message):
+    class AccountInfo(proto.Message):
+        customer_id: int
+        descriptive_name: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: int = ..., descriptive_name: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "descriptive_name"]) -> bool: ...
+    class CallAssetRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class CalloutAssetRecommendation(proto.Message):
+        recommended_campaign_callout_assets: MutableSequence[Asset]
+        recommended_customer_callout_assets: MutableSequence[Asset]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommended_campaign_callout_assets: MutableSequence[Asset] = ..., recommended_customer_callout_assets: MutableSequence[Asset] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["recommended_campaign_callout_assets", "recommended_customer_callout_assets"]) -> bool: ...
+    class CampaignBudget(proto.Message):
+        current_amount_micros: int
+        recommended_new_amount_micros: int
+        new_start_date: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., current_amount_micros: int = ..., recommended_new_amount_micros: int = ..., new_start_date: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["current_amount_micros", "recommended_new_amount_micros", "new_start_date"]) -> bool: ...
+    class CampaignBudgetRecommendation(proto.Message):
+        class CampaignBudgetRecommendationOption(proto.Message):
+            budget_amount_micros: int
+            impact: Recommendation.RecommendationImpact
+            def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., budget_amount_micros: int = ..., impact: Recommendation.RecommendationImpact = ...) -> None: ...
+            def __contains__(  # type: ignore[override]
+            self, key: Literal["budget_amount_micros", "impact"]) -> bool: ...
+        current_budget_amount_micros: int
+        recommended_budget_amount_micros: int
+        budget_options: MutableSequence[Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., current_budget_amount_micros: int = ..., recommended_budget_amount_micros: int = ..., budget_options: MutableSequence[Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["current_budget_amount_micros", "recommended_budget_amount_micros", "budget_options"]) -> bool: ...
+    class CustomAudienceOptInRecommendation(proto.Message):
+        keywords: MutableSequence[KeywordInfo]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., keywords: MutableSequence[KeywordInfo] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["keywords"]) -> bool: ...
+    class DisplayExpansionOptInRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class DynamicImageExtensionOptInRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class EnhancedCpcOptInRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class ForecastingSetTargetCpaRecommendation(proto.Message):
+        recommended_target_cpa_micros: int
+        campaign_budget: Recommendation.CampaignBudget
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommended_target_cpa_micros: int = ..., campaign_budget: Recommendation.CampaignBudget = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["recommended_target_cpa_micros", "campaign_budget"]) -> bool: ...
+    class ForecastingSetTargetRoasRecommendation(proto.Message):
+        recommended_target_roas: float
+        campaign_budget: Recommendation.CampaignBudget
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommended_target_roas: float = ..., campaign_budget: Recommendation.CampaignBudget = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["recommended_target_roas", "campaign_budget"]) -> bool: ...
+    class ImproveDemandGenAdStrengthRecommendation(proto.Message):
+        ad: str
+        ad_strength: AdStrengthEnum.AdStrength
+        demand_gen_asset_action_items: MutableSequence[str]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad: str = ..., ad_strength: AdStrengthEnum.AdStrength = ..., demand_gen_asset_action_items: MutableSequence[str] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad", "ad_strength", "demand_gen_asset_action_items"]) -> bool: ...
+    class ImproveGoogleTagCoverageRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class ImprovePerformanceMaxAdStrengthRecommendation(proto.Message):
+        asset_group: str
+        ad_strength: AdStrengthEnum.AdStrength
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., asset_group: str = ..., ad_strength: AdStrengthEnum.AdStrength = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["asset_group", "ad_strength"]) -> bool: ...
+    class KeywordMatchTypeRecommendation(proto.Message):
+        keyword: KeywordInfo
+        recommended_match_type: KeywordMatchTypeEnum.KeywordMatchType
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., keyword: KeywordInfo = ..., recommended_match_type: KeywordMatchTypeEnum.KeywordMatchType = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["keyword", "recommended_match_type"]) -> bool: ...
+    class KeywordRecommendation(proto.Message):
+        class SearchTerm(proto.Message):
+            text: str
+            estimated_weekly_search_count: int
+            def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., text: str = ..., estimated_weekly_search_count: int = ...) -> None: ...
+            def __contains__(  # type: ignore[override]
+            self, key: Literal["text", "estimated_weekly_search_count"]) -> bool: ...
+        keyword: KeywordInfo
+        search_terms: MutableSequence[Recommendation.KeywordRecommendation.SearchTerm]
+        recommended_cpc_bid_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., keyword: KeywordInfo = ..., search_terms: MutableSequence[Recommendation.KeywordRecommendation.SearchTerm] = ..., recommended_cpc_bid_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["keyword", "search_terms", "recommended_cpc_bid_micros"]) -> bool: ...
+    class LeadFormAssetRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class LowerTargetRoasRecommendation(proto.Message):
+        target_adjustment: Recommendation.TargetAdjustmentInfo
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_adjustment: Recommendation.TargetAdjustmentInfo = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_adjustment"]) -> bool: ...
+    class MaximizeClicksOptInRecommendation(proto.Message):
+        recommended_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommended_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["recommended_budget_amount_micros"]) -> bool: ...
+    class MaximizeConversionValueOptInRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class MaximizeConversionsOptInRecommendation(proto.Message):
+        recommended_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommended_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["recommended_budget_amount_micros"]) -> bool: ...
     class MerchantInfo(proto.Message):
         id: int
         name: str
         multi_client: bool
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., id: int = ..., name: str = ..., multi_client: bool = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["id", "name", "multi_client"]) -> bool: ...
+    class MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation(proto.Message):
+        apply_link: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., apply_link: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["apply_link"]) -> bool: ...
+    class MoveUnusedBudgetRecommendation(proto.Message):
+        excess_campaign_budget: str
+        budget_recommendation: Recommendation.CampaignBudgetRecommendation
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., excess_campaign_budget: str = ..., budget_recommendation: Recommendation.CampaignBudgetRecommendation = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["excess_campaign_budget", "budget_recommendation"]) -> bool: ...
+    class OptimizeAdRotationRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class PerformanceMaxFinalUrlOptInRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class PerformanceMaxOptInRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class RaiseTargetCpaBidTooLowRecommendation(proto.Message):
+        recommended_target_multiplier: float
+        average_target_cpa_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommended_target_multiplier: float = ..., average_target_cpa_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["recommended_target_multiplier", "average_target_cpa_micros"]) -> bool: ...
+    class RaiseTargetCpaRecommendation(proto.Message):
+        target_adjustment: Recommendation.TargetAdjustmentInfo
+        app_bidding_goal: AppBiddingGoalEnum.AppBiddingGoal
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., target_adjustment: Recommendation.TargetAdjustmentInfo = ..., app_bidding_goal: AppBiddingGoalEnum.AppBiddingGoal = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["target_adjustment", "app_bidding_goal"]) -> bool: ...
     class RecommendationImpact(proto.Message):
         base_metrics: Recommendation.RecommendationMetrics
         potential_metrics: Recommendation.RecommendationMetrics
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., base_metrics: Recommendation.RecommendationMetrics = ..., potential_metrics: Recommendation.RecommendationMetrics = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["base_metrics", "potential_metrics"]) -> bool: ...
     class RecommendationMetrics(proto.Message):
         impressions: float
         clicks: float
@@ -22,206 +217,203 @@ class Recommendation(proto.Message):
         conversions: float
         conversions_value: float
         video_views: float
-    class CampaignBudgetRecommendation(proto.Message):
-        class CampaignBudgetRecommendationOption(proto.Message):
-            budget_amount_micros: int
-            impact: Recommendation.RecommendationImpact
-        current_budget_amount_micros: int
-        recommended_budget_amount_micros: int
-        budget_options: MutableSequence['Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption']
-    class KeywordRecommendation(proto.Message):
-        class SearchTerm(proto.Message):
-            text: str
-            estimated_weekly_search_count: int
-        keyword: criteria.KeywordInfo
-        search_terms: MutableSequence['Recommendation.KeywordRecommendation.SearchTerm']
-        recommended_cpc_bid_micros: int
-    class TextAdRecommendation(proto.Message):
-        ad: gagr_ad.Ad
-        creation_date: str
-        auto_apply_date: str
-    class TargetCpaOptInRecommendation(proto.Message):
-        class TargetCpaOptInRecommendationOption(proto.Message):
-            goal: target_cpa_opt_in_recommendation_goal.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
-            target_cpa_micros: int
-            required_campaign_budget_amount_micros: int
-            impact: Recommendation.RecommendationImpact
-        options: MutableSequence['Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption']
-        recommended_target_cpa_micros: int
-    class MaximizeConversionsOptInRecommendation(proto.Message):
-        recommended_budget_amount_micros: int
-    class EnhancedCpcOptInRecommendation(proto.Message): ...
-    class SearchPartnersOptInRecommendation(proto.Message): ...
-    class MaximizeClicksOptInRecommendation(proto.Message):
-        recommended_budget_amount_micros: int
-    class OptimizeAdRotationRecommendation(proto.Message): ...
-    class CalloutAssetRecommendation(proto.Message):
-        recommended_campaign_callout_assets: MutableSequence[asset.Asset]
-        recommended_customer_callout_assets: MutableSequence[asset.Asset]
-    class SitelinkAssetRecommendation(proto.Message):
-        recommended_campaign_sitelink_assets: MutableSequence[asset.Asset]
-        recommended_customer_sitelink_assets: MutableSequence[asset.Asset]
-    class CallAssetRecommendation(proto.Message): ...
-    class KeywordMatchTypeRecommendation(proto.Message):
-        keyword: criteria.KeywordInfo
-        recommended_match_type: keyword_match_type.KeywordMatchTypeEnum.KeywordMatchType
-    class MoveUnusedBudgetRecommendation(proto.Message):
-        excess_campaign_budget: str
-        budget_recommendation: Recommendation.CampaignBudgetRecommendation
-    class TargetRoasOptInRecommendation(proto.Message):
-        recommended_target_roas: float
-        required_campaign_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., impressions: float = ..., clicks: float = ..., cost_micros: int = ..., conversions: float = ..., conversions_value: float = ..., video_views: float = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["impressions", "clicks", "cost_micros", "conversions", "conversions_value", "video_views"]) -> bool: ...
+    class RefreshCustomerMatchListRecommendation(proto.Message):
+        user_list_id: int
+        user_list_name: str
+        days_since_last_refresh: int
+        top_spending_account: MutableSequence[Recommendation.AccountInfo]
+        targeting_accounts_count: int
+        owner_account: Recommendation.AccountInfo
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., user_list_id: int = ..., user_list_name: str = ..., days_since_last_refresh: int = ..., top_spending_account: MutableSequence[Recommendation.AccountInfo] = ..., targeting_accounts_count: int = ..., owner_account: Recommendation.AccountInfo = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["user_list_id", "user_list_name", "days_since_last_refresh", "top_spending_account", "targeting_accounts_count", "owner_account"]) -> bool: ...
     class ResponsiveSearchAdAssetRecommendation(proto.Message):
-        current_ad: gagr_ad.Ad
-        recommended_assets: gagr_ad.Ad
+        current_ad: Ad
+        recommended_assets: Ad
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., current_ad: Ad = ..., recommended_assets: Ad = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["current_ad", "recommended_assets"]) -> bool: ...
     class ResponsiveSearchAdImproveAdStrengthRecommendation(proto.Message):
-        current_ad: gagr_ad.Ad
-        recommended_ad: gagr_ad.Ad
+        current_ad: Ad
+        recommended_ad: Ad
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., current_ad: Ad = ..., recommended_ad: Ad = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["current_ad", "recommended_ad"]) -> bool: ...
     class ResponsiveSearchAdRecommendation(proto.Message):
-        ad: gagr_ad.Ad
-    class UseBroadMatchKeywordRecommendation(proto.Message):
-        keyword: MutableSequence[criteria.KeywordInfo]
-        suggested_keywords_count: int
-        campaign_keywords_count: int
-        campaign_uses_shared_budget: bool
-        required_campaign_budget_amount_micros: int
-    class UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation(proto.Message):
-        merchant_id: int
-        sales_country_code: str
-    class RaiseTargetCpaBidTooLowRecommendation(proto.Message):
-        recommended_target_multiplier: float
-        average_target_cpa_micros: int
-    class DisplayExpansionOptInRecommendation(proto.Message): ...
-    class UpgradeLocalCampaignToPerformanceMaxRecommendation(proto.Message): ...
-    class ForecastingSetTargetRoasRecommendation(proto.Message):
-        recommended_target_roas: float
-        campaign_budget: Recommendation.CampaignBudget
-    class ShoppingOfferAttributeRecommendation(proto.Message):
+        ad: Ad
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad: Ad = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad"]) -> bool: ...
+    class SearchPartnersOptInRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class ShoppingAddProductsToCampaignRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
         feed_label: str
-        offers_count: int
-        demoted_offers_count: int
+        reason: ShoppingAddProductsToCampaignRecommendationEnum.Reason
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., merchant: Recommendation.MerchantInfo = ..., feed_label: str = ..., reason: ShoppingAddProductsToCampaignRecommendationEnum.Reason = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant", "feed_label", "reason"]) -> bool: ...
     class ShoppingFixDisapprovedProductsRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
         feed_label: str
         products_count: int
         disapproved_products_count: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., merchant: Recommendation.MerchantInfo = ..., feed_label: str = ..., products_count: int = ..., disapproved_products_count: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant", "feed_label", "products_count", "disapproved_products_count"]) -> bool: ...
+    class ShoppingMerchantCenterAccountSuspensionRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., merchant: Recommendation.MerchantInfo = ..., feed_label: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant", "feed_label"]) -> bool: ...
+    class ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., merchant: Recommendation.MerchantInfo = ..., feed_label: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant", "feed_label"]) -> bool: ...
+    class ShoppingOfferAttributeRecommendation(proto.Message):
+        merchant: Recommendation.MerchantInfo
+        feed_label: str
+        offers_count: int
+        demoted_offers_count: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., merchant: Recommendation.MerchantInfo = ..., feed_label: str = ..., offers_count: int = ..., demoted_offers_count: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant", "feed_label", "offers_count", "demoted_offers_count"]) -> bool: ...
     class ShoppingTargetAllOffersRecommendation(proto.Message):
         merchant: Recommendation.MerchantInfo
         untargeted_offers_count: int
         feed_label: str
-    class ShoppingAddProductsToCampaignRecommendation(proto.Message):
-        merchant: Recommendation.MerchantInfo
-        feed_label: str
-        reason: shopping_add_products_to_campaign_recommendation_enum.ShoppingAddProductsToCampaignRecommendationEnum.Reason
-    class ShoppingMerchantCenterAccountSuspensionRecommendation(proto.Message):
-        merchant: Recommendation.MerchantInfo
-        feed_label: str
-    class ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(proto.Message):
-        merchant: Recommendation.MerchantInfo
-        feed_label: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., merchant: Recommendation.MerchantInfo = ..., untargeted_offers_count: int = ..., feed_label: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant", "untargeted_offers_count", "feed_label"]) -> bool: ...
+    class SitelinkAssetRecommendation(proto.Message):
+        recommended_campaign_sitelink_assets: MutableSequence[Asset]
+        recommended_customer_sitelink_assets: MutableSequence[Asset]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommended_campaign_sitelink_assets: MutableSequence[Asset] = ..., recommended_customer_sitelink_assets: MutableSequence[Asset] = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["recommended_campaign_sitelink_assets", "recommended_customer_sitelink_assets"]) -> bool: ...
     class TargetAdjustmentInfo(proto.Message):
         shared_set: str
         recommended_target_multiplier: float
         current_average_target_micros: int
-    class RaiseTargetCpaRecommendation(proto.Message):
-        target_adjustment: Recommendation.TargetAdjustmentInfo
-        app_bidding_goal: gage_app_bidding_goal.AppBiddingGoalEnum.AppBiddingGoal
-    class LowerTargetRoasRecommendation(proto.Message):
-        target_adjustment: Recommendation.TargetAdjustmentInfo
-    class DynamicImageExtensionOptInRecommendation(proto.Message): ...
-    class CampaignBudget(proto.Message):
-        current_amount_micros: int
-        recommended_new_amount_micros: int
-        new_start_date: str
-    class PerformanceMaxOptInRecommendation(proto.Message): ...
-    class ImprovePerformanceMaxAdStrengthRecommendation(proto.Message):
-        asset_group: str
-        ad_strength: gage_ad_strength.AdStrengthEnum.AdStrength
-    class MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation(proto.Message):
-        apply_link: str
-    class ForecastingSetTargetCpaRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., shared_set: str = ..., recommended_target_multiplier: float = ..., current_average_target_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["shared_set", "recommended_target_multiplier", "current_average_target_micros"]) -> bool: ...
+    class TargetCpaOptInRecommendation(proto.Message):
+        class TargetCpaOptInRecommendationOption(proto.Message):
+            goal: TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
+            target_cpa_micros: int
+            required_campaign_budget_amount_micros: int
+            impact: Recommendation.RecommendationImpact
+            def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., goal: TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal = ..., target_cpa_micros: int = ..., required_campaign_budget_amount_micros: int = ..., impact: Recommendation.RecommendationImpact = ...) -> None: ...
+            def __contains__(  # type: ignore[override]
+            self, key: Literal["goal", "target_cpa_micros", "required_campaign_budget_amount_micros", "impact"]) -> bool: ...
+        options: MutableSequence[Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption]
         recommended_target_cpa_micros: int
-        campaign_budget: Recommendation.CampaignBudget
-    class MaximizeConversionValueOptInRecommendation(proto.Message): ...
-    class ImproveGoogleTagCoverageRecommendation(proto.Message): ...
-    class PerformanceMaxFinalUrlOptInRecommendation(proto.Message): ...
-    class RefreshCustomerMatchListRecommendation(proto.Message):
-        user_list_id: int
-        user_list_name: str
-        days_since_last_refresh: int
-        top_spending_account: MutableSequence['Recommendation.AccountInfo']
-        targeting_accounts_count: int
-        owner_account: Recommendation.AccountInfo
-    class AccountInfo(proto.Message):
-        customer_id: int
-        descriptive_name: str
-    class CustomAudienceOptInRecommendation(proto.Message):
-        keywords: MutableSequence[criteria.KeywordInfo]
-    class LeadFormAssetRecommendation(proto.Message): ...
-    class ImproveDemandGenAdStrengthRecommendation(proto.Message):
-        ad: str
-        ad_strength: gage_ad_strength.AdStrengthEnum.AdStrength
-        demand_gen_asset_action_items: MutableSequence[str]
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., options: MutableSequence[Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption] = ..., recommended_target_cpa_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["options", "recommended_target_cpa_micros"]) -> bool: ...
+    class TargetRoasOptInRecommendation(proto.Message):
+        recommended_target_roas: float
+        required_campaign_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., recommended_target_roas: float = ..., required_campaign_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["recommended_target_roas", "required_campaign_budget_amount_micros"]) -> bool: ...
+    class TextAdRecommendation(proto.Message):
+        ad: Ad
+        creation_date: str
+        auto_apply_date: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ad: Ad = ..., creation_date: str = ..., auto_apply_date: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["ad", "creation_date", "auto_apply_date"]) -> bool: ...
+    class UpgradeLocalCampaignToPerformanceMaxRecommendation(proto.Message):
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: NoReturn) -> bool: ...
+    class UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation(proto.Message):
+        merchant_id: int
+        sales_country_code: str
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., merchant_id: int = ..., sales_country_code: str = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["merchant_id", "sales_country_code"]) -> bool: ...
+    class UseBroadMatchKeywordRecommendation(proto.Message):
+        keyword: MutableSequence[KeywordInfo]
+        suggested_keywords_count: int
+        campaign_keywords_count: int
+        campaign_uses_shared_budget: bool
+        required_campaign_budget_amount_micros: int
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., keyword: MutableSequence[KeywordInfo] = ..., suggested_keywords_count: int = ..., campaign_keywords_count: int = ..., campaign_uses_shared_budget: bool = ..., required_campaign_budget_amount_micros: int = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["keyword", "suggested_keywords_count", "campaign_keywords_count", "campaign_uses_shared_budget", "required_campaign_budget_amount_micros"]) -> bool: ...
     resource_name: str
-    type_: recommendation_type.RecommendationTypeEnum.RecommendationType
-    impact: RecommendationImpact
+    type_: RecommendationTypeEnum.RecommendationType
+    impact: Recommendation.RecommendationImpact
     campaign_budget: str
     campaign: str
     ad_group: str
     dismissed: bool
     campaigns: MutableSequence[str]
-    campaign_budget_recommendation: CampaignBudgetRecommendation
-    forecasting_campaign_budget_recommendation: CampaignBudgetRecommendation
-    keyword_recommendation: KeywordRecommendation
-    text_ad_recommendation: TextAdRecommendation
-    target_cpa_opt_in_recommendation: TargetCpaOptInRecommendation
-    maximize_conversions_opt_in_recommendation: MaximizeConversionsOptInRecommendation
-    enhanced_cpc_opt_in_recommendation: EnhancedCpcOptInRecommendation
-    search_partners_opt_in_recommendation: SearchPartnersOptInRecommendation
-    maximize_clicks_opt_in_recommendation: MaximizeClicksOptInRecommendation
-    optimize_ad_rotation_recommendation: OptimizeAdRotationRecommendation
-    keyword_match_type_recommendation: KeywordMatchTypeRecommendation
-    move_unused_budget_recommendation: MoveUnusedBudgetRecommendation
-    target_roas_opt_in_recommendation: TargetRoasOptInRecommendation
-    responsive_search_ad_recommendation: ResponsiveSearchAdRecommendation
-    marginal_roi_campaign_budget_recommendation: CampaignBudgetRecommendation
-    use_broad_match_keyword_recommendation: UseBroadMatchKeywordRecommendation
-    responsive_search_ad_asset_recommendation: ResponsiveSearchAdAssetRecommendation
-    upgrade_smart_shopping_campaign_to_performance_max_recommendation: UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation
-    responsive_search_ad_improve_ad_strength_recommendation: ResponsiveSearchAdImproveAdStrengthRecommendation
-    display_expansion_opt_in_recommendation: DisplayExpansionOptInRecommendation
-    upgrade_local_campaign_to_performance_max_recommendation: UpgradeLocalCampaignToPerformanceMaxRecommendation
-    raise_target_cpa_bid_too_low_recommendation: RaiseTargetCpaBidTooLowRecommendation
-    forecasting_set_target_roas_recommendation: ForecastingSetTargetRoasRecommendation
-    callout_asset_recommendation: CalloutAssetRecommendation
-    sitelink_asset_recommendation: SitelinkAssetRecommendation
-    call_asset_recommendation: CallAssetRecommendation
-    shopping_add_age_group_recommendation: ShoppingOfferAttributeRecommendation
-    shopping_add_color_recommendation: ShoppingOfferAttributeRecommendation
-    shopping_add_gender_recommendation: ShoppingOfferAttributeRecommendation
-    shopping_add_gtin_recommendation: ShoppingOfferAttributeRecommendation
-    shopping_add_more_identifiers_recommendation: ShoppingOfferAttributeRecommendation
-    shopping_add_size_recommendation: ShoppingOfferAttributeRecommendation
-    shopping_add_products_to_campaign_recommendation: ShoppingAddProductsToCampaignRecommendation
-    shopping_fix_disapproved_products_recommendation: ShoppingFixDisapprovedProductsRecommendation
-    shopping_target_all_offers_recommendation: ShoppingTargetAllOffersRecommendation
-    shopping_fix_suspended_merchant_center_account_recommendation: ShoppingMerchantCenterAccountSuspensionRecommendation
-    shopping_fix_merchant_center_account_suspension_warning_recommendation: ShoppingMerchantCenterAccountSuspensionRecommendation
-    shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation: ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation
-    dynamic_image_extension_opt_in_recommendation: DynamicImageExtensionOptInRecommendation
-    raise_target_cpa_recommendation: RaiseTargetCpaRecommendation
-    lower_target_roas_recommendation: LowerTargetRoasRecommendation
-    performance_max_opt_in_recommendation: PerformanceMaxOptInRecommendation
-    improve_performance_max_ad_strength_recommendation: ImprovePerformanceMaxAdStrengthRecommendation
-    migrate_dynamic_search_ads_campaign_to_performance_max_recommendation: MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation
-    forecasting_set_target_cpa_recommendation: ForecastingSetTargetCpaRecommendation
-    set_target_cpa_recommendation: ForecastingSetTargetCpaRecommendation
-    set_target_roas_recommendation: ForecastingSetTargetRoasRecommendation
-    maximize_conversion_value_opt_in_recommendation: MaximizeConversionValueOptInRecommendation
-    improve_google_tag_coverage_recommendation: ImproveGoogleTagCoverageRecommendation
-    performance_max_final_url_opt_in_recommendation: PerformanceMaxFinalUrlOptInRecommendation
-    refresh_customer_match_list_recommendation: RefreshCustomerMatchListRecommendation
-    custom_audience_opt_in_recommendation: CustomAudienceOptInRecommendation
-    lead_form_asset_recommendation: LeadFormAssetRecommendation
-    improve_demand_gen_ad_strength_recommendation: ImproveDemandGenAdStrengthRecommendation
+    campaign_budget_recommendation: Recommendation.CampaignBudgetRecommendation
+    forecasting_campaign_budget_recommendation: Recommendation.CampaignBudgetRecommendation
+    keyword_recommendation: Recommendation.KeywordRecommendation
+    text_ad_recommendation: Recommendation.TextAdRecommendation
+    target_cpa_opt_in_recommendation: Recommendation.TargetCpaOptInRecommendation
+    maximize_conversions_opt_in_recommendation: Recommendation.MaximizeConversionsOptInRecommendation
+    enhanced_cpc_opt_in_recommendation: Recommendation.EnhancedCpcOptInRecommendation
+    search_partners_opt_in_recommendation: Recommendation.SearchPartnersOptInRecommendation
+    maximize_clicks_opt_in_recommendation: Recommendation.MaximizeClicksOptInRecommendation
+    optimize_ad_rotation_recommendation: Recommendation.OptimizeAdRotationRecommendation
+    keyword_match_type_recommendation: Recommendation.KeywordMatchTypeRecommendation
+    move_unused_budget_recommendation: Recommendation.MoveUnusedBudgetRecommendation
+    target_roas_opt_in_recommendation: Recommendation.TargetRoasOptInRecommendation
+    responsive_search_ad_recommendation: Recommendation.ResponsiveSearchAdRecommendation
+    marginal_roi_campaign_budget_recommendation: Recommendation.CampaignBudgetRecommendation
+    use_broad_match_keyword_recommendation: Recommendation.UseBroadMatchKeywordRecommendation
+    responsive_search_ad_asset_recommendation: Recommendation.ResponsiveSearchAdAssetRecommendation
+    upgrade_smart_shopping_campaign_to_performance_max_recommendation: Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation
+    responsive_search_ad_improve_ad_strength_recommendation: Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation
+    display_expansion_opt_in_recommendation: Recommendation.DisplayExpansionOptInRecommendation
+    upgrade_local_campaign_to_performance_max_recommendation: Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation
+    raise_target_cpa_bid_too_low_recommendation: Recommendation.RaiseTargetCpaBidTooLowRecommendation
+    forecasting_set_target_roas_recommendation: Recommendation.ForecastingSetTargetRoasRecommendation
+    callout_asset_recommendation: Recommendation.CalloutAssetRecommendation
+    sitelink_asset_recommendation: Recommendation.SitelinkAssetRecommendation
+    call_asset_recommendation: Recommendation.CallAssetRecommendation
+    shopping_add_age_group_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_color_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_gender_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_gtin_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_more_identifiers_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_size_recommendation: Recommendation.ShoppingOfferAttributeRecommendation
+    shopping_add_products_to_campaign_recommendation: Recommendation.ShoppingAddProductsToCampaignRecommendation
+    shopping_fix_disapproved_products_recommendation: Recommendation.ShoppingFixDisapprovedProductsRecommendation
+    shopping_target_all_offers_recommendation: Recommendation.ShoppingTargetAllOffersRecommendation
+    shopping_fix_suspended_merchant_center_account_recommendation: Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation
+    shopping_fix_merchant_center_account_suspension_warning_recommendation: Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation
+    shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation: Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation
+    dynamic_image_extension_opt_in_recommendation: Recommendation.DynamicImageExtensionOptInRecommendation
+    raise_target_cpa_recommendation: Recommendation.RaiseTargetCpaRecommendation
+    lower_target_roas_recommendation: Recommendation.LowerTargetRoasRecommendation
+    performance_max_opt_in_recommendation: Recommendation.PerformanceMaxOptInRecommendation
+    improve_performance_max_ad_strength_recommendation: Recommendation.ImprovePerformanceMaxAdStrengthRecommendation
+    migrate_dynamic_search_ads_campaign_to_performance_max_recommendation: Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation
+    forecasting_set_target_cpa_recommendation: Recommendation.ForecastingSetTargetCpaRecommendation
+    set_target_cpa_recommendation: Recommendation.ForecastingSetTargetCpaRecommendation
+    set_target_roas_recommendation: Recommendation.ForecastingSetTargetRoasRecommendation
+    maximize_conversion_value_opt_in_recommendation: Recommendation.MaximizeConversionValueOptInRecommendation
+    improve_google_tag_coverage_recommendation: Recommendation.ImproveGoogleTagCoverageRecommendation
+    performance_max_final_url_opt_in_recommendation: Recommendation.PerformanceMaxFinalUrlOptInRecommendation
+    refresh_customer_match_list_recommendation: Recommendation.RefreshCustomerMatchListRecommendation
+    custom_audience_opt_in_recommendation: Recommendation.CustomAudienceOptInRecommendation
+    lead_form_asset_recommendation: Recommendation.LeadFormAssetRecommendation
+    improve_demand_gen_ad_strength_recommendation: Recommendation.ImproveDemandGenAdStrengthRecommendation
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., type_: RecommendationTypeEnum.RecommendationType = ..., impact: Recommendation.RecommendationImpact = ..., campaign_budget: str = ..., campaign: str = ..., ad_group: str = ..., dismissed: bool = ..., campaigns: MutableSequence[str] = ..., campaign_budget_recommendation: Recommendation.CampaignBudgetRecommendation = ..., forecasting_campaign_budget_recommendation: Recommendation.CampaignBudgetRecommendation = ..., keyword_recommendation: Recommendation.KeywordRecommendation = ..., text_ad_recommendation: Recommendation.TextAdRecommendation = ..., target_cpa_opt_in_recommendation: Recommendation.TargetCpaOptInRecommendation = ..., maximize_conversions_opt_in_recommendation: Recommendation.MaximizeConversionsOptInRecommendation = ..., enhanced_cpc_opt_in_recommendation: Recommendation.EnhancedCpcOptInRecommendation = ..., search_partners_opt_in_recommendation: Recommendation.SearchPartnersOptInRecommendation = ..., maximize_clicks_opt_in_recommendation: Recommendation.MaximizeClicksOptInRecommendation = ..., optimize_ad_rotation_recommendation: Recommendation.OptimizeAdRotationRecommendation = ..., keyword_match_type_recommendation: Recommendation.KeywordMatchTypeRecommendation = ..., move_unused_budget_recommendation: Recommendation.MoveUnusedBudgetRecommendation = ..., target_roas_opt_in_recommendation: Recommendation.TargetRoasOptInRecommendation = ..., responsive_search_ad_recommendation: Recommendation.ResponsiveSearchAdRecommendation = ..., marginal_roi_campaign_budget_recommendation: Recommendation.CampaignBudgetRecommendation = ..., use_broad_match_keyword_recommendation: Recommendation.UseBroadMatchKeywordRecommendation = ..., responsive_search_ad_asset_recommendation: Recommendation.ResponsiveSearchAdAssetRecommendation = ..., upgrade_smart_shopping_campaign_to_performance_max_recommendation: Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation = ..., responsive_search_ad_improve_ad_strength_recommendation: Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation = ..., display_expansion_opt_in_recommendation: Recommendation.DisplayExpansionOptInRecommendation = ..., upgrade_local_campaign_to_performance_max_recommendation: Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation = ..., raise_target_cpa_bid_too_low_recommendation: Recommendation.RaiseTargetCpaBidTooLowRecommendation = ..., forecasting_set_target_roas_recommendation: Recommendation.ForecastingSetTargetRoasRecommendation = ..., callout_asset_recommendation: Recommendation.CalloutAssetRecommendation = ..., sitelink_asset_recommendation: Recommendation.SitelinkAssetRecommendation = ..., call_asset_recommendation: Recommendation.CallAssetRecommendation = ..., shopping_add_age_group_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ..., shopping_add_color_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ..., shopping_add_gender_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ..., shopping_add_gtin_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ..., shopping_add_more_identifiers_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ..., shopping_add_size_recommendation: Recommendation.ShoppingOfferAttributeRecommendation = ..., shopping_add_products_to_campaign_recommendation: Recommendation.ShoppingAddProductsToCampaignRecommendation = ..., shopping_fix_disapproved_products_recommendation: Recommendation.ShoppingFixDisapprovedProductsRecommendation = ..., shopping_target_all_offers_recommendation: Recommendation.ShoppingTargetAllOffersRecommendation = ..., shopping_fix_suspended_merchant_center_account_recommendation: Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation = ..., shopping_fix_merchant_center_account_suspension_warning_recommendation: Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation = ..., shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation: Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation = ..., dynamic_image_extension_opt_in_recommendation: Recommendation.DynamicImageExtensionOptInRecommendation = ..., raise_target_cpa_recommendation: Recommendation.RaiseTargetCpaRecommendation = ..., lower_target_roas_recommendation: Recommendation.LowerTargetRoasRecommendation = ..., performance_max_opt_in_recommendation: Recommendation.PerformanceMaxOptInRecommendation = ..., improve_performance_max_ad_strength_recommendation: Recommendation.ImprovePerformanceMaxAdStrengthRecommendation = ..., migrate_dynamic_search_ads_campaign_to_performance_max_recommendation: Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation = ..., forecasting_set_target_cpa_recommendation: Recommendation.ForecastingSetTargetCpaRecommendation = ..., set_target_cpa_recommendation: Recommendation.ForecastingSetTargetCpaRecommendation = ..., set_target_roas_recommendation: Recommendation.ForecastingSetTargetRoasRecommendation = ..., maximize_conversion_value_opt_in_recommendation: Recommendation.MaximizeConversionValueOptInRecommendation = ..., improve_google_tag_coverage_recommendation: Recommendation.ImproveGoogleTagCoverageRecommendation = ..., performance_max_final_url_opt_in_recommendation: Recommendation.PerformanceMaxFinalUrlOptInRecommendation = ..., refresh_customer_match_list_recommendation: Recommendation.RefreshCustomerMatchListRecommendation = ..., custom_audience_opt_in_recommendation: Recommendation.CustomAudienceOptInRecommendation = ..., lead_form_asset_recommendation: Recommendation.LeadFormAssetRecommendation = ..., improve_demand_gen_ad_strength_recommendation: Recommendation.ImproveDemandGenAdStrengthRecommendation = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "type_", "impact", "campaign_budget", "campaign", "ad_group", "dismissed", "campaigns", "campaign_budget_recommendation", "forecasting_campaign_budget_recommendation", "keyword_recommendation", "text_ad_recommendation", "target_cpa_opt_in_recommendation", "maximize_conversions_opt_in_recommendation", "enhanced_cpc_opt_in_recommendation", "search_partners_opt_in_recommendation", "maximize_clicks_opt_in_recommendation", "optimize_ad_rotation_recommendation", "keyword_match_type_recommendation", "move_unused_budget_recommendation", "target_roas_opt_in_recommendation", "responsive_search_ad_recommendation", "marginal_roi_campaign_budget_recommendation", "use_broad_match_keyword_recommendation", "responsive_search_ad_asset_recommendation", "upgrade_smart_shopping_campaign_to_performance_max_recommendation", "responsive_search_ad_improve_ad_strength_recommendation", "display_expansion_opt_in_recommendation", "upgrade_local_campaign_to_performance_max_recommendation", "raise_target_cpa_bid_too_low_recommendation", "forecasting_set_target_roas_recommendation", "callout_asset_recommendation", "sitelink_asset_recommendation", "call_asset_recommendation", "shopping_add_age_group_recommendation", "shopping_add_color_recommendation", "shopping_add_gender_recommendation", "shopping_add_gtin_recommendation", "shopping_add_more_identifiers_recommendation", "shopping_add_size_recommendation", "shopping_add_products_to_campaign_recommendation", "shopping_fix_disapproved_products_recommendation", "shopping_target_all_offers_recommendation", "shopping_fix_suspended_merchant_center_account_recommendation", "shopping_fix_merchant_center_account_suspension_warning_recommendation", "shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation", "dynamic_image_extension_opt_in_recommendation", "raise_target_cpa_recommendation", "lower_target_roas_recommendation", "performance_max_opt_in_recommendation", "improve_performance_max_ad_strength_recommendation", "migrate_dynamic_search_ads_campaign_to_performance_max_recommendation", "forecasting_set_target_cpa_recommendation", "set_target_cpa_recommendation", "set_target_roas_recommendation", "maximize_conversion_value_opt_in_recommendation", "improve_google_tag_coverage_recommendation", "performance_max_final_url_opt_in_recommendation", "refresh_customer_match_list_recommendation", "custom_audience_opt_in_recommendation", "lead_form_asset_recommendation", "improve_demand_gen_ad_strength_recommendation"]) -> bool: ...

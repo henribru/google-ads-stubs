@@ -1,9 +1,13 @@
+from google.ads.googleads.v18.enums.types.customizer_attribute_type import CustomizerAttributeTypeEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import customizer_attribute_type
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomizerValue(proto.Message):
-    type_: customizer_attribute_type.CustomizerAttributeTypeEnum.CustomizerAttributeType
+    type_: CustomizerAttributeTypeEnum.CustomizerAttributeType
     string_value: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., type_: CustomizerAttributeTypeEnum.CustomizerAttributeType = ..., string_value: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["type_", "string_value"]) -> bool: ...

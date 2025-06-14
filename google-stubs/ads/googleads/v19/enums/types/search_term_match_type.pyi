@@ -1,14 +1,18 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class SearchTermMatchTypeEnum(proto.Message):
     class SearchTermMatchType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        BROAD: int
-        EXACT: int
-        PHRASE: int
-        NEAR_EXACT: int
-        NEAR_PHRASE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        BROAD = 2
+        EXACT = 3
+        PHRASE = 4
+        NEAR_EXACT = 5
+        NEAR_PHRASE = 6
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

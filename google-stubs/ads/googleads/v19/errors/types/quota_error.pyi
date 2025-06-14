@@ -1,14 +1,18 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class QuotaErrorEnum(proto.Message):
     class QuotaError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        RESOURCE_EXHAUSTED: int
-        ACCESS_PROHIBITED: int
-        RESOURCE_TEMPORARILY_EXHAUSTED: int
-        EXCESSIVE_SHORT_TERM_QUERY_RESOURCE_CONSUMPTION: int
-        EXCESSIVE_LONG_TERM_QUERY_RESOURCE_CONSUMPTION: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        RESOURCE_EXHAUSTED = 2
+        ACCESS_PROHIBITED = 3
+        RESOURCE_TEMPORARILY_EXHAUSTED = 4
+        EXCESSIVE_SHORT_TERM_QUERY_RESOURCE_CONSUMPTION = 5
+        EXCESSIVE_LONG_TERM_QUERY_RESOURCE_CONSUMPTION = 6
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

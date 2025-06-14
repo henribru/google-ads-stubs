@@ -1,17 +1,21 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomAudienceErrorEnum(proto.Message):
     class CustomAudienceError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NAME_ALREADY_USED: int
-        CANNOT_REMOVE_WHILE_IN_USE: int
-        RESOURCE_ALREADY_REMOVED: int
-        MEMBER_TYPE_AND_PARAMETER_ALREADY_EXISTED: int
-        INVALID_MEMBER_TYPE: int
-        MEMBER_TYPE_AND_VALUE_DOES_NOT_MATCH: int
-        POLICY_VIOLATION: int
-        INVALID_TYPE_CHANGE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NAME_ALREADY_USED = 2
+        CANNOT_REMOVE_WHILE_IN_USE = 3
+        RESOURCE_ALREADY_REMOVED = 4
+        MEMBER_TYPE_AND_PARAMETER_ALREADY_EXISTED = 5
+        INVALID_MEMBER_TYPE = 6
+        MEMBER_TYPE_AND_VALUE_DOES_NOT_MATCH = 7
+        POLICY_VIOLATION = 8
+        INVALID_TYPE_CHANGE = 9
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

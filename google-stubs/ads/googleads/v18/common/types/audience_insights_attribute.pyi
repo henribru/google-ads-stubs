@@ -1,13 +1,37 @@
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from google.ads.googleads.v18.common.types.criteria import YouTubeChannelInfo
+from google.ads.googleads.v18.enums.types.audience_insights_dimension import AudienceInsightsDimensionEnum
+from google.ads.googleads.v18.common.types.criteria import YouTubeChannelInfo
+from google.ads.googleads.v18.common.types.criteria import IncomeRangeInfo
+from google.ads.googleads.v18.common.types.criteria import ParentalStatusInfo
+from google.ads.googleads.v18.common.types.criteria import UserInterestInfo
+from google.ads.googleads.v18.common.types.criteria import LocationInfo
+from google.ads.googleads.v18.common.types.criteria import GenderInfo
+from google.ads.googleads.v18.common.types.criteria import AgeRangeInfo
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.common.types import criteria
-from google.ads.googleads.v18.enums.types import audience_insights_dimension
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
+class AudienceInsightsAttribute(proto.Message):
+    age_range: AgeRangeInfo
+    gender: GenderInfo
+    location: LocationInfo
+    user_interest: UserInterestInfo
+    entity: AudienceInsightsEntity
+    category: AudienceInsightsCategory
+    dynamic_lineup: AudienceInsightsDynamicLineup
+    parental_status: ParentalStatusInfo
+    income_range: IncomeRangeInfo
+    youtube_channel: YouTubeChannelInfo
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., age_range: AgeRangeInfo = ..., gender: GenderInfo = ..., location: LocationInfo = ..., user_interest: UserInterestInfo = ..., entity: AudienceInsightsEntity = ..., category: AudienceInsightsCategory = ..., dynamic_lineup: AudienceInsightsDynamicLineup = ..., parental_status: ParentalStatusInfo = ..., income_range: IncomeRangeInfo = ..., youtube_channel: YouTubeChannelInfo = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["age_range", "gender", "location", "user_interest", "entity", "category", "dynamic_lineup", "parental_status", "income_range", "youtube_channel"]) -> bool: ...
 class AudienceInsightsAttributeMetadata(proto.Message):
-    dimension: audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+    dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension
     attribute: AudienceInsightsAttribute
     display_name: str
     display_info: str
@@ -16,41 +40,47 @@ class AudienceInsightsAttributeMetadata(proto.Message):
     youtube_channel_metadata: YouTubeChannelAttributeMetadata
     dynamic_attribute_metadata: DynamicLineupAttributeMetadata
     location_attribute_metadata: LocationAttributeMetadata
-
-class AudienceInsightsAttribute(proto.Message):
-    age_range: criteria.AgeRangeInfo
-    gender: criteria.GenderInfo
-    location: criteria.LocationInfo
-    user_interest: criteria.UserInterestInfo
-    entity: AudienceInsightsEntity
-    category: AudienceInsightsCategory
-    dynamic_lineup: AudienceInsightsDynamicLineup
-    parental_status: criteria.ParentalStatusInfo
-    income_range: criteria.IncomeRangeInfo
-    youtube_channel: criteria.YouTubeChannelInfo
-
-class AudienceInsightsEntity(proto.Message):
-    knowledge_graph_machine_id: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., dimension: AudienceInsightsDimensionEnum.AudienceInsightsDimension = ..., attribute: AudienceInsightsAttribute = ..., display_name: str = ..., display_info: str = ..., potential_youtube_reach: int = ..., subscriber_share: float = ..., youtube_channel_metadata: YouTubeChannelAttributeMetadata = ..., dynamic_attribute_metadata: DynamicLineupAttributeMetadata = ..., location_attribute_metadata: LocationAttributeMetadata = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["dimension", "attribute", "display_name", "display_info", "potential_youtube_reach", "subscriber_share", "youtube_channel_metadata", "dynamic_attribute_metadata", "location_attribute_metadata"]) -> bool: ...
 class AudienceInsightsCategory(proto.Message):
     category_id: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., category_id: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["category_id"]) -> bool: ...
 class AudienceInsightsDynamicLineup(proto.Message):
     dynamic_lineup_id: str
-
-class YouTubeChannelAttributeMetadata(proto.Message):
-    subscriber_count: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., dynamic_lineup_id: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["dynamic_lineup_id"]) -> bool: ...
+class AudienceInsightsEntity(proto.Message):
+    knowledge_graph_machine_id: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., knowledge_graph_machine_id: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["knowledge_graph_machine_id"]) -> bool: ...
 class DynamicLineupAttributeMetadata(proto.Message):
     class SampleChannel(proto.Message):
-        youtube_channel: criteria.YouTubeChannelInfo
+        youtube_channel: YouTubeChannelInfo
         display_name: str
         youtube_channel_metadata: YouTubeChannelAttributeMetadata
-    inventory_country: criteria.LocationInfo
+        def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., youtube_channel: YouTubeChannelInfo = ..., display_name: str = ..., youtube_channel_metadata: YouTubeChannelAttributeMetadata = ...) -> None: ...
+        def __contains__(  # type: ignore[override]
+        self, key: Literal["youtube_channel", "display_name", "youtube_channel_metadata"]) -> bool: ...
+    inventory_country: LocationInfo
     median_monthly_inventory: int
     channel_count_lower_bound: int
     channel_count_upper_bound: int
-    sample_channels: MutableSequence[SampleChannel]
-
+    sample_channels: MutableSequence[DynamicLineupAttributeMetadata.SampleChannel]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., inventory_country: LocationInfo = ..., median_monthly_inventory: int = ..., channel_count_lower_bound: int = ..., channel_count_upper_bound: int = ..., sample_channels: MutableSequence[DynamicLineupAttributeMetadata.SampleChannel] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["inventory_country", "median_monthly_inventory", "channel_count_lower_bound", "channel_count_upper_bound", "sample_channels"]) -> bool: ...
 class LocationAttributeMetadata(proto.Message):
-    country_location: criteria.LocationInfo
+    country_location: LocationInfo
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., country_location: LocationInfo = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["country_location"]) -> bool: ...
+class YouTubeChannelAttributeMetadata(proto.Message):
+    subscriber_count: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., subscriber_count: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["subscriber_count"]) -> bool: ...

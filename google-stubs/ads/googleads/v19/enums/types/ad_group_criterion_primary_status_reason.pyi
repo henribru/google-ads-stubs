@@ -1,27 +1,31 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AdGroupCriterionPrimaryStatusReasonEnum(proto.Message):
     class AdGroupCriterionPrimaryStatusReason(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CAMPAIGN_PENDING: int
-        CAMPAIGN_CRITERION_NEGATIVE: int
-        CAMPAIGN_PAUSED: int
-        CAMPAIGN_REMOVED: int
-        CAMPAIGN_ENDED: int
-        AD_GROUP_PAUSED: int
-        AD_GROUP_REMOVED: int
-        AD_GROUP_CRITERION_DISAPPROVED: int
-        AD_GROUP_CRITERION_RARELY_SERVED: int
-        AD_GROUP_CRITERION_LOW_QUALITY: int
-        AD_GROUP_CRITERION_UNDER_REVIEW: int
-        AD_GROUP_CRITERION_PENDING_REVIEW: int
-        AD_GROUP_CRITERION_BELOW_FIRST_PAGE_BID: int
-        AD_GROUP_CRITERION_NEGATIVE: int
-        AD_GROUP_CRITERION_RESTRICTED: int
-        AD_GROUP_CRITERION_PAUSED: int
-        AD_GROUP_CRITERION_PAUSED_DUE_TO_LOW_ACTIVITY: int
-        AD_GROUP_CRITERION_REMOVED: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CAMPAIGN_PENDING = 2
+        CAMPAIGN_CRITERION_NEGATIVE = 3
+        CAMPAIGN_PAUSED = 4
+        CAMPAIGN_REMOVED = 5
+        CAMPAIGN_ENDED = 6
+        AD_GROUP_PAUSED = 7
+        AD_GROUP_REMOVED = 8
+        AD_GROUP_CRITERION_DISAPPROVED = 9
+        AD_GROUP_CRITERION_RARELY_SERVED = 10
+        AD_GROUP_CRITERION_LOW_QUALITY = 11
+        AD_GROUP_CRITERION_UNDER_REVIEW = 12
+        AD_GROUP_CRITERION_PENDING_REVIEW = 13
+        AD_GROUP_CRITERION_BELOW_FIRST_PAGE_BID = 14
+        AD_GROUP_CRITERION_NEGATIVE = 15
+        AD_GROUP_CRITERION_RESTRICTED = 16
+        AD_GROUP_CRITERION_PAUSED = 17
+        AD_GROUP_CRITERION_PAUSED_DUE_TO_LOW_ACTIVITY = 18
+        AD_GROUP_CRITERION_REMOVED = 19
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

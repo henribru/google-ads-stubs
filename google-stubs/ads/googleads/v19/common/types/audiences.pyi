@@ -1,64 +1,103 @@
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.enums.types.parental_status_type import ParentalStatusTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.enums.types.income_range_type import IncomeRangeTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v19.enums.types.gender_type import GenderTypeEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.enums.types import gender_type, income_range_type, parental_status_type
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
+class AgeDimension(proto.Message):
+    age_ranges: MutableSequence[AgeSegment]
+    include_undetermined: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., age_ranges: MutableSequence[AgeSegment] = ..., include_undetermined: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["age_ranges", "include_undetermined"]) -> bool: ...
+class AgeSegment(proto.Message):
+    min_age: int
+    max_age: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., min_age: int = ..., max_age: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["min_age", "max_age"]) -> bool: ...
 class AudienceDimension(proto.Message):
     age: AgeDimension
     gender: GenderDimension
     household_income: HouseholdIncomeDimension
     parental_status: ParentalStatusDimension
     audience_segments: AudienceSegmentDimension
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., age: AgeDimension = ..., gender: GenderDimension = ..., household_income: HouseholdIncomeDimension = ..., parental_status: ParentalStatusDimension = ..., audience_segments: AudienceSegmentDimension = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["age", "gender", "household_income", "parental_status", "audience_segments"]) -> bool: ...
 class AudienceExclusionDimension(proto.Message):
-    exclusions: MutableSequence['ExclusionSegment']
-
-class ExclusionSegment(proto.Message):
-    user_list: UserListSegment
-
-class AgeDimension(proto.Message):
-    age_ranges: MutableSequence['AgeSegment']
-    include_undetermined: bool
-
-class AgeSegment(proto.Message):
-    min_age: int
-    max_age: int
-
-class GenderDimension(proto.Message):
-    genders: MutableSequence[gender_type.GenderTypeEnum.GenderType]
-    include_undetermined: bool
-
-class HouseholdIncomeDimension(proto.Message):
-    income_ranges: MutableSequence[income_range_type.IncomeRangeTypeEnum.IncomeRangeType]
-    include_undetermined: bool
-
-class ParentalStatusDimension(proto.Message):
-    parental_statuses: MutableSequence[parental_status_type.ParentalStatusTypeEnum.ParentalStatusType]
-    include_undetermined: bool
-
-class AudienceSegmentDimension(proto.Message):
-    segments: MutableSequence['AudienceSegment']
-
+    exclusions: MutableSequence[ExclusionSegment]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., exclusions: MutableSequence[ExclusionSegment] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["exclusions"]) -> bool: ...
 class AudienceSegment(proto.Message):
     user_list: UserListSegment
     user_interest: UserInterestSegment
     life_event: LifeEventSegment
     detailed_demographic: DetailedDemographicSegment
     custom_audience: CustomAudienceSegment
-
-class UserListSegment(proto.Message):
-    user_list: str
-
-class UserInterestSegment(proto.Message):
-    user_interest_category: str
-
-class LifeEventSegment(proto.Message):
-    life_event: str
-
-class DetailedDemographicSegment(proto.Message):
-    detailed_demographic: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., user_list: UserListSegment = ..., user_interest: UserInterestSegment = ..., life_event: LifeEventSegment = ..., detailed_demographic: DetailedDemographicSegment = ..., custom_audience: CustomAudienceSegment = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["user_list", "user_interest", "life_event", "detailed_demographic", "custom_audience"]) -> bool: ...
+class AudienceSegmentDimension(proto.Message):
+    segments: MutableSequence[AudienceSegment]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., segments: MutableSequence[AudienceSegment] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["segments"]) -> bool: ...
 class CustomAudienceSegment(proto.Message):
     custom_audience: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., custom_audience: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["custom_audience"]) -> bool: ...
+class DetailedDemographicSegment(proto.Message):
+    detailed_demographic: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., detailed_demographic: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["detailed_demographic"]) -> bool: ...
+class ExclusionSegment(proto.Message):
+    user_list: UserListSegment
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., user_list: UserListSegment = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["user_list"]) -> bool: ...
+class GenderDimension(proto.Message):
+    genders: MutableSequence[GenderTypeEnum.GenderType]
+    include_undetermined: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., genders: MutableSequence[GenderTypeEnum.GenderType] = ..., include_undetermined: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["genders", "include_undetermined"]) -> bool: ...
+class HouseholdIncomeDimension(proto.Message):
+    income_ranges: MutableSequence[IncomeRangeTypeEnum.IncomeRangeType]
+    include_undetermined: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., income_ranges: MutableSequence[IncomeRangeTypeEnum.IncomeRangeType] = ..., include_undetermined: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["income_ranges", "include_undetermined"]) -> bool: ...
+class LifeEventSegment(proto.Message):
+    life_event: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., life_event: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["life_event"]) -> bool: ...
+class ParentalStatusDimension(proto.Message):
+    parental_statuses: MutableSequence[ParentalStatusTypeEnum.ParentalStatusType]
+    include_undetermined: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., parental_statuses: MutableSequence[ParentalStatusTypeEnum.ParentalStatusType] = ..., include_undetermined: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["parental_statuses", "include_undetermined"]) -> bool: ...
+class UserInterestSegment(proto.Message):
+    user_interest_category: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., user_interest_category: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["user_interest_category"]) -> bool: ...
+class UserListSegment(proto.Message):
+    user_list: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., user_list: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["user_list"]) -> bool: ...

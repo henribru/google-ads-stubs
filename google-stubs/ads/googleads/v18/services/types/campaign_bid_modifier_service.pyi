@@ -1,30 +1,43 @@
+from collections.abc import MutableSequence
+from google.rpc.status_pb2 import Status
+from google.ads.googleads.v18.enums.types.response_content_type import ResponseContentTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.resources.types.campaign_bid_modifier import CampaignBidModifier
+from google.ads.googleads.v18.resources.types.campaign_bid_modifier import CampaignBidModifier
+from google.ads.googleads.v18.resources.types.campaign_bid_modifier import CampaignBidModifier
+from google.protobuf.field_mask_pb2 import FieldMask
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v18.resources.types import campaign_bid_modifier as gagr_campaign_bid_modifier
-from google.protobuf import field_mask_pb2
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class MutateCampaignBidModifiersRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['CampaignBidModifierOperation']
-    partial_failure: bool
-    validate_only: bool
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CampaignBidModifierOperation(proto.Message):
-    update_mask: field_mask_pb2.FieldMask
-    create: gagr_campaign_bid_modifier.CampaignBidModifier
-    update: gagr_campaign_bid_modifier.CampaignBidModifier
+    update_mask: FieldMask
+    create: CampaignBidModifier
+    update: CampaignBidModifier
     remove: str
-
-class MutateCampaignBidModifiersResponse(proto.Message):
-    partial_failure_error: status_pb2.Status
-    results: MutableSequence['MutateCampaignBidModifierResult']
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., update_mask: FieldMask = ..., create: CampaignBidModifier = ..., update: CampaignBidModifier = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["update_mask", "create", "update", "remove"]) -> bool: ...
 class MutateCampaignBidModifierResult(proto.Message):
     resource_name: str
-    campaign_bid_modifier: gagr_campaign_bid_modifier.CampaignBidModifier
+    campaign_bid_modifier: CampaignBidModifier
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., campaign_bid_modifier: CampaignBidModifier = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "campaign_bid_modifier"]) -> bool: ...
+class MutateCampaignBidModifiersRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[CampaignBidModifierOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[CampaignBidModifierOperation] = ..., partial_failure: bool = ..., validate_only: bool = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...
+class MutateCampaignBidModifiersResponse(proto.Message):
+    partial_failure_error: Status
+    results: MutableSequence[MutateCampaignBidModifierResult]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., partial_failure_error: Status = ..., results: MutableSequence[MutateCampaignBidModifierResult] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["partial_failure_error", "results"]) -> bool: ...

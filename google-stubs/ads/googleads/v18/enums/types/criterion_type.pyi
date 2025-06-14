@@ -1,49 +1,53 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CriterionTypeEnum(proto.Message):
     class CriterionType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        KEYWORD: int
-        PLACEMENT: int
-        MOBILE_APP_CATEGORY: int
-        MOBILE_APPLICATION: int
-        DEVICE: int
-        LOCATION: int
-        LISTING_GROUP: int
-        AD_SCHEDULE: int
-        AGE_RANGE: int
-        GENDER: int
-        INCOME_RANGE: int
-        PARENTAL_STATUS: int
-        YOUTUBE_VIDEO: int
-        YOUTUBE_CHANNEL: int
-        USER_LIST: int
-        PROXIMITY: int
-        TOPIC: int
-        LISTING_SCOPE: int
-        LANGUAGE: int
-        IP_BLOCK: int
-        CONTENT_LABEL: int
-        CARRIER: int
-        USER_INTEREST: int
-        WEBPAGE: int
-        OPERATING_SYSTEM_VERSION: int
-        APP_PAYMENT_MODEL: int
-        MOBILE_DEVICE: int
-        CUSTOM_AFFINITY: int
-        CUSTOM_INTENT: int
-        LOCATION_GROUP: int
-        CUSTOM_AUDIENCE: int
-        COMBINED_AUDIENCE: int
-        KEYWORD_THEME: int
-        AUDIENCE: int
-        NEGATIVE_KEYWORD_LIST: int
-        LOCAL_SERVICE_ID: int
-        SEARCH_THEME: int
-        BRAND: int
-        BRAND_LIST: int
-        LIFE_EVENT: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        KEYWORD = 2
+        PLACEMENT = 3
+        MOBILE_APP_CATEGORY = 4
+        MOBILE_APPLICATION = 5
+        DEVICE = 6
+        LOCATION = 7
+        LISTING_GROUP = 8
+        AD_SCHEDULE = 9
+        AGE_RANGE = 10
+        GENDER = 11
+        INCOME_RANGE = 12
+        PARENTAL_STATUS = 13
+        YOUTUBE_VIDEO = 14
+        YOUTUBE_CHANNEL = 15
+        USER_LIST = 16
+        PROXIMITY = 17
+        TOPIC = 18
+        LISTING_SCOPE = 19
+        LANGUAGE = 20
+        IP_BLOCK = 21
+        CONTENT_LABEL = 22
+        CARRIER = 23
+        USER_INTEREST = 24
+        WEBPAGE = 25
+        OPERATING_SYSTEM_VERSION = 26
+        APP_PAYMENT_MODEL = 27
+        MOBILE_DEVICE = 28
+        CUSTOM_AFFINITY = 29
+        CUSTOM_INTENT = 30
+        LOCATION_GROUP = 31
+        CUSTOM_AUDIENCE = 32
+        COMBINED_AUDIENCE = 33
+        KEYWORD_THEME = 34
+        AUDIENCE = 35
+        NEGATIVE_KEYWORD_LIST = 36
+        LOCAL_SERVICE_ID = 37
+        SEARCH_THEME = 38
+        BRAND = 39
+        BRAND_LIST = 40
+        LIFE_EVENT = 41
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

@@ -1,27 +1,39 @@
+from google.rpc.status_pb2 import Status
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.response_content_type import ResponseContentTypeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.resources.types.campaign_customizer import CampaignCustomizer
+from google.ads.googleads.v18.resources.types.campaign_customizer import CampaignCustomizer
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.enums.types import response_content_type as gage_response_content_type
-from google.ads.googleads.v18.resources.types import campaign_customizer as gagr_campaign_customizer
-from google.rpc import status_pb2
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class MutateCampaignCustomizersRequest(proto.Message):
-    customer_id: str
-    operations: MutableSequence['CampaignCustomizerOperation']
-    partial_failure: bool
-    validate_only: bool
-    response_content_type: gage_response_content_type.ResponseContentTypeEnum.ResponseContentType
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CampaignCustomizerOperation(proto.Message):
-    create: gagr_campaign_customizer.CampaignCustomizer
+    create: CampaignCustomizer
     remove: str
-
-class MutateCampaignCustomizersResponse(proto.Message):
-    results: MutableSequence['MutateCampaignCustomizerResult']
-    partial_failure_error: status_pb2.Status
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., create: CampaignCustomizer = ..., remove: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["create", "remove"]) -> bool: ...
 class MutateCampaignCustomizerResult(proto.Message):
     resource_name: str
-    campaign_customizer: gagr_campaign_customizer.CampaignCustomizer
+    campaign_customizer: CampaignCustomizer
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., campaign_customizer: CampaignCustomizer = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "campaign_customizer"]) -> bool: ...
+class MutateCampaignCustomizersRequest(proto.Message):
+    customer_id: str
+    operations: MutableSequence[CampaignCustomizerOperation]
+    partial_failure: bool
+    validate_only: bool
+    response_content_type: ResponseContentTypeEnum.ResponseContentType
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., operations: MutableSequence[CampaignCustomizerOperation] = ..., partial_failure: bool = ..., validate_only: bool = ..., response_content_type: ResponseContentTypeEnum.ResponseContentType = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "operations", "partial_failure", "validate_only", "response_content_type"]) -> bool: ...
+class MutateCampaignCustomizersResponse(proto.Message):
+    results: MutableSequence[MutateCampaignCustomizerResult]
+    partial_failure_error: Status
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., results: MutableSequence[MutateCampaignCustomizerResult] = ..., partial_failure_error: Status = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["results", "partial_failure_error"]) -> bool: ...

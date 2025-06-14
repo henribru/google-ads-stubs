@@ -1,20 +1,30 @@
+from google.ads.googleads.v19.resources.types.product_link import ProductLink
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.resources.types import product_link as gagr_product_link
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CreateProductLinkRequest(proto.Message):
     customer_id: str
-    product_link: gagr_product_link.ProductLink
-
+    product_link: ProductLink
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., product_link: ProductLink = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "product_link"]) -> bool: ...
 class CreateProductLinkResponse(proto.Message):
     resource_name: str
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name"]) -> bool: ...
 class RemoveProductLinkRequest(proto.Message):
     customer_id: str
     resource_name: str
     validate_only: bool
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., resource_name: str = ..., validate_only: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "resource_name", "validate_only"]) -> bool: ...
 class RemoveProductLinkResponse(proto.Message):
     resource_name: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name"]) -> bool: ...

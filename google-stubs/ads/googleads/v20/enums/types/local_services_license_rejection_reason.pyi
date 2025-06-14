@@ -1,16 +1,20 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class LocalServicesLicenseRejectionReasonEnum(proto.Message):
     class LocalServicesLicenseRejectionReason(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        BUSINESS_NAME_MISMATCH: int
-        UNAUTHORIZED: int
-        EXPIRED: int
-        POOR_QUALITY: int
-        UNVERIFIABLE: int
-        WRONG_DOCUMENT_OR_ID: int
-        OTHER: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        BUSINESS_NAME_MISMATCH = 2
+        UNAUTHORIZED = 3
+        EXPIRED = 4
+        POOR_QUALITY = 5
+        UNVERIFIABLE = 6
+        WRONG_DOCUMENT_OR_ID = 7
+        OTHER = 8
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

@@ -1,13 +1,17 @@
+from google.ads.googleads.v19.enums.types.access_role import AccessRoleEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v19.enums.types import access_role as gage_access_role
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class CustomerUserAccess(proto.Message):
     resource_name: str
     user_id: int
     email_address: str
-    access_role: gage_access_role.AccessRoleEnum.AccessRole
+    access_role: AccessRoleEnum.AccessRole
     access_creation_date_time: str
     inviter_user_email_address: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., resource_name: str = ..., user_id: int = ..., email_address: str = ..., access_role: AccessRoleEnum.AccessRole = ..., access_creation_date_time: str = ..., inviter_user_email_address: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "user_id", "email_address", "access_role", "access_creation_date_time", "inviter_user_email_address"]) -> bool: ...

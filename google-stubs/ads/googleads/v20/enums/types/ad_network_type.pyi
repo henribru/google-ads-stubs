@@ -1,19 +1,23 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AdNetworkTypeEnum(proto.Message):
     class AdNetworkType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        SEARCH: int
-        SEARCH_PARTNERS: int
-        CONTENT: int
-        MIXED: int
-        YOUTUBE: int
-        GOOGLE_TV: int
-        GOOGLE_OWNED_CHANNELS: int
-        GMAIL: int
-        DISCOVER: int
-        MAPS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        SEARCH = 2
+        SEARCH_PARTNERS = 3
+        CONTENT = 4
+        MIXED = 7
+        YOUTUBE = 8
+        GOOGLE_TV = 9
+        GOOGLE_OWNED_CHANNELS = 10
+        GMAIL = 11
+        DISCOVER = 12
+        MAPS = 13
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

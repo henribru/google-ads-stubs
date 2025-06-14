@@ -1,42 +1,97 @@
+from google.ads.googleads.v18.enums.types.reach_plan_network import ReachPlanNetworkEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import DeviceInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import GenderInfo
+from google.ads.googleads.v18.enums.types.reach_plan_age_range import ReachPlanAgeRangeEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.target_frequency_time_unit import TargetFrequencyTimeUnitEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.reach_plan_surface import ReachPlanSurfaceEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.reach_plan_network import ReachPlanNetworkEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import DeviceInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import GenderInfo
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.reach_plan_age_range import ReachPlanAgeRangeEnum
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.enums.types.frequency_cap_time_unit import FrequencyCapTimeUnitEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.dates import DateRange
+from collections.abc import MutableSequence
+from google.ads.googleads.v18.common.types.criteria import UserInterestInfo
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v18.common.types import criteria, dates
-from google.ads.googleads.v18.enums.types import frequency_cap_time_unit, reach_plan_age_range, reach_plan_network, reach_plan_surface, target_frequency_time_unit
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
-class ListPlannableLocationsRequest(proto.Message): ...
-
-class ListPlannableLocationsResponse(proto.Message):
-    plannable_locations: MutableSequence['PlannableLocation']
-
-class PlannableLocation(proto.Message):
-    id: str
-    name: str
-    parent_country_id: int
-    country_code: str
-    location_type: str
-
-class ListPlannableProductsRequest(proto.Message):
-    plannable_location_id: str
-
-class ListPlannableProductsResponse(proto.Message):
-    product_metadata: MutableSequence['ProductMetadata']
-
-class ProductMetadata(proto.Message):
-    plannable_product_code: str
-    plannable_product_name: str
-    plannable_targeting: PlannableTargeting
-
-class PlannableTargeting(proto.Message):
-    age_ranges: MutableSequence[reach_plan_age_range.ReachPlanAgeRangeEnum.ReachPlanAgeRange]
-    genders: MutableSequence[criteria.GenderInfo]
-    devices: MutableSequence[criteria.DeviceInfo]
-    networks: MutableSequence[reach_plan_network.ReachPlanNetworkEnum.ReachPlanNetwork]
-    youtube_select_lineups: MutableSequence['YouTubeSelectLineUp']
-    surface_targeting: SurfaceTargetingCombinations
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
+class AdvancedProductTargeting(proto.Message):
+    surface_targeting_settings: SurfaceTargeting
+    target_frequency_settings: TargetFrequencySettings
+    youtube_select_settings: YouTubeSelectSettings
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., surface_targeting_settings: SurfaceTargeting = ..., target_frequency_settings: TargetFrequencySettings = ..., youtube_select_settings: YouTubeSelectSettings = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["surface_targeting_settings", "target_frequency_settings", "youtube_select_settings"]) -> bool: ...
+class AudienceTargeting(proto.Message):
+    user_interest: MutableSequence[UserInterestInfo]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., user_interest: MutableSequence[UserInterestInfo] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["user_interest"]) -> bool: ...
+class CampaignDuration(proto.Message):
+    duration_in_days: int
+    date_range: DateRange
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., duration_in_days: int = ..., date_range: DateRange = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["duration_in_days", "date_range"]) -> bool: ...
+class EffectiveFrequencyBreakdown(proto.Message):
+    effective_frequency: int
+    on_target_reach: int
+    total_reach: int
+    effective_coview_reach: int
+    on_target_effective_coview_reach: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., effective_frequency: int = ..., on_target_reach: int = ..., total_reach: int = ..., effective_coview_reach: int = ..., on_target_effective_coview_reach: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["effective_frequency", "on_target_reach", "total_reach", "effective_coview_reach", "on_target_effective_coview_reach"]) -> bool: ...
+class EffectiveFrequencyLimit(proto.Message):
+    effective_frequency_breakdown_limit: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., effective_frequency_breakdown_limit: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["effective_frequency_breakdown_limit"]) -> bool: ...
+class Forecast(proto.Message):
+    on_target_reach: int
+    total_reach: int
+    on_target_impressions: int
+    total_impressions: int
+    viewable_impressions: int
+    effective_frequency_breakdowns: MutableSequence[EffectiveFrequencyBreakdown]
+    on_target_coview_reach: int
+    total_coview_reach: int
+    on_target_coview_impressions: int
+    total_coview_impressions: int
+    views: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., on_target_reach: int = ..., total_reach: int = ..., on_target_impressions: int = ..., total_impressions: int = ..., viewable_impressions: int = ..., effective_frequency_breakdowns: MutableSequence[EffectiveFrequencyBreakdown] = ..., on_target_coview_reach: int = ..., total_coview_reach: int = ..., on_target_coview_impressions: int = ..., total_coview_impressions: int = ..., views: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["on_target_reach", "total_reach", "on_target_impressions", "total_impressions", "viewable_impressions", "effective_frequency_breakdowns", "on_target_coview_reach", "total_coview_reach", "on_target_coview_impressions", "total_coview_impressions", "views"]) -> bool: ...
+class ForecastMetricOptions(proto.Message):
+    include_coview: bool
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., include_coview: bool = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["include_coview"]) -> bool: ...
+class FrequencyCap(proto.Message):
+    impressions: int
+    time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., impressions: int = ..., time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["impressions", "time_unit"]) -> bool: ...
 class GenerateReachForecastRequest(proto.Message):
     customer_id: str
     currency_code: str
@@ -46,65 +101,69 @@ class GenerateReachForecastRequest(proto.Message):
     min_effective_frequency: int
     effective_frequency_limit: EffectiveFrequencyLimit
     targeting: Targeting
-    planned_products: MutableSequence['PlannedProduct']
+    planned_products: MutableSequence[PlannedProduct]
     forecast_metric_options: ForecastMetricOptions
     customer_reach_group: str
-
-class EffectiveFrequencyLimit(proto.Message):
-    effective_frequency_breakdown_limit: int
-
-class FrequencyCap(proto.Message):
-    impressions: int
-    time_unit: frequency_cap_time_unit.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
-
-class Targeting(proto.Message):
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., customer_id: str = ..., currency_code: str = ..., campaign_duration: CampaignDuration = ..., cookie_frequency_cap: int = ..., cookie_frequency_cap_setting: FrequencyCap = ..., min_effective_frequency: int = ..., effective_frequency_limit: EffectiveFrequencyLimit = ..., targeting: Targeting = ..., planned_products: MutableSequence[PlannedProduct] = ..., forecast_metric_options: ForecastMetricOptions = ..., customer_reach_group: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["customer_id", "currency_code", "campaign_duration", "cookie_frequency_cap", "cookie_frequency_cap_setting", "min_effective_frequency", "effective_frequency_limit", "targeting", "planned_products", "forecast_metric_options", "customer_reach_group"]) -> bool: ...
+class GenerateReachForecastResponse(proto.Message):
+    on_target_audience_metrics: OnTargetAudienceMetrics
+    reach_curve: ReachCurve
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., on_target_audience_metrics: OnTargetAudienceMetrics = ..., reach_curve: ReachCurve = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["on_target_audience_metrics", "reach_curve"]) -> bool: ...
+class ListPlannableLocationsRequest(proto.Message):
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...
+class ListPlannableLocationsResponse(proto.Message):
+    plannable_locations: MutableSequence[PlannableLocation]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., plannable_locations: MutableSequence[PlannableLocation] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["plannable_locations"]) -> bool: ...
+class ListPlannableProductsRequest(proto.Message):
     plannable_location_id: str
-    plannable_location_ids: MutableSequence[str]
-    age_range: reach_plan_age_range.ReachPlanAgeRangeEnum.ReachPlanAgeRange
-    genders: MutableSequence[criteria.GenderInfo]
-    devices: MutableSequence[criteria.DeviceInfo]
-    network: reach_plan_network.ReachPlanNetworkEnum.ReachPlanNetwork
-    audience_targeting: AudienceTargeting
-
-class CampaignDuration(proto.Message):
-    duration_in_days: int
-    date_range: dates.DateRange
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., plannable_location_id: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["plannable_location_id"]) -> bool: ...
+class ListPlannableProductsResponse(proto.Message):
+    product_metadata: MutableSequence[ProductMetadata]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., product_metadata: MutableSequence[ProductMetadata] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["product_metadata"]) -> bool: ...
+class OnTargetAudienceMetrics(proto.Message):
+    youtube_audience_size: int
+    census_audience_size: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., youtube_audience_size: int = ..., census_audience_size: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["youtube_audience_size", "census_audience_size"]) -> bool: ...
+class PlannableLocation(proto.Message):
+    id: str
+    name: str
+    parent_country_id: int
+    country_code: str
+    location_type: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., id: str = ..., name: str = ..., parent_country_id: int = ..., country_code: str = ..., location_type: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["id", "name", "parent_country_id", "country_code", "location_type"]) -> bool: ...
+class PlannableTargeting(proto.Message):
+    age_ranges: MutableSequence[ReachPlanAgeRangeEnum.ReachPlanAgeRange]
+    genders: MutableSequence[GenderInfo]
+    devices: MutableSequence[DeviceInfo]
+    networks: MutableSequence[ReachPlanNetworkEnum.ReachPlanNetwork]
+    youtube_select_lineups: MutableSequence[YouTubeSelectLineUp]
+    surface_targeting: SurfaceTargetingCombinations
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., age_ranges: MutableSequence[ReachPlanAgeRangeEnum.ReachPlanAgeRange] = ..., genders: MutableSequence[GenderInfo] = ..., devices: MutableSequence[DeviceInfo] = ..., networks: MutableSequence[ReachPlanNetworkEnum.ReachPlanNetwork] = ..., youtube_select_lineups: MutableSequence[YouTubeSelectLineUp] = ..., surface_targeting: SurfaceTargetingCombinations = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["age_ranges", "genders", "devices", "networks", "youtube_select_lineups", "surface_targeting"]) -> bool: ...
 class PlannedProduct(proto.Message):
     plannable_product_code: str
     budget_micros: int
     advanced_product_targeting: AdvancedProductTargeting
-
-class GenerateReachForecastResponse(proto.Message):
-    on_target_audience_metrics: OnTargetAudienceMetrics
-    reach_curve: ReachCurve
-
-class ReachCurve(proto.Message):
-    reach_forecasts: MutableSequence['ReachForecast']
-
-class ReachForecast(proto.Message):
-    cost_micros: int
-    forecast: Forecast
-    planned_product_reach_forecasts: MutableSequence['PlannedProductReachForecast']
-
-class Forecast(proto.Message):
-    on_target_reach: int
-    total_reach: int
-    on_target_impressions: int
-    total_impressions: int
-    viewable_impressions: int
-    effective_frequency_breakdowns: MutableSequence['EffectiveFrequencyBreakdown']
-    on_target_coview_reach: int
-    total_coview_reach: int
-    on_target_coview_impressions: int
-    total_coview_impressions: int
-    views: int
-
-class PlannedProductReachForecast(proto.Message):
-    plannable_product_code: str
-    cost_micros: int
-    planned_product_forecast: PlannedProductForecast
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., plannable_product_code: str = ..., budget_micros: int = ..., advanced_product_targeting: AdvancedProductTargeting = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["plannable_product_code", "budget_micros", "advanced_product_targeting"]) -> bool: ...
 class PlannedProductForecast(proto.Message):
     on_target_reach: int
     total_reach: int
@@ -117,43 +176,71 @@ class PlannedProductForecast(proto.Message):
     total_coview_impressions: int
     average_frequency: float
     views: int
-
-class OnTargetAudienceMetrics(proto.Message):
-    youtube_audience_size: int
-    census_audience_size: int
-
-class EffectiveFrequencyBreakdown(proto.Message):
-    effective_frequency: int
-    on_target_reach: int
-    total_reach: int
-    effective_coview_reach: int
-    on_target_effective_coview_reach: int
-
-class ForecastMetricOptions(proto.Message):
-    include_coview: bool
-
-class AudienceTargeting(proto.Message):
-    user_interest: MutableSequence[criteria.UserInterestInfo]
-
-class AdvancedProductTargeting(proto.Message):
-    surface_targeting_settings: SurfaceTargeting
-    target_frequency_settings: TargetFrequencySettings
-    youtube_select_settings: YouTubeSelectSettings
-
-class YouTubeSelectSettings(proto.Message):
-    lineup_id: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., on_target_reach: int = ..., total_reach: int = ..., on_target_impressions: int = ..., total_impressions: int = ..., viewable_impressions: int = ..., on_target_coview_reach: int = ..., total_coview_reach: int = ..., on_target_coview_impressions: int = ..., total_coview_impressions: int = ..., average_frequency: float = ..., views: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["on_target_reach", "total_reach", "on_target_impressions", "total_impressions", "viewable_impressions", "on_target_coview_reach", "total_coview_reach", "on_target_coview_impressions", "total_coview_impressions", "average_frequency", "views"]) -> bool: ...
+class PlannedProductReachForecast(proto.Message):
+    plannable_product_code: str
+    cost_micros: int
+    planned_product_forecast: PlannedProductForecast
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., plannable_product_code: str = ..., cost_micros: int = ..., planned_product_forecast: PlannedProductForecast = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["plannable_product_code", "cost_micros", "planned_product_forecast"]) -> bool: ...
+class ProductMetadata(proto.Message):
+    plannable_product_code: str
+    plannable_product_name: str
+    plannable_targeting: PlannableTargeting
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., plannable_product_code: str = ..., plannable_product_name: str = ..., plannable_targeting: PlannableTargeting = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["plannable_product_code", "plannable_product_name", "plannable_targeting"]) -> bool: ...
+class ReachCurve(proto.Message):
+    reach_forecasts: MutableSequence[ReachForecast]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., reach_forecasts: MutableSequence[ReachForecast] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["reach_forecasts"]) -> bool: ...
+class ReachForecast(proto.Message):
+    cost_micros: int
+    forecast: Forecast
+    planned_product_reach_forecasts: MutableSequence[PlannedProductReachForecast]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., cost_micros: int = ..., forecast: Forecast = ..., planned_product_reach_forecasts: MutableSequence[PlannedProductReachForecast] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["cost_micros", "forecast", "planned_product_reach_forecasts"]) -> bool: ...
+class SurfaceTargeting(proto.Message):
+    surfaces: MutableSequence[ReachPlanSurfaceEnum.ReachPlanSurface]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., surfaces: MutableSequence[ReachPlanSurfaceEnum.ReachPlanSurface] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["surfaces"]) -> bool: ...
+class SurfaceTargetingCombinations(proto.Message):
+    default_targeting: SurfaceTargeting
+    available_targeting_combinations: MutableSequence[SurfaceTargeting]
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., default_targeting: SurfaceTargeting = ..., available_targeting_combinations: MutableSequence[SurfaceTargeting] = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["default_targeting", "available_targeting_combinations"]) -> bool: ...
+class TargetFrequencySettings(proto.Message):
+    time_unit: TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit
+    target_frequency: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., time_unit: TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit = ..., target_frequency: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["time_unit", "target_frequency"]) -> bool: ...
+class Targeting(proto.Message):
+    plannable_location_id: str
+    plannable_location_ids: MutableSequence[str]
+    age_range: ReachPlanAgeRangeEnum.ReachPlanAgeRange
+    genders: MutableSequence[GenderInfo]
+    devices: MutableSequence[DeviceInfo]
+    network: ReachPlanNetworkEnum.ReachPlanNetwork
+    audience_targeting: AudienceTargeting
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., plannable_location_id: str = ..., plannable_location_ids: MutableSequence[str] = ..., age_range: ReachPlanAgeRangeEnum.ReachPlanAgeRange = ..., genders: MutableSequence[GenderInfo] = ..., devices: MutableSequence[DeviceInfo] = ..., network: ReachPlanNetworkEnum.ReachPlanNetwork = ..., audience_targeting: AudienceTargeting = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["plannable_location_id", "plannable_location_ids", "age_range", "genders", "devices", "network", "audience_targeting"]) -> bool: ...
 class YouTubeSelectLineUp(proto.Message):
     lineup_id: int
     lineup_name: str
-
-class SurfaceTargetingCombinations(proto.Message):
-    default_targeting: SurfaceTargeting
-    available_targeting_combinations: MutableSequence['SurfaceTargeting']
-
-class SurfaceTargeting(proto.Message):
-    surfaces: MutableSequence[reach_plan_surface.ReachPlanSurfaceEnum.ReachPlanSurface]
-
-class TargetFrequencySettings(proto.Message):
-    time_unit: target_frequency_time_unit.TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit
-    target_frequency: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., lineup_id: int = ..., lineup_name: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["lineup_id", "lineup_name"]) -> bool: ...
+class YouTubeSelectSettings(proto.Message):
+    lineup_id: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., lineup_id: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["lineup_id"]) -> bool: ...

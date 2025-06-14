@@ -1,11 +1,15 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class GeoTargetingTypeEnum(proto.Message):
     class GeoTargetingType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        AREA_OF_INTEREST: int
-        LOCATION_OF_PRESENCE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        AREA_OF_INTEREST = 2
+        LOCATION_OF_PRESENCE = 3
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

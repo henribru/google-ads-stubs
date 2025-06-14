@@ -1,22 +1,26 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class ExtensionTypeEnum(proto.Message):
     class ExtensionType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        NONE: int
-        APP: int
-        CALL: int
-        CALLOUT: int
-        MESSAGE: int
-        PRICE: int
-        PROMOTION: int
-        SITELINK: int
-        STRUCTURED_SNIPPET: int
-        LOCATION: int
-        AFFILIATE_LOCATION: int
-        HOTEL_CALLOUT: int
-        IMAGE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        NONE = 2
+        APP = 3
+        CALL = 4
+        CALLOUT = 5
+        MESSAGE = 6
+        PRICE = 7
+        PROMOTION = 8
+        SITELINK = 10
+        STRUCTURED_SNIPPET = 11
+        LOCATION = 12
+        AFFILIATE_LOCATION = 13
+        HOTEL_CALLOUT = 15
+        IMAGE = 16
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

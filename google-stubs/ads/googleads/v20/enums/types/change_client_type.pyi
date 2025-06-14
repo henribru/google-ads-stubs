@@ -1,22 +1,26 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class ChangeClientTypeEnum(proto.Message):
     class ChangeClientType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        GOOGLE_ADS_WEB_CLIENT: int
-        GOOGLE_ADS_AUTOMATED_RULE: int
-        GOOGLE_ADS_SCRIPTS: int
-        GOOGLE_ADS_BULK_UPLOAD: int
-        GOOGLE_ADS_API: int
-        GOOGLE_ADS_EDITOR: int
-        GOOGLE_ADS_MOBILE_APP: int
-        GOOGLE_ADS_RECOMMENDATIONS: int
-        SEARCH_ADS_360_SYNC: int
-        SEARCH_ADS_360_POST: int
-        INTERNAL_TOOL: int
-        OTHER: int
-        GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        GOOGLE_ADS_WEB_CLIENT = 2
+        GOOGLE_ADS_AUTOMATED_RULE = 3
+        GOOGLE_ADS_SCRIPTS = 4
+        GOOGLE_ADS_BULK_UPLOAD = 5
+        GOOGLE_ADS_API = 6
+        GOOGLE_ADS_EDITOR = 7
+        GOOGLE_ADS_MOBILE_APP = 8
+        GOOGLE_ADS_RECOMMENDATIONS = 9
+        SEARCH_ADS_360_SYNC = 10
+        SEARCH_ADS_360_POST = 11
+        INTERNAL_TOOL = 12
+        OTHER = 13
+        GOOGLE_ADS_RECOMMENDATIONS_SUBSCRIPTION = 14
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

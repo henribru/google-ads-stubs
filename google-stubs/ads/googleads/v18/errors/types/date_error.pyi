@@ -1,19 +1,23 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class DateErrorEnum(proto.Message):
     class DateError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        INVALID_FIELD_VALUES_IN_DATE: int
-        INVALID_FIELD_VALUES_IN_DATE_TIME: int
-        INVALID_STRING_DATE: int
-        INVALID_STRING_DATE_TIME_MICROS: int
-        INVALID_STRING_DATE_TIME_SECONDS: int
-        INVALID_STRING_DATE_TIME_SECONDS_WITH_OFFSET: int
-        EARLIER_THAN_MINIMUM_DATE: int
-        LATER_THAN_MAXIMUM_DATE: int
-        DATE_RANGE_MINIMUM_DATE_LATER_THAN_MAXIMUM_DATE: int
-        DATE_RANGE_MINIMUM_AND_MAXIMUM_DATES_BOTH_NULL: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_FIELD_VALUES_IN_DATE = 2
+        INVALID_FIELD_VALUES_IN_DATE_TIME = 3
+        INVALID_STRING_DATE = 4
+        INVALID_STRING_DATE_TIME_MICROS = 6
+        INVALID_STRING_DATE_TIME_SECONDS = 11
+        INVALID_STRING_DATE_TIME_SECONDS_WITH_OFFSET = 12
+        EARLIER_THAN_MINIMUM_DATE = 7
+        LATER_THAN_MAXIMUM_DATE = 8
+        DATE_RANGE_MINIMUM_DATE_LATER_THAN_MAXIMUM_DATE = 9
+        DATE_RANGE_MINIMUM_AND_MAXIMUM_DATES_BOTH_NULL = 10
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

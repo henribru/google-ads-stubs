@@ -1,15 +1,23 @@
+from google.ads.googleads.v20.enums.types.frequency_cap_time_unit import FrequencyCapTimeUnitEnum
+from google.ads.googleads.v20.enums.types.frequency_cap_event_type import FrequencyCapEventTypeEnum
+from google.ads.googleads.v20.enums.types.frequency_cap_level import FrequencyCapLevelEnum
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.enums.types import frequency_cap_event_type, frequency_cap_level, frequency_cap_time_unit
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class FrequencyCapEntry(proto.Message):
     key: FrequencyCapKey
     cap: int
-
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., key: FrequencyCapKey = ..., cap: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["key", "cap"]) -> bool: ...
 class FrequencyCapKey(proto.Message):
-    level: frequency_cap_level.FrequencyCapLevelEnum.FrequencyCapLevel
-    event_type: frequency_cap_event_type.FrequencyCapEventTypeEnum.FrequencyCapEventType
-    time_unit: frequency_cap_time_unit.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
+    level: FrequencyCapLevelEnum.FrequencyCapLevel
+    event_type: FrequencyCapEventTypeEnum.FrequencyCapEventType
+    time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
     time_length: int
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., level: FrequencyCapLevelEnum.FrequencyCapLevel = ..., event_type: FrequencyCapEventTypeEnum.FrequencyCapEventType = ..., time_unit: FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit = ..., time_length: int = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["level", "event_type", "time_unit", "time_length"]) -> bool: ...

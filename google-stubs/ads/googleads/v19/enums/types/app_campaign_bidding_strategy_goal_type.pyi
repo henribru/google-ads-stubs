@@ -1,15 +1,19 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AppCampaignBiddingStrategyGoalTypeEnum(proto.Message):
     class AppCampaignBiddingStrategyGoalType(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        OPTIMIZE_INSTALLS_TARGET_INSTALL_COST: int
-        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST: int
-        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST: int
-        OPTIMIZE_RETURN_ON_ADVERTISING_SPEND: int
-        OPTIMIZE_PRE_REGISTRATION_CONVERSION_VOLUME: int
-        OPTIMIZE_INSTALLS_WITHOUT_TARGET_INSTALL_COST: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        OPTIMIZE_INSTALLS_TARGET_INSTALL_COST = 2
+        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST = 3
+        OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST = 4
+        OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = 5
+        OPTIMIZE_PRE_REGISTRATION_CONVERSION_VOLUME = 6
+        OPTIMIZE_INSTALLS_WITHOUT_TARGET_INSTALL_COST = 7
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

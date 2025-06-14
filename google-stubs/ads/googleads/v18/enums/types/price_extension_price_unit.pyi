@@ -1,15 +1,19 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class PriceExtensionPriceUnitEnum(proto.Message):
     class PriceExtensionPriceUnit(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PER_HOUR: int
-        PER_DAY: int
-        PER_WEEK: int
-        PER_MONTH: int
-        PER_YEAR: int
-        PER_NIGHT: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PER_HOUR = 2
+        PER_DAY = 3
+        PER_WEEK = 4
+        PER_MONTH = 5
+        PER_YEAR = 6
+        PER_NIGHT = 7
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

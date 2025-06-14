@@ -1,12 +1,17 @@
+from google.ads.googleads.v20.enums.types.policy_approval_status import PolicyApprovalStatusEnum
+from google.ads.googleads.v20.enums.types.policy_review_status import PolicyReviewStatusEnum
+from collections.abc import MutableSequence
+from google.ads.googleads.v20.common.types.policy import PolicyTopicEntry
 import proto
-from _typeshed import Incomplete
-from google.ads.googleads.v20.common.types import policy
-from google.ads.googleads.v20.enums.types import policy_approval_status, policy_review_status
-from typing import MutableSequence
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class PolicySummary(proto.Message):
-    policy_topic_entries: MutableSequence[policy.PolicyTopicEntry]
-    review_status: policy_review_status.PolicyReviewStatusEnum.PolicyReviewStatus
-    approval_status: policy_approval_status.PolicyApprovalStatusEnum.PolicyApprovalStatus
+    policy_topic_entries: MutableSequence[PolicyTopicEntry]
+    review_status: PolicyReviewStatusEnum.PolicyReviewStatus
+    approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., policy_topic_entries: MutableSequence[PolicyTopicEntry] = ..., review_status: PolicyReviewStatusEnum.PolicyReviewStatus = ..., approval_status: PolicyApprovalStatusEnum.PolicyApprovalStatus = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["policy_topic_entries", "review_status", "approval_status"]) -> bool: ...

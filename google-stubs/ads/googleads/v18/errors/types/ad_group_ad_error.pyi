@@ -1,20 +1,24 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AdGroupAdErrorEnum(proto.Message):
     class AdGroupAdError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        AD_GROUP_AD_LABEL_DOES_NOT_EXIST: int
-        AD_GROUP_AD_LABEL_ALREADY_EXISTS: int
-        AD_NOT_UNDER_ADGROUP: int
-        CANNOT_OPERATE_ON_REMOVED_ADGROUPAD: int
-        CANNOT_CREATE_DEPRECATED_ADS: int
-        CANNOT_CREATE_TEXT_ADS: int
-        EMPTY_FIELD: int
-        RESOURCE_REFERENCED_IN_MULTIPLE_OPS: int
-        AD_TYPE_CANNOT_BE_PAUSED: int
-        AD_TYPE_CANNOT_BE_REMOVED: int
-        CANNOT_UPDATE_DEPRECATED_ADS: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        AD_GROUP_AD_LABEL_DOES_NOT_EXIST = 2
+        AD_GROUP_AD_LABEL_ALREADY_EXISTS = 3
+        AD_NOT_UNDER_ADGROUP = 4
+        CANNOT_OPERATE_ON_REMOVED_ADGROUPAD = 5
+        CANNOT_CREATE_DEPRECATED_ADS = 6
+        CANNOT_CREATE_TEXT_ADS = 7
+        EMPTY_FIELD = 8
+        RESOURCE_REFERENCED_IN_MULTIPLE_OPS = 9
+        AD_TYPE_CANNOT_BE_PAUSED = 10
+        AD_TYPE_CANNOT_BE_REMOVED = 11
+        CANNOT_UPDATE_DEPRECATED_ADS = 12
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

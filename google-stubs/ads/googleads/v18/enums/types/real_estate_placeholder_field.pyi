@@ -1,27 +1,31 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class RealEstatePlaceholderFieldEnum(proto.Message):
     class RealEstatePlaceholderField(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        LISTING_ID: int
-        LISTING_NAME: int
-        CITY_NAME: int
-        DESCRIPTION: int
-        ADDRESS: int
-        PRICE: int
-        FORMATTED_PRICE: int
-        IMAGE_URL: int
-        PROPERTY_TYPE: int
-        LISTING_TYPE: int
-        CONTEXTUAL_KEYWORDS: int
-        FINAL_URLS: int
-        FINAL_MOBILE_URLS: int
-        TRACKING_URL: int
-        ANDROID_APP_LINK: int
-        SIMILAR_LISTING_IDS: int
-        IOS_APP_LINK: int
-        IOS_APP_STORE_ID: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        LISTING_ID = 2
+        LISTING_NAME = 3
+        CITY_NAME = 4
+        DESCRIPTION = 5
+        ADDRESS = 6
+        PRICE = 7
+        FORMATTED_PRICE = 8
+        IMAGE_URL = 9
+        PROPERTY_TYPE = 10
+        LISTING_TYPE = 11
+        CONTEXTUAL_KEYWORDS = 12
+        FINAL_URLS = 13
+        FINAL_MOBILE_URLS = 14
+        TRACKING_URL = 15
+        ANDROID_APP_LINK = 16
+        SIMILAR_LISTING_IDS = 17
+        IOS_APP_LINK = 18
+        IOS_APP_STORE_ID = 19
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

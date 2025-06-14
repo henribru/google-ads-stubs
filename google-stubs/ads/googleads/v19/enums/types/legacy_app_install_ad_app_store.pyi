@@ -1,14 +1,18 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class LegacyAppInstallAdAppStoreEnum(proto.Message):
     class LegacyAppInstallAdAppStore(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        APPLE_APP_STORE: int
-        GOOGLE_PLAY: int
-        WINDOWS_STORE: int
-        WINDOWS_PHONE_STORE: int
-        CN_APP_STORE: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        APPLE_APP_STORE = 2
+        GOOGLE_PLAY = 3
+        WINDOWS_STORE = 4
+        WINDOWS_PHONE_STORE = 5
+        CN_APP_STORE = 6
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

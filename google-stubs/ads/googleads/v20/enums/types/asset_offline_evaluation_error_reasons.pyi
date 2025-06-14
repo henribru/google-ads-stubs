@@ -1,16 +1,20 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AssetOfflineEvaluationErrorReasonsEnum(proto.Message):
     class AssetOfflineEvaluationErrorReasons(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        PRICE_ASSET_DESCRIPTION_REPEATS_ROW_HEADER: int
-        PRICE_ASSET_REPETITIVE_HEADERS: int
-        PRICE_ASSET_HEADER_INCOMPATIBLE_WITH_PRICE_TYPE: int
-        PRICE_ASSET_DESCRIPTION_INCOMPATIBLE_WITH_ITEM_HEADER: int
-        PRICE_ASSET_DESCRIPTION_HAS_PRICE_QUALIFIER: int
-        PRICE_ASSET_UNSUPPORTED_LANGUAGE: int
-        PRICE_ASSET_OTHER_ERROR: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        PRICE_ASSET_DESCRIPTION_REPEATS_ROW_HEADER = 2
+        PRICE_ASSET_REPETITIVE_HEADERS = 3
+        PRICE_ASSET_HEADER_INCOMPATIBLE_WITH_PRICE_TYPE = 4
+        PRICE_ASSET_DESCRIPTION_INCOMPATIBLE_WITH_ITEM_HEADER = 5
+        PRICE_ASSET_DESCRIPTION_HAS_PRICE_QUALIFIER = 6
+        PRICE_ASSET_UNSUPPORTED_LANGUAGE = 7
+        PRICE_ASSET_OTHER_ERROR = 8
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

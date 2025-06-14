@@ -1,15 +1,19 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class ConversionGoalCampaignConfigErrorEnum(proto.Message):
     class ConversionGoalCampaignConfigError(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        CANNOT_USE_CAMPAIGN_GOAL_FOR_SEARCH_ADS_360_MANAGED_CAMPAIGN: int
-        CUSTOM_GOAL_DOES_NOT_BELONG_TO_GOOGLE_ADS_CONVERSION_CUSTOMER: int
-        CAMPAIGN_CANNOT_USE_UNIFIED_GOALS: int
-        EMPTY_CONVERSION_GOALS: int
-        STORE_SALE_STORE_VISIT_CANNOT_BE_BOTH_INCLUDED: int
-        PERFORMANCE_MAX_CAMPAIGN_CANNOT_USE_CUSTOM_GOAL_WITH_STORE_SALES: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        CANNOT_USE_CAMPAIGN_GOAL_FOR_SEARCH_ADS_360_MANAGED_CAMPAIGN = 2
+        CUSTOM_GOAL_DOES_NOT_BELONG_TO_GOOGLE_ADS_CONVERSION_CUSTOMER = 3
+        CAMPAIGN_CANNOT_USE_UNIFIED_GOALS = 4
+        EMPTY_CONVERSION_GOALS = 5
+        STORE_SALE_STORE_VISIT_CANNOT_BE_BOTH_INCLUDED = 6
+        PERFORMANCE_MAX_CAMPAIGN_CANNOT_USE_CUSTOM_GOAL_WITH_STORE_SALES = 7
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...

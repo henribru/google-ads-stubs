@@ -1,11 +1,15 @@
 import proto
-from _typeshed import Incomplete
-
-__protobuf__: Incomplete
-
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
 class AppStoreEnum(proto.Message):
     class AppStore(proto.Enum):
-        UNSPECIFIED: int
-        UNKNOWN: int
-        APPLE_ITUNES: int
-        GOOGLE_PLAY: int
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        APPLE_ITUNES = 2
+        GOOGLE_PLAY = 3
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = ..., *, ignore_unknown_fields: bool = ..., ) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: NoReturn) -> bool: ...
