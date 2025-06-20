@@ -748,6 +748,7 @@ class VideoAdInfo(proto.Message):
     out_stream: VideoOutstreamAdInfo
     non_skippable: VideoNonSkippableInStreamAdInfo
     in_feed: InFeedVideoAdInfo
+    audio: YouTubeAudioAdInfo
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -759,11 +760,18 @@ class VideoAdInfo(proto.Message):
         out_stream: VideoOutstreamAdInfo = ...,
         non_skippable: VideoNonSkippableInStreamAdInfo = ...,
         in_feed: InFeedVideoAdInfo = ...,
+        audio: YouTubeAudioAdInfo = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
         key: Literal[
-            "video", "in_stream", "bumper", "out_stream", "non_skippable", "in_feed"
+            "video",
+            "in_stream",
+            "bumper",
+            "out_stream",
+            "non_skippable",
+            "in_feed",
+            "audio",
         ],
     ) -> bool: ...
 
@@ -868,4 +876,15 @@ class VideoTrueViewInStreamAdInfo(proto.Message):
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self, key: Literal["action_button_label", "action_headline", "companion_banner"]
+    ) -> bool: ...
+
+class YouTubeAudioAdInfo(proto.Message):
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: NoReturn
     ) -> bool: ...

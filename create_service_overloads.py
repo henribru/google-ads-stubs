@@ -4,7 +4,6 @@ from pathlib import Path
 
 from google.ads.googleads import client
 
-
 overload_lines = []
 import_lines = []
 for i, version in enumerate(sorted(client._VALID_API_VERSIONS)):

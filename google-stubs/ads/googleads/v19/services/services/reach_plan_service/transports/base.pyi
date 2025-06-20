@@ -29,6 +29,14 @@ class ReachPlanServiceTransport(abc.ABC):
     def host(self): ...
     def close(self) -> None: ...
     @property
+    def generate_conversion_rates(
+        self,
+    ) -> Callable[
+        [reach_plan_service.GenerateConversionRatesRequest],
+        reach_plan_service.GenerateConversionRatesResponse
+        | Awaitable[reach_plan_service.GenerateConversionRatesResponse],
+    ]: ...
+    @property
     def list_plannable_locations(
         self,
     ) -> Callable[

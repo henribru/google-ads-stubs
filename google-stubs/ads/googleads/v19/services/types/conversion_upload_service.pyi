@@ -8,6 +8,9 @@ from typing_extensions import Literal
 
 from google.ads.googleads.v19.common.types.consent import Consent
 from google.ads.googleads.v19.common.types.offline_user_data import UserIdentifier
+from google.ads.googleads.v19.enums.types.conversion_customer_type import (
+    ConversionCustomerTypeEnum,
+)
 from google.ads.googleads.v19.enums.types.conversion_environment_enum import (
     ConversionEnvironmentEnum,
 )
@@ -136,6 +139,9 @@ class ClickConversion(proto.Message):
     user_identifiers: MutableSequence[UserIdentifier]
     conversion_environment: ConversionEnvironmentEnum.ConversionEnvironment
     consent: Consent
+    customer_type: ConversionCustomerTypeEnum.ConversionCustomerType
+    session_attributes_encoded: bytes
+    session_attributes_key_value_pairs: SessionAttributesKeyValuePairs
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -155,6 +161,9 @@ class ClickConversion(proto.Message):
         user_identifiers: MutableSequence[UserIdentifier] = ...,
         conversion_environment: ConversionEnvironmentEnum.ConversionEnvironment = ...,
         consent: Consent = ...,
+        customer_type: ConversionCustomerTypeEnum.ConversionCustomerType = ...,
+        session_attributes_encoded: bytes = ...,
+        session_attributes_key_value_pairs: SessionAttributesKeyValuePairs = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -173,6 +182,9 @@ class ClickConversion(proto.Message):
             "user_identifiers",
             "conversion_environment",
             "consent",
+            "customer_type",
+            "session_attributes_encoded",
+            "session_attributes_key_value_pairs",
         ],
     ) -> bool: ...
 
@@ -235,6 +247,34 @@ class ExternalAttributionData(proto.Message):
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self, key: Literal["external_attribution_credit", "external_attribution_model"]
+    ) -> bool: ...
+
+class SessionAttributeKeyValuePair(proto.Message):
+    session_attribute_key: str
+    session_attribute_value: str
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        session_attribute_key: str = ...,
+        session_attribute_value: str = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["session_attribute_key", "session_attribute_value"]
+    ) -> bool: ...
+
+class SessionAttributesKeyValuePairs(proto.Message):
+    key_value_pairs: MutableSequence[SessionAttributeKeyValuePair]
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        key_value_pairs: MutableSequence[SessionAttributeKeyValuePair] = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["key_value_pairs"]
     ) -> bool: ...
 
 class UploadCallConversionsRequest(proto.Message):

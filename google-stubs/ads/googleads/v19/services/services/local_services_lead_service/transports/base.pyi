@@ -37,4 +37,12 @@ class LocalServicesLeadServiceTransport(abc.ABC):
         | Awaitable[local_services_lead_service.AppendLeadConversationResponse],
     ]: ...
     @property
+    def provide_lead_feedback(
+        self,
+    ) -> Callable[
+        [local_services_lead_service.ProvideLeadFeedbackRequest],
+        local_services_lead_service.ProvideLeadFeedbackResponse
+        | Awaitable[local_services_lead_service.ProvideLeadFeedbackResponse],
+    ]: ...
+    @property
     def kind(self) -> str: ...

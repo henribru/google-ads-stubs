@@ -51,6 +51,15 @@ class ReachPlanServiceAsyncClient:
         client_options: ClientOptions | None = None,
         client_info: gapic_v1.client_info.ClientInfo = ...,
     ) -> None: ...
+    async def generate_conversion_rates(
+        self,
+        request: reach_plan_service.GenerateConversionRatesRequest | dict | None = None,
+        *,
+        customer_id: str | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> reach_plan_service.GenerateConversionRatesResponse: ...
     async def list_plannable_locations(
         self,
         request: reach_plan_service.ListPlannableLocationsRequest | dict | None = None,

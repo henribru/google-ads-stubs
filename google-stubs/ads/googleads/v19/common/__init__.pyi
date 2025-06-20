@@ -42,6 +42,7 @@ from .types.ad_type_infos import (
     VideoOutstreamAdInfo as VideoOutstreamAdInfo,
     VideoResponsiveAdInfo as VideoResponsiveAdInfo,
     VideoTrueViewInStreamAdInfo as VideoTrueViewInStreamAdInfo,
+    YouTubeAudioAdInfo as YouTubeAudioAdInfo,
 )
 from .types.asset_policy import (
     AdAssetPolicySummary as AdAssetPolicySummary,
@@ -654,6 +655,7 @@ __all__ = [
     "WhatsappBusinessMessageInfo",
     "YearMonth",
     "YearMonthRange",
+    "YouTubeAudioAdInfo",
     "YouTubeChannelAttributeMetadata",
     "YouTubeChannelInfo",
     "YouTubeVideoAttributeMetadata",

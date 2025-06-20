@@ -44,6 +44,13 @@ class ReachPlanServiceGrpcTransport(ReachPlanServiceTransport):
     @property
     def grpc_channel(self) -> grpc.Channel: ...
     @property
+    def generate_conversion_rates(
+        self,
+    ) -> Callable[
+        [reach_plan_service.GenerateConversionRatesRequest],
+        reach_plan_service.GenerateConversionRatesResponse,
+    ]: ...
+    @property
     def list_plannable_locations(
         self,
     ) -> Callable[

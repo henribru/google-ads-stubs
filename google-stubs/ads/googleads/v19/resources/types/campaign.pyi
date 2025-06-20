@@ -335,6 +335,32 @@ class Campaign(proto.Message):
             key: Literal["performance_max_campaign", "pre_upgrade_campaign", "status"],
         ) -> bool: ...
 
+    class PmaxCampaignSettings(proto.Message):
+        class BrandTargetingOverrides(proto.Message):
+            ignore_exclusions_for_shopping_ads: bool
+            def __init__(
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+                *,
+                ignore_unknown_fields: bool = False,
+                ignore_exclusions_for_shopping_ads: bool = ...,
+            ) -> None: ...
+            def __contains__(  # type: ignore[override]
+                self, key: Literal["ignore_exclusions_for_shopping_ads"]
+            ) -> bool: ...
+
+        brand_targeting_overrides: Campaign.PmaxCampaignSettings.BrandTargetingOverrides
+        def __init__(
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+            *,
+            ignore_unknown_fields: bool = False,
+            brand_targeting_overrides: Campaign.PmaxCampaignSettings.BrandTargetingOverrides = ...,
+        ) -> None: ...
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["brand_targeting_overrides"]
+        ) -> bool: ...
+
     class SelectiveOptimization(proto.Message):
         conversion_actions: MutableSequence[str]
         def __init__(
@@ -482,6 +508,7 @@ class Campaign(proto.Message):
     travel_campaign_settings: Campaign.TravelCampaignSettings
     demand_gen_campaign_settings: Campaign.DemandGenCampaignSettings
     video_campaign_settings: Campaign.VideoCampaignSettings
+    pmax_campaign_settings: Campaign.PmaxCampaignSettings
     real_time_bidding_setting: RealTimeBiddingSetting
     network_settings: Campaign.NetworkSettings
     hotel_setting: Campaign.HotelSettingInfo
@@ -562,6 +589,7 @@ class Campaign(proto.Message):
         travel_campaign_settings: Campaign.TravelCampaignSettings = ...,
         demand_gen_campaign_settings: Campaign.DemandGenCampaignSettings = ...,
         video_campaign_settings: Campaign.VideoCampaignSettings = ...,
+        pmax_campaign_settings: Campaign.PmaxCampaignSettings = ...,
         real_time_bidding_setting: RealTimeBiddingSetting = ...,
         network_settings: Campaign.NetworkSettings = ...,
         hotel_setting: Campaign.HotelSettingInfo = ...,
@@ -643,6 +671,7 @@ class Campaign(proto.Message):
             "travel_campaign_settings",
             "demand_gen_campaign_settings",
             "video_campaign_settings",
+            "pmax_campaign_settings",
             "real_time_bidding_setting",
             "network_settings",
             "hotel_setting",

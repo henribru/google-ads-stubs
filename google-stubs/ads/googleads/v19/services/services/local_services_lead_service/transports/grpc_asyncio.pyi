@@ -53,6 +53,13 @@ class LocalServicesLeadServiceGrpcAsyncIOTransport(LocalServicesLeadServiceTrans
         [local_services_lead_service.AppendLeadConversationRequest],
         Awaitable[local_services_lead_service.AppendLeadConversationResponse],
     ]: ...
+    @property
+    def provide_lead_feedback(
+        self,
+    ) -> Callable[
+        [local_services_lead_service.ProvideLeadFeedbackRequest],
+        Awaitable[local_services_lead_service.ProvideLeadFeedbackResponse],
+    ]: ...
     def close(self): ...
     @property
     def kind(self) -> str: ...

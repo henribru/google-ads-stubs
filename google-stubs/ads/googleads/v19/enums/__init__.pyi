@@ -50,6 +50,9 @@ from .types.ad_serving_optimization_status import (
     AdServingOptimizationStatusEnum as AdServingOptimizationStatusEnum,
 )
 from .types.ad_strength import AdStrengthEnum as AdStrengthEnum
+from .types.ad_strength_action_item_type import (
+    AdStrengthActionItemTypeEnum as AdStrengthActionItemTypeEnum,
+)
 from .types.ad_type import AdTypeEnum as AdTypeEnum
 from .types.advertising_channel_sub_type import (
     AdvertisingChannelSubTypeEnum as AdvertisingChannelSubTypeEnum,
@@ -82,6 +85,9 @@ from .types.asset_automation_status import (
 )
 from .types.asset_automation_type import (
     AssetAutomationTypeEnum as AssetAutomationTypeEnum,
+)
+from .types.asset_coverage_video_aspect_ratio_requirement import (
+    AssetCoverageVideoAspectRatioRequirementEnum as AssetCoverageVideoAspectRatioRequirementEnum,
 )
 from .types.asset_field_type import AssetFieldTypeEnum as AssetFieldTypeEnum
 from .types.asset_group_primary_status import (
@@ -238,6 +244,9 @@ from .types.conversion_attribution_event_type import (
 from .types.conversion_custom_variable_status import (
     ConversionCustomVariableStatusEnum as ConversionCustomVariableStatusEnum,
 )
+from .types.conversion_customer_type import (
+    ConversionCustomerTypeEnum as ConversionCustomerTypeEnum,
+)
 from .types.conversion_environment_enum import (
     ConversionEnvironmentEnum as ConversionEnvironmentEnum,
 )
@@ -315,6 +324,12 @@ from .types.data_driven_model_status import (
 from .types.data_link_status import DataLinkStatusEnum as DataLinkStatusEnum
 from .types.data_link_type import DataLinkTypeEnum as DataLinkTypeEnum
 from .types.day_of_week import DayOfWeekEnum as DayOfWeekEnum
+from .types.demand_gen_channel_config import (
+    DemandGenChannelConfigEnum as DemandGenChannelConfigEnum,
+)
+from .types.demand_gen_channel_strategy import (
+    DemandGenChannelStrategyEnum as DemandGenChannelStrategyEnum,
+)
 from .types.device import DeviceEnum as DeviceEnum
 from .types.display_ad_format_setting import (
     DisplayAdFormatSettingEnum as DisplayAdFormatSettingEnum,
@@ -461,11 +476,23 @@ from .types.local_services_employee_type import (
 from .types.local_services_insurance_rejection_reason import (
     LocalServicesInsuranceRejectionReasonEnum as LocalServicesInsuranceRejectionReasonEnum,
 )
+from .types.local_services_lead_credit_issuance_decision import (
+    LocalServicesLeadCreditIssuanceDecisionEnum as LocalServicesLeadCreditIssuanceDecisionEnum,
+)
 from .types.local_services_lead_credit_state import (
     LocalServicesCreditStateEnum as LocalServicesCreditStateEnum,
 )
 from .types.local_services_lead_status import (
     LocalServicesLeadStatusEnum as LocalServicesLeadStatusEnum,
+)
+from .types.local_services_lead_survey_answer import (
+    LocalServicesLeadSurveyAnswerEnum as LocalServicesLeadSurveyAnswerEnum,
+)
+from .types.local_services_lead_survey_dissatisfied_reason import (
+    LocalServicesLeadSurveyDissatisfiedReasonEnum as LocalServicesLeadSurveyDissatisfiedReasonEnum,
+)
+from .types.local_services_lead_survey_satisfied_reason import (
+    LocalServicesLeadSurveySatisfiedReasonEnum as LocalServicesLeadSurveySatisfiedReasonEnum,
 )
 from .types.local_services_lead_type import (
     LocalServicesLeadTypeEnum as LocalServicesLeadTypeEnum,
@@ -600,6 +627,9 @@ from .types.proximity_radius_units import (
 )
 from .types.quality_score_bucket import QualityScoreBucketEnum as QualityScoreBucketEnum
 from .types.reach_plan_age_range import ReachPlanAgeRangeEnum as ReachPlanAgeRangeEnum
+from .types.reach_plan_conversion_rate_model import (
+    ReachPlanConversionRateModelEnum as ReachPlanConversionRateModelEnum,
+)
 from .types.reach_plan_network import ReachPlanNetworkEnum as ReachPlanNetworkEnum
 from .types.reach_plan_surface import ReachPlanSurfaceEnum as ReachPlanSurfaceEnum
 from .types.recommendation_subscription_status import (
@@ -773,6 +803,7 @@ __all__ = [
     "AdGroupTypeEnum",
     "AdNetworkTypeEnum",
     "AdServingOptimizationStatusEnum",
+    "AdStrengthActionItemTypeEnum",
     "AdStrengthEnum",
     "AdTypeEnum",
     "AdvertisingChannelSubTypeEnum",
@@ -787,6 +818,7 @@ __all__ = [
     "AppUrlOperatingSystemTypeEnum",
     "AssetAutomationStatusEnum",
     "AssetAutomationTypeEnum",
+    "AssetCoverageVideoAspectRatioRequirementEnum",
     "AssetFieldTypeEnum",
     "AssetGroupPrimaryStatusEnum",
     "AssetGroupPrimaryStatusReasonEnum",
@@ -856,6 +888,7 @@ __all__ = [
     "ConversionAdjustmentTypeEnum",
     "ConversionAttributionEventTypeEnum",
     "ConversionCustomVariableStatusEnum",
+    "ConversionCustomerTypeEnum",
     "ConversionEnvironmentEnum",
     "ConversionLagBucketEnum",
     "ConversionOrAdjustmentLagBucketEnum",
@@ -887,6 +920,8 @@ __all__ = [
     "DataLinkStatusEnum",
     "DataLinkTypeEnum",
     "DayOfWeekEnum",
+    "DemandGenChannelConfigEnum",
+    "DemandGenChannelStrategyEnum",
     "DeviceEnum",
     "DisplayAdFormatSettingEnum",
     "DisplayUploadProductTypeEnum",
@@ -952,7 +987,11 @@ __all__ = [
     "LocalServicesEmployeeTypeEnum",
     "LocalServicesInsuranceRejectionReasonEnum",
     "LocalServicesLeadConversationTypeEnum",
+    "LocalServicesLeadCreditIssuanceDecisionEnum",
     "LocalServicesLeadStatusEnum",
+    "LocalServicesLeadSurveyAnswerEnum",
+    "LocalServicesLeadSurveyDissatisfiedReasonEnum",
+    "LocalServicesLeadSurveySatisfiedReasonEnum",
     "LocalServicesLeadTypeEnum",
     "LocalServicesLicenseRejectionReasonEnum",
     "LocalServicesParticipantTypeEnum",
@@ -1010,6 +1049,7 @@ __all__ = [
     "ProximityRadiusUnitsEnum",
     "QualityScoreBucketEnum",
     "ReachPlanAgeRangeEnum",
+    "ReachPlanConversionRateModelEnum",
     "ReachPlanNetworkEnum",
     "ReachPlanSurfaceEnum",
     "RecommendationSubscriptionStatusEnum",

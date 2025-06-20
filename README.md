@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/google-ads-stubs.svg)](https://badge.fury.io/py/google-ads-stubs)
 
 This package provides type stubs for the [Google Ads API Client Library for Python](https://github.com/googleads/google-ads-python). 
-It's currently compatible with v26.0.1 of this library (v19.0 of the API). It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
+It's currently compatible with v27.0.0 of this library (v20.1 of the API). It allows you to type check usage of the library with e.g. [mypy](http://mypy-lang.org/) and will also improve autocomplete in many editors.
 
 **This is in no way affiliated with Google.**
 
@@ -30,10 +30,10 @@ method of `GoogleAdsClient`.The workaround is to explicitly state the type. You 
 # Replace this:
 campaign_operation = client.get_type('CampaignOperation')
 # With this:
-from google.ads.googleads.v19.services import CampaignOperation
+from google.ads.googleads.v20.services import CampaignOperation
 campaign_operation: CampaignOperation = client.get_type('CampaignOperation')
 # Or this:
-from google.ads.googleads.v19.services import CampaignOperation
+from google.ads.googleads.v20.services import CampaignOperation
 campaign_operation = CampaignOperation()
 ```
 While it is technically possible to type this method using a combination of overloading and literal types,

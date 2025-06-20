@@ -47,6 +47,13 @@ class ReachPlanServiceGrpcAsyncIOTransport(ReachPlanServiceTransport):
     @property
     def grpc_channel(self) -> aio.Channel: ...
     @property
+    def generate_conversion_rates(
+        self,
+    ) -> Callable[
+        [reach_plan_service.GenerateConversionRatesRequest],
+        Awaitable[reach_plan_service.GenerateConversionRatesResponse],
+    ]: ...
+    @property
     def list_plannable_locations(
         self,
     ) -> Callable[

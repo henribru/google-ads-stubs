@@ -17,6 +17,9 @@ from google.ads.googleads.v19.enums.types.frequency_cap_time_unit import (
 from google.ads.googleads.v19.enums.types.reach_plan_age_range import (
     ReachPlanAgeRangeEnum,
 )
+from google.ads.googleads.v19.enums.types.reach_plan_conversion_rate_model import (
+    ReachPlanConversionRateModelEnum,
+)
 from google.ads.googleads.v19.enums.types.reach_plan_network import ReachPlanNetworkEnum
 from google.ads.googleads.v19.enums.types.reach_plan_surface import ReachPlanSurfaceEnum
 from google.ads.googleads.v19.enums.types.target_frequency_time_unit import (
@@ -75,6 +78,26 @@ class CampaignDuration(proto.Message):
         self, key: Literal["duration_in_days", "date_range"]
     ) -> bool: ...
 
+class ConversionRateSuggestion(proto.Message):
+    conversion_rate_model: ReachPlanConversionRateModelEnum.ReachPlanConversionRateModel
+    plannable_product_code: str
+    conversion_rate: float
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        conversion_rate_model: ReachPlanConversionRateModelEnum.ReachPlanConversionRateModel = ...,
+        plannable_product_code: str = ...,
+        conversion_rate: float = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal[
+            "conversion_rate_model", "plannable_product_code", "conversion_rate"
+        ],
+    ) -> bool: ...
+
 class EffectiveFrequencyBreakdown(proto.Message):
     effective_frequency: int
     on_target_reach: int
@@ -128,6 +151,7 @@ class Forecast(proto.Message):
     on_target_coview_impressions: int
     total_coview_impressions: int
     views: int
+    conversions: float
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -146,6 +170,7 @@ class Forecast(proto.Message):
         on_target_coview_impressions: int = ...,
         total_coview_impressions: int = ...,
         views: int = ...,
+        conversions: float = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -161,6 +186,7 @@ class Forecast(proto.Message):
             "on_target_coview_impressions",
             "total_coview_impressions",
             "views",
+            "conversions",
         ],
     ) -> bool: ...
 
@@ -190,6 +216,34 @@ class FrequencyCap(proto.Message):
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self, key: Literal["impressions", "time_unit"]
+    ) -> bool: ...
+
+class GenerateConversionRatesRequest(proto.Message):
+    customer_id: str
+    customer_reach_group: str
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        customer_id: str = ...,
+        customer_reach_group: str = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["customer_id", "customer_reach_group"]
+    ) -> bool: ...
+
+class GenerateConversionRatesResponse(proto.Message):
+    conversion_rate_suggestions: MutableSequence[ConversionRateSuggestion]
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        conversion_rate_suggestions: MutableSequence[ConversionRateSuggestion] = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["conversion_rate_suggestions"]
     ) -> bool: ...
 
 class GenerateReachForecastRequest(proto.Message):
@@ -376,6 +430,7 @@ class PlannableTargeting(proto.Message):
 class PlannedProduct(proto.Message):
     plannable_product_code: str
     budget_micros: int
+    conversion_rate: float
     advanced_product_targeting: AdvancedProductTargeting
     def __init__(
         self: _M,
@@ -384,12 +439,16 @@ class PlannedProduct(proto.Message):
         ignore_unknown_fields: bool = False,
         plannable_product_code: str = ...,
         budget_micros: int = ...,
+        conversion_rate: float = ...,
         advanced_product_targeting: AdvancedProductTargeting = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
         key: Literal[
-            "plannable_product_code", "budget_micros", "advanced_product_targeting"
+            "plannable_product_code",
+            "budget_micros",
+            "conversion_rate",
+            "advanced_product_targeting",
         ],
     ) -> bool: ...
 
@@ -405,6 +464,7 @@ class PlannedProductForecast(proto.Message):
     total_coview_impressions: int
     average_frequency: float
     views: int
+    conversions: float
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -421,6 +481,7 @@ class PlannedProductForecast(proto.Message):
         total_coview_impressions: int = ...,
         average_frequency: float = ...,
         views: int = ...,
+        conversions: float = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -436,6 +497,7 @@ class PlannedProductForecast(proto.Message):
             "total_coview_impressions",
             "average_frequency",
             "views",
+            "conversions",
         ],
     ) -> bool: ...
 

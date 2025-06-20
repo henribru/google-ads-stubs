@@ -33,6 +33,7 @@ class ChangeStatus(proto.Message):
     ad_group_asset: str
     combined_audience: str
     asset_group: str
+    campaign_budget: str
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -56,6 +57,7 @@ class ChangeStatus(proto.Message):
         ad_group_asset: str = ...,
         combined_audience: str = ...,
         asset_group: str = ...,
+        campaign_budget: str = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -78,5 +80,6 @@ class ChangeStatus(proto.Message):
             "ad_group_asset",
             "combined_audience",
             "asset_group",
+            "campaign_budget",
         ],
     ) -> bool: ...

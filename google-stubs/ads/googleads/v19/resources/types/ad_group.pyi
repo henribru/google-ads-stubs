@@ -21,6 +21,12 @@ from google.ads.googleads.v19.enums.types.ad_group_type import AdGroupTypeEnum
 from google.ads.googleads.v19.enums.types.asset_field_type import AssetFieldTypeEnum
 from google.ads.googleads.v19.enums.types.asset_set_type import AssetSetTypeEnum
 from google.ads.googleads.v19.enums.types.bidding_source import BiddingSourceEnum
+from google.ads.googleads.v19.enums.types.demand_gen_channel_config import (
+    DemandGenChannelConfigEnum,
+)
+from google.ads.googleads.v19.enums.types.demand_gen_channel_strategy import (
+    DemandGenChannelStrategyEnum,
+)
 from google.ads.googleads.v19.enums.types.targeting_dimension import (
     TargetingDimensionEnum,
 )
@@ -39,6 +45,71 @@ class AdGroup(proto.Message):
         ) -> None: ...
         def __contains__(  # type: ignore[override]
             self, key: Literal["use_audience_grouped"]
+        ) -> bool: ...
+
+    class DemandGenAdGroupSettings(proto.Message):
+        class DemandGenChannelControls(proto.Message):
+            class DemandGenSelectedChannels(proto.Message):
+                youtube_in_stream: bool
+                youtube_in_feed: bool
+                youtube_shorts: bool
+                discover: bool
+                gmail: bool
+                display: bool
+                def __init__(
+                    self: _M,
+                    mapping: _M
+                    | Mapping
+                    | google.protobuf.message.Message
+                    | None = None,
+                    *,
+                    ignore_unknown_fields: bool = False,
+                    youtube_in_stream: bool = ...,
+                    youtube_in_feed: bool = ...,
+                    youtube_shorts: bool = ...,
+                    discover: bool = ...,
+                    gmail: bool = ...,
+                    display: bool = ...,
+                ) -> None: ...
+                def __contains__(  # type: ignore[override]
+                    self,
+                    key: Literal[
+                        "youtube_in_stream",
+                        "youtube_in_feed",
+                        "youtube_shorts",
+                        "discover",
+                        "gmail",
+                        "display",
+                    ],
+                ) -> bool: ...
+
+            channel_config: DemandGenChannelConfigEnum.DemandGenChannelConfig
+            channel_strategy: DemandGenChannelStrategyEnum.DemandGenChannelStrategy
+            selected_channels: AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels
+            def __init__(
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+                *,
+                ignore_unknown_fields: bool = False,
+                channel_config: DemandGenChannelConfigEnum.DemandGenChannelConfig = ...,
+                channel_strategy: DemandGenChannelStrategyEnum.DemandGenChannelStrategy = ...,
+                selected_channels: AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls.DemandGenSelectedChannels = ...,
+            ) -> None: ...
+            def __contains__(  # type: ignore[override]
+                self,
+                key: Literal["channel_config", "channel_strategy", "selected_channels"],
+            ) -> bool: ...
+
+        channel_controls: AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls
+        def __init__(
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+            *,
+            ignore_unknown_fields: bool = False,
+            channel_controls: AdGroup.DemandGenAdGroupSettings.DemandGenChannelControls = ...,
+        ) -> None: ...
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["channel_controls"]
         ) -> bool: ...
 
     resource_name: str
@@ -80,6 +151,7 @@ class AdGroup(proto.Message):
     primary_status_reasons: MutableSequence[
         AdGroupPrimaryStatusReasonEnum.AdGroupPrimaryStatusReason
     ]
+    demand_gen_ad_group_settings: AdGroup.DemandGenAdGroupSettings
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -126,6 +198,7 @@ class AdGroup(proto.Message):
         primary_status_reasons: MutableSequence[
             AdGroupPrimaryStatusReasonEnum.AdGroupPrimaryStatusReason
         ] = ...,
+        demand_gen_ad_group_settings: AdGroup.DemandGenAdGroupSettings = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -165,5 +238,6 @@ class AdGroup(proto.Message):
             "excluded_parent_asset_set_types",
             "primary_status",
             "primary_status_reasons",
+            "demand_gen_ad_group_settings",
         ],
     ) -> bool: ...

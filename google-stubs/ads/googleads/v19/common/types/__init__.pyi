@@ -42,6 +42,7 @@ from .ad_type_infos import (
     VideoOutstreamAdInfo as VideoOutstreamAdInfo,
     VideoResponsiveAdInfo as VideoResponsiveAdInfo,
     VideoTrueViewInStreamAdInfo as VideoTrueViewInStreamAdInfo,
+    YouTubeAudioAdInfo as YouTubeAudioAdInfo,
 )
 from .asset_policy import (
     AdAssetPolicySummary as AdAssetPolicySummary,
@@ -389,6 +390,7 @@ __all__ = [
     "VideoOutstreamAdInfo",
     "VideoResponsiveAdInfo",
     "VideoTrueViewInStreamAdInfo",
+    "YouTubeAudioAdInfo",
     "AdAssetPolicySummary",
     "AssetDisapproved",
     "AssetLinkPrimaryStatusDetails",

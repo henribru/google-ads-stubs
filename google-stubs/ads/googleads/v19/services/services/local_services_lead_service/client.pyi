@@ -88,6 +88,16 @@ class LocalServicesLeadServiceClient(metaclass=LocalServicesLeadServiceClientMet
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> local_services_lead_service.AppendLeadConversationResponse: ...
+    def provide_lead_feedback(
+        self,
+        request: local_services_lead_service.ProvideLeadFeedbackRequest
+        | dict
+        | None = None,
+        *,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> local_services_lead_service.ProvideLeadFeedbackResponse: ...
     def __enter__(self) -> LocalServicesLeadServiceClient: ...
     def __exit__(
         self,

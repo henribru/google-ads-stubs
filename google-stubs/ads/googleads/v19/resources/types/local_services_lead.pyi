@@ -62,6 +62,7 @@ class LocalServicesLead(proto.Message):
     note: Note
     lead_charged: bool
     credit_details: CreditDetails
+    lead_feedback_submitted: bool
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -79,6 +80,7 @@ class LocalServicesLead(proto.Message):
         note: Note = ...,
         lead_charged: bool = ...,
         credit_details: CreditDetails = ...,
+        lead_feedback_submitted: bool = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -95,6 +97,7 @@ class LocalServicesLead(proto.Message):
             "note",
             "lead_charged",
             "credit_details",
+            "lead_feedback_submitted",
         ],
     ) -> bool: ...
 

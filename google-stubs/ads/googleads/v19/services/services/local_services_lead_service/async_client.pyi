@@ -66,5 +66,15 @@ class LocalServicesLeadServiceAsyncClient:
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> local_services_lead_service.AppendLeadConversationResponse: ...
+    async def provide_lead_feedback(
+        self,
+        request: local_services_lead_service.ProvideLeadFeedbackRequest
+        | dict
+        | None = None,
+        *,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> local_services_lead_service.ProvideLeadFeedbackResponse: ...
     async def __aenter__(self) -> LocalServicesLeadServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

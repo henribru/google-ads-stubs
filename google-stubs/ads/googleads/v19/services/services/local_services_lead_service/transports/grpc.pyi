@@ -50,6 +50,13 @@ class LocalServicesLeadServiceGrpcTransport(LocalServicesLeadServiceTransport):
         [local_services_lead_service.AppendLeadConversationRequest],
         local_services_lead_service.AppendLeadConversationResponse,
     ]: ...
+    @property
+    def provide_lead_feedback(
+        self,
+    ) -> Callable[
+        [local_services_lead_service.ProvideLeadFeedbackRequest],
+        local_services_lead_service.ProvideLeadFeedbackResponse,
+    ]: ...
     def close(self) -> None: ...
     @property
     def kind(self) -> str: ...

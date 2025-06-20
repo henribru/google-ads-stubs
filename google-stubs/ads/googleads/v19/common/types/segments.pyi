@@ -11,6 +11,7 @@ from google.ads.googleads.v19.enums.types.ad_destination_type import (
 )
 from google.ads.googleads.v19.enums.types.ad_format_type import AdFormatTypeEnum
 from google.ads.googleads.v19.enums.types.ad_network_type import AdNetworkTypeEnum
+from google.ads.googleads.v19.enums.types.age_range_type import AgeRangeTypeEnum
 from google.ads.googleads.v19.enums.types.budget_campaign_association_status import (
     BudgetCampaignAssociationStatusEnum,
 )
@@ -38,6 +39,7 @@ from google.ads.googleads.v19.enums.types.device import DeviceEnum
 from google.ads.googleads.v19.enums.types.external_conversion_source import (
     ExternalConversionSourceEnum,
 )
+from google.ads.googleads.v19.enums.types.gender_type import GenderTypeEnum
 from google.ads.googleads.v19.enums.types.hotel_date_selection_type import (
     HotelDateSelectionTypeEnum,
 )
@@ -246,6 +248,8 @@ class Segments(proto.Message):
     sk_ad_network_version: str
     asset_interaction_target: AssetInteractionTarget
     new_versus_returning_customers: ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket
+    adjusted_age_range: AgeRangeTypeEnum.AgeRangeType
+    adjusted_gender: GenderTypeEnum.GenderType
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -362,6 +366,8 @@ class Segments(proto.Message):
         sk_ad_network_version: str = ...,
         asset_interaction_target: AssetInteractionTarget = ...,
         new_versus_returning_customers: ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket = ...,
+        adjusted_age_range: AgeRangeTypeEnum.AgeRangeType = ...,
+        adjusted_gender: GenderTypeEnum.GenderType = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -477,6 +483,8 @@ class Segments(proto.Message):
             "sk_ad_network_version",
             "asset_interaction_target",
             "new_versus_returning_customers",
+            "adjusted_age_range",
+            "adjusted_gender",
         ],
     ) -> bool: ...
 

@@ -54,6 +54,7 @@ class Metrics(proto.Message):
     benchmark_average_max_cpc: float
     biddable_app_install_conversions: float
     biddable_app_post_install_conversions: float
+    biddable_cohort_app_post_install_conversions: float
     benchmark_ctr: float
     bounce_rate: float
     clicks: int
@@ -221,6 +222,8 @@ class Metrics(proto.Message):
     video_view_rate_in_feed: float
     video_view_rate_in_stream: float
     video_view_rate_shorts: float
+    coviewed_impressions: int
+    primary_impressions: int
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -265,6 +268,7 @@ class Metrics(proto.Message):
         benchmark_average_max_cpc: float = ...,
         biddable_app_install_conversions: float = ...,
         biddable_app_post_install_conversions: float = ...,
+        biddable_cohort_app_post_install_conversions: float = ...,
         benchmark_ctr: float = ...,
         bounce_rate: float = ...,
         clicks: int = ...,
@@ -432,6 +436,8 @@ class Metrics(proto.Message):
         video_view_rate_in_feed: float = ...,
         video_view_rate_in_stream: float = ...,
         video_view_rate_shorts: float = ...,
+        coviewed_impressions: int = ...,
+        primary_impressions: int = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -475,6 +481,7 @@ class Metrics(proto.Message):
             "benchmark_average_max_cpc",
             "biddable_app_install_conversions",
             "biddable_app_post_install_conversions",
+            "biddable_cohort_app_post_install_conversions",
             "benchmark_ctr",
             "bounce_rate",
             "clicks",
@@ -640,6 +647,8 @@ class Metrics(proto.Message):
             "video_view_rate_in_feed",
             "video_view_rate_in_stream",
             "video_view_rate_shorts",
+            "coviewed_impressions",
+            "primary_impressions",
         ],
     ) -> bool: ...
 

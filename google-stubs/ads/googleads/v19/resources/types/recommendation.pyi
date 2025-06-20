@@ -238,15 +238,17 @@ class Recommendation(proto.Message):
 
     class ImprovePerformanceMaxAdStrengthRecommendation(proto.Message):
         asset_group: str
+        ad_strength: AdStrengthEnum.AdStrength
         def __init__(
             self: _M,
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
             asset_group: str = ...,
+            ad_strength: AdStrengthEnum.AdStrength = ...,
         ) -> None: ...
         def __contains__(  # type: ignore[override]
-            self, key: Literal["asset_group"]
+            self, key: Literal["asset_group", "ad_strength"]
         ) -> bool: ...
 
     class KeywordMatchTypeRecommendation(proto.Message):
