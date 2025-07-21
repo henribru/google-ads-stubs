@@ -2,6 +2,7 @@
 name = "google-ads-stubs"
 version = "22.0.0"
 license = "Apache-2.0"
+license-files = ["LICENSE"]
 description = "Type stubs for google-ads"
 authors = [ 
     { name = "Henrik Bruåsdal", email = "henrik.bruasdal@gmail.com" },
@@ -37,9 +38,10 @@ ignore = ["UP035"]
 combine-as-imports = true
 known-first-party = ["google.ads.googleads"]
 
-[tool.hatch.build.targets.wheel]
-packages = ["google-stubs"]
+[tool.uv.build-backend]
+module-name = "google-stubs.ads.googleads"
+module-root = ""
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build>=0.8.0,<0.9.0"]
+build-backend = "uv_build"
