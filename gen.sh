@@ -19,8 +19,8 @@ cd ..
 rm -rf google-stubs/ads/googleads/v*
 uv run python stubgen.py
 uv run python create_type_stubs.py
-uv run create_enums.py
-uv run create_service_overloads.py
+uv run python create_enums.py
+uv run python create_service_overloads.py
 ./stubdefaulter.sh
 mv .gitignore gitignore
 uv run ruff check google-stubs --fix --unsafe-fixes
