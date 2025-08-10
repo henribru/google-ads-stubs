@@ -1,4 +1,4 @@
-from typing import Any, AsyncIterator, Awaitable, Callable, Iterator, Sequence, Tuple
+from typing import Any, AsyncIterator, Awaitable, Callable, Iterator, Sequence
 
 from _typeshed import Incomplete
 

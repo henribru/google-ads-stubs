@@ -76,6 +76,9 @@ from google.ads.googleads.v20.enums.types.campaign_serving_status import (
     CampaignServingStatusEnum,
 )
 from google.ads.googleads.v20.enums.types.campaign_status import CampaignStatusEnum
+from google.ads.googleads.v20.enums.types.eu_political_advertising_status import (
+    EuPoliticalAdvertisingStatusEnum,
+)
 from google.ads.googleads.v20.enums.types.listing_type import ListingTypeEnum
 from google.ads.googleads.v20.enums.types.location_source_type import (
     LocationSourceTypeEnum,
@@ -595,6 +598,9 @@ class Campaign(proto.Message):
     keyword_match_type: CampaignKeywordMatchTypeEnum.CampaignKeywordMatchType
     brand_guidelines_enabled: bool
     brand_guidelines: Campaign.BrandGuidelines
+    contains_eu_political_advertising: (
+        EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus
+    )
     bidding_strategy: str
     commission: Commission
     manual_cpa: ManualCpa
@@ -680,6 +686,7 @@ class Campaign(proto.Message):
         keyword_match_type: CampaignKeywordMatchTypeEnum.CampaignKeywordMatchType = ...,
         brand_guidelines_enabled: bool = ...,
         brand_guidelines: Campaign.BrandGuidelines = ...,
+        contains_eu_political_advertising: EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus = ...,
         bidding_strategy: str = ...,
         commission: Commission = ...,
         manual_cpa: ManualCpa = ...,
@@ -756,6 +763,7 @@ class Campaign(proto.Message):
             "keyword_match_type",
             "brand_guidelines_enabled",
             "brand_guidelines",
+            "contains_eu_political_advertising",
             "bidding_strategy",
             "commission",
             "manual_cpa",

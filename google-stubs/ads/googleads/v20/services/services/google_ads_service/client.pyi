@@ -1,5 +1,6 @@
 import types
-from typing import Callable, Dict, Iterable, MutableSequence, Sequence, Tuple, Type
+import types
+from typing import Callable, Iterable, MutableSequence, Sequence
 
 from _typeshed import Incomplete
 from google.api_core import (

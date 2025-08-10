@@ -1,4 +1,4 @@
-from typing import Awaitable, Callable, Sequence, Tuple
+from typing import Awaitable, Callable, Sequence
 
 import grpc
 from google.api_core import gapic_v1
