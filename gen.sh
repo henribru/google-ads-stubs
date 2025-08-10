@@ -8,7 +8,7 @@ shopt -s globstar
 # Manual: Update the following to match the API versions:
 # - GoogleAdsFailure in errors.pyi
 # - _V, imports and get_type default in client.pyi
-# - _Request in exception_interceptor.pyi, logging_interceptor.pyi and metadata_inteceptor.pyi
+# - _Request in exception_interceptor.pyi, logging_interceptor.pyi and metadata_interceptor.pyi
 cd google-ads-python
 git restore .
 git pull
