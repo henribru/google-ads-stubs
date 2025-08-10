@@ -6,90 +6,90 @@ from google.oauth2.credentials import Credentials
 from google.protobuf.message import Message
 from typing_extensions import Literal
 
-import google.ads.googleads.v18.services.services.account_budget_proposal_service
-import google.ads.googleads.v18.services.services.account_link_service
-import google.ads.googleads.v18.services.services.ad_group_ad_label_service
-import google.ads.googleads.v18.services.services.ad_group_ad_service
-import google.ads.googleads.v18.services.services.ad_group_asset_service
-import google.ads.googleads.v18.services.services.ad_group_asset_set_service
-import google.ads.googleads.v18.services.services.ad_group_bid_modifier_service
-import google.ads.googleads.v18.services.services.ad_group_criterion_customizer_service
-import google.ads.googleads.v18.services.services.ad_group_criterion_label_service
-import google.ads.googleads.v18.services.services.ad_group_criterion_service
-import google.ads.googleads.v18.services.services.ad_group_customizer_service
-import google.ads.googleads.v18.services.services.ad_group_extension_setting_service
-import google.ads.googleads.v18.services.services.ad_group_feed_service
-import google.ads.googleads.v18.services.services.ad_group_label_service
-import google.ads.googleads.v18.services.services.ad_group_service
-import google.ads.googleads.v18.services.services.ad_parameter_service
-import google.ads.googleads.v18.services.services.ad_service
-import google.ads.googleads.v18.services.services.asset_group_asset_service
-import google.ads.googleads.v18.services.services.asset_group_listing_group_filter_service
-import google.ads.googleads.v18.services.services.asset_group_service
-import google.ads.googleads.v18.services.services.asset_group_signal_service
-import google.ads.googleads.v18.services.services.asset_service
-import google.ads.googleads.v18.services.services.asset_set_asset_service
-import google.ads.googleads.v18.services.services.asset_set_service
-import google.ads.googleads.v18.services.services.audience_insights_service
-import google.ads.googleads.v18.services.services.audience_service
-import google.ads.googleads.v18.services.services.batch_job_service
-import google.ads.googleads.v18.services.services.bidding_data_exclusion_service
-import google.ads.googleads.v18.services.services.bidding_seasonality_adjustment_service
-import google.ads.googleads.v18.services.services.bidding_strategy_service
-import google.ads.googleads.v18.services.services.billing_setup_service
-import google.ads.googleads.v18.services.services.brand_suggestion_service
-import google.ads.googleads.v18.services.services.campaign_asset_service
-import google.ads.googleads.v18.services.services.campaign_asset_set_service
-import google.ads.googleads.v18.services.services.campaign_bid_modifier_service
-import google.ads.googleads.v18.services.services.campaign_budget_service
-import google.ads.googleads.v18.services.services.campaign_conversion_goal_service
-import google.ads.googleads.v18.services.services.campaign_criterion_service
-import google.ads.googleads.v18.services.services.campaign_customizer_service
-import google.ads.googleads.v18.services.services.campaign_draft_service
-import google.ads.googleads.v18.services.services.campaign_extension_setting_service
-import google.ads.googleads.v18.services.services.campaign_feed_service
-import google.ads.googleads.v18.services.services.campaign_group_service
-import google.ads.googleads.v18.services.services.campaign_label_service
-import google.ads.googleads.v18.services.services.campaign_lifecycle_goal_service
-import google.ads.googleads.v18.services.services.campaign_service
-import google.ads.googleads.v18.services.services.campaign_shared_set_service
-import google.ads.googleads.v18.services.services.content_creator_insights_service
-import google.ads.googleads.v18.services.services.conversion_action_service
-import google.ads.googleads.v18.services.services.conversion_adjustment_upload_service
-import google.ads.googleads.v18.services.services.conversion_custom_variable_service
-import google.ads.googleads.v18.services.services.conversion_goal_campaign_config_service
-import google.ads.googleads.v18.services.services.conversion_upload_service
-import google.ads.googleads.v18.services.services.conversion_value_rule_service
-import google.ads.googleads.v18.services.services.conversion_value_rule_set_service
-import google.ads.googleads.v18.services.services.custom_audience_service
-import google.ads.googleads.v18.services.services.custom_conversion_goal_service
-import google.ads.googleads.v18.services.services.custom_interest_service
-import google.ads.googleads.v18.services.services.customer_asset_service
-import google.ads.googleads.v18.services.services.customer_asset_set_service
-import google.ads.googleads.v18.services.services.customer_client_link_service
-import google.ads.googleads.v18.services.services.customer_conversion_goal_service
-import google.ads.googleads.v18.services.services.customer_customizer_service
-import google.ads.googleads.v18.services.services.customer_extension_setting_service
-import google.ads.googleads.v18.services.services.customer_feed_service
-import google.ads.googleads.v18.services.services.customer_label_service
-import google.ads.googleads.v18.services.services.customer_lifecycle_goal_service
-import google.ads.googleads.v18.services.services.customer_manager_link_service
-import google.ads.googleads.v18.services.services.customer_negative_criterion_service
-import google.ads.googleads.v18.services.services.customer_service
-import google.ads.googleads.v18.services.services.customer_sk_ad_network_conversion_value_schema_service
-import google.ads.googleads.v18.services.services.customer_user_access_invitation_service
-import google.ads.googleads.v18.services.services.customer_user_access_service
-import google.ads.googleads.v18.services.services.customizer_attribute_service
-import google.ads.googleads.v18.services.services.data_link_service
-import google.ads.googleads.v18.services.services.experiment_arm_service
-import google.ads.googleads.v18.services.services.experiment_service
-import google.ads.googleads.v18.services.services.extension_feed_item_service
-import google.ads.googleads.v18.services.services.feed_item_service
-import google.ads.googleads.v18.services.services.feed_item_set_link_service
-import google.ads.googleads.v18.services.services.feed_item_set_service
-import google.ads.googleads.v18.services.services.feed_item_target_service
-import google.ads.googleads.v18.services.services.feed_mapping_service
-import google.ads.googleads.v18.services.services.feed_service
+import google.ads.googleads.v21.services.services.account_budget_proposal_service
+import google.ads.googleads.v21.services.services.account_link_service
+import google.ads.googleads.v21.services.services.ad_group_ad_label_service
+import google.ads.googleads.v21.services.services.ad_group_ad_service
+import google.ads.googleads.v21.services.services.ad_group_asset_service
+import google.ads.googleads.v21.services.services.ad_group_asset_set_service
+import google.ads.googleads.v21.services.services.ad_group_bid_modifier_service
+import google.ads.googleads.v21.services.services.ad_group_criterion_customizer_service
+import google.ads.googleads.v21.services.services.ad_group_criterion_label_service
+import google.ads.googleads.v21.services.services.ad_group_criterion_service
+import google.ads.googleads.v21.services.services.ad_group_customizer_service
+import google.ads.googleads.v21.services.services.ad_group_extension_setting_service
+import google.ads.googleads.v21.services.services.ad_group_feed_service
+import google.ads.googleads.v21.services.services.ad_group_label_service
+import google.ads.googleads.v21.services.services.ad_group_service
+import google.ads.googleads.v21.services.services.ad_parameter_service
+import google.ads.googleads.v21.services.services.ad_service
+import google.ads.googleads.v21.services.services.asset_group_asset_service
+import google.ads.googleads.v21.services.services.asset_group_listing_group_filter_service
+import google.ads.googleads.v21.services.services.asset_group_service
+import google.ads.googleads.v21.services.services.asset_group_signal_service
+import google.ads.googleads.v21.services.services.asset_service
+import google.ads.googleads.v21.services.services.asset_set_asset_service
+import google.ads.googleads.v21.services.services.asset_set_service
+import google.ads.googleads.v21.services.services.audience_insights_service
+import google.ads.googleads.v21.services.services.audience_service
+import google.ads.googleads.v21.services.services.batch_job_service
+import google.ads.googleads.v21.services.services.bidding_data_exclusion_service
+import google.ads.googleads.v21.services.services.bidding_seasonality_adjustment_service
+import google.ads.googleads.v21.services.services.bidding_strategy_service
+import google.ads.googleads.v21.services.services.billing_setup_service
+import google.ads.googleads.v21.services.services.brand_suggestion_service
+import google.ads.googleads.v21.services.services.campaign_asset_service
+import google.ads.googleads.v21.services.services.campaign_asset_set_service
+import google.ads.googleads.v21.services.services.campaign_bid_modifier_service
+import google.ads.googleads.v21.services.services.campaign_budget_service
+import google.ads.googleads.v21.services.services.campaign_conversion_goal_service
+import google.ads.googleads.v21.services.services.campaign_criterion_service
+import google.ads.googleads.v21.services.services.campaign_customizer_service
+import google.ads.googleads.v21.services.services.campaign_draft_service
+import google.ads.googleads.v21.services.services.campaign_extension_setting_service
+import google.ads.googleads.v21.services.services.campaign_feed_service
+import google.ads.googleads.v21.services.services.campaign_group_service
+import google.ads.googleads.v21.services.services.campaign_label_service
+import google.ads.googleads.v21.services.services.campaign_lifecycle_goal_service
+import google.ads.googleads.v21.services.services.campaign_service
+import google.ads.googleads.v21.services.services.campaign_shared_set_service
+import google.ads.googleads.v21.services.services.content_creator_insights_service
+import google.ads.googleads.v21.services.services.conversion_action_service
+import google.ads.googleads.v21.services.services.conversion_adjustment_upload_service
+import google.ads.googleads.v21.services.services.conversion_custom_variable_service
+import google.ads.googleads.v21.services.services.conversion_goal_campaign_config_service
+import google.ads.googleads.v21.services.services.conversion_upload_service
+import google.ads.googleads.v21.services.services.conversion_value_rule_service
+import google.ads.googleads.v21.services.services.conversion_value_rule_set_service
+import google.ads.googleads.v21.services.services.custom_audience_service
+import google.ads.googleads.v21.services.services.custom_conversion_goal_service
+import google.ads.googleads.v21.services.services.custom_interest_service
+import google.ads.googleads.v21.services.services.customer_asset_service
+import google.ads.googleads.v21.services.services.customer_asset_set_service
+import google.ads.googleads.v21.services.services.customer_client_link_service
+import google.ads.googleads.v21.services.services.customer_conversion_goal_service
+import google.ads.googleads.v21.services.services.customer_customizer_service
+import google.ads.googleads.v21.services.services.customer_extension_setting_service
+import google.ads.googleads.v21.services.services.customer_feed_service
+import google.ads.googleads.v21.services.services.customer_label_service
+import google.ads.googleads.v21.services.services.customer_lifecycle_goal_service
+import google.ads.googleads.v21.services.services.customer_manager_link_service
+import google.ads.googleads.v21.services.services.customer_negative_criterion_service
+import google.ads.googleads.v21.services.services.customer_service
+import google.ads.googleads.v21.services.services.customer_sk_ad_network_conversion_value_schema_service
+import google.ads.googleads.v21.services.services.customer_user_access_invitation_service
+import google.ads.googleads.v21.services.services.customer_user_access_service
+import google.ads.googleads.v21.services.services.customizer_attribute_service
+import google.ads.googleads.v21.services.services.data_link_service
+import google.ads.googleads.v21.services.services.experiment_arm_service
+import google.ads.googleads.v21.services.services.experiment_service
+import google.ads.googleads.v21.services.services.extension_feed_item_service
+import google.ads.googleads.v21.services.services.feed_item_service
+import google.ads.googleads.v21.services.services.feed_item_set_link_service
+import google.ads.googleads.v21.services.services.feed_item_set_service
+import google.ads.googleads.v21.services.services.feed_item_target_service
+import google.ads.googleads.v21.services.services.feed_mapping_service
+import google.ads.googleads.v21.services.services.feed_service
 
 # Autogenerated service imports
 import google.ads.googleads.v18.services.services.geo_target_constant_service
@@ -332,13 +332,13 @@ import google.ads.googleads.v20.services.services.user_list_customer_type_servic
 import google.ads.googleads.v20.services.services.user_list_service
 
 # End of autogenerated service imports
-from google.ads.googleads import v20
+from google.ads.googleads import v21
 from google.ads.googleads.config import _ConfigDataUnparsed
 
-_V18 = Literal["v18"]
 _V19 = Literal["v19"]
 _V20 = Literal["v20"]
-_V = _V18 | _V19 | _V20
+_V21 = Literal["v21"]
+_V = _V19 | _V20 | _V21
 
 class _EnumGetter:
     # Autogenerated enums
@@ -1144,7 +1144,7 @@ class GoogleAdsClient:
         use_proto_plus: bool = False,
         use_cloud_org_for_api_access: bool | None = None,
     ) -> None: ...
-    def get_type(cls, name: str, version: _V = "v20") -> Any: ...
+    def get_type(cls, name: str, version: _V = "v21") -> Any: ...
     # Autogenerated service overloads
     @overload
     def get_service(

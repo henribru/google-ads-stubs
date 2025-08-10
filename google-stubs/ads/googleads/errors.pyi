@@ -1,10 +1,10 @@
 import grpc
 
-from google.ads.googleads.v18.errors import GoogleAdsFailure as GoogleAdsFailureV18
 from google.ads.googleads.v19.errors import GoogleAdsFailure as GoogleAdsFailureV19
 from google.ads.googleads.v20.errors import GoogleAdsFailure as GoogleAdsFailureV20
+from google.ads.googleads.v21.errors import GoogleAdsFailure as GoogleAdsFailureV21
 
-GoogleAdsFailure = GoogleAdsFailureV18 | GoogleAdsFailureV19 | GoogleAdsFailureV20
+GoogleAdsFailure = GoogleAdsFailureV19 | GoogleAdsFailureV20 | GoogleAdsFailureV21
 
 class GoogleAdsException(Exception):
     error: grpc.RpcError = ...
