@@ -1,4 +1,4 @@
-from typing import Callable, Sequence
+from typing import Callable, Sequence, Tuple
 
 from _typeshed import Incomplete
 from google.api_core import gapic_v1, retry_async as retries
