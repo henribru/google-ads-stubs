@@ -1,24 +1,15 @@
 import types
-from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
-
-from _typeshed import Incomplete
-from google.api_core import (
-    client_options as client_options_lib,
-    gapic_v1,
-    retry as retries,
-)
-from google.auth import credentials as ga_credentials
-
-from google.ads.googleads.v20.services.types import ad_group_customizer_service
-
 from .transports.base import AdGroupCustomizerServiceTransport
+from _typeshed import Incomplete
+from google.ads.googleads.v20.services.types import ad_group_customizer_service
+from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
+from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence
 
-__all__ = ["AdGroupCustomizerServiceClient"]
+__all__ = ['AdGroupCustomizerServiceClient']
 
 class AdGroupCustomizerServiceClientMeta(type):
-    def get_transport_class(
-        cls, label: str | None = None
-    ) -> type[AdGroupCustomizerServiceTransport]: ...
+    def get_transport_class(cls, label: str | None = None) -> type[AdGroupCustomizerServiceTransport]: ...
 
 class AdGroupCustomizerServiceClient(metaclass=AdGroupCustomizerServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -35,15 +26,11 @@ class AdGroupCustomizerServiceClient(metaclass=AdGroupCustomizerServiceClientMet
     @staticmethod
     def parse_ad_group_path(path: str) -> dict[str, str]: ...
     @staticmethod
-    def ad_group_customizer_path(
-        customer_id: str, ad_group_id: str, customizer_attribute_id: str
-    ) -> str: ...
+    def ad_group_customizer_path(customer_id: str, ad_group_id: str, customizer_attribute_id: str) -> str: ...
     @staticmethod
     def parse_ad_group_customizer_path(path: str) -> dict[str, str]: ...
     @staticmethod
-    def customizer_attribute_path(
-        customer_id: str, customizer_attribute_id: str
-    ) -> str: ...
+    def customizer_attribute_path(customer_id: str, customizer_attribute_id: str) -> str: ...
     @staticmethod
     def parse_customizer_attribute_path(path: str) -> dict[str, str]: ...
     @staticmethod
@@ -67,43 +54,12 @@ class AdGroupCustomizerServiceClient(metaclass=AdGroupCustomizerServiceClientMet
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: client_options_lib.ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | AdGroupCustomizerServiceTransport
-        | Callable[..., AdGroupCustomizerServiceTransport]
-        | None = None,
-        client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    def mutate_ad_group_customizers(
-        self,
-        request: ad_group_customizer_service.MutateAdGroupCustomizersRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[
-            ad_group_customizer_service.AdGroupCustomizerOperation
-        ]
-        | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> ad_group_customizer_service.MutateAdGroupCustomizersResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AdGroupCustomizerServiceTransport | Callable[..., AdGroupCustomizerServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    def mutate_ad_group_customizers(self, request: ad_group_customizer_service.MutateAdGroupCustomizersRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[ad_group_customizer_service.AdGroupCustomizerOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> ad_group_customizer_service.MutateAdGroupCustomizersResponse: ...
     def __enter__(self) -> AdGroupCustomizerServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
+    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...

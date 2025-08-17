@@ -1,15 +1,12 @@
-from typing import Callable, MutableSequence, Sequence, Tuple
-
+from .transports.base import BiddingStrategyServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v19.services.types import bidding_strategy_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence
 
-from google.ads.googleads.v19.services.types import bidding_strategy_service
-
-from .transports.base import BiddingStrategyServiceTransport
-
-__all__ = ["BiddingStrategyServiceAsyncClient"]
+__all__ = ['BiddingStrategyServiceAsyncClient']
 
 class BiddingStrategyServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -32,9 +29,7 @@ class BiddingStrategyServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> BiddingStrategyServiceTransport: ...
     @property
@@ -42,29 +37,7 @@ class BiddingStrategyServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | BiddingStrategyServiceTransport
-        | Callable[..., BiddingStrategyServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def mutate_bidding_strategies(
-        self,
-        request: bidding_strategy_service.MutateBiddingStrategiesRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[bidding_strategy_service.BiddingStrategyOperation]
-        | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> bidding_strategy_service.MutateBiddingStrategiesResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | BiddingStrategyServiceTransport | Callable[..., BiddingStrategyServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def mutate_bidding_strategies(self, request: bidding_strategy_service.MutateBiddingStrategiesRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[bidding_strategy_service.BiddingStrategyOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> bidding_strategy_service.MutateBiddingStrategiesResponse: ...
     async def __aenter__(self) -> BiddingStrategyServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

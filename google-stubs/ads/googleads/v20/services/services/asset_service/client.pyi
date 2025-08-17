@@ -1,24 +1,15 @@
 import types
-from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
-
-from _typeshed import Incomplete
-from google.api_core import (
-    client_options as client_options_lib,
-    gapic_v1,
-    retry as retries,
-)
-from google.auth import credentials as ga_credentials
-
-from google.ads.googleads.v20.services.types import asset_service
-
 from .transports.base import AssetServiceTransport
+from _typeshed import Incomplete
+from google.ads.googleads.v20.services.types import asset_service
+from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
+from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence
 
-__all__ = ["AssetServiceClient"]
+__all__ = ['AssetServiceClient']
 
 class AssetServiceClientMeta(type):
-    def get_transport_class(
-        cls, label: str | None = None
-    ) -> type[AssetServiceTransport]: ...
+    def get_transport_class(cls, label: str | None = None) -> type[AssetServiceTransport]: ...
 
 class AssetServiceClient(metaclass=AssetServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -59,38 +50,12 @@ class AssetServiceClient(metaclass=AssetServiceClientMeta):
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: client_options_lib.ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | AssetServiceTransport
-        | Callable[..., AssetServiceTransport]
-        | None = None,
-        client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    def mutate_assets(
-        self,
-        request: asset_service.MutateAssetsRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[asset_service.AssetOperation] | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> asset_service.MutateAssetsResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AssetServiceTransport | Callable[..., AssetServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    def mutate_assets(self, request: asset_service.MutateAssetsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[asset_service.AssetOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> asset_service.MutateAssetsResponse: ...
     def __enter__(self) -> AssetServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
+    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...

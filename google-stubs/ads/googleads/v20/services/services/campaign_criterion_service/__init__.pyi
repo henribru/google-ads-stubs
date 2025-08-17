@@ -1,6 +1,4 @@
-from .async_client import (
-    CampaignCriterionServiceAsyncClient as CampaignCriterionServiceAsyncClient,
-)
+from .async_client import CampaignCriterionServiceAsyncClient as CampaignCriterionServiceAsyncClient
 from .client import CampaignCriterionServiceClient as CampaignCriterionServiceClient
 
-__all__ = ["CampaignCriterionServiceClient", "CampaignCriterionServiceAsyncClient"]
+__all__ = ['CampaignCriterionServiceClient', 'CampaignCriterionServiceAsyncClient']

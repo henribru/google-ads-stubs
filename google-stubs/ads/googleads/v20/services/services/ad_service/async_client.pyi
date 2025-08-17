@@ -1,15 +1,12 @@
-from typing import Callable, MutableSequence, Sequence, Tuple
-
+from .transports.base import AdServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v20.services.types import ad_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence
 
-from google.ads.googleads.v20.services.types import ad_service
-
-from .transports.base import AdServiceTransport
-
-__all__ = ["AdServiceAsyncClient"]
+__all__ = ['AdServiceAsyncClient']
 
 class AdServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -32,9 +29,7 @@ class AdServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> AdServiceTransport: ...
     @property
@@ -42,26 +37,7 @@ class AdServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | AdServiceTransport
-        | Callable[..., AdServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def mutate_ads(
-        self,
-        request: ad_service.MutateAdsRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[ad_service.AdOperation] | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> ad_service.MutateAdsResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AdServiceTransport | Callable[..., AdServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def mutate_ads(self, request: ad_service.MutateAdsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[ad_service.AdOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> ad_service.MutateAdsResponse: ...
     async def __aenter__(self) -> AdServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

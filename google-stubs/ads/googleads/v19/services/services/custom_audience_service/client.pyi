@@ -1,24 +1,15 @@
 import types
-from typing import Callable, Dict, MutableSequence, Sequence, Tuple, Type
-
-from _typeshed import Incomplete
-from google.api_core import (
-    client_options as client_options_lib,
-    gapic_v1,
-    retry as retries,
-)
-from google.auth import credentials as ga_credentials
-
-from google.ads.googleads.v19.services.types import custom_audience_service
-
 from .transports.base import CustomAudienceServiceTransport
+from _typeshed import Incomplete
+from google.ads.googleads.v19.services.types import custom_audience_service
+from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
+from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence
 
-__all__ = ["CustomAudienceServiceClient"]
+__all__ = ['CustomAudienceServiceClient']
 
 class CustomAudienceServiceClientMeta(type):
-    def get_transport_class(
-        cls, label: str | None = None
-    ) -> type[CustomAudienceServiceTransport]: ...
+    def get_transport_class(cls, label: str | None = None) -> type[CustomAudienceServiceTransport]: ...
 
 class CustomAudienceServiceClient(metaclass=CustomAudienceServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -55,41 +46,12 @@ class CustomAudienceServiceClient(metaclass=CustomAudienceServiceClientMeta):
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: client_options_lib.ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | CustomAudienceServiceTransport
-        | Callable[..., CustomAudienceServiceTransport]
-        | None = None,
-        client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    def mutate_custom_audiences(
-        self,
-        request: custom_audience_service.MutateCustomAudiencesRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[custom_audience_service.CustomAudienceOperation]
-        | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> custom_audience_service.MutateCustomAudiencesResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | CustomAudienceServiceTransport | Callable[..., CustomAudienceServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    def mutate_custom_audiences(self, request: custom_audience_service.MutateCustomAudiencesRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[custom_audience_service.CustomAudienceOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> custom_audience_service.MutateCustomAudiencesResponse: ...
     def __enter__(self) -> CustomAudienceServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
+    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
