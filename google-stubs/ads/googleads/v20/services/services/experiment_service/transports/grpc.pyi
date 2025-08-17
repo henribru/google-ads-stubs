@@ -46,7 +46,7 @@ class ExperimentServiceGrpcTransport(ExperimentServiceTransport):
     @property
     def grpc_channel(self) -> grpc.Channel: ...
     @property
-    def operations_client(self) -> operations_v1.OperationsClient: ...
+    def operations_client(self) -> operations_v1.OperationsClient: ...  # type: ignore[override]
     @property
     def mutate_experiments(
         self,

@@ -45,7 +45,7 @@ class OfflineUserDataJobServiceGrpcTransport(OfflineUserDataJobServiceTransport)
     @property
     def grpc_channel(self) -> grpc.Channel: ...
     @property
-    def operations_client(self) -> operations_v1.OperationsClient: ...
+    def operations_client(self) -> operations_v1.OperationsClient: ...  # type: ignore[override]
     @property
     def create_offline_user_data_job(
         self,
