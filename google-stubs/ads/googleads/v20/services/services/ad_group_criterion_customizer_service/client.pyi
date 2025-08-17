@@ -1,17 +1,30 @@
 import types
-from .transports.base import AdGroupCriterionCustomizerServiceTransport
-from _typeshed import Incomplete
-from google.ads.googleads.v20.services.types import ad_group_criterion_customizer_service
-from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
-from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['AdGroupCriterionCustomizerServiceClient']
+from _typeshed import Incomplete
+from google.api_core import (
+    client_options as client_options_lib,
+    gapic_v1,
+    retry as retries,
+)
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v20.services.types import (
+    ad_group_criterion_customizer_service,
+)
+
+from .transports.base import AdGroupCriterionCustomizerServiceTransport
+
+__all__ = ["AdGroupCriterionCustomizerServiceClient"]
 
 class AdGroupCriterionCustomizerServiceClientMeta(type):
-    def get_transport_class(cls, label: str | None = None) -> type[AdGroupCriterionCustomizerServiceTransport]: ...
+    def get_transport_class(
+        cls, label: str | None = None
+    ) -> type[AdGroupCriterionCustomizerServiceTransport]: ...
 
-class AdGroupCriterionCustomizerServiceClient(metaclass=AdGroupCriterionCustomizerServiceClientMeta):
+class AdGroupCriterionCustomizerServiceClient(
+    metaclass=AdGroupCriterionCustomizerServiceClientMeta
+):
     DEFAULT_ENDPOINT: str
     DEFAULT_MTLS_ENDPOINT: Incomplete
     @classmethod
@@ -22,15 +35,24 @@ class AdGroupCriterionCustomizerServiceClient(metaclass=AdGroupCriterionCustomiz
     @property
     def transport(self) -> AdGroupCriterionCustomizerServiceTransport: ...
     @staticmethod
-    def ad_group_criterion_path(customer_id: str, ad_group_id: str, criterion_id: str) -> str: ...
+    def ad_group_criterion_path(
+        customer_id: str, ad_group_id: str, criterion_id: str
+    ) -> str: ...
     @staticmethod
     def parse_ad_group_criterion_path(path: str) -> dict[str, str]: ...
     @staticmethod
-    def ad_group_criterion_customizer_path(customer_id: str, ad_group_id: str, criterion_id: str, customizer_attribute_id: str) -> str: ...
+    def ad_group_criterion_customizer_path(
+        customer_id: str,
+        ad_group_id: str,
+        criterion_id: str,
+        customizer_attribute_id: str,
+    ) -> str: ...
     @staticmethod
     def parse_ad_group_criterion_customizer_path(path: str) -> dict[str, str]: ...
     @staticmethod
-    def customizer_attribute_path(customer_id: str, customizer_attribute_id: str) -> str: ...
+    def customizer_attribute_path(
+        customer_id: str, customizer_attribute_id: str
+    ) -> str: ...
     @staticmethod
     def parse_customizer_attribute_path(path: str) -> dict[str, str]: ...
     @staticmethod
@@ -54,12 +76,45 @@ class AdGroupCriterionCustomizerServiceClient(metaclass=AdGroupCriterionCustomiz
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AdGroupCriterionCustomizerServiceTransport | Callable[..., AdGroupCriterionCustomizerServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    def mutate_ad_group_criterion_customizers(self, request: ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[ad_group_criterion_customizer_service.AdGroupCriterionCustomizerOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | AdGroupCriterionCustomizerServiceTransport
+        | Callable[..., AdGroupCriterionCustomizerServiceTransport]
+        | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    def mutate_ad_group_criterion_customizers(
+        self,
+        request: ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            ad_group_criterion_customizer_service.AdGroupCriterionCustomizerOperation
+        ]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> (
+        ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersResponse
+    ): ...
     def __enter__(self) -> AdGroupCriterionCustomizerServiceClient: ...
-    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

@@ -1,12 +1,15 @@
-from .transports.base import ContentCreatorInsightsServiceTransport
+from typing import Callable, Sequence
+
 from _typeshed import Incomplete
-from google.ads.googleads.v20.services.types import content_creator_insights_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
-from typing import Callable, Sequence
 
-__all__ = ['ContentCreatorInsightsServiceAsyncClient']
+from google.ads.googleads.v20.services.types import content_creator_insights_service
+
+from .transports.base import ContentCreatorInsightsServiceTransport
+
+__all__ = ["ContentCreatorInsightsServiceAsyncClient"]
 
 class ContentCreatorInsightsServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -27,7 +30,9 @@ class ContentCreatorInsightsServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: ClientOptions | None = None
+    ): ...
     @property
     def transport(self) -> ContentCreatorInsightsServiceTransport: ...
     @property
@@ -35,8 +40,36 @@ class ContentCreatorInsightsServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | ContentCreatorInsightsServiceTransport | Callable[..., ContentCreatorInsightsServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    async def generate_creator_insights(self, request: content_creator_insights_service.GenerateCreatorInsightsRequest | dict | None = None, *, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> content_creator_insights_service.GenerateCreatorInsightsResponse: ...
-    async def generate_trending_insights(self, request: content_creator_insights_service.GenerateTrendingInsightsRequest | dict | None = None, *, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> content_creator_insights_service.GenerateTrendingInsightsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | ContentCreatorInsightsServiceTransport
+        | Callable[..., ContentCreatorInsightsServiceTransport]
+        | None = "grpc_asyncio",
+        client_options: ClientOptions | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    async def generate_creator_insights(
+        self,
+        request: content_creator_insights_service.GenerateCreatorInsightsRequest
+        | dict
+        | None = None,
+        *,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> content_creator_insights_service.GenerateCreatorInsightsResponse: ...
+    async def generate_trending_insights(
+        self,
+        request: content_creator_insights_service.GenerateTrendingInsightsRequest
+        | dict
+        | None = None,
+        *,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> content_creator_insights_service.GenerateTrendingInsightsResponse: ...
     async def __aenter__(self) -> ContentCreatorInsightsServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

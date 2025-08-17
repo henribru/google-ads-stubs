@@ -1,17 +1,28 @@
 import types
-from .transports.base import KeywordThemeConstantServiceTransport
-from _typeshed import Incomplete
-from google.ads.googleads.v20.services.types import keyword_theme_constant_service
-from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
-from google.auth import credentials as ga_credentials
 from typing import Callable, Sequence
 
-__all__ = ['KeywordThemeConstantServiceClient']
+from _typeshed import Incomplete
+from google.api_core import (
+    client_options as client_options_lib,
+    gapic_v1,
+    retry as retries,
+)
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v20.services.types import keyword_theme_constant_service
+
+from .transports.base import KeywordThemeConstantServiceTransport
+
+__all__ = ["KeywordThemeConstantServiceClient"]
 
 class KeywordThemeConstantServiceClientMeta(type):
-    def get_transport_class(cls, label: str | None = None) -> type[KeywordThemeConstantServiceTransport]: ...
+    def get_transport_class(
+        cls, label: str | None = None
+    ) -> type[KeywordThemeConstantServiceTransport]: ...
 
-class KeywordThemeConstantServiceClient(metaclass=KeywordThemeConstantServiceClientMeta):
+class KeywordThemeConstantServiceClient(
+    metaclass=KeywordThemeConstantServiceClientMeta
+):
     DEFAULT_ENDPOINT: str
     DEFAULT_MTLS_ENDPOINT: Incomplete
     @classmethod
@@ -22,7 +33,9 @@ class KeywordThemeConstantServiceClient(metaclass=KeywordThemeConstantServiceCli
     @property
     def transport(self) -> KeywordThemeConstantServiceTransport: ...
     @staticmethod
-    def keyword_theme_constant_path(express_category_id: str, express_sub_category_id: str) -> str: ...
+    def keyword_theme_constant_path(
+        express_category_id: str, express_sub_category_id: str
+    ) -> str: ...
     @staticmethod
     def parse_keyword_theme_constant_path(path: str) -> dict[str, str]: ...
     @staticmethod
@@ -46,12 +59,38 @@ class KeywordThemeConstantServiceClient(metaclass=KeywordThemeConstantServiceCli
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | KeywordThemeConstantServiceTransport | Callable[..., KeywordThemeConstantServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    def suggest_keyword_theme_constants(self, request: keyword_theme_constant_service.SuggestKeywordThemeConstantsRequest | dict | None = None, *, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> keyword_theme_constant_service.SuggestKeywordThemeConstantsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | KeywordThemeConstantServiceTransport
+        | Callable[..., KeywordThemeConstantServiceTransport]
+        | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    def suggest_keyword_theme_constants(
+        self,
+        request: keyword_theme_constant_service.SuggestKeywordThemeConstantsRequest
+        | dict
+        | None = None,
+        *,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> keyword_theme_constant_service.SuggestKeywordThemeConstantsResponse: ...
     def __enter__(self) -> KeywordThemeConstantServiceClient: ...
-    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

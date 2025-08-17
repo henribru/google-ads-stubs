@@ -1,17 +1,28 @@
 import types
-from .transports.base import SmartCampaignSettingServiceTransport
-from _typeshed import Incomplete
-from google.ads.googleads.v19.services.types import smart_campaign_setting_service
-from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
-from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['SmartCampaignSettingServiceClient']
+from _typeshed import Incomplete
+from google.api_core import (
+    client_options as client_options_lib,
+    gapic_v1,
+    retry as retries,
+)
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v19.services.types import smart_campaign_setting_service
+
+from .transports.base import SmartCampaignSettingServiceTransport
+
+__all__ = ["SmartCampaignSettingServiceClient"]
 
 class SmartCampaignSettingServiceClientMeta(type):
-    def get_transport_class(cls, label: str | None = None) -> type[SmartCampaignSettingServiceTransport]: ...
+    def get_transport_class(
+        cls, label: str | None = None
+    ) -> type[SmartCampaignSettingServiceTransport]: ...
 
-class SmartCampaignSettingServiceClient(metaclass=SmartCampaignSettingServiceClientMeta):
+class SmartCampaignSettingServiceClient(
+    metaclass=SmartCampaignSettingServiceClientMeta
+):
     DEFAULT_ENDPOINT: str
     DEFAULT_MTLS_ENDPOINT: Incomplete
     @classmethod
@@ -50,13 +61,54 @@ class SmartCampaignSettingServiceClient(metaclass=SmartCampaignSettingServiceCli
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | SmartCampaignSettingServiceTransport | Callable[..., SmartCampaignSettingServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    def get_smart_campaign_status(self, request: smart_campaign_setting_service.GetSmartCampaignStatusRequest | dict | None = None, *, resource_name: str | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> smart_campaign_setting_service.GetSmartCampaignStatusResponse: ...
-    def mutate_smart_campaign_settings(self, request: smart_campaign_setting_service.MutateSmartCampaignSettingsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[smart_campaign_setting_service.SmartCampaignSettingOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> smart_campaign_setting_service.MutateSmartCampaignSettingsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | SmartCampaignSettingServiceTransport
+        | Callable[..., SmartCampaignSettingServiceTransport]
+        | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    def get_smart_campaign_status(
+        self,
+        request: smart_campaign_setting_service.GetSmartCampaignStatusRequest
+        | dict
+        | None = None,
+        *,
+        resource_name: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> smart_campaign_setting_service.GetSmartCampaignStatusResponse: ...
+    def mutate_smart_campaign_settings(
+        self,
+        request: smart_campaign_setting_service.MutateSmartCampaignSettingsRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            smart_campaign_setting_service.SmartCampaignSettingOperation
+        ]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> smart_campaign_setting_service.MutateSmartCampaignSettingsResponse: ...
     def __enter__(self) -> SmartCampaignSettingServiceClient: ...
-    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

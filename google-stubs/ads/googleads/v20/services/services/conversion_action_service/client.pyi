@@ -1,15 +1,24 @@
 import types
-from .transports.base import ConversionActionServiceTransport
-from _typeshed import Incomplete
-from google.ads.googleads.v20.services.types import conversion_action_service
-from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
-from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['ConversionActionServiceClient']
+from _typeshed import Incomplete
+from google.api_core import (
+    client_options as client_options_lib,
+    gapic_v1,
+    retry as retries,
+)
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v20.services.types import conversion_action_service
+
+from .transports.base import ConversionActionServiceTransport
+
+__all__ = ["ConversionActionServiceClient"]
 
 class ConversionActionServiceClientMeta(type):
-    def get_transport_class(cls, label: str | None = None) -> type[ConversionActionServiceTransport]: ...
+    def get_transport_class(
+        cls, label: str | None = None
+    ) -> type[ConversionActionServiceTransport]: ...
 
 class ConversionActionServiceClient(metaclass=ConversionActionServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -50,12 +59,41 @@ class ConversionActionServiceClient(metaclass=ConversionActionServiceClientMeta)
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | ConversionActionServiceTransport | Callable[..., ConversionActionServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    def mutate_conversion_actions(self, request: conversion_action_service.MutateConversionActionsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[conversion_action_service.ConversionActionOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> conversion_action_service.MutateConversionActionsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | ConversionActionServiceTransport
+        | Callable[..., ConversionActionServiceTransport]
+        | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    def mutate_conversion_actions(
+        self,
+        request: conversion_action_service.MutateConversionActionsRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[conversion_action_service.ConversionActionOperation]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> conversion_action_service.MutateConversionActionsResponse: ...
     def __enter__(self) -> ConversionActionServiceClient: ...
-    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

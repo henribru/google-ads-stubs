@@ -1,12 +1,15 @@
-from .transports.base import CampaignServiceTransport
+from typing import Callable, MutableSequence, Sequence
+
 from _typeshed import Incomplete
-from google.ads.googleads.v20.services.types import campaign_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
-from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['CampaignServiceAsyncClient']
+from google.ads.googleads.v20.services.types import campaign_service
+
+from .transports.base import CampaignServiceTransport
+
+__all__ = ["CampaignServiceAsyncClient"]
 
 class CampaignServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -43,7 +46,9 @@ class CampaignServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: ClientOptions | None = None
+    ): ...
     @property
     def transport(self) -> CampaignServiceTransport: ...
     @property
@@ -51,8 +56,36 @@ class CampaignServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | CampaignServiceTransport | Callable[..., CampaignServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    async def mutate_campaigns(self, request: campaign_service.MutateCampaignsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[campaign_service.CampaignOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> campaign_service.MutateCampaignsResponse: ...
-    async def enable_p_max_brand_guidelines(self, request: campaign_service.EnablePMaxBrandGuidelinesRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[campaign_service.EnableOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> campaign_service.EnablePMaxBrandGuidelinesResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | CampaignServiceTransport
+        | Callable[..., CampaignServiceTransport]
+        | None = "grpc_asyncio",
+        client_options: ClientOptions | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    async def mutate_campaigns(
+        self,
+        request: campaign_service.MutateCampaignsRequest | dict | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[campaign_service.CampaignOperation] | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> campaign_service.MutateCampaignsResponse: ...
+    async def enable_p_max_brand_guidelines(
+        self,
+        request: campaign_service.EnablePMaxBrandGuidelinesRequest | dict | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[campaign_service.EnableOperation] | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> campaign_service.EnablePMaxBrandGuidelinesResponse: ...
     async def __aenter__(self) -> CampaignServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...
