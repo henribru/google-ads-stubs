@@ -6,6 +6,7 @@ import grpc
 import google.ads.googleads.v19.services
 import google.ads.googleads.v20.services
 import google.ads.googleads.v21.services
+import google.ads.googleads.v22.services
 
 from .interceptor import Interceptor
 
@@ -17,6 +18,8 @@ _Request = TypeVar(
     google.ads.googleads.v20.services.SearchGoogleAdsStreamRequest,
     google.ads.googleads.v21.services.SearchGoogleAdsRequest,
     google.ads.googleads.v21.services.SearchGoogleAdsStreamRequest,
+    google.ads.googleads.v22.services.SearchGoogleAdsRequest,
+    google.ads.googleads.v22.services.SearchGoogleAdsStreamRequest,
 )
 _Response = TypeVar("_Response")
 
