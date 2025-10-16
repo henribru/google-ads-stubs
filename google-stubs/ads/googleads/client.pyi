@@ -322,803 +322,921 @@ import google.ads.googleads.v21.services.services.travel_asset_suggestion_servic
 import google.ads.googleads.v21.services.services.user_data_service
 import google.ads.googleads.v21.services.services.user_list_customer_type_service
 import google.ads.googleads.v21.services.services.user_list_service
+import google.ads.googleads.v22.services.services.account_budget_proposal_service
+import google.ads.googleads.v22.services.services.account_link_service
+import google.ads.googleads.v22.services.services.ad_group_ad_label_service
+import google.ads.googleads.v22.services.services.ad_group_ad_service
+import google.ads.googleads.v22.services.services.ad_group_asset_service
+import google.ads.googleads.v22.services.services.ad_group_asset_set_service
+import google.ads.googleads.v22.services.services.ad_group_bid_modifier_service
+import google.ads.googleads.v22.services.services.ad_group_criterion_customizer_service
+import google.ads.googleads.v22.services.services.ad_group_criterion_label_service
+import google.ads.googleads.v22.services.services.ad_group_criterion_service
+import google.ads.googleads.v22.services.services.ad_group_customizer_service
+import google.ads.googleads.v22.services.services.ad_group_label_service
+import google.ads.googleads.v22.services.services.ad_group_service
+import google.ads.googleads.v22.services.services.ad_parameter_service
+import google.ads.googleads.v22.services.services.ad_service
+import google.ads.googleads.v22.services.services.asset_generation_service
+import google.ads.googleads.v22.services.services.asset_group_asset_service
+import google.ads.googleads.v22.services.services.asset_group_listing_group_filter_service
+import google.ads.googleads.v22.services.services.asset_group_service
+import google.ads.googleads.v22.services.services.asset_group_signal_service
+import google.ads.googleads.v22.services.services.asset_service
+import google.ads.googleads.v22.services.services.asset_set_asset_service
+import google.ads.googleads.v22.services.services.asset_set_service
+import google.ads.googleads.v22.services.services.audience_insights_service
+import google.ads.googleads.v22.services.services.audience_service
+import google.ads.googleads.v22.services.services.automatically_created_asset_removal_service
+import google.ads.googleads.v22.services.services.batch_job_service
+import google.ads.googleads.v22.services.services.bidding_data_exclusion_service
+import google.ads.googleads.v22.services.services.bidding_seasonality_adjustment_service
+import google.ads.googleads.v22.services.services.bidding_strategy_service
+import google.ads.googleads.v22.services.services.billing_setup_service
+import google.ads.googleads.v22.services.services.brand_suggestion_service
+import google.ads.googleads.v22.services.services.campaign_asset_service
+import google.ads.googleads.v22.services.services.campaign_asset_set_service
+import google.ads.googleads.v22.services.services.campaign_bid_modifier_service
+import google.ads.googleads.v22.services.services.campaign_budget_service
+import google.ads.googleads.v22.services.services.campaign_conversion_goal_service
+import google.ads.googleads.v22.services.services.campaign_criterion_service
+import google.ads.googleads.v22.services.services.campaign_customizer_service
+import google.ads.googleads.v22.services.services.campaign_draft_service
+import google.ads.googleads.v22.services.services.campaign_goal_config_service
+import google.ads.googleads.v22.services.services.campaign_group_service
+import google.ads.googleads.v22.services.services.campaign_label_service
+import google.ads.googleads.v22.services.services.campaign_lifecycle_goal_service
+import google.ads.googleads.v22.services.services.campaign_service
+import google.ads.googleads.v22.services.services.campaign_shared_set_service
+import google.ads.googleads.v22.services.services.content_creator_insights_service
+import google.ads.googleads.v22.services.services.conversion_action_service
+import google.ads.googleads.v22.services.services.conversion_adjustment_upload_service
+import google.ads.googleads.v22.services.services.conversion_custom_variable_service
+import google.ads.googleads.v22.services.services.conversion_goal_campaign_config_service
+import google.ads.googleads.v22.services.services.conversion_upload_service
+import google.ads.googleads.v22.services.services.conversion_value_rule_service
+import google.ads.googleads.v22.services.services.conversion_value_rule_set_service
+import google.ads.googleads.v22.services.services.custom_audience_service
+import google.ads.googleads.v22.services.services.custom_conversion_goal_service
+import google.ads.googleads.v22.services.services.custom_interest_service
+import google.ads.googleads.v22.services.services.customer_asset_service
+import google.ads.googleads.v22.services.services.customer_asset_set_service
+import google.ads.googleads.v22.services.services.customer_client_link_service
+import google.ads.googleads.v22.services.services.customer_conversion_goal_service
+import google.ads.googleads.v22.services.services.customer_customizer_service
+import google.ads.googleads.v22.services.services.customer_label_service
+import google.ads.googleads.v22.services.services.customer_lifecycle_goal_service
+import google.ads.googleads.v22.services.services.customer_manager_link_service
+import google.ads.googleads.v22.services.services.customer_negative_criterion_service
+import google.ads.googleads.v22.services.services.customer_service
+import google.ads.googleads.v22.services.services.customer_sk_ad_network_conversion_value_schema_service
+import google.ads.googleads.v22.services.services.customer_user_access_invitation_service
+import google.ads.googleads.v22.services.services.customer_user_access_service
+import google.ads.googleads.v22.services.services.customizer_attribute_service
+import google.ads.googleads.v22.services.services.data_link_service
+import google.ads.googleads.v22.services.services.experiment_arm_service
+import google.ads.googleads.v22.services.services.experiment_service
+import google.ads.googleads.v22.services.services.geo_target_constant_service
+import google.ads.googleads.v22.services.services.goal_service
+import google.ads.googleads.v22.services.services.google_ads_field_service
+import google.ads.googleads.v22.services.services.google_ads_service
+import google.ads.googleads.v22.services.services.identity_verification_service
+import google.ads.googleads.v22.services.services.invoice_service
+import google.ads.googleads.v22.services.services.keyword_plan_ad_group_keyword_service
+import google.ads.googleads.v22.services.services.keyword_plan_ad_group_service
+import google.ads.googleads.v22.services.services.keyword_plan_campaign_keyword_service
+import google.ads.googleads.v22.services.services.keyword_plan_campaign_service
+import google.ads.googleads.v22.services.services.keyword_plan_idea_service
+import google.ads.googleads.v22.services.services.keyword_plan_service
+import google.ads.googleads.v22.services.services.keyword_theme_constant_service
+import google.ads.googleads.v22.services.services.label_service
+import google.ads.googleads.v22.services.services.local_services_lead_service
+import google.ads.googleads.v22.services.services.offline_user_data_job_service
+import google.ads.googleads.v22.services.services.payments_account_service
+import google.ads.googleads.v22.services.services.product_link_invitation_service
+import google.ads.googleads.v22.services.services.product_link_service
+import google.ads.googleads.v22.services.services.reach_plan_service
+import google.ads.googleads.v22.services.services.recommendation_service
+import google.ads.googleads.v22.services.services.recommendation_subscription_service
+import google.ads.googleads.v22.services.services.remarketing_action_service
+import google.ads.googleads.v22.services.services.shareable_preview_service
+import google.ads.googleads.v22.services.services.shared_criterion_service
+import google.ads.googleads.v22.services.services.shared_set_service
+import google.ads.googleads.v22.services.services.smart_campaign_setting_service
+import google.ads.googleads.v22.services.services.smart_campaign_suggest_service
+import google.ads.googleads.v22.services.services.third_party_app_analytics_link_service
+import google.ads.googleads.v22.services.services.travel_asset_suggestion_service
+import google.ads.googleads.v22.services.services.user_data_service
+import google.ads.googleads.v22.services.services.user_list_customer_type_service
+import google.ads.googleads.v22.services.services.user_list_service
 
 # End of autogenerated service imports
-from google.ads.googleads import v21
+from google.ads.googleads import v22
 from google.ads.googleads.config import _ConfigDataUnparsed
 
 _V19 = Literal["v19"]
 _V20 = Literal["v20"]
 _V21 = Literal["v21"]
-_V = _V19 | _V20 | _V21
+_V22 = Literal["v22"]
+_V = _V19 | _V20 | _V21 | _V22
 
 class _EnumGetter:
     # Autogenerated enums
     AccessInvitationStatusEnum: type[
-        v21.enums.AccessInvitationStatusEnum.AccessInvitationStatus
+        v22.enums.AccessInvitationStatusEnum.AccessInvitationStatus
     ]
-    AccessReasonEnum: type[v21.enums.AccessReasonEnum.AccessReason]
-    AccessRoleEnum: type[v21.enums.AccessRoleEnum.AccessRole]
+    AccessReasonEnum: type[v22.enums.AccessReasonEnum.AccessReason]
+    AccessRoleEnum: type[v22.enums.AccessRoleEnum.AccessRole]
     AccountBudgetProposalStatusEnum: type[
-        v21.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus
+        v22.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus
     ]
     AccountBudgetProposalTypeEnum: type[
-        v21.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType
+        v22.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType
     ]
-    AccountBudgetStatusEnum: type[v21.enums.AccountBudgetStatusEnum.AccountBudgetStatus]
-    AccountLinkStatusEnum: type[v21.enums.AccountLinkStatusEnum.AccountLinkStatus]
-    AdDestinationTypeEnum: type[v21.enums.AdDestinationTypeEnum.AdDestinationType]
-    AdFormatTypeEnum: type[v21.enums.AdFormatTypeEnum.AdFormatType]
+    AccountBudgetStatusEnum: type[v22.enums.AccountBudgetStatusEnum.AccountBudgetStatus]
+    AccountLinkStatusEnum: type[v22.enums.AccountLinkStatusEnum.AccountLinkStatus]
+    AdDestinationTypeEnum: type[v22.enums.AdDestinationTypeEnum.AdDestinationType]
+    AdFormatTypeEnum: type[v22.enums.AdFormatTypeEnum.AdFormatType]
     AdGroupAdPrimaryStatusEnum: type[
-        v21.enums.AdGroupAdPrimaryStatusEnum.AdGroupAdPrimaryStatus
+        v22.enums.AdGroupAdPrimaryStatusEnum.AdGroupAdPrimaryStatus
     ]
     AdGroupAdPrimaryStatusReasonEnum: type[
-        v21.enums.AdGroupAdPrimaryStatusReasonEnum.AdGroupAdPrimaryStatusReason
+        v22.enums.AdGroupAdPrimaryStatusReasonEnum.AdGroupAdPrimaryStatusReason
     ]
     AdGroupAdRotationModeEnum: type[
-        v21.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode
+        v22.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode
     ]
-    AdGroupAdStatusEnum: type[v21.enums.AdGroupAdStatusEnum.AdGroupAdStatus]
+    AdGroupAdStatusEnum: type[v22.enums.AdGroupAdStatusEnum.AdGroupAdStatus]
     AdGroupCriterionApprovalStatusEnum: type[
-        v21.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus
+        v22.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus
     ]
     AdGroupCriterionPrimaryStatusEnum: type[
-        v21.enums.AdGroupCriterionPrimaryStatusEnum.AdGroupCriterionPrimaryStatus
+        v22.enums.AdGroupCriterionPrimaryStatusEnum.AdGroupCriterionPrimaryStatus
     ]
     AdGroupCriterionPrimaryStatusReasonEnum: type[
-        v21.enums.AdGroupCriterionPrimaryStatusReasonEnum.AdGroupCriterionPrimaryStatusReason
+        v22.enums.AdGroupCriterionPrimaryStatusReasonEnum.AdGroupCriterionPrimaryStatusReason
     ]
     AdGroupCriterionStatusEnum: type[
-        v21.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus
+        v22.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus
     ]
     AdGroupPrimaryStatusEnum: type[
-        v21.enums.AdGroupPrimaryStatusEnum.AdGroupPrimaryStatus
+        v22.enums.AdGroupPrimaryStatusEnum.AdGroupPrimaryStatus
     ]
     AdGroupPrimaryStatusReasonEnum: type[
-        v21.enums.AdGroupPrimaryStatusReasonEnum.AdGroupPrimaryStatusReason
+        v22.enums.AdGroupPrimaryStatusReasonEnum.AdGroupPrimaryStatusReason
     ]
-    AdGroupStatusEnum: type[v21.enums.AdGroupStatusEnum.AdGroupStatus]
-    AdGroupTypeEnum: type[v21.enums.AdGroupTypeEnum.AdGroupType]
-    AdNetworkTypeEnum: type[v21.enums.AdNetworkTypeEnum.AdNetworkType]
+    AdGroupStatusEnum: type[v22.enums.AdGroupStatusEnum.AdGroupStatus]
+    AdGroupTypeEnum: type[v22.enums.AdGroupTypeEnum.AdGroupType]
+    AdNetworkTypeEnum: type[v22.enums.AdNetworkTypeEnum.AdNetworkType]
     AdServingOptimizationStatusEnum: type[
-        v21.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus
+        v22.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus
     ]
     AdStrengthActionItemTypeEnum: type[
-        v21.enums.AdStrengthActionItemTypeEnum.AdStrengthActionItemType
+        v22.enums.AdStrengthActionItemTypeEnum.AdStrengthActionItemType
     ]
-    AdStrengthEnum: type[v21.enums.AdStrengthEnum.AdStrength]
-    AdTypeEnum: type[v21.enums.AdTypeEnum.AdType]
+    AdStrengthEnum: type[v22.enums.AdStrengthEnum.AdStrength]
+    AdTypeEnum: type[v22.enums.AdTypeEnum.AdType]
     AdvertisingChannelSubTypeEnum: type[
-        v21.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
+        v22.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType
     ]
     AdvertisingChannelTypeEnum: type[
-        v21.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType
+        v22.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType
     ]
-    AgeRangeTypeEnum: type[v21.enums.AgeRangeTypeEnum.AgeRangeType]
+    AgeRangeTypeEnum: type[v22.enums.AgeRangeTypeEnum.AgeRangeType]
     AndroidPrivacyInteractionTypeEnum: type[
-        v21.enums.AndroidPrivacyInteractionTypeEnum.AndroidPrivacyInteractionType
+        v22.enums.AndroidPrivacyInteractionTypeEnum.AndroidPrivacyInteractionType
     ]
     AndroidPrivacyNetworkTypeEnum: type[
-        v21.enums.AndroidPrivacyNetworkTypeEnum.AndroidPrivacyNetworkType
+        v22.enums.AndroidPrivacyNetworkTypeEnum.AndroidPrivacyNetworkType
     ]
-    AppBiddingGoalEnum: type[v21.enums.AppBiddingGoalEnum.AppBiddingGoal]
-    AppCampaignAppStoreEnum: type[v21.enums.AppCampaignAppStoreEnum.AppCampaignAppStore]
+    AppBiddingGoalEnum: type[v22.enums.AppBiddingGoalEnum.AppBiddingGoal]
+    AppCampaignAppStoreEnum: type[v22.enums.AppCampaignAppStoreEnum.AppCampaignAppStore]
     AppCampaignBiddingStrategyGoalTypeEnum: type[
-        v21.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
+        v22.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType
     ]
-    AppPaymentModelTypeEnum: type[v21.enums.AppPaymentModelTypeEnum.AppPaymentModelType]
+    AppPaymentModelTypeEnum: type[v22.enums.AppPaymentModelTypeEnum.AppPaymentModelType]
     AppUrlOperatingSystemTypeEnum: type[
-        v21.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType
+        v22.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType
     ]
-    ApplicationInstanceEnum: type[v21.enums.ApplicationInstanceEnum.ApplicationInstance]
+    ApplicationInstanceEnum: type[v22.enums.ApplicationInstanceEnum.ApplicationInstance]
     AssetAutomationStatusEnum: type[
-        v21.enums.AssetAutomationStatusEnum.AssetAutomationStatus
+        v22.enums.AssetAutomationStatusEnum.AssetAutomationStatus
     ]
-    AssetAutomationTypeEnum: type[v21.enums.AssetAutomationTypeEnum.AssetAutomationType]
+    AssetAutomationTypeEnum: type[v22.enums.AssetAutomationTypeEnum.AssetAutomationType]
     AssetCoverageVideoAspectRatioRequirementEnum: type[
-        v21.enums.AssetCoverageVideoAspectRatioRequirementEnum.AssetCoverageVideoAspectRatioRequirement
+        v22.enums.AssetCoverageVideoAspectRatioRequirementEnum.AssetCoverageVideoAspectRatioRequirement
     ]
-    AssetFieldTypeEnum: type[v21.enums.AssetFieldTypeEnum.AssetFieldType]
+    AssetFieldTypeEnum: type[v22.enums.AssetFieldTypeEnum.AssetFieldType]
     AssetGroupPrimaryStatusEnum: type[
-        v21.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus
+        v22.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus
     ]
     AssetGroupPrimaryStatusReasonEnum: type[
-        v21.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason
+        v22.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason
     ]
     AssetGroupSignalApprovalStatusEnum: type[
-        v21.enums.AssetGroupSignalApprovalStatusEnum.AssetGroupSignalApprovalStatus
+        v22.enums.AssetGroupSignalApprovalStatusEnum.AssetGroupSignalApprovalStatus
     ]
-    AssetGroupStatusEnum: type[v21.enums.AssetGroupStatusEnum.AssetGroupStatus]
+    AssetGroupStatusEnum: type[v22.enums.AssetGroupStatusEnum.AssetGroupStatus]
     AssetLinkPrimaryStatusEnum: type[
-        v21.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus
+        v22.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus
     ]
     AssetLinkPrimaryStatusReasonEnum: type[
-        v21.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason
+        v22.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason
     ]
-    AssetLinkStatusEnum: type[v21.enums.AssetLinkStatusEnum.AssetLinkStatus]
+    AssetLinkStatusEnum: type[v22.enums.AssetLinkStatusEnum.AssetLinkStatus]
     AssetOfflineEvaluationErrorReasonsEnum: type[
-        v21.enums.AssetOfflineEvaluationErrorReasonsEnum.AssetOfflineEvaluationErrorReasons
+        v22.enums.AssetOfflineEvaluationErrorReasonsEnum.AssetOfflineEvaluationErrorReasons
     ]
     AssetPerformanceLabelEnum: type[
-        v21.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel
+        v22.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel
     ]
-    AssetSetAssetStatusEnum: type[v21.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus]
-    AssetSetLinkStatusEnum: type[v21.enums.AssetSetLinkStatusEnum.AssetSetLinkStatus]
-    AssetSetStatusEnum: type[v21.enums.AssetSetStatusEnum.AssetSetStatus]
-    AssetSetTypeEnum: type[v21.enums.AssetSetTypeEnum.AssetSetType]
-    AssetSourceEnum: type[v21.enums.AssetSourceEnum.AssetSource]
-    AssetTypeEnum: type[v21.enums.AssetTypeEnum.AssetType]
-    AsyncActionStatusEnum: type[v21.enums.AsyncActionStatusEnum.AsyncActionStatus]
-    AttributionModelEnum: type[v21.enums.AttributionModelEnum.AttributionModel]
+    AssetSetAssetStatusEnum: type[v22.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus]
+    AssetSetLinkStatusEnum: type[v22.enums.AssetSetLinkStatusEnum.AssetSetLinkStatus]
+    AssetSetStatusEnum: type[v22.enums.AssetSetStatusEnum.AssetSetStatus]
+    AssetSetTypeEnum: type[v22.enums.AssetSetTypeEnum.AssetSetType]
+    AssetSourceEnum: type[v22.enums.AssetSourceEnum.AssetSource]
+    AssetTypeEnum: type[v22.enums.AssetTypeEnum.AssetType]
+    AsyncActionStatusEnum: type[v22.enums.AsyncActionStatusEnum.AsyncActionStatus]
+    AttributionModelEnum: type[v22.enums.AttributionModelEnum.AttributionModel]
     AudienceInsightsDimensionEnum: type[
-        v21.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+        v22.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension
     ]
     AudienceInsightsMarketingObjectiveEnum: type[
-        v21.enums.AudienceInsightsMarketingObjectiveEnum.AudienceInsightsMarketingObjective
+        v22.enums.AudienceInsightsMarketingObjectiveEnum.AudienceInsightsMarketingObjective
     ]
-    AudienceScopeEnum: type[v21.enums.AudienceScopeEnum.AudienceScope]
-    AudienceStatusEnum: type[v21.enums.AudienceStatusEnum.AudienceStatus]
-    BatchJobStatusEnum: type[v21.enums.BatchJobStatusEnum.BatchJobStatus]
-    BidModifierSourceEnum: type[v21.enums.BidModifierSourceEnum.BidModifierSource]
-    BiddingSourceEnum: type[v21.enums.BiddingSourceEnum.BiddingSource]
+    AudienceScopeEnum: type[v22.enums.AudienceScopeEnum.AudienceScope]
+    AudienceStatusEnum: type[v22.enums.AudienceStatusEnum.AudienceStatus]
+    BatchJobStatusEnum: type[v22.enums.BatchJobStatusEnum.BatchJobStatus]
+    BidModifierSourceEnum: type[v22.enums.BidModifierSourceEnum.BidModifierSource]
+    BiddingSourceEnum: type[v22.enums.BiddingSourceEnum.BiddingSource]
     BiddingStrategyStatusEnum: type[
-        v21.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus
+        v22.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus
     ]
     BiddingStrategySystemStatusEnum: type[
-        v21.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus
+        v22.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus
     ]
-    BiddingStrategyTypeEnum: type[v21.enums.BiddingStrategyTypeEnum.BiddingStrategyType]
-    BillingSetupStatusEnum: type[v21.enums.BillingSetupStatusEnum.BillingSetupStatus]
+    BiddingStrategyTypeEnum: type[v22.enums.BiddingStrategyTypeEnum.BiddingStrategyType]
+    BillingSetupStatusEnum: type[v22.enums.BillingSetupStatusEnum.BillingSetupStatus]
     BrandRequestRejectionReasonEnum: type[
-        v21.enums.BrandRequestRejectionReasonEnum.BrandRequestRejectionReason
+        v22.enums.BrandRequestRejectionReasonEnum.BrandRequestRejectionReason
     ]
     BrandSafetySuitabilityEnum: type[
-        v21.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability
+        v22.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability
     ]
-    BrandStateEnum: type[v21.enums.BrandStateEnum.BrandState]
+    BrandStateEnum: type[v22.enums.BrandStateEnum.BrandState]
     BudgetCampaignAssociationStatusEnum: type[
-        v21.enums.BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus
+        v22.enums.BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus
     ]
     BudgetDeliveryMethodEnum: type[
-        v21.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod
+        v22.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod
     ]
-    BudgetPeriodEnum: type[v21.enums.BudgetPeriodEnum.BudgetPeriod]
-    BudgetStatusEnum: type[v21.enums.BudgetStatusEnum.BudgetStatus]
-    BudgetTypeEnum: type[v21.enums.BudgetTypeEnum.BudgetType]
+    BudgetPeriodEnum: type[v22.enums.BudgetPeriodEnum.BudgetPeriod]
+    BudgetStatusEnum: type[v22.enums.BudgetStatusEnum.BudgetStatus]
+    BudgetTypeEnum: type[v22.enums.BudgetTypeEnum.BudgetType]
     BusinessMessageCallToActionTypeEnum: type[
-        v21.enums.BusinessMessageCallToActionTypeEnum.BusinessMessageCallToActionType
+        v22.enums.BusinessMessageCallToActionTypeEnum.BusinessMessageCallToActionType
     ]
     BusinessMessageProviderEnum: type[
-        v21.enums.BusinessMessageProviderEnum.BusinessMessageProvider
+        v22.enums.BusinessMessageProviderEnum.BusinessMessageProvider
     ]
     CallConversionReportingStateEnum: type[
-        v21.enums.CallConversionReportingStateEnum.CallConversionReportingState
+        v22.enums.CallConversionReportingStateEnum.CallConversionReportingState
     ]
-    CallToActionTypeEnum: type[v21.enums.CallToActionTypeEnum.CallToActionType]
+    CallToActionTypeEnum: type[v22.enums.CallToActionTypeEnum.CallToActionType]
     CallTrackingDisplayLocationEnum: type[
-        v21.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation
+        v22.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation
     ]
-    CallTypeEnum: type[v21.enums.CallTypeEnum.CallType]
+    CallTypeEnum: type[v22.enums.CallTypeEnum.CallType]
     CampaignCriterionStatusEnum: type[
-        v21.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus
+        v22.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus
     ]
-    CampaignDraftStatusEnum: type[v21.enums.CampaignDraftStatusEnum.CampaignDraftStatus]
+    CampaignDraftStatusEnum: type[v22.enums.CampaignDraftStatusEnum.CampaignDraftStatus]
     CampaignExperimentTypeEnum: type[
-        v21.enums.CampaignExperimentTypeEnum.CampaignExperimentType
+        v22.enums.CampaignExperimentTypeEnum.CampaignExperimentType
     ]
-    CampaignGroupStatusEnum: type[v21.enums.CampaignGroupStatusEnum.CampaignGroupStatus]
+    CampaignGroupStatusEnum: type[v22.enums.CampaignGroupStatusEnum.CampaignGroupStatus]
     CampaignKeywordMatchTypeEnum: type[
-        v21.enums.CampaignKeywordMatchTypeEnum.CampaignKeywordMatchType
+        v22.enums.CampaignKeywordMatchTypeEnum.CampaignKeywordMatchType
     ]
     CampaignPrimaryStatusEnum: type[
-        v21.enums.CampaignPrimaryStatusEnum.CampaignPrimaryStatus
+        v22.enums.CampaignPrimaryStatusEnum.CampaignPrimaryStatus
     ]
     CampaignPrimaryStatusReasonEnum: type[
-        v21.enums.CampaignPrimaryStatusReasonEnum.CampaignPrimaryStatusReason
+        v22.enums.CampaignPrimaryStatusReasonEnum.CampaignPrimaryStatusReason
     ]
     CampaignServingStatusEnum: type[
-        v21.enums.CampaignServingStatusEnum.CampaignServingStatus
+        v22.enums.CampaignServingStatusEnum.CampaignServingStatus
     ]
     CampaignSharedSetStatusEnum: type[
-        v21.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus
+        v22.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus
     ]
-    CampaignStatusEnum: type[v21.enums.CampaignStatusEnum.CampaignStatus]
+    CampaignStatusEnum: type[v22.enums.CampaignStatusEnum.CampaignStatus]
     ChainRelationshipTypeEnum: type[
-        v21.enums.ChainRelationshipTypeEnum.ChainRelationshipType
+        v22.enums.ChainRelationshipTypeEnum.ChainRelationshipType
     ]
-    ChangeClientTypeEnum: type[v21.enums.ChangeClientTypeEnum.ChangeClientType]
+    ChangeClientTypeEnum: type[v22.enums.ChangeClientTypeEnum.ChangeClientType]
     ChangeEventResourceTypeEnum: type[
-        v21.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType
+        v22.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType
     ]
     ChangeStatusOperationEnum: type[
-        v21.enums.ChangeStatusOperationEnum.ChangeStatusOperation
+        v22.enums.ChangeStatusOperationEnum.ChangeStatusOperation
     ]
     ChangeStatusResourceTypeEnum: type[
-        v21.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType
+        v22.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType
     ]
-    ClickTypeEnum: type[v21.enums.ClickTypeEnum.ClickType]
+    ClickTypeEnum: type[v22.enums.ClickTypeEnum.ClickType]
     CombinedAudienceStatusEnum: type[
-        v21.enums.CombinedAudienceStatusEnum.CombinedAudienceStatus
+        v22.enums.CombinedAudienceStatusEnum.CombinedAudienceStatus
     ]
-    ConsentStatusEnum: type[v21.enums.ConsentStatusEnum.ConsentStatus]
-    ContentLabelTypeEnum: type[v21.enums.ContentLabelTypeEnum.ContentLabelType]
+    ConsentStatusEnum: type[v22.enums.ConsentStatusEnum.ConsentStatus]
+    ContentLabelTypeEnum: type[v22.enums.ContentLabelTypeEnum.ContentLabelType]
     ConversionActionCategoryEnum: type[
-        v21.enums.ConversionActionCategoryEnum.ConversionActionCategory
+        v22.enums.ConversionActionCategoryEnum.ConversionActionCategory
     ]
     ConversionActionCountingTypeEnum: type[
-        v21.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType
+        v22.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType
     ]
     ConversionActionStatusEnum: type[
-        v21.enums.ConversionActionStatusEnum.ConversionActionStatus
+        v22.enums.ConversionActionStatusEnum.ConversionActionStatus
     ]
     ConversionActionTypeEnum: type[
-        v21.enums.ConversionActionTypeEnum.ConversionActionType
+        v22.enums.ConversionActionTypeEnum.ConversionActionType
     ]
     ConversionAdjustmentTypeEnum: type[
-        v21.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType
+        v22.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType
     ]
     ConversionAttributionEventTypeEnum: type[
-        v21.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType
+        v22.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType
     ]
     ConversionCustomVariableStatusEnum: type[
-        v21.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus
+        v22.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus
     ]
     ConversionCustomerTypeEnum: type[
-        v21.enums.ConversionCustomerTypeEnum.ConversionCustomerType
+        v22.enums.ConversionCustomerTypeEnum.ConversionCustomerType
     ]
     ConversionEnvironmentEnum: type[
-        v21.enums.ConversionEnvironmentEnum.ConversionEnvironment
+        v22.enums.ConversionEnvironmentEnum.ConversionEnvironment
     ]
-    ConversionLagBucketEnum: type[v21.enums.ConversionLagBucketEnum.ConversionLagBucket]
+    ConversionLagBucketEnum: type[v22.enums.ConversionLagBucketEnum.ConversionLagBucket]
     ConversionOrAdjustmentLagBucketEnum: type[
-        v21.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket
+        v22.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket
     ]
-    ConversionOriginEnum: type[v21.enums.ConversionOriginEnum.ConversionOrigin]
+    ConversionOriginEnum: type[v22.enums.ConversionOriginEnum.ConversionOrigin]
     ConversionTrackingStatusEnum: type[
-        v21.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus
+        v22.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus
     ]
     ConversionValueRulePrimaryDimensionEnum: type[
-        v21.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension
+        v22.enums.ConversionValueRulePrimaryDimensionEnum.ConversionValueRulePrimaryDimension
     ]
     ConversionValueRuleSetStatusEnum: type[
-        v21.enums.ConversionValueRuleSetStatusEnum.ConversionValueRuleSetStatus
+        v22.enums.ConversionValueRuleSetStatusEnum.ConversionValueRuleSetStatus
     ]
     ConversionValueRuleStatusEnum: type[
-        v21.enums.ConversionValueRuleStatusEnum.ConversionValueRuleStatus
+        v22.enums.ConversionValueRuleStatusEnum.ConversionValueRuleStatus
     ]
     ConvertingUserPriorEngagementTypeAndLtvBucketEnum: type[
-        v21.enums.ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket
+        v22.enums.ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket
     ]
     CriterionCategoryChannelAvailabilityModeEnum: type[
-        v21.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
+        v22.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode
     ]
     CriterionCategoryLocaleAvailabilityModeEnum: type[
-        v21.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
+        v22.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode
     ]
     CriterionSystemServingStatusEnum: type[
-        v21.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus
+        v22.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus
     ]
-    CriterionTypeEnum: type[v21.enums.CriterionTypeEnum.CriterionType]
+    CriterionTypeEnum: type[v22.enums.CriterionTypeEnum.CriterionType]
     CustomAudienceMemberTypeEnum: type[
-        v21.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType
+        v22.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType
     ]
     CustomAudienceStatusEnum: type[
-        v21.enums.CustomAudienceStatusEnum.CustomAudienceStatus
+        v22.enums.CustomAudienceStatusEnum.CustomAudienceStatus
     ]
-    CustomAudienceTypeEnum: type[v21.enums.CustomAudienceTypeEnum.CustomAudienceType]
+    CustomAudienceTypeEnum: type[v22.enums.CustomAudienceTypeEnum.CustomAudienceType]
     CustomConversionGoalStatusEnum: type[
-        v21.enums.CustomConversionGoalStatusEnum.CustomConversionGoalStatus
+        v22.enums.CustomConversionGoalStatusEnum.CustomConversionGoalStatus
     ]
     CustomInterestMemberTypeEnum: type[
-        v21.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType
+        v22.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType
     ]
     CustomInterestStatusEnum: type[
-        v21.enums.CustomInterestStatusEnum.CustomInterestStatus
+        v22.enums.CustomInterestStatusEnum.CustomInterestStatus
     ]
-    CustomInterestTypeEnum: type[v21.enums.CustomInterestTypeEnum.CustomInterestType]
+    CustomInterestTypeEnum: type[v22.enums.CustomInterestTypeEnum.CustomInterestType]
     CustomerAcquisitionOptimizationModeEnum: type[
-        v21.enums.CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode
+        v22.enums.CustomerAcquisitionOptimizationModeEnum.CustomerAcquisitionOptimizationMode
+    ]
+    CustomerLifecycleOptimizationModeEnum: type[
+        v22.enums.CustomerLifecycleOptimizationModeEnum.CustomerLifecycleOptimizationMode
     ]
     CustomerMatchUploadKeyTypeEnum: type[
-        v21.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType
+        v22.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType
     ]
     CustomerPayPerConversionEligibilityFailureReasonEnum: type[
-        v21.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason
+        v22.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason
     ]
-    CustomerStatusEnum: type[v21.enums.CustomerStatusEnum.CustomerStatus]
+    CustomerStatusEnum: type[v22.enums.CustomerStatusEnum.CustomerStatus]
     CustomizerAttributeStatusEnum: type[
-        v21.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus
+        v22.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus
     ]
     CustomizerAttributeTypeEnum: type[
-        v21.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType
+        v22.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType
     ]
     CustomizerValueStatusEnum: type[
-        v21.enums.CustomizerValueStatusEnum.CustomizerValueStatus
+        v22.enums.CustomizerValueStatusEnum.CustomizerValueStatus
     ]
     DataDrivenModelStatusEnum: type[
-        v21.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus
+        v22.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus
     ]
-    DataLinkStatusEnum: type[v21.enums.DataLinkStatusEnum.DataLinkStatus]
-    DataLinkTypeEnum: type[v21.enums.DataLinkTypeEnum.DataLinkType]
-    DayOfWeekEnum: type[v21.enums.DayOfWeekEnum.DayOfWeek]
+    DataLinkStatusEnum: type[v22.enums.DataLinkStatusEnum.DataLinkStatus]
+    DataLinkTypeEnum: type[v22.enums.DataLinkTypeEnum.DataLinkType]
+    DayOfWeekEnum: type[v22.enums.DayOfWeekEnum.DayOfWeek]
     DemandGenChannelConfigEnum: type[
-        v21.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig
+        v22.enums.DemandGenChannelConfigEnum.DemandGenChannelConfig
     ]
     DemandGenChannelStrategyEnum: type[
-        v21.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy
+        v22.enums.DemandGenChannelStrategyEnum.DemandGenChannelStrategy
     ]
-    DeviceEnum: type[v21.enums.DeviceEnum.Device]
+    DeviceEnum: type[v22.enums.DeviceEnum.Device]
     DisplayAdFormatSettingEnum: type[
-        v21.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting
+        v22.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting
     ]
     DisplayUploadProductTypeEnum: type[
-        v21.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType
+        v22.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType
     ]
-    DistanceBucketEnum: type[v21.enums.DistanceBucketEnum.DistanceBucket]
+    DistanceBucketEnum: type[v22.enums.DistanceBucketEnum.DistanceBucket]
     EuPoliticalAdvertisingStatusEnum: type[
-        v21.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus
+        v22.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus
     ]
     ExperimentMetricDirectionEnum: type[
-        v21.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection
+        v22.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection
     ]
-    ExperimentMetricEnum: type[v21.enums.ExperimentMetricEnum.ExperimentMetric]
-    ExperimentStatusEnum: type[v21.enums.ExperimentStatusEnum.ExperimentStatus]
-    ExperimentTypeEnum: type[v21.enums.ExperimentTypeEnum.ExperimentType]
+    ExperimentMetricEnum: type[v22.enums.ExperimentMetricEnum.ExperimentMetric]
+    ExperimentStatusEnum: type[v22.enums.ExperimentStatusEnum.ExperimentStatus]
+    ExperimentTypeEnum: type[v22.enums.ExperimentTypeEnum.ExperimentType]
     ExternalConversionSourceEnum: type[
-        v21.enums.ExternalConversionSourceEnum.ExternalConversionSource
+        v22.enums.ExternalConversionSourceEnum.ExternalConversionSource
     ]
-    FixedCpmGoalEnum: type[v21.enums.FixedCpmGoalEnum.FixedCpmGoal]
+    FixedCpmGoalEnum: type[v22.enums.FixedCpmGoalEnum.FixedCpmGoal]
     FixedCpmTargetFrequencyTimeUnitEnum: type[
-        v21.enums.FixedCpmTargetFrequencyTimeUnitEnum.FixedCpmTargetFrequencyTimeUnit
+        v22.enums.FixedCpmTargetFrequencyTimeUnitEnum.FixedCpmTargetFrequencyTimeUnit
     ]
     FrequencyCapEventTypeEnum: type[
-        v21.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType
+        v22.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType
     ]
-    FrequencyCapLevelEnum: type[v21.enums.FrequencyCapLevelEnum.FrequencyCapLevel]
+    FrequencyCapLevelEnum: type[v22.enums.FrequencyCapLevelEnum.FrequencyCapLevel]
     FrequencyCapTimeUnitEnum: type[
-        v21.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
+        v22.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit
     ]
-    GenderTypeEnum: type[v21.enums.GenderTypeEnum.GenderType]
+    GenderTypeEnum: type[v22.enums.GenderTypeEnum.GenderType]
     GeoTargetConstantStatusEnum: type[
-        v21.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus
+        v22.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus
     ]
-    GeoTargetingTypeEnum: type[v21.enums.GeoTargetingTypeEnum.GeoTargetingType]
-    GoalConfigLevelEnum: type[v21.enums.GoalConfigLevelEnum.GoalConfigLevel]
+    GeoTargetingTypeEnum: type[v22.enums.GeoTargetingTypeEnum.GeoTargetingType]
+    GoalConfigLevelEnum: type[v22.enums.GoalConfigLevelEnum.GoalConfigLevel]
+    GoalOptimizationEligibilityEnum: type[
+        v22.enums.GoalOptimizationEligibilityEnum.GoalOptimizationEligibility
+    ]
+    GoalTypeEnum: type[v22.enums.GoalTypeEnum.GoalType]
     GoogleAdsFieldCategoryEnum: type[
-        v21.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory
+        v22.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory
     ]
     GoogleAdsFieldDataTypeEnum: type[
-        v21.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
+        v22.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType
     ]
     GoogleVoiceCallStatusEnum: type[
-        v21.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus
+        v22.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus
     ]
     HotelAssetSuggestionStatusEnum: type[
-        v21.enums.HotelAssetSuggestionStatusEnum.HotelAssetSuggestionStatus
+        v22.enums.HotelAssetSuggestionStatusEnum.HotelAssetSuggestionStatus
     ]
     HotelDateSelectionTypeEnum: type[
-        v21.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType
+        v22.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType
     ]
-    HotelPriceBucketEnum: type[v21.enums.HotelPriceBucketEnum.HotelPriceBucket]
-    HotelRateTypeEnum: type[v21.enums.HotelRateTypeEnum.HotelRateType]
+    HotelPriceBucketEnum: type[v22.enums.HotelPriceBucketEnum.HotelPriceBucket]
+    HotelRateTypeEnum: type[v22.enums.HotelRateTypeEnum.HotelRateType]
     HotelReconciliationStatusEnum: type[
-        v21.enums.HotelReconciliationStatusEnum.HotelReconciliationStatus
+        v22.enums.HotelReconciliationStatusEnum.HotelReconciliationStatus
     ]
     IdentityVerificationProgramEnum: type[
-        v21.enums.IdentityVerificationProgramEnum.IdentityVerificationProgram
+        v22.enums.IdentityVerificationProgramEnum.IdentityVerificationProgram
     ]
     IdentityVerificationProgramStatusEnum: type[
-        v21.enums.IdentityVerificationProgramStatusEnum.IdentityVerificationProgramStatus
+        v22.enums.IdentityVerificationProgramStatusEnum.IdentityVerificationProgramStatus
     ]
-    IncomeRangeTypeEnum: type[v21.enums.IncomeRangeTypeEnum.IncomeRangeType]
+    IncomeRangeTypeEnum: type[v22.enums.IncomeRangeTypeEnum.IncomeRangeType]
     InsightsKnowledgeGraphEntityCapabilitiesEnum: type[
-        v21.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities
+        v22.enums.InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities
     ]
-    InsightsTrendEnum: type[v21.enums.InsightsTrendEnum.InsightsTrend]
+    InsightsTrendEnum: type[v22.enums.InsightsTrendEnum.InsightsTrend]
     InteractionEventTypeEnum: type[
-        v21.enums.InteractionEventTypeEnum.InteractionEventType
+        v22.enums.InteractionEventTypeEnum.InteractionEventType
     ]
-    InteractionTypeEnum: type[v21.enums.InteractionTypeEnum.InteractionType]
-    InvoiceTypeEnum: type[v21.enums.InvoiceTypeEnum.InvoiceType]
-    KeywordMatchTypeEnum: type[v21.enums.KeywordMatchTypeEnum.KeywordMatchType]
+    InteractionTypeEnum: type[v22.enums.InteractionTypeEnum.InteractionType]
+    InvoiceTypeEnum: type[v22.enums.InvoiceTypeEnum.InvoiceType]
+    KeywordMatchTypeEnum: type[v22.enums.KeywordMatchTypeEnum.KeywordMatchType]
     KeywordPlanAggregateMetricTypeEnum: type[
-        v21.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType
+        v22.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType
     ]
     KeywordPlanCompetitionLevelEnum: type[
-        v21.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel
+        v22.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel
     ]
     KeywordPlanConceptGroupTypeEnum: type[
-        v21.enums.KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType
+        v22.enums.KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType
     ]
     KeywordPlanForecastIntervalEnum: type[
-        v21.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
+        v22.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval
     ]
     KeywordPlanKeywordAnnotationEnum: type[
-        v21.enums.KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation
+        v22.enums.KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation
     ]
-    KeywordPlanNetworkEnum: type[v21.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork]
-    LabelStatusEnum: type[v21.enums.LabelStatusEnum.LabelStatus]
-    LandingPageSourceEnum: type[v21.enums.LandingPageSourceEnum.LandingPageSource]
+    KeywordPlanNetworkEnum: type[v22.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork]
+    LabelStatusEnum: type[v22.enums.LabelStatusEnum.LabelStatus]
+    LandingPageSourceEnum: type[v22.enums.LandingPageSourceEnum.LandingPageSource]
     LeadFormCallToActionTypeEnum: type[
-        v21.enums.LeadFormCallToActionTypeEnum.LeadFormCallToActionType
+        v22.enums.LeadFormCallToActionTypeEnum.LeadFormCallToActionType
     ]
     LeadFormDesiredIntentEnum: type[
-        v21.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent
+        v22.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent
     ]
     LeadFormFieldUserInputTypeEnum: type[
-        v21.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType
+        v22.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType
     ]
     LeadFormPostSubmitCallToActionTypeEnum: type[
-        v21.enums.LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType
+        v22.enums.LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType
     ]
     LegacyAppInstallAdAppStoreEnum: type[
-        v21.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore
+        v22.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore
     ]
-    LinkedAccountTypeEnum: type[v21.enums.LinkedAccountTypeEnum.LinkedAccountType]
-    LinkedProductTypeEnum: type[v21.enums.LinkedProductTypeEnum.LinkedProductType]
+    LinkedAccountTypeEnum: type[v22.enums.LinkedAccountTypeEnum.LinkedAccountType]
+    LinkedProductTypeEnum: type[v22.enums.LinkedProductTypeEnum.LinkedProductType]
     ListingGroupFilterCustomAttributeIndexEnum: type[
-        v21.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex
+        v22.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex
     ]
     ListingGroupFilterListingSourceEnum: type[
-        v21.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource
+        v22.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource
     ]
     ListingGroupFilterProductCategoryLevelEnum: type[
-        v21.enums.ListingGroupFilterProductCategoryLevelEnum.ListingGroupFilterProductCategoryLevel
+        v22.enums.ListingGroupFilterProductCategoryLevelEnum.ListingGroupFilterProductCategoryLevel
     ]
     ListingGroupFilterProductChannelEnum: type[
-        v21.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel
+        v22.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel
     ]
     ListingGroupFilterProductConditionEnum: type[
-        v21.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition
+        v22.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition
     ]
     ListingGroupFilterProductTypeLevelEnum: type[
-        v21.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel
+        v22.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel
     ]
     ListingGroupFilterTypeEnum: type[
-        v21.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType
+        v22.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType
     ]
-    ListingGroupTypeEnum: type[v21.enums.ListingGroupTypeEnum.ListingGroupType]
-    ListingTypeEnum: type[v21.enums.ListingTypeEnum.ListingType]
+    ListingGroupTypeEnum: type[v22.enums.ListingGroupTypeEnum.ListingGroupType]
+    ListingTypeEnum: type[v22.enums.ListingTypeEnum.ListingType]
     LocalServicesBusinessRegistrationCheckRejectionReasonEnum: type[
-        v21.enums.LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+        v22.enums.LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
     ]
     LocalServicesBusinessRegistrationTypeEnum: type[
-        v21.enums.LocalServicesBusinessRegistrationTypeEnum.LocalServicesBusinessRegistrationType
+        v22.enums.LocalServicesBusinessRegistrationTypeEnum.LocalServicesBusinessRegistrationType
     ]
     LocalServicesCreditStateEnum: type[
-        v21.enums.LocalServicesCreditStateEnum.CreditState
+        v22.enums.LocalServicesCreditStateEnum.CreditState
     ]
     LocalServicesEmployeeStatusEnum: type[
-        v21.enums.LocalServicesEmployeeStatusEnum.LocalServicesEmployeeStatus
+        v22.enums.LocalServicesEmployeeStatusEnum.LocalServicesEmployeeStatus
     ]
     LocalServicesEmployeeTypeEnum: type[
-        v21.enums.LocalServicesEmployeeTypeEnum.LocalServicesEmployeeType
+        v22.enums.LocalServicesEmployeeTypeEnum.LocalServicesEmployeeType
     ]
     LocalServicesInsuranceRejectionReasonEnum: type[
-        v21.enums.LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason
+        v22.enums.LocalServicesInsuranceRejectionReasonEnum.LocalServicesInsuranceRejectionReason
     ]
     LocalServicesLeadConversationTypeEnum: type[
-        v21.enums.LocalServicesLeadConversationTypeEnum.ConversationType
+        v22.enums.LocalServicesLeadConversationTypeEnum.ConversationType
     ]
     LocalServicesLeadCreditIssuanceDecisionEnum: type[
-        v21.enums.LocalServicesLeadCreditIssuanceDecisionEnum.CreditIssuanceDecision
+        v22.enums.LocalServicesLeadCreditIssuanceDecisionEnum.CreditIssuanceDecision
     ]
-    LocalServicesLeadStatusEnum: type[v21.enums.LocalServicesLeadStatusEnum.LeadStatus]
+    LocalServicesLeadStatusEnum: type[v22.enums.LocalServicesLeadStatusEnum.LeadStatus]
     LocalServicesLeadSurveyAnswerEnum: type[
-        v21.enums.LocalServicesLeadSurveyAnswerEnum.SurveyAnswer
+        v22.enums.LocalServicesLeadSurveyAnswerEnum.SurveyAnswer
     ]
     LocalServicesLeadSurveyDissatisfiedReasonEnum: type[
-        v21.enums.LocalServicesLeadSurveyDissatisfiedReasonEnum.SurveyDissatisfiedReason
+        v22.enums.LocalServicesLeadSurveyDissatisfiedReasonEnum.SurveyDissatisfiedReason
     ]
     LocalServicesLeadSurveySatisfiedReasonEnum: type[
-        v21.enums.LocalServicesLeadSurveySatisfiedReasonEnum.SurveySatisfiedReason
+        v22.enums.LocalServicesLeadSurveySatisfiedReasonEnum.SurveySatisfiedReason
     ]
-    LocalServicesLeadTypeEnum: type[v21.enums.LocalServicesLeadTypeEnum.LeadType]
+    LocalServicesLeadTypeEnum: type[v22.enums.LocalServicesLeadTypeEnum.LeadType]
     LocalServicesLicenseRejectionReasonEnum: type[
-        v21.enums.LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason
+        v22.enums.LocalServicesLicenseRejectionReasonEnum.LocalServicesLicenseRejectionReason
     ]
     LocalServicesParticipantTypeEnum: type[
-        v21.enums.LocalServicesParticipantTypeEnum.ParticipantType
+        v22.enums.LocalServicesParticipantTypeEnum.ParticipantType
     ]
     LocalServicesVerificationArtifactStatusEnum: type[
-        v21.enums.LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
+        v22.enums.LocalServicesVerificationArtifactStatusEnum.LocalServicesVerificationArtifactStatus
     ]
     LocalServicesVerificationArtifactTypeEnum: type[
-        v21.enums.LocalServicesVerificationArtifactTypeEnum.LocalServicesVerificationArtifactType
+        v22.enums.LocalServicesVerificationArtifactTypeEnum.LocalServicesVerificationArtifactType
     ]
     LocalServicesVerificationStatusEnum: type[
-        v21.enums.LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
+        v22.enums.LocalServicesVerificationStatusEnum.LocalServicesVerificationStatus
     ]
     LocationGroupRadiusUnitsEnum: type[
-        v21.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits
+        v22.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits
     ]
     LocationOwnershipTypeEnum: type[
-        v21.enums.LocationOwnershipTypeEnum.LocationOwnershipType
+        v22.enums.LocationOwnershipTypeEnum.LocationOwnershipType
     ]
-    LocationSourceTypeEnum: type[v21.enums.LocationSourceTypeEnum.LocationSourceType]
+    LocationSourceTypeEnum: type[v22.enums.LocationSourceTypeEnum.LocationSourceType]
     LocationStringFilterTypeEnum: type[
-        v21.enums.LocationStringFilterTypeEnum.LocationStringFilterType
+        v22.enums.LocationStringFilterTypeEnum.LocationStringFilterType
     ]
     LookalikeExpansionLevelEnum: type[
-        v21.enums.LookalikeExpansionLevelEnum.LookalikeExpansionLevel
+        v22.enums.LookalikeExpansionLevelEnum.LookalikeExpansionLevel
     ]
-    ManagerLinkStatusEnum: type[v21.enums.ManagerLinkStatusEnum.ManagerLinkStatus]
-    MatchTypeEnum: type[v21.enums.MatchTypeEnum.MatchType]
-    MediaTypeEnum: type[v21.enums.MediaTypeEnum.MediaType]
-    MimeTypeEnum: type[v21.enums.MimeTypeEnum.MimeType]
-    MinuteOfHourEnum: type[v21.enums.MinuteOfHourEnum.MinuteOfHour]
-    MobileAppVendorEnum: type[v21.enums.MobileAppVendorEnum.MobileAppVendor]
-    MobileDeviceTypeEnum: type[v21.enums.MobileDeviceTypeEnum.MobileDeviceType]
-    MonthOfYearEnum: type[v21.enums.MonthOfYearEnum.MonthOfYear]
+    ManagerLinkStatusEnum: type[v22.enums.ManagerLinkStatusEnum.ManagerLinkStatus]
+    MatchTypeEnum: type[v22.enums.MatchTypeEnum.MatchType]
+    MediaTypeEnum: type[v22.enums.MediaTypeEnum.MediaType]
+    MimeTypeEnum: type[v22.enums.MimeTypeEnum.MimeType]
+    MinuteOfHourEnum: type[v22.enums.MinuteOfHourEnum.MinuteOfHour]
+    MobileAppVendorEnum: type[v22.enums.MobileAppVendorEnum.MobileAppVendor]
+    MobileDeviceTypeEnum: type[v22.enums.MobileDeviceTypeEnum.MobileDeviceType]
+    MonthOfYearEnum: type[v22.enums.MonthOfYearEnum.MonthOfYear]
     NegativeGeoTargetTypeEnum: type[
-        v21.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType
+        v22.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType
     ]
     NonSkippableMaxDurationEnum: type[
-        v21.enums.NonSkippableMaxDurationEnum.NonSkippableMaxDuration
+        v22.enums.NonSkippableMaxDurationEnum.NonSkippableMaxDuration
     ]
     NonSkippableMinDurationEnum: type[
-        v21.enums.NonSkippableMinDurationEnum.NonSkippableMinDuration
+        v22.enums.NonSkippableMinDurationEnum.NonSkippableMinDuration
     ]
     OfflineConversionDiagnosticStatusEnum: type[
-        v21.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus
+        v22.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus
     ]
     OfflineEventUploadClientEnum: type[
-        v21.enums.OfflineEventUploadClientEnum.OfflineEventUploadClient
+        v22.enums.OfflineEventUploadClientEnum.OfflineEventUploadClient
     ]
     OfflineUserDataJobFailureReasonEnum: type[
-        v21.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason
+        v22.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason
     ]
     OfflineUserDataJobMatchRateRangeEnum: type[
-        v21.enums.OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange
+        v22.enums.OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange
     ]
     OfflineUserDataJobStatusEnum: type[
-        v21.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus
+        v22.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus
     ]
     OfflineUserDataJobTypeEnum: type[
-        v21.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType
+        v22.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType
     ]
     OperatingSystemVersionOperatorTypeEnum: type[
-        v21.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType
+        v22.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType
     ]
     OptimizationGoalTypeEnum: type[
-        v21.enums.OptimizationGoalTypeEnum.OptimizationGoalType
+        v22.enums.OptimizationGoalTypeEnum.OptimizationGoalType
     ]
-    ParentalStatusTypeEnum: type[v21.enums.ParentalStatusTypeEnum.ParentalStatusType]
-    PaymentModeEnum: type[v21.enums.PaymentModeEnum.PaymentMode]
+    ParentalStatusTypeEnum: type[v22.enums.ParentalStatusTypeEnum.ParentalStatusType]
+    PaymentModeEnum: type[v22.enums.PaymentModeEnum.PaymentMode]
     PerformanceMaxUpgradeStatusEnum: type[
-        v21.enums.PerformanceMaxUpgradeStatusEnum.PerformanceMaxUpgradeStatus
+        v22.enums.PerformanceMaxUpgradeStatusEnum.PerformanceMaxUpgradeStatus
     ]
-    PlacementTypeEnum: type[v21.enums.PlacementTypeEnum.PlacementType]
+    PlacementTypeEnum: type[v22.enums.PlacementTypeEnum.PlacementType]
     PolicyApprovalStatusEnum: type[
-        v21.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus
+        v22.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus
     ]
-    PolicyReviewStatusEnum: type[v21.enums.PolicyReviewStatusEnum.PolicyReviewStatus]
+    PolicyReviewStatusEnum: type[v22.enums.PolicyReviewStatusEnum.PolicyReviewStatus]
     PolicyTopicEntryTypeEnum: type[
-        v21.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType
+        v22.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType
     ]
     PolicyTopicEvidenceDestinationMismatchUrlTypeEnum: type[
-        v21.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType
+        v22.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType
     ]
     PolicyTopicEvidenceDestinationNotWorkingDeviceEnum: type[
-        v21.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice
+        v22.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice
     ]
     PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum: type[
-        v21.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
+        v22.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
     ]
     PositiveGeoTargetTypeEnum: type[
-        v21.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType
+        v22.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType
     ]
     PriceExtensionPriceQualifierEnum: type[
-        v21.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier
+        v22.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier
     ]
     PriceExtensionPriceUnitEnum: type[
-        v21.enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit
+        v22.enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit
     ]
-    PriceExtensionTypeEnum: type[v21.enums.PriceExtensionTypeEnum.PriceExtensionType]
-    ProductAvailabilityEnum: type[v21.enums.ProductAvailabilityEnum.ProductAvailability]
+    PriceExtensionTypeEnum: type[v22.enums.PriceExtensionTypeEnum.PriceExtensionType]
+    ProductAvailabilityEnum: type[v22.enums.ProductAvailabilityEnum.ProductAvailability]
     ProductCategoryLevelEnum: type[
-        v21.enums.ProductCategoryLevelEnum.ProductCategoryLevel
+        v22.enums.ProductCategoryLevelEnum.ProductCategoryLevel
     ]
     ProductCategoryStateEnum: type[
-        v21.enums.ProductCategoryStateEnum.ProductCategoryState
+        v22.enums.ProductCategoryStateEnum.ProductCategoryState
     ]
-    ProductChannelEnum: type[v21.enums.ProductChannelEnum.ProductChannel]
+    ProductChannelEnum: type[v22.enums.ProductChannelEnum.ProductChannel]
     ProductChannelExclusivityEnum: type[
-        v21.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity
+        v22.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity
     ]
-    ProductConditionEnum: type[v21.enums.ProductConditionEnum.ProductCondition]
+    ProductConditionEnum: type[v22.enums.ProductConditionEnum.ProductCondition]
     ProductCustomAttributeIndexEnum: type[
-        v21.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex
+        v22.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex
     ]
     ProductIssueSeverityEnum: type[
-        v21.enums.ProductIssueSeverityEnum.ProductIssueSeverity
+        v22.enums.ProductIssueSeverityEnum.ProductIssueSeverity
     ]
     ProductLinkInvitationStatusEnum: type[
-        v21.enums.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
+        v22.enums.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
     ]
-    ProductStatusEnum: type[v21.enums.ProductStatusEnum.ProductStatus]
-    ProductTypeLevelEnum: type[v21.enums.ProductTypeLevelEnum.ProductTypeLevel]
+    ProductStatusEnum: type[v22.enums.ProductStatusEnum.ProductStatus]
+    ProductTypeLevelEnum: type[v22.enums.ProductTypeLevelEnum.ProductTypeLevel]
     PromotionBarcodeTypeEnum: type[
-        v21.enums.PromotionBarcodeTypeEnum.PromotionBarcodeType
+        v22.enums.PromotionBarcodeTypeEnum.PromotionBarcodeType
     ]
     PromotionExtensionDiscountModifierEnum: type[
-        v21.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier
+        v22.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier
     ]
     PromotionExtensionOccasionEnum: type[
-        v21.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion
+        v22.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion
     ]
     ProximityRadiusUnitsEnum: type[
-        v21.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits
+        v22.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits
     ]
-    QualityScoreBucketEnum: type[v21.enums.QualityScoreBucketEnum.QualityScoreBucket]
-    ReachPlanAgeRangeEnum: type[v21.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange]
+    QualityScoreBucketEnum: type[v22.enums.QualityScoreBucketEnum.QualityScoreBucket]
+    ReachPlanAgeRangeEnum: type[v22.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange]
     ReachPlanConversionRateModelEnum: type[
-        v21.enums.ReachPlanConversionRateModelEnum.ReachPlanConversionRateModel
+        v22.enums.ReachPlanConversionRateModelEnum.ReachPlanConversionRateModel
     ]
-    ReachPlanNetworkEnum: type[v21.enums.ReachPlanNetworkEnum.ReachPlanNetwork]
+    ReachPlanNetworkEnum: type[v22.enums.ReachPlanNetworkEnum.ReachPlanNetwork]
     ReachPlanPlannableUserListStatusEnum: type[
-        v21.enums.ReachPlanPlannableUserListStatusEnum.ReachPlanPlannableUserListStatus
+        v22.enums.ReachPlanPlannableUserListStatusEnum.ReachPlanPlannableUserListStatus
     ]
-    ReachPlanSurfaceEnum: type[v21.enums.ReachPlanSurfaceEnum.ReachPlanSurface]
+    ReachPlanSurfaceEnum: type[v22.enums.ReachPlanSurfaceEnum.ReachPlanSurface]
     RecommendationSubscriptionStatusEnum: type[
-        v21.enums.RecommendationSubscriptionStatusEnum.RecommendationSubscriptionStatus
+        v22.enums.RecommendationSubscriptionStatusEnum.RecommendationSubscriptionStatus
     ]
-    RecommendationTypeEnum: type[v21.enums.RecommendationTypeEnum.RecommendationType]
+    RecommendationTypeEnum: type[v22.enums.RecommendationTypeEnum.RecommendationType]
     ResourceChangeOperationEnum: type[
-        v21.enums.ResourceChangeOperationEnum.ResourceChangeOperation
+        v22.enums.ResourceChangeOperationEnum.ResourceChangeOperation
     ]
-    ResourceLimitTypeEnum: type[v21.enums.ResourceLimitTypeEnum.ResourceLimitType]
-    ResponseContentTypeEnum: type[v21.enums.ResponseContentTypeEnum.ResponseContentType]
+    ResourceLimitTypeEnum: type[v22.enums.ResourceLimitTypeEnum.ResourceLimitType]
+    ResponseContentTypeEnum: type[v22.enums.ResponseContentTypeEnum.ResponseContentType]
     SearchEngineResultsPageTypeEnum: type[
-        v21.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType
+        v22.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType
     ]
     SearchTermMatchSourceEnum: type[
-        v21.enums.SearchTermMatchSourceEnum.SearchTermMatchSource
+        v22.enums.SearchTermMatchSourceEnum.SearchTermMatchSource
     ]
-    SearchTermMatchTypeEnum: type[v21.enums.SearchTermMatchTypeEnum.SearchTermMatchType]
+    SearchTermMatchTypeEnum: type[v22.enums.SearchTermMatchTypeEnum.SearchTermMatchType]
     SearchTermTargetingStatusEnum: type[
-        v21.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus
+        v22.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus
     ]
     SeasonalityEventScopeEnum: type[
-        v21.enums.SeasonalityEventScopeEnum.SeasonalityEventScope
+        v22.enums.SeasonalityEventScopeEnum.SeasonalityEventScope
     ]
     SeasonalityEventStatusEnum: type[
-        v21.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus
+        v22.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus
     ]
     ServedAssetFieldTypeEnum: type[
-        v21.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType
+        v22.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType
     ]
-    SharedSetStatusEnum: type[v21.enums.SharedSetStatusEnum.SharedSetStatus]
-    SharedSetTypeEnum: type[v21.enums.SharedSetTypeEnum.SharedSetType]
+    SharedSetStatusEnum: type[v22.enums.SharedSetStatusEnum.SharedSetStatus]
+    SharedSetTypeEnum: type[v22.enums.SharedSetTypeEnum.SharedSetType]
     ShoppingAddProductsToCampaignRecommendationEnum: type[
-        v21.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason
+        v22.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason
     ]
     SimulationModificationMethodEnum: type[
-        v21.enums.SimulationModificationMethodEnum.SimulationModificationMethod
+        v22.enums.SimulationModificationMethodEnum.SimulationModificationMethod
     ]
-    SimulationTypeEnum: type[v21.enums.SimulationTypeEnum.SimulationType]
+    SimulationTypeEnum: type[v22.enums.SimulationTypeEnum.SimulationType]
     SkAdNetworkAdEventTypeEnum: type[
-        v21.enums.SkAdNetworkAdEventTypeEnum.SkAdNetworkAdEventType
+        v22.enums.SkAdNetworkAdEventTypeEnum.SkAdNetworkAdEventType
     ]
     SkAdNetworkAttributionCreditEnum: type[
-        v21.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit
+        v22.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit
     ]
     SkAdNetworkCoarseConversionValueEnum: type[
-        v21.enums.SkAdNetworkCoarseConversionValueEnum.SkAdNetworkCoarseConversionValue
+        v22.enums.SkAdNetworkCoarseConversionValueEnum.SkAdNetworkCoarseConversionValue
     ]
     SkAdNetworkSourceTypeEnum: type[
-        v21.enums.SkAdNetworkSourceTypeEnum.SkAdNetworkSourceType
+        v22.enums.SkAdNetworkSourceTypeEnum.SkAdNetworkSourceType
     ]
-    SkAdNetworkUserTypeEnum: type[v21.enums.SkAdNetworkUserTypeEnum.SkAdNetworkUserType]
-    SlotEnum: type[v21.enums.SlotEnum.Slot]
+    SkAdNetworkUserTypeEnum: type[v22.enums.SkAdNetworkUserTypeEnum.SkAdNetworkUserType]
+    SlotEnum: type[v22.enums.SlotEnum.Slot]
     SmartCampaignNotEligibleReasonEnum: type[
-        v21.enums.SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason
+        v22.enums.SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason
     ]
-    SmartCampaignStatusEnum: type[v21.enums.SmartCampaignStatusEnum.SmartCampaignStatus]
-    SpendingLimitTypeEnum: type[v21.enums.SpendingLimitTypeEnum.SpendingLimitType]
-    SummaryRowSettingEnum: type[v21.enums.SummaryRowSettingEnum.SummaryRowSetting]
+    SmartCampaignStatusEnum: type[v22.enums.SmartCampaignStatusEnum.SmartCampaignStatus]
+    SpendingLimitTypeEnum: type[v22.enums.SpendingLimitTypeEnum.SpendingLimitType]
+    SummaryRowSettingEnum: type[v22.enums.SummaryRowSettingEnum.SummaryRowSetting]
     SystemManagedResourceSourceEnum: type[
-        v21.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource
+        v22.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource
     ]
     TargetCpaOptInRecommendationGoalEnum: type[
-        v21.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
+        v22.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal
     ]
     TargetFrequencyTimeUnitEnum: type[
-        v21.enums.TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit
+        v22.enums.TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit
     ]
     TargetImpressionShareLocationEnum: type[
-        v21.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation
+        v22.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation
     ]
-    TargetingDimensionEnum: type[v21.enums.TargetingDimensionEnum.TargetingDimension]
+    TargetingDimensionEnum: type[v22.enums.TargetingDimensionEnum.TargetingDimension]
     ThirdPartyBrandLiftIntegrationPartnerEnum: type[
-        v21.enums.ThirdPartyBrandLiftIntegrationPartnerEnum.ThirdPartyBrandLiftIntegrationPartner
+        v22.enums.ThirdPartyBrandLiftIntegrationPartnerEnum.ThirdPartyBrandLiftIntegrationPartner
     ]
     ThirdPartyBrandSafetyIntegrationPartnerEnum: type[
-        v21.enums.ThirdPartyBrandSafetyIntegrationPartnerEnum.ThirdPartyBrandSafetyIntegrationPartner
+        v22.enums.ThirdPartyBrandSafetyIntegrationPartnerEnum.ThirdPartyBrandSafetyIntegrationPartner
     ]
     ThirdPartyReachIntegrationPartnerEnum: type[
-        v21.enums.ThirdPartyReachIntegrationPartnerEnum.ThirdPartyReachIntegrationPartner
+        v22.enums.ThirdPartyReachIntegrationPartnerEnum.ThirdPartyReachIntegrationPartner
     ]
     ThirdPartyViewabilityIntegrationPartnerEnum: type[
-        v21.enums.ThirdPartyViewabilityIntegrationPartnerEnum.ThirdPartyViewabilityIntegrationPartner
+        v22.enums.ThirdPartyViewabilityIntegrationPartnerEnum.ThirdPartyViewabilityIntegrationPartner
     ]
-    TimeTypeEnum: type[v21.enums.TimeTypeEnum.TimeType]
+    TimeTypeEnum: type[v22.enums.TimeTypeEnum.TimeType]
     TrackingCodePageFormatEnum: type[
-        v21.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat
+        v22.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat
     ]
-    TrackingCodeTypeEnum: type[v21.enums.TrackingCodeTypeEnum.TrackingCodeType]
+    TrackingCodeTypeEnum: type[v22.enums.TrackingCodeTypeEnum.TrackingCodeType]
     UserIdentifierSourceEnum: type[
-        v21.enums.UserIdentifierSourceEnum.UserIdentifierSource
+        v22.enums.UserIdentifierSourceEnum.UserIdentifierSource
     ]
     UserInterestTaxonomyTypeEnum: type[
-        v21.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType
+        v22.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType
     ]
     UserListAccessStatusEnum: type[
-        v21.enums.UserListAccessStatusEnum.UserListAccessStatus
+        v22.enums.UserListAccessStatusEnum.UserListAccessStatus
     ]
     UserListClosingReasonEnum: type[
-        v21.enums.UserListClosingReasonEnum.UserListClosingReason
+        v22.enums.UserListClosingReasonEnum.UserListClosingReason
     ]
     UserListCrmDataSourceTypeEnum: type[
-        v21.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType
+        v22.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType
     ]
     UserListCustomerTypeCategoryEnum: type[
-        v21.enums.UserListCustomerTypeCategoryEnum.UserListCustomerTypeCategory
+        v22.enums.UserListCustomerTypeCategoryEnum.UserListCustomerTypeCategory
     ]
     UserListDateRuleItemOperatorEnum: type[
-        v21.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator
+        v22.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator
     ]
     UserListFlexibleRuleOperatorEnum: type[
-        v21.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator
+        v22.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator
     ]
     UserListLogicalRuleOperatorEnum: type[
-        v21.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator
+        v22.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator
     ]
     UserListMembershipStatusEnum: type[
-        v21.enums.UserListMembershipStatusEnum.UserListMembershipStatus
+        v22.enums.UserListMembershipStatusEnum.UserListMembershipStatus
     ]
     UserListNumberRuleItemOperatorEnum: type[
-        v21.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator
+        v22.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator
     ]
     UserListPrepopulationStatusEnum: type[
-        v21.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus
+        v22.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus
     ]
-    UserListRuleTypeEnum: type[v21.enums.UserListRuleTypeEnum.UserListRuleType]
-    UserListSizeRangeEnum: type[v21.enums.UserListSizeRangeEnum.UserListSizeRange]
+    UserListRuleTypeEnum: type[v22.enums.UserListRuleTypeEnum.UserListRuleType]
+    UserListSizeRangeEnum: type[v22.enums.UserListSizeRangeEnum.UserListSizeRange]
     UserListStringRuleItemOperatorEnum: type[
-        v21.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator
+        v22.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator
     ]
-    UserListTypeEnum: type[v21.enums.UserListTypeEnum.UserListType]
-    ValueRuleDeviceTypeEnum: type[v21.enums.ValueRuleDeviceTypeEnum.ValueRuleDeviceType]
+    UserListTypeEnum: type[v22.enums.UserListTypeEnum.UserListType]
+    ValueRuleDeviceTypeEnum: type[v22.enums.ValueRuleDeviceTypeEnum.ValueRuleDeviceType]
     ValueRuleGeoLocationMatchTypeEnum: type[
-        v21.enums.ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
+        v22.enums.ValueRuleGeoLocationMatchTypeEnum.ValueRuleGeoLocationMatchType
     ]
-    ValueRuleOperationEnum: type[v21.enums.ValueRuleOperationEnum.ValueRuleOperation]
+    ValueRuleOperationEnum: type[v22.enums.ValueRuleOperationEnum.ValueRuleOperation]
     ValueRuleSetAttachmentTypeEnum: type[
-        v21.enums.ValueRuleSetAttachmentTypeEnum.ValueRuleSetAttachmentType
+        v22.enums.ValueRuleSetAttachmentTypeEnum.ValueRuleSetAttachmentType
     ]
     ValueRuleSetDimensionEnum: type[
-        v21.enums.ValueRuleSetDimensionEnum.ValueRuleSetDimension
+        v22.enums.ValueRuleSetDimensionEnum.ValueRuleSetDimension
     ]
     VanityPharmaDisplayUrlModeEnum: type[
-        v21.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode
+        v22.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode
     ]
-    VanityPharmaTextEnum: type[v21.enums.VanityPharmaTextEnum.VanityPharmaText]
+    VanityPharmaTextEnum: type[v22.enums.VanityPharmaTextEnum.VanityPharmaText]
     VideoAdFormatRestrictionEnum: type[
-        v21.enums.VideoAdFormatRestrictionEnum.VideoAdFormatRestriction
+        v22.enums.VideoAdFormatRestrictionEnum.VideoAdFormatRestriction
     ]
     VideoAdSequenceInteractionTypeEnum: type[
-        v21.enums.VideoAdSequenceInteractionTypeEnum.VideoAdSequenceInteractionType
+        v22.enums.VideoAdSequenceInteractionTypeEnum.VideoAdSequenceInteractionType
     ]
     VideoAdSequenceMinimumDurationEnum: type[
-        v21.enums.VideoAdSequenceMinimumDurationEnum.VideoAdSequenceMinimumDuration
+        v22.enums.VideoAdSequenceMinimumDurationEnum.VideoAdSequenceMinimumDuration
     ]
-    VideoThumbnailEnum: type[v21.enums.VideoThumbnailEnum.VideoThumbnail]
+    VideoThumbnailEnum: type[v22.enums.VideoThumbnailEnum.VideoThumbnail]
     WebpageConditionOperandEnum: type[
-        v21.enums.WebpageConditionOperandEnum.WebpageConditionOperand
+        v22.enums.WebpageConditionOperandEnum.WebpageConditionOperand
     ]
     WebpageConditionOperatorEnum: type[
-        v21.enums.WebpageConditionOperatorEnum.WebpageConditionOperator
+        v22.enums.WebpageConditionOperatorEnum.WebpageConditionOperator
+    ]
+    YouTubeVideoPropertyEnum: type[
+        v22.enums.YouTubeVideoPropertyEnum.YouTubeVideoProperty
     ]
     # End of autogenerated enums
 
@@ -1165,7 +1283,7 @@ class GoogleAdsClient:
         use_proto_plus: bool = False,
         use_cloud_org_for_api_access: bool | None = None,
     ) -> None: ...
-    def get_type(cls, name: str, version: _V = "v21") -> Any: ...
+    def get_type(cls, name: str, version: _V = "v22") -> Any: ...
     # Autogenerated service overloads
     @overload
     def get_service(
@@ -2853,15 +2971,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.geo_target_constant_service.GeoTargetConstantServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["GeoTargetConstantService"]
-    ) -> google.ads.googleads.v21.services.services.geo_target_constant_service.GeoTargetConstantServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["GeoTargetConstantServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.geo_target_constant_service.GeoTargetConstantServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["GeoTargetConstantServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.geo_target_constant_service.GeoTargetConstantServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2869,15 +2979,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_asset_service.AdGroupAssetServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupAssetService"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_asset_service.AdGroupAssetServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupAssetServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_asset_service.AdGroupAssetServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupAssetServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_group_asset_service.AdGroupAssetServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2885,15 +2987,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.offline_user_data_job_service.OfflineUserDataJobServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["OfflineUserDataJobService"]
-    ) -> google.ads.googleads.v21.services.services.offline_user_data_job_service.OfflineUserDataJobServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["OfflineUserDataJobServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.offline_user_data_job_service.OfflineUserDataJobServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["OfflineUserDataJobServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.offline_user_data_job_service.OfflineUserDataJobServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2901,15 +2995,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_conversion_goal_service.CampaignConversionGoalServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignConversionGoalService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_conversion_goal_service.CampaignConversionGoalServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignConversionGoalServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_conversion_goal_service.CampaignConversionGoalServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignConversionGoalServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_conversion_goal_service.CampaignConversionGoalServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2917,15 +3003,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_user_access_service.CustomerUserAccessServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerUserAccessService"]
-    ) -> google.ads.googleads.v21.services.services.customer_user_access_service.CustomerUserAccessServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerUserAccessServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_user_access_service.CustomerUserAccessServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerUserAccessServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.customer_user_access_service.CustomerUserAccessServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2933,15 +3011,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.keyword_plan_ad_group_service.KeywordPlanAdGroupServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["KeywordPlanAdGroupService"]
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_ad_group_service.KeywordPlanAdGroupServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["KeywordPlanAdGroupServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_ad_group_service.KeywordPlanAdGroupServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["KeywordPlanAdGroupServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.keyword_plan_ad_group_service.KeywordPlanAdGroupServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2949,15 +3019,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_label_service.CampaignLabelServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignLabelService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_label_service.CampaignLabelServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignLabelServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_label_service.CampaignLabelServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignLabelServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_label_service.CampaignLabelServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2965,15 +3027,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.keyword_theme_constant_service.KeywordThemeConstantServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["KeywordThemeConstantService"]
-    ) -> google.ads.googleads.v21.services.services.keyword_theme_constant_service.KeywordThemeConstantServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["KeywordThemeConstantServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.keyword_theme_constant_service.KeywordThemeConstantServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["KeywordThemeConstantServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.keyword_theme_constant_service.KeywordThemeConstantServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2981,15 +3035,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.asset_group_signal_service.AssetGroupSignalServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AssetGroupSignalService"]
-    ) -> google.ads.googleads.v21.services.services.asset_group_signal_service.AssetGroupSignalServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AssetGroupSignalServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.asset_group_signal_service.AssetGroupSignalServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AssetGroupSignalServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.asset_group_signal_service.AssetGroupSignalServiceAsyncClient: ...
     @overload
     def get_service(
@@ -2997,15 +3043,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_bid_modifier_service.AdGroupBidModifierServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupBidModifierService"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_bid_modifier_service.AdGroupBidModifierServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupBidModifierServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_bid_modifier_service.AdGroupBidModifierServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupBidModifierServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_group_bid_modifier_service.AdGroupBidModifierServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3013,15 +3051,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_criterion_service.AdGroupCriterionServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupCriterionService"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_criterion_service.AdGroupCriterionServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupCriterionServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_criterion_service.AdGroupCriterionServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupCriterionServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_group_criterion_service.AdGroupCriterionServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3029,15 +3059,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.google_ads_service.GoogleAdsServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["GoogleAdsService"]
-    ) -> google.ads.googleads.v21.services.services.google_ads_service.GoogleAdsServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["GoogleAdsServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.google_ads_service.GoogleAdsServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["GoogleAdsServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.google_ads_service.GoogleAdsServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3045,15 +3067,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.product_link_invitation_service.ProductLinkInvitationServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ProductLinkInvitationService"]
-    ) -> google.ads.googleads.v21.services.services.product_link_invitation_service.ProductLinkInvitationServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ProductLinkInvitationServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.product_link_invitation_service.ProductLinkInvitationServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ProductLinkInvitationServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.product_link_invitation_service.ProductLinkInvitationServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3061,15 +3075,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_draft_service.CampaignDraftServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignDraftService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_draft_service.CampaignDraftServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignDraftServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_draft_service.CampaignDraftServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignDraftServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_draft_service.CampaignDraftServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3077,15 +3083,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.billing_setup_service.BillingSetupServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["BillingSetupService"]
-    ) -> google.ads.googleads.v21.services.services.billing_setup_service.BillingSetupServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["BillingSetupServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.billing_setup_service.BillingSetupServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["BillingSetupServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.billing_setup_service.BillingSetupServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3093,15 +3091,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.asset_group_service.AssetGroupServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AssetGroupService"]
-    ) -> google.ads.googleads.v21.services.services.asset_group_service.AssetGroupServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AssetGroupServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.asset_group_service.AssetGroupServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AssetGroupServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.asset_group_service.AssetGroupServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3109,15 +3099,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_shared_set_service.CampaignSharedSetServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignSharedSetService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_shared_set_service.CampaignSharedSetServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignSharedSetServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_shared_set_service.CampaignSharedSetServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignSharedSetServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_shared_set_service.CampaignSharedSetServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3125,15 +3107,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["KeywordPlanAdGroupKeywordService"]
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["KeywordPlanAdGroupKeywordServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["KeywordPlanAdGroupKeywordServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3141,15 +3115,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.shared_criterion_service.SharedCriterionServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["SharedCriterionService"]
-    ) -> google.ads.googleads.v21.services.services.shared_criterion_service.SharedCriterionServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["SharedCriterionServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.shared_criterion_service.SharedCriterionServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["SharedCriterionServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.shared_criterion_service.SharedCriterionServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3157,15 +3123,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_service.CustomerServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerService"]
-    ) -> google.ads.googleads.v21.services.services.customer_service.CustomerServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_service.CustomerServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.customer_service.CustomerServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3173,15 +3131,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.conversion_action_service.ConversionActionServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ConversionActionService"]
-    ) -> google.ads.googleads.v21.services.services.conversion_action_service.ConversionActionServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ConversionActionServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.conversion_action_service.ConversionActionServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ConversionActionServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.conversion_action_service.ConversionActionServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3189,15 +3139,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_criterion_customizer_service.AdGroupCriterionCustomizerServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupCriterionCustomizerService"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_criterion_customizer_service.AdGroupCriterionCustomizerServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupCriterionCustomizerServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_criterion_customizer_service.AdGroupCriterionCustomizerServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupCriterionCustomizerServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_group_criterion_customizer_service.AdGroupCriterionCustomizerServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3205,15 +3147,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.reach_plan_service.ReachPlanServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ReachPlanService"]
-    ) -> google.ads.googleads.v21.services.services.reach_plan_service.ReachPlanServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ReachPlanServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.reach_plan_service.ReachPlanServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ReachPlanServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.reach_plan_service.ReachPlanServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3221,15 +3155,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.user_list_service.UserListServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["UserListService"]
-    ) -> google.ads.googleads.v21.services.services.user_list_service.UserListServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["UserListServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.user_list_service.UserListServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["UserListServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.user_list_service.UserListServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3237,15 +3163,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_asset_service.CustomerAssetServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerAssetService"]
-    ) -> google.ads.googleads.v21.services.services.customer_asset_service.CustomerAssetServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerAssetServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_asset_service.CustomerAssetServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerAssetServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.customer_asset_service.CustomerAssetServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3253,15 +3171,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.conversion_upload_service.ConversionUploadServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ConversionUploadService"]
-    ) -> google.ads.googleads.v21.services.services.conversion_upload_service.ConversionUploadServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ConversionUploadServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.conversion_upload_service.ConversionUploadServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ConversionUploadServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.conversion_upload_service.ConversionUploadServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3269,15 +3179,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.payments_account_service.PaymentsAccountServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["PaymentsAccountService"]
-    ) -> google.ads.googleads.v21.services.services.payments_account_service.PaymentsAccountServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["PaymentsAccountServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.payments_account_service.PaymentsAccountServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["PaymentsAccountServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.payments_account_service.PaymentsAccountServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3285,15 +3187,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.conversion_value_rule_set_service.ConversionValueRuleSetServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ConversionValueRuleSetService"]
-    ) -> google.ads.googleads.v21.services.services.conversion_value_rule_set_service.ConversionValueRuleSetServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ConversionValueRuleSetServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.conversion_value_rule_set_service.ConversionValueRuleSetServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ConversionValueRuleSetServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.conversion_value_rule_set_service.ConversionValueRuleSetServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3301,15 +3195,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_criterion_service.CampaignCriterionServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignCriterionService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_criterion_service.CampaignCriterionServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignCriterionServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_criterion_service.CampaignCriterionServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignCriterionServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_criterion_service.CampaignCriterionServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3317,15 +3203,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_group_service.CampaignGroupServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignGroupService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_group_service.CampaignGroupServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignGroupServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_group_service.CampaignGroupServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignGroupServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_group_service.CampaignGroupServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3333,15 +3211,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_customizer_service.CampaignCustomizerServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignCustomizerService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_customizer_service.CampaignCustomizerServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignCustomizerServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_customizer_service.CampaignCustomizerServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignCustomizerServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_customizer_service.CampaignCustomizerServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3349,15 +3219,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_parameter_service.AdParameterServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdParameterService"]
-    ) -> google.ads.googleads.v21.services.services.ad_parameter_service.AdParameterServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdParameterServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_parameter_service.AdParameterServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdParameterServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_parameter_service.AdParameterServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3365,15 +3227,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.remarketing_action_service.RemarketingActionServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["RemarketingActionService"]
-    ) -> google.ads.googleads.v21.services.services.remarketing_action_service.RemarketingActionServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["RemarketingActionServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.remarketing_action_service.RemarketingActionServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["RemarketingActionServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.remarketing_action_service.RemarketingActionServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3381,15 +3235,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.bidding_strategy_service.BiddingStrategyServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["BiddingStrategyService"]
-    ) -> google.ads.googleads.v21.services.services.bidding_strategy_service.BiddingStrategyServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["BiddingStrategyServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.bidding_strategy_service.BiddingStrategyServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["BiddingStrategyServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.bidding_strategy_service.BiddingStrategyServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3397,15 +3243,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.experiment_arm_service.ExperimentArmServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ExperimentArmService"]
-    ) -> google.ads.googleads.v21.services.services.experiment_arm_service.ExperimentArmServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ExperimentArmServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.experiment_arm_service.ExperimentArmServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ExperimentArmServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.experiment_arm_service.ExperimentArmServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3413,15 +3251,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.keyword_plan_service.KeywordPlanServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["KeywordPlanService"]
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_service.KeywordPlanServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["KeywordPlanServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_service.KeywordPlanServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["KeywordPlanServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.keyword_plan_service.KeywordPlanServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3429,15 +3259,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_negative_criterion_service.CustomerNegativeCriterionServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerNegativeCriterionService"]
-    ) -> google.ads.googleads.v21.services.services.customer_negative_criterion_service.CustomerNegativeCriterionServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerNegativeCriterionServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_negative_criterion_service.CustomerNegativeCriterionServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerNegativeCriterionServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.customer_negative_criterion_service.CustomerNegativeCriterionServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3445,15 +3267,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.brand_suggestion_service.BrandSuggestionServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["BrandSuggestionService"]
-    ) -> google.ads.googleads.v21.services.services.brand_suggestion_service.BrandSuggestionServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["BrandSuggestionServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.brand_suggestion_service.BrandSuggestionServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["BrandSuggestionServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.brand_suggestion_service.BrandSuggestionServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3461,15 +3275,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_ad_service.AdGroupAdServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupAdService"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_ad_service.AdGroupAdServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupAdServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_ad_service.AdGroupAdServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupAdServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_group_ad_service.AdGroupAdServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3477,15 +3283,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.keyword_plan_idea_service.KeywordPlanIdeaServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["KeywordPlanIdeaService"]
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_idea_service.KeywordPlanIdeaServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["KeywordPlanIdeaServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_idea_service.KeywordPlanIdeaServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["KeywordPlanIdeaServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.keyword_plan_idea_service.KeywordPlanIdeaServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3493,15 +3291,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_bid_modifier_service.CampaignBidModifierServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignBidModifierService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_bid_modifier_service.CampaignBidModifierServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignBidModifierServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_bid_modifier_service.CampaignBidModifierServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignBidModifierServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_bid_modifier_service.CampaignBidModifierServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3509,15 +3299,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.product_link_service.ProductLinkServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ProductLinkService"]
-    ) -> google.ads.googleads.v21.services.services.product_link_service.ProductLinkServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ProductLinkServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.product_link_service.ProductLinkServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ProductLinkServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.product_link_service.ProductLinkServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3525,15 +3307,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.google_ads_field_service.GoogleAdsFieldServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["GoogleAdsFieldService"]
-    ) -> google.ads.googleads.v21.services.services.google_ads_field_service.GoogleAdsFieldServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["GoogleAdsFieldServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.google_ads_field_service.GoogleAdsFieldServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["GoogleAdsFieldServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.google_ads_field_service.GoogleAdsFieldServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3541,15 +3315,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["KeywordPlanCampaignKeywordService"]
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["KeywordPlanCampaignKeywordServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["KeywordPlanCampaignKeywordServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3557,15 +3323,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_label_service.AdGroupLabelServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupLabelService"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_label_service.AdGroupLabelServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupLabelServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_label_service.AdGroupLabelServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupLabelServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_group_label_service.AdGroupLabelServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3573,15 +3331,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.content_creator_insights_service.ContentCreatorInsightsServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ContentCreatorInsightsService"]
-    ) -> google.ads.googleads.v21.services.services.content_creator_insights_service.ContentCreatorInsightsServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ContentCreatorInsightsServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.content_creator_insights_service.ContentCreatorInsightsServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ContentCreatorInsightsServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.content_creator_insights_service.ContentCreatorInsightsServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3589,15 +3339,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_lifecycle_goal_service.CampaignLifecycleGoalServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignLifecycleGoalService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_lifecycle_goal_service.CampaignLifecycleGoalServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignLifecycleGoalServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_lifecycle_goal_service.CampaignLifecycleGoalServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignLifecycleGoalServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_lifecycle_goal_service.CampaignLifecycleGoalServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3605,23 +3347,11 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.smart_campaign_suggest_service.SmartCampaignSuggestServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["SmartCampaignSuggestService"]
-    ) -> google.ads.googleads.v21.services.services.smart_campaign_suggest_service.SmartCampaignSuggestServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["SmartCampaignSuggestServiceAsync"], version: _V21
     ) -> google.ads.googleads.v21.services.services.smart_campaign_suggest_service.SmartCampaignSuggestServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["SmartCampaignSuggestServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.smart_campaign_suggest_service.SmartCampaignSuggestServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AutomaticallyCreatedAssetRemovalService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.automatically_created_asset_removal_service.AutomaticallyCreatedAssetRemovalServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AutomaticallyCreatedAssetRemovalService"]
     ) -> google.ads.googleads.v21.services.services.automatically_created_asset_removal_service.AutomaticallyCreatedAssetRemovalServiceClient: ...
     @overload
     def get_service(
@@ -3631,15 +3361,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.automatically_created_asset_removal_service.AutomaticallyCreatedAssetRemovalServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AutomaticallyCreatedAssetRemovalServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.automatically_created_asset_removal_service.AutomaticallyCreatedAssetRemovalServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignAssetService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_asset_service.CampaignAssetServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignAssetService"]
     ) -> google.ads.googleads.v21.services.services.campaign_asset_service.CampaignAssetServiceClient: ...
     @overload
     def get_service(
@@ -3647,15 +3369,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_asset_service.CampaignAssetServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignAssetServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.campaign_asset_service.CampaignAssetServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupAssetSetService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_asset_set_service.AdGroupAssetSetServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupAssetSetService"]
     ) -> google.ads.googleads.v21.services.services.ad_group_asset_set_service.AdGroupAssetSetServiceClient: ...
     @overload
     def get_service(
@@ -3663,23 +3377,11 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_asset_set_service.AdGroupAssetSetServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupAssetSetServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_asset_set_service.AdGroupAssetSetServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignBudgetService"], version: _V21
     ) -> google.ads.googleads.v21.services.services.campaign_budget_service.CampaignBudgetServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignBudgetService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_budget_service.CampaignBudgetServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignBudgetServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_budget_service.CampaignBudgetServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignBudgetServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_budget_service.CampaignBudgetServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3689,17 +3391,7 @@ class GoogleAdsClient:
     ): ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupService"]
-    ) -> (
-        google.ads.googleads.v21.services.services.ad_group_service.AdGroupServiceClient
-    ): ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_service.AdGroupServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_group_service.AdGroupServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3707,15 +3399,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_label_service.CustomerLabelServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerLabelService"]
-    ) -> google.ads.googleads.v21.services.services.customer_label_service.CustomerLabelServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerLabelServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_label_service.CustomerLabelServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerLabelServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.customer_label_service.CustomerLabelServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3723,15 +3407,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.recommendation_service.RecommendationServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["RecommendationService"]
-    ) -> google.ads.googleads.v21.services.services.recommendation_service.RecommendationServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["RecommendationServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.recommendation_service.RecommendationServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["RecommendationServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.recommendation_service.RecommendationServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3739,15 +3415,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.recommendation_subscription_service.RecommendationSubscriptionServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["RecommendationSubscriptionService"]
-    ) -> google.ads.googleads.v21.services.services.recommendation_subscription_service.RecommendationSubscriptionServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["RecommendationSubscriptionServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.recommendation_subscription_service.RecommendationSubscriptionServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["RecommendationSubscriptionServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.recommendation_subscription_service.RecommendationSubscriptionServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3755,15 +3423,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.conversion_custom_variable_service.ConversionCustomVariableServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ConversionCustomVariableService"]
-    ) -> google.ads.googleads.v21.services.services.conversion_custom_variable_service.ConversionCustomVariableServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ConversionCustomVariableServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.conversion_custom_variable_service.ConversionCustomVariableServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ConversionCustomVariableServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.conversion_custom_variable_service.ConversionCustomVariableServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3771,15 +3431,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_asset_set_service.CampaignAssetSetServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignAssetSetService"]
-    ) -> google.ads.googleads.v21.services.services.campaign_asset_set_service.CampaignAssetSetServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignAssetSetServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_asset_set_service.CampaignAssetSetServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignAssetSetServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.campaign_asset_set_service.CampaignAssetSetServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3787,15 +3439,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.conversion_value_rule_service.ConversionValueRuleServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["ConversionValueRuleService"]
-    ) -> google.ads.googleads.v21.services.services.conversion_value_rule_service.ConversionValueRuleServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ConversionValueRuleServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.conversion_value_rule_service.ConversionValueRuleServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ConversionValueRuleServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.conversion_value_rule_service.ConversionValueRuleServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3803,15 +3447,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_customizer_service.AdGroupCustomizerServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupCustomizerService"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_customizer_service.AdGroupCustomizerServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupCustomizerServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_customizer_service.AdGroupCustomizerServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupCustomizerServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.ad_group_customizer_service.AdGroupCustomizerServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3819,15 +3455,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_customizer_service.CustomerCustomizerServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerCustomizerService"]
-    ) -> google.ads.googleads.v21.services.services.customer_customizer_service.CustomerCustomizerServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerCustomizerServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_customizer_service.CustomerCustomizerServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerCustomizerServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.customer_customizer_service.CustomerCustomizerServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3835,15 +3463,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.asset_group_asset_service.AssetGroupAssetServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AssetGroupAssetService"]
-    ) -> google.ads.googleads.v21.services.services.asset_group_asset_service.AssetGroupAssetServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AssetGroupAssetServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.asset_group_asset_service.AssetGroupAssetServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AssetGroupAssetServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.asset_group_asset_service.AssetGroupAssetServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3851,15 +3471,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.custom_interest_service.CustomInterestServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomInterestService"]
-    ) -> google.ads.googleads.v21.services.services.custom_interest_service.CustomInterestServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomInterestServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.custom_interest_service.CustomInterestServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomInterestServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.custom_interest_service.CustomInterestServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3867,15 +3479,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.account_link_service.AccountLinkServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AccountLinkService"]
-    ) -> google.ads.googleads.v21.services.services.account_link_service.AccountLinkServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AccountLinkServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.account_link_service.AccountLinkServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AccountLinkServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.account_link_service.AccountLinkServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3883,15 +3487,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.account_budget_proposal_service.AccountBudgetProposalServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AccountBudgetProposalService"]
-    ) -> google.ads.googleads.v21.services.services.account_budget_proposal_service.AccountBudgetProposalServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AccountBudgetProposalServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.account_budget_proposal_service.AccountBudgetProposalServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AccountBudgetProposalServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.account_budget_proposal_service.AccountBudgetProposalServiceAsyncClient: ...
     @overload
     def get_service(
@@ -3899,25 +3495,11 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.user_data_service.UserDataServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["UserDataService"]
-    ) -> google.ads.googleads.v21.services.services.user_data_service.UserDataServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["UserDataServiceAsync"], version: _V21
     ) -> google.ads.googleads.v21.services.services.user_data_service.UserDataServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["UserDataServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.user_data_service.UserDataServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AssetService"], version: _V21
-    ) -> (
-        google.ads.googleads.v21.services.services.asset_service.AssetServiceClient
-    ): ...
-    @overload
-    def get_service(
-        self, name: Literal["AssetService"]
     ) -> (
         google.ads.googleads.v21.services.services.asset_service.AssetServiceClient
     ): ...
@@ -3929,19 +3511,9 @@ class GoogleAdsClient:
     ): ...
     @overload
     def get_service(
-        self, name: Literal["AssetServiceAsync"]
-    ) -> (
-        google.ads.googleads.v21.services.services.asset_service.AssetServiceAsyncClient
-    ): ...
-    @overload
-    def get_service(
         self,
         name: Literal["CustomerSkAdNetworkConversionValueSchemaService"],
         version: _V21,
-    ) -> google.ads.googleads.v21.services.services.customer_sk_ad_network_conversion_value_schema_service.CustomerSkAdNetworkConversionValueSchemaServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerSkAdNetworkConversionValueSchemaService"]
     ) -> google.ads.googleads.v21.services.services.customer_sk_ad_network_conversion_value_schema_service.CustomerSkAdNetworkConversionValueSchemaServiceClient: ...
     @overload
     def get_service(
@@ -3951,15 +3523,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_sk_ad_network_conversion_value_schema_service.CustomerSkAdNetworkConversionValueSchemaServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerSkAdNetworkConversionValueSchemaServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.customer_sk_ad_network_conversion_value_schema_service.CustomerSkAdNetworkConversionValueSchemaServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerUserAccessInvitationService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_user_access_invitation_service.CustomerUserAccessInvitationServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerUserAccessInvitationService"]
     ) -> google.ads.googleads.v21.services.services.customer_user_access_invitation_service.CustomerUserAccessInvitationServiceClient: ...
     @overload
     def get_service(
@@ -3967,15 +3531,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_user_access_invitation_service.CustomerUserAccessInvitationServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerUserAccessInvitationServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.customer_user_access_invitation_service.CustomerUserAccessInvitationServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["SmartCampaignSettingService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.smart_campaign_setting_service.SmartCampaignSettingServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["SmartCampaignSettingService"]
     ) -> google.ads.googleads.v21.services.services.smart_campaign_setting_service.SmartCampaignSettingServiceClient: ...
     @overload
     def get_service(
@@ -3983,15 +3539,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.smart_campaign_setting_service.SmartCampaignSettingServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["SmartCampaignSettingServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.smart_campaign_setting_service.SmartCampaignSettingServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CampaignService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.campaign_service.CampaignServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CampaignService"]
     ) -> google.ads.googleads.v21.services.services.campaign_service.CampaignServiceClient: ...
     @overload
     def get_service(
@@ -3999,15 +3547,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.campaign_service.CampaignServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CampaignServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.campaign_service.CampaignServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ShareablePreviewService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.shareable_preview_service.ShareablePreviewServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ShareablePreviewService"]
     ) -> google.ads.googleads.v21.services.services.shareable_preview_service.ShareablePreviewServiceClient: ...
     @overload
     def get_service(
@@ -4015,15 +3555,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.shareable_preview_service.ShareablePreviewServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["ShareablePreviewServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.shareable_preview_service.ShareablePreviewServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["IdentityVerificationService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.identity_verification_service.IdentityVerificationServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["IdentityVerificationService"]
     ) -> google.ads.googleads.v21.services.services.identity_verification_service.IdentityVerificationServiceClient: ...
     @overload
     def get_service(
@@ -4031,15 +3563,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.identity_verification_service.IdentityVerificationServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["IdentityVerificationServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.identity_verification_service.IdentityVerificationServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerLifecycleGoalService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_lifecycle_goal_service.CustomerLifecycleGoalServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerLifecycleGoalService"]
     ) -> google.ads.googleads.v21.services.services.customer_lifecycle_goal_service.CustomerLifecycleGoalServiceClient: ...
     @overload
     def get_service(
@@ -4047,15 +3571,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_lifecycle_goal_service.CustomerLifecycleGoalServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerLifecycleGoalServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.customer_lifecycle_goal_service.CustomerLifecycleGoalServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupAdLabelService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_ad_label_service.AdGroupAdLabelServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupAdLabelService"]
     ) -> google.ads.googleads.v21.services.services.ad_group_ad_label_service.AdGroupAdLabelServiceClient: ...
     @overload
     def get_service(
@@ -4063,15 +3579,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_ad_label_service.AdGroupAdLabelServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupAdLabelServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_ad_label_service.AdGroupAdLabelServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AdService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_service.AdServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdService"]
     ) -> google.ads.googleads.v21.services.services.ad_service.AdServiceClient: ...
     @overload
     def get_service(
@@ -4079,15 +3587,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_service.AdServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.ad_service.AdServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerManagerLinkService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_manager_link_service.CustomerManagerLinkServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerManagerLinkService"]
     ) -> google.ads.googleads.v21.services.services.customer_manager_link_service.CustomerManagerLinkServiceClient: ...
     @overload
     def get_service(
@@ -4095,15 +3595,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_manager_link_service.CustomerManagerLinkServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerManagerLinkServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.customer_manager_link_service.CustomerManagerLinkServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AssetGroupListingGroupFilterService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.asset_group_listing_group_filter_service.AssetGroupListingGroupFilterServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AssetGroupListingGroupFilterService"]
     ) -> google.ads.googleads.v21.services.services.asset_group_listing_group_filter_service.AssetGroupListingGroupFilterServiceClient: ...
     @overload
     def get_service(
@@ -4111,15 +3603,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.asset_group_listing_group_filter_service.AssetGroupListingGroupFilterServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AssetGroupListingGroupFilterServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.asset_group_listing_group_filter_service.AssetGroupListingGroupFilterServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["UserListCustomerTypeService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.user_list_customer_type_service.UserListCustomerTypeServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["UserListCustomerTypeService"]
     ) -> google.ads.googleads.v21.services.services.user_list_customer_type_service.UserListCustomerTypeServiceClient: ...
     @overload
     def get_service(
@@ -4127,15 +3611,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.user_list_customer_type_service.UserListCustomerTypeServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["UserListCustomerTypeServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.user_list_customer_type_service.UserListCustomerTypeServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["BiddingSeasonalityAdjustmentService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["BiddingSeasonalityAdjustmentService"]
     ) -> google.ads.googleads.v21.services.services.bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentServiceClient: ...
     @overload
     def get_service(
@@ -4143,15 +3619,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["BiddingSeasonalityAdjustmentServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ConversionGoalCampaignConfigService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.conversion_goal_campaign_config_service.ConversionGoalCampaignConfigServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ConversionGoalCampaignConfigService"]
     ) -> google.ads.googleads.v21.services.services.conversion_goal_campaign_config_service.ConversionGoalCampaignConfigServiceClient: ...
     @overload
     def get_service(
@@ -4159,15 +3627,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.conversion_goal_campaign_config_service.ConversionGoalCampaignConfigServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["ConversionGoalCampaignConfigServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.conversion_goal_campaign_config_service.ConversionGoalCampaignConfigServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["BiddingDataExclusionService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.bidding_data_exclusion_service.BiddingDataExclusionServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["BiddingDataExclusionService"]
     ) -> google.ads.googleads.v21.services.services.bidding_data_exclusion_service.BiddingDataExclusionServiceClient: ...
     @overload
     def get_service(
@@ -4175,15 +3635,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.bidding_data_exclusion_service.BiddingDataExclusionServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["BiddingDataExclusionServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.bidding_data_exclusion_service.BiddingDataExclusionServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AudienceService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.audience_service.AudienceServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AudienceService"]
     ) -> google.ads.googleads.v21.services.services.audience_service.AudienceServiceClient: ...
     @overload
     def get_service(
@@ -4191,15 +3643,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.audience_service.AudienceServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AudienceServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.audience_service.AudienceServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerClientLinkService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_client_link_service.CustomerClientLinkServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerClientLinkService"]
     ) -> google.ads.googleads.v21.services.services.customer_client_link_service.CustomerClientLinkServiceClient: ...
     @overload
     def get_service(
@@ -4207,15 +3651,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_client_link_service.CustomerClientLinkServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerClientLinkServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.customer_client_link_service.CustomerClientLinkServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AssetSetService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.asset_set_service.AssetSetServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AssetSetService"]
     ) -> google.ads.googleads.v21.services.services.asset_set_service.AssetSetServiceClient: ...
     @overload
     def get_service(
@@ -4223,15 +3659,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.asset_set_service.AssetSetServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AssetSetServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.asset_set_service.AssetSetServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomConversionGoalService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.custom_conversion_goal_service.CustomConversionGoalServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomConversionGoalService"]
     ) -> google.ads.googleads.v21.services.services.custom_conversion_goal_service.CustomConversionGoalServiceClient: ...
     @overload
     def get_service(
@@ -4239,15 +3667,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.custom_conversion_goal_service.CustomConversionGoalServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomConversionGoalServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.custom_conversion_goal_service.CustomConversionGoalServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["LocalServicesLeadService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.local_services_lead_service.LocalServicesLeadServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["LocalServicesLeadService"]
     ) -> google.ads.googleads.v21.services.services.local_services_lead_service.LocalServicesLeadServiceClient: ...
     @overload
     def get_service(
@@ -4255,15 +3675,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.local_services_lead_service.LocalServicesLeadServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["LocalServicesLeadServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.local_services_lead_service.LocalServicesLeadServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerConversionGoalService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_conversion_goal_service.CustomerConversionGoalServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerConversionGoalService"]
     ) -> google.ads.googleads.v21.services.services.customer_conversion_goal_service.CustomerConversionGoalServiceClient: ...
     @overload
     def get_service(
@@ -4271,15 +3683,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_conversion_goal_service.CustomerConversionGoalServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerConversionGoalServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.customer_conversion_goal_service.CustomerConversionGoalServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ConversionAdjustmentUploadService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.conversion_adjustment_upload_service.ConversionAdjustmentUploadServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ConversionAdjustmentUploadService"]
     ) -> google.ads.googleads.v21.services.services.conversion_adjustment_upload_service.ConversionAdjustmentUploadServiceClient: ...
     @overload
     def get_service(
@@ -4287,15 +3691,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.conversion_adjustment_upload_service.ConversionAdjustmentUploadServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["ConversionAdjustmentUploadServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.conversion_adjustment_upload_service.ConversionAdjustmentUploadServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomAudienceService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.custom_audience_service.CustomAudienceServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomAudienceService"]
     ) -> google.ads.googleads.v21.services.services.custom_audience_service.CustomAudienceServiceClient: ...
     @overload
     def get_service(
@@ -4303,15 +3699,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.custom_audience_service.CustomAudienceServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomAudienceServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.custom_audience_service.CustomAudienceServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["BatchJobService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.batch_job_service.BatchJobServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["BatchJobService"]
     ) -> google.ads.googleads.v21.services.services.batch_job_service.BatchJobServiceClient: ...
     @overload
     def get_service(
@@ -4319,15 +3707,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.batch_job_service.BatchJobServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["BatchJobServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.batch_job_service.BatchJobServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ThirdPartyAppAnalyticsLinkService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.third_party_app_analytics_link_service.ThirdPartyAppAnalyticsLinkServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ThirdPartyAppAnalyticsLinkService"]
     ) -> google.ads.googleads.v21.services.services.third_party_app_analytics_link_service.ThirdPartyAppAnalyticsLinkServiceClient: ...
     @overload
     def get_service(
@@ -4335,15 +3715,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.third_party_app_analytics_link_service.ThirdPartyAppAnalyticsLinkServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["ThirdPartyAppAnalyticsLinkServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.third_party_app_analytics_link_service.ThirdPartyAppAnalyticsLinkServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["TravelAssetSuggestionService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.travel_asset_suggestion_service.TravelAssetSuggestionServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["TravelAssetSuggestionService"]
     ) -> google.ads.googleads.v21.services.services.travel_asset_suggestion_service.TravelAssetSuggestionServiceClient: ...
     @overload
     def get_service(
@@ -4351,15 +3723,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.travel_asset_suggestion_service.TravelAssetSuggestionServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["TravelAssetSuggestionServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.travel_asset_suggestion_service.TravelAssetSuggestionServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomizerAttributeService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customizer_attribute_service.CustomizerAttributeServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomizerAttributeService"]
     ) -> google.ads.googleads.v21.services.services.customizer_attribute_service.CustomizerAttributeServiceClient: ...
     @overload
     def get_service(
@@ -4367,17 +3731,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customizer_attribute_service.CustomizerAttributeServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomizerAttributeServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.customizer_attribute_service.CustomizerAttributeServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["LabelService"], version: _V21
-    ) -> (
-        google.ads.googleads.v21.services.services.label_service.LabelServiceClient
-    ): ...
-    @overload
-    def get_service(
-        self, name: Literal["LabelService"]
     ) -> (
         google.ads.googleads.v21.services.services.label_service.LabelServiceClient
     ): ...
@@ -4389,17 +3743,7 @@ class GoogleAdsClient:
     ): ...
     @overload
     def get_service(
-        self, name: Literal["LabelServiceAsync"]
-    ) -> (
-        google.ads.googleads.v21.services.services.label_service.LabelServiceAsyncClient
-    ): ...
-    @overload
-    def get_service(
         self, name: Literal["AdGroupCriterionLabelService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.ad_group_criterion_label_service.AdGroupCriterionLabelServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AdGroupCriterionLabelService"]
     ) -> google.ads.googleads.v21.services.services.ad_group_criterion_label_service.AdGroupCriterionLabelServiceClient: ...
     @overload
     def get_service(
@@ -4407,15 +3751,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.ad_group_criterion_label_service.AdGroupCriterionLabelServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AdGroupCriterionLabelServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.ad_group_criterion_label_service.AdGroupCriterionLabelServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AudienceInsightsService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.audience_insights_service.AudienceInsightsServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AudienceInsightsService"]
     ) -> google.ads.googleads.v21.services.services.audience_insights_service.AudienceInsightsServiceClient: ...
     @overload
     def get_service(
@@ -4423,15 +3759,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.audience_insights_service.AudienceInsightsServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["AudienceInsightsServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.audience_insights_service.AudienceInsightsServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["CustomerAssetSetService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.customer_asset_set_service.CustomerAssetSetServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["CustomerAssetSetService"]
     ) -> google.ads.googleads.v21.services.services.customer_asset_set_service.CustomerAssetSetServiceClient: ...
     @overload
     def get_service(
@@ -4439,15 +3767,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.customer_asset_set_service.CustomerAssetSetServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["CustomerAssetSetServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.customer_asset_set_service.CustomerAssetSetServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["SharedSetService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.shared_set_service.SharedSetServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["SharedSetService"]
     ) -> google.ads.googleads.v21.services.services.shared_set_service.SharedSetServiceClient: ...
     @overload
     def get_service(
@@ -4455,15 +3775,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.shared_set_service.SharedSetServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["SharedSetServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.shared_set_service.SharedSetServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["DataLinkService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.data_link_service.DataLinkServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["DataLinkService"]
     ) -> google.ads.googleads.v21.services.services.data_link_service.DataLinkServiceClient: ...
     @overload
     def get_service(
@@ -4471,15 +3783,7 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.data_link_service.DataLinkServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["DataLinkServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.data_link_service.DataLinkServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["ExperimentService"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.experiment_service.ExperimentServiceClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["ExperimentService"]
     ) -> google.ads.googleads.v21.services.services.experiment_service.ExperimentServiceClient: ...
     @overload
     def get_service(
@@ -4487,23 +3791,11 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.experiment_service.ExperimentServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["ExperimentServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.experiment_service.ExperimentServiceAsyncClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AssetSetAssetService"], version: _V21
     ) -> google.ads.googleads.v21.services.services.asset_set_asset_service.AssetSetAssetServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["AssetSetAssetService"]
-    ) -> google.ads.googleads.v21.services.services.asset_set_asset_service.AssetSetAssetServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["AssetSetAssetServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.asset_set_asset_service.AssetSetAssetServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["AssetSetAssetServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.asset_set_asset_service.AssetSetAssetServiceAsyncClient: ...
     @overload
     def get_service(
@@ -4513,17 +3805,7 @@ class GoogleAdsClient:
     ): ...
     @overload
     def get_service(
-        self, name: Literal["InvoiceService"]
-    ) -> (
-        google.ads.googleads.v21.services.services.invoice_service.InvoiceServiceClient
-    ): ...
-    @overload
-    def get_service(
         self, name: Literal["InvoiceServiceAsync"], version: _V21
-    ) -> google.ads.googleads.v21.services.services.invoice_service.InvoiceServiceAsyncClient: ...
-    @overload
-    def get_service(
-        self, name: Literal["InvoiceServiceAsync"]
     ) -> google.ads.googleads.v21.services.services.invoice_service.InvoiceServiceAsyncClient: ...
     @overload
     def get_service(
@@ -4531,16 +3813,1754 @@ class GoogleAdsClient:
     ) -> google.ads.googleads.v21.services.services.keyword_plan_campaign_service.KeywordPlanCampaignServiceClient: ...
     @overload
     def get_service(
-        self, name: Literal["KeywordPlanCampaignService"]
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_campaign_service.KeywordPlanCampaignServiceClient: ...
-    @overload
-    def get_service(
         self, name: Literal["KeywordPlanCampaignServiceAsync"], version: _V21
     ) -> google.ads.googleads.v21.services.services.keyword_plan_campaign_service.KeywordPlanCampaignServiceAsyncClient: ...
     @overload
     def get_service(
-        self, name: Literal["KeywordPlanCampaignServiceAsync"]
-    ) -> google.ads.googleads.v21.services.services.keyword_plan_campaign_service.KeywordPlanCampaignServiceAsyncClient: ...
+        self, name: Literal["GeoTargetConstantService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.geo_target_constant_service.GeoTargetConstantServiceClient: ...
     @overload
-    def get_service(self, name: str, version: _V = "v21") -> Any: ...
+    def get_service(
+        self, name: Literal["GeoTargetConstantService"]
+    ) -> google.ads.googleads.v22.services.services.geo_target_constant_service.GeoTargetConstantServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GeoTargetConstantServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.geo_target_constant_service.GeoTargetConstantServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GeoTargetConstantServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.geo_target_constant_service.GeoTargetConstantServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAssetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_asset_service.AdGroupAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAssetService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_asset_service.AdGroupAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAssetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_asset_service.AdGroupAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAssetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_asset_service.AdGroupAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["OfflineUserDataJobService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.offline_user_data_job_service.OfflineUserDataJobServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["OfflineUserDataJobService"]
+    ) -> google.ads.googleads.v22.services.services.offline_user_data_job_service.OfflineUserDataJobServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["OfflineUserDataJobServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.offline_user_data_job_service.OfflineUserDataJobServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["OfflineUserDataJobServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.offline_user_data_job_service.OfflineUserDataJobServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignConversionGoalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_conversion_goal_service.CampaignConversionGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignConversionGoalService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_conversion_goal_service.CampaignConversionGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignConversionGoalServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_conversion_goal_service.CampaignConversionGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignConversionGoalServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_conversion_goal_service.CampaignConversionGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerUserAccessService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_user_access_service.CustomerUserAccessServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerUserAccessService"]
+    ) -> google.ads.googleads.v22.services.services.customer_user_access_service.CustomerUserAccessServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerUserAccessServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_user_access_service.CustomerUserAccessServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerUserAccessServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_user_access_service.CustomerUserAccessServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanAdGroupService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_ad_group_service.KeywordPlanAdGroupServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanAdGroupService"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_ad_group_service.KeywordPlanAdGroupServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanAdGroupServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_ad_group_service.KeywordPlanAdGroupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanAdGroupServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_ad_group_service.KeywordPlanAdGroupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignLabelService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_label_service.CampaignLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignLabelService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_label_service.CampaignLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignLabelServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_label_service.CampaignLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignLabelServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_label_service.CampaignLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordThemeConstantService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_theme_constant_service.KeywordThemeConstantServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordThemeConstantService"]
+    ) -> google.ads.googleads.v22.services.services.keyword_theme_constant_service.KeywordThemeConstantServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordThemeConstantServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_theme_constant_service.KeywordThemeConstantServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordThemeConstantServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.keyword_theme_constant_service.KeywordThemeConstantServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupSignalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_group_signal_service.AssetGroupSignalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupSignalService"]
+    ) -> google.ads.googleads.v22.services.services.asset_group_signal_service.AssetGroupSignalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupSignalServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_group_signal_service.AssetGroupSignalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupSignalServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.asset_group_signal_service.AssetGroupSignalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupBidModifierService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_bid_modifier_service.AdGroupBidModifierServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupBidModifierService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_bid_modifier_service.AdGroupBidModifierServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupBidModifierServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_bid_modifier_service.AdGroupBidModifierServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupBidModifierServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_bid_modifier_service.AdGroupBidModifierServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_service.AdGroupCriterionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_service.AdGroupCriterionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_service.AdGroupCriterionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_service.AdGroupCriterionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.goal_service.GoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoalService"]
+    ) -> google.ads.googleads.v22.services.services.goal_service.GoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoalServiceAsync"], version: _V22
+    ) -> (
+        google.ads.googleads.v22.services.services.goal_service.GoalServiceAsyncClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["GoalServiceAsync"]
+    ) -> (
+        google.ads.googleads.v22.services.services.goal_service.GoalServiceAsyncClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.google_ads_service.GoogleAdsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsService"]
+    ) -> google.ads.googleads.v22.services.services.google_ads_service.GoogleAdsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.google_ads_service.GoogleAdsServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.google_ads_service.GoogleAdsServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ProductLinkInvitationService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.product_link_invitation_service.ProductLinkInvitationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ProductLinkInvitationService"]
+    ) -> google.ads.googleads.v22.services.services.product_link_invitation_service.ProductLinkInvitationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ProductLinkInvitationServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.product_link_invitation_service.ProductLinkInvitationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ProductLinkInvitationServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.product_link_invitation_service.ProductLinkInvitationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignDraftService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_draft_service.CampaignDraftServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignDraftService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_draft_service.CampaignDraftServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignDraftServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_draft_service.CampaignDraftServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignDraftServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_draft_service.CampaignDraftServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BillingSetupService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.billing_setup_service.BillingSetupServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BillingSetupService"]
+    ) -> google.ads.googleads.v22.services.services.billing_setup_service.BillingSetupServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BillingSetupServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.billing_setup_service.BillingSetupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BillingSetupServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.billing_setup_service.BillingSetupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_group_service.AssetGroupServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupService"]
+    ) -> google.ads.googleads.v22.services.services.asset_group_service.AssetGroupServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_group_service.AssetGroupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.asset_group_service.AssetGroupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignSharedSetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_shared_set_service.CampaignSharedSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignSharedSetService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_shared_set_service.CampaignSharedSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignSharedSetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_shared_set_service.CampaignSharedSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignSharedSetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_shared_set_service.CampaignSharedSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanAdGroupKeywordService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanAdGroupKeywordService"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanAdGroupKeywordServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanAdGroupKeywordServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SharedCriterionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.shared_criterion_service.SharedCriterionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SharedCriterionService"]
+    ) -> google.ads.googleads.v22.services.services.shared_criterion_service.SharedCriterionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SharedCriterionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.shared_criterion_service.SharedCriterionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SharedCriterionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.shared_criterion_service.SharedCriterionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_service.CustomerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerService"]
+    ) -> google.ads.googleads.v22.services.services.customer_service.CustomerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_service.CustomerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_service.CustomerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionActionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_action_service.ConversionActionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionActionService"]
+    ) -> google.ads.googleads.v22.services.services.conversion_action_service.ConversionActionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionActionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_action_service.ConversionActionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionActionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.conversion_action_service.ConversionActionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionCustomizerService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_customizer_service.AdGroupCriterionCustomizerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionCustomizerService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_customizer_service.AdGroupCriterionCustomizerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionCustomizerServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_customizer_service.AdGroupCriterionCustomizerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionCustomizerServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_customizer_service.AdGroupCriterionCustomizerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ReachPlanService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.reach_plan_service.ReachPlanServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ReachPlanService"]
+    ) -> google.ads.googleads.v22.services.services.reach_plan_service.ReachPlanServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ReachPlanServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.reach_plan_service.ReachPlanServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ReachPlanServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.reach_plan_service.ReachPlanServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserListService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.user_list_service.UserListServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserListService"]
+    ) -> google.ads.googleads.v22.services.services.user_list_service.UserListServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserListServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.user_list_service.UserListServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserListServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.user_list_service.UserListServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerAssetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_asset_service.CustomerAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerAssetService"]
+    ) -> google.ads.googleads.v22.services.services.customer_asset_service.CustomerAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerAssetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_asset_service.CustomerAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerAssetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_asset_service.CustomerAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionUploadService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_upload_service.ConversionUploadServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionUploadService"]
+    ) -> google.ads.googleads.v22.services.services.conversion_upload_service.ConversionUploadServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionUploadServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_upload_service.ConversionUploadServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionUploadServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.conversion_upload_service.ConversionUploadServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["PaymentsAccountService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.payments_account_service.PaymentsAccountServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["PaymentsAccountService"]
+    ) -> google.ads.googleads.v22.services.services.payments_account_service.PaymentsAccountServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["PaymentsAccountServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.payments_account_service.PaymentsAccountServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["PaymentsAccountServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.payments_account_service.PaymentsAccountServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionValueRuleSetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_value_rule_set_service.ConversionValueRuleSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionValueRuleSetService"]
+    ) -> google.ads.googleads.v22.services.services.conversion_value_rule_set_service.ConversionValueRuleSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionValueRuleSetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_value_rule_set_service.ConversionValueRuleSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionValueRuleSetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.conversion_value_rule_set_service.ConversionValueRuleSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignCriterionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_criterion_service.CampaignCriterionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignCriterionService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_criterion_service.CampaignCriterionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignCriterionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_criterion_service.CampaignCriterionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignCriterionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_criterion_service.CampaignCriterionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignGroupService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_group_service.CampaignGroupServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignGroupService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_group_service.CampaignGroupServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignGroupServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_group_service.CampaignGroupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignGroupServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_group_service.CampaignGroupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignCustomizerService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_customizer_service.CampaignCustomizerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignCustomizerService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_customizer_service.CampaignCustomizerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignCustomizerServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_customizer_service.CampaignCustomizerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignCustomizerServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_customizer_service.CampaignCustomizerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdParameterService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_parameter_service.AdParameterServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdParameterService"]
+    ) -> google.ads.googleads.v22.services.services.ad_parameter_service.AdParameterServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdParameterServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_parameter_service.AdParameterServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdParameterServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_parameter_service.AdParameterServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RemarketingActionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.remarketing_action_service.RemarketingActionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RemarketingActionService"]
+    ) -> google.ads.googleads.v22.services.services.remarketing_action_service.RemarketingActionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RemarketingActionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.remarketing_action_service.RemarketingActionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RemarketingActionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.remarketing_action_service.RemarketingActionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingStrategyService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.bidding_strategy_service.BiddingStrategyServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingStrategyService"]
+    ) -> google.ads.googleads.v22.services.services.bidding_strategy_service.BiddingStrategyServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingStrategyServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.bidding_strategy_service.BiddingStrategyServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingStrategyServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.bidding_strategy_service.BiddingStrategyServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ExperimentArmService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.experiment_arm_service.ExperimentArmServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ExperimentArmService"]
+    ) -> google.ads.googleads.v22.services.services.experiment_arm_service.ExperimentArmServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ExperimentArmServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.experiment_arm_service.ExperimentArmServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ExperimentArmServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.experiment_arm_service.ExperimentArmServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_service.KeywordPlanServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanService"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_service.KeywordPlanServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_service.KeywordPlanServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_service.KeywordPlanServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerNegativeCriterionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_negative_criterion_service.CustomerNegativeCriterionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerNegativeCriterionService"]
+    ) -> google.ads.googleads.v22.services.services.customer_negative_criterion_service.CustomerNegativeCriterionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerNegativeCriterionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_negative_criterion_service.CustomerNegativeCriterionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerNegativeCriterionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_negative_criterion_service.CustomerNegativeCriterionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BrandSuggestionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.brand_suggestion_service.BrandSuggestionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BrandSuggestionService"]
+    ) -> google.ads.googleads.v22.services.services.brand_suggestion_service.BrandSuggestionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BrandSuggestionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.brand_suggestion_service.BrandSuggestionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BrandSuggestionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.brand_suggestion_service.BrandSuggestionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAdService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_ad_service.AdGroupAdServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAdService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_ad_service.AdGroupAdServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAdServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_ad_service.AdGroupAdServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAdServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_ad_service.AdGroupAdServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanIdeaService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_idea_service.KeywordPlanIdeaServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanIdeaService"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_idea_service.KeywordPlanIdeaServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanIdeaServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_idea_service.KeywordPlanIdeaServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanIdeaServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_idea_service.KeywordPlanIdeaServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignBidModifierService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_bid_modifier_service.CampaignBidModifierServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignBidModifierService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_bid_modifier_service.CampaignBidModifierServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignBidModifierServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_bid_modifier_service.CampaignBidModifierServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignBidModifierServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_bid_modifier_service.CampaignBidModifierServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ProductLinkService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.product_link_service.ProductLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ProductLinkService"]
+    ) -> google.ads.googleads.v22.services.services.product_link_service.ProductLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ProductLinkServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.product_link_service.ProductLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ProductLinkServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.product_link_service.ProductLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsFieldService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.google_ads_field_service.GoogleAdsFieldServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsFieldService"]
+    ) -> google.ads.googleads.v22.services.services.google_ads_field_service.GoogleAdsFieldServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsFieldServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.google_ads_field_service.GoogleAdsFieldServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["GoogleAdsFieldServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.google_ads_field_service.GoogleAdsFieldServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanCampaignKeywordService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanCampaignKeywordService"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanCampaignKeywordServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanCampaignKeywordServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupLabelService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_label_service.AdGroupLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupLabelService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_label_service.AdGroupLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupLabelServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_label_service.AdGroupLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupLabelServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_label_service.AdGroupLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ContentCreatorInsightsService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.content_creator_insights_service.ContentCreatorInsightsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ContentCreatorInsightsService"]
+    ) -> google.ads.googleads.v22.services.services.content_creator_insights_service.ContentCreatorInsightsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ContentCreatorInsightsServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.content_creator_insights_service.ContentCreatorInsightsServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ContentCreatorInsightsServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.content_creator_insights_service.ContentCreatorInsightsServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignLifecycleGoalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_lifecycle_goal_service.CampaignLifecycleGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignLifecycleGoalService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_lifecycle_goal_service.CampaignLifecycleGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignLifecycleGoalServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_lifecycle_goal_service.CampaignLifecycleGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignLifecycleGoalServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_lifecycle_goal_service.CampaignLifecycleGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SmartCampaignSuggestService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.smart_campaign_suggest_service.SmartCampaignSuggestServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SmartCampaignSuggestService"]
+    ) -> google.ads.googleads.v22.services.services.smart_campaign_suggest_service.SmartCampaignSuggestServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SmartCampaignSuggestServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.smart_campaign_suggest_service.SmartCampaignSuggestServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SmartCampaignSuggestServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.smart_campaign_suggest_service.SmartCampaignSuggestServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AutomaticallyCreatedAssetRemovalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.automatically_created_asset_removal_service.AutomaticallyCreatedAssetRemovalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AutomaticallyCreatedAssetRemovalService"]
+    ) -> google.ads.googleads.v22.services.services.automatically_created_asset_removal_service.AutomaticallyCreatedAssetRemovalServiceClient: ...
+    @overload
+    def get_service(
+        self,
+        name: Literal["AutomaticallyCreatedAssetRemovalServiceAsync"],
+        version: _V22,
+    ) -> google.ads.googleads.v22.services.services.automatically_created_asset_removal_service.AutomaticallyCreatedAssetRemovalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AutomaticallyCreatedAssetRemovalServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.automatically_created_asset_removal_service.AutomaticallyCreatedAssetRemovalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignAssetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_asset_service.CampaignAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignAssetService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_asset_service.CampaignAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignAssetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_asset_service.CampaignAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignAssetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_asset_service.CampaignAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAssetSetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_asset_set_service.AdGroupAssetSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAssetSetService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_asset_set_service.AdGroupAssetSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAssetSetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_asset_set_service.AdGroupAssetSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAssetSetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_asset_set_service.AdGroupAssetSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignBudgetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_budget_service.CampaignBudgetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignBudgetService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_budget_service.CampaignBudgetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignBudgetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_budget_service.CampaignBudgetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignBudgetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_budget_service.CampaignBudgetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupService"], version: _V22
+    ) -> (
+        google.ads.googleads.v22.services.services.ad_group_service.AdGroupServiceClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupService"]
+    ) -> (
+        google.ads.googleads.v22.services.services.ad_group_service.AdGroupServiceClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_service.AdGroupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_service.AdGroupServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerLabelService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_label_service.CustomerLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerLabelService"]
+    ) -> google.ads.googleads.v22.services.services.customer_label_service.CustomerLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerLabelServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_label_service.CustomerLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerLabelServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_label_service.CustomerLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RecommendationService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.recommendation_service.RecommendationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RecommendationService"]
+    ) -> google.ads.googleads.v22.services.services.recommendation_service.RecommendationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RecommendationServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.recommendation_service.RecommendationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RecommendationServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.recommendation_service.RecommendationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RecommendationSubscriptionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.recommendation_subscription_service.RecommendationSubscriptionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RecommendationSubscriptionService"]
+    ) -> google.ads.googleads.v22.services.services.recommendation_subscription_service.RecommendationSubscriptionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RecommendationSubscriptionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.recommendation_subscription_service.RecommendationSubscriptionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["RecommendationSubscriptionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.recommendation_subscription_service.RecommendationSubscriptionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionCustomVariableService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_custom_variable_service.ConversionCustomVariableServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionCustomVariableService"]
+    ) -> google.ads.googleads.v22.services.services.conversion_custom_variable_service.ConversionCustomVariableServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionCustomVariableServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_custom_variable_service.ConversionCustomVariableServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionCustomVariableServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.conversion_custom_variable_service.ConversionCustomVariableServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignAssetSetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_asset_set_service.CampaignAssetSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignAssetSetService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_asset_set_service.CampaignAssetSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignAssetSetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_asset_set_service.CampaignAssetSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignAssetSetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_asset_set_service.CampaignAssetSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionValueRuleService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_value_rule_service.ConversionValueRuleServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionValueRuleService"]
+    ) -> google.ads.googleads.v22.services.services.conversion_value_rule_service.ConversionValueRuleServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionValueRuleServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_value_rule_service.ConversionValueRuleServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionValueRuleServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.conversion_value_rule_service.ConversionValueRuleServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCustomizerService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_customizer_service.AdGroupCustomizerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCustomizerService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_customizer_service.AdGroupCustomizerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCustomizerServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_customizer_service.AdGroupCustomizerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCustomizerServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_customizer_service.AdGroupCustomizerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerCustomizerService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_customizer_service.CustomerCustomizerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerCustomizerService"]
+    ) -> google.ads.googleads.v22.services.services.customer_customizer_service.CustomerCustomizerServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerCustomizerServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_customizer_service.CustomerCustomizerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerCustomizerServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_customizer_service.CustomerCustomizerServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupAssetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_group_asset_service.AssetGroupAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupAssetService"]
+    ) -> google.ads.googleads.v22.services.services.asset_group_asset_service.AssetGroupAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupAssetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_group_asset_service.AssetGroupAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupAssetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.asset_group_asset_service.AssetGroupAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomInterestService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.custom_interest_service.CustomInterestServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomInterestService"]
+    ) -> google.ads.googleads.v22.services.services.custom_interest_service.CustomInterestServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomInterestServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.custom_interest_service.CustomInterestServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomInterestServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.custom_interest_service.CustomInterestServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AccountLinkService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.account_link_service.AccountLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AccountLinkService"]
+    ) -> google.ads.googleads.v22.services.services.account_link_service.AccountLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AccountLinkServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.account_link_service.AccountLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AccountLinkServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.account_link_service.AccountLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AccountBudgetProposalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.account_budget_proposal_service.AccountBudgetProposalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AccountBudgetProposalService"]
+    ) -> google.ads.googleads.v22.services.services.account_budget_proposal_service.AccountBudgetProposalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AccountBudgetProposalServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.account_budget_proposal_service.AccountBudgetProposalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AccountBudgetProposalServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.account_budget_proposal_service.AccountBudgetProposalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserDataService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.user_data_service.UserDataServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserDataService"]
+    ) -> google.ads.googleads.v22.services.services.user_data_service.UserDataServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserDataServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.user_data_service.UserDataServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserDataServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.user_data_service.UserDataServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetService"], version: _V22
+    ) -> (
+        google.ads.googleads.v22.services.services.asset_service.AssetServiceClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetService"]
+    ) -> (
+        google.ads.googleads.v22.services.services.asset_service.AssetServiceClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetServiceAsync"], version: _V22
+    ) -> (
+        google.ads.googleads.v22.services.services.asset_service.AssetServiceAsyncClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetServiceAsync"]
+    ) -> (
+        google.ads.googleads.v22.services.services.asset_service.AssetServiceAsyncClient
+    ): ...
+    @overload
+    def get_service(
+        self,
+        name: Literal["CustomerSkAdNetworkConversionValueSchemaService"],
+        version: _V22,
+    ) -> google.ads.googleads.v22.services.services.customer_sk_ad_network_conversion_value_schema_service.CustomerSkAdNetworkConversionValueSchemaServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerSkAdNetworkConversionValueSchemaService"]
+    ) -> google.ads.googleads.v22.services.services.customer_sk_ad_network_conversion_value_schema_service.CustomerSkAdNetworkConversionValueSchemaServiceClient: ...
+    @overload
+    def get_service(
+        self,
+        name: Literal["CustomerSkAdNetworkConversionValueSchemaServiceAsync"],
+        version: _V22,
+    ) -> google.ads.googleads.v22.services.services.customer_sk_ad_network_conversion_value_schema_service.CustomerSkAdNetworkConversionValueSchemaServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerSkAdNetworkConversionValueSchemaServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_sk_ad_network_conversion_value_schema_service.CustomerSkAdNetworkConversionValueSchemaServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerUserAccessInvitationService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_user_access_invitation_service.CustomerUserAccessInvitationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerUserAccessInvitationService"]
+    ) -> google.ads.googleads.v22.services.services.customer_user_access_invitation_service.CustomerUserAccessInvitationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerUserAccessInvitationServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_user_access_invitation_service.CustomerUserAccessInvitationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerUserAccessInvitationServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_user_access_invitation_service.CustomerUserAccessInvitationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SmartCampaignSettingService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.smart_campaign_setting_service.SmartCampaignSettingServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SmartCampaignSettingService"]
+    ) -> google.ads.googleads.v22.services.services.smart_campaign_setting_service.SmartCampaignSettingServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SmartCampaignSettingServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.smart_campaign_setting_service.SmartCampaignSettingServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SmartCampaignSettingServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.smart_campaign_setting_service.SmartCampaignSettingServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_service.CampaignServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_service.CampaignServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_service.CampaignServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_service.CampaignServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ShareablePreviewService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.shareable_preview_service.ShareablePreviewServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ShareablePreviewService"]
+    ) -> google.ads.googleads.v22.services.services.shareable_preview_service.ShareablePreviewServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ShareablePreviewServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.shareable_preview_service.ShareablePreviewServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ShareablePreviewServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.shareable_preview_service.ShareablePreviewServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["IdentityVerificationService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.identity_verification_service.IdentityVerificationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["IdentityVerificationService"]
+    ) -> google.ads.googleads.v22.services.services.identity_verification_service.IdentityVerificationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["IdentityVerificationServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.identity_verification_service.IdentityVerificationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["IdentityVerificationServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.identity_verification_service.IdentityVerificationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerLifecycleGoalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_lifecycle_goal_service.CustomerLifecycleGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerLifecycleGoalService"]
+    ) -> google.ads.googleads.v22.services.services.customer_lifecycle_goal_service.CustomerLifecycleGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerLifecycleGoalServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_lifecycle_goal_service.CustomerLifecycleGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerLifecycleGoalServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_lifecycle_goal_service.CustomerLifecycleGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAdLabelService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_ad_label_service.AdGroupAdLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAdLabelService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_ad_label_service.AdGroupAdLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAdLabelServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_ad_label_service.AdGroupAdLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupAdLabelServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_ad_label_service.AdGroupAdLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_service.AdServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdService"]
+    ) -> google.ads.googleads.v22.services.services.ad_service.AdServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_service.AdServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_service.AdServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerManagerLinkService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_manager_link_service.CustomerManagerLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerManagerLinkService"]
+    ) -> google.ads.googleads.v22.services.services.customer_manager_link_service.CustomerManagerLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerManagerLinkServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_manager_link_service.CustomerManagerLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerManagerLinkServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_manager_link_service.CustomerManagerLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupListingGroupFilterService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_group_listing_group_filter_service.AssetGroupListingGroupFilterServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupListingGroupFilterService"]
+    ) -> google.ads.googleads.v22.services.services.asset_group_listing_group_filter_service.AssetGroupListingGroupFilterServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupListingGroupFilterServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_group_listing_group_filter_service.AssetGroupListingGroupFilterServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGroupListingGroupFilterServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.asset_group_listing_group_filter_service.AssetGroupListingGroupFilterServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserListCustomerTypeService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.user_list_customer_type_service.UserListCustomerTypeServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserListCustomerTypeService"]
+    ) -> google.ads.googleads.v22.services.services.user_list_customer_type_service.UserListCustomerTypeServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserListCustomerTypeServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.user_list_customer_type_service.UserListCustomerTypeServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["UserListCustomerTypeServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.user_list_customer_type_service.UserListCustomerTypeServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingSeasonalityAdjustmentService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingSeasonalityAdjustmentService"]
+    ) -> google.ads.googleads.v22.services.services.bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingSeasonalityAdjustmentServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingSeasonalityAdjustmentServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.bidding_seasonality_adjustment_service.BiddingSeasonalityAdjustmentServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionGoalCampaignConfigService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_goal_campaign_config_service.ConversionGoalCampaignConfigServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionGoalCampaignConfigService"]
+    ) -> google.ads.googleads.v22.services.services.conversion_goal_campaign_config_service.ConversionGoalCampaignConfigServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionGoalCampaignConfigServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_goal_campaign_config_service.ConversionGoalCampaignConfigServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionGoalCampaignConfigServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.conversion_goal_campaign_config_service.ConversionGoalCampaignConfigServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignGoalConfigService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_goal_config_service.CampaignGoalConfigServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignGoalConfigService"]
+    ) -> google.ads.googleads.v22.services.services.campaign_goal_config_service.CampaignGoalConfigServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignGoalConfigServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.campaign_goal_config_service.CampaignGoalConfigServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CampaignGoalConfigServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.campaign_goal_config_service.CampaignGoalConfigServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingDataExclusionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.bidding_data_exclusion_service.BiddingDataExclusionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingDataExclusionService"]
+    ) -> google.ads.googleads.v22.services.services.bidding_data_exclusion_service.BiddingDataExclusionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingDataExclusionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.bidding_data_exclusion_service.BiddingDataExclusionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BiddingDataExclusionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.bidding_data_exclusion_service.BiddingDataExclusionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AudienceService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.audience_service.AudienceServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AudienceService"]
+    ) -> google.ads.googleads.v22.services.services.audience_service.AudienceServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AudienceServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.audience_service.AudienceServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AudienceServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.audience_service.AudienceServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerClientLinkService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_client_link_service.CustomerClientLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerClientLinkService"]
+    ) -> google.ads.googleads.v22.services.services.customer_client_link_service.CustomerClientLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerClientLinkServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_client_link_service.CustomerClientLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerClientLinkServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_client_link_service.CustomerClientLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetSetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_set_service.AssetSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetSetService"]
+    ) -> google.ads.googleads.v22.services.services.asset_set_service.AssetSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetSetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_set_service.AssetSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetSetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.asset_set_service.AssetSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomConversionGoalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.custom_conversion_goal_service.CustomConversionGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomConversionGoalService"]
+    ) -> google.ads.googleads.v22.services.services.custom_conversion_goal_service.CustomConversionGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomConversionGoalServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.custom_conversion_goal_service.CustomConversionGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomConversionGoalServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.custom_conversion_goal_service.CustomConversionGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["LocalServicesLeadService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.local_services_lead_service.LocalServicesLeadServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["LocalServicesLeadService"]
+    ) -> google.ads.googleads.v22.services.services.local_services_lead_service.LocalServicesLeadServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["LocalServicesLeadServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.local_services_lead_service.LocalServicesLeadServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["LocalServicesLeadServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.local_services_lead_service.LocalServicesLeadServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerConversionGoalService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_conversion_goal_service.CustomerConversionGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerConversionGoalService"]
+    ) -> google.ads.googleads.v22.services.services.customer_conversion_goal_service.CustomerConversionGoalServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerConversionGoalServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_conversion_goal_service.CustomerConversionGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerConversionGoalServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_conversion_goal_service.CustomerConversionGoalServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionAdjustmentUploadService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_adjustment_upload_service.ConversionAdjustmentUploadServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionAdjustmentUploadService"]
+    ) -> google.ads.googleads.v22.services.services.conversion_adjustment_upload_service.ConversionAdjustmentUploadServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionAdjustmentUploadServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.conversion_adjustment_upload_service.ConversionAdjustmentUploadServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ConversionAdjustmentUploadServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.conversion_adjustment_upload_service.ConversionAdjustmentUploadServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomAudienceService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.custom_audience_service.CustomAudienceServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomAudienceService"]
+    ) -> google.ads.googleads.v22.services.services.custom_audience_service.CustomAudienceServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomAudienceServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.custom_audience_service.CustomAudienceServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomAudienceServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.custom_audience_service.CustomAudienceServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BatchJobService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.batch_job_service.BatchJobServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BatchJobService"]
+    ) -> google.ads.googleads.v22.services.services.batch_job_service.BatchJobServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BatchJobServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.batch_job_service.BatchJobServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["BatchJobServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.batch_job_service.BatchJobServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ThirdPartyAppAnalyticsLinkService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.third_party_app_analytics_link_service.ThirdPartyAppAnalyticsLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ThirdPartyAppAnalyticsLinkService"]
+    ) -> google.ads.googleads.v22.services.services.third_party_app_analytics_link_service.ThirdPartyAppAnalyticsLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ThirdPartyAppAnalyticsLinkServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.third_party_app_analytics_link_service.ThirdPartyAppAnalyticsLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ThirdPartyAppAnalyticsLinkServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.third_party_app_analytics_link_service.ThirdPartyAppAnalyticsLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["TravelAssetSuggestionService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.travel_asset_suggestion_service.TravelAssetSuggestionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["TravelAssetSuggestionService"]
+    ) -> google.ads.googleads.v22.services.services.travel_asset_suggestion_service.TravelAssetSuggestionServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["TravelAssetSuggestionServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.travel_asset_suggestion_service.TravelAssetSuggestionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["TravelAssetSuggestionServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.travel_asset_suggestion_service.TravelAssetSuggestionServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomizerAttributeService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customizer_attribute_service.CustomizerAttributeServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomizerAttributeService"]
+    ) -> google.ads.googleads.v22.services.services.customizer_attribute_service.CustomizerAttributeServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomizerAttributeServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customizer_attribute_service.CustomizerAttributeServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomizerAttributeServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customizer_attribute_service.CustomizerAttributeServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["LabelService"], version: _V22
+    ) -> (
+        google.ads.googleads.v22.services.services.label_service.LabelServiceClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["LabelService"]
+    ) -> (
+        google.ads.googleads.v22.services.services.label_service.LabelServiceClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["LabelServiceAsync"], version: _V22
+    ) -> (
+        google.ads.googleads.v22.services.services.label_service.LabelServiceAsyncClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["LabelServiceAsync"]
+    ) -> (
+        google.ads.googleads.v22.services.services.label_service.LabelServiceAsyncClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionLabelService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_label_service.AdGroupCriterionLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionLabelService"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_label_service.AdGroupCriterionLabelServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionLabelServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_label_service.AdGroupCriterionLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AdGroupCriterionLabelServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.ad_group_criterion_label_service.AdGroupCriterionLabelServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AudienceInsightsService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.audience_insights_service.AudienceInsightsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AudienceInsightsService"]
+    ) -> google.ads.googleads.v22.services.services.audience_insights_service.AudienceInsightsServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AudienceInsightsServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.audience_insights_service.AudienceInsightsServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AudienceInsightsServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.audience_insights_service.AudienceInsightsServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerAssetSetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_asset_set_service.CustomerAssetSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerAssetSetService"]
+    ) -> google.ads.googleads.v22.services.services.customer_asset_set_service.CustomerAssetSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerAssetSetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.customer_asset_set_service.CustomerAssetSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["CustomerAssetSetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.customer_asset_set_service.CustomerAssetSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SharedSetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.shared_set_service.SharedSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SharedSetService"]
+    ) -> google.ads.googleads.v22.services.services.shared_set_service.SharedSetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SharedSetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.shared_set_service.SharedSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["SharedSetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.shared_set_service.SharedSetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGenerationService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_generation_service.AssetGenerationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGenerationService"]
+    ) -> google.ads.googleads.v22.services.services.asset_generation_service.AssetGenerationServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGenerationServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_generation_service.AssetGenerationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetGenerationServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.asset_generation_service.AssetGenerationServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["DataLinkService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.data_link_service.DataLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["DataLinkService"]
+    ) -> google.ads.googleads.v22.services.services.data_link_service.DataLinkServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["DataLinkServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.data_link_service.DataLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["DataLinkServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.data_link_service.DataLinkServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ExperimentService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.experiment_service.ExperimentServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ExperimentService"]
+    ) -> google.ads.googleads.v22.services.services.experiment_service.ExperimentServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ExperimentServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.experiment_service.ExperimentServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["ExperimentServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.experiment_service.ExperimentServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetSetAssetService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_set_asset_service.AssetSetAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetSetAssetService"]
+    ) -> google.ads.googleads.v22.services.services.asset_set_asset_service.AssetSetAssetServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetSetAssetServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.asset_set_asset_service.AssetSetAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["AssetSetAssetServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.asset_set_asset_service.AssetSetAssetServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["InvoiceService"], version: _V22
+    ) -> (
+        google.ads.googleads.v22.services.services.invoice_service.InvoiceServiceClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["InvoiceService"]
+    ) -> (
+        google.ads.googleads.v22.services.services.invoice_service.InvoiceServiceClient
+    ): ...
+    @overload
+    def get_service(
+        self, name: Literal["InvoiceServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.invoice_service.InvoiceServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["InvoiceServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.invoice_service.InvoiceServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanCampaignService"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_campaign_service.KeywordPlanCampaignServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanCampaignService"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_campaign_service.KeywordPlanCampaignServiceClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanCampaignServiceAsync"], version: _V22
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_campaign_service.KeywordPlanCampaignServiceAsyncClient: ...
+    @overload
+    def get_service(
+        self, name: Literal["KeywordPlanCampaignServiceAsync"]
+    ) -> google.ads.googleads.v22.services.services.keyword_plan_campaign_service.KeywordPlanCampaignServiceAsyncClient: ...
+    @overload
+    def get_service(self, name: str, version: _V = "v22") -> Any: ...
     # End of autogenerated service overloads

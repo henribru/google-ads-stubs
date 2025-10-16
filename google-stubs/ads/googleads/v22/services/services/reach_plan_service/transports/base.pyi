@@ -1,0 +1,80 @@
+import abc
+from typing import Awaitable, Callable, Sequence
+
+from _typeshed import Incomplete
+from google.api_core import gapic_v1
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v22.services.types import reach_plan_service
+
+__all__ = ["ReachPlanServiceTransport"]
+
+class ReachPlanServiceTransport(abc.ABC):
+    AUTH_SCOPES: Incomplete
+    DEFAULT_HOST: str
+    def __init__(
+        self,
+        *,
+        host: str = "googleads.googleapis.com",
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+        always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
+        **kwargs,
+    ) -> None: ...
+    @property
+    def host(self): ...
+    def close(self) -> None: ...
+    @property
+    def generate_conversion_rates(
+        self,
+    ) -> Callable[
+        [reach_plan_service.GenerateConversionRatesRequest],
+        reach_plan_service.GenerateConversionRatesResponse
+        | Awaitable[reach_plan_service.GenerateConversionRatesResponse],
+    ]: ...
+    @property
+    def list_plannable_locations(
+        self,
+    ) -> Callable[
+        [reach_plan_service.ListPlannableLocationsRequest],
+        reach_plan_service.ListPlannableLocationsResponse
+        | Awaitable[reach_plan_service.ListPlannableLocationsResponse],
+    ]: ...
+    @property
+    def list_plannable_products(
+        self,
+    ) -> Callable[
+        [reach_plan_service.ListPlannableProductsRequest],
+        reach_plan_service.ListPlannableProductsResponse
+        | Awaitable[reach_plan_service.ListPlannableProductsResponse],
+    ]: ...
+    @property
+    def generate_reach_forecast(
+        self,
+    ) -> Callable[
+        [reach_plan_service.GenerateReachForecastRequest],
+        reach_plan_service.GenerateReachForecastResponse
+        | Awaitable[reach_plan_service.GenerateReachForecastResponse],
+    ]: ...
+    @property
+    def list_plannable_user_lists(
+        self,
+    ) -> Callable[
+        [reach_plan_service.ListPlannableUserListsRequest],
+        reach_plan_service.ListPlannableUserListsResponse
+        | Awaitable[reach_plan_service.ListPlannableUserListsResponse],
+    ]: ...
+    @property
+    def list_plannable_user_interests(
+        self,
+    ) -> Callable[
+        [reach_plan_service.ListPlannableUserInterestsRequest],
+        reach_plan_service.ListPlannableUserInterestsResponse
+        | Awaitable[reach_plan_service.ListPlannableUserInterestsResponse],
+    ]: ...
+    @property
+    def kind(self) -> str: ...
