@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class CampaignExperimentErrorEnum(proto.Message):
     class CampaignExperimentError(proto.Enum):
         UNSPECIFIED = 0
@@ -18,6 +21,13 @@ class CampaignExperimentErrorEnum(proto.Message):
         EXPERIMENT_DURATIONS_MUST_NOT_OVERLAP = 9
         EXPERIMENT_DURATION_MUST_BE_WITHIN_CAMPAIGN_DURATION = 10
         CANNOT_MUTATE_EXPERIMENT_DUE_TO_STATUS = 11
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

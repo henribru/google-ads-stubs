@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class FeedErrorEnum(proto.Message):
     class FeedError(proto.Enum):
         UNSPECIFIED = 0
@@ -31,6 +34,13 @@ class FeedErrorEnum(proto.Message):
         GMB_ACCESS_ERROR = 22
         CANNOT_HAVE_LOCATION_AND_AFFILIATE_LOCATION_FEEDS = 23
         LEGACY_EXTENSION_TYPE_READ_ONLY = 24
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

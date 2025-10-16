@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class AssetOfflineEvaluationErrorReasonsEnum(proto.Message):
     class AssetOfflineEvaluationErrorReasons(proto.Enum):
         UNSPECIFIED = 0
@@ -15,6 +18,13 @@ class AssetOfflineEvaluationErrorReasonsEnum(proto.Message):
         PRICE_ASSET_DESCRIPTION_HAS_PRICE_QUALIFIER = 6
         PRICE_ASSET_UNSUPPORTED_LANGUAGE = 7
         PRICE_ASSET_OTHER_ERROR = 8
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

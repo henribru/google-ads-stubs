@@ -1,14 +1,17 @@
-from .transports.base import AudienceInsightsServiceTransport
+from typing import Callable, MutableSequence, Sequence
+
 from _typeshed import Incomplete
-from google.ads.googleads.v21.common.types import audience_insights_attribute, criteria
-from google.ads.googleads.v21.enums.types import audience_insights_dimension
-from google.ads.googleads.v21.services.types import audience_insights_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
-from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['AudienceInsightsServiceAsyncClient']
+from google.ads.googleads.v21.common.types import audience_insights_attribute, criteria
+from google.ads.googleads.v21.enums.types import audience_insights_dimension
+from google.ads.googleads.v21.services.types import audience_insights_service
+
+from .transports.base import AudienceInsightsServiceTransport
+
+__all__ = ["AudienceInsightsServiceAsyncClient"]
 
 class AudienceInsightsServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -29,7 +32,9 @@ class AudienceInsightsServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: ClientOptions | None = None
+    ): ...
     @property
     def transport(self) -> AudienceInsightsServiceTransport: ...
     @property
@@ -37,13 +42,114 @@ class AudienceInsightsServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AudienceInsightsServiceTransport | Callable[..., AudienceInsightsServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    async def generate_insights_finder_report(self, request: audience_insights_service.GenerateInsightsFinderReportRequest | dict | None = None, *, customer_id: str | None = None, baseline_audience: audience_insights_service.BasicInsightsAudience | None = None, specific_audience: audience_insights_service.BasicInsightsAudience | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> audience_insights_service.GenerateInsightsFinderReportResponse: ...
-    async def list_audience_insights_attributes(self, request: audience_insights_service.ListAudienceInsightsAttributesRequest | dict | None = None, *, customer_id: str | None = None, dimensions: MutableSequence[audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension] | None = None, query_text: str | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> audience_insights_service.ListAudienceInsightsAttributesResponse: ...
-    async def list_insights_eligible_dates(self, request: audience_insights_service.ListInsightsEligibleDatesRequest | dict | None = None, *, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> audience_insights_service.ListInsightsEligibleDatesResponse: ...
-    async def generate_audience_composition_insights(self, request: audience_insights_service.GenerateAudienceCompositionInsightsRequest | dict | None = None, *, customer_id: str | None = None, audience: audience_insights_service.InsightsAudience | None = None, dimensions: MutableSequence[audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> audience_insights_service.GenerateAudienceCompositionInsightsResponse: ...
-    async def generate_suggested_targeting_insights(self, request: audience_insights_service.GenerateSuggestedTargetingInsightsRequest | dict | None = None, *, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> audience_insights_service.GenerateSuggestedTargetingInsightsResponse: ...
-    async def generate_audience_overlap_insights(self, request: audience_insights_service.GenerateAudienceOverlapInsightsRequest | dict | None = None, *, customer_id: str | None = None, country_location: criteria.LocationInfo | None = None, primary_attribute: audience_insights_attribute.AudienceInsightsAttribute | None = None, dimensions: MutableSequence[audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> audience_insights_service.GenerateAudienceOverlapInsightsResponse: ...
-    async def generate_targeting_suggestion_metrics(self, request: audience_insights_service.GenerateTargetingSuggestionMetricsRequest | dict | None = None, *, customer_id: str | None = None, audiences: MutableSequence[audience_insights_service.InsightsAudience] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> audience_insights_service.GenerateTargetingSuggestionMetricsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | AudienceInsightsServiceTransport
+        | Callable[..., AudienceInsightsServiceTransport]
+        | None = "grpc_asyncio",
+        client_options: ClientOptions | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    async def generate_insights_finder_report(
+        self,
+        request: audience_insights_service.GenerateInsightsFinderReportRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        baseline_audience: audience_insights_service.BasicInsightsAudience
+        | None = None,
+        specific_audience: audience_insights_service.BasicInsightsAudience
+        | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> audience_insights_service.GenerateInsightsFinderReportResponse: ...
+    async def list_audience_insights_attributes(
+        self,
+        request: audience_insights_service.ListAudienceInsightsAttributesRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        dimensions: MutableSequence[
+            audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+        ]
+        | None = None,
+        query_text: str | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> audience_insights_service.ListAudienceInsightsAttributesResponse: ...
+    async def list_insights_eligible_dates(
+        self,
+        request: audience_insights_service.ListInsightsEligibleDatesRequest
+        | dict
+        | None = None,
+        *,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> audience_insights_service.ListInsightsEligibleDatesResponse: ...
+    async def generate_audience_composition_insights(
+        self,
+        request: audience_insights_service.GenerateAudienceCompositionInsightsRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        audience: audience_insights_service.InsightsAudience | None = None,
+        dimensions: MutableSequence[
+            audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+        ]
+        | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> audience_insights_service.GenerateAudienceCompositionInsightsResponse: ...
+    async def generate_suggested_targeting_insights(
+        self,
+        request: audience_insights_service.GenerateSuggestedTargetingInsightsRequest
+        | dict
+        | None = None,
+        *,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> audience_insights_service.GenerateSuggestedTargetingInsightsResponse: ...
+    async def generate_audience_overlap_insights(
+        self,
+        request: audience_insights_service.GenerateAudienceOverlapInsightsRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        country_location: criteria.LocationInfo | None = None,
+        primary_attribute: audience_insights_attribute.AudienceInsightsAttribute
+        | None = None,
+        dimensions: MutableSequence[
+            audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
+        ]
+        | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> audience_insights_service.GenerateAudienceOverlapInsightsResponse: ...
+    async def generate_targeting_suggestion_metrics(
+        self,
+        request: audience_insights_service.GenerateTargetingSuggestionMetricsRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        audiences: MutableSequence[audience_insights_service.InsightsAudience]
+        | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> audience_insights_service.GenerateTargetingSuggestionMetricsResponse: ...
     async def __aenter__(self) -> AudienceInsightsServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

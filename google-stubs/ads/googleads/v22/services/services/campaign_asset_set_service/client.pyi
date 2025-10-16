@@ -1,15 +1,24 @@
 import types
-from .transports.base import CampaignAssetSetServiceTransport
-from _typeshed import Incomplete
-from google.ads.googleads.v22.services.types import campaign_asset_set_service
-from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
-from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['CampaignAssetSetServiceClient']
+from _typeshed import Incomplete
+from google.api_core import (
+    client_options as client_options_lib,
+    gapic_v1,
+    retry as retries,
+)
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v22.services.types import campaign_asset_set_service
+
+from .transports.base import CampaignAssetSetServiceTransport
+
+__all__ = ["CampaignAssetSetServiceClient"]
 
 class CampaignAssetSetServiceClientMeta(type):
-    def get_transport_class(cls, label: str | None = None) -> type[CampaignAssetSetServiceTransport]: ...
+    def get_transport_class(
+        cls, label: str | None = None
+    ) -> type[CampaignAssetSetServiceTransport]: ...
 
 class CampaignAssetSetServiceClient(metaclass=CampaignAssetSetServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -30,7 +39,9 @@ class CampaignAssetSetServiceClient(metaclass=CampaignAssetSetServiceClientMeta)
     @staticmethod
     def parse_campaign_path(path: str) -> dict[str, str]: ...
     @staticmethod
-    def campaign_asset_set_path(customer_id: str, campaign_id: str, asset_set_id: str) -> str: ...
+    def campaign_asset_set_path(
+        customer_id: str, campaign_id: str, asset_set_id: str
+    ) -> str: ...
     @staticmethod
     def parse_campaign_asset_set_path(path: str) -> dict[str, str]: ...
     @staticmethod
@@ -54,12 +65,43 @@ class CampaignAssetSetServiceClient(metaclass=CampaignAssetSetServiceClientMeta)
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | CampaignAssetSetServiceTransport | Callable[..., CampaignAssetSetServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    def mutate_campaign_asset_sets(self, request: campaign_asset_set_service.MutateCampaignAssetSetsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[campaign_asset_set_service.CampaignAssetSetOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> campaign_asset_set_service.MutateCampaignAssetSetsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | CampaignAssetSetServiceTransport
+        | Callable[..., CampaignAssetSetServiceTransport]
+        | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    def mutate_campaign_asset_sets(
+        self,
+        request: campaign_asset_set_service.MutateCampaignAssetSetsRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            campaign_asset_set_service.CampaignAssetSetOperation
+        ]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> campaign_asset_set_service.MutateCampaignAssetSetsResponse: ...
     def __enter__(self) -> CampaignAssetSetServiceClient: ...
-    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

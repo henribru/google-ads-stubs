@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class MultiplierErrorEnum(proto.Message):
     class MultiplierError(proto.Enum):
         UNSPECIFIED = 0
@@ -20,6 +23,13 @@ class MultiplierErrorEnum(proto.Message):
         MULTIPLIER_CAUSES_BID_TO_EXCEED_MAX_ALLOWED_BID = 11
         BID_LESS_THAN_MIN_ALLOWED_BID_WITH_MULTIPLIER = 12
         MULTIPLIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH = 13
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

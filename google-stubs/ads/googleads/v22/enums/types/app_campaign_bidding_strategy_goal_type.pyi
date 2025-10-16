@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class AppCampaignBiddingStrategyGoalTypeEnum(proto.Message):
     class AppCampaignBiddingStrategyGoalType(proto.Enum):
         UNSPECIFIED = 0
@@ -16,6 +19,13 @@ class AppCampaignBiddingStrategyGoalTypeEnum(proto.Message):
         OPTIMIZE_INSTALLS_WITHOUT_TARGET_INSTALL_COST = 7
         OPTIMIZE_IN_APP_CONVERSIONS_WITHOUT_TARGET_CPA = 8
         OPTIMIZE_TOTAL_VALUE_WITHOUT_TARGET_ROAS = 9
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

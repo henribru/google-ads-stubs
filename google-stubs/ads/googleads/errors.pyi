@@ -5,7 +5,12 @@ from google.ads.googleads.v20.errors import GoogleAdsFailure as GoogleAdsFailure
 from google.ads.googleads.v21.errors import GoogleAdsFailure as GoogleAdsFailureV21
 from google.ads.googleads.v22.errors import GoogleAdsFailure as GoogleAdsFailureV22
 
-GoogleAdsFailure = GoogleAdsFailureV19 | GoogleAdsFailureV20 | GoogleAdsFailureV21 | GoogleAdsFailureV22
+GoogleAdsFailure = (
+    GoogleAdsFailureV19
+    | GoogleAdsFailureV20
+    | GoogleAdsFailureV21
+    | GoogleAdsFailureV22
+)
 
 class GoogleAdsException(Exception):
     error: grpc.RpcError = ...

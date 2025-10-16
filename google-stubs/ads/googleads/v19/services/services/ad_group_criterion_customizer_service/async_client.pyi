@@ -1,12 +1,17 @@
-from .transports.base import AdGroupCriterionCustomizerServiceTransport
+from typing import Callable, MutableSequence, Sequence
+
 from _typeshed import Incomplete
-from google.ads.googleads.v19.services.types import ad_group_criterion_customizer_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
-from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['AdGroupCriterionCustomizerServiceAsyncClient']
+from google.ads.googleads.v19.services.types import (
+    ad_group_criterion_customizer_service,
+)
+
+from .transports.base import AdGroupCriterionCustomizerServiceTransport
+
+__all__ = ["AdGroupCriterionCustomizerServiceAsyncClient"]
 
 class AdGroupCriterionCustomizerServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -33,7 +38,9 @@ class AdGroupCriterionCustomizerServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: ClientOptions | None = None
+    ): ...
     @property
     def transport(self) -> AdGroupCriterionCustomizerServiceTransport: ...
     @property
@@ -41,7 +48,33 @@ class AdGroupCriterionCustomizerServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AdGroupCriterionCustomizerServiceTransport | Callable[..., AdGroupCriterionCustomizerServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    async def mutate_ad_group_criterion_customizers(self, request: ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[ad_group_criterion_customizer_service.AdGroupCriterionCustomizerOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | AdGroupCriterionCustomizerServiceTransport
+        | Callable[..., AdGroupCriterionCustomizerServiceTransport]
+        | None = "grpc_asyncio",
+        client_options: ClientOptions | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    async def mutate_ad_group_criterion_customizers(
+        self,
+        request: ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            ad_group_criterion_customizer_service.AdGroupCriterionCustomizerOperation
+        ]
+        | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> (
+        ad_group_criterion_customizer_service.MutateAdGroupCriterionCustomizersResponse
+    ): ...
     async def __aenter__(self) -> AdGroupCriterionCustomizerServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...
