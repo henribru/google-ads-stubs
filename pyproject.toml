@@ -1,6 +1,6 @@
 [project]
 name = "google-ads-stubs"
-version = "23.0.0"
+version = "24.0.0"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
 description = "Type stubs for google-ads"
