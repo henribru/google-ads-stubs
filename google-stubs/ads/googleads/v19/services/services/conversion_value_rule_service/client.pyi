@@ -1,24 +1,15 @@
 import types
+from .transports.base import ConversionValueRuleServiceTransport
+from _typeshed import Incomplete
+from google.ads.googleads.v19.services.types import conversion_value_rule_service
+from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
+from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-from _typeshed import Incomplete
-from google.api_core import (
-    client_options as client_options_lib,
-    gapic_v1,
-    retry as retries,
-)
-from google.auth import credentials as ga_credentials
-
-from google.ads.googleads.v19.services.types import conversion_value_rule_service
-
-from .transports.base import ConversionValueRuleServiceTransport
-
-__all__ = ["ConversionValueRuleServiceClient"]
+__all__ = ['ConversionValueRuleServiceClient']
 
 class ConversionValueRuleServiceClientMeta(type):
-    def get_transport_class(
-        cls, label: str | None = None
-    ) -> type[ConversionValueRuleServiceTransport]: ...
+    def get_transport_class(cls, label: str | None = None) -> type[ConversionValueRuleServiceTransport]: ...
 
 class ConversionValueRuleServiceClient(metaclass=ConversionValueRuleServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -31,9 +22,7 @@ class ConversionValueRuleServiceClient(metaclass=ConversionValueRuleServiceClien
     @property
     def transport(self) -> ConversionValueRuleServiceTransport: ...
     @staticmethod
-    def conversion_value_rule_path(
-        customer_id: str, conversion_value_rule_id: str
-    ) -> str: ...
+    def conversion_value_rule_path(customer_id: str, conversion_value_rule_id: str) -> str: ...
     @staticmethod
     def parse_conversion_value_rule_path(path: str) -> dict[str, str]: ...
     @staticmethod
@@ -73,43 +62,12 @@ class ConversionValueRuleServiceClient(metaclass=ConversionValueRuleServiceClien
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: client_options_lib.ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | ConversionValueRuleServiceTransport
-        | Callable[..., ConversionValueRuleServiceTransport]
-        | None = None,
-        client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    def mutate_conversion_value_rules(
-        self,
-        request: conversion_value_rule_service.MutateConversionValueRulesRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[
-            conversion_value_rule_service.ConversionValueRuleOperation
-        ]
-        | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> conversion_value_rule_service.MutateConversionValueRulesResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | ConversionValueRuleServiceTransport | Callable[..., ConversionValueRuleServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    def mutate_conversion_value_rules(self, request: conversion_value_rule_service.MutateConversionValueRulesRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[conversion_value_rule_service.ConversionValueRuleOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> conversion_value_rule_service.MutateConversionValueRulesResponse: ...
     def __enter__(self) -> ConversionValueRuleServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
+    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...

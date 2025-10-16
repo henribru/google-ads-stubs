@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class ExtensionFeedItemErrorEnum(proto.Message):
     class ExtensionFeedItemError(proto.Enum):
         UNSPECIFIED = 0
@@ -56,13 +53,6 @@ class ExtensionFeedItemErrorEnum(proto.Message):
         TOO_MANY_DECIMAL_PLACES_SPECIFIED = 44
         CONCRETE_EXTENSION_TYPE_REQUIRED = 45
         SCHEDULE_END_NOT_AFTER_START = 46
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

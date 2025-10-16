@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class AdGroupCriterionErrorEnum(proto.Message):
     class AdGroupCriterionError(proto.Enum):
         UNSPECIFIED = 0
@@ -39,13 +36,6 @@ class AdGroupCriterionErrorEnum(proto.Message):
         CANNOT_SET_BOTH_DESTINATION_URL_AND_TRACKING_URL_TEMPLATE = 36
         FINAL_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE = 37
         FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE = 38
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

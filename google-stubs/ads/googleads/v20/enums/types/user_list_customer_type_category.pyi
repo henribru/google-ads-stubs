@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class UserListCustomerTypeCategoryEnum(proto.Message):
     class UserListCustomerTypeCategory(proto.Enum):
         UNSPECIFIED = 0
@@ -27,13 +24,6 @@ class UserListCustomerTypeCategoryEnum(proto.Message):
         LOYALTY_TIER_5_MEMBERS = 15
         LOYALTY_TIER_6_MEMBERS = 16
         LOYALTY_TIER_7_MEMBERS = 17
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

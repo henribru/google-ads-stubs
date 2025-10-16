@@ -1,15 +1,12 @@
-from typing import Callable, Sequence
-
+from .transports.base import GeoTargetConstantServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v19.services.types import geo_target_constant_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, Sequence
 
-from google.ads.googleads.v19.services.types import geo_target_constant_service
-
-from .transports.base import GeoTargetConstantServiceTransport
-
-__all__ = ["GeoTargetConstantServiceAsyncClient"]
+__all__ = ['GeoTargetConstantServiceAsyncClient']
 
 class GeoTargetConstantServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -32,9 +29,7 @@ class GeoTargetConstantServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> GeoTargetConstantServiceTransport: ...
     @property
@@ -42,26 +37,7 @@ class GeoTargetConstantServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | GeoTargetConstantServiceTransport
-        | Callable[..., GeoTargetConstantServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def suggest_geo_target_constants(
-        self,
-        request: geo_target_constant_service.SuggestGeoTargetConstantsRequest
-        | dict
-        | None = None,
-        *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> geo_target_constant_service.SuggestGeoTargetConstantsResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | GeoTargetConstantServiceTransport | Callable[..., GeoTargetConstantServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def suggest_geo_target_constants(self, request: geo_target_constant_service.SuggestGeoTargetConstantsRequest | dict | None = None, *, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> geo_target_constant_service.SuggestGeoTargetConstantsResponse: ...
     async def __aenter__(self) -> GeoTargetConstantServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class InvoiceErrorEnum(proto.Message):
     class InvoiceError(proto.Enum):
         UNSPECIFIED = 0
@@ -16,13 +13,6 @@ class InvoiceErrorEnum(proto.Message):
         BILLING_SETUP_NOT_APPROVED = 4
         BILLING_SETUP_NOT_ON_MONTHLY_INVOICING = 5
         NON_SERVING_CUSTOMER = 6
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

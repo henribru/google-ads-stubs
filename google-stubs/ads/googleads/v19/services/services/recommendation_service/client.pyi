@@ -1,28 +1,16 @@
 import types
+from .transports.base import RecommendationServiceTransport
+from _typeshed import Incomplete
+from google.ads.googleads.v19.enums.types import advertising_channel_type as gage_advertising_channel_type, recommendation_type
+from google.ads.googleads.v19.services.types import recommendation_service
+from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
+from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-from _typeshed import Incomplete
-from google.api_core import (
-    client_options as client_options_lib,
-    gapic_v1,
-    retry as retries,
-)
-from google.auth import credentials as ga_credentials
-
-from google.ads.googleads.v19.enums.types import (
-    advertising_channel_type as gage_advertising_channel_type,
-    recommendation_type,
-)
-from google.ads.googleads.v19.services.types import recommendation_service
-
-from .transports.base import RecommendationServiceTransport
-
-__all__ = ["RecommendationServiceClient"]
+__all__ = ['RecommendationServiceClient']
 
 class RecommendationServiceClientMeta(type):
-    def get_transport_class(
-        cls, label: str | None = None
-    ) -> type[RecommendationServiceTransport]: ...
+    def get_transport_class(cls, label: str | None = None) -> type[RecommendationServiceTransport]: ...
 
 class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -83,71 +71,14 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: client_options_lib.ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | RecommendationServiceTransport
-        | Callable[..., RecommendationServiceTransport]
-        | None = None,
-        client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    def apply_recommendation(
-        self,
-        request: recommendation_service.ApplyRecommendationRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[recommendation_service.ApplyRecommendationOperation]
-        | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> recommendation_service.ApplyRecommendationResponse: ...
-    def dismiss_recommendation(
-        self,
-        request: recommendation_service.DismissRecommendationRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[
-            recommendation_service.DismissRecommendationRequest.DismissRecommendationOperation
-        ]
-        | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> recommendation_service.DismissRecommendationResponse: ...
-    def generate_recommendations(
-        self,
-        request: recommendation_service.GenerateRecommendationsRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        recommendation_types: MutableSequence[
-            recommendation_type.RecommendationTypeEnum.RecommendationType
-        ]
-        | None = None,
-        advertising_channel_type: gage_advertising_channel_type.AdvertisingChannelTypeEnum.AdvertisingChannelType
-        | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> recommendation_service.GenerateRecommendationsResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | RecommendationServiceTransport | Callable[..., RecommendationServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    def apply_recommendation(self, request: recommendation_service.ApplyRecommendationRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[recommendation_service.ApplyRecommendationOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> recommendation_service.ApplyRecommendationResponse: ...
+    def dismiss_recommendation(self, request: recommendation_service.DismissRecommendationRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[recommendation_service.DismissRecommendationRequest.DismissRecommendationOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> recommendation_service.DismissRecommendationResponse: ...
+    def generate_recommendations(self, request: recommendation_service.GenerateRecommendationsRequest | dict | None = None, *, customer_id: str | None = None, recommendation_types: MutableSequence[recommendation_type.RecommendationTypeEnum.RecommendationType] | None = None, advertising_channel_type: gage_advertising_channel_type.AdvertisingChannelTypeEnum.AdvertisingChannelType | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> recommendation_service.GenerateRecommendationsResponse: ...
     def __enter__(self) -> RecommendationServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
+    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...

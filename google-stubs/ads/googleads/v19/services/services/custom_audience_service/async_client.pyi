@@ -1,15 +1,12 @@
-from typing import Callable, MutableSequence, Sequence
-
+from .transports.base import CustomAudienceServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v19.services.types import custom_audience_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence
 
-from google.ads.googleads.v19.services.types import custom_audience_service
-
-from .transports.base import CustomAudienceServiceTransport
-
-__all__ = ["CustomAudienceServiceAsyncClient"]
+__all__ = ['CustomAudienceServiceAsyncClient']
 
 class CustomAudienceServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -32,9 +29,7 @@ class CustomAudienceServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> CustomAudienceServiceTransport: ...
     @property
@@ -42,29 +37,7 @@ class CustomAudienceServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | CustomAudienceServiceTransport
-        | Callable[..., CustomAudienceServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def mutate_custom_audiences(
-        self,
-        request: custom_audience_service.MutateCustomAudiencesRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[custom_audience_service.CustomAudienceOperation]
-        | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> custom_audience_service.MutateCustomAudiencesResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | CustomAudienceServiceTransport | Callable[..., CustomAudienceServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def mutate_custom_audiences(self, request: custom_audience_service.MutateCustomAudiencesRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[custom_audience_service.CustomAudienceOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> custom_audience_service.MutateCustomAudiencesResponse: ...
     async def __aenter__(self) -> CustomAudienceServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

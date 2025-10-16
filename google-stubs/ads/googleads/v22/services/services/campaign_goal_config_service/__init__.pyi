@@ -1,0 +1,4 @@
+from .async_client import CampaignGoalConfigServiceAsyncClient as CampaignGoalConfigServiceAsyncClient
+from .client import CampaignGoalConfigServiceClient as CampaignGoalConfigServiceClient
+
+__all__ = ['CampaignGoalConfigServiceClient', 'CampaignGoalConfigServiceAsyncClient']

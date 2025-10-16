@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class IncomeRangeTypeEnum(proto.Message):
     class IncomeRangeType(proto.Enum):
         UNSPECIFIED = 0
@@ -18,13 +15,6 @@ class IncomeRangeTypeEnum(proto.Message):
         INCOME_RANGE_80_90 = 510005
         INCOME_RANGE_90_UP = 510006
         INCOME_RANGE_UNDETERMINED = 510000
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

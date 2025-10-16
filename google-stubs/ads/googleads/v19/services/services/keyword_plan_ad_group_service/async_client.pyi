@@ -1,15 +1,12 @@
-from typing import Callable, MutableSequence, Sequence
-
+from .transports.base import KeywordPlanAdGroupServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v19.services.types import keyword_plan_ad_group_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence
 
-from google.ads.googleads.v19.services.types import keyword_plan_ad_group_service
-
-from .transports.base import KeywordPlanAdGroupServiceTransport
-
-__all__ = ["KeywordPlanAdGroupServiceAsyncClient"]
+__all__ = ['KeywordPlanAdGroupServiceAsyncClient']
 
 class KeywordPlanAdGroupServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -34,9 +31,7 @@ class KeywordPlanAdGroupServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> KeywordPlanAdGroupServiceTransport: ...
     @property
@@ -44,31 +39,7 @@ class KeywordPlanAdGroupServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | KeywordPlanAdGroupServiceTransport
-        | Callable[..., KeywordPlanAdGroupServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def mutate_keyword_plan_ad_groups(
-        self,
-        request: keyword_plan_ad_group_service.MutateKeywordPlanAdGroupsRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[
-            keyword_plan_ad_group_service.KeywordPlanAdGroupOperation
-        ]
-        | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> keyword_plan_ad_group_service.MutateKeywordPlanAdGroupsResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | KeywordPlanAdGroupServiceTransport | Callable[..., KeywordPlanAdGroupServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def mutate_keyword_plan_ad_groups(self, request: keyword_plan_ad_group_service.MutateKeywordPlanAdGroupsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[keyword_plan_ad_group_service.KeywordPlanAdGroupOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> keyword_plan_ad_group_service.MutateKeywordPlanAdGroupsResponse: ...
     async def __aenter__(self) -> KeywordPlanAdGroupServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

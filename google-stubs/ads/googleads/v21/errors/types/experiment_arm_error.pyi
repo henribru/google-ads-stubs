@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class ExperimentArmErrorEnum(proto.Message):
     class ExperimentArmError(proto.Enum):
         UNSPECIFIED = 0
@@ -25,13 +22,6 @@ class ExperimentArmErrorEnum(proto.Message):
         CANNOT_ADD_BASE_CAMPAIGN_WITH_DATE_RANGE = 13
         BIDDING_STRATEGY_NOT_SUPPORTED_IN_EXPERIMENTS = 14
         TRAFFIC_SPLIT_NOT_SUPPORTED_FOR_CHANNEL_TYPE = 15
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

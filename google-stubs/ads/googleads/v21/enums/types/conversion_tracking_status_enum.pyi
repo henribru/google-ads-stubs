@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class ConversionTrackingStatusEnum(proto.Message):
     class ConversionTrackingStatus(proto.Enum):
         UNSPECIFIED = 0
@@ -15,13 +12,6 @@ class ConversionTrackingStatusEnum(proto.Message):
         CONVERSION_TRACKING_MANAGED_BY_SELF = 3
         CONVERSION_TRACKING_MANAGED_BY_THIS_MANAGER = 4
         CONVERSION_TRACKING_MANAGED_BY_ANOTHER_MANAGER = 5
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

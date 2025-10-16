@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class ConversionLagBucketEnum(proto.Message):
     class ConversionLagBucket(proto.Enum):
         UNSPECIFIED = 0
@@ -30,13 +27,6 @@ class ConversionLagBucketEnum(proto.Message):
         THIRTY_TO_FORTY_FIVE_DAYS = 18
         FORTY_FIVE_TO_SIXTY_DAYS = 19
         SIXTY_TO_NINETY_DAYS = 20
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

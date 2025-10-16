@@ -1,0 +1,19 @@
+from google.ads.googleads.v22.enums.types.campaign_draft_status import CampaignDraftStatusEnum
+import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
+from typing_extensions import Literal
+from collections.abc import Mapping
+_M = TypeVar("_M")
+class CampaignDraft(proto.Message):
+    resource_name: str
+    draft_id: int
+    base_campaign: str
+    name: str
+    draft_campaign: str
+    status: CampaignDraftStatusEnum.CampaignDraftStatus
+    has_experiment_running: bool
+    long_running_operation: str
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, resource_name: str = ..., draft_id: int = ..., base_campaign: str = ..., name: str = ..., draft_campaign: str = ..., status: CampaignDraftStatusEnum.CampaignDraftStatus = ..., has_experiment_running: bool = ..., long_running_operation: str = ...) -> None: ...
+    def __contains__(  # type: ignore[override]
+    self, key: Literal["resource_name", "draft_id", "base_campaign", "name", "draft_campaign", "status", "has_experiment_running", "long_running_operation"]) -> bool: ...
