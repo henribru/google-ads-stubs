@@ -25,8 +25,8 @@ requires-python = ">=3.9"
 
 [dependency-groups]
 dev = [
-    "mypy>=1.18.2",
-    "ruff>=0.14.0",
+    "mypy>=1.19.1",
+    "ruff>=0.14.14",
     "stubdefaulter>=0.1.0",
 ]
 
