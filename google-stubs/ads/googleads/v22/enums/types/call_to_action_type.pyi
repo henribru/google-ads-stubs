@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class CallToActionTypeEnum(proto.Message):
     class CallToActionType(proto.Enum):
         UNSPECIFIED = 0
@@ -28,13 +25,6 @@ class CallToActionTypeEnum(proto.Message):
         START_NOW = 16
         VISIT_SITE = 17
         WATCH_NOW = 18
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

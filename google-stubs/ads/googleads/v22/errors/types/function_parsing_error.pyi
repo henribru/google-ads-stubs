@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class FunctionParsingErrorEnum(proto.Message):
     class FunctionParsingError(proto.Enum):
         UNSPECIFIED = 0
@@ -22,13 +19,6 @@ class FunctionParsingErrorEnum(proto.Message):
         FEED_ATTRIBUTE_OPERAND_ARGUMENT_NOT_INTEGER = 10
         NO_OPERANDS = 11
         TOO_MANY_OPERANDS = 12
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

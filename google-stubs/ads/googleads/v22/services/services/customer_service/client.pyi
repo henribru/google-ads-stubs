@@ -1,25 +1,16 @@
 import types
-from typing import Callable, Sequence
-
+from .transports.base import CustomerServiceTransport
 from _typeshed import Incomplete
-from google.api_core import (
-    client_options as client_options_lib,
-    gapic_v1,
-    retry as retries,
-)
-from google.auth import credentials as ga_credentials
-
 from google.ads.googleads.v22.resources.types import customer
 from google.ads.googleads.v22.services.types import customer_service
+from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
+from google.auth import credentials as ga_credentials
+from typing import Callable, Sequence
 
-from .transports.base import CustomerServiceTransport
-
-__all__ = ["CustomerServiceClient"]
+__all__ = ['CustomerServiceClient']
 
 class CustomerServiceClientMeta(type):
-    def get_transport_class(
-        cls, label: str | None = None
-    ) -> type[CustomerServiceTransport]: ...
+    def get_transport_class(cls, label: str | None = None) -> type[CustomerServiceTransport]: ...
 
 class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -60,56 +51,14 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: client_options_lib.ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | CustomerServiceTransport
-        | Callable[..., CustomerServiceTransport]
-        | None = None,
-        client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    def mutate_customer(
-        self,
-        request: customer_service.MutateCustomerRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        operation: customer_service.CustomerOperation | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> customer_service.MutateCustomerResponse: ...
-    def list_accessible_customers(
-        self,
-        request: customer_service.ListAccessibleCustomersRequest | dict | None = None,
-        *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> customer_service.ListAccessibleCustomersResponse: ...
-    def create_customer_client(
-        self,
-        request: customer_service.CreateCustomerClientRequest | dict | None = None,
-        *,
-        customer_id: str | None = None,
-        customer_client: customer.Customer | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> customer_service.CreateCustomerClientResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | CustomerServiceTransport | Callable[..., CustomerServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    def mutate_customer(self, request: customer_service.MutateCustomerRequest | dict | None = None, *, customer_id: str | None = None, operation: customer_service.CustomerOperation | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> customer_service.MutateCustomerResponse: ...
+    def list_accessible_customers(self, request: customer_service.ListAccessibleCustomersRequest | dict | None = None, *, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> customer_service.ListAccessibleCustomersResponse: ...
+    def create_customer_client(self, request: customer_service.CreateCustomerClientRequest | dict | None = None, *, customer_id: str | None = None, customer_client: customer.Customer | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> customer_service.CreateCustomerClientResponse: ...
     def __enter__(self) -> CustomerServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
+    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...

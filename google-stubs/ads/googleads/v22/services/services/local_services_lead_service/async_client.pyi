@@ -1,15 +1,12 @@
-from typing import Callable, MutableSequence, Sequence
-
+from .transports.base import LocalServicesLeadServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v22.services.types import local_services_lead_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, MutableSequence, Sequence
 
-from google.ads.googleads.v22.services.types import local_services_lead_service
-
-from .transports.base import LocalServicesLeadServiceTransport
-
-__all__ = ["LocalServicesLeadServiceAsyncClient"]
+__all__ = ['LocalServicesLeadServiceAsyncClient']
 
 class LocalServicesLeadServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -32,9 +29,7 @@ class LocalServicesLeadServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> LocalServicesLeadServiceTransport: ...
     @property
@@ -42,39 +37,8 @@ class LocalServicesLeadServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | LocalServicesLeadServiceTransport
-        | Callable[..., LocalServicesLeadServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def append_lead_conversation(
-        self,
-        request: local_services_lead_service.AppendLeadConversationRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        conversations: MutableSequence[local_services_lead_service.Conversation]
-        | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> local_services_lead_service.AppendLeadConversationResponse: ...
-    async def provide_lead_feedback(
-        self,
-        request: local_services_lead_service.ProvideLeadFeedbackRequest
-        | dict
-        | None = None,
-        *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> local_services_lead_service.ProvideLeadFeedbackResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | LocalServicesLeadServiceTransport | Callable[..., LocalServicesLeadServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def append_lead_conversation(self, request: local_services_lead_service.AppendLeadConversationRequest | dict | None = None, *, customer_id: str | None = None, conversations: MutableSequence[local_services_lead_service.Conversation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> local_services_lead_service.AppendLeadConversationResponse: ...
+    async def provide_lead_feedback(self, request: local_services_lead_service.ProvideLeadFeedbackRequest | dict | None = None, *, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> local_services_lead_service.ProvideLeadFeedbackResponse: ...
     async def __aenter__(self) -> LocalServicesLeadServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

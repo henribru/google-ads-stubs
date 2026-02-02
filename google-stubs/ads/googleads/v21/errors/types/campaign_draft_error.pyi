@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class CampaignDraftErrorEnum(proto.Message):
     class CampaignDraftError(proto.Enum):
         UNSPECIFIED = 0
@@ -21,13 +18,6 @@ class CampaignDraftErrorEnum(proto.Message):
         INVALID_STATUS_TRANSITION = 9
         MAX_NUMBER_OF_DRAFTS_PER_CAMPAIGN_REACHED = 10
         LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY = 11
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

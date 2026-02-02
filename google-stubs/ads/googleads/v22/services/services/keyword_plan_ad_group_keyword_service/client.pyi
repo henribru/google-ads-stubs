@@ -1,30 +1,17 @@
 import types
+from .transports.base import KeywordPlanAdGroupKeywordServiceTransport
+from _typeshed import Incomplete
+from google.ads.googleads.v22.services.types import keyword_plan_ad_group_keyword_service
+from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
+from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-from _typeshed import Incomplete
-from google.api_core import (
-    client_options as client_options_lib,
-    gapic_v1,
-    retry as retries,
-)
-from google.auth import credentials as ga_credentials
-
-from google.ads.googleads.v22.services.types import (
-    keyword_plan_ad_group_keyword_service,
-)
-
-from .transports.base import KeywordPlanAdGroupKeywordServiceTransport
-
-__all__ = ["KeywordPlanAdGroupKeywordServiceClient"]
+__all__ = ['KeywordPlanAdGroupKeywordServiceClient']
 
 class KeywordPlanAdGroupKeywordServiceClientMeta(type):
-    def get_transport_class(
-        cls, label: str | None = None
-    ) -> type[KeywordPlanAdGroupKeywordServiceTransport]: ...
+    def get_transport_class(cls, label: str | None = None) -> type[KeywordPlanAdGroupKeywordServiceTransport]: ...
 
-class KeywordPlanAdGroupKeywordServiceClient(
-    metaclass=KeywordPlanAdGroupKeywordServiceClientMeta
-):
+class KeywordPlanAdGroupKeywordServiceClient(metaclass=KeywordPlanAdGroupKeywordServiceClientMeta):
     DEFAULT_ENDPOINT: str
     DEFAULT_MTLS_ENDPOINT: Incomplete
     @classmethod
@@ -35,15 +22,11 @@ class KeywordPlanAdGroupKeywordServiceClient(
     @property
     def transport(self) -> KeywordPlanAdGroupKeywordServiceTransport: ...
     @staticmethod
-    def keyword_plan_ad_group_path(
-        customer_id: str, keyword_plan_ad_group_id: str
-    ) -> str: ...
+    def keyword_plan_ad_group_path(customer_id: str, keyword_plan_ad_group_id: str) -> str: ...
     @staticmethod
     def parse_keyword_plan_ad_group_path(path: str) -> dict[str, str]: ...
     @staticmethod
-    def keyword_plan_ad_group_keyword_path(
-        customer_id: str, keyword_plan_ad_group_keyword_id: str
-    ) -> str: ...
+    def keyword_plan_ad_group_keyword_path(customer_id: str, keyword_plan_ad_group_keyword_id: str) -> str: ...
     @staticmethod
     def parse_keyword_plan_ad_group_keyword_path(path: str) -> dict[str, str]: ...
     @staticmethod
@@ -67,45 +50,12 @@ class KeywordPlanAdGroupKeywordServiceClient(
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: client_options_lib.ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | KeywordPlanAdGroupKeywordServiceTransport
-        | Callable[..., KeywordPlanAdGroupKeywordServiceTransport]
-        | None = None,
-        client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    def mutate_keyword_plan_ad_group_keywords(
-        self,
-        request: keyword_plan_ad_group_keyword_service.MutateKeywordPlanAdGroupKeywordsRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[
-            keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordOperation
-        ]
-        | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> (
-        keyword_plan_ad_group_keyword_service.MutateKeywordPlanAdGroupKeywordsResponse
-    ): ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | KeywordPlanAdGroupKeywordServiceTransport | Callable[..., KeywordPlanAdGroupKeywordServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    def mutate_keyword_plan_ad_group_keywords(self, request: keyword_plan_ad_group_keyword_service.MutateKeywordPlanAdGroupKeywordsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[keyword_plan_ad_group_keyword_service.KeywordPlanAdGroupKeywordOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> keyword_plan_ad_group_keyword_service.MutateKeywordPlanAdGroupKeywordsResponse: ...
     def __enter__(self) -> KeywordPlanAdGroupKeywordServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
+    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...

@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class DisplayUploadProductTypeEnum(proto.Message):
     class DisplayUploadProductType(proto.Enum):
         UNSPECIFIED = 0
@@ -21,13 +18,6 @@ class DisplayUploadProductTypeEnum(proto.Message):
         DYNAMIC_HTML5_CUSTOM_AD = 9
         DYNAMIC_HTML5_TRAVEL_AD = 10
         DYNAMIC_HTML5_HOTEL_AD = 11
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

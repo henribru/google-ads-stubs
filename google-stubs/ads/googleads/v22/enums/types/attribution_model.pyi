@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class AttributionModelEnum(proto.Message):
     class AttributionModel(proto.Enum):
         UNSPECIFIED = 0
@@ -18,13 +15,6 @@ class AttributionModelEnum(proto.Message):
         GOOGLE_SEARCH_ATTRIBUTION_TIME_DECAY = 104
         GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED = 105
         GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN = 106
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

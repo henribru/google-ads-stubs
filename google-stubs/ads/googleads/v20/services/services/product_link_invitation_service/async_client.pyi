@@ -1,21 +1,14 @@
-from typing import Callable, Sequence
-
+from .transports.base import ProductLinkInvitationServiceTransport
 from _typeshed import Incomplete
+from google.ads.googleads.v20.enums.types import product_link_invitation_status as gage_product_link_invitation_status
+from google.ads.googleads.v20.resources.types import product_link_invitation as gagr_product_link_invitation
+from google.ads.googleads.v20.services.types import product_link_invitation_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
+from typing import Callable, Sequence
 
-from google.ads.googleads.v20.enums.types import (
-    product_link_invitation_status as gage_product_link_invitation_status,
-)
-from google.ads.googleads.v20.resources.types import (
-    product_link_invitation as gagr_product_link_invitation,
-)
-from google.ads.googleads.v20.services.types import product_link_invitation_service
-
-from .transports.base import ProductLinkInvitationServiceTransport
-
-__all__ = ["ProductLinkInvitationServiceAsyncClient"]
+__all__ = ['ProductLinkInvitationServiceAsyncClient']
 
 class ProductLinkInvitationServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -40,9 +33,7 @@ class ProductLinkInvitationServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
     @property
     def transport(self) -> ProductLinkInvitationServiceTransport: ...
     @property
@@ -50,55 +41,9 @@ class ProductLinkInvitationServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | ProductLinkInvitationServiceTransport
-        | Callable[..., ProductLinkInvitationServiceTransport]
-        | None = "grpc_asyncio",
-        client_options: ClientOptions | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    async def create_product_link_invitation(
-        self,
-        request: product_link_invitation_service.CreateProductLinkInvitationRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        product_link_invitation: gagr_product_link_invitation.ProductLinkInvitation
-        | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> product_link_invitation_service.CreateProductLinkInvitationResponse: ...
-    async def update_product_link_invitation(
-        self,
-        request: product_link_invitation_service.UpdateProductLinkInvitationRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        product_link_invitation_status: gage_product_link_invitation_status.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
-        | None = None,
-        resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> product_link_invitation_service.UpdateProductLinkInvitationResponse: ...
-    async def remove_product_link_invitation(
-        self,
-        request: product_link_invitation_service.RemoveProductLinkInvitationRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> product_link_invitation_service.RemoveProductLinkInvitationResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | ProductLinkInvitationServiceTransport | Callable[..., ProductLinkInvitationServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    async def create_product_link_invitation(self, request: product_link_invitation_service.CreateProductLinkInvitationRequest | dict | None = None, *, customer_id: str | None = None, product_link_invitation: gagr_product_link_invitation.ProductLinkInvitation | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> product_link_invitation_service.CreateProductLinkInvitationResponse: ...
+    async def update_product_link_invitation(self, request: product_link_invitation_service.UpdateProductLinkInvitationRequest | dict | None = None, *, customer_id: str | None = None, product_link_invitation_status: gage_product_link_invitation_status.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus | None = None, resource_name: str | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> product_link_invitation_service.UpdateProductLinkInvitationResponse: ...
+    async def remove_product_link_invitation(self, request: product_link_invitation_service.RemoveProductLinkInvitationRequest | dict | None = None, *, customer_id: str | None = None, resource_name: str | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> product_link_invitation_service.RemoveProductLinkInvitationResponse: ...
     async def __aenter__(self) -> ProductLinkInvitationServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

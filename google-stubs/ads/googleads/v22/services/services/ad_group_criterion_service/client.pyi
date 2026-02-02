@@ -1,24 +1,15 @@
 import types
+from .transports.base import AdGroupCriterionServiceTransport
+from _typeshed import Incomplete
+from google.ads.googleads.v22.services.types import ad_group_criterion_service
+from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
+from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-from _typeshed import Incomplete
-from google.api_core import (
-    client_options as client_options_lib,
-    gapic_v1,
-    retry as retries,
-)
-from google.auth import credentials as ga_credentials
-
-from google.ads.googleads.v22.services.types import ad_group_criterion_service
-
-from .transports.base import AdGroupCriterionServiceTransport
-
-__all__ = ["AdGroupCriterionServiceClient"]
+__all__ = ['AdGroupCriterionServiceClient']
 
 class AdGroupCriterionServiceClientMeta(type):
-    def get_transport_class(
-        cls, label: str | None = None
-    ) -> type[AdGroupCriterionServiceTransport]: ...
+    def get_transport_class(cls, label: str | None = None) -> type[AdGroupCriterionServiceTransport]: ...
 
 class AdGroupCriterionServiceClient(metaclass=AdGroupCriterionServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -35,15 +26,11 @@ class AdGroupCriterionServiceClient(metaclass=AdGroupCriterionServiceClientMeta)
     @staticmethod
     def parse_ad_group_path(path: str) -> dict[str, str]: ...
     @staticmethod
-    def ad_group_criterion_path(
-        customer_id: str, ad_group_id: str, criterion_id: str
-    ) -> str: ...
+    def ad_group_criterion_path(customer_id: str, ad_group_id: str, criterion_id: str) -> str: ...
     @staticmethod
     def parse_ad_group_criterion_path(path: str) -> dict[str, str]: ...
     @staticmethod
-    def ad_group_criterion_label_path(
-        customer_id: str, ad_group_id: str, criterion_id: str, label_id: str
-    ) -> str: ...
+    def ad_group_criterion_label_path(customer_id: str, ad_group_id: str, criterion_id: str, label_id: str) -> str: ...
     @staticmethod
     def parse_ad_group_criterion_label_path(path: str) -> dict[str, str]: ...
     @staticmethod
@@ -79,43 +66,12 @@ class AdGroupCriterionServiceClient(metaclass=AdGroupCriterionServiceClientMeta)
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(
-        cls, client_options: client_options_lib.ClientOptions | None = None
-    ): ...
+    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(
-        self,
-        *,
-        credentials: ga_credentials.Credentials | None = None,
-        transport: str
-        | AdGroupCriterionServiceTransport
-        | Callable[..., AdGroupCriterionServiceTransport]
-        | None = None,
-        client_options: client_options_lib.ClientOptions | dict | None = None,
-        client_info: gapic_v1.client_info.ClientInfo = ...,
-    ) -> None: ...
-    def mutate_ad_group_criteria(
-        self,
-        request: ad_group_criterion_service.MutateAdGroupCriteriaRequest
-        | dict
-        | None = None,
-        *,
-        customer_id: str | None = None,
-        operations: MutableSequence[
-            ad_group_criterion_service.AdGroupCriterionOperation
-        ]
-        | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
-        timeout: float | object = ...,
-        metadata: Sequence[tuple[str, str | bytes]] = (),
-    ) -> ad_group_criterion_service.MutateAdGroupCriteriaResponse: ...
+    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AdGroupCriterionServiceTransport | Callable[..., AdGroupCriterionServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
+    def mutate_ad_group_criteria(self, request: ad_group_criterion_service.MutateAdGroupCriteriaRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[ad_group_criterion_service.AdGroupCriterionOperation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> ad_group_criterion_service.MutateAdGroupCriteriaResponse: ...
     def __enter__(self) -> AdGroupCriterionServiceClient: ...
-    def __exit__(
-        self,
-        type: type[BaseException] | None,
-        value: BaseException | None,
-        traceback: types.TracebackType | None,
-    ) -> None: ...
+    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...

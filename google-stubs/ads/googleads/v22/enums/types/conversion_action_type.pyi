@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class ConversionActionTypeEnum(proto.Message):
     class ConversionActionType(proto.Enum):
         UNSPECIFIED = 0
@@ -51,13 +48,6 @@ class ConversionActionTypeEnum(proto.Message):
         UNIVERSAL_ANALYTICS_TRANSACTION = 39
         GOOGLE_ANALYTICS_4_CUSTOM = 40
         GOOGLE_ANALYTICS_4_PURCHASE = 41
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

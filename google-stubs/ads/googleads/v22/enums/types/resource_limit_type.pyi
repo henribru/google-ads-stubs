@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class ResourceLimitTypeEnum(proto.Message):
     class ResourceLimitType(proto.Enum):
         UNSPECIFIED = 0
@@ -158,13 +155,6 @@ class ResourceLimitTypeEnum(proto.Message):
         WHATSAPP_BUSINESS_MESSAGE_ASSET_LINKS_PER_CAMPAIGN = 189
         WHATSAPP_BUSINESS_MESSAGE_ASSET_LINKS_PER_AD_GROUP = 190
         BRAND_LIST_CRITERIA_PER_AD_GROUP = 193
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

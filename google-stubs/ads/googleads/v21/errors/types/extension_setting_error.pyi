@@ -1,12 +1,9 @@
-from collections.abc import Mapping
-from typing import Any, NoReturn, TypeVar
-
-import google.protobuf.message
 import proto
+import google.protobuf.message
+from typing import Any, TypeVar, NoReturn
 from typing_extensions import Literal
-
+from collections.abc import Mapping
 _M = TypeVar("_M")
-
 class ExtensionSettingErrorEnum(proto.Message):
     class ExtensionSettingError(proto.Enum):
         UNSPECIFIED = 0
@@ -76,13 +73,6 @@ class ExtensionSettingErrorEnum(proto.Message):
         CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 66
         EXTENSION_SETTING_UPDATE_IS_A_NOOP = 67
         DISALLOWED_TEXT = 68
-
-    def __init__(
-        self: _M,
-        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
-        *,
-        ignore_unknown_fields: bool = False,
-    ) -> None: ...
+    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: NoReturn
-    ) -> bool: ...
+    self, key: NoReturn) -> bool: ...

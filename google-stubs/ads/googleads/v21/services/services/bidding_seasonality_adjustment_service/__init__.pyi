@@ -1,11 +1,4 @@
-from .async_client import (
-    BiddingSeasonalityAdjustmentServiceAsyncClient as BiddingSeasonalityAdjustmentServiceAsyncClient,
-)
-from .client import (
-    BiddingSeasonalityAdjustmentServiceClient as BiddingSeasonalityAdjustmentServiceClient,
-)
+from .async_client import BiddingSeasonalityAdjustmentServiceAsyncClient as BiddingSeasonalityAdjustmentServiceAsyncClient
+from .client import BiddingSeasonalityAdjustmentServiceClient as BiddingSeasonalityAdjustmentServiceClient
 
-__all__ = [
-    "BiddingSeasonalityAdjustmentServiceClient",
-    "BiddingSeasonalityAdjustmentServiceAsyncClient",
-]
+__all__ = ['BiddingSeasonalityAdjustmentServiceClient', 'BiddingSeasonalityAdjustmentServiceAsyncClient']
