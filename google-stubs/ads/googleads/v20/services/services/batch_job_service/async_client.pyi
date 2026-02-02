@@ -1,13 +1,19 @@
-from .transports.base import BatchJobServiceTransport
+from typing import Callable, MutableSequence, Sequence
+
 from _typeshed import Incomplete
-from google.ads.googleads.v20.services.services.batch_job_service import pagers
-from google.ads.googleads.v20.services.types import batch_job_service, google_ads_service
 from google.api_core import gapic_v1, operation_async, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
-from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['BatchJobServiceAsyncClient']
+from google.ads.googleads.v20.services.services.batch_job_service import pagers
+from google.ads.googleads.v20.services.types import (
+    batch_job_service,
+    google_ads_service,
+)
+
+from .transports.base import BatchJobServiceTransport
+
+__all__ = ["BatchJobServiceAsyncClient"]
 
 class BatchJobServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -180,7 +186,9 @@ class BatchJobServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: ClientOptions | None = None
+    ): ...
     @property
     def transport(self) -> BatchJobServiceTransport: ...
     @property
@@ -188,10 +196,56 @@ class BatchJobServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | BatchJobServiceTransport | Callable[..., BatchJobServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    async def mutate_batch_job(self, request: batch_job_service.MutateBatchJobRequest | dict | None = None, *, customer_id: str | None = None, operation: batch_job_service.BatchJobOperation | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> batch_job_service.MutateBatchJobResponse: ...
-    async def list_batch_job_results(self, request: batch_job_service.ListBatchJobResultsRequest | dict | None = None, *, resource_name: str | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> pagers.ListBatchJobResultsAsyncPager: ...
-    async def run_batch_job(self, request: batch_job_service.RunBatchJobRequest | dict | None = None, *, resource_name: str | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> operation_async.AsyncOperation: ...
-    async def add_batch_job_operations(self, request: batch_job_service.AddBatchJobOperationsRequest | dict | None = None, *, resource_name: str | None = None, sequence_token: str | None = None, mutate_operations: MutableSequence[google_ads_service.MutateOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> batch_job_service.AddBatchJobOperationsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | BatchJobServiceTransport
+        | Callable[..., BatchJobServiceTransport]
+        | None = "grpc_asyncio",
+        client_options: ClientOptions | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    async def mutate_batch_job(
+        self,
+        request: batch_job_service.MutateBatchJobRequest | dict | None = None,
+        *,
+        customer_id: str | None = None,
+        operation: batch_job_service.BatchJobOperation | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> batch_job_service.MutateBatchJobResponse: ...
+    async def list_batch_job_results(
+        self,
+        request: batch_job_service.ListBatchJobResultsRequest | dict | None = None,
+        *,
+        resource_name: str | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> pagers.ListBatchJobResultsAsyncPager: ...
+    async def run_batch_job(
+        self,
+        request: batch_job_service.RunBatchJobRequest | dict | None = None,
+        *,
+        resource_name: str | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> operation_async.AsyncOperation: ...
+    async def add_batch_job_operations(
+        self,
+        request: batch_job_service.AddBatchJobOperationsRequest | dict | None = None,
+        *,
+        resource_name: str | None = None,
+        sequence_token: str | None = None,
+        mutate_operations: MutableSequence[google_ads_service.MutateOperation]
+        | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> batch_job_service.AddBatchJobOperationsResponse: ...
     async def __aenter__(self) -> BatchJobServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

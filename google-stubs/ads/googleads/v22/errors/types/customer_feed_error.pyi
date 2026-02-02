@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class CustomerFeedErrorEnum(proto.Message):
     class CustomerFeedError(proto.Enum):
         UNSPECIFIED = 0
@@ -15,6 +18,13 @@ class CustomerFeedErrorEnum(proto.Message):
         INVALID_PLACEHOLDER_TYPE = 6
         MISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE = 7
         PLACEHOLDER_TYPE_NOT_ALLOWED_ON_CUSTOMER_FEED = 8
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

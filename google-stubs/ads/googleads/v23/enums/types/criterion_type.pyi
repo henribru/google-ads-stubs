@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class CriterionTypeEnum(proto.Message):
     class CriterionType(proto.Enum):
         UNSPECIFIED = 0
@@ -53,6 +56,13 @@ class CriterionTypeEnum(proto.Message):
         PLACEMENT_LIST = 44
         VERTICAL_ADS_ITEM_GROUP_RULE_LIST = 45
         VERTICAL_ADS_ITEM_GROUP_RULE = 46
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

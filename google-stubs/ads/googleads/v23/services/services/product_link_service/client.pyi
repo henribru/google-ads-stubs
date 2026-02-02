@@ -1,16 +1,25 @@
 import types
-from .transports.base import ProductLinkServiceTransport
-from _typeshed import Incomplete
-from google.ads.googleads.v23.resources.types import product_link as gagr_product_link
-from google.ads.googleads.v23.services.types import product_link_service
-from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
-from google.auth import credentials as ga_credentials
 from typing import Callable, Sequence
 
-__all__ = ['ProductLinkServiceClient']
+from _typeshed import Incomplete
+from google.api_core import (
+    client_options as client_options_lib,
+    gapic_v1,
+    retry as retries,
+)
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v23.resources.types import product_link as gagr_product_link
+from google.ads.googleads.v23.services.types import product_link_service
+
+from .transports.base import ProductLinkServiceTransport
+
+__all__ = ["ProductLinkServiceClient"]
 
 class ProductLinkServiceClientMeta(type):
-    def get_transport_class(cls, label: str | None = None) -> type[ProductLinkServiceTransport]: ...
+    def get_transport_class(
+        cls, label: str | None = None
+    ) -> type[ProductLinkServiceTransport]: ...
 
 class ProductLinkServiceClient(metaclass=ProductLinkServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -51,13 +60,48 @@ class ProductLinkServiceClient(metaclass=ProductLinkServiceClientMeta):
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | ProductLinkServiceTransport | Callable[..., ProductLinkServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    def create_product_link(self, request: product_link_service.CreateProductLinkRequest | dict | None = None, *, customer_id: str | None = None, product_link: gagr_product_link.ProductLink | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> product_link_service.CreateProductLinkResponse: ...
-    def remove_product_link(self, request: product_link_service.RemoveProductLinkRequest | dict | None = None, *, customer_id: str | None = None, resource_name: str | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> product_link_service.RemoveProductLinkResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | ProductLinkServiceTransport
+        | Callable[..., ProductLinkServiceTransport]
+        | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    def create_product_link(
+        self,
+        request: product_link_service.CreateProductLinkRequest | dict | None = None,
+        *,
+        customer_id: str | None = None,
+        product_link: gagr_product_link.ProductLink | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> product_link_service.CreateProductLinkResponse: ...
+    def remove_product_link(
+        self,
+        request: product_link_service.RemoveProductLinkRequest | dict | None = None,
+        *,
+        customer_id: str | None = None,
+        resource_name: str | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> product_link_service.RemoveProductLinkResponse: ...
     def __enter__(self) -> ProductLinkServiceClient: ...
-    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

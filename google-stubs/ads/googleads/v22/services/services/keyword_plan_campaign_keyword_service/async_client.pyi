@@ -1,12 +1,17 @@
-from .transports.base import KeywordPlanCampaignKeywordServiceTransport
+from typing import Callable, MutableSequence, Sequence
+
 from _typeshed import Incomplete
-from google.ads.googleads.v22.services.types import keyword_plan_campaign_keyword_service
 from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
-from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['KeywordPlanCampaignKeywordServiceAsyncClient']
+from google.ads.googleads.v22.services.types import (
+    keyword_plan_campaign_keyword_service,
+)
+
+from .transports.base import KeywordPlanCampaignKeywordServiceTransport
+
+__all__ = ["KeywordPlanCampaignKeywordServiceAsyncClient"]
 
 class KeywordPlanCampaignKeywordServiceAsyncClient:
     DEFAULT_ENDPOINT: Incomplete
@@ -31,7 +36,9 @@ class KeywordPlanCampaignKeywordServiceAsyncClient:
     def from_service_account_file(cls, filename: str, *args, **kwargs): ...
     from_service_account_json = from_service_account_file
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: ClientOptions | None = None
+    ): ...
     @property
     def transport(self) -> KeywordPlanCampaignKeywordServiceTransport: ...
     @property
@@ -39,7 +46,33 @@ class KeywordPlanCampaignKeywordServiceAsyncClient:
     @property
     def universe_domain(self) -> str: ...
     get_transport_class: Incomplete
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | KeywordPlanCampaignKeywordServiceTransport | Callable[..., KeywordPlanCampaignKeywordServiceTransport] | None = 'grpc_asyncio', client_options: ClientOptions | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    async def mutate_keyword_plan_campaign_keywords(self, request: keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsRequest | dict | None = None, *, customer_id: str | None = None, operations: MutableSequence[keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordOperation] | None = None, retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | KeywordPlanCampaignKeywordServiceTransport
+        | Callable[..., KeywordPlanCampaignKeywordServiceTransport]
+        | None = "grpc_asyncio",
+        client_options: ClientOptions | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    async def mutate_keyword_plan_campaign_keywords(
+        self,
+        request: keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        operations: MutableSequence[
+            keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordOperation
+        ]
+        | None = None,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> (
+        keyword_plan_campaign_keyword_service.MutateKeywordPlanCampaignKeywordsResponse
+    ): ...
     async def __aenter__(self) -> KeywordPlanCampaignKeywordServiceAsyncClient: ...
     async def __aexit__(self, exc_type, exc, tb) -> None: ...

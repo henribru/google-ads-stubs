@@ -1,28 +1,72 @@
 import abc
-from _typeshed import Incomplete
-from google.ads.googleads.v23.services.types import benchmarks_service
-from google.api_core import gapic_v1
-from google.auth import credentials as ga_credentials
 from typing import Awaitable, Callable, Sequence
 
-__all__ = ['BenchmarksServiceTransport']
+from _typeshed import Incomplete
+from google.api_core import gapic_v1
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v23.services.types import benchmarks_service
+
+__all__ = ["BenchmarksServiceTransport"]
 
 class BenchmarksServiceTransport(abc.ABC):
     AUTH_SCOPES: Incomplete
     DEFAULT_HOST: str
-    def __init__(self, *, host: str = 'googleads.googleapis.com', credentials: ga_credentials.Credentials | None = None, credentials_file: str | None = None, scopes: Sequence[str] | None = None, quota_project_id: str | None = None, client_info: gapic_v1.client_info.ClientInfo = ..., always_use_jwt_access: bool | None = False, api_audience: str | None = None, **kwargs) -> None: ...
+    def __init__(
+        self,
+        *,
+        host: str = "googleads.googleapis.com",
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+        always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
+        **kwargs,
+    ) -> None: ...
     @property
     def host(self): ...
     def close(self) -> None: ...
     @property
-    def list_benchmarks_available_dates(self) -> Callable[[benchmarks_service.ListBenchmarksAvailableDatesRequest], benchmarks_service.ListBenchmarksAvailableDatesResponse | Awaitable[benchmarks_service.ListBenchmarksAvailableDatesResponse]]: ...
+    def list_benchmarks_available_dates(
+        self,
+    ) -> Callable[
+        [benchmarks_service.ListBenchmarksAvailableDatesRequest],
+        benchmarks_service.ListBenchmarksAvailableDatesResponse
+        | Awaitable[benchmarks_service.ListBenchmarksAvailableDatesResponse],
+    ]: ...
     @property
-    def list_benchmarks_locations(self) -> Callable[[benchmarks_service.ListBenchmarksLocationsRequest], benchmarks_service.ListBenchmarksLocationsResponse | Awaitable[benchmarks_service.ListBenchmarksLocationsResponse]]: ...
+    def list_benchmarks_locations(
+        self,
+    ) -> Callable[
+        [benchmarks_service.ListBenchmarksLocationsRequest],
+        benchmarks_service.ListBenchmarksLocationsResponse
+        | Awaitable[benchmarks_service.ListBenchmarksLocationsResponse],
+    ]: ...
     @property
-    def list_benchmarks_products(self) -> Callable[[benchmarks_service.ListBenchmarksProductsRequest], benchmarks_service.ListBenchmarksProductsResponse | Awaitable[benchmarks_service.ListBenchmarksProductsResponse]]: ...
+    def list_benchmarks_products(
+        self,
+    ) -> Callable[
+        [benchmarks_service.ListBenchmarksProductsRequest],
+        benchmarks_service.ListBenchmarksProductsResponse
+        | Awaitable[benchmarks_service.ListBenchmarksProductsResponse],
+    ]: ...
     @property
-    def list_benchmarks_sources(self) -> Callable[[benchmarks_service.ListBenchmarksSourcesRequest], benchmarks_service.ListBenchmarksSourcesResponse | Awaitable[benchmarks_service.ListBenchmarksSourcesResponse]]: ...
+    def list_benchmarks_sources(
+        self,
+    ) -> Callable[
+        [benchmarks_service.ListBenchmarksSourcesRequest],
+        benchmarks_service.ListBenchmarksSourcesResponse
+        | Awaitable[benchmarks_service.ListBenchmarksSourcesResponse],
+    ]: ...
     @property
-    def generate_benchmarks_metrics(self) -> Callable[[benchmarks_service.GenerateBenchmarksMetricsRequest], benchmarks_service.GenerateBenchmarksMetricsResponse | Awaitable[benchmarks_service.GenerateBenchmarksMetricsResponse]]: ...
+    def generate_benchmarks_metrics(
+        self,
+    ) -> Callable[
+        [benchmarks_service.GenerateBenchmarksMetricsRequest],
+        benchmarks_service.GenerateBenchmarksMetricsResponse
+        | Awaitable[benchmarks_service.GenerateBenchmarksMetricsResponse],
+    ]: ...
     @property
     def kind(self) -> str: ...

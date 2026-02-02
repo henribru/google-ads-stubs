@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class BiddingErrorEnum(proto.Message):
     class BiddingError(proto.Enum):
         UNSPECIFIED = 0
@@ -33,6 +36,13 @@ class BiddingErrorEnum(proto.Message):
         BIDDING_STRATEGY_AND_BUDGET_MUST_BE_REMOVED_TOGETHER = 40
         CPC_BID_FLOOR_MICROS_GREATER_THAN_CPC_BID_CEILING_MICROS = 41
         TARGET_ROAS_TOLERANCE_PERCENT_MILLIS_MUST_BE_INTEGER = 42
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

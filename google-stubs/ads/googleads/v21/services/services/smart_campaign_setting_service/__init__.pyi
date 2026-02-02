@@ -1,4 +1,11 @@
-from .async_client import SmartCampaignSettingServiceAsyncClient as SmartCampaignSettingServiceAsyncClient
-from .client import SmartCampaignSettingServiceClient as SmartCampaignSettingServiceClient
+from .async_client import (
+    SmartCampaignSettingServiceAsyncClient as SmartCampaignSettingServiceAsyncClient,
+)
+from .client import (
+    SmartCampaignSettingServiceClient as SmartCampaignSettingServiceClient,
+)
 
-__all__ = ['SmartCampaignSettingServiceClient', 'SmartCampaignSettingServiceAsyncClient']
+__all__ = [
+    "SmartCampaignSettingServiceClient",
+    "SmartCampaignSettingServiceAsyncClient",
+]

@@ -1,15 +1,24 @@
 import types
-from .transports.base import AssetGenerationServiceTransport
-from _typeshed import Incomplete
-from google.ads.googleads.v23.services.types import asset_generation_service
-from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
-from google.auth import credentials as ga_credentials
 from typing import Callable, Sequence
 
-__all__ = ['AssetGenerationServiceClient']
+from _typeshed import Incomplete
+from google.api_core import (
+    client_options as client_options_lib,
+    gapic_v1,
+    retry as retries,
+)
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v23.services.types import asset_generation_service
+
+from .transports.base import AssetGenerationServiceTransport
+
+__all__ = ["AssetGenerationServiceClient"]
 
 class AssetGenerationServiceClientMeta(type):
-    def get_transport_class(cls, label: str | None = None) -> type[AssetGenerationServiceTransport]: ...
+    def get_transport_class(
+        cls, label: str | None = None
+    ) -> type[AssetGenerationServiceTransport]: ...
 
 class AssetGenerationServiceClient(metaclass=AssetGenerationServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -50,13 +59,44 @@ class AssetGenerationServiceClient(metaclass=AssetGenerationServiceClientMeta):
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | AssetGenerationServiceTransport | Callable[..., AssetGenerationServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    def generate_text(self, request: asset_generation_service.GenerateTextRequest | dict | None = None, *, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> asset_generation_service.GenerateTextResponse: ...
-    def generate_images(self, request: asset_generation_service.GenerateImagesRequest | dict | None = None, *, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> asset_generation_service.GenerateImagesResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | AssetGenerationServiceTransport
+        | Callable[..., AssetGenerationServiceTransport]
+        | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    def generate_text(
+        self,
+        request: asset_generation_service.GenerateTextRequest | dict | None = None,
+        *,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> asset_generation_service.GenerateTextResponse: ...
+    def generate_images(
+        self,
+        request: asset_generation_service.GenerateImagesRequest | dict | None = None,
+        *,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> asset_generation_service.GenerateImagesResponse: ...
     def __enter__(self) -> AssetGenerationServiceClient: ...
-    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

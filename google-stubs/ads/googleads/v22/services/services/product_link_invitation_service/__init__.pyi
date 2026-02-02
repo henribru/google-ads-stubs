@@ -1,4 +1,11 @@
-from .async_client import ProductLinkInvitationServiceAsyncClient as ProductLinkInvitationServiceAsyncClient
-from .client import ProductLinkInvitationServiceClient as ProductLinkInvitationServiceClient
+from .async_client import (
+    ProductLinkInvitationServiceAsyncClient as ProductLinkInvitationServiceAsyncClient,
+)
+from .client import (
+    ProductLinkInvitationServiceClient as ProductLinkInvitationServiceClient,
+)
 
-__all__ = ['ProductLinkInvitationServiceClient', 'ProductLinkInvitationServiceAsyncClient']
+__all__ = [
+    "ProductLinkInvitationServiceClient",
+    "ProductLinkInvitationServiceAsyncClient",
+]

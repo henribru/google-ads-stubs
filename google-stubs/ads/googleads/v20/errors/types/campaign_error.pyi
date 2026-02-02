@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class CampaignErrorEnum(proto.Message):
     class CampaignError(proto.Enum):
         UNSPECIFIED = 0
@@ -100,6 +103,13 @@ class CampaignErrorEnum(proto.Message):
         BRAND_GUIDELINES_UNSUPPORTED_CHANNEL = 102
         CANNOT_ENABLE_BRAND_GUIDELINES_FOR_TRAVEL_GOALS = 103
         CUSTOMER_NOT_ALLOWLISTED_FOR_BRAND_GUIDELINES = 104
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class AssetGenerationErrorEnum(proto.Message):
     class AssetGenerationError(proto.Enum):
         UNSPECIFIED = 0
@@ -43,6 +46,13 @@ class AssetGenerationErrorEnum(proto.Message):
         CONTEXT_ASSET_GROUP_NOT_FOUND = 34
         CONTEXT_AD_GROUP_AD_NOT_FOUND = 35
         CONTEXT_CAMPAIGN_NOT_FOUND = 36
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

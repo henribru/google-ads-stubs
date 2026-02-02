@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class DateErrorEnum(proto.Message):
     class DateError(proto.Enum):
         UNSPECIFIED = 0
@@ -20,6 +23,13 @@ class DateErrorEnum(proto.Message):
         DATE_RANGE_MINIMUM_AND_MAXIMUM_DATES_BOTH_NULL = 10
         DATE_RANGE_ERROR_START_TIME_MUST_BE_THE_START_OF_A_DAY = 13
         DATE_RANGE_ERROR_END_TIME_MUST_BE_THE_END_OF_A_DAY = 14
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...

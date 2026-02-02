@@ -1,32 +1,86 @@
+from typing import Awaitable, Callable, Sequence
+
 import grpc
-from .base import BenchmarksServiceTransport
-from google.ads.googleads.v23.services.types import benchmarks_service
 from google.api_core import gapic_v1
 from google.auth import credentials as ga_credentials
 from grpc.experimental import aio
-from typing import Awaitable, Callable, Sequence
 
-__all__ = ['BenchmarksServiceGrpcAsyncIOTransport']
+from google.ads.googleads.v23.services.types import benchmarks_service
+
+from .base import BenchmarksServiceTransport
+
+__all__ = ["BenchmarksServiceGrpcAsyncIOTransport"]
 
 class _LoggingClientAIOInterceptor(grpc.aio.UnaryUnaryClientInterceptor):
-    async def intercept_unary_unary(self, continuation, client_call_details, request): ...
+    async def intercept_unary_unary(
+        self, continuation, client_call_details, request
+    ): ...
 
 class BenchmarksServiceGrpcAsyncIOTransport(BenchmarksServiceTransport):
     @classmethod
-    def create_channel(cls, host: str = 'googleads.googleapis.com', credentials: ga_credentials.Credentials | None = None, credentials_file: str | None = None, scopes: Sequence[str] | None = None, quota_project_id: str | None = None, **kwargs) -> aio.Channel: ...
-    def __init__(self, *, host: str = 'googleads.googleapis.com', credentials: ga_credentials.Credentials | None = None, credentials_file: str | None = None, scopes: Sequence[str] | None = None, channel: aio.Channel | Callable[..., aio.Channel] | None = None, api_mtls_endpoint: str | None = None, client_cert_source: Callable[[], tuple[bytes, bytes]] | None = None, ssl_channel_credentials: grpc.ChannelCredentials | None = None, client_cert_source_for_mtls: Callable[[], tuple[bytes, bytes]] | None = None, quota_project_id: str | None = None, client_info: gapic_v1.client_info.ClientInfo = ..., always_use_jwt_access: bool | None = False, api_audience: str | None = None) -> None: ...
+    def create_channel(
+        cls,
+        host: str = "googleads.googleapis.com",
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        quota_project_id: str | None = None,
+        **kwargs,
+    ) -> aio.Channel: ...
+    def __init__(
+        self,
+        *,
+        host: str = "googleads.googleapis.com",
+        credentials: ga_credentials.Credentials | None = None,
+        credentials_file: str | None = None,
+        scopes: Sequence[str] | None = None,
+        channel: aio.Channel | Callable[..., aio.Channel] | None = None,
+        api_mtls_endpoint: str | None = None,
+        client_cert_source: Callable[[], tuple[bytes, bytes]] | None = None,
+        ssl_channel_credentials: grpc.ChannelCredentials | None = None,
+        client_cert_source_for_mtls: Callable[[], tuple[bytes, bytes]] | None = None,
+        quota_project_id: str | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+        always_use_jwt_access: bool | None = False,
+        api_audience: str | None = None,
+    ) -> None: ...
     @property
     def grpc_channel(self) -> aio.Channel: ...
     @property
-    def list_benchmarks_available_dates(self) -> Callable[[benchmarks_service.ListBenchmarksAvailableDatesRequest], Awaitable[benchmarks_service.ListBenchmarksAvailableDatesResponse]]: ...
+    def list_benchmarks_available_dates(
+        self,
+    ) -> Callable[
+        [benchmarks_service.ListBenchmarksAvailableDatesRequest],
+        Awaitable[benchmarks_service.ListBenchmarksAvailableDatesResponse],
+    ]: ...
     @property
-    def list_benchmarks_locations(self) -> Callable[[benchmarks_service.ListBenchmarksLocationsRequest], Awaitable[benchmarks_service.ListBenchmarksLocationsResponse]]: ...
+    def list_benchmarks_locations(
+        self,
+    ) -> Callable[
+        [benchmarks_service.ListBenchmarksLocationsRequest],
+        Awaitable[benchmarks_service.ListBenchmarksLocationsResponse],
+    ]: ...
     @property
-    def list_benchmarks_products(self) -> Callable[[benchmarks_service.ListBenchmarksProductsRequest], Awaitable[benchmarks_service.ListBenchmarksProductsResponse]]: ...
+    def list_benchmarks_products(
+        self,
+    ) -> Callable[
+        [benchmarks_service.ListBenchmarksProductsRequest],
+        Awaitable[benchmarks_service.ListBenchmarksProductsResponse],
+    ]: ...
     @property
-    def list_benchmarks_sources(self) -> Callable[[benchmarks_service.ListBenchmarksSourcesRequest], Awaitable[benchmarks_service.ListBenchmarksSourcesResponse]]: ...
+    def list_benchmarks_sources(
+        self,
+    ) -> Callable[
+        [benchmarks_service.ListBenchmarksSourcesRequest],
+        Awaitable[benchmarks_service.ListBenchmarksSourcesResponse],
+    ]: ...
     @property
-    def generate_benchmarks_metrics(self) -> Callable[[benchmarks_service.GenerateBenchmarksMetricsRequest], Awaitable[benchmarks_service.GenerateBenchmarksMetricsResponse]]: ...
+    def generate_benchmarks_metrics(
+        self,
+    ) -> Callable[
+        [benchmarks_service.GenerateBenchmarksMetricsRequest],
+        Awaitable[benchmarks_service.GenerateBenchmarksMetricsResponse],
+    ]: ...
     def close(self): ...
     @property
     def kind(self) -> str: ...

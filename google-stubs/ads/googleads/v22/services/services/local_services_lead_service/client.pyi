@@ -1,15 +1,24 @@
 import types
-from .transports.base import LocalServicesLeadServiceTransport
-from _typeshed import Incomplete
-from google.ads.googleads.v22.services.types import local_services_lead_service
-from google.api_core import client_options as client_options_lib, gapic_v1, retry as retries
-from google.auth import credentials as ga_credentials
 from typing import Callable, MutableSequence, Sequence
 
-__all__ = ['LocalServicesLeadServiceClient']
+from _typeshed import Incomplete
+from google.api_core import (
+    client_options as client_options_lib,
+    gapic_v1,
+    retry as retries,
+)
+from google.auth import credentials as ga_credentials
+
+from google.ads.googleads.v22.services.types import local_services_lead_service
+
+from .transports.base import LocalServicesLeadServiceTransport
+
+__all__ = ["LocalServicesLeadServiceClient"]
 
 class LocalServicesLeadServiceClientMeta(type):
-    def get_transport_class(cls, label: str | None = None) -> type[LocalServicesLeadServiceTransport]: ...
+    def get_transport_class(
+        cls, label: str | None = None
+    ) -> type[LocalServicesLeadServiceTransport]: ...
 
 class LocalServicesLeadServiceClient(metaclass=LocalServicesLeadServiceClientMeta):
     DEFAULT_ENDPOINT: str
@@ -22,7 +31,9 @@ class LocalServicesLeadServiceClient(metaclass=LocalServicesLeadServiceClientMet
     @property
     def transport(self) -> LocalServicesLeadServiceTransport: ...
     @staticmethod
-    def local_services_lead_path(customer_id: str, local_services_lead_id: str) -> str: ...
+    def local_services_lead_path(
+        customer_id: str, local_services_lead_id: str
+    ) -> str: ...
     @staticmethod
     def parse_local_services_lead_path(path: str) -> dict[str, str]: ...
     @staticmethod
@@ -46,13 +57,51 @@ class LocalServicesLeadServiceClient(metaclass=LocalServicesLeadServiceClientMet
     @staticmethod
     def parse_common_location_path(path: str) -> dict[str, str]: ...
     @classmethod
-    def get_mtls_endpoint_and_cert_source(cls, client_options: client_options_lib.ClientOptions | None = None): ...
+    def get_mtls_endpoint_and_cert_source(
+        cls, client_options: client_options_lib.ClientOptions | None = None
+    ): ...
     @property
     def api_endpoint(self): ...
     @property
     def universe_domain(self) -> str: ...
-    def __init__(self, *, credentials: ga_credentials.Credentials | None = None, transport: str | LocalServicesLeadServiceTransport | Callable[..., LocalServicesLeadServiceTransport] | None = None, client_options: client_options_lib.ClientOptions | dict | None = None, client_info: gapic_v1.client_info.ClientInfo = ...) -> None: ...
-    def append_lead_conversation(self, request: local_services_lead_service.AppendLeadConversationRequest | dict | None = None, *, customer_id: str | None = None, conversations: MutableSequence[local_services_lead_service.Conversation] | None = None, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> local_services_lead_service.AppendLeadConversationResponse: ...
-    def provide_lead_feedback(self, request: local_services_lead_service.ProvideLeadFeedbackRequest | dict | None = None, *, retry: retries.Retry | gapic_v1.method._MethodDefault = ..., timeout: float | object = ..., metadata: Sequence[tuple[str, str | bytes]] = ()) -> local_services_lead_service.ProvideLeadFeedbackResponse: ...
+    def __init__(
+        self,
+        *,
+        credentials: ga_credentials.Credentials | None = None,
+        transport: str
+        | LocalServicesLeadServiceTransport
+        | Callable[..., LocalServicesLeadServiceTransport]
+        | None = None,
+        client_options: client_options_lib.ClientOptions | dict | None = None,
+        client_info: gapic_v1.client_info.ClientInfo = ...,
+    ) -> None: ...
+    def append_lead_conversation(
+        self,
+        request: local_services_lead_service.AppendLeadConversationRequest
+        | dict
+        | None = None,
+        *,
+        customer_id: str | None = None,
+        conversations: MutableSequence[local_services_lead_service.Conversation]
+        | None = None,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> local_services_lead_service.AppendLeadConversationResponse: ...
+    def provide_lead_feedback(
+        self,
+        request: local_services_lead_service.ProvideLeadFeedbackRequest
+        | dict
+        | None = None,
+        *,
+        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        timeout: float | object = ...,
+        metadata: Sequence[tuple[str, str | bytes]] = (),
+    ) -> local_services_lead_service.ProvideLeadFeedbackResponse: ...
     def __enter__(self) -> LocalServicesLeadServiceClient: ...
-    def __exit__(self, type: type[BaseException] | None, value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        type: type[BaseException] | None,
+        value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...

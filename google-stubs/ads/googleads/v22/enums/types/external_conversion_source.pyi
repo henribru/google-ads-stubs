@@ -1,9 +1,12 @@
-import proto
-import google.protobuf.message
-from typing import Any, TypeVar, NoReturn
-from typing_extensions import Literal
 from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
 _M = TypeVar("_M")
+
 class ExternalConversionSourceEnum(proto.Message):
     class ExternalConversionSource(proto.Enum):
         UNSPECIFIED = 0
@@ -36,6 +39,13 @@ class ExternalConversionSourceEnum(proto.Message):
         ANALYTICS_SEARCH_ADS_360 = 31
         FIREBASE_SEARCH_ADS_360 = 33
         DISPLAY_AND_VIDEO_360_FLOODLIGHT = 34
-    def __init__(self: _M, mapping: _M | Mapping | google.protobuf.message.Message | None = None, *, ignore_unknown_fields: bool = False, ) -> None: ...
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
     def __contains__(  # type: ignore[override]
-    self, key: NoReturn) -> bool: ...
+        self, key: NoReturn
+    ) -> bool: ...
