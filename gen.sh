@@ -3,12 +3,8 @@
 set -eou pipefail
 shopt -s globstar
 
-# Manual: Clone https://github.com/googleads/google-ads-python
-# Manual: Update google-ads-python dependency
-# Manual: Update the following to match the API versions:
-# - GoogleAdsFailure in errors.pyi
-# - _V, imports and get_type default in client.pyi
-# - _Request in exception_interceptor.pyi, logging_interceptor.pyi and metadata_interceptor.pyi
+uv remove google-ads && uv add google-ads
+git clone https://github.com/googleads/google-ads-python.git || true
 cd google-ads-python
 git restore .
 git pull
@@ -21,8 +17,9 @@ uv run python stubgen.py
 uv run python create_type_stubs.py
 uv run python create_enums.py
 uv run python create_service_overloads.py
+uv run python fixup_versions.py
 ./stubdefaulter.sh
-mv .gitignore gitignore
+mv .gitignore gitignore  # Workaround for ruff's handling of gitignore files with whitelisting.
 uv run ruff check google-stubs --fix --unsafe-fixes
 uv run ruff format google-stubs
 mv gitignore .gitignore

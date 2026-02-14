@@ -15,4 +15,5 @@
 !/create_types_pyi.py
 !/stubdefaulter.sh
 !/stubgen.py
+!/fixup_versions.py
 __pycache__
