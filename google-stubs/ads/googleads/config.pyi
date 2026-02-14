@@ -9,6 +9,7 @@ class _ConfigDataOptional(TypedDict, total=False):
     endpoint: str
     http_proxy: str
     use_cloud_org_for_api_access: bool
+    gaada: str
 
 class _ConfigDataParsedOptional(_ConfigDataOptional, total=False):
     login_customer_id: str
