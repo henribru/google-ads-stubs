@@ -7,8 +7,8 @@ from google.ads.googleads import client
 overload_lines = []
 import_lines = []
 for i, version in enumerate(sorted(client._VALID_API_VERSIONS)):
-
-    for service_package_path in Path("google-ads-python/google/ads/googleads", version, "services/services").iterdir():
+    service_package_paths = sorted(Path("google-ads-python/google/ads/googleads", version, "services/services").iterdir())
+    for service_package_path in service_package_paths:
         if service_package_path.name == "__init__.py":
             continue
         import_path = f"google.ads.googleads.{version}.services.services.{service_package_path.name}"
