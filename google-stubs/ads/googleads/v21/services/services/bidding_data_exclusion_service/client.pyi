@@ -92,7 +92,7 @@ class BiddingDataExclusionServiceClient(
             bidding_data_exclusion_service.BiddingDataExclusionOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> bidding_data_exclusion_service.MutateBiddingDataExclusionsResponse: ...

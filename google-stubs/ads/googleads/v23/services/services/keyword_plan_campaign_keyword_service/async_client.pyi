@@ -68,7 +68,7 @@ class KeywordPlanCampaignKeywordServiceAsyncClient:
             keyword_plan_campaign_keyword_service.KeywordPlanCampaignKeywordOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> (

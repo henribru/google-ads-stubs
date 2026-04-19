@@ -65,7 +65,7 @@ class ExperimentServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[experiment_service.ExperimentOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> experiment_service.MutateExperimentsResponse: ...
@@ -74,7 +74,7 @@ class ExperimentServiceAsyncClient:
         request: experiment_service.EndExperimentRequest | dict | None = None,
         *,
         experiment: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
@@ -85,7 +85,7 @@ class ExperimentServiceAsyncClient:
         | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.ListExperimentAsyncErrorsAsyncPager: ...
@@ -98,7 +98,7 @@ class ExperimentServiceAsyncClient:
             experiment_service.CampaignBudgetMapping
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
@@ -107,7 +107,7 @@ class ExperimentServiceAsyncClient:
         request: experiment_service.ScheduleExperimentRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation_async.AsyncOperation: ...
@@ -116,7 +116,7 @@ class ExperimentServiceAsyncClient:
         request: experiment_service.PromoteExperimentRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation_async.AsyncOperation: ...

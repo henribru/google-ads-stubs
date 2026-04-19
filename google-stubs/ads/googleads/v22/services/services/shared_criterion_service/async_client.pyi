@@ -66,7 +66,7 @@ class SharedCriterionServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[shared_criterion_service.SharedCriterionOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> shared_criterion_service.MutateSharedCriteriaResponse: ...

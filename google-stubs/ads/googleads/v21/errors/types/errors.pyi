@@ -390,7 +390,7 @@ _M = TypeVar("_M")
 class BudgetPerDayMinimumErrorDetails(proto.Message):
     currency_code: str
     budget_per_day_minimum_micros: int
-    minimum_bugdet_amount_micros: int
+    minimum_budget_amount_micros: int
     minimum_budget_total_amount_micros: int
     failed_budget_amount_micros: int
     failed_budget_total_amount_micros: int
@@ -401,7 +401,7 @@ class BudgetPerDayMinimumErrorDetails(proto.Message):
         ignore_unknown_fields: bool = False,
         currency_code: str = ...,
         budget_per_day_minimum_micros: int = ...,
-        minimum_bugdet_amount_micros: int = ...,
+        minimum_budget_amount_micros: int = ...,
         minimum_budget_total_amount_micros: int = ...,
         failed_budget_amount_micros: int = ...,
         failed_budget_total_amount_micros: int = ...,
@@ -411,7 +411,7 @@ class BudgetPerDayMinimumErrorDetails(proto.Message):
         key: Literal[
             "currency_code",
             "budget_per_day_minimum_micros",
-            "minimum_bugdet_amount_micros",
+            "minimum_budget_amount_micros",
             "minimum_budget_total_amount_micros",
             "failed_budget_amount_micros",
             "failed_budget_total_amount_micros",

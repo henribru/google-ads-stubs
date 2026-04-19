@@ -173,6 +173,7 @@ class Forecast(proto.Message):
     total_coview_impressions: int
     conversions: float
     trueview_views: int
+    clicks: int
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -192,6 +193,7 @@ class Forecast(proto.Message):
         total_coview_impressions: int = ...,
         conversions: float = ...,
         trueview_views: int = ...,
+        clicks: int = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -208,6 +210,7 @@ class Forecast(proto.Message):
             "total_coview_impressions",
             "conversions",
             "trueview_views",
+            "clicks",
         ],
     ) -> bool: ...
 
@@ -509,6 +512,7 @@ class PlannableTargeting(proto.Message):
     devices: MutableSequence[DeviceInfo]
     networks: MutableSequence[ReachPlanNetworkEnum.ReachPlanNetwork]
     youtube_select_lineups: MutableSequence[YouTubeSelectLineUp]
+    youtube_select_lineup_targeting: YouTubeSelectLineUpTargeting
     surface_targeting: SurfaceTargetingCombinations
     def __init__(
         self: _M,
@@ -520,6 +524,7 @@ class PlannableTargeting(proto.Message):
         devices: MutableSequence[DeviceInfo] = ...,
         networks: MutableSequence[ReachPlanNetworkEnum.ReachPlanNetwork] = ...,
         youtube_select_lineups: MutableSequence[YouTubeSelectLineUp] = ...,
+        youtube_select_lineup_targeting: YouTubeSelectLineUpTargeting = ...,
         surface_targeting: SurfaceTargetingCombinations = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
@@ -530,6 +535,7 @@ class PlannableTargeting(proto.Message):
             "devices",
             "networks",
             "youtube_select_lineups",
+            "youtube_select_lineup_targeting",
             "surface_targeting",
         ],
     ) -> bool: ...
@@ -642,6 +648,7 @@ class PlannedProductForecast(proto.Message):
     average_frequency: float
     conversions: float
     trueview_views: int
+    clicks: int
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -659,6 +666,7 @@ class PlannedProductForecast(proto.Message):
         average_frequency: float = ...,
         conversions: float = ...,
         trueview_views: int = ...,
+        clicks: int = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -675,6 +683,7 @@ class PlannedProductForecast(proto.Message):
             "average_frequency",
             "conversions",
             "trueview_views",
+            "clicks",
         ],
     ) -> bool: ...
 
@@ -840,6 +849,21 @@ class YouTubeSelectLineUp(proto.Message):
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self, key: Literal["lineup_id", "lineup_name"]
+    ) -> bool: ...
+
+class YouTubeSelectLineUpTargeting(proto.Message):
+    youtube_select_lineups: MutableSequence[YouTubeSelectLineUp]
+    default_youtube_select_lineup: YouTubeSelectLineUp
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        youtube_select_lineups: MutableSequence[YouTubeSelectLineUp] = ...,
+        default_youtube_select_lineup: YouTubeSelectLineUp = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["youtube_select_lineups", "default_youtube_select_lineup"]
     ) -> bool: ...
 
 class YouTubeSelectSettings(proto.Message):

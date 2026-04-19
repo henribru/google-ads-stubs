@@ -92,7 +92,7 @@ class CampaignLabelServiceClient(metaclass=CampaignLabelServiceClientMeta):
         customer_id: str | None = None,
         operations: MutableSequence[campaign_label_service.CampaignLabelOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_label_service.MutateCampaignLabelsResponse: ...

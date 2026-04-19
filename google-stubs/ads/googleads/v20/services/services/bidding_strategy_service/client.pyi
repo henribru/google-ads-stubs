@@ -82,7 +82,7 @@ class BiddingStrategyServiceClient(metaclass=BiddingStrategyServiceClientMeta):
         customer_id: str | None = None,
         operations: MutableSequence[bidding_strategy_service.BiddingStrategyOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> bidding_strategy_service.MutateBiddingStrategiesResponse: ...

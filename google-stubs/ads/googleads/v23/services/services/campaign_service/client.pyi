@@ -111,7 +111,7 @@ class CampaignServiceClient(metaclass=CampaignServiceClientMeta):
         *,
         customer_id: str | None = None,
         operations: MutableSequence[campaign_service.CampaignOperation] | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_service.MutateCampaignsResponse: ...
@@ -121,7 +121,7 @@ class CampaignServiceClient(metaclass=CampaignServiceClientMeta):
         *,
         customer_id: str | None = None,
         operations: MutableSequence[campaign_service.EnableOperation] | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_service.EnablePMaxBrandGuidelinesResponse: ...

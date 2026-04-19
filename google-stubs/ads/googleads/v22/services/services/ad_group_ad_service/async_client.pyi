@@ -68,7 +68,7 @@ class AdGroupAdServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[ad_group_ad_service.AdGroupAdOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> ad_group_ad_service.MutateAdGroupAdsResponse: ...
@@ -81,7 +81,7 @@ class AdGroupAdServiceAsyncClient:
         ad_group_ad: str | None = None,
         assets_with_field_type: MutableSequence[ad_group_ad_service.AssetsWithFieldType]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...

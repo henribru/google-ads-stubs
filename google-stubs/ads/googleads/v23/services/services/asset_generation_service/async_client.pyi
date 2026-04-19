@@ -59,7 +59,7 @@ class AssetGenerationServiceAsyncClient:
         self,
         request: asset_generation_service.GenerateTextRequest | dict | None = None,
         *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> asset_generation_service.GenerateTextResponse: ...
@@ -67,7 +67,7 @@ class AssetGenerationServiceAsyncClient:
         self,
         request: asset_generation_service.GenerateImagesRequest | dict | None = None,
         *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> asset_generation_service.GenerateImagesResponse: ...

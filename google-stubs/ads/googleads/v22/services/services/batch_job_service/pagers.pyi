@@ -1,6 +1,7 @@
 from typing import Any, AsyncIterator, Awaitable, Callable, Iterator, Sequence
 
 from _typeshed import Incomplete
+from google.api_core import gapic_v1, retry as retries, retry_async as retries_async
 
 from google.ads.googleads.v22.services.types import batch_job_service
 
@@ -14,7 +15,7 @@ class ListBatchJobResultsPager:
         request: batch_job_service.ListBatchJobResultsRequest,
         response: batch_job_service.ListBatchJobResultsResponse,
         *,
-        retry: OptionalRetry = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
@@ -30,7 +31,7 @@ class ListBatchJobResultsAsyncPager:
         request: batch_job_service.ListBatchJobResultsRequest,
         response: batch_job_service.ListBatchJobResultsResponse,
         *,
-        retry: OptionalAsyncRetry = ...,
+        retry: retries_async.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...

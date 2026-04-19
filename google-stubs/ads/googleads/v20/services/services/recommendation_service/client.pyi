@@ -108,7 +108,7 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
         customer_id: str | None = None,
         operations: MutableSequence[recommendation_service.ApplyRecommendationOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> recommendation_service.ApplyRecommendationResponse: ...
@@ -123,7 +123,7 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
             recommendation_service.DismissRecommendationRequest.DismissRecommendationOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> recommendation_service.DismissRecommendationResponse: ...
@@ -140,7 +140,7 @@ class RecommendationServiceClient(metaclass=RecommendationServiceClientMeta):
         | None = None,
         advertising_channel_type: gage_advertising_channel_type.AdvertisingChannelTypeEnum.AdvertisingChannelType
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> recommendation_service.GenerateRecommendationsResponse: ...

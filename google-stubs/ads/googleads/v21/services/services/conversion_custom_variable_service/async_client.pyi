@@ -66,7 +66,7 @@ class ConversionCustomVariableServiceAsyncClient:
             conversion_custom_variable_service.ConversionCustomVariableOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> conversion_custom_variable_service.MutateConversionCustomVariablesResponse: ...

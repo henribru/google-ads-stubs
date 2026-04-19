@@ -70,7 +70,7 @@ class ProductLinkInvitationServiceAsyncClient:
         customer_id: str | None = None,
         product_link_invitation: gagr_product_link_invitation.ProductLinkInvitation
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> product_link_invitation_service.CreateProductLinkInvitationResponse: ...
@@ -84,7 +84,7 @@ class ProductLinkInvitationServiceAsyncClient:
         product_link_invitation_status: gage_product_link_invitation_status.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus
         | None = None,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> product_link_invitation_service.UpdateProductLinkInvitationResponse: ...
@@ -96,7 +96,7 @@ class ProductLinkInvitationServiceAsyncClient:
         *,
         customer_id: str | None = None,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> product_link_invitation_service.RemoveProductLinkInvitationResponse: ...

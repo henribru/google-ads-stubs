@@ -62,7 +62,7 @@ class ProductLinkServiceAsyncClient:
         *,
         customer_id: str | None = None,
         product_link: gagr_product_link.ProductLink | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> product_link_service.CreateProductLinkResponse: ...
@@ -72,7 +72,7 @@ class ProductLinkServiceAsyncClient:
         *,
         customer_id: str | None = None,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> product_link_service.RemoveProductLinkResponse: ...

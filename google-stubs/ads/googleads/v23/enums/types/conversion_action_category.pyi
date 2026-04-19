@@ -32,6 +32,7 @@ class ConversionActionCategoryEnum(proto.Message):
         STORE_SALE = 21
         QUALIFIED_LEAD = 22
         CONVERTED_LEAD = 23
+        YOUTUBE_FOLLOW_ON_VIEWS = 24
 
     def __init__(
         self: _M,

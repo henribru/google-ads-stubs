@@ -82,7 +82,7 @@ class CampaignGroupServiceClient(metaclass=CampaignGroupServiceClientMeta):
         customer_id: str | None = None,
         operations: MutableSequence[campaign_group_service.CampaignGroupOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_group_service.MutateCampaignGroupsResponse: ...

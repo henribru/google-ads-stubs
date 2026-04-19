@@ -68,7 +68,7 @@ class AssetGroupListingGroupFilterServiceAsyncClient:
             asset_group_listing_group_filter_service.AssetGroupListingGroupFilterOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> asset_group_listing_group_filter_service.MutateAssetGroupListingGroupFiltersResponse: ...

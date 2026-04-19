@@ -475,7 +475,7 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         *,
         customer_id: str | None = None,
         operation: batch_job_service.BatchJobOperation | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> batch_job_service.MutateBatchJobResponse: ...
@@ -484,7 +484,7 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         request: batch_job_service.ListBatchJobResultsRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.ListBatchJobResultsPager: ...
@@ -493,7 +493,7 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         request: batch_job_service.RunBatchJobRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation.Operation: ...
@@ -505,7 +505,7 @@ class BatchJobServiceClient(metaclass=BatchJobServiceClientMeta):
         sequence_token: str | None = None,
         mutate_operations: MutableSequence[google_ads_service.MutateOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> batch_job_service.AddBatchJobOperationsResponse: ...

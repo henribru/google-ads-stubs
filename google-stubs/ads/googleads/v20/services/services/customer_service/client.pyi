@@ -84,7 +84,7 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
         *,
         customer_id: str | None = None,
         operation: customer_service.CustomerOperation | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_service.MutateCustomerResponse: ...
@@ -92,7 +92,7 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
         self,
         request: customer_service.ListAccessibleCustomersRequest | dict | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_service.ListAccessibleCustomersResponse: ...
@@ -102,7 +102,7 @@ class CustomerServiceClient(metaclass=CustomerServiceClientMeta):
         *,
         customer_id: str | None = None,
         customer_client: customer.Customer | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_service.CreateCustomerClientResponse: ...

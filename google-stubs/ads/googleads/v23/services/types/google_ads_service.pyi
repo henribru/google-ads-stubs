@@ -7,6 +7,14 @@ from google.protobuf.field_mask_pb2 import FieldMask
 from google.rpc.status_pb2 import Status
 from typing_extensions import Literal
 
+from google.ads.googleads.v23.actions.types.book_campaigns import (
+    BookCampaignsOperation,
+    BookCampaignsResult,
+)
+from google.ads.googleads.v23.actions.types.quote_campaigns import (
+    QuoteCampaignsOperation,
+    QuoteCampaignsResult,
+)
 from google.ads.googleads.v23.common.types.metrics import Metrics
 from google.ads.googleads.v23.common.types.segments import Segments
 from google.ads.googleads.v23.enums.types.response_content_type import (
@@ -72,6 +80,9 @@ from google.ads.googleads.v23.resources.types.android_privacy_shared_key_google_
 )
 from google.ads.googleads.v23.resources.types.android_privacy_shared_key_google_network_type import (
     AndroidPrivacySharedKeyGoogleNetworkType,
+)
+from google.ads.googleads.v23.resources.types.app_top_combination_view import (
+    AppTopCombinationView,
 )
 from google.ads.googleads.v23.resources.types.applied_incentive import AppliedIncentive
 from google.ads.googleads.v23.resources.types.asset import Asset
@@ -390,7 +401,11 @@ from google.ads.googleads.v23.resources.types.user_list_customer_type import (
 )
 from google.ads.googleads.v23.resources.types.user_location_view import UserLocationView
 from google.ads.googleads.v23.resources.types.video import Video
+from google.ads.googleads.v23.resources.types.video_enhancement import VideoEnhancement
 from google.ads.googleads.v23.resources.types.webpage_view import WebpageView
+from google.ads.googleads.v23.resources.types.youtube_video_upload import (
+    YouTubeVideoUpload,
+)
 from google.ads.googleads.v23.services.types.ad_group_ad_label_service import (
     AdGroupAdLabelOperation,
     MutateAdGroupAdLabelResult,
@@ -650,6 +665,7 @@ class GoogleAdsRow(proto.Message):
     ad_group: AdGroup
     ad_group_ad: AdGroupAd
     ad_group_ad_asset_combination_view: AdGroupAdAssetCombinationView
+    app_top_combination_view: AppTopCombinationView
     ad_group_ad_asset_view: AdGroupAdAssetView
     ad_group_ad_label: AdGroupAdLabel
     ad_group_asset: AdGroupAsset
@@ -815,6 +831,7 @@ class GoogleAdsRow(proto.Message):
     remarketing_action: RemarketingAction
     topic_constant: TopicConstant
     video: Video
+    video_enhancement: VideoEnhancement
     webpage_view: WebpageView
     lead_form_submission_data: LeadFormSubmissionData
     local_services_lead: LocalServicesLead
@@ -824,6 +841,7 @@ class GoogleAdsRow(proto.Message):
     android_privacy_shared_key_google_network_type: (
         AndroidPrivacySharedKeyGoogleNetworkType
     )
+    you_tube_video_upload: YouTubeVideoUpload
     applied_incentive: AppliedIncentive
     metrics: Metrics
     segments: Segments
@@ -839,6 +857,7 @@ class GoogleAdsRow(proto.Message):
         ad_group: AdGroup = ...,
         ad_group_ad: AdGroupAd = ...,
         ad_group_ad_asset_combination_view: AdGroupAdAssetCombinationView = ...,
+        app_top_combination_view: AppTopCombinationView = ...,
         ad_group_ad_asset_view: AdGroupAdAssetView = ...,
         ad_group_ad_label: AdGroupAdLabel = ...,
         ad_group_asset: AdGroupAsset = ...,
@@ -1002,6 +1021,7 @@ class GoogleAdsRow(proto.Message):
         remarketing_action: RemarketingAction = ...,
         topic_constant: TopicConstant = ...,
         video: Video = ...,
+        video_enhancement: VideoEnhancement = ...,
         webpage_view: WebpageView = ...,
         lead_form_submission_data: LeadFormSubmissionData = ...,
         local_services_lead: LocalServicesLead = ...,
@@ -1009,6 +1029,7 @@ class GoogleAdsRow(proto.Message):
         android_privacy_shared_key_google_ad_group: AndroidPrivacySharedKeyGoogleAdGroup = ...,
         android_privacy_shared_key_google_campaign: AndroidPrivacySharedKeyGoogleCampaign = ...,
         android_privacy_shared_key_google_network_type: AndroidPrivacySharedKeyGoogleNetworkType = ...,
+        you_tube_video_upload: YouTubeVideoUpload = ...,
         applied_incentive: AppliedIncentive = ...,
         metrics: Metrics = ...,
         segments: Segments = ...,
@@ -1023,6 +1044,7 @@ class GoogleAdsRow(proto.Message):
             "ad_group",
             "ad_group_ad",
             "ad_group_ad_asset_combination_view",
+            "app_top_combination_view",
             "ad_group_ad_asset_view",
             "ad_group_ad_label",
             "ad_group_asset",
@@ -1186,6 +1208,7 @@ class GoogleAdsRow(proto.Message):
             "remarketing_action",
             "topic_constant",
             "video",
+            "video_enhancement",
             "webpage_view",
             "lead_form_submission_data",
             "local_services_lead",
@@ -1193,6 +1216,7 @@ class GoogleAdsRow(proto.Message):
             "android_privacy_shared_key_google_ad_group",
             "android_privacy_shared_key_google_campaign",
             "android_privacy_shared_key_google_network_type",
+            "you_tube_video_upload",
             "applied_incentive",
             "metrics",
             "segments",
@@ -1296,6 +1320,7 @@ class MutateOperation(proto.Message):
     bidding_data_exclusion_operation: BiddingDataExclusionOperation
     bidding_seasonality_adjustment_operation: BiddingSeasonalityAdjustmentOperation
     bidding_strategy_operation: BiddingStrategyOperation
+    book_campaigns_operation: BookCampaignsOperation
     campaign_asset_operation: CampaignAssetOperation
     campaign_asset_set_operation: CampaignAssetSetOperation
     campaign_bid_modifier_operation: CampaignBidModifierOperation
@@ -1329,6 +1354,7 @@ class MutateOperation(proto.Message):
     keyword_plan_campaign_operation: KeywordPlanCampaignOperation
     keyword_plan_operation: KeywordPlanOperation
     label_operation: LabelOperation
+    quote_campaigns_operation: QuoteCampaignsOperation
     recommendation_subscription_operation: RecommendationSubscriptionOperation
     remarketing_action_operation: RemarketingActionOperation
     shared_criterion_operation: SharedCriterionOperation
@@ -1363,6 +1389,7 @@ class MutateOperation(proto.Message):
         bidding_data_exclusion_operation: BiddingDataExclusionOperation = ...,
         bidding_seasonality_adjustment_operation: BiddingSeasonalityAdjustmentOperation = ...,
         bidding_strategy_operation: BiddingStrategyOperation = ...,
+        book_campaigns_operation: BookCampaignsOperation = ...,
         campaign_asset_operation: CampaignAssetOperation = ...,
         campaign_asset_set_operation: CampaignAssetSetOperation = ...,
         campaign_bid_modifier_operation: CampaignBidModifierOperation = ...,
@@ -1396,6 +1423,7 @@ class MutateOperation(proto.Message):
         keyword_plan_campaign_operation: KeywordPlanCampaignOperation = ...,
         keyword_plan_operation: KeywordPlanOperation = ...,
         label_operation: LabelOperation = ...,
+        quote_campaigns_operation: QuoteCampaignsOperation = ...,
         recommendation_subscription_operation: RecommendationSubscriptionOperation = ...,
         remarketing_action_operation: RemarketingActionOperation = ...,
         shared_criterion_operation: SharedCriterionOperation = ...,
@@ -1429,6 +1457,7 @@ class MutateOperation(proto.Message):
             "bidding_data_exclusion_operation",
             "bidding_seasonality_adjustment_operation",
             "bidding_strategy_operation",
+            "book_campaigns_operation",
             "campaign_asset_operation",
             "campaign_asset_set_operation",
             "campaign_bid_modifier_operation",
@@ -1462,6 +1491,7 @@ class MutateOperation(proto.Message):
             "keyword_plan_campaign_operation",
             "keyword_plan_operation",
             "label_operation",
+            "quote_campaigns_operation",
             "recommendation_subscription_operation",
             "remarketing_action_operation",
             "shared_criterion_operation",
@@ -1495,6 +1525,7 @@ class MutateOperationResponse(proto.Message):
     bidding_data_exclusion_result: MutateBiddingDataExclusionsResult
     bidding_seasonality_adjustment_result: MutateBiddingSeasonalityAdjustmentsResult
     bidding_strategy_result: MutateBiddingStrategyResult
+    book_campaigns_result: BookCampaignsResult
     campaign_asset_result: MutateCampaignAssetResult
     campaign_asset_set_result: MutateCampaignAssetSetResult
     campaign_bid_modifier_result: MutateCampaignBidModifierResult
@@ -1528,6 +1559,7 @@ class MutateOperationResponse(proto.Message):
     keyword_plan_campaign_keyword_result: MutateKeywordPlanCampaignKeywordResult
     keyword_plan_result: MutateKeywordPlansResult
     label_result: MutateLabelResult
+    quote_campaigns_result: QuoteCampaignsResult
     recommendation_subscription_result: MutateRecommendationSubscriptionResult
     remarketing_action_result: MutateRemarketingActionResult
     shared_criterion_result: MutateSharedCriterionResult
@@ -1562,6 +1594,7 @@ class MutateOperationResponse(proto.Message):
         bidding_data_exclusion_result: MutateBiddingDataExclusionsResult = ...,
         bidding_seasonality_adjustment_result: MutateBiddingSeasonalityAdjustmentsResult = ...,
         bidding_strategy_result: MutateBiddingStrategyResult = ...,
+        book_campaigns_result: BookCampaignsResult = ...,
         campaign_asset_result: MutateCampaignAssetResult = ...,
         campaign_asset_set_result: MutateCampaignAssetSetResult = ...,
         campaign_bid_modifier_result: MutateCampaignBidModifierResult = ...,
@@ -1595,6 +1628,7 @@ class MutateOperationResponse(proto.Message):
         keyword_plan_campaign_keyword_result: MutateKeywordPlanCampaignKeywordResult = ...,
         keyword_plan_result: MutateKeywordPlansResult = ...,
         label_result: MutateLabelResult = ...,
+        quote_campaigns_result: QuoteCampaignsResult = ...,
         recommendation_subscription_result: MutateRecommendationSubscriptionResult = ...,
         remarketing_action_result: MutateRemarketingActionResult = ...,
         shared_criterion_result: MutateSharedCriterionResult = ...,
@@ -1628,6 +1662,7 @@ class MutateOperationResponse(proto.Message):
             "bidding_data_exclusion_result",
             "bidding_seasonality_adjustment_result",
             "bidding_strategy_result",
+            "book_campaigns_result",
             "campaign_asset_result",
             "campaign_asset_set_result",
             "campaign_bid_modifier_result",
@@ -1661,6 +1696,7 @@ class MutateOperationResponse(proto.Message):
             "keyword_plan_campaign_keyword_result",
             "keyword_plan_result",
             "label_result",
+            "quote_campaigns_result",
             "recommendation_subscription_result",
             "remarketing_action_result",
             "shared_criterion_result",

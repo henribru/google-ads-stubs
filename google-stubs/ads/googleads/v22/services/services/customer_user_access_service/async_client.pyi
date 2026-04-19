@@ -62,7 +62,7 @@ class CustomerUserAccessServiceAsyncClient:
         customer_id: str | None = None,
         operation: customer_user_access_service.CustomerUserAccessOperation
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_user_access_service.MutateCustomerUserAccessResponse: ...

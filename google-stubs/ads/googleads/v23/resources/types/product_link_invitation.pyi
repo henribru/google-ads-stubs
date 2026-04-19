@@ -27,6 +27,19 @@ class AdvertisingPartnerLinkInvitationIdentifier(proto.Message):
         self, key: Literal["customer"]
     ) -> bool: ...
 
+class AdvertisingPartnerLinkInvitationProperties(proto.Message):
+    allowed_domain: str
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        allowed_domain: str = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["allowed_domain"]
+    ) -> bool: ...
+
 class HotelCenterLinkInvitationIdentifier(proto.Message):
     hotel_center_id: int
     def __init__(
@@ -61,6 +74,7 @@ class ProductLinkInvitation(proto.Message):
     hotel_center: HotelCenterLinkInvitationIdentifier
     merchant_center: MerchantCenterLinkInvitationIdentifier
     advertising_partner: AdvertisingPartnerLinkInvitationIdentifier
+    advertising_partner_properties: AdvertisingPartnerLinkInvitationProperties
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -73,6 +87,7 @@ class ProductLinkInvitation(proto.Message):
         hotel_center: HotelCenterLinkInvitationIdentifier = ...,
         merchant_center: MerchantCenterLinkInvitationIdentifier = ...,
         advertising_partner: AdvertisingPartnerLinkInvitationIdentifier = ...,
+        advertising_partner_properties: AdvertisingPartnerLinkInvitationProperties = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -84,5 +99,6 @@ class ProductLinkInvitation(proto.Message):
             "hotel_center",
             "merchant_center",
             "advertising_partner",
+            "advertising_partner_properties",
         ],
     ) -> bool: ...

@@ -92,7 +92,7 @@ class CustomerCustomizerServiceClient(metaclass=CustomerCustomizerServiceClientM
             customer_customizer_service.CustomerCustomizerOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_customizer_service.MutateCustomerCustomizersResponse: ...

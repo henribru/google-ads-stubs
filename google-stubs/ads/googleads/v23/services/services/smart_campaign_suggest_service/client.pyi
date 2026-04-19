@@ -87,7 +87,7 @@ class SmartCampaignSuggestServiceClient(
         | dict
         | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignBudgetOptionsResponse: ...
@@ -100,7 +100,7 @@ class SmartCampaignSuggestServiceClient(
         customer_id: str | None = None,
         suggestion_info: smart_campaign_suggest_service.SmartCampaignSuggestionInfo
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> smart_campaign_suggest_service.SuggestSmartCampaignAdResponse: ...
@@ -113,7 +113,7 @@ class SmartCampaignSuggestServiceClient(
         customer_id: str | None = None,
         suggestion_info: smart_campaign_suggest_service.SmartCampaignSuggestionInfo
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> smart_campaign_suggest_service.SuggestKeywordThemesResponse: ...

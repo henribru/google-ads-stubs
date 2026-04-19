@@ -84,7 +84,7 @@ class PaymentsAccountServiceClient(metaclass=PaymentsAccountServiceClientMeta):
         | None = None,
         *,
         customer_id: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> payments_account_service.ListPaymentsAccountsResponse: ...

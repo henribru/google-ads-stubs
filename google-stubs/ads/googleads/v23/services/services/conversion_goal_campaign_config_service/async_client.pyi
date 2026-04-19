@@ -70,7 +70,7 @@ class ConversionGoalCampaignConfigServiceAsyncClient:
             conversion_goal_campaign_config_service.ConversionGoalCampaignConfigOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> conversion_goal_campaign_config_service.MutateConversionGoalCampaignConfigsResponse: ...

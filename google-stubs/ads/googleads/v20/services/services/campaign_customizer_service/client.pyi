@@ -96,7 +96,7 @@ class CampaignCustomizerServiceClient(metaclass=CampaignCustomizerServiceClientM
             campaign_customizer_service.CampaignCustomizerOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_customizer_service.MutateCampaignCustomizersResponse: ...

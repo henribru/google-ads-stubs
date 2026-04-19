@@ -105,7 +105,7 @@ class AdGroupCriterionCustomizerServiceClient(
             ad_group_criterion_customizer_service.AdGroupCriterionCustomizerOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> (

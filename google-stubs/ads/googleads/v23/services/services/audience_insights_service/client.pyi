@@ -80,7 +80,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         customer_id: str | None = None,
         baseline_audience: audience_insights_service.InsightsAudience | None = None,
         specific_audience: audience_insights_service.InsightsAudience | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> audience_insights_service.GenerateInsightsFinderReportResponse: ...
@@ -96,7 +96,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         ]
         | None = None,
         query_text: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> audience_insights_service.ListAudienceInsightsAttributesResponse: ...
@@ -106,7 +106,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         | dict
         | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> audience_insights_service.ListInsightsEligibleDatesResponse: ...
@@ -122,7 +122,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
             audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> audience_insights_service.GenerateAudienceCompositionInsightsResponse: ...
@@ -135,7 +135,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         customer_id: str | None = None,
         audience_description: audience_insights_service.InsightsAudienceDescription
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> audience_insights_service.GenerateAudienceDefinitionResponse: ...
@@ -145,7 +145,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         | dict
         | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> audience_insights_service.GenerateSuggestedTargetingInsightsResponse: ...
@@ -163,7 +163,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
             audience_insights_dimension.AudienceInsightsDimensionEnum.AudienceInsightsDimension
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> audience_insights_service.GenerateAudienceOverlapInsightsResponse: ...
@@ -176,7 +176,7 @@ class AudienceInsightsServiceClient(metaclass=AudienceInsightsServiceClientMeta)
         customer_id: str | None = None,
         audiences: MutableSequence[audience_insights_service.InsightsAudience]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> audience_insights_service.GenerateTargetingSuggestionMetricsResponse: ...

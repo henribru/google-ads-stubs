@@ -65,7 +65,7 @@ class AutomaticallyCreatedAssetRemovalServiceAsyncClient:
         ]
         | None = None,
         partial_failure: bool | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> automatically_created_asset_removal_service.RemoveCampaignAutomaticallyCreatedAssetResponse: ...

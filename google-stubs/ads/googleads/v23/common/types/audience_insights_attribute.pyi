@@ -189,6 +189,19 @@ class AudienceInsightsLineup(proto.Message):
         self, key: Literal["lineup_id"]
     ) -> bool: ...
 
+class InsightsAudienceAttributeGroup(proto.Message):
+    attributes: MutableSequence[AudienceInsightsAttribute]
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        attributes: MutableSequence[AudienceInsightsAttribute] = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["attributes"]
+    ) -> bool: ...
+
 class KnowledgeGraphAttributeMetadata(proto.Message):
     entity_capabilities: MutableSequence[
         InsightsKnowledgeGraphEntityCapabilitiesEnum.InsightsKnowledgeGraphEntityCapabilities

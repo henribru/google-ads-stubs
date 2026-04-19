@@ -77,7 +77,7 @@ class BenchmarksServiceClient(metaclass=BenchmarksServiceClientMeta):
         | dict
         | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.ListBenchmarksAvailableDatesResponse: ...
@@ -85,7 +85,7 @@ class BenchmarksServiceClient(metaclass=BenchmarksServiceClientMeta):
         self,
         request: benchmarks_service.ListBenchmarksLocationsRequest | dict | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.ListBenchmarksLocationsResponse: ...
@@ -93,7 +93,7 @@ class BenchmarksServiceClient(metaclass=BenchmarksServiceClientMeta):
         self,
         request: benchmarks_service.ListBenchmarksProductsRequest | dict | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.ListBenchmarksProductsResponse: ...
@@ -105,7 +105,7 @@ class BenchmarksServiceClient(metaclass=BenchmarksServiceClientMeta):
             benchmarks_source_type.BenchmarksSourceTypeEnum.BenchmarksSourceType
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.ListBenchmarksSourcesResponse: ...
@@ -119,7 +119,7 @@ class BenchmarksServiceClient(metaclass=BenchmarksServiceClientMeta):
         location: criteria.LocationInfo | None = None,
         benchmarks_source: benchmarks_service.BenchmarksSource | None = None,
         product_filter: benchmarks_service.ProductFilter | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.GenerateBenchmarksMetricsResponse: ...

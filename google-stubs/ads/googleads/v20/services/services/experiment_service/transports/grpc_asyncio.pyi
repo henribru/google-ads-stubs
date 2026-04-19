@@ -1,10 +1,10 @@
 from typing import Awaitable, Callable, Sequence
 
+import google.protobuf.empty_pb2 as empty_pb2
 import grpc
 from google.api_core import gapic_v1, operations_v1
 from google.auth import credentials as ga_credentials
 from google.longrunning import operations_pb2
-from google.protobuf import empty_pb2
 from grpc.experimental import aio  # type: ignore[attr-defined]
 
 from google.ads.googleads.v20.services.types import experiment_service

@@ -63,7 +63,7 @@ class DataLinkServiceAsyncClient:
         *,
         customer_id: str | None = None,
         data_link: gagr_data_link.DataLink | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> data_link_service.CreateDataLinkResponse: ...
@@ -73,7 +73,7 @@ class DataLinkServiceAsyncClient:
         *,
         customer_id: str | None = None,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> data_link_service.RemoveDataLinkResponse: ...
@@ -85,7 +85,7 @@ class DataLinkServiceAsyncClient:
         data_link_status: gage_data_link_status.DataLinkStatusEnum.DataLinkStatus
         | None = None,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> data_link_service.UpdateDataLinkResponse: ...

@@ -82,7 +82,7 @@ class InvoiceServiceClient(metaclass=InvoiceServiceClientMeta):
         billing_setup: str | None = None,
         issue_year: str | None = None,
         issue_month: month_of_year.MonthOfYearEnum.MonthOfYear | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> invoice_service.ListInvoicesResponse: ...

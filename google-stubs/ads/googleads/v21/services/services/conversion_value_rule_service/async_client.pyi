@@ -72,7 +72,7 @@ class ConversionValueRuleServiceAsyncClient:
             conversion_value_rule_service.ConversionValueRuleOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> conversion_value_rule_service.MutateConversionValueRulesResponse: ...

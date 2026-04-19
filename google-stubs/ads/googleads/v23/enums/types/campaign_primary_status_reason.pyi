@@ -49,6 +49,10 @@ class CampaignPrimaryStatusReasonEnum(proto.Message):
         NO_ASSET_GROUPS = 37
         ASSET_GROUPS_PAUSED = 38
         MISSING_LOCATION_TARGETING = 39
+        CAMPAIGN_NOT_BOOKED = 40
+        BOOKING_HOLD_EXPIRING = 41
+        BOOKING_HOLD_EXPIRED = 42
+        BOOKING_CANCELLED = 43
 
     def __init__(
         self: _M,

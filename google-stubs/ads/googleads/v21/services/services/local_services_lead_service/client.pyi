@@ -84,7 +84,7 @@ class LocalServicesLeadServiceClient(metaclass=LocalServicesLeadServiceClientMet
         customer_id: str | None = None,
         conversations: MutableSequence[local_services_lead_service.Conversation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> local_services_lead_service.AppendLeadConversationResponse: ...
@@ -94,7 +94,7 @@ class LocalServicesLeadServiceClient(metaclass=LocalServicesLeadServiceClientMet
         | dict
         | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> local_services_lead_service.ProvideLeadFeedbackResponse: ...

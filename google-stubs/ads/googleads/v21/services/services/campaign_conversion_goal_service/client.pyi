@@ -92,7 +92,7 @@ class CampaignConversionGoalServiceClient(
             campaign_conversion_goal_service.CampaignConversionGoalOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_conversion_goal_service.MutateCampaignConversionGoalsResponse: ...

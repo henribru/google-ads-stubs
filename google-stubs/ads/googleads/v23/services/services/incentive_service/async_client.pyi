@@ -55,7 +55,7 @@ class IncentiveServiceAsyncClient:
         self,
         request: incentive_service.FetchIncentiveRequest | dict | None = None,
         *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> incentive_service.FetchIncentiveResponse: ...
@@ -64,7 +64,7 @@ class IncentiveServiceAsyncClient:
         request: incentive_service.ApplyIncentiveRequest | dict | None = None,
         *,
         country_code: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> incentive_service.ApplyIncentiveResponse: ...

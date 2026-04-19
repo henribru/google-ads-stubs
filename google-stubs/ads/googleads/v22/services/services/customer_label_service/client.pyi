@@ -90,7 +90,7 @@ class CustomerLabelServiceClient(metaclass=CustomerLabelServiceClientMeta):
         customer_id: str | None = None,
         operations: MutableSequence[customer_label_service.CustomerLabelOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_label_service.MutateCustomerLabelsResponse: ...

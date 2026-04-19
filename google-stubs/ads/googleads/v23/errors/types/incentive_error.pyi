@@ -12,6 +12,8 @@ class IncentiveErrorEnum(proto.Message):
         UNSPECIFIED = 0
         UNKNOWN = 1
         INVALID_INCENTIVE_ID = 2
+        MAX_INCENTIVES_REDEEMED = 3
+        ACCOUNT_TOO_OLD = 4
 
     def __init__(
         self: _M,

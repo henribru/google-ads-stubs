@@ -62,6 +62,7 @@ from google.ads.googleads.v23.enums.types.bidding_strategy_system_status import 
 from google.ads.googleads.v23.enums.types.bidding_strategy_type import (
     BiddingStrategyTypeEnum,
 )
+from google.ads.googleads.v23.enums.types.booking_status import BookingStatusEnum
 from google.ads.googleads.v23.enums.types.brand_safety_suitability import (
     BrandSafetySuitabilityEnum,
 )
@@ -87,6 +88,9 @@ from google.ads.googleads.v23.enums.types.eu_political_advertising_status import
 from google.ads.googleads.v23.enums.types.listing_type import ListingTypeEnum
 from google.ads.googleads.v23.enums.types.location_source_type import (
     LocationSourceTypeEnum,
+)
+from google.ads.googleads.v23.enums.types.messaging_restriction_type import (
+    MessagingRestrictionTypeEnum,
 )
 from google.ads.googleads.v23.enums.types.negative_geo_target_type import (
     NegativeGeoTargetTypeEnum,
@@ -276,15 +280,17 @@ class Campaign(proto.Message):
 
     class HotelSettingInfo(proto.Message):
         hotel_center_id: int
+        disable_hotel_setting: bool
         def __init__(
             self: _M,
             mapping: _M | Mapping | google.protobuf.message.Message | None = None,
             *,
             ignore_unknown_fields: bool = False,
             hotel_center_id: int = ...,
+            disable_hotel_setting: bool = ...,
         ) -> None: ...
         def __contains__(  # type: ignore[override]
-            self, key: Literal["hotel_center_id"]
+            self, key: Literal["hotel_center_id", "disable_hotel_setting"]
         ) -> bool: ...
 
     class LocalCampaignSetting(proto.Message):
@@ -311,6 +317,21 @@ class Campaign(proto.Message):
         ) -> None: ...
         def __contains__(  # type: ignore[override]
             self, key: Literal["category_bids"]
+        ) -> bool: ...
+
+    class MessagingRestriction(proto.Message):
+        restriction_text: str
+        restriction_type: MessagingRestrictionTypeEnum.MessagingRestrictionType
+        def __init__(
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+            *,
+            ignore_unknown_fields: bool = False,
+            restriction_text: str = ...,
+            restriction_type: MessagingRestrictionTypeEnum.MessagingRestrictionType = ...,
+        ) -> None: ...
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["restriction_text", "restriction_type"]
         ) -> bool: ...
 
     class NetworkSettings(proto.Message):
@@ -452,6 +473,23 @@ class Campaign(proto.Message):
             ],
         ) -> bool: ...
 
+    class TextGuidelines(proto.Message):
+        term_exclusions: MutableSequence[str]
+        messaging_restrictions: MutableSequence[Campaign.MessagingRestriction]
+        def __init__(
+            self: _M,
+            mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+            *,
+            ignore_unknown_fields: bool = False,
+            term_exclusions: MutableSequence[str] = ...,
+            messaging_restrictions: MutableSequence[
+                Campaign.MessagingRestriction
+            ] = ...,
+        ) -> None: ...
+        def __contains__(  # type: ignore[override]
+            self, key: Literal["term_exclusions", "messaging_restrictions"]
+        ) -> bool: ...
+
     class TrackingSetting(proto.Message):
         tracking_url: str
         def __init__(
@@ -496,6 +534,26 @@ class Campaign(proto.Message):
         ) -> bool: ...
 
     class VideoCampaignSettings(proto.Message):
+        class BookingDetails(proto.Message):
+            status: BookingStatusEnum.BookingStatus
+            hold_expiration_date_time: str
+            cancellation_date_time: str
+            def __init__(
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+                *,
+                ignore_unknown_fields: bool = False,
+                status: BookingStatusEnum.BookingStatus = ...,
+                hold_expiration_date_time: str = ...,
+                cancellation_date_time: str = ...,
+            ) -> None: ...
+            def __contains__(  # type: ignore[override]
+                self,
+                key: Literal[
+                    "status", "hold_expiration_date_time", "cancellation_date_time"
+                ],
+            ) -> bool: ...
+
         class NonSkippableInStreamRestrictions(proto.Message):
             min_duration: NonSkippableMinDurationEnum.NonSkippableMinDuration
             max_duration: NonSkippableMaxDurationEnum.NonSkippableMaxDuration
@@ -509,6 +567,23 @@ class Campaign(proto.Message):
             ) -> None: ...
             def __contains__(  # type: ignore[override]
                 self, key: Literal["min_duration", "max_duration"]
+            ) -> bool: ...
+
+        class ReservationAdCategorySelfDisclosure(proto.Message):
+            gambling: bool
+            alcohol: bool
+            politics: bool
+            def __init__(
+                self: _M,
+                mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+                *,
+                ignore_unknown_fields: bool = False,
+                gambling: bool = ...,
+                alcohol: bool = ...,
+                politics: bool = ...,
+            ) -> None: ...
+            def __contains__(  # type: ignore[override]
+                self, key: Literal["gambling", "alcohol", "politics"]
             ) -> bool: ...
 
         class VideoAdFormatControl(proto.Message):
@@ -606,6 +681,10 @@ class Campaign(proto.Message):
             ) -> bool: ...
 
         video_ad_sequence: Campaign.VideoCampaignSettings.VideoAdSequence
+        reservation_ad_category_self_disclosure: (
+            Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure
+        )
+        booking_details: Campaign.VideoCampaignSettings.BookingDetails
         video_ad_inventory_control: (
             Campaign.VideoCampaignSettings.VideoAdInventoryControl
         )
@@ -616,6 +695,8 @@ class Campaign(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             video_ad_sequence: Campaign.VideoCampaignSettings.VideoAdSequence = ...,
+            reservation_ad_category_self_disclosure: Campaign.VideoCampaignSettings.ReservationAdCategorySelfDisclosure = ...,
+            booking_details: Campaign.VideoCampaignSettings.BookingDetails = ...,
             video_ad_inventory_control: Campaign.VideoCampaignSettings.VideoAdInventoryControl = ...,
             video_ad_format_control: Campaign.VideoCampaignSettings.VideoAdFormatControl = ...,
         ) -> None: ...
@@ -623,6 +704,8 @@ class Campaign(proto.Message):
             self,
             key: Literal[
                 "video_ad_sequence",
+                "reservation_ad_category_self_disclosure",
+                "booking_details",
                 "video_ad_inventory_control",
                 "video_ad_format_control",
             ],
@@ -693,12 +776,14 @@ class Campaign(proto.Message):
     keyword_match_type: CampaignKeywordMatchTypeEnum.CampaignKeywordMatchType
     brand_guidelines_enabled: bool
     brand_guidelines: Campaign.BrandGuidelines
+    text_guidelines: Campaign.TextGuidelines
     third_party_integration_partners: CampaignThirdPartyIntegrationPartners
     ai_max_setting: Campaign.AiMaxSetting
     contains_eu_political_advertising: (
         EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus
     )
     feed_types: MutableSequence[AssetSetTypeEnum.AssetSetType]
+    missing_eu_political_advertising_declaration: bool
     bidding_strategy: str
     commission: Commission
     manual_cpa: ManualCpa
@@ -784,10 +869,12 @@ class Campaign(proto.Message):
         keyword_match_type: CampaignKeywordMatchTypeEnum.CampaignKeywordMatchType = ...,
         brand_guidelines_enabled: bool = ...,
         brand_guidelines: Campaign.BrandGuidelines = ...,
+        text_guidelines: Campaign.TextGuidelines = ...,
         third_party_integration_partners: CampaignThirdPartyIntegrationPartners = ...,
         ai_max_setting: Campaign.AiMaxSetting = ...,
         contains_eu_political_advertising: EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus = ...,
         feed_types: MutableSequence[AssetSetTypeEnum.AssetSetType] = ...,
+        missing_eu_political_advertising_declaration: bool = ...,
         bidding_strategy: str = ...,
         commission: Commission = ...,
         manual_cpa: ManualCpa = ...,
@@ -864,10 +951,12 @@ class Campaign(proto.Message):
             "keyword_match_type",
             "brand_guidelines_enabled",
             "brand_guidelines",
+            "text_guidelines",
             "third_party_integration_partners",
             "ai_max_setting",
             "contains_eu_political_advertising",
             "feed_types",
+            "missing_eu_political_advertising_declaration",
             "bidding_strategy",
             "commission",
             "manual_cpa",

@@ -92,7 +92,7 @@ class KeywordPlanAdGroupServiceClient(metaclass=KeywordPlanAdGroupServiceClientM
             keyword_plan_ad_group_service.KeywordPlanAdGroupOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> keyword_plan_ad_group_service.MutateKeywordPlanAdGroupsResponse: ...

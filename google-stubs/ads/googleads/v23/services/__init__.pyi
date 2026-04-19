@@ -205,6 +205,9 @@ from .types.benchmarks_service import (
     BenchmarksProductMetadata as BenchmarksProductMetadata,
     BenchmarksSource as BenchmarksSource,
     BenchmarksSourceMetadata as BenchmarksSourceMetadata,
+    BreakdownDefinition as BreakdownDefinition,
+    BreakdownKey as BreakdownKey,
+    BreakdownMetrics as BreakdownMetrics,
     GenerateBenchmarksMetricsRequest as GenerateBenchmarksMetricsRequest,
     GenerateBenchmarksMetricsResponse as GenerateBenchmarksMetricsResponse,
     IndustryVerticalInfo as IndustryVerticalInfo,
@@ -350,6 +353,7 @@ from .types.content_creator_insights_service import (
     SearchAudience as SearchAudience,
     SearchTopics as SearchTopics,
     TrendInsight as TrendInsight,
+    TrendInsightDataPoint as TrendInsightDataPoint,
     TrendInsightMetrics as TrendInsightMetrics,
     YouTubeChannelInsights as YouTubeChannelInsights,
     YouTubeCreatorInsights as YouTubeCreatorInsights,
@@ -736,6 +740,7 @@ from .types.reach_plan_service import (
     TargetFrequencySettings as TargetFrequencySettings,
     Targeting as Targeting,
     YouTubeSelectLineUp as YouTubeSelectLineUp,
+    YouTubeSelectLineUpTargeting as YouTubeSelectLineUpTargeting,
     YouTubeSelectSettings as YouTubeSelectSettings,
 )
 from .types.recommendation_service import (
@@ -760,6 +765,12 @@ from .types.remarketing_action_service import (
     MutateRemarketingActionsResponse as MutateRemarketingActionsResponse,
     RemarketingActionOperation as RemarketingActionOperation,
 )
+from .types.reservation_service import (
+    BookCampaignsRequest as BookCampaignsRequest,
+    BookCampaignsResponse as BookCampaignsResponse,
+    QuoteCampaignsRequest as QuoteCampaignsRequest,
+    QuoteCampaignsResponse as QuoteCampaignsResponse,
+)
 from .types.shareable_preview_service import (
     AssetGroupIdentifier as AssetGroupIdentifier,
     GenerateShareablePreviewsRequest as GenerateShareablePreviewsRequest,
@@ -767,6 +778,7 @@ from .types.shareable_preview_service import (
     ShareablePreview as ShareablePreview,
     ShareablePreviewOrError as ShareablePreviewOrError,
     ShareablePreviewResult as ShareablePreviewResult,
+    YouTubeLivePreviewResult as YouTubeLivePreviewResult,
 )
 from .types.shared_criterion_service import (
     MutateSharedCriteriaRequest as MutateSharedCriteriaRequest,
@@ -829,6 +841,14 @@ from .types.user_list_service import (
     MutateUserListsRequest as MutateUserListsRequest,
     MutateUserListsResponse as MutateUserListsResponse,
     UserListOperation as UserListOperation,
+)
+from .types.youtube_video_upload_service import (
+    CreateYouTubeVideoUploadRequest as CreateYouTubeVideoUploadRequest,
+    CreateYouTubeVideoUploadResponse as CreateYouTubeVideoUploadResponse,
+    RemoveYouTubeVideoUploadRequest as RemoveYouTubeVideoUploadRequest,
+    RemoveYouTubeVideoUploadResponse as RemoveYouTubeVideoUploadResponse,
+    UpdateYouTubeVideoUploadRequest as UpdateYouTubeVideoUploadRequest,
+    UpdateYouTubeVideoUploadResponse as UpdateYouTubeVideoUploadResponse,
 )
 
 __all__ = [
@@ -984,6 +1004,9 @@ __all__ = [
     "BenchmarksProductMetadata",
     "BenchmarksSource",
     "BenchmarksSourceMetadata",
+    "BreakdownDefinition",
+    "BreakdownKey",
+    "BreakdownMetrics",
     "GenerateBenchmarksMetricsRequest",
     "GenerateBenchmarksMetricsResponse",
     "IndustryVerticalInfo",
@@ -1089,6 +1112,7 @@ __all__ = [
     "SearchAudience",
     "SearchTopics",
     "TrendInsight",
+    "TrendInsightDataPoint",
     "TrendInsightMetrics",
     "YouTubeChannelInsights",
     "YouTubeCreatorInsights",
@@ -1379,6 +1403,7 @@ __all__ = [
     "TargetFrequencySettings",
     "Targeting",
     "YouTubeSelectLineUp",
+    "YouTubeSelectLineUpTargeting",
     "YouTubeSelectSettings",
     "ApplyRecommendationOperation",
     "ApplyRecommendationRequest",
@@ -1396,12 +1421,17 @@ __all__ = [
     "MutateRemarketingActionsRequest",
     "MutateRemarketingActionsResponse",
     "RemarketingActionOperation",
+    "BookCampaignsRequest",
+    "BookCampaignsResponse",
+    "QuoteCampaignsRequest",
+    "QuoteCampaignsResponse",
     "AssetGroupIdentifier",
     "GenerateShareablePreviewsRequest",
     "GenerateShareablePreviewsResponse",
     "ShareablePreview",
     "ShareablePreviewOrError",
     "ShareablePreviewResult",
+    "YouTubeLivePreviewResult",
     "MutateSharedCriteriaRequest",
     "MutateSharedCriteriaResponse",
     "MutateSharedCriterionResult",
@@ -1446,4 +1476,10 @@ __all__ = [
     "MutateUserListsRequest",
     "MutateUserListsResponse",
     "UserListOperation",
+    "CreateYouTubeVideoUploadRequest",
+    "CreateYouTubeVideoUploadResponse",
+    "RemoveYouTubeVideoUploadRequest",
+    "RemoveYouTubeVideoUploadResponse",
+    "UpdateYouTubeVideoUploadRequest",
+    "UpdateYouTubeVideoUploadResponse",
 ]

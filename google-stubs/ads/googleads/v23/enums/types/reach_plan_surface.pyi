@@ -18,6 +18,8 @@ class ReachPlanSurfaceEnum(proto.Message):
         IN_STREAM_NON_SKIPPABLE = 4
         IN_STREAM_SKIPPABLE = 5
         SHORTS = 6
+        GOOGLE_DISPLAY_NETWORK = 9
+        IN_STREAM_NON_SKIPPABLE_THIRTY_SECONDS = 10
 
     def __init__(
         self: _M,
