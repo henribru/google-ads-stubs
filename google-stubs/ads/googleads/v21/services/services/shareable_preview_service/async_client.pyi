@@ -60,7 +60,7 @@ class ShareablePreviewServiceAsyncClient:
         customer_id: str | None = None,
         shareable_previews: MutableSequence[shareable_preview_service.ShareablePreview]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> shareable_preview_service.GenerateShareablePreviewsResponse: ...

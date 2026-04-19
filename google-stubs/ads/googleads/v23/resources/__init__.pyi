@@ -56,6 +56,10 @@ from .types.android_privacy_shared_key_google_campaign import (
 from .types.android_privacy_shared_key_google_network_type import (
     AndroidPrivacySharedKeyGoogleNetworkType as AndroidPrivacySharedKeyGoogleNetworkType,
 )
+from .types.app_top_combination_view import (
+    AdGroupCreativeAssetCombinationData as AdGroupCreativeAssetCombinationData,
+    AppTopCombinationView as AppTopCombinationView,
+)
 from .types.applied_incentive import AppliedIncentive as AppliedIncentive
 from .types.asset import (
     Asset as Asset,
@@ -332,6 +336,7 @@ from .types.product_category_constant import (
 from .types.product_group_view import ProductGroupView as ProductGroupView
 from .types.product_link import (
     AdvertisingPartnerIdentifier as AdvertisingPartnerIdentifier,
+    AdvertisingPartnerProperties as AdvertisingPartnerProperties,
     DataPartnerIdentifier as DataPartnerIdentifier,
     GoogleAdsIdentifier as GoogleAdsIdentifier,
     MerchantCenterIdentifier as MerchantCenterIdentifier,
@@ -339,6 +344,7 @@ from .types.product_link import (
 )
 from .types.product_link_invitation import (
     AdvertisingPartnerLinkInvitationIdentifier as AdvertisingPartnerLinkInvitationIdentifier,
+    AdvertisingPartnerLinkInvitationProperties as AdvertisingPartnerLinkInvitationProperties,
     HotelCenterLinkInvitationIdentifier as HotelCenterLinkInvitationIdentifier,
     MerchantCenterLinkInvitationIdentifier as MerchantCenterLinkInvitationIdentifier,
     ProductLinkInvitation as ProductLinkInvitation,
@@ -379,7 +385,9 @@ from .types.user_list import UserList as UserList
 from .types.user_list_customer_type import UserListCustomerType as UserListCustomerType
 from .types.user_location_view import UserLocationView as UserLocationView
 from .types.video import Video as Video
+from .types.video_enhancement import VideoEnhancement as VideoEnhancement
 from .types.webpage_view import WebpageView as WebpageView
+from .types.youtube_video_upload import YouTubeVideoUpload as YouTubeVideoUpload
 
 __all__ = [
     "AccessibleBiddingStrategy",
@@ -399,6 +407,7 @@ __all__ = [
     "AdGroupAssetSet",
     "AdGroupAudienceView",
     "AdGroupBidModifier",
+    "AdGroupCreativeAssetCombinationData",
     "AdGroupCriterion",
     "AdGroupCriterionCustomizer",
     "AdGroupCriterionLabel",
@@ -411,11 +420,14 @@ __all__ = [
     "AdStrengthActionItem",
     "AdvertisingPartnerIdentifier",
     "AdvertisingPartnerLinkInvitationIdentifier",
+    "AdvertisingPartnerLinkInvitationProperties",
+    "AdvertisingPartnerProperties",
     "AgeRangeView",
     "AiMaxSearchTermAdCombinationView",
     "AndroidPrivacySharedKeyGoogleAdGroup",
     "AndroidPrivacySharedKeyGoogleCampaign",
     "AndroidPrivacySharedKeyGoogleNetworkType",
+    "AppTopCombinationView",
     "AppliedIncentive",
     "Asset",
     "AssetCoverage",
@@ -618,6 +630,8 @@ __all__ = [
     "UserLocationView",
     "Video",
     "VideoCustomer",
+    "VideoEnhancement",
     "WebpageView",
+    "YouTubeVideoUpload",
     "YoutubeVideoIdentifier",
 ]

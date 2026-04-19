@@ -98,7 +98,7 @@ class KeywordPlanCampaignServiceClient(metaclass=KeywordPlanCampaignServiceClien
             keyword_plan_campaign_service.KeywordPlanCampaignOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> keyword_plan_campaign_service.MutateKeywordPlanCampaignsResponse: ...

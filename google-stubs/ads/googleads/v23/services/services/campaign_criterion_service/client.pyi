@@ -120,7 +120,7 @@ class CampaignCriterionServiceClient(metaclass=CampaignCriterionServiceClientMet
             campaign_criterion_service.CampaignCriterionOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_criterion_service.MutateCampaignCriteriaResponse: ...

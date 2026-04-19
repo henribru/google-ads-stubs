@@ -73,7 +73,7 @@ class IncentiveServiceClient(metaclass=IncentiveServiceClientMeta):
         self,
         request: incentive_service.FetchIncentiveRequest | dict | None = None,
         *,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> incentive_service.FetchIncentiveResponse: ...
@@ -82,7 +82,7 @@ class IncentiveServiceClient(metaclass=IncentiveServiceClientMeta):
         request: incentive_service.ApplyIncentiveRequest | dict | None = None,
         *,
         country_code: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> incentive_service.ApplyIncentiveResponse: ...

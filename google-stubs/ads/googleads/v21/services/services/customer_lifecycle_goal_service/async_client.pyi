@@ -64,7 +64,7 @@ class CustomerLifecycleGoalServiceAsyncClient:
         customer_id: str | None = None,
         operation: customer_lifecycle_goal_service.CustomerLifecycleGoalOperation
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_lifecycle_goal_service.ConfigureCustomerLifecycleGoalsResponse: ...

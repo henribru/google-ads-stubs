@@ -16,6 +16,9 @@ from google.ads.googleads.v23.enums.types.benchmarks_marketing_objective import 
 from google.ads.googleads.v23.enums.types.benchmarks_source_type import (
     BenchmarksSourceTypeEnum,
 )
+from google.ads.googleads.v23.enums.types.benchmarks_time_granularity import (
+    BenchmarksTimeGranularityEnum,
+)
 
 _M = TypeVar("_M")
 
@@ -81,12 +84,57 @@ class BenchmarksSourceMetadata(proto.Message):
         self, key: Literal["benchmarks_source_type", "industry_vertical_info"]
     ) -> bool: ...
 
+class BreakdownDefinition(proto.Message):
+    date_breakdown: BenchmarksTimeGranularityEnum.BenchmarksTimeGranularity
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        date_breakdown: BenchmarksTimeGranularityEnum.BenchmarksTimeGranularity = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["date_breakdown"]
+    ) -> bool: ...
+
+class BreakdownKey(proto.Message):
+    dates: DateRange
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        dates: DateRange = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["dates"]
+    ) -> bool: ...
+
+class BreakdownMetrics(proto.Message):
+    breakdown_key: BreakdownKey
+    customer_metrics: Metrics
+    average_benchmarks_metrics: Metrics
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        breakdown_key: BreakdownKey = ...,
+        customer_metrics: Metrics = ...,
+        average_benchmarks_metrics: Metrics = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self,
+        key: Literal["breakdown_key", "customer_metrics", "average_benchmarks_metrics"],
+    ) -> bool: ...
+
 class GenerateBenchmarksMetricsRequest(proto.Message):
     customer_id: str
     date_range: DateRange
     location: LocationInfo
     benchmarks_source: BenchmarksSource
     product_filter: ProductFilter
+    breakdown_definition: BreakdownDefinition
     currency_code: str
     customer_benchmarks_group: str
     application_info: AdditionalApplicationInfo
@@ -100,6 +148,7 @@ class GenerateBenchmarksMetricsRequest(proto.Message):
         location: LocationInfo = ...,
         benchmarks_source: BenchmarksSource = ...,
         product_filter: ProductFilter = ...,
+        breakdown_definition: BreakdownDefinition = ...,
         currency_code: str = ...,
         customer_benchmarks_group: str = ...,
         application_info: AdditionalApplicationInfo = ...,
@@ -112,6 +161,7 @@ class GenerateBenchmarksMetricsRequest(proto.Message):
             "location",
             "benchmarks_source",
             "product_filter",
+            "breakdown_definition",
             "currency_code",
             "customer_benchmarks_group",
             "application_info",
@@ -121,6 +171,7 @@ class GenerateBenchmarksMetricsRequest(proto.Message):
 class GenerateBenchmarksMetricsResponse(proto.Message):
     customer_metrics: Metrics
     average_benchmarks_metrics: Metrics
+    breakdown_metrics: MutableSequence[BreakdownMetrics]
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -128,9 +179,13 @@ class GenerateBenchmarksMetricsResponse(proto.Message):
         ignore_unknown_fields: bool = False,
         customer_metrics: Metrics = ...,
         average_benchmarks_metrics: Metrics = ...,
+        breakdown_metrics: MutableSequence[BreakdownMetrics] = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: Literal["customer_metrics", "average_benchmarks_metrics"]
+        self,
+        key: Literal[
+            "customer_metrics", "average_benchmarks_metrics", "breakdown_metrics"
+        ],
     ) -> bool: ...
 
 class IndustryVerticalInfo(proto.Message):

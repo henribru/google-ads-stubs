@@ -62,7 +62,7 @@ class LocalServicesLeadServiceAsyncClient:
         customer_id: str | None = None,
         conversations: MutableSequence[local_services_lead_service.Conversation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> local_services_lead_service.AppendLeadConversationResponse: ...
@@ -72,7 +72,7 @@ class LocalServicesLeadServiceAsyncClient:
         | dict
         | None = None,
         *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> local_services_lead_service.ProvideLeadFeedbackResponse: ...

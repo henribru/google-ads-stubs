@@ -35,6 +35,8 @@ class AdGroupAd(proto.Message):
     status: AdGroupAdStatusEnum.AdGroupAdStatus
     ad_group: str
     ad: Ad
+    start_date_time: str
+    end_date_time: str
     policy_summary: AdGroupAdPolicySummary
     ad_strength: AdStrengthEnum.AdStrength
     action_items: MutableSequence[str]
@@ -55,6 +57,8 @@ class AdGroupAd(proto.Message):
         status: AdGroupAdStatusEnum.AdGroupAdStatus = ...,
         ad_group: str = ...,
         ad: Ad = ...,
+        start_date_time: str = ...,
+        end_date_time: str = ...,
         policy_summary: AdGroupAdPolicySummary = ...,
         ad_strength: AdStrengthEnum.AdStrength = ...,
         action_items: MutableSequence[str] = ...,
@@ -74,6 +78,8 @@ class AdGroupAd(proto.Message):
             "status",
             "ad_group",
             "ad",
+            "start_date_time",
+            "end_date_time",
             "policy_summary",
             "ad_strength",
             "action_items",

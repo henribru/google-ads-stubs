@@ -59,7 +59,7 @@ class LabelServiceAsyncClient:
         *,
         customer_id: str | None = None,
         operations: MutableSequence[label_service.LabelOperation] | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> label_service.MutateLabelsResponse: ...

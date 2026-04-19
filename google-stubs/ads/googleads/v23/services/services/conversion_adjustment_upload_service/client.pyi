@@ -83,7 +83,7 @@ class ConversionAdjustmentUploadServiceClient(
         ]
         | None = None,
         partial_failure: bool | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> conversion_adjustment_upload_service.UploadConversionAdjustmentsResponse: ...

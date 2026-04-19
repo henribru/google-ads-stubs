@@ -698,6 +698,7 @@ class Campaign(proto.Message):
     contains_eu_political_advertising: (
         EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus
     )
+    missing_eu_political_advertising_declaration: bool
     bidding_strategy: str
     commission: Commission
     manual_cpa: ManualCpa
@@ -786,6 +787,7 @@ class Campaign(proto.Message):
         third_party_integration_partners: CampaignThirdPartyIntegrationPartners = ...,
         ai_max_setting: Campaign.AiMaxSetting = ...,
         contains_eu_political_advertising: EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus = ...,
+        missing_eu_political_advertising_declaration: bool = ...,
         bidding_strategy: str = ...,
         commission: Commission = ...,
         manual_cpa: ManualCpa = ...,
@@ -865,6 +867,7 @@ class Campaign(proto.Message):
             "third_party_integration_partners",
             "ai_max_setting",
             "contains_eu_political_advertising",
+            "missing_eu_political_advertising_declaration",
             "bidding_strategy",
             "commission",
             "manual_cpa",

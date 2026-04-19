@@ -64,7 +64,7 @@ class CustomizerAttributeServiceAsyncClient:
             customizer_attribute_service.CustomizerAttributeOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customizer_attribute_service.MutateCustomizerAttributesResponse: ...

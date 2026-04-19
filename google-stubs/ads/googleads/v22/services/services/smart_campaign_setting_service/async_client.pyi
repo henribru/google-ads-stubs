@@ -62,7 +62,7 @@ class SmartCampaignSettingServiceAsyncClient:
         | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> smart_campaign_setting_service.GetSmartCampaignStatusResponse: ...
@@ -77,7 +77,7 @@ class SmartCampaignSettingServiceAsyncClient:
             smart_campaign_setting_service.SmartCampaignSettingOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> smart_campaign_setting_service.MutateSmartCampaignSettingsResponse: ...

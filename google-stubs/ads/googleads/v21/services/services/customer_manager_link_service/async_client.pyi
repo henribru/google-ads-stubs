@@ -66,7 +66,7 @@ class CustomerManagerLinkServiceAsyncClient:
             customer_manager_link_service.CustomerManagerLinkOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_manager_link_service.MutateCustomerManagerLinkResponse: ...
@@ -79,7 +79,7 @@ class CustomerManagerLinkServiceAsyncClient:
         customer_id: str | None = None,
         previous_customer_manager_link: str | None = None,
         new_manager: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_manager_link_service.MoveManagerLinkResponse: ...

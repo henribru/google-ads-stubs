@@ -18,6 +18,9 @@ from google.ads.googleads.v21.enums.types.customer_pay_per_conversion_eligibilit
     CustomerPayPerConversionEligibilityFailureReasonEnum,
 )
 from google.ads.googleads.v21.enums.types.customer_status import CustomerStatusEnum
+from google.ads.googleads.v21.enums.types.eu_political_advertising_status import (
+    EuPoliticalAdvertisingStatusEnum,
+)
 from google.ads.googleads.v21.enums.types.local_services_verification_status import (
     LocalServicesVerificationStatusEnum,
 )
@@ -106,6 +109,9 @@ class Customer(proto.Message):
     local_services_settings: LocalServicesSettings
     video_brand_safety_suitability: BrandSafetySuitabilityEnum.BrandSafetySuitability
     video_customer: VideoCustomer
+    contains_eu_political_advertising: (
+        EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -139,6 +145,7 @@ class Customer(proto.Message):
         local_services_settings: LocalServicesSettings = ...,
         video_brand_safety_suitability: BrandSafetySuitabilityEnum.BrandSafetySuitability = ...,
         video_customer: VideoCustomer = ...,
+        contains_eu_political_advertising: EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -169,6 +176,7 @@ class Customer(proto.Message):
             "local_services_settings",
             "video_brand_safety_suitability",
             "video_customer",
+            "contains_eu_political_advertising",
         ],
     ) -> bool: ...
 

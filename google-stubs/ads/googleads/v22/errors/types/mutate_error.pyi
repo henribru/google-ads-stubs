@@ -20,6 +20,7 @@ class MutateErrorEnum(proto.Message):
         RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY = 12
         OPERATION_DOES_NOT_SUPPORT_PARTIAL_FAILURE = 16
         RESOURCE_READ_ONLY = 13
+        EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED = 17
 
     def __init__(
         self: _M,

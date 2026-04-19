@@ -118,6 +118,7 @@ from .audience_insights_attribute import (
     AudienceInsightsCategory as AudienceInsightsCategory,
     AudienceInsightsEntity as AudienceInsightsEntity,
     AudienceInsightsLineup as AudienceInsightsLineup,
+    InsightsAudienceAttributeGroup as InsightsAudienceAttributeGroup,
     KnowledgeGraphAttributeMetadata as KnowledgeGraphAttributeMetadata,
     LineupAttributeMetadata as LineupAttributeMetadata,
     LocationAttributeMetadata as LocationAttributeMetadata,
@@ -165,6 +166,9 @@ from .bidding import (
     TargetSpend as TargetSpend,
 )
 from .campaign_goal_settings import CampaignGoalSettings as CampaignGoalSettings
+from .campaign_reservation_quote import (
+    CampaignReservationQuote as CampaignReservationQuote,
+)
 from .click_location import ClickLocation as ClickLocation
 from .consent import Consent as Consent
 from .criteria import (
@@ -491,6 +495,7 @@ __all__ = [
     "AudienceInsightsCategory",
     "AudienceInsightsEntity",
     "AudienceInsightsLineup",
+    "InsightsAudienceAttributeGroup",
     "KnowledgeGraphAttributeMetadata",
     "LineupAttributeMetadata",
     "LocationAttributeMetadata",
@@ -533,6 +538,7 @@ __all__ = [
     "TargetRoas",
     "TargetSpend",
     "CampaignGoalSettings",
+    "CampaignReservationQuote",
     "ClickLocation",
     "Consent",
     "ActivityCityInfo",

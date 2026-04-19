@@ -66,7 +66,7 @@ class ExperimentArmServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[experiment_arm_service.ExperimentArmOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> experiment_arm_service.MutateExperimentArmsResponse: ...

@@ -59,7 +59,7 @@ class TravelAssetSuggestionServiceAsyncClient:
         *,
         customer_id: str | None = None,
         language_option: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> travel_asset_suggestion_service.SuggestTravelAssetsResponse: ...

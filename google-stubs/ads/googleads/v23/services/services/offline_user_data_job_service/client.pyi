@@ -85,7 +85,7 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         *,
         customer_id: str | None = None,
         job: offline_user_data_job.OfflineUserDataJob | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> offline_user_data_job_service.CreateOfflineUserDataJobResponse: ...
@@ -100,7 +100,7 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
             offline_user_data_job_service.OfflineUserDataJobOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> offline_user_data_job_service.AddOfflineUserDataJobOperationsResponse: ...
@@ -111,7 +111,7 @@ class OfflineUserDataJobServiceClient(metaclass=OfflineUserDataJobServiceClientM
         | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation.Operation: ...

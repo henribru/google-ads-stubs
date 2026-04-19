@@ -223,6 +223,11 @@ class Metrics(proto.Message):
     value_per_platform_comparable_conversion: float
     value_per_platform_comparable_conversions_by_conversion_date: float
     cost_converted_currency_per_platform_comparable_conversion: float
+    unique_users_two_plus: int
+    unique_users_three_plus: int
+    unique_users_four_plus: int
+    unique_users_five_plus: int
+    unique_users_ten_plus: int
     value_adjustment: float
     all_value_adjustment: float
     clicks_unique_query_clusters: int
@@ -245,6 +250,7 @@ class Metrics(proto.Message):
     active_view_audible_quartile_p50_rate: float
     active_view_audible_quartile_p75_rate: float
     active_view_audible_quartile_p100_rate: float
+    biddable_indirect_install_first_in_app_conversion_micros: int
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -458,6 +464,11 @@ class Metrics(proto.Message):
         value_per_platform_comparable_conversion: float = ...,
         value_per_platform_comparable_conversions_by_conversion_date: float = ...,
         cost_converted_currency_per_platform_comparable_conversion: float = ...,
+        unique_users_two_plus: int = ...,
+        unique_users_three_plus: int = ...,
+        unique_users_four_plus: int = ...,
+        unique_users_five_plus: int = ...,
+        unique_users_ten_plus: int = ...,
         value_adjustment: float = ...,
         all_value_adjustment: float = ...,
         clicks_unique_query_clusters: int = ...,
@@ -480,6 +491,7 @@ class Metrics(proto.Message):
         active_view_audible_quartile_p50_rate: float = ...,
         active_view_audible_quartile_p75_rate: float = ...,
         active_view_audible_quartile_p100_rate: float = ...,
+        biddable_indirect_install_first_in_app_conversion_micros: int = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -690,6 +702,11 @@ class Metrics(proto.Message):
             "value_per_platform_comparable_conversion",
             "value_per_platform_comparable_conversions_by_conversion_date",
             "cost_converted_currency_per_platform_comparable_conversion",
+            "unique_users_two_plus",
+            "unique_users_three_plus",
+            "unique_users_four_plus",
+            "unique_users_five_plus",
+            "unique_users_ten_plus",
             "value_adjustment",
             "all_value_adjustment",
             "clicks_unique_query_clusters",
@@ -712,6 +729,7 @@ class Metrics(proto.Message):
             "active_view_audible_quartile_p50_rate",
             "active_view_audible_quartile_p75_rate",
             "active_view_audible_quartile_p100_rate",
+            "biddable_indirect_install_first_in_app_conversion_micros",
         ],
     ) -> bool: ...
 

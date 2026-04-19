@@ -699,6 +699,7 @@ class Campaign(proto.Message):
         EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus
     )
     feed_types: MutableSequence[AssetSetTypeEnum.AssetSetType]
+    missing_eu_political_advertising_declaration: bool
     bidding_strategy: str
     commission: Commission
     manual_cpa: ManualCpa
@@ -788,6 +789,7 @@ class Campaign(proto.Message):
         ai_max_setting: Campaign.AiMaxSetting = ...,
         contains_eu_political_advertising: EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus = ...,
         feed_types: MutableSequence[AssetSetTypeEnum.AssetSetType] = ...,
+        missing_eu_political_advertising_declaration: bool = ...,
         bidding_strategy: str = ...,
         commission: Commission = ...,
         manual_cpa: ManualCpa = ...,
@@ -868,6 +870,7 @@ class Campaign(proto.Message):
             "ai_max_setting",
             "contains_eu_political_advertising",
             "feed_types",
+            "missing_eu_political_advertising_declaration",
             "bidding_strategy",
             "commission",
             "manual_cpa",

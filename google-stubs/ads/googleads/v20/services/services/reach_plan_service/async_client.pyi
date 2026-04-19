@@ -56,7 +56,7 @@ class ReachPlanServiceAsyncClient:
         request: reach_plan_service.GenerateConversionRatesRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> reach_plan_service.GenerateConversionRatesResponse: ...
@@ -64,7 +64,7 @@ class ReachPlanServiceAsyncClient:
         self,
         request: reach_plan_service.ListPlannableLocationsRequest | dict | None = None,
         *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> reach_plan_service.ListPlannableLocationsResponse: ...
@@ -73,7 +73,7 @@ class ReachPlanServiceAsyncClient:
         request: reach_plan_service.ListPlannableProductsRequest | dict | None = None,
         *,
         plannable_location_id: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> reach_plan_service.ListPlannableProductsResponse: ...
@@ -85,7 +85,7 @@ class ReachPlanServiceAsyncClient:
         campaign_duration: reach_plan_service.CampaignDuration | None = None,
         planned_products: MutableSequence[reach_plan_service.PlannedProduct]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> reach_plan_service.GenerateReachForecastResponse: ...
@@ -94,7 +94,7 @@ class ReachPlanServiceAsyncClient:
         request: reach_plan_service.ListPlannableUserListsRequest | dict | None = None,
         *,
         customer_id: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> reach_plan_service.ListPlannableUserListsResponse: ...

@@ -60,7 +60,7 @@ class KeywordPlanServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[keyword_plan_service.KeywordPlanOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> keyword_plan_service.MutateKeywordPlansResponse: ...

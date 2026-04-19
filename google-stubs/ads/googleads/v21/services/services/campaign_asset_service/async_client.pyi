@@ -66,7 +66,7 @@ class CampaignAssetServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[campaign_asset_service.CampaignAssetOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_asset_service.MutateCampaignAssetsResponse: ...

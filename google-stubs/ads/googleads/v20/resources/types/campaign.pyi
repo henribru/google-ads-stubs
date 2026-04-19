@@ -601,6 +601,7 @@ class Campaign(proto.Message):
     contains_eu_political_advertising: (
         EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus
     )
+    missing_eu_political_advertising_declaration: bool
     bidding_strategy: str
     commission: Commission
     manual_cpa: ManualCpa
@@ -687,6 +688,7 @@ class Campaign(proto.Message):
         brand_guidelines_enabled: bool = ...,
         brand_guidelines: Campaign.BrandGuidelines = ...,
         contains_eu_political_advertising: EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus = ...,
+        missing_eu_political_advertising_declaration: bool = ...,
         bidding_strategy: str = ...,
         commission: Commission = ...,
         manual_cpa: ManualCpa = ...,
@@ -764,6 +766,7 @@ class Campaign(proto.Message):
             "brand_guidelines_enabled",
             "brand_guidelines",
             "contains_eu_political_advertising",
+            "missing_eu_political_advertising_declaration",
             "bidding_strategy",
             "commission",
             "manual_cpa",

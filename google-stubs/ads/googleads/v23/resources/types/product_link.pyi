@@ -24,6 +24,19 @@ class AdvertisingPartnerIdentifier(proto.Message):
         self, key: Literal["customer"]
     ) -> bool: ...
 
+class AdvertisingPartnerProperties(proto.Message):
+    allowed_domain: str
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        allowed_domain: str = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["allowed_domain"]
+    ) -> bool: ...
+
 class DataPartnerIdentifier(proto.Message):
     data_partner_id: int
     def __init__(
@@ -71,6 +84,7 @@ class ProductLink(proto.Message):
     google_ads: GoogleAdsIdentifier
     merchant_center: MerchantCenterIdentifier
     advertising_partner: AdvertisingPartnerIdentifier
+    advertising_partner_properties: AdvertisingPartnerProperties
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -83,6 +97,7 @@ class ProductLink(proto.Message):
         google_ads: GoogleAdsIdentifier = ...,
         merchant_center: MerchantCenterIdentifier = ...,
         advertising_partner: AdvertisingPartnerIdentifier = ...,
+        advertising_partner_properties: AdvertisingPartnerProperties = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -94,5 +109,6 @@ class ProductLink(proto.Message):
             "google_ads",
             "merchant_center",
             "advertising_partner",
+            "advertising_partner_properties",
         ],
     ) -> bool: ...

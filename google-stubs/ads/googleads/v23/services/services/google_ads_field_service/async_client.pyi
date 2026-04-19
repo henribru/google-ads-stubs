@@ -60,7 +60,7 @@ class GoogleAdsFieldServiceAsyncClient:
         request: google_ads_field_service.GetGoogleAdsFieldRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> google_ads_field.GoogleAdsField: ...
@@ -71,7 +71,7 @@ class GoogleAdsFieldServiceAsyncClient:
         | None = None,
         *,
         query: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.SearchGoogleAdsFieldsAsyncPager: ...

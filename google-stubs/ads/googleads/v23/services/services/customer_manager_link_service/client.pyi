@@ -90,7 +90,7 @@ class CustomerManagerLinkServiceClient(metaclass=CustomerManagerLinkServiceClien
             customer_manager_link_service.CustomerManagerLinkOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_manager_link_service.MutateCustomerManagerLinkResponse: ...
@@ -103,7 +103,7 @@ class CustomerManagerLinkServiceClient(metaclass=CustomerManagerLinkServiceClien
         customer_id: str | None = None,
         previous_customer_manager_link: str | None = None,
         new_manager: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_manager_link_service.MoveManagerLinkResponse: ...

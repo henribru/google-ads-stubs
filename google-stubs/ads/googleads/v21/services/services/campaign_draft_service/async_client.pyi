@@ -1,7 +1,8 @@
 from typing import Callable, MutableSequence, Sequence
 
+import google.api_core.operation_async as operation_async
 from _typeshed import Incomplete
-from google.api_core import gapic_v1, operation_async, retry_async as retries
+from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
 
@@ -65,7 +66,7 @@ class CampaignDraftServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[campaign_draft_service.CampaignDraftOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_draft_service.MutateCampaignDraftsResponse: ...
@@ -76,7 +77,7 @@ class CampaignDraftServiceAsyncClient:
         | None = None,
         *,
         campaign_draft: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation_async.AsyncOperation: ...
@@ -87,7 +88,7 @@ class CampaignDraftServiceAsyncClient:
         | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.ListCampaignDraftAsyncErrorsAsyncPager: ...

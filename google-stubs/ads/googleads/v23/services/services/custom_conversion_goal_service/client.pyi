@@ -90,7 +90,7 @@ class CustomConversionGoalServiceClient(
             custom_conversion_goal_service.CustomConversionGoalOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> custom_conversion_goal_service.MutateCustomConversionGoalsResponse: ...

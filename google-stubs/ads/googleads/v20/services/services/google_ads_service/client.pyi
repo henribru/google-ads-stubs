@@ -1030,7 +1030,7 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
         *,
         customer_id: str | None = None,
         query: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.SearchPager: ...
@@ -1040,7 +1040,7 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
         *,
         customer_id: str | None = None,
         query: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> Iterable[google_ads_service.SearchGoogleAdsStreamResponse]: ...
@@ -1051,7 +1051,7 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
         customer_id: str | None = None,
         mutate_operations: MutableSequence[google_ads_service.MutateOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> google_ads_service.MutateGoogleAdsResponse: ...

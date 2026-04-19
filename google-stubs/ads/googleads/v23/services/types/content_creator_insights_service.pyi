@@ -12,18 +12,23 @@ from google.ads.googleads.v23.common.types.audience_insights_attribute import (
     AudienceInsightsAttribute,
     AudienceInsightsAttributeMetadata,
     AudienceInsightsEntity,
+    InsightsAudienceAttributeGroup,
 )
 from google.ads.googleads.v23.common.types.criteria import (
     LocationInfo,
     YouTubeChannelInfo,
 )
 from google.ads.googleads.v23.enums.types.insights_trend import InsightsTrendEnum
+from google.ads.googleads.v23.enums.types.partnership_opportunity import (
+    PartnershipOpportunityEnum,
+)
 
 _M = TypeVar("_M")
 
 class GenerateCreatorInsightsRequest(proto.Message):
     class SearchAttributes(proto.Message):
         audience_attributes: MutableSequence[AudienceInsightsAttribute]
+        audience_combinations: MutableSequence[InsightsAudienceAttributeGroup]
         creator_attributes: MutableSequence[AudienceInsightsAttribute]
         def __init__(
             self: _M,
@@ -31,10 +36,16 @@ class GenerateCreatorInsightsRequest(proto.Message):
             *,
             ignore_unknown_fields: bool = False,
             audience_attributes: MutableSequence[AudienceInsightsAttribute] = ...,
+            audience_combinations: MutableSequence[
+                InsightsAudienceAttributeGroup
+            ] = ...,
             creator_attributes: MutableSequence[AudienceInsightsAttribute] = ...,
         ) -> None: ...
         def __contains__(  # type: ignore[override]
-            self, key: Literal["audience_attributes", "creator_attributes"]
+            self,
+            key: Literal[
+                "audience_attributes", "audience_combinations", "creator_attributes"
+            ],
         ) -> bool: ...
 
     class SearchBrand(proto.Message):
@@ -175,15 +186,17 @@ class LanguageDistribution(proto.Message):
 
 class SearchAudience(proto.Message):
     audience_attributes: MutableSequence[AudienceInsightsAttribute]
+    audience_combinations: MutableSequence[InsightsAudienceAttributeGroup]
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
         audience_attributes: MutableSequence[AudienceInsightsAttribute] = ...,
+        audience_combinations: MutableSequence[InsightsAudienceAttributeGroup] = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: Literal["audience_attributes"]
+        self, key: Literal["audience_attributes", "audience_combinations"]
     ) -> bool: ...
 
 class SearchTopics(proto.Message):
@@ -203,6 +216,7 @@ class TrendInsight(proto.Message):
     trend_attribute: AudienceInsightsAttributeMetadata
     trend_metrics: TrendInsightMetrics
     trend: InsightsTrendEnum.InsightsTrend
+    trend_data_points: MutableSequence[TrendInsightDataPoint]
     related_videos: MutableSequence[AudienceInsightsAttributeMetadata]
     related_creators: MutableSequence[YouTubeCreatorInsights]
     def __init__(
@@ -213,6 +227,7 @@ class TrendInsight(proto.Message):
         trend_attribute: AudienceInsightsAttributeMetadata = ...,
         trend_metrics: TrendInsightMetrics = ...,
         trend: InsightsTrendEnum.InsightsTrend = ...,
+        trend_data_points: MutableSequence[TrendInsightDataPoint] = ...,
         related_videos: MutableSequence[AudienceInsightsAttributeMetadata] = ...,
         related_creators: MutableSequence[YouTubeCreatorInsights] = ...,
     ) -> None: ...
@@ -222,13 +237,30 @@ class TrendInsight(proto.Message):
             "trend_attribute",
             "trend_metrics",
             "trend",
+            "trend_data_points",
             "related_videos",
             "related_creators",
         ],
     ) -> bool: ...
 
+class TrendInsightDataPoint(proto.Message):
+    month: str
+    trend_metrics: TrendInsightMetrics
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        month: str = ...,
+        trend_metrics: TrendInsightMetrics = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["month", "trend_metrics"]
+    ) -> bool: ...
+
 class TrendInsightMetrics(proto.Message):
     views_count: int
+    views_indexed_value: int
     audience_share: float
     trend_change_percent: float
     def __init__(
@@ -237,11 +269,18 @@ class TrendInsightMetrics(proto.Message):
         *,
         ignore_unknown_fields: bool = False,
         views_count: int = ...,
+        views_indexed_value: int = ...,
         audience_share: float = ...,
         trend_change_percent: float = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: Literal["views_count", "audience_share", "trend_change_percent"]
+        self,
+        key: Literal[
+            "views_count",
+            "views_indexed_value",
+            "audience_share",
+            "trend_change_percent",
+        ],
     ) -> bool: ...
 
 class YouTubeChannelInsights(proto.Message):
@@ -336,6 +375,9 @@ class YouTubeMetrics(proto.Message):
     is_active_shorts_creator: bool
     is_active_live_stream_creator: bool
     is_brand_connect_creator: bool
+    partnership_opportunities: MutableSequence[
+        PartnershipOpportunityEnum.PartnershipOpportunity
+    ]
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -357,6 +399,9 @@ class YouTubeMetrics(proto.Message):
         is_active_shorts_creator: bool = ...,
         is_active_live_stream_creator: bool = ...,
         is_brand_connect_creator: bool = ...,
+        partnership_opportunities: MutableSequence[
+            PartnershipOpportunityEnum.PartnershipOpportunity
+        ] = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -377,5 +422,6 @@ class YouTubeMetrics(proto.Message):
             "is_active_shorts_creator",
             "is_active_live_stream_creator",
             "is_brand_connect_creator",
+            "partnership_opportunities",
         ],
     ) -> bool: ...

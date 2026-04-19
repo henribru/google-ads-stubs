@@ -6,6 +6,9 @@ import proto
 from google.protobuf.duration_pb2 import Duration
 from typing_extensions import Literal
 
+from google.ads.googleads.v23.common.types.campaign_reservation_quote import (
+    CampaignReservationQuote,
+)
 from google.ads.googleads.v23.common.types.policy import (
     PolicyTopicEntry,
     PolicyViolationKey,
@@ -23,6 +26,7 @@ from google.ads.googleads.v23.errors.types.account_budget_proposal_error import 
 from google.ads.googleads.v23.errors.types.account_link_error import (
     AccountLinkErrorEnum,
 )
+from google.ads.googleads.v23.errors.types.action_error import ActionErrorEnum
 from google.ads.googleads.v23.errors.types.ad_customizer_error import (
     AdCustomizerErrorEnum,
 )
@@ -136,6 +140,9 @@ from google.ads.googleads.v23.errors.types.change_status_error import (
 from google.ads.googleads.v23.errors.types.click_view_error import ClickViewErrorEnum
 from google.ads.googleads.v23.errors.types.collection_size_error import (
     CollectionSizeErrorEnum,
+)
+from google.ads.googleads.v23.errors.types.content_creator_insights_error import (
+    ContentCreatorInsightsErrorEnum,
 )
 from google.ads.googleads.v23.errors.types.context_error import ContextErrorEnum
 from google.ads.googleads.v23.errors.types.conversion_action_error import (
@@ -390,6 +397,9 @@ from google.ads.googleads.v23.errors.types.user_list_error import UserListErrorE
 from google.ads.googleads.v23.errors.types.video_campaign_error import (
     VideoCampaignErrorEnum,
 )
+from google.ads.googleads.v23.errors.types.video_reservation_error import (
+    VideoReservationErrorEnum,
+)
 from google.ads.googleads.v23.errors.types.youtube_video_registration_error import (
     YoutubeVideoRegistrationErrorEnum,
 )
@@ -444,6 +454,7 @@ class ErrorCode(proto.Message):
     campaign_error: CampaignErrorEnum.CampaignError
     video_campaign_error: VideoCampaignErrorEnum.VideoCampaignError
     authentication_error: AuthenticationErrorEnum.AuthenticationError
+    action_error: ActionErrorEnum.ActionError
     ad_group_criterion_customizer_error: (
         AdGroupCriterionCustomizerErrorEnum.AdGroupCriterionCustomizerError
     )
@@ -647,6 +658,10 @@ class ErrorCode(proto.Message):
     asset_generation_error: AssetGenerationErrorEnum.AssetGenerationError
     benchmarks_error: BenchmarksErrorEnum.BenchmarksError
     incentive_error: IncentiveErrorEnum.IncentiveError
+    content_creator_insights_error: (
+        ContentCreatorInsightsErrorEnum.ContentCreatorInsightsError
+    )
+    video_reservation_error: VideoReservationErrorEnum.VideoReservationError
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -668,6 +683,7 @@ class ErrorCode(proto.Message):
         campaign_error: CampaignErrorEnum.CampaignError = ...,
         video_campaign_error: VideoCampaignErrorEnum.VideoCampaignError = ...,
         authentication_error: AuthenticationErrorEnum.AuthenticationError = ...,
+        action_error: ActionErrorEnum.ActionError = ...,
         ad_group_criterion_customizer_error: AdGroupCriterionCustomizerErrorEnum.AdGroupCriterionCustomizerError = ...,
         ad_group_criterion_error: AdGroupCriterionErrorEnum.AdGroupCriterionError = ...,
         ad_group_customizer_error: AdGroupCustomizerErrorEnum.AdGroupCustomizerError = ...,
@@ -817,6 +833,8 @@ class ErrorCode(proto.Message):
         asset_generation_error: AssetGenerationErrorEnum.AssetGenerationError = ...,
         benchmarks_error: BenchmarksErrorEnum.BenchmarksError = ...,
         incentive_error: IncentiveErrorEnum.IncentiveError = ...,
+        content_creator_insights_error: ContentCreatorInsightsErrorEnum.ContentCreatorInsightsError = ...,
+        video_reservation_error: VideoReservationErrorEnum.VideoReservationError = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -837,6 +855,7 @@ class ErrorCode(proto.Message):
             "campaign_error",
             "video_campaign_error",
             "authentication_error",
+            "action_error",
             "ad_group_criterion_customizer_error",
             "ad_group_criterion_error",
             "ad_group_customizer_error",
@@ -986,6 +1005,8 @@ class ErrorCode(proto.Message):
             "asset_generation_error",
             "benchmarks_error",
             "incentive_error",
+            "content_creator_insights_error",
+            "video_reservation_error",
         ],
     ) -> bool: ...
 
@@ -996,6 +1017,7 @@ class ErrorDetails(proto.Message):
     quota_error_details: QuotaErrorDetails
     resource_count_details: ResourceCountDetails
     budget_per_day_minimum_error_details: BudgetPerDayMinimumErrorDetails
+    reservation_error_details: ReservationErrorDetails
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -1007,6 +1029,7 @@ class ErrorDetails(proto.Message):
         quota_error_details: QuotaErrorDetails = ...,
         resource_count_details: ResourceCountDetails = ...,
         budget_per_day_minimum_error_details: BudgetPerDayMinimumErrorDetails = ...,
+        reservation_error_details: ReservationErrorDetails = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -1017,6 +1040,7 @@ class ErrorDetails(proto.Message):
             "quota_error_details",
             "resource_count_details",
             "budget_per_day_minimum_error_details",
+            "reservation_error_details",
         ],
     ) -> bool: ...
 
@@ -1143,6 +1167,23 @@ class QuotaErrorDetails(proto.Message):
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self, key: Literal["rate_scope", "rate_name", "retry_delay"]
+    ) -> bool: ...
+
+class ReservationErrorDetails(proto.Message):
+    campaign: str
+    quotes: MutableSequence[CampaignReservationQuote]
+    quote_signature: str
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+        campaign: str = ...,
+        quotes: MutableSequence[CampaignReservationQuote] = ...,
+        quote_signature: str = ...,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: Literal["campaign", "quotes", "quote_signature"]
     ) -> bool: ...
 
 class ResourceCountDetails(proto.Message):

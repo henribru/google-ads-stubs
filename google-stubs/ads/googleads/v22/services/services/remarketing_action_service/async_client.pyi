@@ -64,7 +64,7 @@ class RemarketingActionServiceAsyncClient:
             remarketing_action_service.RemarketingActionOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> remarketing_action_service.MutateRemarketingActionsResponse: ...

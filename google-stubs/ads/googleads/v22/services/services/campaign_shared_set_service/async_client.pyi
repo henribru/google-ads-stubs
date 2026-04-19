@@ -68,7 +68,7 @@ class CampaignSharedSetServiceAsyncClient:
             campaign_shared_set_service.CampaignSharedSetOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_shared_set_service.MutateCampaignSharedSetsResponse: ...

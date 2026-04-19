@@ -90,7 +90,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         customer_id: str | None = None,
         operations: MutableSequence[experiment_service.ExperimentOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> experiment_service.MutateExperimentsResponse: ...
@@ -99,7 +99,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         request: experiment_service.EndExperimentRequest | dict | None = None,
         *,
         experiment: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
@@ -110,7 +110,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.ListExperimentAsyncErrorsPager: ...
@@ -123,7 +123,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
             experiment_service.CampaignBudgetMapping
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
@@ -132,7 +132,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         request: experiment_service.ScheduleExperimentRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation.Operation: ...
@@ -141,7 +141,7 @@ class ExperimentServiceClient(metaclass=ExperimentServiceClientMeta):
         request: experiment_service.PromoteExperimentRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation.Operation: ...

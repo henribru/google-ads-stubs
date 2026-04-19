@@ -59,7 +59,7 @@ class AdServiceAsyncClient:
         *,
         customer_id: str | None = None,
         operations: MutableSequence[ad_service.AdOperation] | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> ad_service.MutateAdsResponse: ...

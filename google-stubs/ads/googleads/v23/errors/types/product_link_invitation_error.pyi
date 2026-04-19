@@ -15,6 +15,7 @@ class ProductLinkInvitationErrorEnum(proto.Message):
         PERMISSION_DENIED = 3
         NO_INVITATION_REQUIRED = 4
         CUSTOMER_NOT_PERMITTED_TO_CREATE_INVITATION = 5
+        INVALID_ADVERTISING_PARTNER_ALLOWED_DOMAIN = 6
 
     def __init__(
         self: _M,

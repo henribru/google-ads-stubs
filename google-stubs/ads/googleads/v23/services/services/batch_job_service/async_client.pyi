@@ -213,7 +213,7 @@ class BatchJobServiceAsyncClient:
         *,
         customer_id: str | None = None,
         operation: batch_job_service.BatchJobOperation | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> batch_job_service.MutateBatchJobResponse: ...
@@ -222,7 +222,7 @@ class BatchJobServiceAsyncClient:
         request: batch_job_service.ListBatchJobResultsRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.ListBatchJobResultsAsyncPager: ...
@@ -231,7 +231,7 @@ class BatchJobServiceAsyncClient:
         request: batch_job_service.RunBatchJobRequest | dict | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation_async.AsyncOperation: ...
@@ -243,7 +243,7 @@ class BatchJobServiceAsyncClient:
         sequence_token: str | None = None,
         mutate_operations: MutableSequence[google_ads_service.MutateOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> batch_job_service.AddBatchJobOperationsResponse: ...

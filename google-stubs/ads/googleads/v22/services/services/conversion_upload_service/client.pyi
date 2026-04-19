@@ -85,7 +85,7 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
         conversions: MutableSequence[conversion_upload_service.ClickConversion]
         | None = None,
         partial_failure: bool | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> conversion_upload_service.UploadClickConversionsResponse: ...
@@ -99,7 +99,7 @@ class ConversionUploadServiceClient(metaclass=ConversionUploadServiceClientMeta)
         conversions: MutableSequence[conversion_upload_service.CallConversion]
         | None = None,
         partial_failure: bool | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> conversion_upload_service.UploadCallConversionsResponse: ...

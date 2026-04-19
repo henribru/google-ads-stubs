@@ -81,7 +81,7 @@ class IdentityVerificationServiceClient(
         customer_id: str | None = None,
         verification_program: identity_verification_program.IdentityVerificationProgramEnum.IdentityVerificationProgram
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
@@ -92,7 +92,7 @@ class IdentityVerificationServiceClient(
         | None = None,
         *,
         customer_id: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> identity_verification_service.GetIdentityVerificationResponse: ...

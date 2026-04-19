@@ -65,7 +65,7 @@ class CampaignDraftServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[campaign_draft_service.CampaignDraftOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_draft_service.MutateCampaignDraftsResponse: ...
@@ -76,7 +76,7 @@ class CampaignDraftServiceAsyncClient:
         | None = None,
         *,
         campaign_draft: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation_async.AsyncOperation: ...
@@ -87,7 +87,7 @@ class CampaignDraftServiceAsyncClient:
         | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.ListCampaignDraftAsyncErrorsAsyncPager: ...

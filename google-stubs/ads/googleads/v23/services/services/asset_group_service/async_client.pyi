@@ -62,7 +62,7 @@ class AssetGroupServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[asset_group_service.AssetGroupOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> asset_group_service.MutateAssetGroupsResponse: ...

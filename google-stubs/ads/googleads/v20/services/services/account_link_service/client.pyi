@@ -80,7 +80,7 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
         *,
         customer_id: str | None = None,
         account_link: gagr_account_link.AccountLink | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> account_link_service.CreateAccountLinkResponse: ...
@@ -90,7 +90,7 @@ class AccountLinkServiceClient(metaclass=AccountLinkServiceClientMeta):
         *,
         customer_id: str | None = None,
         operation: account_link_service.AccountLinkOperation | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> account_link_service.MutateAccountLinkResponse: ...

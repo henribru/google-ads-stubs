@@ -1,7 +1,8 @@
 from typing import Callable, MutableSequence, Sequence
 
+import google.api_core.operation_async as operation_async
 from _typeshed import Incomplete
-from google.api_core import gapic_v1, operation_async, retry_async as retries
+from google.api_core import gapic_v1, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
 
@@ -62,7 +63,7 @@ class OfflineUserDataJobServiceAsyncClient:
         *,
         customer_id: str | None = None,
         job: offline_user_data_job.OfflineUserDataJob | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> offline_user_data_job_service.CreateOfflineUserDataJobResponse: ...
@@ -77,7 +78,7 @@ class OfflineUserDataJobServiceAsyncClient:
             offline_user_data_job_service.OfflineUserDataJobOperation
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> offline_user_data_job_service.AddOfflineUserDataJobOperationsResponse: ...
@@ -88,7 +89,7 @@ class OfflineUserDataJobServiceAsyncClient:
         | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation_async.AsyncOperation: ...

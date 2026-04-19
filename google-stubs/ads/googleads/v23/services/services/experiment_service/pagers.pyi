@@ -1,6 +1,7 @@
 from typing import Any, AsyncIterator, Awaitable, Callable, Iterator, Sequence
 
 from _typeshed import Incomplete
+from google.api_core import gapic_v1, retry as retries, retry_async as retries_async
 from google.rpc import status_pb2 as status_pb2
 
 from google.ads.googleads.v23.services.types import experiment_service
@@ -15,7 +16,7 @@ class ListExperimentAsyncErrorsPager:
         request: experiment_service.ListExperimentAsyncErrorsRequest,
         response: experiment_service.ListExperimentAsyncErrorsResponse,
         *,
-        retry: OptionalRetry = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
@@ -35,7 +36,7 @@ class ListExperimentAsyncErrorsAsyncPager:
         request: experiment_service.ListExperimentAsyncErrorsRequest,
         response: experiment_service.ListExperimentAsyncErrorsResponse,
         *,
-        retry: OptionalAsyncRetry = ...,
+        retry: retries_async.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...

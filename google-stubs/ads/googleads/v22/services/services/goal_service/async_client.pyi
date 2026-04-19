@@ -61,7 +61,7 @@ class GoalServiceAsyncClient:
         *,
         customer_id: str | None = None,
         operations: MutableSequence[goal_service.GoalOperation] | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> goal_service.MutateGoalsResponse: ...

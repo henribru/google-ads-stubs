@@ -13,6 +13,8 @@ class ShareablePreviewErrorEnum(proto.Message):
         UNKNOWN = 1
         TOO_MANY_ASSET_GROUPS_IN_REQUEST = 2
         ASSET_GROUP_DOES_NOT_EXIST_UNDER_THIS_CUSTOMER = 3
+        UNSUPPORTED_AD_TYPE = 4
+        TOO_MANY_RESOURCES_IN_REQUEST = 6
 
     def __init__(
         self: _M,

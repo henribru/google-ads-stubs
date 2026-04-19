@@ -118,6 +118,7 @@ from .types.audience_insights_attribute import (
     AudienceInsightsCategory as AudienceInsightsCategory,
     AudienceInsightsEntity as AudienceInsightsEntity,
     AudienceInsightsLineup as AudienceInsightsLineup,
+    InsightsAudienceAttributeGroup as InsightsAudienceAttributeGroup,
     KnowledgeGraphAttributeMetadata as KnowledgeGraphAttributeMetadata,
     LineupAttributeMetadata as LineupAttributeMetadata,
     LocationAttributeMetadata as LocationAttributeMetadata,
@@ -165,6 +166,9 @@ from .types.bidding import (
     TargetSpend as TargetSpend,
 )
 from .types.campaign_goal_settings import CampaignGoalSettings as CampaignGoalSettings
+from .types.campaign_reservation_quote import (
+    CampaignReservationQuote as CampaignReservationQuote,
+)
 from .types.click_location import ClickLocation as ClickLocation
 from .types.consent import Consent as Consent
 from .types.criteria import (
@@ -449,6 +453,7 @@ __all__ = [
     "CalloutAsset",
     "CalloutFeedItem",
     "CampaignGoalSettings",
+    "CampaignReservationQuote",
     "CampaignThirdPartyBrandLiftIntegrationPartner",
     "CampaignThirdPartyBrandSafetyIntegrationPartner",
     "CampaignThirdPartyIntegrationPartners",
@@ -542,6 +547,7 @@ __all__ = [
     "ImageDimension",
     "InFeedVideoAdInfo",
     "IncomeRangeInfo",
+    "InsightsAudienceAttributeGroup",
     "InteractionTypeInfo",
     "IpBlockInfo",
     "ItemAttribute",

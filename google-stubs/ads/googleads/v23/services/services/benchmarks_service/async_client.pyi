@@ -59,7 +59,7 @@ class BenchmarksServiceAsyncClient:
         | dict
         | None = None,
         *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.ListBenchmarksAvailableDatesResponse: ...
@@ -67,7 +67,7 @@ class BenchmarksServiceAsyncClient:
         self,
         request: benchmarks_service.ListBenchmarksLocationsRequest | dict | None = None,
         *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.ListBenchmarksLocationsResponse: ...
@@ -75,7 +75,7 @@ class BenchmarksServiceAsyncClient:
         self,
         request: benchmarks_service.ListBenchmarksProductsRequest | dict | None = None,
         *,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.ListBenchmarksProductsResponse: ...
@@ -87,7 +87,7 @@ class BenchmarksServiceAsyncClient:
             benchmarks_source_type.BenchmarksSourceTypeEnum.BenchmarksSourceType
         ]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.ListBenchmarksSourcesResponse: ...
@@ -101,7 +101,7 @@ class BenchmarksServiceAsyncClient:
         location: criteria.LocationInfo | None = None,
         benchmarks_source: benchmarks_service.BenchmarksSource | None = None,
         product_filter: benchmarks_service.ProductFilter | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> benchmarks_service.GenerateBenchmarksMetricsResponse: ...

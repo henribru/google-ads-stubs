@@ -90,7 +90,7 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
         customer_id: str | None = None,
         operations: MutableSequence[campaign_draft_service.CampaignDraftOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> campaign_draft_service.MutateCampaignDraftsResponse: ...
@@ -101,7 +101,7 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
         | None = None,
         *,
         campaign_draft: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> operation.Operation: ...
@@ -112,7 +112,7 @@ class CampaignDraftServiceClient(metaclass=CampaignDraftServiceClientMeta):
         | None = None,
         *,
         resource_name: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.ListCampaignDraftAsyncErrorsPager: ...

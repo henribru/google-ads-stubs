@@ -75,7 +75,7 @@ class BrandSuggestionServiceClient(metaclass=BrandSuggestionServiceClientMeta):
         *,
         customer_id: str | None = None,
         brand_prefix: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> brand_suggestion_service.SuggestBrandsResponse: ...

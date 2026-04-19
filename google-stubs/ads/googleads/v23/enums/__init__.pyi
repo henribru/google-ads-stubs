@@ -145,6 +145,9 @@ from .types.benchmarks_marketing_objective import (
 from .types.benchmarks_source_type import (
     BenchmarksSourceTypeEnum as BenchmarksSourceTypeEnum,
 )
+from .types.benchmarks_time_granularity import (
+    BenchmarksTimeGranularityEnum as BenchmarksTimeGranularityEnum,
+)
 from .types.bid_modifier_source import BidModifierSourceEnum as BidModifierSourceEnum
 from .types.bidding_source import BiddingSourceEnum as BiddingSourceEnum
 from .types.bidding_strategy_status import (
@@ -157,6 +160,7 @@ from .types.bidding_strategy_type import (
     BiddingStrategyTypeEnum as BiddingStrategyTypeEnum,
 )
 from .types.billing_setup_status import BillingSetupStatusEnum as BillingSetupStatusEnum
+from .types.booking_status import BookingStatusEnum as BookingStatusEnum
 from .types.brand_request_rejection_reason import (
     BrandRequestRejectionReasonEnum as BrandRequestRejectionReasonEnum,
 )
@@ -551,6 +555,9 @@ from .types.lookalike_expansion_level import (
 from .types.manager_link_status import ManagerLinkStatusEnum as ManagerLinkStatusEnum
 from .types.match_type import MatchTypeEnum as MatchTypeEnum
 from .types.media_type import MediaTypeEnum as MediaTypeEnum
+from .types.messaging_restriction_type import (
+    MessagingRestrictionTypeEnum as MessagingRestrictionTypeEnum,
+)
 from .types.mime_type import MimeTypeEnum as MimeTypeEnum
 from .types.minute_of_hour import MinuteOfHourEnum as MinuteOfHourEnum
 from .types.mobile_app_vendor import MobileAppVendorEnum as MobileAppVendorEnum
@@ -590,6 +597,9 @@ from .types.optimization_goal_type import (
     OptimizationGoalTypeEnum as OptimizationGoalTypeEnum,
 )
 from .types.parental_status_type import ParentalStatusTypeEnum as ParentalStatusTypeEnum
+from .types.partnership_opportunity import (
+    PartnershipOpportunityEnum as PartnershipOpportunityEnum,
+)
 from .types.payment_mode import PaymentModeEnum as PaymentModeEnum
 from .types.performance_max_upgrade_status import (
     PerformanceMaxUpgradeStatusEnum as PerformanceMaxUpgradeStatusEnum,
@@ -614,6 +624,7 @@ from .types.policy_topic_evidence_destination_not_working_dns_error_type import 
 from .types.positive_geo_target_type import (
     PositiveGeoTargetTypeEnum as PositiveGeoTargetTypeEnum,
 )
+from .types.preview_type import PreviewTypeEnum as PreviewTypeEnum
 from .types.price_extension_price_qualifier import (
     PriceExtensionPriceQualifierEnum as PriceExtensionPriceQualifierEnum,
 )
@@ -673,6 +684,9 @@ from .types.recommendation_subscription_status import (
 )
 from .types.recommendation_type import RecommendationTypeEnum as RecommendationTypeEnum
 from .types.regulatory_fee_type import RegulatoryFeeTypeEnum as RegulatoryFeeTypeEnum
+from .types.reservation_request_type import (
+    ReservationRequestTypeEnum as ReservationRequestTypeEnum,
+)
 from .types.resource_change_operation import (
     ResourceChangeOperationEnum as ResourceChangeOperationEnum,
 )
@@ -836,6 +850,9 @@ from .types.video_ad_sequence_interaction_type import (
 from .types.video_ad_sequence_minimum_duration import (
     VideoAdSequenceMinimumDurationEnum as VideoAdSequenceMinimumDurationEnum,
 )
+from .types.video_enhancement_source import (
+    VideoEnhancementSourceEnum as VideoEnhancementSourceEnum,
+)
 from .types.video_thumbnail import VideoThumbnailEnum as VideoThumbnailEnum
 from .types.webpage_condition_operand import (
     WebpageConditionOperandEnum as WebpageConditionOperandEnum,
@@ -843,8 +860,14 @@ from .types.webpage_condition_operand import (
 from .types.webpage_condition_operator import (
     WebpageConditionOperatorEnum as WebpageConditionOperatorEnum,
 )
+from .types.youtube_video_privacy import (
+    YouTubeVideoPrivacyEnum as YouTubeVideoPrivacyEnum,
+)
 from .types.youtube_video_property import (
     YouTubeVideoPropertyEnum as YouTubeVideoPropertyEnum,
+)
+from .types.youtube_video_upload_state import (
+    YouTubeVideoUploadStateEnum as YouTubeVideoUploadStateEnum,
 )
 
 __all__ = [
@@ -915,12 +938,14 @@ __all__ = [
     "BatchJobStatusEnum",
     "BenchmarksMarketingObjectiveEnum",
     "BenchmarksSourceTypeEnum",
+    "BenchmarksTimeGranularityEnum",
     "BidModifierSourceEnum",
     "BiddingSourceEnum",
     "BiddingStrategyStatusEnum",
     "BiddingStrategySystemStatusEnum",
     "BiddingStrategyTypeEnum",
     "BillingSetupStatusEnum",
+    "BookingStatusEnum",
     "BrandRequestRejectionReasonEnum",
     "BrandSafetySuitabilityEnum",
     "BrandStateEnum",
@@ -1085,6 +1110,7 @@ __all__ = [
     "ManagerLinkStatusEnum",
     "MatchTypeEnum",
     "MediaTypeEnum",
+    "MessagingRestrictionTypeEnum",
     "MimeTypeEnum",
     "MinuteOfHourEnum",
     "MobileAppVendorEnum",
@@ -1102,6 +1128,7 @@ __all__ = [
     "OperatingSystemVersionOperatorTypeEnum",
     "OptimizationGoalTypeEnum",
     "ParentalStatusTypeEnum",
+    "PartnershipOpportunityEnum",
     "PaymentModeEnum",
     "PerformanceMaxUpgradeStatusEnum",
     "PlacementTypeEnum",
@@ -1112,6 +1139,7 @@ __all__ = [
     "PolicyTopicEvidenceDestinationNotWorkingDeviceEnum",
     "PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum",
     "PositiveGeoTargetTypeEnum",
+    "PreviewTypeEnum",
     "PriceExtensionPriceQualifierEnum",
     "PriceExtensionPriceUnitEnum",
     "PriceExtensionTypeEnum",
@@ -1139,6 +1167,7 @@ __all__ = [
     "RecommendationSubscriptionStatusEnum",
     "RecommendationTypeEnum",
     "RegulatoryFeeTypeEnum",
+    "ReservationRequestTypeEnum",
     "ResourceChangeOperationEnum",
     "ResourceLimitTypeEnum",
     "ResponseContentTypeEnum",
@@ -1204,8 +1233,11 @@ __all__ = [
     "VideoAdFormatRestrictionEnum",
     "VideoAdSequenceInteractionTypeEnum",
     "VideoAdSequenceMinimumDurationEnum",
+    "VideoEnhancementSourceEnum",
     "VideoThumbnailEnum",
     "WebpageConditionOperandEnum",
     "WebpageConditionOperatorEnum",
+    "YouTubeVideoPrivacyEnum",
     "YouTubeVideoPropertyEnum",
+    "YouTubeVideoUploadStateEnum",
 ]

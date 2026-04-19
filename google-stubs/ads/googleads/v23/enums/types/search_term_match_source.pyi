@@ -16,6 +16,7 @@ class SearchTermMatchSourceEnum(proto.Message):
         AI_MAX_BROAD_MATCH = 4
         DYNAMIC_SEARCH_ADS = 5
         PERFORMANCE_MAX = 6
+        VERTICAL_ADS_DATA_FEED = 7
 
     def __init__(
         self: _M,

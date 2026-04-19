@@ -236,6 +236,12 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
     @staticmethod
     def parse_applied_incentive_path(path: str) -> dict[str, str]: ...
     @staticmethod
+    def app_top_combination_view_path(
+        customer_id: str, ad_group_id: str, ad_id: str, asset_combination_category: str
+    ) -> str: ...
+    @staticmethod
+    def parse_app_top_combination_view_path(path: str) -> dict[str, str]: ...
+    @staticmethod
     def asset_path(customer_id: str, asset_id: str) -> str: ...
     @staticmethod
     def parse_asset_path(path: str) -> dict[str, str]: ...
@@ -1052,11 +1058,19 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
     @staticmethod
     def parse_video_path(path: str) -> dict[str, str]: ...
     @staticmethod
+    def video_enhancement_path(customer_id: str, video_enhancement: str) -> str: ...
+    @staticmethod
+    def parse_video_enhancement_path(path: str) -> dict[str, str]: ...
+    @staticmethod
     def webpage_view_path(
         customer_id: str, ad_group_id: str, criterion_id: str
     ) -> str: ...
     @staticmethod
     def parse_webpage_view_path(path: str) -> dict[str, str]: ...
+    @staticmethod
+    def you_tube_video_upload_path(customer_id: str, video_upload_id: str) -> str: ...
+    @staticmethod
+    def parse_you_tube_video_upload_path(path: str) -> dict[str, str]: ...
     @staticmethod
     def common_billing_account_path(billing_account: str) -> str: ...
     @staticmethod
@@ -1102,7 +1116,7 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
         *,
         customer_id: str | None = None,
         query: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> pagers.SearchPager: ...
@@ -1112,7 +1126,7 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
         *,
         customer_id: str | None = None,
         query: str | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> Iterable[google_ads_service.SearchGoogleAdsStreamResponse]: ...
@@ -1123,7 +1137,7 @@ class GoogleAdsServiceClient(metaclass=GoogleAdsServiceClientMeta):
         customer_id: str | None = None,
         mutate_operations: MutableSequence[google_ads_service.MutateOperation]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> google_ads_service.MutateGoogleAdsResponse: ...

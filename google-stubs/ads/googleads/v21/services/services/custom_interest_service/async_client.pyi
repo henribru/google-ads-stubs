@@ -62,7 +62,7 @@ class CustomInterestServiceAsyncClient:
         customer_id: str | None = None,
         operations: MutableSequence[custom_interest_service.CustomInterestOperation]
         | None = None,
-        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> custom_interest_service.MutateCustomInterestsResponse: ...

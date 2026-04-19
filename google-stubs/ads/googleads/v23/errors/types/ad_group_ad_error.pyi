@@ -23,6 +23,7 @@ class AdGroupAdErrorEnum(proto.Message):
         AD_TYPE_CANNOT_BE_REMOVED = 11
         CANNOT_UPDATE_DEPRECATED_ADS = 12
         AD_SHARING_NOT_ALLOWED = 13
+        DURATION_TOO_SHORT = 14
 
     def __init__(
         self: _M,

@@ -88,7 +88,7 @@ class CustomerUserAccessInvitationServiceClient(
         customer_id: str | None = None,
         operation: customer_user_access_invitation_service.CustomerUserAccessInvitationOperation
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> customer_user_access_invitation_service.MutateCustomerUserAccessInvitationResponse: ...

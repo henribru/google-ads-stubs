@@ -1,6 +1,7 @@
 from typing import Any, AsyncIterator, Awaitable, Callable, Iterator, Sequence
 
 from _typeshed import Incomplete
+from google.api_core import gapic_v1, retry as retries, retry_async as retries_async
 
 from google.ads.googleads.v20.services.types import keyword_plan_idea_service
 
@@ -14,7 +15,7 @@ class GenerateKeywordIdeasPager:
         request: keyword_plan_idea_service.GenerateKeywordIdeasRequest,
         response: keyword_plan_idea_service.GenerateKeywordIdeaResponse,
         *,
-        retry: OptionalRetry = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...
@@ -36,7 +37,7 @@ class GenerateKeywordIdeasAsyncPager:
         request: keyword_plan_idea_service.GenerateKeywordIdeasRequest,
         response: keyword_plan_idea_service.GenerateKeywordIdeaResponse,
         *,
-        retry: OptionalAsyncRetry = ...,
+        retry: retries_async.AsyncRetry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> None: ...

@@ -92,7 +92,7 @@ class UserListCustomerTypeServiceClient(
             user_list_customer_type_service.UserListCustomerTypeOperation
         ]
         | None = None,
-        retry: retries.Retry | gapic_v1.method._MethodDefault = ...,
+        retry: retries.Retry | gapic_v1.method._MethodDefault | None = ...,
         timeout: float | object = ...,
         metadata: Sequence[tuple[str, str | bytes]] = (),
     ) -> user_list_customer_type_service.MutateUserListCustomerTypesResponse: ...
