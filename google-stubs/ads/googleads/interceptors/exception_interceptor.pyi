@@ -5,7 +5,10 @@ from _typeshed import Incomplete
 from google.protobuf.message import Message
 
 from google.ads.googleads.interceptors import ContinuationType, Interceptor
-from google.ads.googleads.response_wrappers import _UnaryStreamWrapper, _UnaryUnaryWrapper
+from google.ads.googleads.response_wrappers import (
+    _UnaryStreamWrapper,
+    _UnaryUnaryWrapper,
+)
 
 __all__ = [
     "ExceptionInterceptor",
