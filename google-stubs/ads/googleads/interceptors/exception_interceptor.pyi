@@ -20,13 +20,13 @@ class ExceptionInterceptor(
     Interceptor, grpc.UnaryUnaryClientInterceptor, grpc.UnaryStreamClientInterceptor
 ):
     def __init__(self, api_version: str, use_proto_plus: bool = False) -> None: ...
-    def intercept_unary_unary(
+    def intercept_unary_unary(  # type: ignore[override]
         self,
         continuation: ContinuationType,
         client_call_details: grpc.ClientCallDetails,
         request: Message,
     ) -> _UnaryUnaryWrapper: ...
-    def intercept_unary_stream(
+    def intercept_unary_stream(  # type: ignore[override]
         self,
         continuation: ContinuationType,
         client_call_details: grpc.ClientCallDetails,
