@@ -1,14 +1,7 @@
-from typing import TypeVar
+from google.protobuf.descriptor import FieldDescriptor as FieldDescriptor
+from google.protobuf.message import Message as ProtobufMessage
+from proto import Message as ProtoPlusMessage
 
-from google.protobuf.message import Message
-
-from google.ads.googleads.util import (
-    convert_proto_plus_to_protobuf as convert_proto_plus_to_protobuf,
-    get_nested_attr as get_nested_attr,
-    proto_copy_from as proto_copy_from,
-    set_nested_message_field as set_nested_message_field,
-)
-
-_M = TypeVar("_M", bound=Message)
-
-def mask_message(message: _M, mask: str) -> _M: ...
+def mask_message(
+    message: ProtobufMessage | ProtoPlusMessage, mask: str
+) -> ProtobufMessage | ProtoPlusMessage: ...
