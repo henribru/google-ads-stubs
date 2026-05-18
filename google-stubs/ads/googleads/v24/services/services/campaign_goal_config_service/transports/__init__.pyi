@@ -1,0 +1,15 @@
+from .base import (
+    CampaignGoalConfigServiceTransport as CampaignGoalConfigServiceTransport,
+)
+from .grpc import (
+    CampaignGoalConfigServiceGrpcTransport as CampaignGoalConfigServiceGrpcTransport,
+)
+from .grpc_asyncio import (
+    CampaignGoalConfigServiceGrpcAsyncIOTransport as CampaignGoalConfigServiceGrpcAsyncIOTransport,
+)
+
+__all__ = [
+    "CampaignGoalConfigServiceTransport",
+    "CampaignGoalConfigServiceGrpcTransport",
+    "CampaignGoalConfigServiceGrpcAsyncIOTransport",
+]

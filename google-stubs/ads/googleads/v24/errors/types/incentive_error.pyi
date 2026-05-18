@@ -1,0 +1,26 @@
+from collections.abc import Mapping
+from typing import Any, NoReturn, TypeVar
+
+import google.protobuf.message
+import proto
+from typing_extensions import Literal
+
+_M = TypeVar("_M")
+
+class IncentiveErrorEnum(proto.Message):
+    class IncentiveError(proto.Enum):
+        UNSPECIFIED = 0
+        UNKNOWN = 1
+        INVALID_INCENTIVE_ID = 2
+        MAX_INCENTIVES_REDEEMED = 3
+        ACCOUNT_TOO_OLD = 4
+
+    def __init__(
+        self: _M,
+        mapping: _M | Mapping | google.protobuf.message.Message | None = None,
+        *,
+        ignore_unknown_fields: bool = False,
+    ) -> None: ...
+    def __contains__(  # type: ignore[override]
+        self, key: NoReturn
+    ) -> bool: ...
