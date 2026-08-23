@@ -330,6 +330,9 @@ from google.ads.googleads.v24.resources.types.mobile_app_category_constant impor
 from google.ads.googleads.v24.resources.types.mobile_device_constant import (
     MobileDeviceConstant,
 )
+from google.ads.googleads.v24.resources.types.multi_party_auth_review import (
+    MultiPartyAuthReview,
+)
 from google.ads.googleads.v24.resources.types.offline_conversion_upload_client_summary import (
     OfflineConversionUploadClientSummary,
 )
@@ -796,6 +799,7 @@ class GoogleAdsRow(proto.Message):
     local_services_verification_artifact: LocalServicesVerificationArtifact
     mobile_app_category_constant: MobileAppCategoryConstant
     mobile_device_constant: MobileDeviceConstant
+    multi_party_auth_review: MultiPartyAuthReview
     offline_conversion_upload_client_summary: OfflineConversionUploadClientSummary
     offline_conversion_upload_conversion_action_summary: (
         OfflineConversionUploadConversionActionSummary
@@ -989,6 +993,7 @@ class GoogleAdsRow(proto.Message):
         local_services_verification_artifact: LocalServicesVerificationArtifact = ...,
         mobile_app_category_constant: MobileAppCategoryConstant = ...,
         mobile_device_constant: MobileDeviceConstant = ...,
+        multi_party_auth_review: MultiPartyAuthReview = ...,
         offline_conversion_upload_client_summary: OfflineConversionUploadClientSummary = ...,
         offline_conversion_upload_conversion_action_summary: OfflineConversionUploadConversionActionSummary = ...,
         offline_user_data_job: OfflineUserDataJob = ...,
@@ -1177,6 +1182,7 @@ class GoogleAdsRow(proto.Message):
             "local_services_verification_artifact",
             "mobile_app_category_constant",
             "mobile_device_constant",
+            "multi_party_auth_review",
             "offline_conversion_upload_client_summary",
             "offline_conversion_upload_conversion_action_summary",
             "offline_user_data_job",

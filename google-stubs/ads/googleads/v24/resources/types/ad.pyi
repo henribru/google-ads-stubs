@@ -34,6 +34,9 @@ from google.ads.googleads.v24.common.types.ad_type_infos import (
 )
 from google.ads.googleads.v24.common.types.custom_parameter import CustomParameter
 from google.ads.googleads.v24.common.types.final_app_url import FinalAppUrl
+from google.ads.googleads.v24.common.types.synthetic_content_info import (
+    SyntheticContentInfo,
+)
 from google.ads.googleads.v24.common.types.url_collection import UrlCollection
 from google.ads.googleads.v24.enums.types.ad_type import AdTypeEnum
 from google.ads.googleads.v24.enums.types.device import DeviceEnum
@@ -61,6 +64,7 @@ class Ad(proto.Message):
     system_managed_resource_source: (
         SystemManagedResourceSourceEnum.SystemManagedResourceSource
     )
+    synthetic_content_info: SyntheticContentInfo
     text_ad: TextAdInfo
     expanded_text_ad: ExpandedTextAdInfo
     expanded_dynamic_search_ad: ExpandedDynamicSearchAdInfo
@@ -106,6 +110,7 @@ class Ad(proto.Message):
         url_collections: MutableSequence[UrlCollection] = ...,
         name: str = ...,
         system_managed_resource_source: SystemManagedResourceSourceEnum.SystemManagedResourceSource = ...,
+        synthetic_content_info: SyntheticContentInfo = ...,
         text_ad: TextAdInfo = ...,
         expanded_text_ad: ExpandedTextAdInfo = ...,
         expanded_dynamic_search_ad: ExpandedDynamicSearchAdInfo = ...,
@@ -150,6 +155,7 @@ class Ad(proto.Message):
             "url_collections",
             "name",
             "system_managed_resource_source",
+            "synthetic_content_info",
             "text_ad",
             "expanded_text_ad",
             "expanded_dynamic_search_ad",

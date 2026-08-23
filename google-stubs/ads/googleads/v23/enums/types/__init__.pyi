@@ -529,6 +529,15 @@ from .minute_of_hour import MinuteOfHourEnum as MinuteOfHourEnum
 from .mobile_app_vendor import MobileAppVendorEnum as MobileAppVendorEnum
 from .mobile_device_type import MobileDeviceTypeEnum as MobileDeviceTypeEnum
 from .month_of_year import MonthOfYearEnum as MonthOfYearEnum
+from .multi_party_auth_operation_type import (
+    MultiPartyAuthOperationTypeEnum as MultiPartyAuthOperationTypeEnum,
+)
+from .multi_party_auth_review_status import (
+    MultiPartyAuthReviewStatusEnum as MultiPartyAuthReviewStatusEnum,
+)
+from .multi_party_auth_review_target_resource import (
+    MultiPartyAuthReviewTargetResourceEnum as MultiPartyAuthReviewTargetResourceEnum,
+)
 from .negative_geo_target_type import (
     NegativeGeoTargetTypeEnum as NegativeGeoTargetTypeEnum,
 )
@@ -690,6 +699,12 @@ from .smart_campaign_not_eligible_reason import (
 from .smart_campaign_status import SmartCampaignStatusEnum as SmartCampaignStatusEnum
 from .spending_limit_type import SpendingLimitTypeEnum as SpendingLimitTypeEnum
 from .summary_row_setting import SummaryRowSettingEnum as SummaryRowSettingEnum
+from .synthetic_content_attestation_status import (
+    SyntheticContentAttestationStatusEnum as SyntheticContentAttestationStatusEnum,
+)
+from .synthetic_content_source import (
+    SyntheticContentSourceEnum as SyntheticContentSourceEnum,
+)
 from .system_managed_entity_source import (
     SystemManagedResourceSourceEnum as SystemManagedResourceSourceEnum,
 )
@@ -1050,6 +1065,9 @@ __all__ = [
     "MobileAppVendorEnum",
     "MobileDeviceTypeEnum",
     "MonthOfYearEnum",
+    "MultiPartyAuthOperationTypeEnum",
+    "MultiPartyAuthReviewStatusEnum",
+    "MultiPartyAuthReviewTargetResourceEnum",
     "NegativeGeoTargetTypeEnum",
     "NonSkippableMaxDurationEnum",
     "NonSkippableMinDurationEnum",
@@ -1127,6 +1145,8 @@ __all__ = [
     "SmartCampaignStatusEnum",
     "SpendingLimitTypeEnum",
     "SummaryRowSettingEnum",
+    "SyntheticContentAttestationStatusEnum",
+    "SyntheticContentSourceEnum",
     "SystemManagedResourceSourceEnum",
     "TargetCpaOptInRecommendationGoalEnum",
     "TargetFrequencyTimeUnitEnum",

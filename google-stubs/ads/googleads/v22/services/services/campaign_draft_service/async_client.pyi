@@ -1,8 +1,7 @@
 from typing import Callable, MutableSequence, Sequence
 
-import google.api_core.operation_async as operation_async
 from _typeshed import Incomplete
-from google.api_core import gapic_v1, retry_async as retries
+from google.api_core import gapic_v1, operation_async, retry_async as retries
 from google.api_core.client_options import ClientOptions
 from google.auth import credentials as ga_credentials
 

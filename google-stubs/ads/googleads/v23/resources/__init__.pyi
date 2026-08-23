@@ -305,6 +305,11 @@ from .types.mobile_app_category_constant import (
     MobileAppCategoryConstant as MobileAppCategoryConstant,
 )
 from .types.mobile_device_constant import MobileDeviceConstant as MobileDeviceConstant
+from .types.multi_party_auth_review import (
+    CustomerUserAccessInvitationReview as CustomerUserAccessInvitationReview,
+    CustomerUserAccessReview as CustomerUserAccessReview,
+    MultiPartyAuthReview as MultiPartyAuthReview,
+)
 from .types.offline_conversion_upload_client_summary import (
     OfflineConversionAlert as OfflineConversionAlert,
     OfflineConversionError as OfflineConversionError,
@@ -583,6 +588,9 @@ __all__ = [
     "MediaVideo",
     "MobileAppCategoryConstant",
     "MobileDeviceConstant",
+    "CustomerUserAccessInvitationReview",
+    "CustomerUserAccessReview",
+    "MultiPartyAuthReview",
     "OfflineConversionAlert",
     "OfflineConversionError",
     "OfflineConversionSummary",

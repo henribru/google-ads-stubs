@@ -1,11 +1,11 @@
 import types
 from typing import Callable, MutableSequence, Sequence
 
-import google.api_core.operation as operation
 from _typeshed import Incomplete
 from google.api_core import (
     client_options as client_options_lib,
     gapic_v1,
+    operation,
     retry as retries,
 )
 from google.auth import credentials as ga_credentials

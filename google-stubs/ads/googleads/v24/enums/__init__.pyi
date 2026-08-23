@@ -569,6 +569,15 @@ from .types.mobile_device_platform import (
 )
 from .types.mobile_device_type import MobileDeviceTypeEnum as MobileDeviceTypeEnum
 from .types.month_of_year import MonthOfYearEnum as MonthOfYearEnum
+from .types.multi_party_auth_operation_type import (
+    MultiPartyAuthOperationTypeEnum as MultiPartyAuthOperationTypeEnum,
+)
+from .types.multi_party_auth_review_status import (
+    MultiPartyAuthReviewStatusEnum as MultiPartyAuthReviewStatusEnum,
+)
+from .types.multi_party_auth_review_target_resource import (
+    MultiPartyAuthReviewTargetResourceEnum as MultiPartyAuthReviewTargetResourceEnum,
+)
 from .types.negative_geo_target_type import (
     NegativeGeoTargetTypeEnum as NegativeGeoTargetTypeEnum,
 )
@@ -766,6 +775,12 @@ from .types.smart_campaign_status import (
 )
 from .types.spending_limit_type import SpendingLimitTypeEnum as SpendingLimitTypeEnum
 from .types.summary_row_setting import SummaryRowSettingEnum as SummaryRowSettingEnum
+from .types.synthetic_content_attestation_status import (
+    SyntheticContentAttestationStatusEnum as SyntheticContentAttestationStatusEnum,
+)
+from .types.synthetic_content_source import (
+    SyntheticContentSourceEnum as SyntheticContentSourceEnum,
+)
 from .types.system_managed_entity_source import (
     SystemManagedResourceSourceEnum as SystemManagedResourceSourceEnum,
 )
@@ -1139,6 +1154,9 @@ __all__ = [
     "MobileDevicePlatformEnum",
     "MobileDeviceTypeEnum",
     "MonthOfYearEnum",
+    "MultiPartyAuthOperationTypeEnum",
+    "MultiPartyAuthReviewStatusEnum",
+    "MultiPartyAuthReviewTargetResourceEnum",
     "NegativeGeoTargetTypeEnum",
     "NonSkippableMaxDurationEnum",
     "NonSkippableMinDurationEnum",
@@ -1220,6 +1238,8 @@ __all__ = [
     "SmartCampaignStatusEnum",
     "SpendingLimitTypeEnum",
     "SummaryRowSettingEnum",
+    "SyntheticContentAttestationStatusEnum",
+    "SyntheticContentSourceEnum",
     "SystemManagedResourceSourceEnum",
     "TargetCpaOptInRecommendationGoalEnum",
     "TargetFrequencyTimeUnitEnum",

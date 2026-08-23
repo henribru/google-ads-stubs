@@ -1,8 +1,8 @@
 from typing import Any, AsyncIterator, Awaitable, Callable, Iterator, Sequence
 
-import google.rpc.status_pb2 as status_pb2
 from _typeshed import Incomplete
 from google.api_core import gapic_v1, retry as retries, retry_async as retries_async
+from google.rpc import status_pb2 as status_pb2
 
 from google.ads.googleads.v22.services.types import experiment_service
 

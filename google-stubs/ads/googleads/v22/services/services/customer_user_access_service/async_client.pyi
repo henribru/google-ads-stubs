@@ -16,6 +16,8 @@ class CustomerUserAccessServiceAsyncClient:
     DEFAULT_MTLS_ENDPOINT: Incomplete
     customer_user_access_path: Incomplete
     parse_customer_user_access_path: Incomplete
+    multi_party_auth_review_path: Incomplete
+    parse_multi_party_auth_review_path: Incomplete
     common_billing_account_path: Incomplete
     parse_common_billing_account_path: Incomplete
     common_folder_path: Incomplete

@@ -16,6 +16,7 @@ class CustomerUserAccess(proto.Message):
     access_role: AccessRoleEnum.AccessRole
     access_creation_date_time: str
     inviter_user_email_address: str
+    pending_multi_party_auth_review: str
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -27,6 +28,7 @@ class CustomerUserAccess(proto.Message):
         access_role: AccessRoleEnum.AccessRole = ...,
         access_creation_date_time: str = ...,
         inviter_user_email_address: str = ...,
+        pending_multi_party_auth_review: str = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -37,5 +39,6 @@ class CustomerUserAccess(proto.Message):
             "access_role",
             "access_creation_date_time",
             "inviter_user_email_address",
+            "pending_multi_party_auth_review",
         ],
     ) -> bool: ...

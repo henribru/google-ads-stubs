@@ -637,6 +637,13 @@ from .local_services_lead_service import (
     SurveyDissatisfied as SurveyDissatisfied,
     SurveySatisfied as SurveySatisfied,
 )
+from .multi_party_auth_review_service import (
+    ResolveMultiPartyAuthReviewOperation as ResolveMultiPartyAuthReviewOperation,
+    ResolveMultiPartyAuthReviewRequest as ResolveMultiPartyAuthReviewRequest,
+    ResolveMultiPartyAuthReviewResponse as ResolveMultiPartyAuthReviewResponse,
+    ResolveMultiPartyAuthReviewResult as ResolveMultiPartyAuthReviewResult,
+    ResolveMultiPartyAuthReviewResultOrError as ResolveMultiPartyAuthReviewResultOrError,
+)
 from .offline_user_data_job_service import (
     AddOfflineUserDataJobOperationsRequest as AddOfflineUserDataJobOperationsRequest,
     AddOfflineUserDataJobOperationsResponse as AddOfflineUserDataJobOperationsResponse,
@@ -1259,6 +1266,11 @@ __all__ = [
     "ProvideLeadFeedbackResponse",
     "SurveyDissatisfied",
     "SurveySatisfied",
+    "ResolveMultiPartyAuthReviewOperation",
+    "ResolveMultiPartyAuthReviewRequest",
+    "ResolveMultiPartyAuthReviewResponse",
+    "ResolveMultiPartyAuthReviewResult",
+    "ResolveMultiPartyAuthReviewResultOrError",
     "AddOfflineUserDataJobOperationsRequest",
     "AddOfflineUserDataJobOperationsResponse",
     "CreateOfflineUserDataJobRequest",
