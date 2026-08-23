@@ -349,6 +349,10 @@ from .types.simulation import (
     TargetRoasSimulationPoint as TargetRoasSimulationPoint,
     TargetRoasSimulationPointList as TargetRoasSimulationPointList,
 )
+from .types.synthetic_content_info import (
+    SyntheticContentAttestation as SyntheticContentAttestation,
+    SyntheticContentInfo as SyntheticContentInfo,
+)
 from .types.tag_snippet import TagSnippet as TagSnippet
 from .types.targeting_setting import (
     TargetingSetting as TargetingSetting,
@@ -696,6 +700,8 @@ __all__ = [
     "TargetImpressionShareSimulationPointList",
     "TargetRoasSimulationPoint",
     "TargetRoasSimulationPointList",
+    "SyntheticContentAttestation",
+    "SyntheticContentInfo",
     "TagSnippet",
     "TargetingSetting",
     "TargetRestriction",

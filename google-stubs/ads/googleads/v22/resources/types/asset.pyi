@@ -39,6 +39,9 @@ from google.ads.googleads.v22.common.types.asset_types import (
 )
 from google.ads.googleads.v22.common.types.custom_parameter import CustomParameter
 from google.ads.googleads.v22.common.types.policy import PolicyTopicEntry
+from google.ads.googleads.v22.common.types.synthetic_content_info import (
+    SyntheticContentInfo,
+)
 from google.ads.googleads.v22.enums.types.asset_field_type import AssetFieldTypeEnum
 from google.ads.googleads.v22.enums.types.asset_source import AssetSourceEnum
 from google.ads.googleads.v22.enums.types.asset_type import AssetTypeEnum
@@ -64,6 +67,7 @@ class Asset(proto.Message):
     source: AssetSourceEnum.AssetSource
     policy_summary: AssetPolicySummary
     field_type_policy_summaries: MutableSequence[AssetFieldTypePolicySummary]
+    synthetic_content_info: SyntheticContentInfo
     youtube_video_asset: YoutubeVideoAsset
     media_bundle_asset: MediaBundleAsset
     image_asset: ImageAsset
@@ -111,6 +115,7 @@ class Asset(proto.Message):
         source: AssetSourceEnum.AssetSource = ...,
         policy_summary: AssetPolicySummary = ...,
         field_type_policy_summaries: MutableSequence[AssetFieldTypePolicySummary] = ...,
+        synthetic_content_info: SyntheticContentInfo = ...,
         youtube_video_asset: YoutubeVideoAsset = ...,
         media_bundle_asset: MediaBundleAsset = ...,
         image_asset: ImageAsset = ...,
@@ -157,6 +162,7 @@ class Asset(proto.Message):
             "source",
             "policy_summary",
             "field_type_policy_summaries",
+            "synthetic_content_info",
             "youtube_video_asset",
             "media_bundle_asset",
             "image_asset",

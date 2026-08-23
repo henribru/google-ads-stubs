@@ -28,8 +28,6 @@ mv gitignore .gitignore
 sed -i 's/def operations_client(self) -> operations_v1\.OperationsClient: \.\.\./def operations_client(self) -> operations_v1\.OperationsClient: \.\.\.  # type: ignore\[override\]/' google-stubs/ads/googleads/v*/**/*.pyi
 sed -i 's/def operations_client(self) -> operations_v1\.OperationsAsyncClient: \.\.\./def operations_client(self) -> operations_v1\.OperationsAsyncClient: \.\.\.  # type: ignore\[override\]/' google-stubs/ads/googleads/v*/**/*.pyi
 sed -i 's/from grpc.experimental import aio/from grpc.experimental import aio  # type: ignore[attr-defined]/' google-stubs/ads/googleads/**/*.pyi
-sed -i 's/def time_remaining(self) -> float | None: \.\.\./def time_remaining(self) -> float | None: ...  # type: ignore\[override\]/' google-stubs/ads/googleads/v*/services/services/you_tube_video_upload_service/transports/resumable_upload_error_adapter.pyi
-sed -i 's/def add_callback(self, callback: Any) -> None: \.\.\./def add_callback(self, callback: Any) -> None: ...  # type: ignore\[override\]/g' google-stubs/ads/googleads/v*/services/services/you_tube_video_upload_service/transports/resumable_upload_error_adapter.pyi
 mv google-stubs google
 uv run mypy --namespace-packages --explicit-package-bases google || true  # || true so we can move the folder back on failure.
 mv google google-stubs

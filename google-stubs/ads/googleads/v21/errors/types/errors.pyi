@@ -288,6 +288,9 @@ from google.ads.googleads.v21.errors.types.media_upload_error import (
 from google.ads.googleads.v21.errors.types.merchant_center_error import (
     MerchantCenterErrorEnum,
 )
+from google.ads.googleads.v21.errors.types.multi_party_auth_review_error import (
+    MultiPartyAuthReviewErrorEnum,
+)
 from google.ads.googleads.v21.errors.types.multiplier_error import MultiplierErrorEnum
 from google.ads.googleads.v21.errors.types.mutate_error import MutateErrorEnum
 from google.ads.googleads.v21.errors.types.new_resource_creation_error import (
@@ -633,6 +636,9 @@ class ErrorCode(proto.Message):
     brand_guidelines_migration_error: (
         BrandGuidelinesMigrationErrorEnum.BrandGuidelinesMigrationError
     )
+    multi_party_auth_review_error: (
+        MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -798,6 +804,7 @@ class ErrorCode(proto.Message):
         automatically_created_asset_removal_error: AutomaticallyCreatedAssetRemovalErrorEnum.AutomaticallyCreatedAssetRemovalError = ...,
         shareable_preview_error: ShareablePreviewErrorEnum.ShareablePreviewError = ...,
         brand_guidelines_migration_error: BrandGuidelinesMigrationErrorEnum.BrandGuidelinesMigrationError = ...,
+        multi_party_auth_review_error: MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -962,6 +969,7 @@ class ErrorCode(proto.Message):
             "automatically_created_asset_removal_error",
             "shareable_preview_error",
             "brand_guidelines_migration_error",
+            "multi_party_auth_review_error",
         ],
     ) -> bool: ...
 

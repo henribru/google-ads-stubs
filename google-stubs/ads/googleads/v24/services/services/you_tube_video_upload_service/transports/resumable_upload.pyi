@@ -6,10 +6,6 @@ import google.api_core.retry
 import requests
 from _typeshed import Incomplete
 
-from .resumable_upload_error_adapter import (
-    raise_formatted_for_status as raise_formatted_for_status,
-)
-
 @dataclass(frozen=True)
 class ResumableUploadStatus:
     upload_url: str

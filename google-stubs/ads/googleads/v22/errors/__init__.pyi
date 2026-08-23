@@ -245,6 +245,9 @@ from .types.media_upload_error import MediaUploadErrorEnum as MediaUploadErrorEn
 from .types.merchant_center_error import (
     MerchantCenterErrorEnum as MerchantCenterErrorEnum,
 )
+from .types.multi_party_auth_review_error import (
+    MultiPartyAuthReviewErrorEnum as MultiPartyAuthReviewErrorEnum,
+)
 from .types.multiplier_error import MultiplierErrorEnum as MultiplierErrorEnum
 from .types.mutate_error import MutateErrorEnum as MutateErrorEnum
 from .types.new_resource_creation_error import (
@@ -460,6 +463,7 @@ __all__ = [
     "MediaFileErrorEnum",
     "MediaUploadErrorEnum",
     "MerchantCenterErrorEnum",
+    "MultiPartyAuthReviewErrorEnum",
     "MultiplierErrorEnum",
     "MutateErrorEnum",
     "NewResourceCreationErrorEnum",

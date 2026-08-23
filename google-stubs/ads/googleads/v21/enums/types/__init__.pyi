@@ -508,6 +508,15 @@ from .minute_of_hour import MinuteOfHourEnum as MinuteOfHourEnum
 from .mobile_app_vendor import MobileAppVendorEnum as MobileAppVendorEnum
 from .mobile_device_type import MobileDeviceTypeEnum as MobileDeviceTypeEnum
 from .month_of_year import MonthOfYearEnum as MonthOfYearEnum
+from .multi_party_auth_operation_type import (
+    MultiPartyAuthOperationTypeEnum as MultiPartyAuthOperationTypeEnum,
+)
+from .multi_party_auth_review_status import (
+    MultiPartyAuthReviewStatusEnum as MultiPartyAuthReviewStatusEnum,
+)
+from .multi_party_auth_review_target_resource import (
+    MultiPartyAuthReviewTargetResourceEnum as MultiPartyAuthReviewTargetResourceEnum,
+)
 from .negative_geo_target_type import (
     NegativeGeoTargetTypeEnum as NegativeGeoTargetTypeEnum,
 )
@@ -998,6 +1007,9 @@ __all__ = [
     "MobileAppVendorEnum",
     "MobileDeviceTypeEnum",
     "MonthOfYearEnum",
+    "MultiPartyAuthOperationTypeEnum",
+    "MultiPartyAuthReviewStatusEnum",
+    "MultiPartyAuthReviewTargetResourceEnum",
     "NegativeGeoTargetTypeEnum",
     "NonSkippableMaxDurationEnum",
     "NonSkippableMinDurationEnum",

@@ -304,6 +304,9 @@ from google.ads.googleads.v24.errors.types.media_upload_error import (
 from google.ads.googleads.v24.errors.types.merchant_center_error import (
     MerchantCenterErrorEnum,
 )
+from google.ads.googleads.v24.errors.types.multi_party_auth_review_error import (
+    MultiPartyAuthReviewErrorEnum,
+)
 from google.ads.googleads.v24.errors.types.multiplier_error import MultiplierErrorEnum
 from google.ads.googleads.v24.errors.types.mutate_error import MutateErrorEnum
 from google.ads.googleads.v24.errors.types.new_resource_creation_error import (
@@ -662,6 +665,9 @@ class ErrorCode(proto.Message):
         ContentCreatorInsightsErrorEnum.ContentCreatorInsightsError
     )
     video_reservation_error: VideoReservationErrorEnum.VideoReservationError
+    multi_party_auth_review_error: (
+        MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError
+    )
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
@@ -835,6 +841,7 @@ class ErrorCode(proto.Message):
         incentive_error: IncentiveErrorEnum.IncentiveError = ...,
         content_creator_insights_error: ContentCreatorInsightsErrorEnum.ContentCreatorInsightsError = ...,
         video_reservation_error: VideoReservationErrorEnum.VideoReservationError = ...,
+        multi_party_auth_review_error: MultiPartyAuthReviewErrorEnum.MultiPartyAuthReviewError = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
         self,
@@ -1007,6 +1014,7 @@ class ErrorCode(proto.Message):
             "incentive_error",
             "content_creator_insights_error",
             "video_reservation_error",
+            "multi_party_auth_review_error",
         ],
     ) -> bool: ...
 

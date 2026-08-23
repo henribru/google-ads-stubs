@@ -303,6 +303,8 @@ class GoogleAdsServiceAsyncClient:
     parse_mobile_app_category_constant_path: Incomplete
     mobile_device_constant_path: Incomplete
     parse_mobile_device_constant_path: Incomplete
+    multi_party_auth_review_path: Incomplete
+    parse_multi_party_auth_review_path: Incomplete
     offline_conversion_upload_client_summary_path: Incomplete
     parse_offline_conversion_upload_client_summary_path: Incomplete
     offline_conversion_upload_conversion_action_summary_path: Incomplete

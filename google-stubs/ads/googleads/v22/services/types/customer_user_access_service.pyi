@@ -59,13 +59,15 @@ class MutateCustomerUserAccessResponse(proto.Message):
 
 class MutateCustomerUserAccessResult(proto.Message):
     resource_name: str
+    multi_party_auth_review: str
     def __init__(
         self: _M,
         mapping: _M | Mapping | google.protobuf.message.Message | None = None,
         *,
         ignore_unknown_fields: bool = False,
         resource_name: str = ...,
+        multi_party_auth_review: str = ...,
     ) -> None: ...
     def __contains__(  # type: ignore[override]
-        self, key: Literal["resource_name"]
+        self, key: Literal["resource_name", "multi_party_auth_review"]
     ) -> bool: ...
